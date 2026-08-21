@@ -375,3 +375,4 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 - 代码贡献：[Pull Requests](https://github.com/HmZ9874/akgm-n0/pulls)
 
 如果这个方向值得继续，我们最需要的不是更多漂亮的公式数量，而是更严格的盲测、更强的证明、更好的失败记录，以及真正独立的外部实验。
+# bounty-fix-ref: https://github.com/HmZ9874/akgm-n0/issues/1
