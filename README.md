@@ -4,110 +4,117 @@
 [![Help wanted](https://img.shields.io/badge/help-wanted-brightgreen)](https://github.com/HmZ9874/akgm-n0/issues)
 [![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)](pyproject.toml)
 
-> 我们正在寻找愿意共同审查冷启动边界、程序合成、形式化证明、搜索效率和真实物理实验的人。
-> 如果你发现目标泄漏、伪普适公式、无效证明或更好的实验设计，请直接[提交 Issue](https://github.com/HmZ9874/akgm-n0/issues/new)。
+> **Help wanted.** We are looking for independent reviewers and collaborators in program synthesis, formal verification, mathematical foundations, adversarial benchmarking, and reproducible physical experiments. If you find target leakage, a false universal claim, an invalid proof obligation, or a better experiment, please [open an issue](https://github.com/HmZ9874/akgm-n0/issues/new).
 
-AKGM-N0（Autonomous Knowledge Generation Model, N0）是一个可审计的数值知识生成研究原型。它尝试让系统从匿名数值、极少的底层计算原语和可执行反馈出发，构造程序、压缩重复计算、形成可复用语义、主动寻找反例，并把结论限制在证据真正支持的范围内。
+AKGM-N0 (Autonomous Knowledge Generation Model, N0) is an auditable research prototype for constructing executable numerical knowledge from anonymous observations and a small computational substrate. It searches for programs, compresses repeated computation into reusable semantics, seeks counterexamples, and restricts every claim to the domain actually supported by evidence.
 
-它不是 Transformer，也不是在网页里训练的大语言模型。网页只负责显示实验、程序、证据、反例和声明边界；实际搜索与验证由本地 Python 程序运行。
+It is **not a Transformer** and it is not a language model trained in the browser. Python processes perform program search and verification. The web dashboard displays programs, evidence, proof obligations, counterexamples, and claim boundaries.
 
-## 项目要回答的问题
+## Research questions
 
-我们研究的不是“给定一串数字，猜下一个数字”，而是下面几个更严格的问题：
+AKGM-N0 investigates questions stricter than sequence completion:
 
-1. 不告诉数学名称和目标公式时，系统能否找到数字之间可执行的关系？
-2. 系统能否把反复出现的底层指令压缩成一个自己命名的新运算？
-3. 新运算能否在未见数据、不同数值尺度或不同物理轨迹上复用？
-4. 反例出现时，系统能否拒绝、降级或缩小声明范围，而不是坚持错误结论？
-5. 系统能否自己识别知识缺口、生成下一组实验，并在连续无新语义时停止？
-6. 在真实公开物理数据上，匿名程序能否形成有记忆的动态计算方式？
+1. Can a system construct executable relations without receiving their mathematical names or target formulas?
+2. Can it compress repeated primitive instructions into a new, reusable runtime operation?
+3. Can a discovered operation transfer to held-out scales, tasks, or physical trajectories?
+4. When a counterexample appears, can the system reject or narrow a claim instead of preserving a false universal rule?
+5. Can it identify a knowledge gap, choose the next experiment, and stop after semantic saturation?
+6. Can anonymous physical observations induce a stateful computational mechanism?
 
-## 诚实边界
+## Claim boundary
 
-目前代码证明的是“在明确有限的语言、实验和验证协议内，系统可以搜索并验证程序语义”，不是以下更强结论：
+The repository demonstrates program synthesis and verification inside explicit finite languages and protocols. It does **not** establish that the system:
 
-- 不是通用人工智能；
-- 不是已经掌握全部数学或完整力学；
-- 不是从绝对零先验产生数学，因为任何可运行系统都必须有表示、状态和执行规则；
-- 不是仅凭有限样本证明公式对所有数学对象普适；
-- 不是发现了人类未知的自然定律；
-- V41 使用 NASA 历史实验档案，不是本项目自行完成的实时电池实验；
-- V41 创建的 STATE_FOLD 是系统内部的新可复用语义，不代表循环状态模型对人类是新的。
+- is artificial general intelligence;
+- has mastered all mathematics or all mechanics;
+- began without representational or computational priors;
+- proved a universal law from finite samples alone;
+- discovered a law previously unknown to humanity;
+- performed a new live NASA battery experiment;
+- invented recurrent state models for humanity.
 
-仓库中的“发现”默认表示：对学习器的可见输入而言没有提供目标名称或目标公式，候选程序由受限搜索产生，并通过当前协议的验证门。它不自动等于人类数学史上的首次发现。
+In this repository, a “discovery” means that the learner was not given the target name or target formula, the candidate was produced by the declared search process, and it passed the stated verifier. Human-equivalent names are assigned post hoc. This is learner-relative novelty, not automatically historical novelty.
 
-## 总体架构
+## Evidence labels used below
+
+| Label | Meaning |
+| --- | --- |
+| **Proved** | The declared domain is covered by an algebraic identity, invariant, induction, or equivalent proof obligation. |
+| **Verified** | All registered empirical, holdout, and OOD gates passed, without a universal mathematical claim beyond those gates. |
+| **Bounded** | The program is useful on a restricted domain, awaits a broader proof, or failed a later generalization challenge. |
+| **Post-hoc translation** | The learner saw opaque symbols; the familiar mathematical or physical interpretation was assigned after search. |
+
+## Architecture
 
 ~~~mermaid
 flowchart LR
-    A[匿名观察或底层工作负载] --> B[候选程序与片段枚举]
-    B --> C[参数拟合与复杂度评分]
-    C --> D[独立验证器]
-    D -->|全部必要门通过| E[成功公式/语义库]
-    D -->|非必要挑战失败| F[有界知识]
-    D -->|必要门失败| G[错题库与反例]
-    E --> H[复用与组合]
+    A[Anonymous observations or primitive workloads] --> B[Program and fragment enumeration]
+    B --> C[Parameter fit and complexity score]
+    C --> D[Independent verifier]
+    D -->|all required gates pass| E[Admitted semantic library]
+    D -->|optional challenge fails| F[Bounded knowledge]
+    D -->|required gate fails| G[Counterexample and mistake store]
+    E --> H[Reuse and composition]
     F --> H
-    G --> I[知识缺口分析]
+    G --> I[Knowledge-gap analysis]
     H --> I
-    I --> J[生成下一实验或世界]
+    I --> J[Next experiment or generated world]
     J --> A
-    E --> K[报告与网页证据面板]
+    E --> K[Reports and evidence dashboard]
     F --> K
     G --> K
 ~~~
 
-主要边界：
+Repository boundaries:
 
-- <code>src/akgm_n0/learner/</code>：学习器可执行程序、搜索器、语义创造器和自主实验规划器。
-- <code>src/akgm_n0/evaluator/</code>：独立验证、隐藏数据、证明义务和声明边界。
-- <code>configs/</code>：学习器可见契约和原语清单。
-- <code>evaluator/</code>：封闭基准信息，不应挂载到学习器进程。
-- <code>reports/data/</code>：实验摘要和审计证据。
-- <code>dashboard/</code>：本地汇报页面。
-- <code>tests/</code>：回归测试、反例测试和声明边界测试。
+- <code>src/akgm_n0/learner/</code>: public execution languages, search, semantic invention, and experiment planning.
+- <code>src/akgm_n0/evaluator/</code>: independent verification, hidden cases, proof obligations, and claim control.
+- <code>configs/</code>: learner-visible contracts and primitive manifests.
+- <code>evaluator/</code>: sealed benchmark information that must not enter the learner process.
+- <code>reports/data/</code>: compact experiment reports and audit evidence.
+- <code>dashboard/</code>: local evidence dashboard.
+- <code>tests/</code>: regression, mutation, counterexample, and claim-boundary tests.
 
-## 冷启动时到底提供了什么
+## What is supplied at cold start?
 
-项目包含多个逐步收紧的实验协议，必须区分它们，不能把后期结果倒灌成早期先验。
+The repository contains multiple protocols with different starting surfaces. Their claims must not be mixed.
 
-### Gen 0 数值程序协议
+### Gen 0 numerical-program protocol
 
-学习器可见：
+Learner-visible information:
 
-- 匿名数值序列；
-- 顺序和序列边界；
-- 显式有效性掩码；
-- 有边界检查的相对位置读取；
-- 程序组合；
-- <code>p_read_offset</code>、<code>p_add</code>、<code>p_subtract</code>、<code>p_scalar_parameter</code>、<code>p_compose</code>。
+- anonymous numeric sequences;
+- sequence order and boundaries;
+- an explicit validity mask;
+- bounds-checked relative reads;
+- program composition;
+- <code>p_read_offset</code>, <code>p_add</code>, <code>p_subtract</code>, <code>p_scalar_parameter</code>, and <code>p_compose</code>.
 
-学习器不可见：
+Hidden information:
 
-- 自然语言；
-- 数学名称和公式名称；
-- 数据生成器源代码及参数；
-- 训练/验证/盲测标签；
-- 预训练模型；
-- 网络访问；
-- 封闭评测中的人类目标解释。
+- natural language and mathematical names;
+- generator source code and parameters;
+- train, validation, and blind split labels;
+- pretrained models;
+- network access;
+- evaluator-side human interpretations.
 
-Gen 0 确实给了加法和减法，因此它不能用于证明“加减法从绝对零原语中产生”。它用于验证最初的程序搜索、信息边界、独立验证和账本流程。
+Gen 0 supplies addition and subtraction, so it cannot prove that arithmetic emerged from an absolute zero-operation substrate. It establishes the information boundary, executable AST search, independent verification, and ledger pipeline.
 
-### V16 严格冷启动语义协议
+### V16 strict semantic cold start
 
-V16 不加载成功程序、公式名称或动态运算符。运行时只有八个固定 opcode：
+V16 loads no successful program, formula name, or dynamic operator. Its fixed VM substrate contains eight opcodes:
 
-- 数据原语：<code>u_zero</code>、<code>u_unit</code>、<code>u_inc</code>、<code>u_dec</code>；
-- 控制原语：<code>u_jz</code>、<code>u_jump</code>、<code>u_emit</code>、<code>u_halt</code>。
+- data: <code>u_zero</code>, <code>u_unit</code>, <code>u_inc</code>, <code>u_dec</code>;
+- control: <code>u_jz</code>, <code>u_jump</code>, <code>u_emit</code>, <code>u_halt</code>.
 
-语义挖掘只从四个数据原语组成的匿名工作负载开始。这里仍然提供了计数器、寄存器、程序计数器和跳转等计算基底；研究目标是从基底中形成新的可复用运行时运算，而不是声称没有任何计算先验。
+Semantic mining begins only from anonymous workloads over the four data opcodes. Registers, counters, an instruction pointer, and control flow are still supplied computational priors. The experiment studies abstraction above that substrate, not computation without any prior semantics.
 
-## 核心算法
+## Core algorithms
 
-### A. Gen 0 表达式程序搜索
+### A. Gen 0 expression search
 
-候选程序是可执行 AST。例如：
+Candidates are executable ASTs, for example:
 
 ~~~json
 {
@@ -119,160 +126,269 @@ V16 不加载成功程序、公式名称或动态运算符。运行时只有八�
 }
 ~~~
 
-搜索过程：
+The search:
 
-1. 按节点数从小到大枚举表达式树。叶节点是相对读取、标量参数或已验证语义调用；内部节点是加法或减法。
-2. 对交换性的加法参数排序并对序列化 AST 去重，保证相同结构只有一个候选。
-3. 只允许读取过去和当前位置，候选结构不能读取目标位置。
-4. 按时间顺序把有效样本分为开发段和验证段，默认验证比例为 0.4。
-5. 若程序包含一个线性标量参数 θ，执行器分别计算 θ=0 和 θ=1，从而得到 pᵢ(θ)=bᵢ+cᵢθ，再用一维最小二乘拟合：
+1. Enumerates expression trees in increasing odd node count.
+2. Canonicalizes commutative addition arguments and deduplicates serialized ASTs.
+3. Structurally prevents candidates from reading the target offset.
+4. Splits valid examples in temporal order; the default validation fraction is 0.4.
+5. Fits the single linear scalar slot by evaluating the program at θ=0 and θ=1. If pᵢ(θ)=bᵢ+cᵢθ, then:
 
    θ* = Σ cᵢ(yᵢ-bᵢ) / Σ cᵢ²
 
-6. 使用验证误差和程序复杂度排序。当前目标函数是：
+6. Ranks candidates by:
 
    J(P) = MSE_val(P) / max(Var(y), 10^-12) + λ · nodes(P)
 
-   默认 λ=10^-3。排序还依次考虑原始验证 MSE、节点数和稳定候选 ID。
-7. 执行器限制最大节点数、最大深度、有限数值、数值幅度、合法索引和有效性掩码。越界、NaN、无穷或未注册运算直接拒绝。
+   with default λ=10^-3, followed by raw validation MSE, node count, and stable candidate ID.
+7. Rejects invalid indices, invalid masks, unknown operations, excessive depth or size, non-finite values, and excessive magnitude.
 
-这是一种确定性的枚举式程序合成，不是梯度训练神经网络。
+This is deterministic enumerative program synthesis, not neural-network training.
 
-### B. 独立验证、反例和知识状态
+### B. Independent verification and counterexamples
 
-候选搜索完成后，独立验证器重新执行程序。每个验证 case 指定：
+Each verification case defines a scope, a parameter-refit prefix, an absolute tolerance, and whether it is required for validity. The verifier refits only on the allowed prefix, executes on the remaining positions, and records MSE, normalized MSE, maximum absolute error, and every counterexample.
 
-- 数据范围：源数据留出、注册 OOD 或对抗挑战；
-- 可用于重新拟合参数的前缀长度；
-- 绝对误差容忍度；
-- 该 case 是否是有效性的必要条件。
-
-验证器只在前缀上拟合参数，在剩余位置逐点验证，并记录：
-
-- MSE；
-- 归一化 MSE；
-- 最大绝对误差；
-- 每一个超过容忍度的输入、预测、观测和误差。
-
-状态规则：
-
-| 状态 | 条件 |
+| Result | Rule |
 | --- | --- |
-| <code>verified</code> | 所有必要和非必要 case 都通过 |
-| <code>bounded</code> | 所有必要 case 通过，但至少一个扩展挑战失败 |
-| <code>rejected</code> | 任一必要 case 失败 |
+| <code>verified</code> | Every required and optional case passed. |
+| <code>bounded</code> | Every required case passed, but at least one optional extension challenge failed. |
+| <code>rejected</code> | At least one required case failed. |
 
-因此，失败不会被删除历史证据；它会形成反例并限制知识的有效域。只有验证状态和证据允许的程序才能进入成功语义库，重复犯错由错题/反例记录阻止。
+Failures remain in the evidence record. They restrict the valid domain and feed the next knowledge-gap analysis.
 
-### C. 从重复操作创造新运算符
+### C. Runtime semantic invention
 
-V16 的冷启动语义创造使用跨任务最小描述长度思想：
+V16 creates new opcodes by cross-family minimum-description-length compression:
 
-1. 在匿名指令流中枚举长度 2 到 4 的连续片段。
-2. 把具体寄存器编号归一化成参数角色。例如，对寄存器 3 连续执行两次递增，会被归一为“对角色 0 执行两次 <code>u_inc</code>”。
-3. 统计片段在不同 workload family 中的出现次数。候选至少要在 3 个 family 中获得支持，每个被计入的 family 至少出现 5 次。
-4. 设片段编码成本为 T_body，调用成本为 T_call=1+arity，出现次数为 n：
+1. Mine instruction windows of length 2 through 4.
+2. Normalize concrete register numbers into argument roles.
+3. Require support in at least three workload families, with at least five occurrences in every counted family.
+4. Let T_body be the encoded fragment cost, T_call=1+arity, and n the occurrence count:
 
    gain_per_use = T_body - T_call
 
    net_reward = n · gain_per_use - T_body
 
-   只有单次有压缩增益且总体净收益为正的候选才保留。
-5. 对候选在小型完整状态网格上执行，生成行为签名。与已有原语行为等价、恒等无状态效果或非法的候选进入拒绝记录。
-6. 合格片段安装为不含语义名称的 opcode，例如 <code>nu_a1b2c3d4e5f6</code>。ID 绑定结构哈希，定义保存展开后的原语体和证书摘要。
-7. 用新 opcode 重新压缩所有工作负载，再从压缩后的流中寻找更高代组合。依赖表必须无环，并受最大代数、arity 和原语展开跨度限制。
+5. Reject candidates with non-positive gain, duplicate behavior, identity behavior, illegal execution, or unavailable dependencies.
+6. Install a passing fragment as an opaque hash-bound opcode such as <code>nu_a1b2c3d4e5f6</code>.
+7. Recompress the corpus and mine higher-generation combinations under acyclic dependency, arity, generation, and primitive-span limits.
 
-这里的“创造”具有明确含义：系统创建了此前注册表中不存在、可执行、可展开、跨工作负载有压缩价值的新运行时语义。它不保证该运算在人类理论中没有等价物。
+“Created operation” therefore means a new executable and expandable runtime semantic that was absent from the registry and has cross-workload compression value. It does not imply that humanity lacks an equivalent operation.
 
-### D. 正确性优先的 token 奖励
+### D. Correctness-first token reward
 
-基础程序阶段的奖励是：
+For foundation programs:
 
-- 精确完成奖励：1,000,000；
-- 非精确候选：每通过一个 case 奖励 1,000；
-- 成本：展开后的原语执行 token + 存储程序 token；
-- 最终 reward = correctness_reward - total_token_cost。
+- exact completion reward: 1,000,000;
+- non-exact reward: 1,000 per passed case;
+- cost: expanded primitive execution tokens plus stored program tokens;
+- final reward: correctness reward minus total token cost.
 
-宏调用不能把真实工作隐藏成一个 token：执行成本按展开后的原语调度计数。这里的 token 是可执行程序编码和执行成本，不是大语言模型上下文 token。
+Macro calls cannot hide work: execution cost is charged after primitive expansion. These are program representation and execution tokens, not language-model context tokens.
 
-### E. 自主知识缺口与实验循环
+### E. Autonomous experiment loop
 
-V17 的循环是：
+V17:
 
-1. 统计已知运算定义中的原语转移对和 arity。
-2. 选择证据最少的原语转移，以及证据最少的 1 元或 2 元 arity，形成知识缺口。
-3. 用缺口、轮次和随机种子生成承诺哈希。
-4. 每轮生成 4 个匿名 family，每个 family 48 个 workload，每个 workload 36 条底层指令。
-5. 运行 V16 语义扩展；新语义通过则加入注册表，等价或无收益候选进入拒绝记录。
-6. 若本轮没有新语义，累计 sterile round；默认连续 4 轮无新语义时以 <code>semantic_saturation</code> 停止，另有 32 轮硬上限。
+1. Counts primitive transition pairs and operator arities in the current library.
+2. Selects the least-evidenced transition and the least-evidenced arity among 1 and 2.
+3. Commits the gap, round, and random seed to a deterministic hash.
+4. Generates four anonymous families, 48 workloads per family, and 36 instructions per workload.
+5. Extends V16 semantics and records rejected equivalents or zero-gain fragments.
+6. Stops after four consecutive sterile rounds by default, or at the 32-round hard limit.
 
-这个循环已经能自己选择下一项合成实验，但当前“新世界”仍是由已知计数器原语生成的合成世界，不等于开放式现实世界建模。把缺口选择扩展到未知真实装置，是我们最需要外部帮助的方向之一。
+The generated worlds are still synthetic counter-machine worlds. Open-ended modeling of unknown real apparatus remains future work.
 
-### F. 程序构造、证明与普适性
+## Internal formula notation
 
-后续实验把候选程序与证明义务绑定，包括：
+The following opaque forms recur across reports:
 
-- 结构哈希与语义 ID 一致；
-- 程序可展开到允许的底层原语；
-- 隐藏输入和 OOD 输入通过；
-- 依赖语义已被承认；
-- 代数不变量或循环不变量成立；
-- 变异版本必须被验证器拒绝；
-- 声明域必须显式记录。
-
-有限采样只能支持有限经验声明。只有提供了符号不变量、归纳步骤或等价变换证明的模块，才允许作相应范围的普适声明。当前仓库由多个专用证明器组成，不是一个已经覆盖现代数学的通用定理证明器。
-
-## V41：NASA 匿名动态状态实验
-
-V41 使用 NASA Ames Randomized Battery Usage 2 数据。适配器把字段匿名化为 Q0、Q1、Q2、Q3；学习器看不到电流、电压、温度或时间名称。人类含义只在实验结束后的评估报告中翻译。
-
-候选动态程序：
-
-1. <code>persistence</code>：保持上一状态；
-2. <code>stateless</code>：只用当前匿名输入的仿射程序；
-3. <code>state_fold</code>：把上一预测状态带入下一步。
-
-STATE_FOLD 的实际递推结构是：
-
-sₜ = w₀ + w₁sₜ₋₁ + w₂Q0ₜ + w₃Q2ₜ + w₄(Q3ₜ-Q3ₜ₋₁) + w₅Q3ₜ
-
-初始状态取轨迹首个 Q1。系数在训练轨迹上用最小二乘拟合，候选按：
-
-validation_RMSE + 10^-5 · node_count
-
-选择。程序及系数先生成 SHA-256 commitment，随后封闭进程才释放 future holdout 和 cross-cell replication，从协议上阻止看到未来数据后改程序。
-
-已记录结果：
-
-- 在 RW3 训练/验证及 RW4 同批次跨电芯复现协议中，STATE_FOLD 通过既定门；
-- 冻结程序随后用于未参与拟合的 RW5、RW6；
-- 早期和中期寿命轨迹通过当前阈值；
-- 晚期寿命 RMSE 超过阈值，最终状态为 <code>bounded</code>；
-- 系统记录反例 <code>V41-CHALLENGE-LATE-LIFE-EXTRAPOLATION</code>，撤销“全寿命通用”声明，并要求未来创建显式 aging state。
-
-这是项目希望坚持的行为：失败不是隐藏掉，而是缩小结论并决定下一项研究。
-
-## 当前阶段地图
-
-| 阶段 | 代码中的含义 | 当前边界 |
+| Internal symbol | Executable meaning | Human interpretation assigned afterward |
 | --- | --- | --- |
-| Gen 0 | 可审计 AST 搜索、验证器、账本 | 给定加减法，不代表自发现基础算术 |
-| V8–V14 | 计数、符号、分割、折叠、代数闭包实验 | 多为受限任务和专用证明器 |
-| V15–V17 | 自扩展运行时、冷启动语义、自主实验循环 | 世界仍由有限计数器基底生成 |
-| V18–V21 | 目标驱动程序规划、程序构造和有理边界 | 不是通用数学规划器 |
-| V22–V35 | 匿名物理与力学重构实验 | 主要是合成世界中的结构再发现 |
-| V36–V40 | 科学发现协议、干预、实时 apparatus 接口 | 仍需独立装置和跨实验室复现 |
-| V41 | NASA 历史物理轨迹上的匿名动态状态发现 | 晚期寿命外推失败，结论已限制 |
+| <code>MERGE&lt;x,y,...&gt;</code> | combine directed counter values | addition or accumulation |
+| <code>TURN&lt;x&gt;</code> | swap positive and negative directed channels | additive inverse / negation |
+| <code>SEM&lt;x,y&gt;</code> | proved repeated accumulation semantic | multiplication on the declared domain |
+| <code>KEEP&lt;x&gt;</code> | route a source unchanged | identity route |
+| <code>DOUBLE&lt;x&gt;</code> | combine a source with itself | 2x |
+| <code>STATE_FOLD</code> | recurrently update stored state | a state-space recurrence |
+| hashed IDs | bind a program or semantic to its exact structure | stable name, not a human formula name |
 
-页面中的“高中”“力学”“科学”等标签表示某一组基准实验入口，不表示系统拥有与人类课程完全等价的综合能力。
+## Formula catalog
 
-## 快速开始
+This catalog lists canonical, non-duplicate semantics with explicit evidence. Generated libraries containing hundreds or thousands of variants are not treated as hundreds or thousands of distinct mathematical laws.
 
-要求：
+### 1. Proved foundational semantics
 
-- Python 3.11 或更新版本；
-- Node.js 22.13 或更新版本（汇报页面）；
-- Python 依赖由 <code>pyproject.toml</code> 声明。
+| Internal representation | Human-equivalent formula or concept | Status and domain |
+| --- | --- | --- |
+| <code>STRICT-FSEM-82df58ba4ce6f41c</code> | x·y for x,y∈N | **Proved** by counter-loop invariant and termination. |
+| <code>STRICT-FSEM-008b1597aed53d52</code> | n=dq+r, 0≤r&lt;d; q=⌊n/d⌋ | **Proved** for n∈N, d∈N+. |
+| Pair equivalence <code>(a,b)~(c,d) iff ad=bc</code> | nonnegative rational equivalence classes | **Proved** on N×N+. |
+| <code>V20-PROOF-PAIR-2f49d4c7971361a0</code> | a/b+c/d=(ad+bc)/(bd) | **Proved** well-defined on positive-denominator classes. |
+| <code>V20-PROOF-PAIR-6088f4bcd017e9cc</code> | (a/b)(c/d)=ac/bd | **Proved** well-defined on positive-denominator classes. |
+| Directed triple <code>(p,n,d)</code> with <code>MERGE</code>, <code>TURN</code>, and <code>SEM</code> | (p-n)/d; signed rational addition, negation, and multiplication | **Proved** commutative-ring presentation; multiplicative inverses are not yet claimed. |
+| V21 translation solver | x+b=c ⇒ x=c-b | **Proved** for directed rational equivalence classes. |
+| <code>XSEM-e27ac00be31ef317</code> | P(b,n)=∏ᵢ₌₀ⁿ⁻¹(b-i), with 0 when n&gt;b | **Proved** by exclusion invariant and structural induction. |
+| <code>CSEM-b9aacd5426b56d40</code> | C(b,n)=b!/[n!(b-n)!] | **Proved** through unique increasing representatives and Pascal partition. |
+| <code>MSEM-3e8b2a2c8bfae1e3</code> | μ(E)=|E|/|Ω|; fair binary P(K=k)=C(n,k)/2ⁿ | **Proved** only for finite uniform nonempty sample spaces. |
+| <code>RSEM-a80a8102b32768d6</code> | exact √(p/q)=a/b when a²=p and b²=q; otherwise reject | **Proved** for nonnegative rational perfect squares. |
+| <code>ISEM-0ca406080fcca1af</code> | Lₙ²≤x≤Uₙ² and Uₙ-Lₙ=max(1,x)/2ⁿ | **Proved** finite rational enclosure for nonnegative square roots; not a completed irrational real number. |
+
+Source reports: [V20 program construction](reports/data/proof_driven_program_construction_v20_latest.json), [V21 directed rationals](reports/data/directed_rational_construction_v21_latest.json), [finite combinatorics](reports/data/autonomous_canonicalization_latest.json), [finite probability](reports/data/autonomous_finite_mass_latest.json), and [root boundaries](reports/data/autonomous_interval_memory_latest.json).
+
+### 2. High-school core programs
+
+The internal high-school programs are selected opaque modes. Their mathematical names and statements were evaluator-side only during search.
+
+| Internal program | Post-hoc human equivalent | Proved statement / scope |
+| --- | --- | --- |
+| <code>HSP-beb378056706d8f0</code> | normalized rational quotient | (a/b)/(c/d)=ad/(bc), followed by unique gcd normalization. |
+| <code>HSP-c137d9c3c048fa13</code> | one-variable linear equation | ax+b=c ⇒ x=(c-b)/a for a≠0. |
+| <code>HSP-4064b48f6ff6b32d</code> | nonsingular 2×2 linear system | Cramer identities give the unique solution when ad-bc≠0. |
+| <code>HSP-2ba2192d55090953</code> | exact quadratic roots | x=(-b±√(b²-4ac))/(2a) when the supported exact root exists. |
+| <code>HSP-18086b42a455a053</code> | discriminant classification | sign(b²-4ac) classifies two, repeated, or no real roots. |
+| <code>HSP-03adf64be2057b6e</code> | arithmetic sequence term | aₙ=a₁+(n-1)d. |
+| <code>HSP-2094637a04498313</code> | arithmetic sequence sum | Sₙ=n[2a₁+(n-1)d]/2. |
+| <code>HSP-30932f3ff4758be4</code> | geometric sequence term | aₙ=a₁qⁿ⁻¹. |
+| <code>HSP-de21960f97154923</code> | finite geometric sum | Sₙ=a₁(qⁿ-1)/(q-1), with the q=1 case handled separately. |
+| <code>HSP-5428450d08bce4a4</code> | cubic polynomial evaluation | Horner form equals ax³+bx²+cx+d. |
+| <code>HSP-71f42915d934e214</code> | formal cubic derivative | d/dx(ax³+bx²+cx+d)=3ax²+2bx+c. |
+| <code>HSP-e448f4c6d41a259a</code> | affine composition | f(g(x))=a(cx+d)+b. |
+| <code>HSP-89f3b267c5a31daa</code> | exact integer logarithm | returns the unique n satisfying baseⁿ=value on exact powers. |
+| <code>HSP-0e01deef1af154f9</code> | coordinate midpoint | ((x₁+x₂)/2,(y₁+y₂)/2). |
+| <code>HSP-2bf32de987fe97ca</code> | nonvertical slope | m=(y₂-y₁)/(x₂-x₁). |
+| <code>HSP-e0056da36499a642</code> | squared Euclidean distance | d²=(x₂-x₁)²+(y₂-y₁)². |
+| <code>HSP-668c37cddbe7e714</code> | right-triangle ratios | sin=opposite/hypotenuse, cos=adjacent/hypotenuse, sin²+cos²=1 on positive Pythagorean triples. |
+| <code>HSP-e2e26b7e739b76b0</code> | symmetric binomial probability | P(K=k)=C(n,k)/2ⁿ. |
+| <code>HSP-90022000791738ec</code> | closed interval intersection | [max(l₁,l₂), min(u₁,u₂)] when nonempty. |
+| <code>HSP-ca88f3a71f79efbe</code> | signed rational normalization | gcd reduction gives a unique positive-denominator normal form. |
+
+Full evidence: [high_school_core_v6_latest.json](reports/data/high_school_core_v6_latest.json).
+
+### 3. Bounded parametric program families
+
+These programs passed their recorded examples and hidden cases, but their report explicitly says they await universal proof. They must not be presented as proved laws.
+
+| Internal candidate | Human-equivalent family | Status |
+| --- | --- | --- |
+| <code>AP-6a9752a5f642937d</code> | A(a,d,n)=a+nd | **Bounded** |
+| <code>AP-f0e8770fc5237676</code> | S(a,d,n)=Σᵢ₌₀ⁿ⁻¹(a+id) | **Bounded** |
+| <code>AP-fd8c5ceab884e740</code> | rising factorial ∏ᵢ₌₀ᵏ⁻¹(a+i) | **Bounded** |
+| <code>AP-83cc12a184cf61e5</code> | F₀=a, F₁=b, Fₜ₊₂=Fₜ+Fₜ₊₁ | **Bounded** |
+| <code>AP-b6911239fc02f362</code> | digit length of x in base b | **Bounded** |
+| <code>AP-0d42e85ae733addd</code> | ⌊log_b(x)⌋ | **Bounded** |
+| <code>AP-ff387ecac036bc61</code> | lcm(a,b) | **Bounded** |
+| <code>AP-550e86b4684e754b</code> | aⁿ mod m | **Bounded** |
+| <code>AP-37582cd3f9a3706a</code> | Σᵢ₌₀ⁿaⁱ | **Bounded** |
+| <code>AP-18f958c4b7fca578</code> | a+nd+C(n,2)e | **Bounded** |
+
+Full machine words, counterexamples, and status records: [advanced_parametric_ten_latest.json](reports/data/advanced_parametric_ten_latest.json).
+
+### 4. Synthetic mechanics: internal programs and known physical counterparts
+
+These rows reconstruct familiar mechanics inside exact synthetic worlds. Human quantity names and formulas were hidden from the learner, but the hidden world generators still encode structured experiment families. They are not independent discoveries of new natural laws.
+
+| Stage and internal program | Post-hoc physical counterpart | Evidence boundary |
+| --- | --- | --- |
+| V22 <code>MERGE&lt;SEM&lt;q3,q1&gt;,q0&gt;</code> | x′=x+Δt·v | **Proved** discrete rational transition. |
+| V22 <code>MERGE&lt;SEM&lt;q3,q2&gt;,q1&gt;</code> | v′=v+Δt·a | **Proved** discrete rational transition. |
+| V22 exchange <code>(q0⊕j)⊕(q1⊕TURN(j))</code> | additive closed-system conservation | **Proved** internally; momentum-like post-hoc interpretation. |
+| V24 <code>RESP&lt;KEEP,DEN:SEM&lt;D,P&gt;&gt;</code> | a=F/m, equivalently F=ma | **Proved** in exact one-dimensional synthetic rational experiments. |
+| V24 <code>MERGE&lt;SEM&lt;q0,q1&gt;,SEM&lt;q2,q3&gt;&gt;</code> | m₁v₁+m₂v₂ | **Proved** weighted conservation. |
+| V25 <code>COL&lt;...;DEN:MERGE&lt;Q0,Q2&gt;&gt;</code> | exact 1-D elastic collision update | **Proved** for two instantaneous perfectly elastic entities. |
+| V25 linear invariant | m₁v₁+m₂v₂ | **Proved** in the collision domain. |
+| V25 <code>MERGE&lt;SEM&lt;q0,SEM&lt;q1,q1&gt;&gt;,SEM&lt;q2,SEM&lt;q3,q3&gt;&gt;&gt;</code> | m₁v₁²+m₂v₂², twice conventional kinetic energy | **Proved**; factor 1/2 is not identifiable from conservation alone. |
+| V26 <code>ORB&lt;ZERO,KEEP,TURN,ZERO&gt;</code> | x v_y-y v_x | **Proved** planar oriented bilinear scalar. |
+| V26 <code>ROT&lt;Q0,ORB&lt;...&gt;&gt;</code> | L=m(xv_y-yv_x) | **Proved** planar angular-momentum form. |
+| V26 balance | ΔL=r×J | **Proved** angular-impulse relation for the synthetic domain. |
+| V27 <code>AGG&lt;Q0,MERGE&lt;SEM&lt;Q1,Q1&gt;,SEM&lt;Q2,Q2&gt;&gt;&gt;</code> | I=Σᵢmᵢrᵢ² | **Proved** fixed-axis point-mass inertia. |
+| V27 response | Δω=angular impulse/I | **Proved** synthetic fixed-axis response. |
+| V27 angular quantity | L=Iω | **Proved** in the declared domain. |
+| V27 quadratic quantity | Iω², twice rotational kinetic energy | **Proved** in the declared domain. |
+| V27 parallel-axis relation | I_O=I_CM+Md² | **Proved** for the represented point sets. |
+| V28 <code>STENCIL&lt;TURN,ZERO,KEEP;H^1;S2&gt;</code> | dx/dt≈[x(t+h)-x(t-h)]/(2h) | **Proved** exact on quadratics; second-order certificate on the stated polynomial family. |
+| V28 <code>STENCIL&lt;KEEP,TURN_DOUBLE,KEEP;H^2;S1&gt;</code> | d²x/dt²≈[x(t-h)-2x(t)+x(t+h)]/h² | Same restricted refinement proof. |
+| V29 <code>MET&lt;KEEP,ZERO,ZERO,KEEP&gt;</code> | dot product | **Proved** in the planar rational representation. |
+| V29 <code>TANGENT&lt;TURN&lt;q1&gt;,KEEP&lt;q0&gt;&gt;</code> | tangent (-y,x) to x²+y²=R² | **Proved** for one circle constraint. |
+| V29 <code>PROJECT&lt;TURN;DEN:MET&lt;R,R&gt;&gt;</code> | u-r(r·u)/(r·r) | **Proved** planar tangent projection. |
+| V30 <code>RESTORE&lt;TURN;NUM:SEM&lt;K,X&gt;;DEN:M&gt;</code> | a=-(k/m)x | **Proved** linear one-mode oscillator. |
+| V30 phase invariant | mv²+kx² | **Proved** for the modeled oscillator. |
+| V30 recurrence | xₙ₊₁=2xₙ-xₙ₋₁-(k/m)h²xₙ | **Proved** in the declared discrete scheme. |
+| V31 <code>FIELD&lt;TURN;SEM&lt;Q0,R&gt;;Q3^3&gt;</code> | a=-μr/r³; magnitude μ/r² | **Proved** for a 2-D point-particle central field. |
+| V31 angular invariant | r×v | **Proved** in that field. |
+| V31 <code>ENERGY&lt;MET&lt;V,V&gt;,TURN_DOUBLE&lt;Q0/Q3^1&gt;&gt;</code> | v²-2μ/r | **Proved** orbital classification invariant: negative bound, zero critical, positive escape. |
+| V32 <code>ACTION&lt;KW:M;PW:K;P:TURN;H^2&gt;</code> | Σ[m(Δx/h)²-kx²]; stationarity gives mx″+kx=0 | **Proved** for one-coordinate quadratic actions; overall scale is unidentifiable. |
+| V33 <code>MOMENTUM&lt;M,V&gt;</code> | p=mv | **Proved** one-degree-of-freedom canonical momentum. |
+| V33 <code>FLOW&lt;KEEP;ONE*P/M&gt;</code> | q̇=p/m | **Proved** quadratic canonical flow. |
+| V33 <code>FLOW&lt;TURN;K*Q/ONE&gt;</code> | ṗ=-kq | **Proved** quadratic canonical flow. |
+| V33 <code>HAMILTON&lt;P2/M,KEEP&lt;K*Q2&gt;&gt;</code> | H₂=p²/m+kq², twice conventional H | **Proved** for the quadratic model. |
+| V34 <code>SEM&lt;RHO,U&gt;</code> | mass flux ρu | **Proved** 1-D inviscid finite-volume model. |
+| V34 <code>MERGE&lt;SEM&lt;RHO,U,U&gt;,P&gt;</code> | momentum flux ρu²+p | **Proved** in the same model. |
+| V34 <code>BALANCE&lt;L:KEEP;R:TURN;DT^1;DX:DIV&gt;</code> | q_t+(flux)_x=0 | **Proved** finite-volume balance and global conservation in the declared grid model. |
+| V35 <code>FRAME&lt;MERGE&lt;Q1,Q2&gt;;DEN:MERGE&lt;ONE,SEM&lt;Q1,Q2&gt;/SEM&lt;Q0,Q0&gt;&gt;&gt;</code> | (u+v)/(1+uv/c²) | **Proved/verified** for 1-D rational velocities and a supplied anonymous finite speed bound. |
+
+Detailed reports are in <code>reports/data/*_latest.json</code> for V22 through V35.
+
+### 5. Empirical, apparatus, and real-archive formulas
+
+| Internal program | Post-hoc real-world interpretation | Status |
+| --- | --- | --- |
+| V36 <code>SCI-9d226ebd0e1c9402: MERGE&lt;DOUBLE&lt;ONE&gt;,Q0,TURN&lt;Q1&gt;,SEM&lt;Q0,Q1&gt;&gt;</code> | 2+x-y+xy on a blind synthetic oracle | **Verified workflow only**; local learner novelty, not a human-unknown law. |
+| V37 <code>EMP-ded6dd18830aa0cc: POWER&lt;SCALE&lt;367.01582&gt;;Q0^3/2;Q1^-1/2&gt;</code> | P_days≈367.016·a_AU^(3/2)·M_solar^(-1/2) | **Verified known-law rediscovery** on a real archive; not a new law. |
+| V38 <code>CAU-759e07bc9a29b606</code> | load-cell deflection ≈0.0005549+2.19637Q0-0.0287121Q0² | **Verified historical controlled calibration**, but temporal drift prevents a clean unrestricted causal claim. |
+| V39 <code>LIVE-36da1f0fe8d71daf: LIVE_POWER&lt;SCALE&lt;51.4051&gt;;Q0^2&gt;</code> | elapsed runtime scales approximately with nested-loop side length squared | **Verified live computational apparatus**, not natural science. |
+| V40 <code>PHYS-SEM-97df0a28f607243e: LOCAL_MEMORY&lt;...&gt;::NEAREST_DELTA_BLEND</code> | local interpolation from scanner brightness control to normalized image luminance | **Verified live external device calibration** on one HP scanner; no universal optical law claimed. |
+| V41 <code>DYN-bb87df43ec46ed50: STATE_FOLD</code> | recurrent battery terminal-voltage trajectory model using current, temperature, and elapsed time | **Bounded**: verified on the registered RW3/RW4 protocol, generalized to RW5/RW6 early and middle life, failed late-life extrapolation. |
+
+The frozen V41 recurrence is:
+
+s_t = -0.0207367186 + 0.9990723901 s_(t-1) - 0.00283072368 Q0_t + 0.000833014422 Q2_t + 0.000265220314 ΔQ3_t + 0.00000780798945 Q3_t
+
+Post-hoc channel mapping:
+
+- Q0: absolute measured current;
+- Q1 and state s: terminal voltage;
+- Q2: battery temperature;
+- Q3: elapsed pulse time.
+
+The RW5/RW6 late-life RMSE was 0.1757585774, above the 0.10 gate. The stored action is to restrict STATE_FOLD to early and middle life until an explicit aging state is created. Its final status is <code>bounded</code>, and the all-life universal formula was removed.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), and [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json).
+
+## Why generated formula counts are not discovery counts
+
+The repository contains large generated catalogs, including hundreds of operators and one thousand parameterized entries. Many are:
+
+- syntactic variants;
+- compositions of already known semantics;
+- fixed-constant special cases of a parameterized family;
+- empirically fitted but not universally proved;
+- behaviorally equivalent on the tested domain.
+
+They remain useful search artifacts, but the canonical tables above intentionally collapse duplicates and fixed constants into their general families. A new human-level mathematical discovery would require stronger novelty checks against existing literature, independent formal review, and evidence beyond the current system.
+
+## Current capability map
+
+| Stage | Implemented capability | Explicit boundary |
+| --- | --- | --- |
+| Gen 0 | auditable AST search, verifier, and knowledge ledger | addition and subtraction are supplied |
+| V8-V14 | counter, sign, partition, fold, and algebraic-closure experiments | mostly restricted tasks and specialized verifiers |
+| V15-V17 | self-extending VM, strict semantic cold start, autonomous experiment loop | worlds remain finite counter-machine worlds |
+| V18-V21 | goal-driven planning, proof-carrying program construction, directed rationals | not a general symbolic mathematics planner |
+| V22-V35 | anonymous mechanics reconstruction | mostly exact synthetic worlds, not independent natural-law discovery |
+| V36-V40 | scientific workflow, intervention, live apparatus interfaces | limited apparatus and known or engineered phenomena |
+| V41 | anonymous dynamic-state discovery on NASA battery trajectories | late-life extrapolation failed and the claim is bounded |
+
+Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
+
+## Quick start
+
+Requirements:
+
+- Python 3.11 or newer;
+- Node.js 22.13 or newer for the dashboard;
+- Python dependencies declared in <code>pyproject.toml</code>.
 
 ~~~powershell
 py -3.13 -m venv .venv
@@ -280,7 +396,7 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
 ~~~
 
-运行基础审计和实验：
+Run core audits and experiments:
 
 ~~~powershell
 .\.venv\Scripts\python.exe scripts/audit_contracts.py
@@ -290,7 +406,7 @@ py -3.13 -m venv .venv
 .\.venv\Scripts\python.exe scripts/run_autonomous_research_loop_v17.py
 ~~~
 
-运行网页：
+Run the evidence dashboard:
 
 ~~~powershell
 cd dashboard
@@ -298,21 +414,21 @@ npm install
 npm run dev
 ~~~
 
-打开 <http://localhost:5173/>。网页是证据与实验报告界面，不是模型训练位置。
+Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location.
 
-## NASA V41 数据复现
+## NASA V41 reproduction
 
-GitHub 仓库不包含 120 MB 官方 ZIP 和解压后的 MATLAB 文件。仓库保留紧凑快照、来源 URL、SHA-256 和实验报告。
+The GitHub repository excludes the 120 MB official archive and extracted MATLAB files. It retains compact snapshots, provenance, SHA-256 digests, and reports.
 
-官方资源：
+Official resource:
 
 <https://data.nasa.gov/docs/legacy/ames/2.Battery_Uniform_Distribution_Discharge_Room_Temp_DataSet_2Post.zip>
 
-期望 archive SHA-256：
+Expected archive SHA-256:
 
 <code>18bf47337577e07872919327a6ee994adc59e33fd2901d69c5911c26102837b8</code>
 
-在仓库根目录执行：
+From the repository root:
 
 ~~~powershell
 $archive = "data\nasa_v41\Battery_Random_Walk_Room_Temp_2Post.zip"
@@ -325,53 +441,54 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 .\.venv\Scripts\python.exe scripts/run_nasa_blind_challenge_v41.py
 ~~~
 
-必须先人工核对哈希与上述期望值一致。原始 ZIP 和解压目录不应提交到 Git。
+Manually confirm that the archive hash matches before running the builders. Do not commit the raw archive or extracted source files.
 
-## 我们希望得到哪些帮助
+## Help wanted
 
-这是当前最重要的部分。欢迎研究者、工程师、数学家和实验人员参与：
+Priority collaboration areas:
 
-1. 冷启动审计：寻找任何从文件名、配置、测试、数据分区或评价器泄漏到学习器的目标语义。
-2. 形式化验证：把更多专用 Python 证明义务迁移到可机检的形式系统，并区分“有限测试”与“普适证明”。
-3. 运算等价判定：改进跨程序、跨表示的行为等价与非平凡性判断，减少重复运算符。
-4. 搜索扩展：用 e-graph、约束求解、归纳程序合成或更好的 MDL 搜索替代组合爆炸。
-5. 真实科学实验：设计低成本、可重复、盲化的数据采集装置和跨实验室复现协议。
-6. V41 aging state：针对 RW5/RW6 晚期寿命反例，设计不泄漏物理名称的状态扩展与预注册盲测。
-7. 基准与反例：提交能击败当前候选的新数字世界、对抗数据和负结果。
-8. 报告界面：让证据链、程序 AST、证明义务和失败边界更容易独立审查。
-9. 安全与资源边界：审查生成程序的停机、内存、数值范围和沙箱隔离。
+1. Audit learner/evaluator separation and detect target leakage.
+2. Move specialized Python proof obligations into machine-checkable formal systems.
+3. Improve behavioral equivalence and nontriviality checks for generated operators.
+4. Scale synthesis with e-graphs, constraint solving, inductive synthesis, or stronger MDL methods.
+5. Design low-cost blinded apparatus and cross-laboratory replication protocols.
+6. Create and preregister an anonymous aging-state extension for the V41 late-life counterexample.
+7. Add adversarial worlds, negative results, and benchmarks that defeat current candidates.
+8. Improve dashboard review of ASTs, proof obligations, and failure boundaries.
+9. Audit halting, memory, numeric range, and sandbox limits for generated programs.
+10. Independently review the formula catalog and identify incorrect or overstated human translations.
 
-参与方式：
+Contribution requirements:
 
-- 先创建 [Issue](https://github.com/HmZ9874/akgm-n0/issues/new)，说明要解决的知识缺口和验证方法；
-- Pull Request 必须包含测试、复现命令和声明边界；
-- 新公式或运算必须给出可执行定义、适用域、独立验证和至少一个反例搜索；
-- 不接受只根据几个样本命名为“普适规律”的提交；
-- 失败实验同样有价值，请保留负结果和反例。
+- open an [issue](https://github.com/HmZ9874/akgm-n0/issues/new) describing the knowledge gap and verification method;
+- include tests, reproduction commands, and an explicit claim boundary in pull requests;
+- provide an executable definition, valid domain, independent verification, and counterexample search for every proposed formula or operator;
+- preserve failed experiments and negative evidence;
+- do not label a relation universal based only on a few examples.
 
-## 可重复性检查清单
+## Reproducibility checklist
 
-一个可承认的结果至少应记录：
+An admissible result should record:
 
-- 输入快照和来源哈希；
-- 学习器可见字段；
-- evaluator-only 字段；
-- 候选程序 AST 或 opcode 定义；
-- 参数拟合范围；
-- 程序 commitment；
-- 留出/OOD/对抗 case；
-- 复杂度或 token 成本；
-- 反例；
-- <code>verified</code>、<code>bounded</code> 或 <code>rejected</code> 状态；
-- 明确写出的“未证明内容”。
+- input snapshot and provenance digest;
+- learner-visible fields;
+- evaluator-only fields;
+- candidate AST or opcode definition;
+- parameter-fit scope;
+- program commitment;
+- holdout, OOD, and adversarial cases;
+- complexity or token cost;
+- counterexamples;
+- <code>verified</code>, <code>bounded</code>, or <code>rejected</code> state;
+- an explicit list of what was not proved.
 
-## 许可证状态
+## License status
 
-本仓库当前公开用于审阅和协作，但尚未附带开源许可证。这意味着再分发和改作授权尚未声明。欢迎在 Issue 中建议适合科学研究、代码和数据来源边界的许可证；在仓库正式选择许可证前，请先联系项目所有者讨论大规模复用。
+This repository is public for review and collaboration, but it does not yet include an open-source license. Redistribution and modification rights have therefore not been granted. Please discuss substantial reuse with the repository owner, and open an issue if you would like to recommend an appropriate license for the code, scientific reports, and third-party data boundaries.
 
-## 联系与讨论
+## Discussion
 
-- 项目问题、反例和合作建议：[GitHub Issues](https://github.com/HmZ9874/akgm-n0/issues)
-- 代码贡献：[Pull Requests](https://github.com/HmZ9874/akgm-n0/pulls)
+- Questions, counterexamples, and collaboration: [GitHub Issues](https://github.com/HmZ9874/akgm-n0/issues)
+- Code contributions: [Pull Requests](https://github.com/HmZ9874/akgm-n0/pulls)
 
-如果这个方向值得继续，我们最需要的不是更多漂亮的公式数量，而是更严格的盲测、更强的证明、更好的失败记录，以及真正独立的外部实验。
+The project needs stricter blind tests, stronger proofs, better failure records, and independent external experiments more than it needs a larger raw formula count.
