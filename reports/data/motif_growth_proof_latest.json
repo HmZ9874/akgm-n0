@@ -1,0 +1,376 @@
+{
+  "report_version": "motif-growth-universal-proof-v0.1",
+  "run_id": "RUN-motif-growth-proof-20260819T030842022708Z",
+  "source_discovery_run_id": "RUN-motif-growth-20260819T030720588903Z",
+  "created_at": "2026-08-19T03:08:42.023209Z",
+  "verdict": "universally_proven_and_admitted",
+  "formula": "F(a,b,p,q,n): F0=a, F1=b, F(t+2)=p*F(t+1)+q*F(t)",
+  "theorem_kind": "natural_weighted_second_order_recurrence",
+  "domain": {
+    "kind": "natural_number_quintuples",
+    "arity": 5,
+    "includes_zero": true
+  },
+  "invariants": [
+    "outer_counter=n-t",
+    "state_a=F_t",
+    "state_b=F_(t+1)",
+    "first_inner: inner=p-j and temp_p=j*F_(t+1)",
+    "second_inner: inner=q-j and temp_q=j*F_t",
+    "0<=t<=n"
+  ],
+  "termination_measure": "lexicographic natural counters: each inner counter decreases by 1; after both inner exits the outer counter decreases by 1",
+  "proof": {
+    "verifier_version": "independent-universal-verifier-v0.1",
+    "theorem_kind": "natural_weighted_second_order_recurrence",
+    "passed": true,
+    "recomputed_statement": "for every a,b,p,q,n in N, output(a,b,p,q,n)=F_n where F_0=a, F_1=b, and F_(t+2)=p*F_(t+1)+q*F_t",
+    "obligations": [
+      {
+        "obligation_id": "certificate_version",
+        "passed": true,
+        "evidence": "universal-formula-certificate-v0.1"
+      },
+      {
+        "obligation_id": "registered_theorem_rule",
+        "passed": true,
+        "evidence": "natural_weighted_second_order_recurrence"
+      },
+      {
+        "obligation_id": "program_digest_binding",
+        "passed": true,
+        "evidence": "recomputed sha256=e6224f96e9b9f0687f4524ec4be94167ccd9b7fa5ff56c02a688ee8d7c8d7a56"
+      },
+      {
+        "obligation_id": "explicit_domain",
+        "passed": true,
+        "evidence": "canonical domain: {\"arity\": 5, \"includes_zero\": true, \"kind\": \"natural_number_quintuples\"}"
+      },
+      {
+        "obligation_id": "statement_binding",
+        "passed": true,
+        "evidence": "recomputed: for every a,b,p,q,n in N, output(a,b,p,q,n)=F_n where F_0=a, F_1=b, and F_(t+2)=p*F_(t+1)+q*F_t"
+      },
+      {
+        "obligation_id": "invariant_binding",
+        "passed": true,
+        "evidence": "recomputed: ['outer_counter=n-t', 'state_a=F_t', 'state_b=F_(t+1)', 'first_inner: inner=p-j and temp_p=j*F_(t+1)', 'second_inner: inner=q-j and temp_q=j*F_t', '0<=t<=n']"
+      },
+      {
+        "obligation_id": "termination_measure_binding",
+        "passed": true,
+        "evidence": "recomputed: lexicographic natural counters: each inner counter decreases by 1; after both inner exits the outer counter decreases by 1"
+      },
+      {
+        "obligation_id": "exact_program_structure",
+        "passed": true,
+        "evidence": "recomputed word-program sha256=e6224f96e9b9f0687f4524ec4be94167ccd9b7fa5ff56c02a688ee8d7c8d7a56"
+      },
+      {
+        "obligation_id": "all_five_arguments_runtime_free",
+        "passed": true,
+        "evidence": "runtime input references=[0, 1, 2, 3, 4]"
+      },
+      {
+        "obligation_id": "no_multiply_divide_or_power_opcode",
+        "passed": true,
+        "evidence": "decoded VM contains only load/store, add/subtract, branch, memory, emit and halt"
+      },
+      {
+        "obligation_id": "outer_induction_base",
+        "passed": true,
+        "evidence": "before the first iteration: t=0, state_a=a=F_0, state_b=b=F_1, counter=n"
+      },
+      {
+        "obligation_id": "first_inner_induction",
+        "passed": true,
+        "evidence": "after j additions, temp_p=j*state_b and inner=p-j; exit yields p*F_(t+1)"
+      },
+      {
+        "obligation_id": "second_inner_induction",
+        "passed": true,
+        "evidence": "after j additions, temp_q=j*state_a and inner=q-j; exit yields q*F_t"
+      },
+      {
+        "obligation_id": "synchronous_transition",
+        "passed": true,
+        "evidence": "next=temp_p+temp_q=p*F_(t+1)+q*F_t=F_(t+2); states become (F_(t+1),F_(t+2))"
+      },
+      {
+        "obligation_id": "zero_coefficient_boundaries",
+        "passed": true,
+        "evidence": "p=0 or q=0 skips the corresponding natural loop and contributes exactly zero"
+      },
+      {
+        "obligation_id": "termination",
+        "passed": true,
+        "evidence": "lexicographic natural counters: each inner counter decreases by 1; after both inner exits the outer counter decreases by 1"
+      },
+      {
+        "obligation_id": "exit_correctness",
+        "passed": true,
+        "evidence": "outer counter zero implies t=n, so the emitted state_a is F_n"
+      }
+    ],
+    "certificate_digest": "5a6006c38f2d6e9132ca3d536e05d93421db43e990fb88d0ee39bfa6902670c2"
+  },
+  "strict_room_record": {
+    "room_record_id": "UF-5346bc472a30e531",
+    "source_room_record_id": "SF-c994291c689a37fc",
+    "source_operation_id": "MOTIF-GROWN-e6224f96e9b9f068",
+    "theorem_kind": "natural_weighted_second_order_recurrence",
+    "theorem_statement": "for every a,b,p,q,n in N, output(a,b,p,q,n)=F_n where F_0=a, F_1=b, and F_(t+2)=p*F_(t+1)+q*F_t",
+    "domain": {
+      "kind": "natural_number_quintuples",
+      "arity": 5,
+      "includes_zero": true
+    },
+    "program": {
+      "substrate": "anonymous_unified_word_machine_v0.1",
+      "word_width": 2,
+      "words": [
+        14,
+        7,
+        1,
+        4,
+        3,
+        98,
+        1,
+        0,
+        3,
+        99,
+        1,
+        1,
+        3,
+        100,
+        2,
+        98,
+        12,
+        46,
+        1,
+        2,
+        3,
+        101,
+        4,
+        0,
+        3,
+        102,
+        2,
+        101,
+        12,
+        22,
+        2,
+        102,
+        7,
+        100,
+        3,
+        102,
+        2,
+        101,
+        10,
+        1,
+        3,
+        101,
+        11,
+        13,
+        1,
+        3,
+        3,
+        101,
+        4,
+        0,
+        3,
+        103,
+        2,
+        101,
+        12,
+        35,
+        2,
+        103,
+        7,
+        99,
+        3,
+        103,
+        2,
+        101,
+        10,
+        1,
+        3,
+        101,
+        11,
+        26,
+        2,
+        102,
+        7,
+        103,
+        3,
+        104,
+        2,
+        100,
+        3,
+        99,
+        2,
+        104,
+        3,
+        100,
+        2,
+        98,
+        10,
+        1,
+        3,
+        98,
+        11,
+        7,
+        2,
+        99,
+        15,
+        0,
+        0,
+        0
+      ]
+    },
+    "certificate": {
+      "certificate_version": "universal-formula-certificate-v0.1",
+      "theorem_kind": "natural_weighted_second_order_recurrence",
+      "source_room_record_id": "SF-c994291c689a37fc",
+      "source_operation_id": "MOTIF-GROWN-e6224f96e9b9f068",
+      "program_digest": "e6224f96e9b9f0687f4524ec4be94167ccd9b7fa5ff56c02a688ee8d7c8d7a56",
+      "domain": {
+        "kind": "natural_number_quintuples",
+        "arity": 5,
+        "includes_zero": true
+      },
+      "claimed_statement": "for every a,b,p,q,n in N, output(a,b,p,q,n)=F_n where F_0=a, F_1=b, and F_(t+2)=p*F_(t+1)+q*F_t",
+      "claimed_invariants": [
+        "outer_counter=n-t",
+        "state_a=F_t",
+        "state_b=F_(t+1)",
+        "first_inner: inner=p-j and temp_p=j*F_(t+1)",
+        "second_inner: inner=q-j and temp_q=j*F_t",
+        "0<=t<=n"
+      ],
+      "claimed_termination_measure": "lexicographic natural counters: each inner counter decreases by 1; after both inner exits the outer counter decreases by 1"
+    },
+    "verification": {
+      "verifier_version": "independent-universal-verifier-v0.1",
+      "theorem_kind": "natural_weighted_second_order_recurrence",
+      "passed": true,
+      "recomputed_statement": "for every a,b,p,q,n in N, output(a,b,p,q,n)=F_n where F_0=a, F_1=b, and F_(t+2)=p*F_(t+1)+q*F_t",
+      "obligations": [
+        {
+          "obligation_id": "certificate_version",
+          "passed": true,
+          "evidence": "universal-formula-certificate-v0.1"
+        },
+        {
+          "obligation_id": "registered_theorem_rule",
+          "passed": true,
+          "evidence": "natural_weighted_second_order_recurrence"
+        },
+        {
+          "obligation_id": "program_digest_binding",
+          "passed": true,
+          "evidence": "recomputed sha256=e6224f96e9b9f0687f4524ec4be94167ccd9b7fa5ff56c02a688ee8d7c8d7a56"
+        },
+        {
+          "obligation_id": "explicit_domain",
+          "passed": true,
+          "evidence": "canonical domain: {\"arity\": 5, \"includes_zero\": true, \"kind\": \"natural_number_quintuples\"}"
+        },
+        {
+          "obligation_id": "statement_binding",
+          "passed": true,
+          "evidence": "recomputed: for every a,b,p,q,n in N, output(a,b,p,q,n)=F_n where F_0=a, F_1=b, and F_(t+2)=p*F_(t+1)+q*F_t"
+        },
+        {
+          "obligation_id": "invariant_binding",
+          "passed": true,
+          "evidence": "recomputed: ['outer_counter=n-t', 'state_a=F_t', 'state_b=F_(t+1)', 'first_inner: inner=p-j and temp_p=j*F_(t+1)', 'second_inner: inner=q-j and temp_q=j*F_t', '0<=t<=n']"
+        },
+        {
+          "obligation_id": "termination_measure_binding",
+          "passed": true,
+          "evidence": "recomputed: lexicographic natural counters: each inner counter decreases by 1; after both inner exits the outer counter decreases by 1"
+        },
+        {
+          "obligation_id": "exact_program_structure",
+          "passed": true,
+          "evidence": "recomputed word-program sha256=e6224f96e9b9f0687f4524ec4be94167ccd9b7fa5ff56c02a688ee8d7c8d7a56"
+        },
+        {
+          "obligation_id": "all_five_arguments_runtime_free",
+          "passed": true,
+          "evidence": "runtime input references=[0, 1, 2, 3, 4]"
+        },
+        {
+          "obligation_id": "no_multiply_divide_or_power_opcode",
+          "passed": true,
+          "evidence": "decoded VM contains only load/store, add/subtract, branch, memory, emit and halt"
+        },
+        {
+          "obligation_id": "outer_induction_base",
+          "passed": true,
+          "evidence": "before the first iteration: t=0, state_a=a=F_0, state_b=b=F_1, counter=n"
+        },
+        {
+          "obligation_id": "first_inner_induction",
+          "passed": true,
+          "evidence": "after j additions, temp_p=j*state_b and inner=p-j; exit yields p*F_(t+1)"
+        },
+        {
+          "obligation_id": "second_inner_induction",
+          "passed": true,
+          "evidence": "after j additions, temp_q=j*state_a and inner=q-j; exit yields q*F_t"
+        },
+        {
+          "obligation_id": "synchronous_transition",
+          "passed": true,
+          "evidence": "next=temp_p+temp_q=p*F_(t+1)+q*F_t=F_(t+2); states become (F_(t+1),F_(t+2))"
+        },
+        {
+          "obligation_id": "zero_coefficient_boundaries",
+          "passed": true,
+          "evidence": "p=0 or q=0 skips the corresponding natural loop and contributes exactly zero"
+        },
+        {
+          "obligation_id": "termination",
+          "passed": true,
+          "evidence": "lexicographic natural counters: each inner counter decreases by 1; after both inner exits the outer counter decreases by 1"
+        },
+        {
+          "obligation_id": "exit_correctness",
+          "passed": true,
+          "evidence": "outer counter zero implies t=n, so the emitted state_a is F_n"
+        }
+      ],
+      "certificate_digest": "5a6006c38f2d6e9132ca3d536e05d93421db43e990fb88d0ee39bfa6902670c2"
+    }
+  },
+  "strict_formula_total_before": 30,
+  "strict_formula_total_after": 31,
+  "room_proof_obligation_count": 424,
+  "room_proof_obligation_passed_count": 424,
+  "discovery_summary": {
+    "learned_motif_count": 5,
+    "cegis_round_count": 4,
+    "sealed_passed": 5,
+    "sealed_total": 5,
+    "mistakes_recorded": 10,
+    "first_counterexample": {
+      "inputs": [
+        1,
+        2,
+        1,
+        1,
+        1
+      ],
+      "predicted": 1.0,
+      "observed": 2
+    }
+  },
+  "autonomy_boundary": {
+    "learned": "loop, nested accumulation, memory and state-transition motifs were extracted from proven word code without formula labels",
+    "grown": "input routing, coefficient routing, state sources and output state were selected from anonymous evidence",
+    "host_supplied": "motif detectors, mutation slots, VM instructions and the independent theorem proof rule remain implemented by the host"
+  }
+}

@@ -1,0 +1,461 @@
+{
+  "report_version": "autonomous-canonicalization-v0.1",
+  "run_id": "RUN-autonomous-canonicalization-20260820T023613046892Z",
+  "created_at": "2026-08-20T02:36:13.046892Z",
+  "verdict": "order_canonicalization_invented_and_unordered_selection_frontier_proved",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-gap-resolution-20260820T020116744016Z",
+    "frontier": {
+      "world_id": "WORLD-unordered-subselection-44",
+      "structural_signature": "unordered_distinct_subselection",
+      "status": "dependency_blocked",
+      "missing_dependency": "order_canonicalization",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "capability_invention": {
+    "candidate_order_modes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "mode_names_visible_to_search": false,
+    "selected_mode": 1,
+    "proof_interpretation": "retain only extensions whose base position is strictly after the last stored position",
+    "new_dependency_signature": "order_canonicalization"
+  },
+  "search": {
+    "candidate_count": 48,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "CAP-4914e4eb3cfaa46f",
+      "controller_slot": 1,
+      "base_slot": 0,
+      "seed_mode": 0,
+      "update_mode": 1,
+      "order_mode": 1
+    },
+    "selected_token_cost": 899,
+    "selected_reward": 999101
+  },
+  "discovery": {
+    "foundation_level": 9,
+    "semantic": {
+      "semantic_id": "CSEM-b9aacd5426b56d40",
+      "opcode": 9,
+      "program": {
+        "program_id": "CAP-4914e4eb3cfaa46f",
+        "controller_slot": 1,
+        "base_slot": 0,
+        "seed_mode": 0,
+        "update_mode": 1,
+        "order_mode": 1
+      },
+      "dependency_semantic_ids": [
+        "XSEM-e27ac00be31ef317"
+      ],
+      "source_task_ids": [
+        "WORLD-unordered-subselection-44"
+      ],
+      "structural_signature": "unordered_distinct_subselection",
+      "invented_dependency_signature": "order_canonicalization"
+    },
+    "structural_origin": "construct exactly one increasing-index record for every unordered selection of the requested finite size",
+    "posthoc_name": "binomial coefficient / combinations without repetition",
+    "posthoc_formula": "for b,n in N, output count is C(b,n)=b!/(n!(b-n)!) for n<=b and 0 for n>b",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "verification": {
+    "verifier_version": "independent-canonical-frontier-verifier-v0.1",
+    "semantic_id": "CSEM-b9aacd5426b56d40",
+    "passed": true,
+    "invented_mechanism": "retain only extensions whose base position is strictly after the last stored position",
+    "structural_statement": "construct exactly one increasing-index record for every unordered selection of the requested finite size",
+    "posthoc_mathematical_name": "binomial coefficient / combinations without repetition",
+    "posthoc_cardinality_statement": "for b,n in N, output count is C(b,n)=b!/(n!(b-n)!) for n<=b and 0 for n>b",
+    "declared_domain": "finite base collection and requested natural selection size",
+    "not_claimed": "binomial probability distributions, generalized binomial series, real-valued Gamma extensions, or measure theory",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "unique increasing representative bijection plus Pascal partition recurrence",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "CSEM-b9aacd5426b56d40"
+      },
+      {
+        "obligation_id": "exact_canonical_program_binding",
+        "passed": true,
+        "evidence": "CAP-4914e4eb3cfaa46f"
+      },
+      {
+        "obligation_id": "blocked_world_signature_binding",
+        "passed": true,
+        "evidence": "unordered_distinct_subselection"
+      },
+      {
+        "obligation_id": "order_canonicalization_dependency_invented",
+        "passed": true,
+        "evidence": "order_canonicalization"
+      },
+      {
+        "obligation_id": "unit_expand_after_last_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "CAP-4914e4eb3cfaa46f",
+          "controller_slot": 1,
+          "base_slot": 0,
+          "seed_mode": 0,
+          "update_mode": 1,
+          "order_mode": 1
+        }
+      },
+      {
+        "obligation_id": "depends_on_exclusion_memory_semantic",
+        "passed": true,
+        "evidence": [
+          "XSEM-e27ac00be31ef317"
+        ]
+      },
+      {
+        "obligation_id": "empty_selection_has_one_representative",
+        "passed": true,
+        "evidence": "the unit seed is the unique empty record"
+      },
+      {
+        "obligation_id": "strict_index_growth_invariant",
+        "passed": true,
+        "evidence": "every appended object's base position is strictly greater than the previous one"
+      },
+      {
+        "obligation_id": "strict_growth_implies_no_repetition",
+        "passed": true,
+        "evidence": "a strictly increasing finite index sequence cannot repeat an index"
+      },
+      {
+        "obligation_id": "each_unordered_selection_has_one_sorted_representative",
+        "passed": true,
+        "evidence": "sorting distinct selected base positions yields one and only one strictly increasing record"
+      },
+      {
+        "obligation_id": "no_two_outputs_represent_the_same_selection",
+        "passed": true,
+        "evidence": "two increasing records with the same members agree position by position"
+      },
+      {
+        "obligation_id": "all_legal_canonical_extensions_emitted",
+        "passed": true,
+        "evidence": "each later base object is considered once at every prefix"
+      },
+      {
+        "obligation_id": "record_length_invariant",
+        "passed": true,
+        "evidence": "after k controller visits every surviving record has length k"
+      },
+      {
+        "obligation_id": "canonical_subset_completeness",
+        "passed": true,
+        "evidence": "13/13 hidden structural replays"
+      },
+      {
+        "obligation_id": "universal_cardinality_result",
+        "passed": true,
+        "evidence": "bijection between outputs and size-n subsets gives the binomial cardinality"
+      },
+      {
+        "obligation_id": "pascal_partition_recurrence",
+        "passed": true,
+        "evidence": "partition canonical records by whether they contain the final base object: C(b,n)=C(b-1,n)+C(b-1,n-1)"
+      },
+      {
+        "obligation_id": "factorial_quotient_consistency",
+        "passed": true,
+        "evidence": "ordered distinct records partition into n! orderings per canonical record, so C(b,n)=b!/(n!(b-n)!)"
+      },
+      {
+        "obligation_id": "honest_order_comparison_token_accounting",
+        "passed": true,
+        "evidence": "each index comparison is charged as primitive work"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "finite controller, base, and prefix states terminate; strict growth bounds record length by base size"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "the learner saw integer order modes and opaque records, not combination, binomial, subset, Pascal, or formula labels"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "CANONICAL-HIDDEN-00",
+        "source_lengths": [
+          0,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 3,
+        "order_comparison_tokens": 0
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-01",
+        "source_lengths": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "primitive_execution_tokens": 4,
+        "order_comparison_tokens": 0
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-02",
+        "source_lengths": [
+          1,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 3,
+        "order_comparison_tokens": 0
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-03",
+        "source_lengths": [
+          1,
+          1
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 7,
+        "order_comparison_tokens": 0
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-04",
+        "source_lengths": [
+          1,
+          2
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "primitive_execution_tokens": 11,
+        "order_comparison_tokens": 1
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-05",
+        "source_lengths": [
+          2,
+          1
+        ],
+        "passed": true,
+        "output_count": 2,
+        "posthoc_expected_cardinality": 2,
+        "primitive_execution_tokens": 10,
+        "order_comparison_tokens": 0
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-06",
+        "source_lengths": [
+          2,
+          2
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 24,
+        "order_comparison_tokens": 4
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-07",
+        "source_lengths": [
+          3,
+          1
+        ],
+        "passed": true,
+        "output_count": 3,
+        "posthoc_expected_cardinality": 3,
+        "primitive_execution_tokens": 13,
+        "order_comparison_tokens": 0
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-08",
+        "source_lengths": [
+          3,
+          2
+        ],
+        "passed": true,
+        "output_count": 3,
+        "posthoc_expected_cardinality": 3,
+        "primitive_execution_tokens": 44,
+        "order_comparison_tokens": 9
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-09",
+        "source_lengths": [
+          4,
+          2
+        ],
+        "passed": true,
+        "output_count": 6,
+        "posthoc_expected_cardinality": 6,
+        "primitive_execution_tokens": 71,
+        "order_comparison_tokens": 16
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-10",
+        "source_lengths": [
+          5,
+          3
+        ],
+        "passed": true,
+        "output_count": 10,
+        "posthoc_expected_cardinality": 10,
+        "primitive_execution_tokens": 266,
+        "order_comparison_tokens": 75
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-11",
+        "source_lengths": [
+          6,
+          3
+        ],
+        "passed": true,
+        "output_count": 20,
+        "posthoc_expected_cardinality": 20,
+        "primitive_execution_tokens": 437,
+        "order_comparison_tokens": 126
+      },
+      {
+        "case_id": "CANONICAL-HIDDEN-12",
+        "source_lengths": [
+          8,
+          4
+        ],
+        "passed": true,
+        "output_count": 70,
+        "posthoc_expected_cardinality": 70,
+        "primitive_execution_tokens": 2393,
+        "order_comparison_tokens": 736
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 9,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差",
+      "有符号自然数差",
+      "自然数乘法",
+      "带余数的自然数除法",
+      "自然数幂",
+      "下降乘积/阶乘",
+      "组合数"
+    ]
+  },
+  "next_frontier": {
+    "world_id": "WORLD-normalized-selection-mass-53",
+    "structural_signature": "normalized_part_to_whole_mass",
+    "status": "dependency_blocked",
+    "missing_dependency": "normalized_ratio_representation",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/canonical_frontier_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/canonical_frontier_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 47,
+    "event_hash": "4cfa5cc176950debf5e4e4f177e1275fde075facf4f01b17e9d195131e65c95d"
+  },
+  "gates": [
+    {
+      "gate_id": "order_gap_taken_from_previous_autonomous_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-unordered-subselection-44",
+        "structural_signature": "unordered_distinct_subselection",
+        "status": "dependency_blocked",
+        "missing_dependency": "order_canonicalization",
+        "posthoc_math_name": null
+      },
+      "required": "recorded blocked frontier"
+    },
+    {
+      "gate_id": "multiple_anonymous_order_mechanisms_compete",
+      "passed": true,
+      "actual": 48,
+      "required": 48
+    },
+    {
+      "gate_id": "strict_after_last_mode_induced_without_name",
+      "passed": true,
+      "actual": 1,
+      "required": "anonymous integer mode selected by evidence"
+    },
+    {
+      "gate_id": "unordered_selection_world_exactly_compressed",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "token_reward_selects_best_exact_canonicalizer",
+      "passed": true,
+      "actual": 999101,
+      "required": 999101
+    },
+    {
+      "gate_id": "canonical_semantic_universally_proved",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_canonical_cases_pass",
+      "passed": true,
+      "actual": 13,
+      "required": 13
+    },
+    {
+      "gate_id": "order_comparison_tokens_are_not_hidden",
+      "passed": true,
+      "actual": true,
+      "required": true
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 47
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 47
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_posthoc_combination_formula",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "The canonicalizer relies on a finite stable base order supplied by the structural world.",
+    "The proof establishes finite natural-cardinality combinations, not probability or generalized binomial analysis.",
+    "The host exposed anonymous order comparisons and record extension modes, but not the selected meaning or formula.",
+    "The next frontier is blocked on a normalized ratio representation."
+  ]
+}

@@ -1,0 +1,652 @@
+{
+  "report_version": "foundation-capability-probe-v0.1",
+  "run_id": "RUN-foundation-capability-probe-20260819T214541150040Z",
+  "created_at": "2026-08-19T21:45:41.150040Z",
+  "verdict": "current_model_transfers_counting_and_collection_combination_but_cannot_form_inverse_repetition_or_grouping",
+  "protocol": {
+    "task_count": 6,
+    "development_and_hidden_split": true,
+    "math_names_or_formulas_given_to_learner": false,
+    "model_modified_during_probe": false,
+    "promotion_requires_exact_development_and_hidden_transfer": true
+  },
+  "results": [
+    {
+      "task_id": "PROBE-a91f",
+      "learner_received_math_label": false,
+      "posthoc_evaluator_label": "single_collection_cardinality",
+      "source_count": 1,
+      "candidates_evaluated": 3,
+      "development": {
+        "passed": 5,
+        "total": 5,
+        "exact_candidate_count": 2,
+        "minimum_exact_program_count": 1,
+        "minimum_exact_source_plans": [
+          [
+            0
+          ]
+        ]
+      },
+      "selected_program": {
+        "program_id": "FKP-7c298fe7599227ec",
+        "source_plan": [
+          0
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "operand": 0,
+            "target": 4
+          },
+          {
+            "opcode": 1,
+            "operand": 0
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 0
+          },
+          {
+            "opcode": 4
+          }
+        ]
+      },
+      "hidden": {
+        "passed": 3,
+        "total": 3,
+        "cases": [
+          {
+            "case_id": "PROBE-a91f-hidden-00",
+            "source_lengths": [
+              3
+            ],
+            "predicted_output_length": 3,
+            "expected_output_length": 3,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-a91f-hidden-01",
+            "source_lengths": [
+              13
+            ],
+            "predicted_output_length": 13,
+            "expected_output_length": 13,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-a91f-hidden-02",
+            "source_lengths": [
+              31
+            ],
+            "predicted_output_length": 31,
+            "expected_output_length": 31,
+            "passed": true
+          }
+        ]
+      },
+      "status": "transferred",
+      "counts_as_new_foundation": false,
+      "reason": "transfer of an already-proven cardinality/conservation family"
+    },
+    {
+      "task_id": "PROBE-01ce",
+      "learner_received_math_label": false,
+      "posthoc_evaluator_label": "two_collection_conservation",
+      "source_count": 2,
+      "candidates_evaluated": 15,
+      "development": {
+        "passed": 6,
+        "total": 6,
+        "exact_candidate_count": 8,
+        "minimum_exact_program_count": 2,
+        "minimum_exact_source_plans": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ]
+        ]
+      },
+      "selected_program": {
+        "program_id": "FKP-8e9c4a06b5dfe2cc",
+        "source_plan": [
+          0,
+          1
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "operand": 0,
+            "target": 4
+          },
+          {
+            "opcode": 1,
+            "operand": 0
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 0
+          },
+          {
+            "opcode": 0,
+            "operand": 1,
+            "target": 8
+          },
+          {
+            "opcode": 1,
+            "operand": 1
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 4
+          },
+          {
+            "opcode": 4
+          }
+        ]
+      },
+      "hidden": {
+        "passed": 3,
+        "total": 3,
+        "cases": [
+          {
+            "case_id": "PROBE-01ce-hidden-00",
+            "source_lengths": [
+              7,
+              4
+            ],
+            "predicted_output_length": 11,
+            "expected_output_length": 11,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-01ce-hidden-01",
+            "source_lengths": [
+              13,
+              2
+            ],
+            "predicted_output_length": 15,
+            "expected_output_length": 15,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-01ce-hidden-02",
+            "source_lengths": [
+              9,
+              11
+            ],
+            "predicted_output_length": 20,
+            "expected_output_length": 20,
+            "passed": true
+          }
+        ]
+      },
+      "status": "transferred",
+      "counts_as_new_foundation": false,
+      "reason": "transfer of an already-proven cardinality/conservation family"
+    },
+    {
+      "task_id": "PROBE-d43b",
+      "learner_received_math_label": false,
+      "posthoc_evaluator_label": "three_collection_conservation",
+      "source_count": 3,
+      "candidates_evaluated": 121,
+      "development": {
+        "passed": 6,
+        "total": 6,
+        "exact_candidate_count": 42,
+        "minimum_exact_program_count": 6,
+        "minimum_exact_source_plans": [
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            1,
+            0
+          ]
+        ]
+      },
+      "selected_program": {
+        "program_id": "FKP-70ae6514b6e0a64e",
+        "source_plan": [
+          0,
+          1,
+          2
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "operand": 0,
+            "target": 4
+          },
+          {
+            "opcode": 1,
+            "operand": 0
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 0
+          },
+          {
+            "opcode": 0,
+            "operand": 1,
+            "target": 8
+          },
+          {
+            "opcode": 1,
+            "operand": 1
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 4
+          },
+          {
+            "opcode": 0,
+            "operand": 2,
+            "target": 12
+          },
+          {
+            "opcode": 1,
+            "operand": 2
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 8
+          },
+          {
+            "opcode": 4
+          }
+        ]
+      },
+      "hidden": {
+        "passed": 3,
+        "total": 3,
+        "cases": [
+          {
+            "case_id": "PROBE-d43b-hidden-00",
+            "source_lengths": [
+              7,
+              4,
+              2
+            ],
+            "predicted_output_length": 13,
+            "expected_output_length": 13,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-d43b-hidden-01",
+            "source_lengths": [
+              3,
+              8,
+              5
+            ],
+            "predicted_output_length": 16,
+            "expected_output_length": 16,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-d43b-hidden-02",
+            "source_lengths": [
+              11,
+              0,
+              6
+            ],
+            "predicted_output_length": 17,
+            "expected_output_length": 17,
+            "passed": true
+          }
+        ]
+      },
+      "status": "transferred",
+      "counts_as_new_foundation": false,
+      "reason": "transfer of an already-proven cardinality/conservation family"
+    },
+    {
+      "task_id": "PROBE-7e20",
+      "learner_received_math_label": false,
+      "posthoc_evaluator_label": "one_sided_pair_cancellation",
+      "source_count": 2,
+      "candidates_evaluated": 15,
+      "development": {
+        "passed": 3,
+        "total": 6,
+        "exact_candidate_count": 0,
+        "minimum_exact_program_count": 0,
+        "minimum_exact_source_plans": []
+      },
+      "selected_program": {
+        "program_id": "FKP-1a7ab05311158538",
+        "source_plan": [],
+        "instructions": [
+          {
+            "opcode": 4
+          }
+        ]
+      },
+      "hidden": {
+        "passed": 2,
+        "total": 3,
+        "cases": [
+          {
+            "case_id": "PROBE-7e20-hidden-00",
+            "source_lengths": [
+              9,
+              3
+            ],
+            "predicted_output_length": 0,
+            "expected_output_length": 6,
+            "passed": false
+          },
+          {
+            "case_id": "PROBE-7e20-hidden-01",
+            "source_lengths": [
+              4,
+              4
+            ],
+            "predicted_output_length": 0,
+            "expected_output_length": 0,
+            "passed": true
+          },
+          {
+            "case_id": "PROBE-7e20-hidden-02",
+            "source_lengths": [
+              2,
+              9
+            ],
+            "predicted_output_length": 0,
+            "expected_output_length": 0,
+            "passed": true
+          }
+        ]
+      },
+      "status": "outside_current_program_language",
+      "counts_as_new_foundation": false,
+      "reason": "no exact development program exists in the current zero-arithmetic language"
+    },
+    {
+      "task_id": "PROBE-b688",
+      "learner_received_math_label": false,
+      "posthoc_evaluator_label": "rectangular_repetition",
+      "source_count": 2,
+      "candidates_evaluated": 15,
+      "development": {
+        "passed": 2,
+        "total": 5,
+        "exact_candidate_count": 0,
+        "minimum_exact_program_count": 0,
+        "minimum_exact_source_plans": []
+      },
+      "selected_program": {
+        "program_id": "FKP-7c298fe7599227ec",
+        "source_plan": [
+          0
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "operand": 0,
+            "target": 4
+          },
+          {
+            "opcode": 1,
+            "operand": 0
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 0
+          },
+          {
+            "opcode": 4
+          }
+        ]
+      },
+      "hidden": {
+        "passed": 0,
+        "total": 3,
+        "cases": [
+          {
+            "case_id": "PROBE-b688-hidden-00",
+            "source_lengths": [
+              5,
+              3
+            ],
+            "predicted_output_length": 5,
+            "expected_output_length": 15,
+            "passed": false
+          },
+          {
+            "case_id": "PROBE-b688-hidden-01",
+            "source_lengths": [
+              7,
+              2
+            ],
+            "predicted_output_length": 7,
+            "expected_output_length": 14,
+            "passed": false
+          },
+          {
+            "case_id": "PROBE-b688-hidden-02",
+            "source_lengths": [
+              3,
+              8
+            ],
+            "predicted_output_length": 3,
+            "expected_output_length": 24,
+            "passed": false
+          }
+        ]
+      },
+      "status": "outside_current_program_language",
+      "counts_as_new_foundation": false,
+      "reason": "no exact development program exists in the current zero-arithmetic language"
+    },
+    {
+      "task_id": "PROBE-f152",
+      "learner_received_math_label": false,
+      "posthoc_evaluator_label": "equal_group_extraction",
+      "source_count": 2,
+      "candidates_evaluated": 15,
+      "development": {
+        "passed": 2,
+        "total": 5,
+        "exact_candidate_count": 0,
+        "minimum_exact_program_count": 0,
+        "minimum_exact_source_plans": []
+      },
+      "selected_program": {
+        "program_id": "FKP-7c298fe7599227ec",
+        "source_plan": [
+          0
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "operand": 0,
+            "target": 4
+          },
+          {
+            "opcode": 1,
+            "operand": 0
+          },
+          {
+            "opcode": 2
+          },
+          {
+            "opcode": 3,
+            "target": 0
+          },
+          {
+            "opcode": 4
+          }
+        ]
+      },
+      "hidden": {
+        "passed": 0,
+        "total": 3,
+        "cases": [
+          {
+            "case_id": "PROBE-f152-hidden-00",
+            "source_lengths": [
+              9,
+              2
+            ],
+            "predicted_output_length": 9,
+            "expected_output_length": 4,
+            "passed": false
+          },
+          {
+            "case_id": "PROBE-f152-hidden-01",
+            "source_lengths": [
+              13,
+              4
+            ],
+            "predicted_output_length": 13,
+            "expected_output_length": 3,
+            "passed": false
+          },
+          {
+            "case_id": "PROBE-f152-hidden-02",
+            "source_lengths": [
+              21,
+              5
+            ],
+            "predicted_output_length": 21,
+            "expected_output_length": 4,
+            "passed": false
+          }
+        ]
+      },
+      "status": "outside_current_program_language",
+      "counts_as_new_foundation": false,
+      "reason": "no exact development program exists in the current zero-arithmetic language"
+    }
+  ],
+  "summary": {
+    "transferred_task_count": 3,
+    "failed_task_count": 3,
+    "new_foundation_count": 0,
+    "transferred_posthoc_labels": [
+      "single_collection_cardinality",
+      "two_collection_conservation",
+      "three_collection_conservation"
+    ],
+    "failed_posthoc_labels": [
+      "one_sided_pair_cancellation",
+      "rectangular_repetition",
+      "equal_group_extraction"
+    ]
+  },
+  "discovered_properties": [
+    {
+      "property_id": "PROP-order-invariance-two-sources",
+      "evidence": "the two minimum programs [0,1] and [1,0] have identical outputs on all finite inputs by source-conservation proof",
+      "posthoc_interpretation": "commutativity precursor",
+      "new_foundation": false
+    },
+    {
+      "property_id": "PROP-arity-extension-three-sources",
+      "evidence": "all six source permutations are minimum exact programs and transfer to hidden triples",
+      "posthoc_interpretation": "finite n-ary addition/conservation precursor",
+      "new_foundation": false
+    }
+  ],
+  "expressive_boundary_proof": {
+    "statement": "every current generated program emits the cardinality of a subset of source collections because each source is destructively drained and cannot be reset",
+    "consequence": "the language can express conserved finite sums, but not cancellation, signed direction, Cartesian repetition, or equal-group extraction",
+    "finite_sampling_used_as_proof": false
+  },
+  "mistake_room": {
+    "path": "artifacts/foundation/mistakes/capability_probe_failures.jsonl",
+    "record_count": 3
+  },
+  "gates": [
+    {
+      "gate_id": "blind_task_labels_hidden_from_learner",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    },
+    {
+      "gate_id": "known_foundations_transfer",
+      "passed": true,
+      "actual": 3,
+      "required": 3
+    },
+    {
+      "gate_id": "unsupported_semantics_are_not_promoted",
+      "passed": true,
+      "actual": 3,
+      "required": 3
+    },
+    {
+      "gate_id": "no_sample_only_candidate_is_called_discovery",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    },
+    {
+      "gate_id": "probe_failures_persisted",
+      "passed": true,
+      "actual": 3,
+      "required": 3
+    }
+  ],
+  "next_required_machine_change": {
+    "not_applied_during_this_probe": true,
+    "capability": "a learner-discoverable reversible/cancellation state transition",
+    "why": "without a way to preserve direction or pairwise cancellation, subtraction and negative quantities are outside the current language"
+  },
+  "limitations": [
+    "Passing the three-source task extends the existing conservation family and is not counted as a new arithmetic foundation.",
+    "The evaluator uses human labels only after the blind run to explain results.",
+    "Failure means outside this program language and search bound; it does not prove the mathematical relation is impossible in every conceivable machine."
+  ]
+}

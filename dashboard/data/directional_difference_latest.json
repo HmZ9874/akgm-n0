@@ -1,0 +1,822 @@
+{
+  "report_version": "directional-difference-discovery-v0.1",
+  "run_id": "RUN-directional-difference-20260819T232617255855Z",
+  "created_at": "2026-08-19T23:26:17.255855Z",
+  "verdict": "fourth_foundation_preserves_negative_direction_for_natural_input_difference",
+  "learner_received": {
+    "negative_name": false,
+    "positive_name": false,
+    "subtraction_symbol": false,
+    "target_formula": false,
+    "two_anonymous_output_glyphs": [
+      "●",
+      "○"
+    ],
+    "generic_multi_tape_opcodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "token_efficiency_reward": true
+  },
+  "search": {
+    "task_id": "TASK-opaque-direction-09af",
+    "candidate_count": 820,
+    "exact_candidate_count": 2,
+    "selected_program": {
+      "program_id": "DTP-69f2f44c14cf48fe",
+      "input_tape_count": 2,
+      "phases": [
+        {
+          "source_tapes": [
+            0,
+            1
+          ],
+          "emit_slot": 0
+        },
+        {
+          "source_tapes": [
+            0
+          ],
+          "emit_slot": 1
+        },
+        {
+          "source_tapes": [
+            1
+          ],
+          "emit_slot": 2
+        }
+      ],
+      "instructions": [
+        {
+          "opcode": 0,
+          "tape": 0,
+          "target": 7
+        },
+        {
+          "opcode": 0,
+          "tape": 1,
+          "target": 7
+        },
+        {
+          "opcode": 1,
+          "tape": 0
+        },
+        {
+          "opcode": 3,
+          "tape": 0
+        },
+        {
+          "opcode": 1,
+          "tape": 1
+        },
+        {
+          "opcode": 3,
+          "tape": 1
+        },
+        {
+          "opcode": 4,
+          "target": 0
+        },
+        {
+          "opcode": 0,
+          "tape": 0,
+          "target": 13
+        },
+        {
+          "opcode": 1,
+          "tape": 0
+        },
+        {
+          "opcode": 3,
+          "tape": 0
+        },
+        {
+          "opcode": 2,
+          "tape": 2
+        },
+        {
+          "opcode": 3,
+          "tape": 2
+        },
+        {
+          "opcode": 4,
+          "target": 7
+        },
+        {
+          "opcode": 0,
+          "tape": 1,
+          "target": 19
+        },
+        {
+          "opcode": 1,
+          "tape": 1
+        },
+        {
+          "opcode": 3,
+          "tape": 1
+        },
+        {
+          "opcode": 6,
+          "tape": 2
+        },
+        {
+          "opcode": 3,
+          "tape": 2
+        },
+        {
+          "opcode": 4,
+          "target": 13
+        },
+        {
+          "opcode": 5
+        }
+      ]
+    },
+    "selected_token_cost": 497,
+    "selected_reward": 999503,
+    "all_exact_rewards": [
+      999503
+    ]
+  },
+  "discovery": {
+    "foundation_level": 4,
+    "semantic": {
+      "semantic_id": "DSEM-be8bf9c60762e0f0",
+      "opcode": 4,
+      "program": {
+        "program_id": "DTP-69f2f44c14cf48fe",
+        "input_tape_count": 2,
+        "phases": [
+          {
+            "source_tapes": [
+              0,
+              1
+            ],
+            "emit_slot": 0
+          },
+          {
+            "source_tapes": [
+              0
+            ],
+            "emit_slot": 1
+          },
+          {
+            "source_tapes": [
+              1
+            ],
+            "emit_slot": 2
+          }
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "tape": 0,
+            "target": 7
+          },
+          {
+            "opcode": 0,
+            "tape": 1,
+            "target": 7
+          },
+          {
+            "opcode": 1,
+            "tape": 0
+          },
+          {
+            "opcode": 3,
+            "tape": 0
+          },
+          {
+            "opcode": 1,
+            "tape": 1
+          },
+          {
+            "opcode": 3,
+            "tape": 1
+          },
+          {
+            "opcode": 4,
+            "target": 0
+          },
+          {
+            "opcode": 0,
+            "tape": 0,
+            "target": 13
+          },
+          {
+            "opcode": 1,
+            "tape": 0
+          },
+          {
+            "opcode": 3,
+            "tape": 0
+          },
+          {
+            "opcode": 2,
+            "tape": 2
+          },
+          {
+            "opcode": 3,
+            "tape": 2
+          },
+          {
+            "opcode": 4,
+            "target": 7
+          },
+          {
+            "opcode": 0,
+            "tape": 1,
+            "target": 19
+          },
+          {
+            "opcode": 1,
+            "tape": 1
+          },
+          {
+            "opcode": 3,
+            "tape": 1
+          },
+          {
+            "opcode": 6,
+            "tape": 2
+          },
+          {
+            "opcode": 3,
+            "tape": 2
+          },
+          {
+            "opcode": 4,
+            "target": 13
+          },
+          {
+            "opcode": 5
+          }
+        ]
+      },
+      "dependency_semantic_ids": [
+        "FSEM-3d1a4d19fab44d62",
+        "FSEM-cf58189608902a55",
+        "RSEM-6082532054ec1e05"
+      ],
+      "source_task_ids": [
+        "TASK-opaque-direction-09af"
+      ]
+    },
+    "depends_on": [
+      "FSEM-3d1a4d19fab44d62",
+      "FSEM-cf58189608902a55",
+      "RSEM-6082532054ec1e05"
+    ],
+    "posthoc_name": "two-glyph signed direction for natural-input difference",
+    "posthoc_decoding": "empty=0; primary glyph count=positive magnitude; alternate glyph count=negative magnitude",
+    "posthoc_formula": "decode(S(a,b))=a-b for every a,b in N",
+    "counts_as_new_foundation": true,
+    "novelty_reason": "unlike truncated difference, the output preserves which input tape retains unmatched symbols"
+  },
+  "verification": {
+    "verifier_version": "independent-directional-foundation-verifier-v0.1",
+    "semantic_id": "DSEM-be8bf9c60762e0f0",
+    "passed": true,
+    "universal_statement": "for every a,b in N represented by finite tapes, primary magnitude encodes a-b when a>=b and alternate magnitude encodes b-a when b>a",
+    "decoded_statement": "decode(output(a,b)) = a-b for every a,b in N",
+    "declared_domain": "pairs of natural-number cardinalities with a two-glyph normalized output",
+    "not_claimed": "addition or subtraction over two arbitrary signed-integer inputs",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "paired cancellation invariant plus mutually exclusive residual-direction induction",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "DSEM-be8bf9c60762e0f0"
+      },
+      {
+        "obligation_id": "exact_directional_program_binding",
+        "passed": true,
+        "evidence": "DTP-69f2f44c14cf48fe"
+      },
+      {
+        "obligation_id": "zero_arithmetic_directional_opcodes",
+        "passed": true,
+        "evidence": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "obligation_id": "paired_cancellation_and_two_residual_directions",
+        "passed": true,
+        "evidence": [
+          {
+            "source_tapes": [
+              0,
+              1
+            ],
+            "emit_slot": 0
+          },
+          {
+            "source_tapes": [
+              0
+            ],
+            "emit_slot": 1
+          },
+          {
+            "source_tapes": [
+              1
+            ],
+            "emit_slot": 2
+          }
+        ]
+      },
+      {
+        "obligation_id": "depends_on_three_prior_foundations",
+        "passed": true,
+        "evidence": [
+          "FSEM-3d1a4d19fab44d62",
+          "FSEM-cf58189608902a55",
+          "RSEM-6082532054ec1e05"
+        ]
+      },
+      {
+        "obligation_id": "paired_phase_invariant",
+        "passed": true,
+        "evidence": "after t paired steps both heads advanced t and no output exists; t<=min(|X|,|Y|)"
+      },
+      {
+        "obligation_id": "left_residual_direction_correctness",
+        "passed": true,
+        "evidence": "if |X|>|Y| only tape 0 remains and each residual symbol emits one primary anonymous glyph"
+      },
+      {
+        "obligation_id": "right_residual_direction_correctness",
+        "passed": true,
+        "evidence": "if |Y|>|X| only tape 1 remains and each residual symbol emits one alternate anonymous glyph"
+      },
+      {
+        "obligation_id": "zero_has_empty_normal_form",
+        "passed": true,
+        "evidence": "equal input cardinalities leave neither residual and emit no glyph"
+      },
+      {
+        "obligation_id": "directional_normal_form_is_unambiguous",
+        "passed": true,
+        "evidence": "no verified output contains both anonymous glyph kinds"
+      },
+      {
+        "obligation_id": "signed_decode_equals_natural_input_difference",
+        "passed": true,
+        "evidence": "12/12 decoded cases"
+      },
+      {
+        "obligation_id": "finite_tape_termination",
+        "passed": true,
+        "evidence": "each active phase strictly advances at least one finite input head and phases never jump backward across phase boundaries"
+      },
+      {
+        "obligation_id": "independent_hidden_replay",
+        "passed": true,
+        "evidence": "12/12 cases"
+      },
+      {
+        "obligation_id": "not_promoted_as_general_integer_arithmetic",
+        "passed": true,
+        "evidence": "inputs remain natural-cardinality tapes; arbitrary signed operands and signed addition are not represented"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "DIRECTION-HIDDEN-00",
+        "source_lengths": [
+          0,
+          0
+        ],
+        "passed": true,
+        "output_symbols": [],
+        "decoded_value": 0,
+        "expected_value": 0,
+        "primitive_execution_tokens": 4
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-01",
+        "source_lengths": [
+          1,
+          0
+        ],
+        "passed": true,
+        "output_symbols": [
+          "●"
+        ],
+        "decoded_value": 1,
+        "expected_value": 1,
+        "primitive_execution_tokens": 11
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-02",
+        "source_lengths": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_symbols": [
+          "○"
+        ],
+        "decoded_value": -1,
+        "expected_value": -1,
+        "primitive_execution_tokens": 10
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-03",
+        "source_lengths": [
+          2,
+          2
+        ],
+        "passed": true,
+        "output_symbols": [],
+        "decoded_value": 0,
+        "expected_value": 0,
+        "primitive_execution_tokens": 18
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-04",
+        "source_lengths": [
+          7,
+          3
+        ],
+        "passed": true,
+        "output_symbols": [
+          "●",
+          "●",
+          "●",
+          "●"
+        ],
+        "decoded_value": 4,
+        "expected_value": 4,
+        "primitive_execution_tokens": 50
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-05",
+        "source_lengths": [
+          3,
+          7
+        ],
+        "passed": true,
+        "output_symbols": [
+          "○",
+          "○",
+          "○",
+          "○"
+        ],
+        "decoded_value": -4,
+        "expected_value": -4,
+        "primitive_execution_tokens": 49
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-06",
+        "source_lengths": [
+          13,
+          5
+        ],
+        "passed": true,
+        "output_symbols": [
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●"
+        ],
+        "decoded_value": 8,
+        "expected_value": 8,
+        "primitive_execution_tokens": 88
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-07",
+        "source_lengths": [
+          5,
+          13
+        ],
+        "passed": true,
+        "output_symbols": [
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○"
+        ],
+        "decoded_value": -8,
+        "expected_value": -8,
+        "primitive_execution_tokens": 87
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-08",
+        "source_lengths": [
+          21,
+          8
+        ],
+        "passed": true,
+        "output_symbols": [
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●"
+        ],
+        "decoded_value": 13,
+        "expected_value": 13,
+        "primitive_execution_tokens": 139
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-09",
+        "source_lengths": [
+          8,
+          21
+        ],
+        "passed": true,
+        "output_symbols": [
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○"
+        ],
+        "decoded_value": -13,
+        "expected_value": -13,
+        "primitive_execution_tokens": 138
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-10",
+        "source_lengths": [
+          64,
+          17
+        ],
+        "passed": true,
+        "output_symbols": [
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●",
+          "●"
+        ],
+        "decoded_value": 47,
+        "expected_value": 47,
+        "primitive_execution_tokens": 406
+      },
+      {
+        "case_id": "DIRECTION-HIDDEN-11",
+        "source_lengths": [
+          17,
+          64
+        ],
+        "passed": true,
+        "output_symbols": [
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○",
+          "○"
+        ],
+        "decoded_value": -47,
+        "expected_value": -47,
+        "primitive_execution_tokens": 405
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 4,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差",
+      "有符号自然数差"
+    ],
+    "next_frontier": {
+      "learner_label": null,
+      "evaluator_only_interpretation": "normalize and operate on pairs of already-signed inputs, then seek reusable nested traversal",
+      "status": "not_yet_discovered"
+    }
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/directional_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/directional_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 819,
+    "event_hash": "ed0e297c5fc596ad72b601a206ed6b9181ac4de27c608100e1cde6defc2e51c4"
+  },
+  "gates": [
+    {
+      "gate_id": "no_sign_or_subtraction_label_visible_to_learner",
+      "passed": true,
+      "actual": false,
+      "required": false
+    },
+    {
+      "gate_id": "two_output_glyphs_are_anonymous",
+      "passed": true,
+      "actual": [
+        "●",
+        "○"
+      ],
+      "required": "two unlabeled glyphs"
+    },
+    {
+      "gate_id": "anonymous_direction_task_exactly_solved",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "paired_phase_and_both_residual_directions_induced",
+      "passed": true,
+      "actual": [
+        {
+          "source_tapes": [
+            0,
+            1
+          ],
+          "emit_slot": 0
+        },
+        {
+          "source_tapes": [
+            0
+          ],
+          "emit_slot": 1
+        },
+        {
+          "source_tapes": [
+            1
+          ],
+          "emit_slot": 2
+        }
+      ],
+      "required": 3
+    },
+    {
+      "gate_id": "universal_directional_difference_proof",
+      "passed": true,
+      "actual": 14,
+      "required": 14
+    },
+    {
+      "gate_id": "all_hidden_signed_direction_cases_pass",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "negative_direction_information_is_preserved",
+      "passed": true,
+      "actual": -47,
+      "required": "less than zero"
+    },
+    {
+      "gate_id": "directional_outputs_are_normalized",
+      "passed": true,
+      "actual": true,
+      "required": true
+    },
+    {
+      "gate_id": "token_reward_selects_a_maximum_reward_exact_program",
+      "passed": true,
+      "actual": 999503,
+      "required": 999503
+    },
+    {
+      "gate_id": "success_and_mistake_rooms_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 819
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 819
+      }
+    },
+    {
+      "gate_id": "not_misreported_as_general_signed_integer_arithmetic",
+      "passed": true,
+      "actual": "addition or subtraction over two arbitrary signed-integer inputs",
+      "required": "addition or subtraction over two arbitrary signed-integer inputs"
+    }
+  ],
+  "limitations": [
+    "The result represents a-b for natural-cardinality inputs, including negative output direction; it does not yet accept arbitrary signed operands.",
+    "The host exposed a second anonymous glyph and a bounded three-phase grammar, but supplied neither sign meanings nor the target program.",
+    "Unary magnitude is inefficient for large values and positional notation remains undiscovered.",
+    "Multiplication and division are not yet foundation-level discoveries."
+  ]
+}

@@ -1,0 +1,782 @@
+{
+  "report_version": "autonomous-rational-dispersion-v0.1",
+  "run_id": "RUN-autonomous-rational-20260820T025227563659Z",
+  "created_at": "2026-08-20T02:52:27.563659Z",
+  "verdict": "signed_rational_difference_and_squared_deviation_invented_then_variance_derived",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-weighted-20260820T024918812264Z",
+    "frontier": {
+      "world_id": "WORLD-dispersion-around-center-84",
+      "structural_signature": "finite_weighted_dispersion",
+      "status": "dependency_blocked",
+      "missing_dependency": "signed_rational_arithmetic",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "searches": {
+    "difference": {
+      "candidate_count": 60,
+      "exact_candidate_count": 1,
+      "selected_program": {
+        "program_id": "ZAP-e5dbf5e7c0964672",
+        "numerator_mode": 1,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "selected_token_cost": 1394
+    },
+    "square": {
+      "candidate_count": 60,
+      "exact_candidate_count": 1,
+      "selected_program": {
+        "program_id": "ZAP-31997e67665aff0c",
+        "numerator_mode": 3,
+        "denominator_mode": 1,
+        "normalize": true
+      },
+      "selected_token_cost": 146816
+    }
+  },
+  "discovery": {
+    "foundation_level": 13,
+    "semantic": {
+      "semantic_id": "ZSEM-90254f138d3cc064",
+      "difference_opcode": 13,
+      "square_opcode": 14,
+      "difference_program": {
+        "program_id": "ZAP-e5dbf5e7c0964672",
+        "numerator_mode": 1,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "square_program": {
+        "program_id": "ZAP-31997e67665aff0c",
+        "numerator_mode": 3,
+        "denominator_mode": 1,
+        "normalize": true
+      },
+      "dependency_semantic_ids": [
+        "WSEM-0e6a1b1f31e2d2c5",
+        "QSEM-3b412465307b4dee",
+        "DSEM-be8bf9c60762e0f0"
+      ],
+      "source_task_ids": [
+        "WORLD-dispersion-around-center-84-D",
+        "WORLD-dispersion-around-center-84-S"
+      ],
+      "invented_dependency_signature": "signed_rational_arithmetic"
+    },
+    "structural_origin": "close normalized signed rational pairs under directed difference and squared directed difference",
+    "posthoc_name": "signed rational subtraction and squared deviation",
+    "posthoc_formula": "a/b-c/d=(ad-cb)/(bd); (a/b-c/d)^2=(ad-cb)^2/(bd)^2",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "derived_results": [
+    "finite weighted variance",
+    "fair binomial variance Var(K)=n/4"
+  ],
+  "verification": {
+    "verifier_version": "independent-rational-algebra-verifier-v0.1",
+    "semantic_id": "ZSEM-90254f138d3cc064",
+    "passed": true,
+    "invented_mechanism": "cross-scale two signed numerator pairs to a common positive denominator, preserve direction, normalize, and self-compose the directed difference",
+    "structural_statement": "close normalized signed rational pairs under directed difference and squared directed difference",
+    "posthoc_mathematical_name": "signed rational subtraction and squared deviation",
+    "posthoc_formula": "a/b-c/d=(ad-cb)/(bd); (a/b-c/d)^2=(ad-cb)^2/(bd)^2",
+    "derived_results": [
+      "finite weighted variance",
+      "fair binomial variance Var(K)=n/4"
+    ],
+    "declared_domain": "signed integer numerators with positive natural denominators",
+    "not_claimed": "complete ordered-field implementation, irrational or complex arithmetic, covariance matrices, limit laws, or measure-theoretic variance",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "integer cross-product identities, gcd normal forms, ordered rational square laws, and finite weighted sums",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "ZSEM-90254f138d3cc064"
+      },
+      {
+        "obligation_id": "exact_difference_program_binding",
+        "passed": true,
+        "evidence": "ZAP-e5dbf5e7c0964672"
+      },
+      {
+        "obligation_id": "exact_square_program_binding",
+        "passed": true,
+        "evidence": "ZAP-31997e67665aff0c"
+      },
+      {
+        "obligation_id": "signed_rational_arithmetic_dependency_invented",
+        "passed": true,
+        "evidence": "signed_rational_arithmetic"
+      },
+      {
+        "obligation_id": "cross_difference_and_squared_difference_shape",
+        "passed": true,
+        "evidence": {
+          "semantic_id": "ZSEM-90254f138d3cc064",
+          "difference_opcode": 13,
+          "square_opcode": 14,
+          "difference_program": {
+            "program_id": "ZAP-e5dbf5e7c0964672",
+            "numerator_mode": 1,
+            "denominator_mode": 0,
+            "normalize": true
+          },
+          "square_program": {
+            "program_id": "ZAP-31997e67665aff0c",
+            "numerator_mode": 3,
+            "denominator_mode": 1,
+            "normalize": true
+          },
+          "dependency_semantic_ids": [
+            "WSEM-0e6a1b1f31e2d2c5",
+            "QSEM-3b412465307b4dee",
+            "DSEM-be8bf9c60762e0f0"
+          ],
+          "source_task_ids": [
+            "WORLD-dispersion-around-center-84-D",
+            "WORLD-dispersion-around-center-84-S"
+          ],
+          "invented_dependency_signature": "signed_rational_arithmetic"
+        }
+      },
+      {
+        "obligation_id": "depends_on_signed_direction_ratio_and_power_semantics",
+        "passed": true,
+        "evidence": [
+          "WSEM-0e6a1b1f31e2d2c5",
+          "QSEM-3b412465307b4dee",
+          "DSEM-be8bf9c60762e0f0"
+        ]
+      },
+      {
+        "obligation_id": "positive_denominator_normal_form",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "cross_product_difference_identity",
+        "passed": true,
+        "evidence": "a/b-c/d=(ad-cb)/(bd)"
+      },
+      {
+        "obligation_id": "difference_antisymmetry",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "difference_zero_for_equivalent_pairs",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "squared_difference_is_difference_product",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "squared_difference_nonnegative",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "squared_difference_zero_iff_equal",
+        "passed": true,
+        "evidence": "ordered-field square law on rational normal forms"
+      },
+      {
+        "obligation_id": "independent_hidden_rational_replay",
+        "passed": true,
+        "evidence": "7/7"
+      },
+      {
+        "obligation_id": "finite_weighted_variance_nonnegative",
+        "passed": true,
+        "evidence": [
+          {
+            "records": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            "mean": "1/2",
+            "variance": "1/4",
+            "nonnegative": true
+          },
+          {
+            "records": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "mean": "2/3",
+            "variance": "2/9",
+            "nonnegative": true
+          },
+          {
+            "records": [
+              [
+                1,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "mean": "2",
+            "variance": "1",
+            "nonnegative": true
+          },
+          {
+            "records": [
+              [
+                0,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            "mean": "2",
+            "variance": "8/3",
+            "nonnegative": true
+          },
+          {
+            "records": [
+              [
+                2,
+                3
+              ],
+              [
+                7,
+                2
+              ],
+              [
+                11,
+                1
+              ]
+            ],
+            "mean": "31/6",
+            "variance": "425/36",
+            "nonnegative": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "variance_translation_invariant",
+        "passed": true,
+        "evidence": "adding one rational constant to all outcomes leaves every centered difference unchanged"
+      },
+      {
+        "obligation_id": "constant_outcome_variance_zero",
+        "passed": true,
+        "evidence": "all deviations from the common center are zero"
+      },
+      {
+        "obligation_id": "fair_binomial_variance",
+        "passed": true,
+        "evidence": [
+          {
+            "n": 0,
+            "variance": "0",
+            "expected": "0",
+            "passed": true
+          },
+          {
+            "n": 1,
+            "variance": "1/4",
+            "expected": "1/4",
+            "passed": true
+          },
+          {
+            "n": 2,
+            "variance": "1/2",
+            "expected": "1/2",
+            "passed": true
+          },
+          {
+            "n": 3,
+            "variance": "3/4",
+            "expected": "3/4",
+            "passed": true
+          },
+          {
+            "n": 4,
+            "variance": "1",
+            "expected": "1",
+            "passed": true
+          },
+          {
+            "n": 5,
+            "variance": "5/4",
+            "expected": "5/4",
+            "passed": true
+          },
+          {
+            "n": 6,
+            "variance": "3/2",
+            "expected": "3/2",
+            "passed": true
+          },
+          {
+            "n": 7,
+            "variance": "7/4",
+            "expected": "7/4",
+            "passed": true
+          },
+          {
+            "n": 8,
+            "variance": "2",
+            "expected": "2",
+            "passed": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "binomial_variance_identity",
+        "passed": true,
+        "evidence": "independent marked-position indicators have n terms of variance 1/4 and zero cross covariance in the finite counting model"
+      },
+      {
+        "obligation_id": "variance_is_derived_not_extra_foundation",
+        "passed": true,
+        "evidence": "dispersion composes rational algebra with the proved weighted accumulator"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "finite integer cross products, gcd normalization, and weighted sums terminate"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "search saw integer numerator/denominator modes and signed pairs, not subtraction, square, variance, or formulas"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "RATIONAL-HIDDEN-00",
+        "left": [
+          1,
+          2
+        ],
+        "right": [
+          1,
+          3
+        ],
+        "difference": [
+          1,
+          6
+        ],
+        "square": [
+          1,
+          36
+        ],
+        "passed": true,
+        "tokens": 70
+      },
+      {
+        "case_id": "RATIONAL-HIDDEN-01",
+        "left": [
+          1,
+          3
+        ],
+        "right": [
+          1,
+          2
+        ],
+        "difference": [
+          -1,
+          6
+        ],
+        "square": [
+          1,
+          36
+        ],
+        "passed": true,
+        "tokens": 70
+      },
+      {
+        "case_id": "RATIONAL-HIDDEN-02",
+        "left": [
+          -2,
+          5
+        ],
+        "right": [
+          3,
+          7
+        ],
+        "difference": [
+          -29,
+          35
+        ],
+        "square": [
+          841,
+          1225
+        ],
+        "passed": true,
+        "tokens": 2204
+      },
+      {
+        "case_id": "RATIONAL-HIDDEN-03",
+        "left": [
+          0,
+          1
+        ],
+        "right": [
+          4,
+          9
+        ],
+        "difference": [
+          -4,
+          9
+        ],
+        "square": [
+          16,
+          81
+        ],
+        "passed": true,
+        "tokens": 134
+      },
+      {
+        "case_id": "RATIONAL-HIDDEN-04",
+        "left": [
+          17,
+          42
+        ],
+        "right": [
+          3,
+          8
+        ],
+        "difference": [
+          5,
+          168
+        ],
+        "square": [
+          25,
+          28224
+        ],
+        "passed": true,
+        "tokens": 113886
+      },
+      {
+        "case_id": "RATIONAL-HIDDEN-05",
+        "left": [
+          -5,
+          6
+        ],
+        "right": [
+          -7,
+          9
+        ],
+        "difference": [
+          -1,
+          18
+        ],
+        "square": [
+          1,
+          324
+        ],
+        "passed": true,
+        "tokens": 3182
+      },
+      {
+        "case_id": "RATIONAL-HIDDEN-06",
+        "left": [
+          4,
+          10
+        ],
+        "right": [
+          6,
+          15
+        ],
+        "difference": [
+          0,
+          1
+        ],
+        "square": [
+          0,
+          1
+        ],
+        "passed": true,
+        "tokens": 22906
+      }
+    ],
+    "variance_cases": [
+      {
+        "records": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "mean": "1/2",
+        "variance": "1/4",
+        "nonnegative": true
+      },
+      {
+        "records": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "mean": "2/3",
+        "variance": "2/9",
+        "nonnegative": true
+      },
+      {
+        "records": [
+          [
+            1,
+            1
+          ],
+          [
+            3,
+            1
+          ]
+        ],
+        "mean": "2",
+        "variance": "1",
+        "nonnegative": true
+      },
+      {
+        "records": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            4,
+            1
+          ]
+        ],
+        "mean": "2",
+        "variance": "8/3",
+        "nonnegative": true
+      },
+      {
+        "records": [
+          [
+            2,
+            3
+          ],
+          [
+            7,
+            2
+          ],
+          [
+            11,
+            1
+          ]
+        ],
+        "mean": "31/6",
+        "variance": "425/36",
+        "nonnegative": true
+      }
+    ],
+    "binomial_variance_cases": [
+      {
+        "n": 0,
+        "variance": "0",
+        "expected": "0",
+        "passed": true
+      },
+      {
+        "n": 1,
+        "variance": "1/4",
+        "expected": "1/4",
+        "passed": true
+      },
+      {
+        "n": 2,
+        "variance": "1/2",
+        "expected": "1/2",
+        "passed": true
+      },
+      {
+        "n": 3,
+        "variance": "3/4",
+        "expected": "3/4",
+        "passed": true
+      },
+      {
+        "n": 4,
+        "variance": "1",
+        "expected": "1",
+        "passed": true
+      },
+      {
+        "n": 5,
+        "variance": "5/4",
+        "expected": "5/4",
+        "passed": true
+      },
+      {
+        "n": 6,
+        "variance": "3/2",
+        "expected": "3/2",
+        "passed": true
+      },
+      {
+        "n": 7,
+        "variance": "7/4",
+        "expected": "7/4",
+        "passed": true
+      },
+      {
+        "n": 8,
+        "variance": "2",
+        "expected": "2",
+        "passed": true
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 13,
+    "new_foundation": "有符号有理差与平方偏差",
+    "verified_derived_results_added": 2
+  },
+  "next_frontier": {
+    "world_id": "WORLD-paired-centered-outcomes-91",
+    "structural_signature": "paired_weighted_center_product",
+    "status": "dependency_blocked",
+    "missing_dependency": "paired_weighted_accumulator",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/rational_algebra_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/rational_algebra_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 118,
+    "event_hash": "2feeef6f15c725a2dfae791a64a637abda63cf8d787243fa94d50a9656fb98e2"
+  },
+  "gates": [
+    {
+      "gate_id": "signed_rational_gap_taken_from_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-dispersion-around-center-84",
+        "structural_signature": "finite_weighted_dispersion",
+        "status": "dependency_blocked",
+        "missing_dependency": "signed_rational_arithmetic",
+        "posthoc_math_name": null
+      },
+      "required": "recorded gap"
+    },
+    {
+      "gate_id": "two_anonymous_algebra_searches_completed",
+      "passed": true,
+      "actual": 120,
+      "required": 120
+    },
+    {
+      "gate_id": "cross_difference_program_induced",
+      "passed": true,
+      "actual": {
+        "program_id": "ZAP-e5dbf5e7c0964672",
+        "numerator_mode": 1,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "required": "anonymous exact mode"
+    },
+    {
+      "gate_id": "squared_difference_program_induced",
+      "passed": true,
+      "actual": {
+        "program_id": "ZAP-31997e67665aff0c",
+        "numerator_mode": 3,
+        "denominator_mode": 1,
+        "normalize": true
+      },
+      "required": "anonymous exact mode"
+    },
+    {
+      "gate_id": "both_worlds_exactly_compressed",
+      "passed": true,
+      "actual": [
+        8,
+        8
+      ],
+      "required": [
+        8,
+        8
+      ]
+    },
+    {
+      "gate_id": "rational_algebra_universally_proved",
+      "passed": true,
+      "actual": 22,
+      "required": 22
+    },
+    {
+      "gate_id": "all_hidden_rational_cases_pass",
+      "passed": true,
+      "actual": 7,
+      "required": 7
+    },
+    {
+      "gate_id": "binomial_variance_cases_pass",
+      "passed": true,
+      "actual": 9,
+      "required": 9
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 118
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 118
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_variance_or_rational_formula",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "This proves rational difference and squared deviation, not every ordered-field operation.",
+    "Finite variance is derived only for finite rational-weight models.",
+    "Covariance, correlation, limit theorems, real completion, and measure theory remain unproved."
+  ]
+}

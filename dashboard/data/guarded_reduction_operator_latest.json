@@ -1,0 +1,2334 @@
+{
+  "report_version": "guarded-reduction-operator-v0.1",
+  "run_id": "RUN-guarded-reduction-operator-20260819T171712489483Z",
+  "created_at": "2026-08-19T17:17:12.489483Z",
+  "verdict": "new_data_dependent_control_operator_verified",
+  "invented_operator": {
+    "semantic_id": "SEM-61440ea9651ce7ba",
+    "opcode": 128,
+    "occurrences": [
+      {
+        "source_record_id": "UF-7eb738379af6d614",
+        "start_instruction": 5,
+        "remainder_cell": 32,
+        "count_cell": 33,
+        "divisor_input": 1,
+        "increment": 1
+      },
+      {
+        "source_record_id": "UF-db872a9c897df49e",
+        "start_instruction": 11,
+        "remainder_cell": 59,
+        "count_cell": 58,
+        "divisor_input": 1,
+        "increment": 1
+      },
+      {
+        "source_record_id": "UF-bbc3f7558768788c",
+        "start_instruction": 11,
+        "remainder_cell": 59,
+        "count_cell": 58,
+        "divisor_input": 1,
+        "increment": 1
+      }
+    ],
+    "source_record_ids": [
+      "UF-7eb738379af6d614",
+      "UF-bbc3f7558768788c",
+      "UF-db872a9c897df49e"
+    ],
+    "supporting_occurrence_count": 3,
+    "normalized_opcode_shape": [
+      2,
+      6,
+      13,
+      3,
+      2,
+      9,
+      3,
+      11
+    ]
+  },
+  "posthoc_interpretation": {
+    "name": "guarded repeated reduction with success counter",
+    "effect": "for a>=0,c>=0,d>=1: final_count=c+floor(a/d), final_remainder=a mod d",
+    "provided_to_learner": false
+  },
+  "discovery": {
+    "proven_word_programs_scanned": 55,
+    "distinct_backward_loop_shapes": 42,
+    "supporting_source_count": 3,
+    "supporting_occurrence_count": 3,
+    "selection_reason": "repeated multi-source opcode skeleton containing both a negative guard and a backward jump"
+  },
+  "verification": {
+    "verifier_version": "independent-guarded-reduction-verifier-v0.1",
+    "passed": true,
+    "semantic_id": "SEM-61440ea9651ce7ba",
+    "domain": {
+      "remainder_min": 0,
+      "count_min": 0,
+      "divisor_min": 1
+    },
+    "obligations": [
+      {
+        "obligation_id": "next_fresh_opcode",
+        "passed": true,
+        "evidence": 128
+      },
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "SEM-61440ea9651ce7ba"
+      },
+      {
+        "obligation_id": "three_independent_proven_sources",
+        "passed": true,
+        "evidence": [
+          "UF-7eb738379af6d614",
+          "UF-bbc3f7558768788c",
+          "UF-db872a9c897df49e"
+        ]
+      },
+      {
+        "obligation_id": "exact_guarded_loop_shape",
+        "passed": true,
+        "evidence": [
+          2,
+          6,
+          13,
+          3,
+          2,
+          9,
+          3,
+          11
+        ]
+      },
+      {
+        "obligation_id": "loop_invariant",
+        "passed": true,
+        "evidence": "after k successful iterations: remainder=a-k*d and count=c+k"
+      },
+      {
+        "obligation_id": "universal_termination",
+        "passed": true,
+        "evidence": "for a>=0,d>=1, each success decreases the natural remainder by at least one"
+      },
+      {
+        "obligation_id": "universal_exit_correctness",
+        "passed": true,
+        "evidence": "exit gives a=q*d+r with 0<=r<d; uniqueness gives q=floor(a/d), r=a mod d"
+      },
+      {
+        "obligation_id": "independent_hidden_replay",
+        "passed": true,
+        "evidence": "56/56 cases"
+      }
+    ],
+    "case_results": [
+      {
+        "inputs": [
+          0,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          0,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 1,
+          "iteration_count": 1
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 1,
+          "iteration_count": 1
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 5,
+          "iteration_count": 1
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 5,
+          "iteration_count": 1
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 2,
+          "iteration_count": 2
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 2,
+          "iteration_count": 2
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 6,
+          "iteration_count": 2
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 6,
+          "iteration_count": 2
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 1,
+          "iteration_count": 1
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 1,
+          "iteration_count": 1
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 5,
+          "iteration_count": 1
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 5,
+          "iteration_count": 1
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          2,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 5,
+          "iteration_count": 5
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 5,
+          "iteration_count": 5
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 9,
+          "iteration_count": 5
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 9,
+          "iteration_count": 5
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 2,
+          "iteration_count": 2
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 2,
+          "iteration_count": 2
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 6,
+          "iteration_count": 2
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 6,
+          "iteration_count": 2
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 1,
+          "iteration_count": 1
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 1,
+          "iteration_count": 1
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 5,
+          "iteration_count": 1
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 5,
+          "iteration_count": 1
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 5,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 5,
+          "final_count": 0,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 5,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "expected": {
+          "final_remainder": 5,
+          "final_count": 4,
+          "iteration_count": 0
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 17,
+          "iteration_count": 17
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 17,
+          "iteration_count": 17
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 21,
+          "iteration_count": 17
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 21,
+          "iteration_count": 17
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 8,
+          "iteration_count": 8
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 8,
+          "iteration_count": 8
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 12,
+          "iteration_count": 8
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 12,
+          "iteration_count": 8
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 5,
+          "iteration_count": 5
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 5,
+          "iteration_count": 5
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 9,
+          "iteration_count": 5
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 9,
+          "iteration_count": 5
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 3,
+          "final_count": 2,
+          "iteration_count": 2
+        },
+        "expected": {
+          "final_remainder": 3,
+          "final_count": 2,
+          "iteration_count": 2
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          17,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 3,
+          "final_count": 6,
+          "iteration_count": 2
+        },
+        "expected": {
+          "final_remainder": 3,
+          "final_count": 6,
+          "iteration_count": 2
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 42,
+          "iteration_count": 42
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 42,
+          "iteration_count": 42
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 46,
+          "iteration_count": 42
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 46,
+          "iteration_count": 42
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 21,
+          "iteration_count": 21
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 21,
+          "iteration_count": 21
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 25,
+          "iteration_count": 21
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 25,
+          "iteration_count": 21
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 14,
+          "iteration_count": 14
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 14,
+          "iteration_count": 14
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 18,
+          "iteration_count": 14
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 18,
+          "iteration_count": 14
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 6,
+          "iteration_count": 6
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 6,
+          "iteration_count": 6
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          42,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 10,
+          "iteration_count": 6
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 10,
+          "iteration_count": 6
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          0,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 101,
+          "iteration_count": 101
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 101,
+          "iteration_count": 101
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          4,
+          1
+        ],
+        "actual": {
+          "final_remainder": 0,
+          "final_count": 105,
+          "iteration_count": 101
+        },
+        "expected": {
+          "final_remainder": 0,
+          "final_count": 105,
+          "iteration_count": 101
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          0,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 50,
+          "iteration_count": 50
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 50,
+          "iteration_count": 50
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          4,
+          2
+        ],
+        "actual": {
+          "final_remainder": 1,
+          "final_count": 54,
+          "iteration_count": 50
+        },
+        "expected": {
+          "final_remainder": 1,
+          "final_count": 54,
+          "iteration_count": 50
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          0,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 33,
+          "iteration_count": 33
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 33,
+          "iteration_count": 33
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          4,
+          3
+        ],
+        "actual": {
+          "final_remainder": 2,
+          "final_count": 37,
+          "iteration_count": 33
+        },
+        "expected": {
+          "final_remainder": 2,
+          "final_count": 37,
+          "iteration_count": 33
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          0,
+          7
+        ],
+        "actual": {
+          "final_remainder": 3,
+          "final_count": 14,
+          "iteration_count": 14
+        },
+        "expected": {
+          "final_remainder": 3,
+          "final_count": 14,
+          "iteration_count": 14
+        },
+        "passed": true
+      },
+      {
+        "inputs": [
+          101,
+          4,
+          7
+        ],
+        "actual": {
+          "final_remainder": 3,
+          "final_count": 18,
+          "iteration_count": 14
+        },
+        "expected": {
+          "final_remainder": 3,
+          "final_count": 18,
+          "iteration_count": 14
+        },
+        "passed": true
+      }
+    ]
+  },
+  "demonstration": {
+    "inputs": {
+      "remainder": 17,
+      "count": 0,
+      "divisor": 5
+    },
+    "result": {
+      "final_remainder": 2,
+      "final_count": 3,
+      "iteration_count": 3
+    }
+  },
+  "gates": [
+    {
+      "gate_id": "first_opcode_after_active_linear_library",
+      "passed": true,
+      "actual": 128,
+      "required": 128
+    },
+    {
+      "gate_id": "three_proven_program_sources",
+      "passed": true,
+      "actual": 3,
+      "required": 3
+    },
+    {
+      "gate_id": "data_dependent_control_flow_present",
+      "passed": true,
+      "actual": [
+        2,
+        6,
+        13,
+        3,
+        2,
+        9,
+        3,
+        11
+      ],
+      "required": "negative-guard and backward-jump"
+    },
+    {
+      "gate_id": "universal_invariant_termination_exit_proof",
+      "passed": true,
+      "actual": 8,
+      "required": 8
+    },
+    {
+      "gate_id": "hidden_replay_exact",
+      "passed": true,
+      "actual": 56,
+      "required": 56
+    }
+  ],
+  "learner_received": {
+    "operator_name": false,
+    "division_or_remainder_symbol": false,
+    "formula_statement": false,
+    "proven_anonymous_word_code": true,
+    "opcode_structure": true
+  },
+  "limitations": [
+    "This is one genuinely data-dependent control macro, not a new arbitrary loop language.",
+    "Its universal theorem is restricted to nonnegative integer remainder/count and positive integer divisor.",
+    "The loop detector and registered invariant proof rule remain host code; the learner did not synthesize a new verifier.",
+    "The mathematical interpretation was attached only after structural induction and proof."
+  ],
+  "control_semantic_room": {
+    "schema_version": "verified-control-semantic-event-v0.1",
+    "event_index": 0,
+    "timestamp": "2026-08-19T17:17:12.489483Z",
+    "run_id": "RUN-guarded-reduction-operator-20260819T171712489483Z",
+    "semantic": {
+      "semantic_id": "SEM-61440ea9651ce7ba",
+      "opcode": 128,
+      "occurrences": [
+        {
+          "source_record_id": "UF-7eb738379af6d614",
+          "start_instruction": 5,
+          "remainder_cell": 32,
+          "count_cell": 33,
+          "divisor_input": 1,
+          "increment": 1
+        },
+        {
+          "source_record_id": "UF-db872a9c897df49e",
+          "start_instruction": 11,
+          "remainder_cell": 59,
+          "count_cell": 58,
+          "divisor_input": 1,
+          "increment": 1
+        },
+        {
+          "source_record_id": "UF-bbc3f7558768788c",
+          "start_instruction": 11,
+          "remainder_cell": 59,
+          "count_cell": 58,
+          "divisor_input": 1,
+          "increment": 1
+        }
+      ],
+      "source_record_ids": [
+        "UF-7eb738379af6d614",
+        "UF-bbc3f7558768788c",
+        "UF-db872a9c897df49e"
+      ],
+      "supporting_occurrence_count": 3,
+      "normalized_opcode_shape": [
+        2,
+        6,
+        13,
+        3,
+        2,
+        9,
+        3,
+        11
+      ]
+    },
+    "verification": {
+      "verifier_version": "independent-guarded-reduction-verifier-v0.1",
+      "passed": true,
+      "semantic_id": "SEM-61440ea9651ce7ba",
+      "domain": {
+        "remainder_min": 0,
+        "count_min": 0,
+        "divisor_min": 1
+      },
+      "obligations": [
+        {
+          "obligation_id": "next_fresh_opcode",
+          "passed": true,
+          "evidence": 128
+        },
+        {
+          "obligation_id": "semantic_id_binding",
+          "passed": true,
+          "evidence": "SEM-61440ea9651ce7ba"
+        },
+        {
+          "obligation_id": "three_independent_proven_sources",
+          "passed": true,
+          "evidence": [
+            "UF-7eb738379af6d614",
+            "UF-bbc3f7558768788c",
+            "UF-db872a9c897df49e"
+          ]
+        },
+        {
+          "obligation_id": "exact_guarded_loop_shape",
+          "passed": true,
+          "evidence": [
+            2,
+            6,
+            13,
+            3,
+            2,
+            9,
+            3,
+            11
+          ]
+        },
+        {
+          "obligation_id": "loop_invariant",
+          "passed": true,
+          "evidence": "after k successful iterations: remainder=a-k*d and count=c+k"
+        },
+        {
+          "obligation_id": "universal_termination",
+          "passed": true,
+          "evidence": "for a>=0,d>=1, each success decreases the natural remainder by at least one"
+        },
+        {
+          "obligation_id": "universal_exit_correctness",
+          "passed": true,
+          "evidence": "exit gives a=q*d+r with 0<=r<d; uniqueness gives q=floor(a/d), r=a mod d"
+        },
+        {
+          "obligation_id": "independent_hidden_replay",
+          "passed": true,
+          "evidence": "56/56 cases"
+        }
+      ],
+      "case_results": [
+        {
+          "inputs": [
+            0,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            0,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 1,
+            "iteration_count": 1
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 1,
+            "iteration_count": 1
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 5,
+            "iteration_count": 1
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 5,
+            "iteration_count": 1
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 2,
+            "iteration_count": 2
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 2,
+            "iteration_count": 2
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 6,
+            "iteration_count": 2
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 6,
+            "iteration_count": 2
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 1,
+            "iteration_count": 1
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 1,
+            "iteration_count": 1
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 5,
+            "iteration_count": 1
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 5,
+            "iteration_count": 1
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 5,
+            "iteration_count": 5
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 5,
+            "iteration_count": 5
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 9,
+            "iteration_count": 5
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 9,
+            "iteration_count": 5
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 2,
+            "iteration_count": 2
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 2,
+            "iteration_count": 2
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 6,
+            "iteration_count": 2
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 6,
+            "iteration_count": 2
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 1,
+            "iteration_count": 1
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 1,
+            "iteration_count": 1
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 5,
+            "iteration_count": 1
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 5,
+            "iteration_count": 1
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 5,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 5,
+            "final_count": 0,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            5,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 5,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "expected": {
+            "final_remainder": 5,
+            "final_count": 4,
+            "iteration_count": 0
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 17,
+            "iteration_count": 17
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 17,
+            "iteration_count": 17
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 21,
+            "iteration_count": 17
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 21,
+            "iteration_count": 17
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 8,
+            "iteration_count": 8
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 8,
+            "iteration_count": 8
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 12,
+            "iteration_count": 8
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 12,
+            "iteration_count": 8
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 5,
+            "iteration_count": 5
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 5,
+            "iteration_count": 5
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 9,
+            "iteration_count": 5
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 9,
+            "iteration_count": 5
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 3,
+            "final_count": 2,
+            "iteration_count": 2
+          },
+          "expected": {
+            "final_remainder": 3,
+            "final_count": 2,
+            "iteration_count": 2
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            17,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 3,
+            "final_count": 6,
+            "iteration_count": 2
+          },
+          "expected": {
+            "final_remainder": 3,
+            "final_count": 6,
+            "iteration_count": 2
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 42,
+            "iteration_count": 42
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 42,
+            "iteration_count": 42
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 46,
+            "iteration_count": 42
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 46,
+            "iteration_count": 42
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 21,
+            "iteration_count": 21
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 21,
+            "iteration_count": 21
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 25,
+            "iteration_count": 21
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 25,
+            "iteration_count": 21
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 14,
+            "iteration_count": 14
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 14,
+            "iteration_count": 14
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 18,
+            "iteration_count": 14
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 18,
+            "iteration_count": 14
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 6,
+            "iteration_count": 6
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 6,
+            "iteration_count": 6
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            42,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 10,
+            "iteration_count": 6
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 10,
+            "iteration_count": 6
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            0,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 101,
+            "iteration_count": 101
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 101,
+            "iteration_count": 101
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            4,
+            1
+          ],
+          "actual": {
+            "final_remainder": 0,
+            "final_count": 105,
+            "iteration_count": 101
+          },
+          "expected": {
+            "final_remainder": 0,
+            "final_count": 105,
+            "iteration_count": 101
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            0,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 50,
+            "iteration_count": 50
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 50,
+            "iteration_count": 50
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            4,
+            2
+          ],
+          "actual": {
+            "final_remainder": 1,
+            "final_count": 54,
+            "iteration_count": 50
+          },
+          "expected": {
+            "final_remainder": 1,
+            "final_count": 54,
+            "iteration_count": 50
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            0,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 33,
+            "iteration_count": 33
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 33,
+            "iteration_count": 33
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            4,
+            3
+          ],
+          "actual": {
+            "final_remainder": 2,
+            "final_count": 37,
+            "iteration_count": 33
+          },
+          "expected": {
+            "final_remainder": 2,
+            "final_count": 37,
+            "iteration_count": 33
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            0,
+            7
+          ],
+          "actual": {
+            "final_remainder": 3,
+            "final_count": 14,
+            "iteration_count": 14
+          },
+          "expected": {
+            "final_remainder": 3,
+            "final_count": 14,
+            "iteration_count": 14
+          },
+          "passed": true
+        },
+        {
+          "inputs": [
+            101,
+            4,
+            7
+          ],
+          "actual": {
+            "final_remainder": 3,
+            "final_count": 18,
+            "iteration_count": 14
+          },
+          "expected": {
+            "final_remainder": 3,
+            "final_count": 18,
+            "iteration_count": 14
+          },
+          "passed": true
+        }
+      ]
+    },
+    "previous_event_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "event_hash": "6eb8c4b8aa0a6c59a6014f34aee8627ac820163b2b3ed069cfb40302c5cb13a7"
+  }
+}

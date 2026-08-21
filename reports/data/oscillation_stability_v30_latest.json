@@ -1,0 +1,890 @@
+{
+  "report_version": "oscillation-stability-v30.0",
+  "run_id": "RUN-oscillation-v30-20260821T082133076603Z",
+  "created_at": "2026-08-21T08:21:33.076603+00:00",
+  "verdict": "oscillation_energy_and_stability_verified",
+  "acceptance": {
+    "benchmark_version": "oscillation-stability-v30.0",
+    "passed": true,
+    "classification": "verified_anonymous_linear_oscillation_recurrence_energy_and_stability_classification",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "response_rows": [
+        {
+          "experiment_id": "TR-0",
+          "anonymous_inputs": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 2,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TR-1",
+          "anonymous_inputs": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 2
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TR-2",
+          "anonymous_inputs": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 2,
+            "denominator": 3
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TR-3",
+          "anonymous_inputs": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 2
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TR-4",
+          "anonymous_inputs": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 3,
+            "denominator": 4
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "phase_rows": [
+        {
+          "experiment_id": "TP-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 4,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TP-1",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 10
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TP-2",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TP-3",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TP-4",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "formulas_supplied": false
+    },
+    "discovery": {
+      "response_candidates_generated": 32,
+      "selected_response": {
+        "program_id": "RST-d2776dcef6f321b8",
+        "opaque_program": "RESTORE<TURN;NUM:SEM<K,X>;DEN:M>",
+        "policy": {
+          "turn": true,
+          "numerator_route": "SEM<K,X>",
+          "denominator_route": "M",
+          "human_operation_name": null
+        }
+      },
+      "invariant_candidates_generated": 6,
+      "selected_invariant": {
+        "program_id": "PHX-a05a61b2ab1e6c14",
+        "opaque_program": "MERGE<SEM<q0,SEM<q3,q3>>,SEM<q1,SEM<q2,q2>>>",
+        "expression": {
+          "op": "combine",
+          "args": [
+            {
+              "op": "interact",
+              "args": [
+                {
+                  "op": "read",
+                  "channel": 0
+                },
+                {
+                  "op": "interact",
+                  "args": [
+                    {
+                      "op": "read",
+                      "channel": 3
+                    },
+                    {
+                      "op": "read",
+                      "channel": 3
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "interact",
+              "args": [
+                {
+                  "op": "read",
+                  "channel": 1
+                },
+                {
+                  "op": "interact",
+                  "args": [
+                    {
+                      "op": "read",
+                      "channel": 2
+                    },
+                    {
+                      "op": "read",
+                      "channel": 2
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "human_quantity_name": null
+      },
+      "training_response_cases": 5,
+      "training_phase_cases": 5,
+      "recurrence_program": "X_NEXT=MERGE<DOUBLE<X>,TURN<X_PREV>,SEM<H,H,A>>"
+    },
+    "proofs": {
+      "oscillation": {
+        "proof_id": "V30-PROOF-OSCILLATION-AND-STABILITY",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_restoring_response",
+            "passed": true,
+            "evidence": "one of 32 policies"
+          },
+          {
+            "obligation_id": "unique_positive_quadratic_invariant",
+            "passed": true,
+            "evidence": "one of six pairings"
+          },
+          {
+            "obligation_id": "continuous_energy_identity",
+            "passed": true,
+            "evidence": "d(mv^2+kx^2)/dt=2v(ma+kx)=0"
+          },
+          {
+            "obligation_id": "executable_second_order_recurrence",
+            "passed": true,
+            "evidence": "V28 central second stencil solved for next state"
+          },
+          {
+            "obligation_id": "bounded_positive_invariant",
+            "passed": true,
+            "evidence": "m,k>0 bound both state channels"
+          }
+        ],
+        "response_hidden": [
+          {
+            "experiment_id": "SR-0",
+            "passed": true
+          },
+          {
+            "experiment_id": "SR-1",
+            "passed": true
+          },
+          {
+            "experiment_id": "SR-2",
+            "passed": true
+          }
+        ],
+        "phase_hidden": [
+          {
+            "experiment_id": "SP-0",
+            "passed": true
+          },
+          {
+            "experiment_id": "SP-1",
+            "passed": true
+          },
+          {
+            "experiment_id": "SP-2",
+            "passed": true
+          }
+        ]
+      },
+      "stability": {
+        "stable_case": {
+          "classification": "bounded_stable",
+          "trace": [
+            "1",
+            "1",
+            "0",
+            "-1",
+            "-1",
+            "0"
+          ],
+          "passed": true
+        },
+        "unstable_case": {
+          "classification": "growing_unstable",
+          "trace": [
+            "1",
+            "1",
+            "2",
+            "5",
+            "13",
+            "34"
+          ],
+          "passed": true
+        },
+        "neutral_case": {
+          "classification": "neutral",
+          "law": "k=0 gives constant-velocity recurrence",
+          "passed": true
+        },
+        "passed": true
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "wrong_direction",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SR-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 5
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "omit_inertia",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SR-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 5
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "swap_parameter_roles",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SR-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 5
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "swap_quadratic_weights",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SP-1",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v29_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_rows",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "oscillation_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "stable_unstable_neutral_distinguished",
+        "passed": true
+      },
+      {
+        "obligation_id": "recurrence_executable",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m10_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_m11",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_formula_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30"
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 10,
+      "total_domains": 15,
+      "completion_ratio": 0.6666666666666666,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M11:gravity_and_orbits",
+      "selection_reason": "central-force, angular conservation, and stability now support orbital-law discovery"
+    },
+    "posthoc_translation": {
+      "response": "a=-(k/m)x",
+      "invariant": "m v^2+k x^2",
+      "recurrence": "x[n+1]=2x[n]-x[n-1]-(k/m)h^2 x[n]"
+    },
+    "limitations": [
+      "Linear one-mode oscillators only.",
+      "Exact synthetic phase rotations are oracle data.",
+      "Damping, forcing, resonance, nonlinear chaos, and coupled modes remain absent.",
+      "Completion remains 10/15."
+    ]
+  },
+  "claim": {
+    "achieved": "linear oscillation recurrence, quadratic invariant, and stability classification",
+    "not_claimed": "nonlinear, damped, forced, or chaotic dynamics"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v30/success/oscillation_latest.json",
+    "mistake_room": "artifacts/physics/v30/mistakes/rejected_oscillation_mutations.jsonl"
+  },
+  "content_digest": "074c58c1d8fb8b369b77c30493d505cd1fd0e2b1e783fd50120d004f3aa5a03c"
+}

@@ -1,0 +1,231 @@
+{
+  "report_version": "strict-fold-foundation-v12.1",
+  "run_id": "RUN-strict-fold-v12-20260820T181927577454Z",
+  "created_at": "2026-08-20T18:19:27.577454Z",
+  "verdict": "one_target_free_fold_foundation_universally_proven",
+  "dependency": {
+    "semantic_id": "STRICT-FSEM-82df58ba4ce6f41c",
+    "provided_to_candidate_as": "opaque verified binary operation",
+    "human_name_hidden_during_search": true
+  },
+  "discovery": {
+    "information_boundary": {
+      "target_output_rows": false,
+      "power_or_exponent_opcode": false,
+      "named_formula_target": false,
+      "available_choices": [
+        "loop input",
+        "seed source",
+        "opaque binary semantic",
+        "two update sources",
+        "output source"
+      ],
+      "host_supplied": [
+        "fold-controller grammar",
+        "bounded enumeration",
+        "iteration-homomorphism detector",
+        "induction checker"
+      ]
+    },
+    "programs_generated": 1200,
+    "programs_executed": 1200,
+    "behavior_classes": 103,
+    "promotable_behavior_classes": 2,
+    "promotable_semantic_orbits_under_input_renaming": 1,
+    "selected": {
+      "candidate_id": "FD-4726439a89faeaf4",
+      "program": {
+        "substrate": "anonymous_fold_controller_v12",
+        "loop_input": 0,
+        "seed_source": "unit",
+        "update": {
+          "operation_id": "STRICT-FSEM-82df58ba4ce6f41c",
+          "left_source": "accumulator",
+          "right_source": "input_1"
+        },
+        "output_source": "accumulator"
+      },
+      "behavior_signature": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        1,
+        2,
+        3,
+        4,
+        0,
+        1,
+        4,
+        9,
+        16,
+        0,
+        1,
+        8,
+        27,
+        64,
+        0,
+        1,
+        16,
+        81,
+        256
+      ],
+      "iteration_profile": {
+        "depends_on_base_and_count": true,
+        "zero_count_returns_prior_identity": true,
+        "successor_is_one_prior_semantic_application": true,
+        "count_composition_is_homomorphic": true,
+        "prior_identity_base_is_fixed": true,
+        "base_composition_is_homomorphic": true,
+        "law_count": 6,
+        "promotable": true
+      },
+      "primitive_node_count": 6,
+      "semantic_call_cost": 50
+    }
+  },
+  "proof": {
+    "verifier_version": "strict-fold-induction-verifier-v12.1",
+    "passed": true,
+    "semantic_id": "STRICT-FSEM-4726439a89faeaf4",
+    "posthoc_name": "自然数幂（证明后命名）",
+    "universal_statement": "for every b,n in N, the program halts and returns the n-fold prior-semantic composition of b, with the empty fold equal to 1",
+    "derived_normal_form": "b^n",
+    "obligations": [
+      {
+        "obligation_id": "unit_seed",
+        "passed": true,
+        "evidence": "the accumulator begins at the prior semantic's identity"
+      },
+      {
+        "obligation_id": "prior_semantic_selected",
+        "passed": true,
+        "evidence": "the update calls the universally proven V10 binary semantic"
+      },
+      {
+        "obligation_id": "accumulator_and_base_are_update_arguments",
+        "passed": true,
+        "evidence": "each update combines the current accumulator with the non-loop input"
+      },
+      {
+        "obligation_id": "accumulator_is_output",
+        "passed": true,
+        "evidence": "the completed fold returns its accumulated state"
+      },
+      {
+        "obligation_id": "base_case",
+        "passed": true,
+        "evidence": "after zero iterations the state is the identity, denoted b^0=1"
+      },
+      {
+        "obligation_id": "inductive_step",
+        "passed": true,
+        "evidence": "if state after t iterations is b^t, one prior-semantic call yields b^(t+1)"
+      },
+      {
+        "obligation_id": "counter_invariant",
+        "passed": true,
+        "evidence": "after t iterations the remaining loop counter is n-t"
+      },
+      {
+        "obligation_id": "termination",
+        "passed": true,
+        "evidence": "the natural loop counter decreases exactly once until zero"
+      },
+      {
+        "obligation_id": "terminal_normal_form",
+        "passed": true,
+        "evidence": "at t=n the accumulator is the n-fold product of b"
+      },
+      {
+        "obligation_id": "count_composition_law",
+        "passed": true,
+        "evidence": "associativity partitions an (m+n)-fold product into m-fold and n-fold products"
+      },
+      {
+        "obligation_id": "base_composition_law",
+        "passed": true,
+        "evidence": "commutativity and associativity regroup n copies of a*b into n copies of a and n copies of b"
+      },
+      {
+        "obligation_id": "independent_law_replay",
+        "passed": true,
+        "evidence": "{\"base_composition_is_homomorphic\": true, \"count_composition_is_homomorphic\": true, \"depends_on_base_and_count\": true, \"law_count\": 6, \"prior_identity_base_is_fixed\": true, \"promotable\": true, \"successor_is_one_prior_semantic_application\": true, \"zero_count_returns_prior_identity\": true}"
+      },
+      {
+        "obligation_id": "sealed_replay",
+        "passed": true,
+        "evidence": "seven cases outside the discovery grid"
+      }
+    ],
+    "hidden_replay": [
+      {
+        "base": 0,
+        "count": 0,
+        "output": 1,
+        "repeated_prior_semantic": 1,
+        "passed": true
+      },
+      {
+        "base": 0,
+        "count": 7,
+        "output": 0,
+        "repeated_prior_semantic": 0,
+        "passed": true
+      },
+      {
+        "base": 1,
+        "count": 31,
+        "output": 1,
+        "repeated_prior_semantic": 1,
+        "passed": true
+      },
+      {
+        "base": 2,
+        "count": 12,
+        "output": 4096,
+        "repeated_prior_semantic": 4096,
+        "passed": true
+      },
+      {
+        "base": 3,
+        "count": 9,
+        "output": 19683,
+        "repeated_prior_semantic": 19683,
+        "passed": true
+      },
+      {
+        "base": 7,
+        "count": 6,
+        "output": 117649,
+        "repeated_prior_semantic": 117649,
+        "passed": true
+      },
+      {
+        "base": 11,
+        "count": 5,
+        "output": 161051,
+        "repeated_prior_semantic": 161051,
+        "passed": true
+      }
+    ]
+  },
+  "promotion": {
+    "admitted": true,
+    "strict_new_foundation_count": 1,
+    "strict_foundations_in_v10_v11_v12": 3,
+    "room_record_hash": "37546984ca95b0ad186b54a5d40523915cbd3fcb1718bc001abf961248c8b502",
+    "success_room": "artifacts/foundation/v12/success/strict_fold_foundations.jsonl",
+    "mistake_room": "artifacts/foundation/v12/mistakes/nonpromoted_behavior_leaders.jsonl"
+  },
+  "classification": {
+    "label": "target_free_bounded_structural_discovery",
+    "autonomous_within_registered_grammar": true,
+    "unrestricted_semantics_invention": false,
+    "human_novel_mathematics_claim": false,
+    "note": "Two ordered behaviors pass because swapping the anonymous inputs swaps base and count; they form one semantic orbit and one promoted foundation."
+  },
+  "content_digest": "522da6878eb274c866fd9005c6be75b0469a02600e3b0ab1a53c715c9cd4f58d"
+}

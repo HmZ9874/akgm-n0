@@ -1,0 +1,45 @@
+{
+  "manifest_id": "primitive-manifest-gen0-p0-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "gen0-v0.1",
+  "numeric_representation": {
+    "observation_dtype": "float64",
+    "verification_representations": ["float64", "decimal_high_precision"],
+    "missing_values": "explicit_validity_mask"
+  },
+  "structural_priors": [
+    "sequence_boundary",
+    "sequence_order",
+    "bounds_checked_indexing",
+    "program_composition"
+  ],
+  "primitives": [
+    {
+      "id": "p_read_offset",
+      "signature": "sequence,index,offset->scalar",
+      "constraints": {"offset_values": [-1, 0, 1], "out_of_bounds": "invalid"}
+    },
+    {
+      "id": "p_add",
+      "signature": "scalar,scalar->scalar"
+    },
+    {
+      "id": "p_subtract",
+      "signature": "scalar,scalar->scalar"
+    },
+    {
+      "id": "p_scalar_parameter",
+      "signature": "parameter_slot->scalar",
+      "constraints": {"fitted_from_development_observations": true}
+    },
+    {
+      "id": "p_compose",
+      "signature": "program,program->program"
+    }
+  ],
+  "search_prior": {
+    "ordering": ["program_cost", "numeric_fit_error", "reuse_gain"],
+    "maximum_initial_depth": 6,
+    "deterministic_tie_breaking": true
+  }
+}

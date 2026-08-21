@@ -1,0 +1,2898 @@
+{
+  "run_id": "RUN-deep-meta-research-20260820T053628647234Z",
+  "created_at": "2026-08-20T05:36:28.647234Z",
+  "verdict": "expanded_symbolic_research_passed",
+  "benchmark": {
+    "report_version": "meta-autonomy-v4-deep-research-v0.1",
+    "claim": "expanded_bounded_symbolic_research_only",
+    "passed": true,
+    "overall_score": 9.99,
+    "dimension_scores": {
+      "expanded_sealed_generalization": 10.0,
+      "proof_portfolio_coverage": 10.0,
+      "structural_self_extension": 10.0,
+      "autonomous_curriculum": 10.0,
+      "library_transfer_efficiency": 9.99
+    },
+    "information_boundary": {
+      "learner_received": [
+        "opaque IDs",
+        "development integer tables",
+        "generic structural genes"
+      ],
+      "learner_withheld": [
+        "sealed values",
+        "mathematical interpretations",
+        "target formulas",
+        "proof domains",
+        "transfer world"
+      ]
+    },
+    "initial_genome": {
+      "input_channels": 1,
+      "state_cells": 1,
+      "loop_depth": 0,
+      "branch_slots": 0,
+      "output_arity": 1,
+      "coefficient_radius": 1,
+      "counter_interactions": 0
+    },
+    "final_genome": {
+      "input_channels": 2,
+      "state_cells": 2,
+      "loop_depth": 1,
+      "branch_slots": 1,
+      "output_arity": 2,
+      "coefficient_radius": 3,
+      "counter_interactions": 1
+    },
+    "autonomous_selections": [
+      {
+        "index": 0,
+        "world_id": "AW-c203",
+        "learner_score": 100,
+        "solved": true,
+        "mutations": [
+          "grow_input_channel",
+          "grow_counter_fold"
+        ],
+        "host_selected": false
+      },
+      {
+        "index": 1,
+        "world_id": "AW-e52a",
+        "learner_score": 99,
+        "solved": true,
+        "mutations": [
+          "grow_product_output"
+        ],
+        "host_selected": false
+      },
+      {
+        "index": 2,
+        "world_id": "AW-v4-7f",
+        "learner_score": 97,
+        "solved": true,
+        "mutations": [
+          "grow_counter_interaction",
+          "expand_coefficient_palette",
+          "expand_coefficient_palette"
+        ],
+        "host_selected": false
+      },
+      {
+        "index": 3,
+        "world_id": "AW-91bc",
+        "learner_score": 24,
+        "solved": true,
+        "mutations": [
+          "grow_guarded_path"
+        ],
+        "host_selected": false
+      },
+      {
+        "index": 4,
+        "world_id": "AW-v4-6e",
+        "learner_score": 6,
+        "solved": true,
+        "mutations": [
+          "grow_state_cell"
+        ],
+        "host_selected": false
+      },
+      {
+        "index": 5,
+        "world_id": "AW-v4-4b",
+        "learner_score": -10,
+        "solved": true,
+        "mutations": [],
+        "host_selected": false
+      },
+      {
+        "index": 6,
+        "world_id": "AW-v4-21",
+        "learner_score": -10,
+        "solved": true,
+        "mutations": [],
+        "host_selected": false
+      },
+      {
+        "index": 7,
+        "world_id": "AW-v4-37",
+        "learner_score": -11,
+        "solved": true,
+        "mutations": [],
+        "host_selected": false
+      },
+      {
+        "index": 8,
+        "world_id": "AW-d814",
+        "learner_score": -11,
+        "solved": true,
+        "mutations": [],
+        "host_selected": false
+      },
+      {
+        "index": 9,
+        "world_id": "AW-7fa1",
+        "learner_score": -12,
+        "solved": true,
+        "mutations": [],
+        "host_selected": false
+      },
+      {
+        "index": 10,
+        "world_id": "AW-v4-5d",
+        "learner_score": -14,
+        "solved": true,
+        "mutations": [],
+        "host_selected": false
+      }
+    ],
+    "sealed_results": [
+      {
+        "world_id": "AW-7fa1",
+        "program": {
+          "program_id": "M3P-b00bd8c91e3f5bdc",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                2,
+                -1
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "two-input affine relation",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-91bc",
+        "program": {
+          "program_id": "M3P-f1b8f161646c229b",
+          "kind": "guarded",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 0,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                -1
+              ],
+              "bias": 0
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "sign-guarded magnitude",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-c203",
+        "program": {
+          "program_id": "M3P-24a1ddce7efcaf60",
+          "kind": "counter_fold",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 4,
+        "sealed_total": 4,
+        "evaluator_interpretation": "repeated accumulation; equivalent to natural multiplication",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-d814",
+        "program": {
+          "program_id": "M3P-c5f2bfdff598e9eb",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            -1
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "two-state triangular accumulation",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-e52a",
+        "program": {
+          "program_id": "M3P-867befcd2c5c1b54",
+          "kind": "product_output",
+          "input_width": 1,
+          "output_arity": 2,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "two-output product construction",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-v4-21",
+        "program": {
+          "program_id": "M3P-b76bc29e366947aa",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 4,
+        "sealed_total": 4,
+        "evaluator_interpretation": "hidden two-state doubling dynamics",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-v4-37",
+        "program": {
+          "program_id": "M3P-e3715cd30060956b",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              0,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [
+            0
+          ],
+          "counter_state_matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "state/counter product fold",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-v4-4b",
+        "program": {
+          "program_id": "M3P-7fee56273fd84b97",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              1
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "repeated self-sized accumulation",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-v4-5d",
+        "program": {
+          "program_id": "M3P-dba25ba00e3e55d6",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              -1,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 4,
+        "sealed_total": 4,
+        "evaluator_interpretation": "signed period-two recurrence",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-v4-6e",
+        "program": {
+          "program_id": "M3P-611dffc3f6ed064f",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              -1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 4,
+        "sealed_total": 4,
+        "evaluator_interpretation": "second-order C-finite recurrence",
+        "interpretation_visible_to_learner": false
+      },
+      {
+        "world_id": "AW-v4-7f",
+        "program": {
+          "program_id": "M3P-a4896a763f3811ea",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              3,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 3,
+        "sealed_total": 3,
+        "evaluator_interpretation": "learned scale-three recurrence",
+        "interpretation_visible_to_learner": false
+      }
+    ],
+    "proof_results": [
+      {
+        "program_id": "M3P-24a1ddce7efcaf60",
+        "program": {
+          "program_id": "M3P-24a1ddce7efcaf60",
+          "kind": "counter_fold",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-24a1ddce7efcaf60",
+            "certificate": {
+              "certificate_id": "INV-6edebee9a156578f",
+              "program_id": "M3P-24a1ddce7efcaf60",
+              "variable_count": 4,
+              "degree": 2,
+              "coefficients": [
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 2
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "polynomial_equality"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-a4896a763f3811ea",
+        "program": {
+          "program_id": "M3P-a4896a763f3811ea",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              3,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "scaling_conservation",
+            "program_id": "M3P-a4896a763f3811ea",
+            "certificate": {
+              "certificate_id": "SINV-f86c666f0fffea51",
+              "program_id": "M3P-a4896a763f3811ea",
+              "register_index": 0,
+              "counter_input": 0,
+              "scale": 3,
+              "initial_expression": {
+                "coefficients": [
+                  0
+                ],
+                "bias": 1
+              },
+              "conserved_shape": "register * scale^remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_fold",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nontrivial_scale",
+                  "passed": true
+                },
+                {
+                  "id": "pure_scaled_update",
+                  "passed": true
+                },
+                {
+                  "id": "zero_update_bias",
+                  "passed": true
+                },
+                {
+                  "id": "initial_expression_binding",
+                  "passed": true
+                },
+                {
+                  "id": "symbolic_conservation_step",
+                  "passed": true,
+                  "identity": "(scale*r)*scale^(c-1) = r*scale^c"
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true,
+                  "ranking": "c' = c - 1 while c > 0"
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_scaling_conservation",
+            "program_id": "M3P-a4896a763f3811ea",
+            "certificate": {
+              "certificate_id": "AINV-d1af5aca4c1f3fdf",
+              "program_id": "M3P-a4896a763f3811ea",
+              "state_weights": [
+                1
+              ],
+              "input_weights": [
+                0
+              ],
+              "bias": 0,
+              "scale": 3,
+              "counter_input": 0,
+              "initial_expression": {
+                "coefficients": [
+                  0
+                ],
+                "bias": 1
+              },
+              "conserved_shape": "affine_state_form * scale^remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_state_form",
+                  "passed": true
+                },
+                {
+                  "id": "admissible_eigen_relation",
+                  "passed": true,
+                  "mode": "scaling_conservation"
+                },
+                {
+                  "id": "state_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "input_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "constant_identity",
+                  "passed": true
+                },
+                {
+                  "id": "initial_form_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "symbolic_conservation_step",
+                  "passed": true,
+                  "identity": "q'=scale*q => q'*scale^(c-1)=q*scale^c"
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-a4896a763f3811ea",
+            "certificate": {
+              "certificate_id": "ACFINV-7fc520becf6a3e7c",
+              "program_id": "M3P-a4896a763f3811ea",
+              "output_register": 0,
+              "augmented_dimension": 2,
+              "characteristic_coefficients": [
+                -4,
+                3
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 2
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "affine_cfinite_recurrence",
+          "affine_scaling_conservation",
+          "scaling_conservation"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-611dffc3f6ed064f",
+        "program": {
+          "program_id": "M3P-611dffc3f6ed064f",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              -1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-611dffc3f6ed064f",
+            "certificate": {
+              "certificate_id": "ACFINV-43943b6efc727de9",
+              "program_id": "M3P-611dffc3f6ed064f",
+              "output_register": 0,
+              "augmented_dimension": 3,
+              "characteristic_coefficients": [
+                -2,
+                0,
+                1
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 3
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "affine_cfinite_recurrence"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-7fee56273fd84b97",
+        "program": {
+          "program_id": "M3P-7fee56273fd84b97",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              1
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-7fee56273fd84b97",
+            "certificate": {
+              "certificate_id": "INV-89603338d9fd6563",
+              "program_id": "M3P-7fee56273fd84b97",
+              "variable_count": 3,
+              "degree": 2,
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                -1,
+                1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "polynomial_equality"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-b76bc29e366947aa",
+        "program": {
+          "program_id": "M3P-b76bc29e366947aa",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "scaling_conservation",
+            "program_id": "M3P-b76bc29e366947aa",
+            "certificate": {
+              "certificate_id": "SINV-e8966d8c82e93b3a",
+              "program_id": "M3P-b76bc29e366947aa",
+              "register_index": 0,
+              "counter_input": 0,
+              "scale": 2,
+              "initial_expression": {
+                "coefficients": [
+                  0
+                ],
+                "bias": 1
+              },
+              "conserved_shape": "register * scale^remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_fold",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nontrivial_scale",
+                  "passed": true
+                },
+                {
+                  "id": "pure_scaled_update",
+                  "passed": true
+                },
+                {
+                  "id": "zero_update_bias",
+                  "passed": true
+                },
+                {
+                  "id": "initial_expression_binding",
+                  "passed": true
+                },
+                {
+                  "id": "symbolic_conservation_step",
+                  "passed": true,
+                  "identity": "(scale*r)*scale^(c-1) = r*scale^c"
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true,
+                  "ranking": "c' = c - 1 while c > 0"
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_scaling_conservation",
+            "program_id": "M3P-b76bc29e366947aa",
+            "certificate": {
+              "certificate_id": "AINV-1d0bfede44d41aa4",
+              "program_id": "M3P-b76bc29e366947aa",
+              "state_weights": [
+                1
+              ],
+              "input_weights": [
+                0
+              ],
+              "bias": 0,
+              "scale": 2,
+              "counter_input": 0,
+              "initial_expression": {
+                "coefficients": [
+                  0
+                ],
+                "bias": 1
+              },
+              "conserved_shape": "affine_state_form * scale^remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_state_form",
+                  "passed": true
+                },
+                {
+                  "id": "admissible_eigen_relation",
+                  "passed": true,
+                  "mode": "scaling_conservation"
+                },
+                {
+                  "id": "state_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "input_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "constant_identity",
+                  "passed": true
+                },
+                {
+                  "id": "initial_form_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "symbolic_conservation_step",
+                  "passed": true,
+                  "identity": "q'=scale*q => q'*scale^(c-1)=q*scale^c"
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-b76bc29e366947aa",
+            "certificate": {
+              "certificate_id": "ACFINV-8b5682a8079b67fd",
+              "program_id": "M3P-b76bc29e366947aa",
+              "output_register": 0,
+              "augmented_dimension": 2,
+              "characteristic_coefficients": [
+                -3,
+                2
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 2
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "affine_cfinite_recurrence",
+          "affine_scaling_conservation",
+          "scaling_conservation"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-e3715cd30060956b",
+        "program": {
+          "program_id": "M3P-e3715cd30060956b",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              0,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [
+            0
+          ],
+          "counter_state_matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "proofs": [
+          {
+            "proof_domain": "counter_product_induction",
+            "program_id": "M3P-e3715cd30060956b",
+            "certificate": {
+              "certificate_id": "CPINV-7202c3cf2751fb4c",
+              "program_id": "M3P-e3715cd30060956b",
+              "register_index": 0,
+              "counter_input": 0,
+              "induction_shape": "r(0)=1; r(next)=r*remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_fold",
+                  "passed": true
+                },
+                {
+                  "id": "single_state_binding",
+                  "passed": true
+                },
+                {
+                  "id": "unit_initialization",
+                  "passed": true
+                },
+                {
+                  "id": "pure_state_counter_interaction",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "induction_base",
+                  "passed": true,
+                  "identity": "empty accumulated product = 1"
+                },
+                {
+                  "id": "induction_step",
+                  "passed": true,
+                  "identity": "r'=r*c and c'=c-1 extends the accumulated factor range by c"
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true,
+                  "ranking": "c' = c - 1 while c > 0"
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "counter_product_induction"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-c5f2bfdff598e9eb",
+        "program": {
+          "program_id": "M3P-c5f2bfdff598e9eb",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            -1
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-c5f2bfdff598e9eb",
+            "certificate": {
+              "certificate_id": "INV-6f510ca7bfa53424",
+              "program_id": "M3P-c5f2bfdff598e9eb",
+              "variable_count": 4,
+              "degree": 2,
+              "coefficients": [
+                0,
+                1,
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-c5f2bfdff598e9eb",
+            "certificate": {
+              "certificate_id": "INV-16a0149fbed44379",
+              "program_id": "M3P-c5f2bfdff598e9eb",
+              "variable_count": 4,
+              "degree": 2,
+              "coefficients": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                -1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-c5f2bfdff598e9eb",
+            "certificate": {
+              "certificate_id": "INV-9146cf3f1dcaa618",
+              "program_id": "M3P-c5f2bfdff598e9eb",
+              "variable_count": 4,
+              "degree": 2,
+              "coefficients": [
+                0,
+                1,
+                -1,
+                -2,
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                2,
+                0,
+                0,
+                0
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-c5f2bfdff598e9eb",
+            "certificate": {
+              "certificate_id": "INV-dcbe81c1bfadf4e1",
+              "program_id": "M3P-c5f2bfdff598e9eb",
+              "variable_count": 4,
+              "degree": 2,
+              "coefficients": [
+                0,
+                1,
+                -1,
+                -2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-c5f2bfdff598e9eb",
+            "certificate": {
+              "certificate_id": "ACFINV-49e648edc83ab82e",
+              "program_id": "M3P-c5f2bfdff598e9eb",
+              "output_register": 0,
+              "augmented_dimension": 3,
+              "characteristic_coefficients": [
+                -3,
+                3,
+                -1
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 3
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "affine_cfinite_recurrence",
+          "polynomial_equality"
+        ],
+        "passed": true
+      },
+      {
+        "program_id": "M3P-dba25ba00e3e55d6",
+        "program": {
+          "program_id": "M3P-dba25ba00e3e55d6",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              -1,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "proofs": [
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-dba25ba00e3e55d6",
+            "certificate": {
+              "certificate_id": "INV-bce002dd78bc8cbf",
+              "program_id": "M3P-dba25ba00e3e55d6",
+              "variable_count": 3,
+              "degree": 2,
+              "coefficients": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-dba25ba00e3e55d6",
+            "certificate": {
+              "certificate_id": "ACFINV-7cca0dd597df47ca",
+              "program_id": "M3P-dba25ba00e3e55d6",
+              "output_register": 0,
+              "augmented_dimension": 2,
+              "characteristic_coefficients": [
+                0,
+                -1
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 2
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "proof_domains": [
+          "affine_cfinite_recurrence",
+          "polynomial_equality"
+        ],
+        "passed": true
+      }
+    ],
+    "library_learning": {
+      "macros": [
+        {
+          "macro_id": "TMAC-56d1983b144ebd25",
+          "state_width": 2,
+          "input_width": 1,
+          "normalized_row": [
+            -1,
+            1,
+            0,
+            0
+          ],
+          "support": 2,
+          "primitive_token_cost": 3,
+          "macro_token_cost": 1,
+          "token_savings_per_use": 2
+        },
+        {
+          "macro_id": "TMAC-608b4ac64023dc9b",
+          "state_width": 2,
+          "input_width": 1,
+          "normalized_row": [
+            1,
+            -1,
+            0,
+            1
+          ],
+          "support": 2,
+          "primitive_token_cost": 4,
+          "macro_token_cost": 1,
+          "token_savings_per_use": 3
+        }
+      ],
+      "independent_solution_world_ids": [
+        "AW-v4-21",
+        "AW-v4-6e",
+        "AW-d814"
+      ],
+      "independent_solution_programs": [
+        {
+          "program_id": "M3P-af30777fc70cc296",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              -1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        {
+          "program_id": "M3P-611dffc3f6ed064f",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              0,
+              -1,
+              0
+            ],
+            [
+              -1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        {
+          "program_id": "M3P-c5f2bfdff598e9eb",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            -1
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        }
+      ],
+      "macro_count": 2,
+      "transfer_search": {
+        "world_id": "AW-v4-transfer-93",
+        "macros_available": 2,
+        "candidates_executed": 3,
+        "selected_program": {
+          "program_id": "M3P-902885b24b704ea8",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              -1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed_rows": 7,
+        "row_count": 7,
+        "exact": true
+      },
+      "transfer_sealed": {
+        "world_id": "AW-v4-transfer-93",
+        "program": {
+          "program_id": "M3P-902885b24b704ea8",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              -1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "passed": true,
+        "sealed_passed": 4,
+        "sealed_total": 4,
+        "evaluator_interpretation": "shifted recurrence requiring a previously mined transition pair",
+        "interpretation_visible_to_learner": false
+      },
+      "primitive_baseline_candidates": 4887,
+      "macro_candidates": 3,
+      "candidate_reduction_fraction": 0.9993861264579497
+    },
+    "research_findings": [
+      "A coefficient-two behavior emerged through two interacting ±1 states before coefficient expansion was selected.",
+      "The proof portfolio discovered an affine eigen-form hidden across multiple state cells.",
+      "A counter/state interaction gene made a previously unreachable product fold expressible.",
+      "Capacity semantics must retain all smaller genomes; forcing maximum state width caused false unreachable results.",
+      "Repeated transition rows compressed into macros and solved a withheld transfer world before primitive enumeration."
+    ],
+    "limitations": [
+      "State width is still capped at two in open enumeration.",
+      "Counter interaction search is restricted to one state cell to control combinatorial growth.",
+      "Proof domains cover polynomial, affine eigen-scaling, counter-product induction, and small C-finite systems—not arbitrary programs.",
+      "This benchmark measures symbolic program creation, not language understanding or universal mathematical intelligence."
+    ],
+    "content_digest": "c0fb6ad32f2a1560e8043e7a16ac733b54f08808166b9701e4ced1beeb564ae6"
+  },
+  "verification": {
+    "verifier_version": "meta-autonomy-v4-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "id": "version",
+        "passed": true,
+        "actual": "meta-autonomy-v4-deep-research-v0.1"
+      },
+      {
+        "id": "digest",
+        "passed": true,
+        "actual": "c0fb6ad32f2a1560e8043e7a16ac733b54f08808166b9701e4ced1beeb564ae6"
+      },
+      {
+        "id": "sealed_replay",
+        "passed": true,
+        "actual": 11
+      },
+      {
+        "id": "proof_portfolio_replay",
+        "passed": true,
+        "actual": 8
+      },
+      {
+        "id": "library_transfer_replay",
+        "passed": true,
+        "actual": 3
+      },
+      {
+        "id": "all_scores_at_least_eight",
+        "passed": true,
+        "actual": {
+          "expanded_sealed_generalization": 10.0,
+          "proof_portfolio_coverage": 10.0,
+          "structural_self_extension": 10.0,
+          "autonomous_curriculum": 10.0,
+          "library_transfer_efficiency": 9.99
+        }
+      },
+      {
+        "id": "autonomous_selection",
+        "passed": true,
+        "actual": 11
+      }
+    ]
+  },
+  "research_basis": [
+    {
+      "title": "Algebra-based Synthesis of Loops and their Invariants",
+      "url": "https://arxiv.org/abs/2103.03599",
+      "adopted_idea": "constant-coefficient recurrence proof portfolio"
+    },
+    {
+      "title": "Counterexample-Guided Polynomial Loop Invariant Generation",
+      "url": "https://arxiv.org/abs/1502.04280",
+      "adopted_idea": "counterexample-refined exact invariant constraints"
+    },
+    {
+      "title": "DreamCoder: Bootstrapping Inductive Program Synthesis with Wake-Sleep Library Learning",
+      "url": "https://people.csail.mit.edu/asolar/papers/EllisWNSMHCST21.pdf",
+      "adopted_idea": "retain multiple solutions and compress recurring executable components",
+      "neural_policy_adopted": false
+    }
+  ],
+  "rooms": {
+    "success_path": "artifacts/meta_autonomy/v4/success/deep_research.jsonl",
+    "mistake_path": "artifacts/meta_autonomy/v4/mistakes/research_antipatterns.jsonl",
+    "success_count": 1,
+    "mistake_count": 3,
+    "event_hash": "c342c2e103de15e8be505c1d73c81397451e3c610a497651bfec7b914eb973b7"
+  }
+}

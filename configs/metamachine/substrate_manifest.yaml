@@ -1,0 +1,29 @@
+{
+  "manifest_id": "substrate-manifest-metamachine-gen1-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "metamachine-gen1-v0.1",
+  "representation": {
+    "symbol_cardinality": 2,
+    "output_cardinality": 2,
+    "maximum_state_count": 3,
+    "maximum_trace_steps": 64
+  },
+  "candidate_fields": [
+    "state_count",
+    "initial_state_id",
+    "transition_table",
+    "output_table"
+  ],
+  "execution_rule": {
+    "per_step": "read_one_symbol_then_apply_selected_table_entry",
+    "completion": "after_last_supplied_symbol",
+    "mutable_program_source": false
+  },
+  "declared_arithmetic_operations": [],
+  "declared_structured_storage_operations": [],
+  "declared_repetition_operations": [],
+  "search_prior": {
+    "deterministic_enumeration": true,
+    "prefer_fewer_reachable_states": true
+  }
+}

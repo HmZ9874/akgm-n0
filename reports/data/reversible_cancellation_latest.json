@@ -1,0 +1,516 @@
+{
+  "report_version": "reversible-cancellation-discovery-v0.1",
+  "run_id": "RUN-reversible-cancellation-20260819T230345675203Z",
+  "created_at": "2026-08-19T23:03:45.675203Z",
+  "verdict": "third_foundation_discovered_as_natural_truncated_difference",
+  "learner_received": {
+    "math_name": false,
+    "subtraction_symbol": false,
+    "target_formula": false,
+    "negative_number_representation": false,
+    "anonymous_input_output_examples": true,
+    "generic_multi_tape_opcodes": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "token_efficiency_reward": true
+  },
+  "search": {
+    "task_id": "TASK-opaque-reversible-38d7",
+    "candidate_count": 43,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "RTP-ae36740e9c7ea51a",
+      "input_tape_count": 2,
+      "phases": [
+        {
+          "source_tapes": [
+            0,
+            1
+          ],
+          "emit_mark": false
+        },
+        {
+          "source_tapes": [
+            0
+          ],
+          "emit_mark": true
+        }
+      ],
+      "instructions": [
+        {
+          "opcode": 0,
+          "tape": 0,
+          "target": 7
+        },
+        {
+          "opcode": 0,
+          "tape": 1,
+          "target": 7
+        },
+        {
+          "opcode": 1,
+          "tape": 0
+        },
+        {
+          "opcode": 3,
+          "tape": 0
+        },
+        {
+          "opcode": 1,
+          "tape": 1
+        },
+        {
+          "opcode": 3,
+          "tape": 1
+        },
+        {
+          "opcode": 4,
+          "target": 0
+        },
+        {
+          "opcode": 0,
+          "tape": 0,
+          "target": 13
+        },
+        {
+          "opcode": 1,
+          "tape": 0
+        },
+        {
+          "opcode": 3,
+          "tape": 0
+        },
+        {
+          "opcode": 2,
+          "tape": 2
+        },
+        {
+          "opcode": 3,
+          "tape": 2
+        },
+        {
+          "opcode": 4,
+          "target": 7
+        },
+        {
+          "opcode": 5
+        }
+      ]
+    },
+    "selected_token_cost": 224,
+    "selected_reward": 999776,
+    "next_exact_candidate_token_cost": null,
+    "formula_names_visible": false
+  },
+  "discovery": {
+    "foundation_level": 3,
+    "semantic": {
+      "semantic_id": "RSEM-6082532054ec1e05",
+      "opcode": 3,
+      "program": {
+        "program_id": "RTP-ae36740e9c7ea51a",
+        "input_tape_count": 2,
+        "phases": [
+          {
+            "source_tapes": [
+              0,
+              1
+            ],
+            "emit_mark": false
+          },
+          {
+            "source_tapes": [
+              0
+            ],
+            "emit_mark": true
+          }
+        ],
+        "instructions": [
+          {
+            "opcode": 0,
+            "tape": 0,
+            "target": 7
+          },
+          {
+            "opcode": 0,
+            "tape": 1,
+            "target": 7
+          },
+          {
+            "opcode": 1,
+            "tape": 0
+          },
+          {
+            "opcode": 3,
+            "tape": 0
+          },
+          {
+            "opcode": 1,
+            "tape": 1
+          },
+          {
+            "opcode": 3,
+            "tape": 1
+          },
+          {
+            "opcode": 4,
+            "target": 0
+          },
+          {
+            "opcode": 0,
+            "tape": 0,
+            "target": 13
+          },
+          {
+            "opcode": 1,
+            "tape": 0
+          },
+          {
+            "opcode": 3,
+            "tape": 0
+          },
+          {
+            "opcode": 2,
+            "tape": 2
+          },
+          {
+            "opcode": 3,
+            "tape": 2
+          },
+          {
+            "opcode": 4,
+            "target": 7
+          },
+          {
+            "opcode": 5
+          }
+        ]
+      },
+      "dependency_semantic_ids": [
+        "FSEM-3d1a4d19fab44d62",
+        "FSEM-cf58189608902a55"
+      ],
+      "source_task_ids": [
+        "TASK-opaque-reversible-38d7"
+      ]
+    },
+    "depends_on": [
+      "FSEM-3d1a4d19fab44d62",
+      "FSEM-cf58189608902a55"
+    ],
+    "posthoc_name": "one-sided cancellation / natural truncated difference",
+    "posthoc_formula": "D(a,b)=max(a-b,0) for natural cardinalities",
+    "counts_as_new_foundation": true,
+    "novelty_reason": "requires synchronized pair consumption and residual state; prior programs could only emit subset sums of whole sources"
+  },
+  "verification": {
+    "verifier_version": "independent-reversible-foundation-verifier-v0.1",
+    "semantic_id": "RSEM-6082532054ec1e05",
+    "passed": true,
+    "universal_statement": "for every pair of finite opaque collections X,Y, output cardinality is max(|X|-|Y|,0)",
+    "declared_domain": "finite collections / natural-number cardinalities",
+    "not_claimed": "integer subtraction or negative-number representation",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "well-founded synchronized traversal invariant followed by residual traversal induction",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "RSEM-6082532054ec1e05"
+      },
+      {
+        "obligation_id": "exact_compiled_program_binding",
+        "passed": true,
+        "evidence": "RTP-ae36740e9c7ea51a"
+      },
+      {
+        "obligation_id": "zero_arithmetic_multi_tape_opcodes",
+        "passed": true,
+        "evidence": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      },
+      {
+        "obligation_id": "paired_traversal_then_left_residual_traversal",
+        "passed": true,
+        "evidence": [
+          {
+            "source_tapes": [
+              0,
+              1
+            ],
+            "emit_mark": false
+          },
+          {
+            "source_tapes": [
+              0
+            ],
+            "emit_mark": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "depends_on_prior_count_and_combination_semantics",
+        "passed": true,
+        "evidence": [
+          "FSEM-3d1a4d19fab44d62",
+          "FSEM-cf58189608902a55"
+        ]
+      },
+      {
+        "obligation_id": "paired_phase_invariant",
+        "passed": true,
+        "evidence": "after t synchronized steps, both source heads advanced t, no output was emitted, and t<=min(|X|,|Y|)"
+      },
+      {
+        "obligation_id": "paired_phase_termination",
+        "passed": true,
+        "evidence": "each synchronized step advances both finite input heads; the phase exits when either reaches blank"
+      },
+      {
+        "obligation_id": "residual_phase_invariant",
+        "passed": true,
+        "evidence": "after cancellation, the second phase emits one marker for each unpaired symbol remaining on the first tape"
+      },
+      {
+        "obligation_id": "natural_difference_exit_correctness",
+        "passed": true,
+        "evidence": "if |X|>=|Y| the residual has |X|-|Y| symbols; otherwise the first tape is empty and output has zero symbols"
+      },
+      {
+        "obligation_id": "independent_hidden_replay",
+        "passed": true,
+        "evidence": "10/10 cases"
+      },
+      {
+        "obligation_id": "not_promoted_as_signed_subtraction",
+        "passed": true,
+        "evidence": "the representation contains no negative-direction output symbol; reversed magnitude is intentionally lost"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "CANCEL-HIDDEN-00",
+        "source_lengths": [
+          0,
+          0
+        ],
+        "passed": true,
+        "output_length": 0,
+        "expected_length": 0,
+        "primitive_execution_tokens": 3
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-01",
+        "source_lengths": [
+          1,
+          0
+        ],
+        "passed": true,
+        "output_length": 1,
+        "expected_length": 1,
+        "primitive_execution_tokens": 10
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-02",
+        "source_lengths": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_length": 0,
+        "expected_length": 0,
+        "primitive_execution_tokens": 3
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-03",
+        "source_lengths": [
+          2,
+          2
+        ],
+        "passed": true,
+        "output_length": 0,
+        "expected_length": 0,
+        "primitive_execution_tokens": 17
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-04",
+        "source_lengths": [
+          7,
+          3
+        ],
+        "passed": true,
+        "output_length": 4,
+        "expected_length": 4,
+        "primitive_execution_tokens": 49
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-05",
+        "source_lengths": [
+          3,
+          7
+        ],
+        "passed": true,
+        "output_length": 0,
+        "expected_length": 0,
+        "primitive_execution_tokens": 24
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-06",
+        "source_lengths": [
+          13,
+          5
+        ],
+        "passed": true,
+        "output_length": 8,
+        "expected_length": 8,
+        "primitive_execution_tokens": 87
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-07",
+        "source_lengths": [
+          21,
+          8
+        ],
+        "passed": true,
+        "output_length": 13,
+        "expected_length": 13,
+        "primitive_execution_tokens": 138
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-08",
+        "source_lengths": [
+          8,
+          21
+        ],
+        "passed": true,
+        "output_length": 0,
+        "expected_length": 0,
+        "primitive_execution_tokens": 59
+      },
+      {
+        "case_id": "CANCEL-HIDDEN-09",
+        "source_lengths": [
+          64,
+          17
+        ],
+        "passed": true,
+        "output_length": 47,
+        "expected_length": 47,
+        "primitive_execution_tokens": 405
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 3,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差"
+    ],
+    "next_frontier": {
+      "learner_label": null,
+      "evaluator_only_interpretation": "preserve which side remains so reversed inputs can produce a signed direction",
+      "status": "not_yet_discovered"
+    }
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/reversible_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/reversible_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 42,
+    "event_hash": "1fb200789386169553374490611693b09a7e8485d26ff5bb3df4fda1af7991c5"
+  },
+  "gates": [
+    {
+      "gate_id": "no_arithmetic_opcode_visible_to_learner",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    },
+    {
+      "gate_id": "anonymous_cancellation_task_exactly_solved",
+      "passed": true,
+      "actual": 9,
+      "required": 9
+    },
+    {
+      "gate_id": "paired_and_residual_phases_induced",
+      "passed": true,
+      "actual": [
+        {
+          "source_tapes": [
+            0,
+            1
+          ],
+          "emit_mark": false
+        },
+        {
+          "source_tapes": [
+            0
+          ],
+          "emit_mark": true
+        }
+      ],
+      "required": "one synchronized non-emitting phase then one emitting residual phase"
+    },
+    {
+      "gate_id": "universal_natural_difference_proof",
+      "passed": true,
+      "actual": 11,
+      "required": 11
+    },
+    {
+      "gate_id": "all_hidden_cancellation_cases_pass",
+      "passed": true,
+      "actual": 10,
+      "required": 10
+    },
+    {
+      "gate_id": "semantic_novel_relative_to_subset_sum_language",
+      "passed": true,
+      "actual": "pairwise synchronized consumption plus left residual",
+      "required": "not expressible as a subset sum of whole input cardinalities"
+    },
+    {
+      "gate_id": "token_reward_selects_lowest_cost_exact_program",
+      "passed": true,
+      "actual": 999776,
+      "required": 999776
+    },
+    {
+      "gate_id": "success_and_mistake_rooms_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 42
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 42
+      }
+    },
+    {
+      "gate_id": "not_misreported_as_signed_integer_subtraction",
+      "passed": true,
+      "actual": "integer subtraction or negative-number representation",
+      "required": "integer subtraction or negative-number representation"
+    }
+  ],
+  "limitations": [
+    "This is natural truncated difference max(a-b,0), not full signed subtraction.",
+    "The host supplied a bounded grammar of one- and two-tape traversal phases, although it did not supply the target phase sequence.",
+    "The operation is unary-cardinality based and does not yet support positional numerals.",
+    "Multiplication and division remain outside the verified foundation graph."
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "run_id": "RUN-linear-algebra-foundation-v9-20260820T171341141041Z",
+  "created_at": "2026-08-20T17:13:41.141041Z",
+  "verdict": "four_new_linear_algebra_foundations_levels_21_to_24_verified",
+  "foundation": {
+    "report_version": "linear-algebra-foundation-v9-report-v0.1",
+    "claim": "four_anonymously_searched_and_universally_verified_linear_algebra_foundations",
+    "names_or_target_formulas_visible_to_search": false,
+    "foundation_count_before": 20,
+    "new_foundation_count": 4,
+    "foundation_count_after": 24,
+    "foundation": {
+      "composition": {
+        "program_id": "LA21-3841245341b7b04d",
+        "swap_operands": false,
+        "transpose_left": false,
+        "transpose_right": false,
+        "transpose_output": false,
+        "second_term_sign": 1
+      },
+      "determinant": {
+        "program_id": "LA22-39796e34f7660071",
+        "left_term": [
+          0,
+          3
+        ],
+        "right_term": [
+          1,
+          2
+        ],
+        "right_sign": -1
+      },
+      "inverse": {
+        "program_id": "LA23-ca406b585dbbee18",
+        "permutation": [
+          3,
+          1,
+          2,
+          0
+        ],
+        "signs": [
+          1,
+          -1,
+          -1,
+          1
+        ]
+      },
+      "characteristic_reduction": {
+        "program_id": "LA24-413d60560ea5adb0",
+        "trace_coefficient": -1,
+        "determinant_coefficient": 1
+      },
+      "candidate_counts": [
+        32,
+        200,
+        384,
+        25
+      ],
+      "exact_counts": [
+        2,
+        1,
+        1,
+        1
+      ]
+    },
+    "proof": {
+      "verifier_version": "linear-algebra-foundation-v9-independent-v0.1",
+      "passed": true,
+      "foundations": [
+        {
+          "foundation_level": 21,
+          "semantic_id": "LA21-3841245341b7b04d",
+          "posthoc_name": "composition of two-dimensional linear transformations",
+          "passed": true,
+          "universal_statement": "C_ij=sum_k A_ik B_kj",
+          "obligations": [
+            {
+              "id": "exact_index_contraction",
+              "passed": true
+            },
+            {
+              "id": "associativity_by_finite_sum_reindexing",
+              "passed": true
+            },
+            {
+              "id": "identity_transformation",
+              "passed": true
+            },
+            {
+              "id": "matrix_name_hidden",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "foundation_level": 22,
+          "semantic_id": "LA22-39796e34f7660071",
+          "posthoc_name": "oriented area invariant / determinant",
+          "passed": true,
+          "universal_statement": "det([[a,b],[c,d]])=ad-bc and det(AB)=det(A)det(B)",
+          "obligations": [
+            {
+              "id": "exact_alternating_quadratic_form",
+              "passed": true
+            },
+            {
+              "id": "multiplicativity_identity",
+              "passed": true
+            },
+            {
+              "id": "row_swap_changes_sign",
+              "passed": true
+            },
+            {
+              "id": "singularity_detection",
+              "passed": true
+            },
+            {
+              "id": "determinant_name_hidden",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "foundation_level": 23,
+          "semantic_id": "LA23-ca406b585dbbee18",
+          "posthoc_name": "inverse of a nonsingular two-dimensional transformation",
+          "passed": true,
+          "universal_statement": "A^{-1}=det(A)^{-1}[[d,-b],[-c,a]] for det(A) nonzero",
+          "obligations": [
+            {
+              "id": "exact_adjugate_structure",
+              "passed": true
+            },
+            {
+              "id": "left_inverse_identity",
+              "passed": true
+            },
+            {
+              "id": "right_inverse_identity",
+              "passed": true
+            },
+            {
+              "id": "singular_case_rejected",
+              "passed": true
+            },
+            {
+              "id": "inverse_name_hidden",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "foundation_level": 24,
+          "semantic_id": "LA24-413d60560ea5adb0",
+          "posthoc_name": "second-order characteristic reduction / Cayley-Hamilton identity",
+          "passed": true,
+          "universal_statement": "A^2-tr(A)A+det(A)I=0 for every 2x2 rational matrix",
+          "obligations": [
+            {
+              "id": "trace_coefficient",
+              "passed": true
+            },
+            {
+              "id": "determinant_coefficient",
+              "passed": true
+            },
+            {
+              "id": "entrywise_polynomial_identity",
+              "passed": true
+            },
+            {
+              "id": "all_higher_powers_reduce_to_I_and_A",
+              "passed": true
+            },
+            {
+              "id": "theorem_name_hidden",
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "obligations": [
+        {
+          "id": "four_foundations_pass",
+          "passed": true
+        },
+        {
+          "id": "nontrivial_candidate_spaces",
+          "passed": true,
+          "actual": [
+            32,
+            200,
+            384,
+            25
+          ]
+        },
+        {
+          "id": "exact_candidates_exist",
+          "passed": true,
+          "actual": [
+            2,
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "id": "levels_21_to_24",
+          "passed": true
+        }
+      ]
+    },
+    "passed": true,
+    "limitations": [
+      "The current substrate is exact 2x2 rational linear algebra, not arbitrary finite dimension.",
+      "Eigenvalues are not constructed; Cayley-Hamilton only supplies a characteristic reduction identity.",
+      "Inner-product spaces, orthogonality, spectral decomposition, and infinite-dimensional analysis remain absent.",
+      "Candidate index contractions and polynomial coefficient ranges were finite host-defined grammars."
+    ],
+    "content_digest": "7f12d01adff323f3b237ae462a581aacdd05dcf2bd8ed4d84a95ab57df46a8ba"
+  },
+  "verification": {
+    "verifier_version": "linear-algebra-foundation-v9-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "id": "digest",
+        "passed": true
+      },
+      {
+        "id": "proof",
+        "passed": true
+      },
+      {
+        "id": "counts",
+        "passed": true
+      },
+      {
+        "id": "names_hidden",
+        "passed": true
+      }
+    ]
+  },
+  "rooms": {
+    "success_path": "artifacts/foundation/v9/success/linear_algebra_foundation.jsonl",
+    "mistake_path": "artifacts/foundation/v9/mistakes/nonselected_linear_mechanisms.jsonl",
+    "verified_foundation_count": 4,
+    "bundle_event_count": 1,
+    "mistake_summary_count": 4,
+    "latest_event_hash": "fa160075ad6e1831bccdfc197e7167dd632d0abf3b708eea8aad9fc7ccf57dd9"
+  }
+}

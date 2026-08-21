@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akgm.local/schemas/knowledge_event.schema.json",
+  "title": "AKGM-N0 append-only knowledge event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_index",
+    "timestamp",
+    "knowledge_id",
+    "from_status",
+    "to_status",
+    "reason",
+    "payload",
+    "previous_event_hash",
+    "event_hash"
+  ],
+  "properties": {
+    "schema_version": {"const": "knowledge-event-v0.1"},
+    "event_index": {"type": "integer", "minimum": 0},
+    "timestamp": {"type": "string", "format": "date-time"},
+    "knowledge_id": {"type": "string", "pattern": "^K-[0-9]{6}$"},
+    "from_status": {
+      "type": ["string", "null"],
+      "enum": [null, "proposed", "fit_passed", "verified", "admitted", "bounded", "rejected"]
+    },
+    "to_status": {
+      "enum": ["proposed", "fit_passed", "verified", "admitted", "bounded", "rejected"]
+    },
+    "reason": {"type": "string", "minLength": 1},
+    "payload": {"type": "object"},
+    "previous_event_hash": {"$ref": "#/$defs/sha256"},
+    "event_hash": {"$ref": "#/$defs/sha256"}
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}
+

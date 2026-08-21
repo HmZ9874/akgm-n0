@@ -1,0 +1,579 @@
+{
+  "report_version": "relation-growth-report-v0.2",
+  "run_id": "RUN-relation-growth-20260818T041555927098Z",
+  "created_at": "2026-08-18T04:15:55.934833Z",
+  "title": "无序数字关系与新计算操作生长实验",
+  "verdict": "failed",
+  "knowledge_status": "rejected",
+  "claim_scope": "user_supplied_unordered_collection_only",
+  "architecture": "executable_relation_compression_not_next_value_prediction",
+  "learner_received": {
+    "numeric_values": [
+      17.0,
+      42.0,
+      8.0,
+      31.0,
+      56.0,
+      23.0,
+      64.0,
+      11.0
+    ],
+    "input_order_semantics": false,
+    "output_targets": false,
+    "natural_language_labels": false,
+    "target_formula": false,
+    "base_operations": [
+      "r_value",
+      "r_add",
+      "r_subtract",
+      "r_compose"
+    ],
+    "pre_supplied_constants": false
+  },
+  "search": {
+    "programs_generated": 782,
+    "programs_filtered_by_mistake_memory": 0,
+    "valid_member_count": 8,
+    "evidence_derived_working_memory": [
+      {
+        "value": 0.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 8.0,
+          "right": 8.0
+        }
+      },
+      {
+        "value": -1.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -48.0,
+          "right": -47.0
+        }
+      },
+      {
+        "value": 1.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -47.0,
+          "right": -48.0
+        }
+      },
+      {
+        "value": -2.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -47.0,
+          "right": -45.0
+        }
+      },
+      {
+        "value": 2.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -45.0,
+          "right": -47.0
+        }
+      },
+      {
+        "value": -3.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 8.0,
+          "right": 11.0
+        }
+      },
+      {
+        "value": 3.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 11.0,
+          "right": 8.0
+        }
+      },
+      {
+        "value": -4.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -45.0,
+          "right": -41.0
+        }
+      },
+      {
+        "value": 4.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -41.0,
+          "right": -45.0
+        }
+      },
+      {
+        "value": -5.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -53.0,
+          "right": -48.0
+        }
+      },
+      {
+        "value": 5.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -48.0,
+          "right": -53.0
+        }
+      },
+      {
+        "value": -6.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 11.0,
+          "right": 17.0
+        }
+      },
+      {
+        "value": 6.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 17.0,
+          "right": 11.0
+        }
+      },
+      {
+        "value": -7.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -48.0,
+          "right": -41.0
+        }
+      },
+      {
+        "value": 7.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -41.0,
+          "right": -48.0
+        }
+      },
+      {
+        "value": -8.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 23.0,
+          "right": 31.0
+        }
+      },
+      {
+        "value": -9.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 8.0,
+          "right": 17.0
+        }
+      },
+      {
+        "value": 9.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 17.0,
+          "right": 8.0
+        }
+      },
+      {
+        "value": -10.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -41.0,
+          "right": -31.0
+        }
+      },
+      {
+        "value": 10.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -31.0,
+          "right": -41.0
+        }
+      },
+      {
+        "value": -11.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 31.0,
+          "right": 42.0
+        }
+      },
+      {
+        "value": -12.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 11.0,
+          "right": 23.0
+        }
+      },
+      {
+        "value": 12.0,
+        "derivation_depth": 1,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": 23.0,
+          "right": 11.0
+        }
+      },
+      {
+        "value": -13.0,
+        "derivation_depth": 2,
+        "provenance": {
+          "op": "subtract_workspace_atoms",
+          "left": -47.0,
+          "right": -34.0
+        }
+      }
+    ],
+    "selected_candidate": {
+      "candidate_id": "REL-4a07e48f33cb2b8d",
+      "program": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -3.0
+          },
+          {
+            "op": "r_value"
+          }
+        ]
+      },
+      "program_nodes": 3,
+      "direct_edges": [
+        {
+          "source": 11.0,
+          "target": 8.0
+        }
+      ],
+      "best_observed_chain": [
+        23.0,
+        17.0,
+        11.0,
+        8.0
+      ],
+      "observed_chain_count": 4,
+      "bridges": [
+        {
+          "source": 17.0,
+          "target": 11.0,
+          "steps": 2,
+          "generated_intermediates": [
+            14.0
+          ]
+        },
+        {
+          "source": 23.0,
+          "target": 17.0,
+          "steps": 2,
+          "generated_intermediates": [
+            20.0
+          ]
+        }
+      ],
+      "generated_nodes": [
+        14.0,
+        20.0
+      ]
+    },
+    "order_ablation_selected_same_candidate": true
+  },
+  "relation_graph": {
+    "observed_members_in_discovered_chain": [
+      23.0,
+      17.0,
+      11.0,
+      8.0
+    ],
+    "direct_edges": [
+      {
+        "source": 11.0,
+        "target": 8.0
+      }
+    ],
+    "generated_missing_nodes": [
+      14.0,
+      20.0
+    ],
+    "bridges": [
+      {
+        "source": 17.0,
+        "target": 11.0,
+        "steps": 2,
+        "generated_intermediates": [
+          14.0
+        ]
+      },
+      {
+        "source": 23.0,
+        "target": 17.0,
+        "steps": 2,
+        "generated_intermediates": [
+          20.0
+        ]
+      }
+    ]
+  },
+  "new_computation": {
+    "promoted_operation": {
+      "operation_id": "ROP-4a07e48f33cb2b8d",
+      "definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -3.0
+          },
+          {
+            "op": "r_value"
+          }
+        ]
+      },
+      "human_interpretation": null
+    },
+    "single_application_results": [
+      {
+        "source": 8.0,
+        "result": 5.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 11.0,
+        "result": 8.0,
+        "result_is_observed": true
+      },
+      {
+        "source": 17.0,
+        "result": 14.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 23.0,
+        "result": 20.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 31.0,
+        "result": 28.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 42.0,
+        "result": 39.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 56.0,
+        "result": 53.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 64.0,
+        "result": 61.0,
+        "result_is_observed": false
+      }
+    ],
+    "self_composed_program": {
+      "op": "r_add",
+      "args": [
+        {
+          "op": "r_constant",
+          "constant": -3.0
+        },
+        {
+          "op": "r_add",
+          "args": [
+            {
+              "op": "r_constant",
+              "constant": -3.0
+            },
+            {
+              "op": "r_value"
+            }
+          ]
+        }
+      ]
+    },
+    "self_composed_results": [
+      {
+        "source": 8.0,
+        "result": 2.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 11.0,
+        "result": 5.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 17.0,
+        "result": 11.0,
+        "result_is_observed": true
+      },
+      {
+        "source": 23.0,
+        "result": 17.0,
+        "result_is_observed": true
+      },
+      {
+        "source": 31.0,
+        "result": 25.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 42.0,
+        "result": 36.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 56.0,
+        "result": 50.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 64.0,
+        "result": 58.0,
+        "result_is_observed": false
+      }
+    ]
+  },
+  "post_hoc_evaluator_interpretation": {
+    "assigned_after_search": true,
+    "readable_formula": "(-3.0 + x)",
+    "human_relation_graph": "23 -> 17 -> 11 -> 8"
+  },
+  "gates": [
+    {
+      "gate_id": "input_order_ablation",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "all_members_connected_by_composition",
+      "passed": false,
+      "actual": 4,
+      "threshold": 8
+    },
+    {
+      "gate_id": "direct_observed_relations",
+      "passed": false,
+      "actual": 1,
+      "threshold": 2
+    },
+    {
+      "gate_id": "composition_connects_members_directly_or_by_bridge",
+      "passed": true,
+      "actual": {
+        "connected_all_directly": false,
+        "generated_bridge_count": 2
+      },
+      "threshold": true
+    },
+    {
+      "gate_id": "promoted_operation_executes",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "unseen_collection_transfer",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    }
+  ],
+  "knowledge_id": "K-000001",
+  "mistake_record": {
+    "mistake_id": "RM-b84ccc4217bca861",
+    "objective_id": "unordered_relation_compression",
+    "failed_scope": "supplied_collection",
+    "condition_key": "unordered-set-a3886ccf38afbe05",
+    "semantic_signature": "{\"coefficient\":1.0,\"constant\":-3.0}",
+    "representative_program": {
+      "op": "r_add",
+      "args": [
+        {
+          "op": "r_constant",
+          "constant": -3.0
+        },
+        {
+          "op": "r_value"
+        }
+      ]
+    },
+    "counterexamples": [
+      {
+        "source": 8.0,
+        "result": 5.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 17.0,
+        "result": 14.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 23.0,
+        "result": 20.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 31.0,
+        "result": 28.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 42.0,
+        "result": 39.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 56.0,
+        "result": 53.0,
+        "result_is_observed": false
+      },
+      {
+        "source": 64.0,
+        "result": 61.0,
+        "result_is_observed": false
+      }
+    ],
+    "source_candidate_id": "REL-4a07e48f33cb2b8d"
+  },
+  "success_formula_room_record": null,
+  "ledger_event_count": 2,
+  "limitations": [
+    "The discovered computation is derived from supplied value reading, addition, subtraction, and evidence working memory.",
+    "The relation is verified for this collection and order ablations, not for an unseen collection.",
+    "Generated value 32 is a bridge implied by the selected operation, not an observed input.",
+    "This establishes relation discovery and operation composition, not autonomous invention of a new physical computation law."
+  ]
+}

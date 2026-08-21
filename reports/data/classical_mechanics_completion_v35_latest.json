@@ -1,0 +1,100 @@
+{
+  "audit_version": "classical-mechanics-completion-audit-v35.0",
+  "run_id": "RUN-relativistic-boundary-v35-20260821T091317282574Z",
+  "passed": true,
+  "verified_domains": 15,
+  "total_domains": 15,
+  "scope": "the 15-domain synthetic, exact-rational classical-mechanics research capability graph declared in V27",
+  "artifact_checks": [
+    {
+      "capability_id": "M01",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M02",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M03",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M04",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M05",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M06",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M07",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M08",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M09",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M10",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M11",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M12",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M13",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M14",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    },
+    {
+      "capability_id": "M15",
+      "report_exists": true,
+      "page_exists": true,
+      "passed": true
+    }
+  ]
+}

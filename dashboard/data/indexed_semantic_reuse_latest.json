@@ -1,0 +1,706 @@
+{
+  "report_version": "indexed-semantic-reuse-report-v0.1",
+  "run_id": "RUN-indexed-semantic-reuse-20260818T023344032106Z",
+  "created_at": "2026-08-18T02:33:44.061751Z",
+  "title": "有序关系与匿名计算语义复用实验",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "ordered_index_plus_difference_workspace_plus_opaque_semantic_composition",
+  "learner_received": {
+    "numeric_values": [
+      2,
+      6,
+      12,
+      20,
+      30,
+      42,
+      56
+    ],
+    "order_semantics": true,
+    "next_value_question": false,
+    "natural_language_math_concepts": false,
+    "target_formula": false,
+    "intrinsic_multiply_node": false,
+    "intrinsic_divide_node": false,
+    "opaque_success_room_operation_ids": [
+      "SEM-33bf3587fc82db18"
+    ],
+    "sealed_extension_visible_during_search": false
+  },
+  "derived_workspace": {
+    "construction": "generic_adjacent_subtraction",
+    "first_layer": [
+      4.0,
+      6.0,
+      8.0,
+      10.0,
+      12.0,
+      14.0
+    ],
+    "second_layer": [
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0
+    ],
+    "evidence_constants": [
+      {
+        "value": 0.0,
+        "provenance": {
+          "op": "subtract_observed_or_derived_numeric_atoms",
+          "left": 0.0,
+          "right": 0.0
+        }
+      },
+      {
+        "value": -1.0,
+        "provenance": {
+          "op": "subtract_observed_or_derived_numeric_atoms",
+          "left": 0.0,
+          "right": 1.0
+        }
+      },
+      {
+        "value": 1.0,
+        "provenance": {
+          "op": "subtract_observed_or_derived_numeric_atoms",
+          "left": 1.0,
+          "right": 0.0
+        }
+      },
+      {
+        "value": -2.0,
+        "provenance": {
+          "op": "subtract_observed_or_derived_numeric_atoms",
+          "left": 0.0,
+          "right": 2.0
+        }
+      },
+      {
+        "value": 2.0,
+        "provenance": {
+          "op": "subtract_observed_or_derived_numeric_atoms",
+          "left": 2.0,
+          "right": 0.0
+        }
+      }
+    ]
+  },
+  "control_without_success_room": {
+    "semantic_operation_count": 0,
+    "programs_generated": 2366,
+    "behavior_classes": 140,
+    "best_candidate": {
+      "candidate_id": "IC-6388a6c038b23494",
+      "program": {
+        "op": "q_add",
+        "args": [
+          {
+            "op": "q_add",
+            "args": [
+              {
+                "op": "q_add",
+                "args": [
+                  {
+                    "op": "q_index"
+                  },
+                  {
+                    "op": "q_index"
+                  }
+                ]
+              },
+              {
+                "op": "q_index"
+              }
+            ]
+          },
+          {
+            "op": "q_index"
+          }
+        ]
+      },
+      "fit_mse": 256.0,
+      "maximum_absolute_error": 32.0,
+      "exact": false,
+      "program_nodes": 7,
+      "training_outputs": [
+        0.0,
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0
+      ],
+      "probe_signature": [
+        0.0,
+        4.0,
+        8.0,
+        12.0,
+        16.0,
+        20.0,
+        24.0,
+        28.0,
+        32.0,
+        36.0,
+        40.0,
+        44.0
+      ],
+      "logic_signature": "LOGIC-04a99317fe6bde67"
+    },
+    "exact_candidate_found": false
+  },
+  "search_with_success_room": {
+    "semantic_operation_ids": [
+      "SEM-33bf3587fc82db18"
+    ],
+    "programs_generated": 4950,
+    "programs_executed": 4138,
+    "invalid_programs": 812,
+    "behavior_classes": 360,
+    "exact_candidate_found": true
+  },
+  "five_candidate_feedback": [
+    {
+      "rank": 1,
+      "candidate_id": "IC-333606b7ae23dc50",
+      "program": {
+        "op": "q_semantic_call",
+        "args": [
+          {
+            "op": "q_add",
+            "args": [
+              {
+                "op": "q_constant",
+                "constant": 1.0
+              },
+              {
+                "op": "q_index"
+              }
+            ]
+          },
+          {
+            "op": "q_add",
+            "args": [
+              {
+                "op": "q_constant",
+                "constant": 2.0
+              },
+              {
+                "op": "q_index"
+              }
+            ]
+          }
+        ],
+        "operation_id": "SEM-33bf3587fc82db18"
+      },
+      "fit_mse": 0.0,
+      "maximum_absolute_error": 0.0,
+      "exact": true,
+      "program_nodes": 7,
+      "training_outputs": [
+        2.0,
+        6.0,
+        12.0,
+        20.0,
+        30.0,
+        42.0,
+        56.0
+      ],
+      "probe_signature": [
+        2.0,
+        6.0,
+        12.0,
+        20.0,
+        30.0,
+        42.0,
+        56.0,
+        72.0,
+        90.0,
+        110.0,
+        132.0,
+        156.0
+      ],
+      "logic_signature": "LOGIC-a7732740311912a5",
+      "disposition": "success_room"
+    },
+    {
+      "rank": 2,
+      "candidate_id": "IC-643413f53827db78",
+      "program": {
+        "op": "q_semantic_call",
+        "args": [
+          {
+            "op": "q_add",
+            "args": [
+              {
+                "op": "q_subtract",
+                "args": [
+                  {
+                    "op": "q_constant",
+                    "constant": 1.0
+                  },
+                  {
+                    "op": "q_constant",
+                    "constant": -2.0
+                  }
+                ]
+              },
+              {
+                "op": "q_index"
+              }
+            ]
+          },
+          {
+            "op": "q_index"
+          }
+        ],
+        "operation_id": "SEM-33bf3587fc82db18"
+      },
+      "fit_mse": 4.0,
+      "maximum_absolute_error": 2.0,
+      "exact": false,
+      "program_nodes": 7,
+      "training_outputs": [
+        0.0,
+        4.0,
+        10.0,
+        18.0,
+        28.0,
+        40.0,
+        54.0
+      ],
+      "probe_signature": [
+        0.0,
+        4.0,
+        10.0,
+        18.0,
+        28.0,
+        40.0,
+        54.0,
+        70.0,
+        88.0,
+        108.0,
+        130.0,
+        154.0
+      ],
+      "logic_signature": "LOGIC-a7a93c0cf67dd2c2",
+      "disposition": "mistake_library"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "IC-66df22d4ef4a0fe0",
+      "program": {
+        "op": "q_subtract",
+        "args": [
+          {
+            "op": "q_semantic_call",
+            "args": [
+              {
+                "op": "q_add",
+                "args": [
+                  {
+                    "op": "q_constant",
+                    "constant": 2.0
+                  },
+                  {
+                    "op": "q_index"
+                  }
+                ]
+              },
+              {
+                "op": "q_index"
+              }
+            ],
+            "operation_id": "SEM-33bf3587fc82db18"
+          },
+          {
+            "op": "q_constant",
+            "constant": -2.0
+          }
+        ]
+      },
+      "fit_mse": 13.0,
+      "maximum_absolute_error": 6.0,
+      "exact": false,
+      "program_nodes": 7,
+      "training_outputs": [
+        2.0,
+        5.0,
+        10.0,
+        17.0,
+        26.0,
+        37.0,
+        50.0
+      ],
+      "probe_signature": [
+        2.0,
+        5.0,
+        10.0,
+        17.0,
+        26.0,
+        37.0,
+        50.0,
+        65.0,
+        82.0,
+        101.0,
+        122.0,
+        145.0
+      ],
+      "logic_signature": "LOGIC-df036960a2e6bf6a",
+      "disposition": "mistake_library"
+    },
+    {
+      "rank": 4,
+      "candidate_id": "IC-23e964697ded0f08",
+      "program": {
+        "op": "q_semantic_call",
+        "args": [
+          {
+            "op": "q_semantic_call",
+            "args": [
+              {
+                "op": "q_subtract",
+                "args": [
+                  {
+                    "op": "q_constant",
+                    "constant": 2.0
+                  },
+                  {
+                    "op": "q_constant",
+                    "constant": -2.0
+                  }
+                ]
+              },
+              {
+                "op": "q_constant",
+                "constant": 2.0
+              }
+            ],
+            "operation_id": "SEM-33bf3587fc82db18"
+          },
+          {
+            "op": "q_index"
+          }
+        ],
+        "operation_id": "SEM-33bf3587fc82db18"
+      },
+      "fit_mse": 16.0,
+      "maximum_absolute_error": 8.0,
+      "exact": false,
+      "program_nodes": 7,
+      "training_outputs": [
+        0.0,
+        8.0,
+        16.0,
+        24.0,
+        32.0,
+        40.0,
+        48.0
+      ],
+      "probe_signature": [
+        0.0,
+        8.0,
+        16.0,
+        24.0,
+        32.0,
+        40.0,
+        48.0,
+        56.0,
+        64.0,
+        72.0,
+        80.0,
+        88.0
+      ],
+      "logic_signature": "LOGIC-07fa0888acc58531",
+      "disposition": "mistake_library"
+    },
+    {
+      "rank": 5,
+      "candidate_id": "IC-38d54561b2c8df91",
+      "program": {
+        "op": "q_semantic_call",
+        "args": [
+          {
+            "op": "q_add",
+            "args": [
+              {
+                "op": "q_constant",
+                "constant": 2.0
+              },
+              {
+                "op": "q_index"
+              }
+            ]
+          },
+          {
+            "op": "q_index"
+          }
+        ],
+        "operation_id": "SEM-33bf3587fc82db18"
+      },
+      "fit_mse": 29.0,
+      "maximum_absolute_error": 8.0,
+      "exact": false,
+      "program_nodes": 5,
+      "training_outputs": [
+        0.0,
+        3.0,
+        8.0,
+        15.0,
+        24.0,
+        35.0,
+        48.0
+      ],
+      "probe_signature": [
+        0.0,
+        3.0,
+        8.0,
+        15.0,
+        24.0,
+        35.0,
+        48.0,
+        63.0,
+        80.0,
+        99.0,
+        120.0,
+        143.0
+      ],
+      "logic_signature": "LOGIC-0d167424ffa67bfc",
+      "disposition": "mistake_library"
+    }
+  ],
+  "winner": {
+    "candidate_id": "IC-333606b7ae23dc50",
+    "program": {
+      "op": "q_semantic_call",
+      "args": [
+        {
+          "op": "q_add",
+          "args": [
+            {
+              "op": "q_constant",
+              "constant": 1.0
+            },
+            {
+              "op": "q_index"
+            }
+          ]
+        },
+        {
+          "op": "q_add",
+          "args": [
+            {
+              "op": "q_constant",
+              "constant": 2.0
+            },
+            {
+              "op": "q_index"
+            }
+          ]
+        }
+      ],
+      "operation_id": "SEM-33bf3587fc82db18"
+    },
+    "fit_mse": 0.0,
+    "maximum_absolute_error": 0.0,
+    "exact": true,
+    "program_nodes": 7,
+    "training_outputs": [
+      2.0,
+      6.0,
+      12.0,
+      20.0,
+      30.0,
+      42.0,
+      56.0
+    ],
+    "probe_signature": [
+      2.0,
+      6.0,
+      12.0,
+      20.0,
+      30.0,
+      42.0,
+      56.0,
+      72.0,
+      90.0,
+      110.0,
+      132.0,
+      156.0
+    ],
+    "logic_signature": "LOGIC-a7732740311912a5",
+    "parent_operation_ids": [
+      "SEM-33bf3587fc82db18"
+    ],
+    "sealed_extension": [
+      {
+        "index": 7,
+        "predicted": 72.0,
+        "observed": 72
+      },
+      {
+        "index": 8,
+        "predicted": 90.0,
+        "observed": 90
+      },
+      {
+        "index": 9,
+        "predicted": 110.0,
+        "observed": 110
+      },
+      {
+        "index": 10,
+        "predicted": 132.0,
+        "observed": 132
+      },
+      {
+        "index": 11,
+        "predicted": 156.0,
+        "observed": 156
+      }
+    ]
+  },
+  "gates": [
+    {
+      "gate_id": "ordered_position_available_without_next_value_target",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "generic_adjacent_subtraction_workspace_built",
+      "passed": true,
+      "actual": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "threshold": "constant derived layer"
+    },
+    {
+      "gate_id": "add_subtract_only_control_has_no_exact_program",
+      "passed": true,
+      "actual": false,
+      "threshold": false
+    },
+    {
+      "gate_id": "anonymous_success_room_operation_enables_exact_fit",
+      "passed": true,
+      "actual": {
+        "exact": true,
+        "parents": [
+          "SEM-33bf3587fc82db18"
+        ]
+      },
+      "threshold": "exact with at least one opaque parent operation"
+    },
+    {
+      "gate_id": "sealed_extension_exact",
+      "passed": true,
+      "actual": [
+        {
+          "index": 7,
+          "predicted": 72.0,
+          "observed": 72
+        },
+        {
+          "index": 8,
+          "predicted": 90.0,
+          "observed": 90
+        },
+        {
+          "index": 9,
+          "predicted": 110.0,
+          "observed": 110
+        },
+        {
+          "index": 10,
+          "predicted": 132.0,
+          "observed": 132
+        },
+        {
+          "index": 11,
+          "predicted": 156.0,
+          "observed": 156
+        }
+      ],
+      "threshold": "5/5 exact"
+    },
+    {
+      "gate_id": "no_intrinsic_multiply_or_divide_node",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "five_distinct_logic_structures_reported",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    }
+  ],
+  "success_room_record": {
+    "room_record_id": "SF-347993842578af20",
+    "operation_id": "IDX-333606b7ae23dc50",
+    "definition": {
+      "op": "q_semantic_call",
+      "args": [
+        {
+          "op": "q_add",
+          "args": [
+            {
+              "op": "q_constant",
+              "constant": 1.0
+            },
+            {
+              "op": "q_index"
+            }
+          ]
+        },
+        {
+          "op": "q_add",
+          "args": [
+            {
+              "op": "q_constant",
+              "constant": 2.0
+            },
+            {
+              "op": "q_index"
+            }
+          ]
+        }
+      ],
+      "operation_id": "SEM-33bf3587fc82db18"
+    },
+    "parent_operation_ids": [
+      "SEM-33bf3587fc82db18"
+    ],
+    "validation_scope": "indexed_semantic_reuse_v0.1_indices_0_through_11",
+    "knowledge_status": "bounded",
+    "evidence": {
+      "run_id": "RUN-indexed-semantic-reuse-20260818T023344032106Z",
+      "training_case_count": 7,
+      "sealed_case_count": 5,
+      "sealed_exact": true,
+      "control_without_library_exact": false
+    }
+  },
+  "mistake_record_ids": [
+    "IM-dc18767a972fd51e",
+    "IM-06efc68f6ff69c57",
+    "IM-01a887bdcc1f6d0b",
+    "IM-a43410d126d8dae2"
+  ],
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The ordered position token is host-provided metadata, not a learned semantic.",
+    "The winning relation is bounded to supplied and sealed indices 0 through 11.",
+    "The opaque parent semantic was previously verified only over a bounded integer domain.",
+    "A second unrelated ordered task is still required to establish broad transfer."
+  ]
+}

@@ -1,0 +1,4216 @@
+{
+  "report_version": "metamachine-gen1-report-v0.1",
+  "run_id": "RUN-metamachine-gen1-20260817T194211293154Z",
+  "created_at": "2026-08-17T19:42:11.301999Z",
+  "title": "MetaMachine Gen 1：匿名状态语义生长",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "claim_scope": "two_symbol_finite_traces_up_to_64_steps",
+  "architecture": "enumerated_state_graphs_not_transformer",
+  "learner_received": {
+    "natural_language": false,
+    "target_name": false,
+    "target_formula": false,
+    "arithmetic_operations": [],
+    "structured_storage_operations": [],
+    "repetition_operations": [],
+    "supplied_substrate": [
+      "anonymous_symbol_feed",
+      "finite_state_ids",
+      "transition_table_execution",
+      "completion_after_last_supplied_symbol"
+    ]
+  },
+  "development": {
+    "trace_count": 7,
+    "maximum_trace_length": 2,
+    "programs_generated": 5898,
+    "programs_scored_after_canonicalization": 1778,
+    "selected_candidate": {
+      "candidate_id": "SG-5d71852caac760f3",
+      "program": {
+        "state_count": 2,
+        "initial_state_id": 0,
+        "transition_table": [
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "output_table": [
+          0,
+          1
+        ]
+      },
+      "fit_error": 0.0,
+      "reachable_state_count": 2
+    }
+  },
+  "blind_verification": {
+    "search_access": false,
+    "case_count": 506,
+    "passed_case_count": 506,
+    "failed_case_count": 0,
+    "exhaustive_lengths": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "additional_lengths": [
+      31,
+      64
+    ],
+    "case_results": [
+      {
+        "case_index": 0,
+        "trace_length": 3,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 1
+      },
+      {
+        "case_index": 1,
+        "trace_length": 3,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 2,
+        "trace_length": 3,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 3,
+        "trace_length": 3,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 4,
+        "trace_length": 3,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 5,
+        "trace_length": 3,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 6,
+        "trace_length": 3,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 7,
+        "trace_length": 3,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 8,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 1
+      },
+      {
+        "case_index": 9,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 10,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 11,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 12,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 13,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 14,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 15,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 16,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 17,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 18,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 19,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 20,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 21,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 22,
+        "trace_length": 4,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 23,
+        "trace_length": 4,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 24,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 1
+      },
+      {
+        "case_index": 25,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 26,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 27,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 28,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 29,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 30,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 31,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 32,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 33,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 34,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 35,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 36,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 37,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 38,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 39,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 40,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 41,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 42,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 43,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 44,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 45,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 46,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 47,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 48,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 49,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 50,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 51,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 52,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 53,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 54,
+        "trace_length": 5,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 55,
+        "trace_length": 5,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 56,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 1
+      },
+      {
+        "case_index": 57,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 58,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 59,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 60,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 61,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 62,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 63,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 64,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 65,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 66,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 67,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 68,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 69,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 70,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 71,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 72,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 73,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 74,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 75,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 76,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 77,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 78,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 79,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 80,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 81,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 82,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 83,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 84,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 85,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 86,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 87,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 88,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 89,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 90,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 91,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 92,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 93,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 94,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 95,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 96,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 97,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 98,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 99,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 100,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 101,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 102,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 103,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 104,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 105,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 106,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 107,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 108,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 109,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 110,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 111,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 112,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 113,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 114,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 115,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 116,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 117,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 118,
+        "trace_length": 6,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 119,
+        "trace_length": 6,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 120,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 1
+      },
+      {
+        "case_index": 121,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 122,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 123,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 124,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 125,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 126,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 127,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 128,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 129,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 130,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 131,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 132,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 133,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 134,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 135,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 136,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 137,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 138,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 139,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 140,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 141,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 142,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 143,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 144,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 145,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 146,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 147,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 148,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 149,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 150,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 151,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 152,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 153,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 154,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 155,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 156,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 157,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 158,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 159,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 160,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 161,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 162,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 163,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 164,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 165,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 166,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 167,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 168,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 169,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 170,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 171,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 172,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 173,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 174,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 175,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 176,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 177,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 178,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 179,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 180,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 181,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 182,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 183,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 184,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 185,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 186,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 187,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 188,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 189,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 190,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 191,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 192,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 193,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 194,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 195,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 196,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 197,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 198,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 199,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 200,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 201,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 202,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 203,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 204,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 205,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 206,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 207,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 208,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 209,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 210,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 211,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 212,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 213,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 214,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 215,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 216,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 217,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 218,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 219,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 220,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 221,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 222,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 223,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 224,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 225,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 226,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 227,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 228,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 229,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 230,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 231,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 232,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 233,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 234,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 235,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 236,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 237,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 238,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 239,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 240,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 241,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 242,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 243,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 244,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 245,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 246,
+        "trace_length": 7,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 247,
+        "trace_length": 7,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 248,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 1
+      },
+      {
+        "case_index": 249,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 250,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 251,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 252,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 253,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 254,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 255,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 256,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 257,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 258,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 259,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 260,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 261,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 262,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 263,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 264,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 265,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 266,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 267,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 268,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 269,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 270,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 271,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 272,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 273,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 274,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 275,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 276,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 277,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 278,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 279,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 280,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 281,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 282,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 283,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 284,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 285,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 286,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 287,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 288,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 289,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 290,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 291,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 292,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 293,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 294,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 295,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 296,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 297,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 298,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 299,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 300,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 301,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 302,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 303,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 304,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 305,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 306,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 307,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 308,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 309,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 310,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 311,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 312,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 313,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 314,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 315,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 316,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 317,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 318,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 319,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 320,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 321,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 322,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 323,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 324,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 325,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 326,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 327,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 328,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 329,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 330,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 331,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 332,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 333,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 334,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 335,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 336,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 337,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 338,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 339,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 340,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 341,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 342,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 343,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 344,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 345,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 346,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 347,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 348,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 349,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 350,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 351,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 352,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 353,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 354,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 355,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 356,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 357,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 358,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 359,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 360,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 361,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 362,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 363,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 364,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 365,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 366,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 367,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 368,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 369,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 370,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 371,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 372,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 373,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 374,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 375,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 376,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 377,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 378,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 379,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 380,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 381,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 382,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 383,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 384,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 385,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 386,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 387,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 388,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 389,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 390,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 391,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 392,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 393,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 394,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 395,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 396,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 397,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 398,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 399,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 400,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 401,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 402,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 403,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 404,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 405,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 406,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 407,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 408,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 409,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 410,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 411,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 412,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 413,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 414,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 415,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 416,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 417,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 418,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 419,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 420,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 421,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 422,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 423,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 424,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 425,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 426,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 427,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 428,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 429,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 430,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 431,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 432,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 433,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 434,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 435,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 436,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 437,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 438,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 439,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 440,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 441,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 442,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 443,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 444,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 445,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 446,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 447,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 448,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 449,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 450,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 451,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 452,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 453,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 454,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 455,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 456,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 457,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 458,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 459,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 460,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 461,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 462,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 463,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 464,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 465,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 466,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 467,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 468,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 469,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 470,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 471,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 472,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 473,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 474,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 475,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 476,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 477,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 478,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 479,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 480,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 481,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 482,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 483,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 484,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 485,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 486,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 487,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 488,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 489,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 490,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 491,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 492,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 493,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 494,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 495,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 496,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 497,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 498,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 499,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 500,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 501,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 502,
+        "trace_length": 8,
+        "predicted_value": 1,
+        "observed_value": 1,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 503,
+        "trace_length": 8,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 504,
+        "trace_length": 31,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      },
+      {
+        "case_index": 505,
+        "trace_length": 64,
+        "predicted_value": 0,
+        "observed_value": 0,
+        "passed": true,
+        "visited_state_count": 2
+      }
+    ]
+  },
+  "structural_findings": {
+    "reachable_state_count": 2,
+    "reachable_nontrivial_cycle": true,
+    "distinct_internal_state_reuse": true,
+    "host_supplied_repetition_instruction": false,
+    "host_supplied_completion": true
+  },
+  "promoted_semantic": {
+    "operation_id": "OP-5d71852caac760f3",
+    "definition": {
+      "state_count": 2,
+      "initial_state_id": 0,
+      "transition_table": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "output_table": [
+        0,
+        1
+      ]
+    },
+    "human_interpretation": null,
+    "knowledge_id": "K-000001",
+    "ledger_status": "bounded",
+    "replay_passed": true
+  },
+  "post_hoc_evaluator_interpretation": {
+    "assigned_after_blind_verification": true,
+    "statement": "One visible symbol preserves the internal state; the other alternates between two states. The final state encodes the parity of one private symbol count.",
+    "common_human_analogy": "a one-bit parity accumulator implemented as a two-state machine"
+  },
+  "gates": [
+    {
+      "gate_id": "development_exact",
+      "passed": true,
+      "actual": 0.0,
+      "threshold": 0.0
+    },
+    {
+      "gate_id": "exhaustive_unseen_lengths_3_to_8",
+      "passed": true,
+      "actual": 504,
+      "threshold": 504
+    },
+    {
+      "gate_id": "maximum_registered_length_64",
+      "passed": true,
+      "actual": 64,
+      "threshold": 64
+    },
+    {
+      "gate_id": "reachable_nontrivial_state_cycle",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "distinct_internal_state_reuse",
+      "passed": true,
+      "actual": 2,
+      "threshold": 2
+    },
+    {
+      "gate_id": "promoted_operation_replay",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "autonomous_completion",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    },
+    {
+      "gate_id": "dynamic_storage_topology",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    }
+  ],
+  "ledger_event_count": 4,
+  "limitations": [
+    "The host still supplies one-symbol-per-step execution and completion after the final input symbol.",
+    "The search is limited to at most three states, two symbols, two outputs, and 64 supplied steps.",
+    "The result creates a derived executable semantic layer, not a new physical computation law.",
+    "Autonomous stopping, dynamic storage growth, self-modifying programs, and cross-task semantic composition remain unverified.",
+    "The post-hoc human interpretation was not available to the learner during search."
+  ]
+}

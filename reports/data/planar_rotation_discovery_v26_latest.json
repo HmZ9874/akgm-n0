@@ -1,0 +1,1191 @@
+{
+  "report_version": "planar-rotation-discovery-v26.0",
+  "run_id": "RUN-planar-rotation-v26-20260821T071745600725Z",
+  "created_at": "2026-08-21T07:17:45.600725Z",
+  "verdict": "planar_oriented_operation_rotation_quantity_and_central_conservation_discovered",
+  "acceptance": {
+    "benchmark_version": "planar-rotation-discovery-v26.0",
+    "passed": true,
+    "classification": "verified_anonymous_discovery_of_planar_orientation_angular_action_and_central_conservation",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "central_rows": [
+        {
+          "experiment_id": "TF0-0",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F0",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        },
+        {
+          "experiment_id": "TF0-1",
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F0",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        },
+        {
+          "experiment_id": "TF0-2",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F0",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        },
+        {
+          "experiment_id": "TF0-3",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 8
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "anonymous_family_tag": "F0",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        }
+      ],
+      "general_rows": [
+        {
+          "experiment_id": "TF1-0",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F1",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        },
+        {
+          "experiment_id": "TF1-1",
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F1",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        },
+        {
+          "experiment_id": "TF1-2",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F1",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        },
+        {
+          "experiment_id": "TF1-3",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F1",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        }
+      ],
+      "physics_names_supplied": false,
+      "rotation_formula_supplied": false
+    },
+    "discovery": {
+      "bilinear_candidates_generated": 81,
+      "selected_bilinear": {
+        "program_id": "ORB-bd6d8c37e9bed1b1",
+        "policy": {
+          "substrate": "oriented_four_atom_bilinear_router_v26",
+          "atom_routes": [
+            "ZERO",
+            "KEEP",
+            "TURN",
+            "ZERO"
+          ],
+          "human_operation_name": null
+        },
+        "opaque_program": "ORB<ZERO,KEEP,TURN,ZERO>"
+      },
+      "weight_candidates_generated": 3,
+      "selected_rotation_quantity": {
+        "program_id": "ROT-031c2c4670ae102a",
+        "weight_route": "Q0",
+        "bilinear_program_id": "ORB-bd6d8c37e9bed1b1",
+        "opaque_program": "ROT<Q0,ORB<ZERO,KEEP,TURN,ZERO>>",
+        "training_cases": 4,
+        "human_quantity_name": null
+      },
+      "central_training_cases": 4,
+      "general_training_cases": 4,
+      "dimension_constraints": [
+        "D_ROT=(D0+D_POS+D_STATE)",
+        "D_ANGULAR_ACTION=(D_POS+D_ACTION)"
+      ]
+    },
+    "proofs": {
+      "oriented_operation": {
+        "proof_id": "V26-PROOF-ORIENTED-BILINEAR-OPERATION",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_oriented_bilinear_router",
+            "passed": true,
+            "evidence": "one of 81 routers is alternating, antisymmetric, and matches the anonymous orientation basis"
+          },
+          {
+            "obligation_id": "universal_antisymmetry",
+            "passed": true,
+            "evidence": "ORB<a,b> = TURN<ORB<b,a>> by V21 ring expansion"
+          },
+          {
+            "obligation_id": "universal_alternation",
+            "passed": true,
+            "evidence": "ORB<a,a> = ZERO by cancellation"
+          }
+        ]
+      },
+      "rotation_balance": {
+        "proof_id": "V26-PROOF-ROTATION-BALANCE",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_mass_weight",
+            "passed": true,
+            "evidence": "only Q0 weighting makes quantity change equal angular action"
+          },
+          {
+            "obligation_id": "general_angular_action_balance",
+            "passed": true,
+            "evidence": "Q'=Q⊕ORB<r,J> for every directed rational planar action"
+          },
+          {
+            "obligation_id": "central_action_conservation",
+            "passed": true,
+            "evidence": "J parallel to r makes ORB<r,J>=ZERO"
+          }
+        ],
+        "central_hidden_replay": [
+          {
+            "experiment_id": "SF0-0",
+            "angular_action": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "before": {
+              "positive": 0,
+              "negative": 9,
+              "denominator": 1
+            },
+            "after": {
+              "positive": 0,
+              "negative": 9,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF0-1",
+            "angular_action": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "before": {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            "after": {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF0-2",
+            "angular_action": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "before": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            "after": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          }
+        ],
+        "general_hidden_replay": [
+          {
+            "experiment_id": "SF1-0",
+            "quantity_change": {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            "angular_action": {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF1-1",
+            "quantity_change": {
+              "positive": 0,
+              "negative": 5,
+              "denominator": 2
+            },
+            "angular_action": {
+              "positive": 0,
+              "negative": 5,
+              "denominator": 2
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF1-2",
+            "quantity_change": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            "angular_action": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "replace_oriented_operation_with_symmetric_diagonal",
+        "rejected": true,
+        "counterexample": {
+          "left": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "right": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ]
+        }
+      },
+      {
+        "mutation": "reverse_orientation_without_basis_change",
+        "rejected": true,
+        "counterexample": {
+          "left": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "right": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ]
+        }
+      },
+      {
+        "mutation": "omit_mass_weight_from_rotation_quantity",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF1-0",
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 3
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F1",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        }
+      },
+      {
+        "mutation": "claim_all_planar_actions_conserve_rotation_quantity",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF1-0",
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 3
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family_tag": "F1",
+          "human_channel_names": null,
+          "human_force_type": null,
+          "human_rotation_formula": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v25_collision_mechanics_dependency_reverified",
+        "passed": true
+      },
+      {
+        "obligation_id": "planar_rows_are_anonymous",
+        "passed": true
+      },
+      {
+        "obligation_id": "oriented_operation_search_is_nontrivial",
+        "passed": true
+      },
+      {
+        "obligation_id": "oriented_operation_has_universal_laws",
+        "passed": true
+      },
+      {
+        "obligation_id": "mass_weight_is_uniquely_selected",
+        "passed": true
+      },
+      {
+        "obligation_id": "general_rotation_balance_is_proved",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_central_actions_conserve",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_noncentral_actions_change_by_angular_action",
+        "passed": true
+      },
+      {
+        "obligation_id": "negative_and_fractional_planar_states_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_planar_mutations_are_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "research_names_are_post_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_transformer_regression_cross_product_or_angular_law_is_learner_input",
+        "passed": true
+      }
+    ],
+    "research_registry": {
+      "registry_version": "mechanics-research-registry-v26.0",
+      "naming_stage": "post_proof_only",
+      "supplied_to_learner": false,
+      "relations": [
+        {
+          "research_symbol": "ORB_2",
+          "research_name": "二维定向面积运算",
+          "physics_alias": "2D cross-product scalar",
+          "program_id": "ORB-bd6d8c37e9bed1b1"
+        },
+        {
+          "research_symbol": "L_R",
+          "research_name": "质量加权旋转量",
+          "physics_alias": "angular momentum",
+          "program_id": "ROT-031c2c4670ae102a"
+        },
+        {
+          "research_symbol": "A_J",
+          "research_name": "角作用量",
+          "physics_alias": "angular impulse",
+          "relation": "DELTA<L_R>=ORB_2<r,J>"
+        }
+      ]
+    },
+    "posthoc_translation": {
+      "oriented_bilinear": "x*vy - y*vx, planar cross-product scalar",
+      "rotation_quantity": "m*(x*vy-y*vx), angular momentum",
+      "balance": "Delta L = r cross J, angular impulse relation",
+      "F0_family": "central impulses conserve angular momentum"
+    },
+    "limitations": [
+      "V26 uses exact synthetic impulse observations rather than sensor measurements.",
+      "The orientation basis is an explicit coordinate convention, not a discovered law of nature.",
+      "The model is planar and impulse-based; continuous torque and rigid-body rotation are not yet constructed.",
+      "Moment of inertia, angular velocity, rotational kinetic energy, and three-dimensional vectors remain absent.",
+      "The operation is selected from an 81-member bilinear router grammar, not unrestricted source-code invention."
+    ]
+  },
+  "capability_change": {
+    "before": "V25 mechanics was one-dimensional and translational",
+    "after": "V26 introduces two-dimensional orientation, constructs a mass-weighted rotation quantity, and distinguishes central from noncentral actions",
+    "cross_product_or_angular_momentum_formula_supplied_to_learner": false
+  },
+  "claim": {
+    "achieved": "exact symbolic discovery of planar angular-impulse balance and central-action angular conservation",
+    "not_claimed": "three-dimensional rigid-body mechanics, continuous torque, empirical orbital mechanics, or unrestricted semantic invention"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v26/success/planar_rotation_latest.json",
+    "mistake_room": "artifacts/physics/v26/mistakes/rejected_planar_mutations.jsonl",
+    "accepted_programs": 3,
+    "rejected_mutations": 4
+  },
+  "content_digest": "903ea14ec90256c8b388cb5a595464b0ce22bdb363cb83ae93b6ec378678639d"
+}

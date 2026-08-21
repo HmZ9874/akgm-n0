@@ -1,0 +1,369 @@
+{
+  "report_version": "strict-partition-foundation-v11.1",
+  "run_id": "RUN-strict-partition-v11-20260820T180659161277Z",
+  "created_at": "2026-08-20T18:06:59.161277Z",
+  "verdict": "one_target_free_two_output_foundation_universally_proven",
+  "dependency": {
+    "semantic_id": "STRICT-FSEM-82df58ba4ce6f41c",
+    "normal_form": "x*y",
+    "role": "previously proven binary semantic used only by the post-execution conservation checker"
+  },
+  "discovery": {
+    "information_boundary": {
+      "target_output_rows": false,
+      "division_or_remainder_opcode": false,
+      "named_formula_target": false,
+      "available_primitives": [
+        "unit increment",
+        "unit decrement",
+        "empty event",
+        "conditional policy bits",
+        "six natural counters"
+      ],
+      "host_supplied": [
+        "event-controller grammar",
+        "bounded enumeration",
+        "conservation-law detector",
+        "invariant checker"
+      ]
+    },
+    "programs_generated": 3072,
+    "programs_executed": 1920,
+    "behavior_classes": 6,
+    "promotable_behavior_classes": 1,
+    "selected": {
+      "candidate_id": "EV-008b1597aed53d52",
+      "program": {
+        "substrate": "anonymous_event_counter_v11",
+        "initial_registers": [
+          "input_0",
+          "input_1",
+          0,
+          0,
+          0,
+          0
+        ],
+        "roles": {
+          "stream_input": 1,
+          "template_input": 0,
+          "state_a": 3,
+          "state_b": 4,
+          "work": 5,
+          "scratch": 2
+        },
+        "policy_bits": {
+          "preserve_template": true,
+          "consume_work": true,
+          "increment_state_b": true,
+          "boundary_increment_state_a": true,
+          "boundary_clear_state_b": true,
+          "boundary_refill_work": true
+        },
+        "outputs": [
+          3,
+          4
+        ]
+      },
+      "behavior_signature": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "conservation_profile": {
+        "reconstructs_stream_with_prior_binary_semantic": true,
+        "residual_is_strictly_bounded": true,
+        "zero_residual_matches_exact_boundary": true,
+        "first_state_is_monotone_in_stream": true,
+        "deterministic_replay": true,
+        "law_count": 5,
+        "promotable": true
+      },
+      "primitive_node_count": 11,
+      "probe_step_cost": 1036
+    }
+  },
+  "proof": {
+    "verifier_version": "strict-partition-invariant-verifier-v11.1",
+    "passed": true,
+    "semantic_id": "STRICT-FSEM-008b1597aed53d52",
+    "posthoc_name": "欧几里得商余分解（证明后命名）",
+    "universal_statement": "for every n in N and d in N+, the program uniquely returns q,r with n=d*q+r and 0<=r<d",
+    "derived_normal_form": [
+      "q=floor(n/d)",
+      "r=n-d*q"
+    ],
+    "obligations": [
+      {
+        "obligation_id": "distinct_state_roles",
+        "passed": true,
+        "evidence": "four anonymous state registers have distinct roles"
+      },
+      {
+        "obligation_id": "template_preserved",
+        "passed": true,
+        "evidence": "unit transfer copies the positive template through scratch storage"
+      },
+      {
+        "obligation_id": "one_stream_and_work_mark_consumed",
+        "passed": true,
+        "evidence": "each main transition consumes one stream mark and one work mark"
+      },
+      {
+        "obligation_id": "residual_state_advances",
+        "passed": true,
+        "evidence": "each consumed stream mark advances the second output state by one"
+      },
+      {
+        "obligation_id": "boundary_advances_first_state",
+        "passed": true,
+        "evidence": "an empty work counter advances the first output state"
+      },
+      {
+        "obligation_id": "boundary_resets_residual",
+        "passed": true,
+        "evidence": "a completed block clears the second output state"
+      },
+      {
+        "obligation_id": "boundary_restores_work",
+        "passed": true,
+        "evidence": "a completed block restores exactly one template-sized work counter"
+      },
+      {
+        "obligation_id": "base_invariant",
+        "passed": true,
+        "evidence": "at processed=0: state_a=0, state_b=0, work=d"
+      },
+      {
+        "obligation_id": "partial_block_induction",
+        "passed": true,
+        "evidence": "if residual+1<d, first state is unchanged, residual advances, and work decreases"
+      },
+      {
+        "obligation_id": "complete_block_induction",
+        "passed": true,
+        "evidence": "if residual+1=d, first state advances, residual resets, and work is restored to d"
+      },
+      {
+        "obligation_id": "termination",
+        "passed": true,
+        "evidence": "the finite stream counter decreases exactly once per main transition"
+      },
+      {
+        "obligation_id": "terminal_decomposition",
+        "passed": true,
+        "evidence": "at termination n=d*q+r with 0<=r<d"
+      },
+      {
+        "obligation_id": "uniqueness",
+        "passed": true,
+        "evidence": "two bounded-residual decompositions differ by a multiple of d whose magnitude is strictly below d, so both components agree"
+      },
+      {
+        "obligation_id": "independent_conservation_replay",
+        "passed": true,
+        "evidence": "{\"deterministic_replay\": true, \"first_state_is_monotone_in_stream\": true, \"law_count\": 5, \"promotable\": true, \"reconstructs_stream_with_prior_binary_semantic\": true, \"residual_is_strictly_bounded\": true, \"zero_residual_matches_exact_boundary\": true}"
+      },
+      {
+        "obligation_id": "sealed_replay",
+        "passed": true,
+        "evidence": "seven cases outside the discovery grid"
+      }
+    ],
+    "hidden_replay": [
+      {
+        "stream": 0,
+        "template": 1,
+        "outputs": [
+          0,
+          0
+        ],
+        "reconstruction": 0,
+        "passed": true
+      },
+      {
+        "stream": 1,
+        "template": 7,
+        "outputs": [
+          0,
+          1
+        ],
+        "reconstruction": 1,
+        "passed": true
+      },
+      {
+        "stream": 17,
+        "template": 5,
+        "outputs": [
+          3,
+          2
+        ],
+        "reconstruction": 17,
+        "passed": true
+      },
+      {
+        "stream": 42,
+        "template": 8,
+        "outputs": [
+          5,
+          2
+        ],
+        "reconstruction": 42,
+        "passed": true
+      },
+      {
+        "stream": 101,
+        "template": 9,
+        "outputs": [
+          11,
+          2
+        ],
+        "reconstruction": 101,
+        "passed": true
+      },
+      {
+        "stream": 255,
+        "template": 16,
+        "outputs": [
+          15,
+          15
+        ],
+        "reconstruction": 255,
+        "passed": true
+      },
+      {
+        "stream": 997,
+        "template": 31,
+        "outputs": [
+          32,
+          5
+        ],
+        "reconstruction": 997,
+        "passed": true
+      }
+    ]
+  },
+  "promotion": {
+    "admitted": true,
+    "strict_new_foundation_count": 1,
+    "strict_foundations_in_v10_v11": 2,
+    "room_record_hash": "ff31423a6ebf7eb4cf9d4f67ce256ce73c490dd431290bea76f32651cbb274b2",
+    "success_room": "artifacts/foundation/v11/success/strict_partition_foundations.jsonl",
+    "mistake_room": "artifacts/foundation/v11/mistakes/nonpromoted_behavior_leaders.jsonl"
+  },
+  "classification": {
+    "label": "target_free_bounded_structural_discovery",
+    "autonomous_within_registered_grammar": true,
+    "unrestricted_semantics_invention": false,
+    "human_novel_mathematics_claim": false
+  },
+  "content_digest": "c5f399d208c13c775a6f991368ef2f07626c52f017209783780aba65ee673f28"
+}

@@ -1,0 +1,522 @@
+{
+  "report_version": "autonomous-joint-conditioning-v0.1",
+  "run_id": "RUN-autonomous-joint-20260820T024629791655Z",
+  "created_at": "2026-08-20T02:46:29.791655Z",
+  "verdict": "joint_event_intersection_invented_and_finite_conditioning_rules_derived",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-finite-mass-20260820T024320796010Z",
+    "frontier": {
+      "world_id": "WORLD-conditioned-event-mass-68",
+      "structural_signature": "conditioned_finite_event_mass",
+      "status": "dependency_blocked",
+      "missing_dependency": "joint_event_intersection",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "search": {
+    "candidate_count": 14,
+    "exact_candidate_count": 2,
+    "selected_program": {
+      "program_id": "JRP-11599b293abc3bad",
+      "left_slot": 1,
+      "right_slot": 0,
+      "relation_mode": 2
+    },
+    "selected_token_cost": 323,
+    "selected_reward": 999677
+  },
+  "discovery": {
+    "foundation_level": 11,
+    "semantic": {
+      "semantic_id": "JSEM-574dab5540cd43e9",
+      "opcode": 11,
+      "program": {
+        "program_id": "JRP-11599b293abc3bad",
+        "left_slot": 1,
+        "right_slot": 0,
+        "relation_mode": 2
+      },
+      "dependency_semantic_ids": [
+        "MSEM-3e8b2a2c8bfae1e3",
+        "QSEM-3b412465307b4dee"
+      ],
+      "source_task_ids": [
+        "WORLD-conditioned-event-mass-68"
+      ],
+      "invented_dependency_signature": "joint_event_intersection"
+    },
+    "structural_origin": "construct the common-membership subcollection of two finite events in a shared universe",
+    "posthoc_name": "set intersection",
+    "posthoc_formula": "A∩B={x:x in A and x in B}",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "derived_results": [
+    "finite conditional probability P(A|B)=|A∩B|/|B|",
+    "product rule P(A∩B)=P(A|B)P(B)",
+    "finite independence cardinality criterion"
+  ],
+  "verification": {
+    "verifier_version": "independent-joint-frontier-verifier-v0.1",
+    "semantic_id": "JSEM-574dab5540cd43e9",
+    "passed": true,
+    "invented_mechanism": "emit an object exactly when equality scans find it in both finite subcollections",
+    "structural_statement": "construct the common-membership subcollection of two finite events in a shared universe",
+    "posthoc_mathematical_name": "set intersection",
+    "posthoc_formula": "A∩B={x:x in A and x in B}",
+    "derived_results": [
+      "finite conditional probability P(A|B)=|A∩B|/|B|",
+      "product rule P(A∩B)=P(A|B)P(B)",
+      "finite independence cardinality criterion"
+    ],
+    "declared_domain": "two finite subcollections of a shared finite universe",
+    "not_claimed": "nonuniform conditioning, Bayes inference systems, random variables, expectation, infinite sigma-algebras, or measure theory",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "elementwise membership equivalence composed with finite normalized-mass identities",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "JSEM-574dab5540cd43e9"
+      },
+      {
+        "obligation_id": "exact_joint_program_binding",
+        "passed": true,
+        "evidence": "JRP-11599b293abc3bad"
+      },
+      {
+        "obligation_id": "joint_event_intersection_dependency_invented",
+        "passed": true,
+        "evidence": "joint_event_intersection"
+      },
+      {
+        "obligation_id": "symmetric_common_membership_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "JRP-11599b293abc3bad",
+          "left_slot": 1,
+          "right_slot": 0,
+          "relation_mode": 2
+        }
+      },
+      {
+        "obligation_id": "depends_on_finite_mass_and_ratio_semantics",
+        "passed": true,
+        "evidence": [
+          "MSEM-3e8b2a2c8bfae1e3",
+          "QSEM-3b412465307b4dee"
+        ]
+      },
+      {
+        "obligation_id": "output_contains_only_both_memberships",
+        "passed": true,
+        "evidence": "every emitted object occurs in both input subcollections"
+      },
+      {
+        "obligation_id": "all_common_objects_are_emitted",
+        "passed": true,
+        "evidence": "universe scan tests each object and preserves every double membership"
+      },
+      {
+        "obligation_id": "intersection_commutative",
+        "passed": true,
+        "evidence": "double membership is symmetric in the two sources"
+      },
+      {
+        "obligation_id": "intersection_idempotent",
+        "passed": true,
+        "evidence": "an object lies in A and A exactly when it lies in A"
+      },
+      {
+        "obligation_id": "intersection_associative",
+        "passed": true,
+        "evidence": "triple membership is independent of grouping"
+      },
+      {
+        "obligation_id": "intersection_is_subset_of_each_input",
+        "passed": true,
+        "evidence": "common output bound"
+      },
+      {
+        "obligation_id": "distributive_set_law",
+        "passed": true,
+        "evidence": "membership truth table proves A∩(B∪C)=(A∩B)∪(A∩C)"
+      },
+      {
+        "obligation_id": "independent_hidden_joint_replay",
+        "passed": true,
+        "evidence": "8/8"
+      },
+      {
+        "obligation_id": "conditional_mass_normal_form",
+        "passed": true,
+        "evidence": "for nonempty B, joint/B has a unique positive-denominator normal form"
+      },
+      {
+        "obligation_id": "conditional_product_rule",
+        "passed": true,
+        "evidence": [
+          {
+            "counts": [
+              8,
+              4,
+              4,
+              2
+            ],
+            "conditional_pair": [
+              1,
+              2
+            ],
+            "product_rule_passed": true,
+            "independent_by_cross_count": true
+          },
+          {
+            "counts": [
+              12,
+              6,
+              4,
+              2
+            ],
+            "conditional_pair": [
+              1,
+              2
+            ],
+            "product_rule_passed": true,
+            "independent_by_cross_count": true
+          },
+          {
+            "counts": [
+              10,
+              7,
+              5,
+              3
+            ],
+            "conditional_pair": [
+              3,
+              5
+            ],
+            "product_rule_passed": true,
+            "independent_by_cross_count": false
+          },
+          {
+            "counts": [
+              20,
+              8,
+              10,
+              4
+            ],
+            "conditional_pair": [
+              2,
+              5
+            ],
+            "product_rule_passed": true,
+            "independent_by_cross_count": true
+          },
+          {
+            "counts": [
+              30,
+              12,
+              15,
+              6
+            ],
+            "conditional_pair": [
+              2,
+              5
+            ],
+            "product_rule_passed": true,
+            "independent_by_cross_count": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "independence_cross_cardinality_criterion",
+        "passed": true,
+        "evidence": "P(A∩B)=P(A)P(B) iff |A∩B||Omega|=|A||B| in a finite uniform whole"
+      },
+      {
+        "obligation_id": "conditioning_not_new_foundation",
+        "passed": true,
+        "evidence": "conditional mass composes intersection with the already proved normalized finite mass"
+      },
+      {
+        "obligation_id": "comparison_tokens_not_hidden",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "the finite universe and finite membership scans terminate"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "search saw integer relation modes and opaque subcollections, not intersection, conditional probability, Bayes, or independence labels"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "JOINT-HIDDEN-00",
+        "sizes": [
+          5,
+          0,
+          0,
+          0
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 2,
+        "equality_comparison_tokens": 0
+      },
+      {
+        "case_id": "JOINT-HIDDEN-01",
+        "sizes": [
+          5,
+          1,
+          1,
+          0
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 12,
+        "equality_comparison_tokens": 10
+      },
+      {
+        "case_id": "JOINT-HIDDEN-02",
+        "sizes": [
+          5,
+          2,
+          2,
+          1
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 23,
+        "equality_comparison_tokens": 20
+      },
+      {
+        "case_id": "JOINT-HIDDEN-03",
+        "sizes": [
+          7,
+          3,
+          3,
+          0
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 44,
+        "equality_comparison_tokens": 42
+      },
+      {
+        "case_id": "JOINT-HIDDEN-04",
+        "sizes": [
+          7,
+          4,
+          4,
+          2
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 60,
+        "equality_comparison_tokens": 56
+      },
+      {
+        "case_id": "JOINT-HIDDEN-05",
+        "sizes": [
+          8,
+          8,
+          4,
+          4
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 102,
+        "equality_comparison_tokens": 96
+      },
+      {
+        "case_id": "JOINT-HIDDEN-06",
+        "sizes": [
+          9,
+          5,
+          3,
+          2
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 76,
+        "equality_comparison_tokens": 72
+      },
+      {
+        "case_id": "JOINT-HIDDEN-07",
+        "sizes": [
+          12,
+          5,
+          5,
+          2
+        ],
+        "passed": true,
+        "primitive_execution_tokens": 124,
+        "equality_comparison_tokens": 120
+      }
+    ],
+    "conditional_cases": [
+      {
+        "counts": [
+          8,
+          4,
+          4,
+          2
+        ],
+        "conditional_pair": [
+          1,
+          2
+        ],
+        "product_rule_passed": true,
+        "independent_by_cross_count": true
+      },
+      {
+        "counts": [
+          12,
+          6,
+          4,
+          2
+        ],
+        "conditional_pair": [
+          1,
+          2
+        ],
+        "product_rule_passed": true,
+        "independent_by_cross_count": true
+      },
+      {
+        "counts": [
+          10,
+          7,
+          5,
+          3
+        ],
+        "conditional_pair": [
+          3,
+          5
+        ],
+        "product_rule_passed": true,
+        "independent_by_cross_count": false
+      },
+      {
+        "counts": [
+          20,
+          8,
+          10,
+          4
+        ],
+        "conditional_pair": [
+          2,
+          5
+        ],
+        "product_rule_passed": true,
+        "independent_by_cross_count": true
+      },
+      {
+        "counts": [
+          30,
+          12,
+          15,
+          6
+        ],
+        "conditional_pair": [
+          2,
+          5
+        ],
+        "product_rule_passed": true,
+        "independent_by_cross_count": true
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 11,
+    "previous_count": 10,
+    "new_foundation": "有限集合交集",
+    "verified_derived_results_added": 3
+  },
+  "next_frontier": {
+    "world_id": "WORLD-weighted-outcome-center-76",
+    "structural_signature": "weighted_finite_outcome_center",
+    "status": "dependency_blocked",
+    "missing_dependency": "weighted_sum_accumulator",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/joint_frontier_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/joint_frontier_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 13,
+    "event_hash": "540704f5acc36eb885c78a75bd24d7217256c4f25a8bb97838c875a78f1f82d8"
+  },
+  "gates": [
+    {
+      "gate_id": "joint_gap_taken_from_previous_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-conditioned-event-mass-68",
+        "structural_signature": "conditioned_finite_event_mass",
+        "status": "dependency_blocked",
+        "missing_dependency": "joint_event_intersection",
+        "posthoc_math_name": null
+      },
+      "required": "recorded gap"
+    },
+    {
+      "gate_id": "anonymous_set_relation_modes_compete",
+      "passed": true,
+      "actual": 14,
+      "required": 14
+    },
+    {
+      "gate_id": "common_membership_mode_selected_without_name",
+      "passed": true,
+      "actual": 2,
+      "required": 2
+    },
+    {
+      "gate_id": "joint_event_world_exactly_compressed",
+      "passed": true,
+      "actual": 7,
+      "required": 7
+    },
+    {
+      "gate_id": "joint_semantic_universally_proved",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_joint_cases_pass",
+      "passed": true,
+      "actual": 8,
+      "required": 8
+    },
+    {
+      "gate_id": "conditional_product_rule_proved",
+      "passed": true,
+      "actual": 5,
+      "required": 5
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 13
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 13
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_intersection_or_conditioning",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "Only finite uniform event conditioning is derived.",
+    "Conditional probability with empty conditioning event is undefined.",
+    "No random-variable expectation, nonuniform weights, infinite spaces, or measure theory is proved."
+  ]
+}

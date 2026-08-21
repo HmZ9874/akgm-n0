@@ -1,0 +1,1277 @@
+{
+  "report_version": "directed-rational-construction-v21.0",
+  "run_id": "RUN-directed-rational-v21-20260821T041348181696Z",
+  "created_at": "2026-08-21T04:13:48.181696Z",
+  "verdict": "natural_counter_signed_rational_ring_construction_passed",
+  "acceptance": {
+    "benchmark_version": "directed-rational-construction-v21.0",
+    "passed": true,
+    "classification": "verified_natural_counter_construction_of_signed_rational_ring_and_translation_equations",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "construction": {
+      "policies_generated": 34,
+      "combine_behavior_classes": 16,
+      "interact_behavior_classes": 16,
+      "selected_combine": {
+        "candidate_id": "DIR-8f898411604670d2",
+        "policy": {
+          "substrate": "four_term_direction_router_v21",
+          "family": "combine",
+          "positive_mask": [
+            true,
+            false,
+            true,
+            false
+          ],
+          "human_operation_name": null
+        },
+        "law_profile": {
+          "representation_invariant": true,
+          "closed": true,
+          "commutative": true,
+          "associative": true,
+          "identity": true,
+          "zero_annihilator": false,
+          "distributive": false
+        },
+        "behavior_signature": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            5,
+            0,
+            3
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            1,
+            2,
+            2
+          ],
+          [
+            4,
+            0,
+            4
+          ],
+          [
+            2,
+            2,
+            4
+          ],
+          [
+            7,
+            0,
+            6
+          ],
+          [
+            2,
+            6,
+            4
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            1,
+            2
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            2,
+            2,
+            4
+          ],
+          [
+            0,
+            4,
+            4
+          ],
+          [
+            4,
+            3,
+            6
+          ],
+          [
+            0,
+            8,
+            4
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            5,
+            0,
+            3
+          ],
+          [
+            2,
+            3,
+            3
+          ],
+          [
+            7,
+            0,
+            6
+          ],
+          [
+            4,
+            3,
+            6
+          ],
+          [
+            12,
+            0,
+            9
+          ],
+          [
+            4,
+            9,
+            6
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            2,
+            3,
+            2
+          ],
+          [
+            0,
+            5,
+            2
+          ],
+          [
+            2,
+            6,
+            4
+          ],
+          [
+            0,
+            8,
+            4
+          ],
+          [
+            4,
+            9,
+            6
+          ],
+          [
+            0,
+            12,
+            4
+          ]
+        ]
+      },
+      "selected_inverse": {
+        "substrate": "unary_direction_router_v21",
+        "swap_counters": true,
+        "human_operation_name": null
+      },
+      "selected_interact": {
+        "candidate_id": "DIR-825057e8c9a3b11c",
+        "policy": {
+          "substrate": "four_term_direction_router_v21",
+          "family": "interact",
+          "positive_mask": [
+            true,
+            false,
+            false,
+            true
+          ],
+          "human_operation_name": null
+        },
+        "law_profile": {
+          "representation_invariant": true,
+          "closed": true,
+          "commutative": true,
+          "associative": true,
+          "identity": true,
+          "zero_annihilator": true,
+          "distributive": true
+        },
+        "behavior_signature": [
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            4
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            2,
+            0,
+            6
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            1,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            4
+          ],
+          [
+            1,
+            0,
+            4
+          ],
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            0,
+            0,
+            3
+          ],
+          [
+            2,
+            0,
+            3
+          ],
+          [
+            0,
+            2,
+            3
+          ],
+          [
+            2,
+            0,
+            6
+          ],
+          [
+            0,
+            2,
+            6
+          ],
+          [
+            4,
+            0,
+            9
+          ],
+          [
+            0,
+            6,
+            6
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            3,
+            2
+          ],
+          [
+            3,
+            0,
+            2
+          ],
+          [
+            0,
+            3,
+            4
+          ],
+          [
+            3,
+            0,
+            4
+          ],
+          [
+            0,
+            6,
+            6
+          ],
+          [
+            9,
+            0,
+            4
+          ]
+        ]
+      },
+      "equation_examples": [
+        {
+          "bias": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 2
+          },
+          "target": {
+            "positive": 7,
+            "negative": 0,
+            "denominator": 2
+          },
+          "solution": {
+            "positive": 14,
+            "negative": 6,
+            "denominator": 4
+          },
+          "replay": {
+            "positive": 40,
+            "negative": 12,
+            "denominator": 8
+          },
+          "passed": true
+        },
+        {
+          "bias": {
+            "positive": 0,
+            "negative": 5,
+            "denominator": 3
+          },
+          "target": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 3
+          },
+          "solution": {
+            "positive": 21,
+            "negative": 0,
+            "denominator": 9
+          },
+          "replay": {
+            "positive": 63,
+            "negative": 45,
+            "denominator": 27
+          },
+          "passed": true
+        },
+        {
+          "bias": {
+            "positive": 4,
+            "negative": 1,
+            "denominator": 5
+          },
+          "target": {
+            "positive": 1,
+            "negative": 6,
+            "denominator": 5
+          },
+          "solution": {
+            "positive": 10,
+            "negative": 50,
+            "denominator": 25
+          },
+          "replay": {
+            "positive": 150,
+            "negative": 275,
+            "denominator": 125
+          },
+          "passed": true
+        }
+      ],
+      "representation": "three natural counters (positive_channel, negative_channel, positive_denominator)"
+    },
+    "proofs": {
+      "equivalence": {
+        "proof_id": "V21-PROOF-DIRECTED-EQUIVALENCE",
+        "passed": true,
+        "universal_statement": "the cross-counter relation is an equivalence relation on N x N x N+",
+        "obligations": [
+          {
+            "obligation_id": "reflexive",
+            "passed": true,
+            "evidence": "both cross-counter totals are syntactically identical"
+          },
+          {
+            "obligation_id": "symmetric",
+            "passed": true,
+            "evidence": "exchanging pair positions exchanges equality sides"
+          },
+          {
+            "obligation_id": "transitive",
+            "passed": true,
+            "evidence": "positive-denominator cross equalities compose with V19 cancellation"
+          },
+          {
+            "obligation_id": "common_offset_invariant",
+            "passed": true,
+            "evidence": "adding the same counter mass to positive and negative channels cancels on both cross totals"
+          },
+          {
+            "obligation_id": "positive_scale_invariant",
+            "passed": true,
+            "evidence": "scaling all three counters by the same positive SEM factor preserves cross equality"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "left": {
+              "positive": 3,
+              "negative": 1,
+              "denominator": 2
+            },
+            "right": {
+              "positive": 5,
+              "negative": 3,
+              "denominator": 2
+            },
+            "passed": true
+          },
+          {
+            "left": {
+              "positive": 0,
+              "negative": 7,
+              "denominator": 3
+            },
+            "right": {
+              "positive": 7,
+              "negative": 21,
+              "denominator": 6
+            },
+            "passed": true
+          },
+          {
+            "left": {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 13
+            },
+            "right": {
+              "positive": 33,
+              "negative": 0,
+              "denominator": 39
+            },
+            "passed": true
+          }
+        ]
+      },
+      "additive_group": {
+        "proof_id": "V21-PROOF-ADDITIVE-GROUP",
+        "passed": true,
+        "universal_statement": "directed equivalence classes form an abelian group under the selected combine and unary-router programs",
+        "obligations": [
+          {
+            "obligation_id": "routing_normal_form",
+            "passed": true,
+            "evidence": "positive cross terms route together and negative cross terms route together"
+          },
+          {
+            "obligation_id": "representation_independence",
+            "passed": true,
+            "evidence": "cross multiplication expands both representatives to the same four counter terms"
+          },
+          {
+            "obligation_id": "closure",
+            "passed": true,
+            "evidence": "outputs are two natural counters and SEM of two positive denominators"
+          },
+          {
+            "obligation_id": "associativity",
+            "passed": true,
+            "evidence": "both bracketings normalize to the same six cross terms"
+          },
+          {
+            "obligation_id": "commutativity",
+            "passed": true,
+            "evidence": "counter MERGE and V19 SEM are commutative"
+          },
+          {
+            "obligation_id": "zero_identity",
+            "passed": true,
+            "evidence": "(0,0,1) contributes no directed counter mass"
+          },
+          {
+            "obligation_id": "inverse",
+            "passed": true,
+            "evidence": "swapping positive and negative counters makes both output channels equal"
+          },
+          {
+            "obligation_id": "inverse_involution",
+            "passed": true,
+            "evidence": "two swaps restore all counters"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "left": {
+              "positive": 17,
+              "negative": 3,
+              "denominator": 5
+            },
+            "right": {
+              "positive": 2,
+              "negative": 19,
+              "denominator": 7
+            },
+            "output": {
+              "positive": 129,
+              "negative": 116,
+              "denominator": 35
+            },
+            "passed": true
+          },
+          {
+            "left": {
+              "positive": 0,
+              "negative": 101,
+              "denominator": 13
+            },
+            "right": {
+              "positive": 37,
+              "negative": 0,
+              "denominator": 11
+            },
+            "output": {
+              "positive": 481,
+              "negative": 1111,
+              "denominator": 143
+            },
+            "passed": true
+          },
+          {
+            "left": {
+              "positive": 23,
+              "negative": 29,
+              "denominator": 31
+            },
+            "right": {
+              "positive": 41,
+              "negative": 43,
+              "denominator": 47
+            },
+            "output": {
+              "positive": 2352,
+              "negative": 2696,
+              "denominator": 1457
+            },
+            "passed": true
+          }
+        ]
+      },
+      "commutative_ring": {
+        "proof_id": "V21-PROOF-COMMUTATIVE-RING",
+        "passed": true,
+        "universal_statement": "directed rational equivalence classes form a commutative ring under the two selected binary programs",
+        "obligations": [
+          {
+            "obligation_id": "routing_normal_form",
+            "passed": true,
+            "evidence": "same-direction interactions route positive; cross-direction interactions route negative"
+          },
+          {
+            "obligation_id": "representation_independence",
+            "passed": true,
+            "evidence": "common offsets and scales disappear after full distributive expansion"
+          },
+          {
+            "obligation_id": "one_identity",
+            "passed": true,
+            "evidence": "(1,0,1) preserves both directed channels"
+          },
+          {
+            "obligation_id": "zero_annihilator",
+            "passed": true,
+            "evidence": "(0,0,1) creates four zero interactions"
+          },
+          {
+            "obligation_id": "commutativity",
+            "passed": true,
+            "evidence": "the four interaction terms exchange in pairs"
+          },
+          {
+            "obligation_id": "associativity",
+            "passed": true,
+            "evidence": "both bracketings have identical parity-routed cubic terms"
+          },
+          {
+            "obligation_id": "distributivity",
+            "passed": true,
+            "evidence": "SEM distributes over counter MERGE in each directed channel"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "left": {
+              "positive": 17,
+              "negative": 3,
+              "denominator": 5
+            },
+            "right": {
+              "positive": 2,
+              "negative": 19,
+              "denominator": 7
+            },
+            "output": {
+              "positive": 91,
+              "negative": 329,
+              "denominator": 35
+            },
+            "passed": true
+          },
+          {
+            "left": {
+              "positive": 0,
+              "negative": 101,
+              "denominator": 13
+            },
+            "right": {
+              "positive": 37,
+              "negative": 0,
+              "denominator": 11
+            },
+            "output": {
+              "positive": 0,
+              "negative": 3737,
+              "denominator": 143
+            },
+            "passed": true
+          },
+          {
+            "left": {
+              "positive": 23,
+              "negative": 29,
+              "denominator": 31
+            },
+            "right": {
+              "positive": 41,
+              "negative": 43,
+              "denominator": 47
+            },
+            "output": {
+              "positive": 2190,
+              "negative": 2178,
+              "denominator": 1457
+            },
+            "passed": true
+          }
+        ]
+      },
+      "translation_equation": {
+        "proof_id": "V21-PROOF-TRANSLATION-EQUATION",
+        "passed": true,
+        "universal_statement": "for every directed b,c there is exactly one equivalence class x satisfying x combine b = c",
+        "obligations": [
+          {
+            "obligation_id": "construction",
+            "passed": true,
+            "evidence": "solution is target combined with the selected unary inverse of bias"
+          },
+          {
+            "obligation_id": "soundness",
+            "passed": true,
+            "evidence": "associativity and inverse reduce (target combine inverse(bias)) combine bias to target"
+          },
+          {
+            "obligation_id": "existence",
+            "passed": true,
+            "evidence": "the constructed triple always remains in N x N x N+"
+          },
+          {
+            "obligation_id": "uniqueness",
+            "passed": true,
+            "evidence": "combining both sides with inverse(bias) cancels the same term"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "bias": {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            "target": {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            },
+            "solution": {
+              "positive": 0,
+              "negative": 7,
+              "denominator": 6
+            },
+            "passed": true
+          },
+          {
+            "bias": {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 4
+            },
+            "target": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 5
+            },
+            "solution": {
+              "positive": 19,
+              "negative": 0,
+              "denominator": 20
+            },
+            "passed": true
+          },
+          {
+            "bias": {
+              "positive": 2,
+              "negative": 1,
+              "denominator": 3
+            },
+            "target": {
+              "positive": 1,
+              "negative": 2,
+              "denominator": 4
+            },
+            "solution": {
+              "positive": 7,
+              "negative": 14,
+              "denominator": 12
+            },
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "source_program": "DIR-8f898411604670d2",
+        "mutated_program": "DIR-2cdaffcc88ca4128",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "expected": "1"
+        }
+      },
+      {
+        "source_program": "DIR-8f898411604670d2",
+        "mutated_program": "DIR-5a581e30ee59d4a0",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "expected": "-1"
+        }
+      },
+      {
+        "source_program": "DIR-8f898411604670d2",
+        "mutated_program": "DIR-884767201c90dd96",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "expected": "1"
+        }
+      },
+      {
+        "source_program": "DIR-8f898411604670d2",
+        "mutated_program": "DIR-66d3332fbaf49f46",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "expected": "-1"
+        }
+      },
+      {
+        "source_program": "DIR-825057e8c9a3b11c",
+        "mutated_program": "DIR-6af3b876e53e1e37",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "expected": "1"
+        }
+      },
+      {
+        "source_program": "DIR-825057e8c9a3b11c",
+        "mutated_program": "DIR-17fdbffe7a09c275",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "expected": "-1"
+        }
+      },
+      {
+        "source_program": "DIR-825057e8c9a3b11c",
+        "mutated_program": "DIR-fb9dd0166651ca84",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "expected": "-1"
+        }
+      },
+      {
+        "source_program": "DIR-825057e8c9a3b11c",
+        "mutated_program": "DIR-e50144920b352dc3",
+        "rejected": true,
+        "counterexample": {
+          "left": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "right": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "output": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "expected": "1"
+        }
+      },
+      {
+        "source_program": "unary-direction-router",
+        "mutated_program": "UDIR-60a33e6cf5151f2d",
+        "rejected": true,
+        "counterexample": {
+          "positive": 2,
+          "negative": 7,
+          "denominator": 3
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v20_dependencies_reverified",
+        "passed": true
+      },
+      {
+        "obligation_id": "directed_representation_uses_only_natural_counters",
+        "passed": true
+      },
+      {
+        "obligation_id": "directed_equivalence_is_universal",
+        "passed": true
+      },
+      {
+        "obligation_id": "one_of_sixteen_combine_routers_is_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "one_of_two_unary_routers_is_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "one_of_sixteen_interaction_routers_is_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "abelian_group_proof_passes",
+        "passed": true
+      },
+      {
+        "obligation_id": "commutative_ring_proof_passes",
+        "passed": true
+      },
+      {
+        "obligation_id": "translation_equation_is_solved_uniquely",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_single_route_mutations_are_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_arithmetic_names_are_posthoc",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_host_signed_number_enters_learner_values",
+        "passed": true
+      }
+    ],
+    "posthoc_translation": {
+      "selected_combine": "有理数加法",
+      "selected_inverse": "有理数加法逆元（负号）",
+      "selected_interact": "有理数乘法",
+      "combined_structure": "有理数交换环",
+      "equation": "x+b=c 的唯一解"
+    },
+    "limitations": [
+      "V21 proves a commutative ring presentation of rational values but does not yet construct multiplicative inverse for every nonzero class.",
+      "Equation construction covers translation equations x+b=c, not general ax+b=c.",
+      "The direction-router grammar is finite (34 policies); promoted policies are universal within the proved domain.",
+      "Signed human interpretations are evaluator-side only; learner values remain nonnegative counters.",
+      "Unreduced directed representations can grow rapidly; normalization and cost control are a next-stage requirement."
+    ]
+  },
+  "capability_change": {
+    "before": "V20 represented nonnegative rationals and solved natural multiplicative equations",
+    "after": "V21 constructs direction, additive inverse, signed rational ring operations, and unique translation-equation solutions using natural counters only",
+    "host_negative_values_given_to_learner": false
+  },
+  "claim": {
+    "achieved": "verified construction of a signed rational commutative ring presentation and x+b=c solver",
+    "not_claimed": "multiplicative inverses, general ax+b=c solving, or unrestricted symbolic algebra"
+  },
+  "storage": {
+    "success_room": "artifacts/foundation/v21/success/directed_rational_latest.json",
+    "mistake_room": "artifacts/foundation/v21/mistakes/rejected_direction_routes.jsonl",
+    "promoted_programs": 3,
+    "rejected_mutations": 9
+  },
+  "content_digest": "f09d3f876b2e27f72886449319d1a6d1b453c93fccea2ba0d3446f6eea093e19"
+}

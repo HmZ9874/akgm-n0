@@ -1,0 +1,65 @@
+{
+  "policy_id": "leakage-policy-gen0-v0.1",
+  "visibility": "evaluator_only",
+  "public_paths": [
+    "configs/learner_contract.yaml",
+    "configs/primitive_manifest.yaml",
+    "configs/operation_growth/learner_contract.yaml",
+    "configs/operation_growth/primitive_manifest.yaml"
+    ,"configs/metamachine/learner_contract.yaml"
+    ,"configs/metamachine/substrate_manifest.yaml"
+    ,"configs/relation_growth/learner_contract.yaml"
+    ,"configs/relation_growth/primitive_manifest.yaml"
+  ],
+  "forbidden_terms_case_insensitive": [
+    "diff",
+    "difference",
+    "derivative",
+    "velocity",
+    "acceleration",
+    "square",
+    "quadratic",
+    "recurrence",
+    "multiply",
+    "multiplication",
+    "divide",
+    "division",
+    "product",
+    "ratio",
+    "差分",
+    "导数",
+    "速度",
+    "加速度",
+    "平方",
+    "递推",
+    "乘法",
+    "除法"
+    ,"xor"
+    ,"parity"
+    ,"loop"
+    ,"cycle"
+    ,"stack"
+    ,"queue"
+    ,"counter"
+    ,"memory"
+    ,"异或"
+    ,"奇偶"
+    ,"循环"
+    ,"栈"
+    ,"队列"
+    ,"geometric"
+    ,"doubling"
+    ,"power of two"
+    ,"等比"
+    ,"翻倍"
+  ],
+  "forbidden_keys": [
+    "target",
+    "target_formula",
+    "target_program",
+    "expected_concept",
+    "human_label",
+    "benchmark_id",
+    "task_family"
+  ]
+}

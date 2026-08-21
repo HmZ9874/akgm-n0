@@ -1,0 +1,179 @@
+{
+  "report_version": "deep-autonomous-research-summary-v0.1",
+  "run_id": "RUN-deep-research-summary-20260820T032808894702Z",
+  "created_at": "2026-08-20T03:28:08.894702Z",
+  "verdict": "eight_new_foundations_and_derived_probability_statistics_with_honest_completion_boundary",
+  "foundation_count_before": 8,
+  "foundation_count_after": 16,
+  "new_foundation_count": 8,
+  "derived_nonfoundation_stage_count": 1,
+  "stages": [
+    {
+      "stage": "canonicalization",
+      "run_id": "RUN-autonomous-canonicalization-20260820T023613046892Z",
+      "semantic_id": "CSEM-b9aacd5426b56d40",
+      "foundation_level": 9,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "binomial coefficient / combinations without repetition",
+      "candidate_count": 48,
+      "exact_candidate_count": 1,
+      "proof": "20/20",
+      "hidden": "13/13",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "ratio",
+      "run_id": "RUN-autonomous-ratio-20260820T024007776553Z",
+      "semantic_id": "QSEM-3b412465307b4dee",
+      "foundation_level": 10,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "greatest common divisor reduction / nonnegative rational representation",
+      "candidate_count": 30,
+      "exact_candidate_count": 3,
+      "proof": "20/20",
+      "hidden": "14/14",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "finite_mass",
+      "run_id": "RUN-autonomous-finite-mass-20260820T024320796010Z",
+      "semantic_id": "MSEM-3e8b2a2c8bfae1e3",
+      "foundation_level": null,
+      "counts_as_new_foundation": false,
+      "posthoc_name": "finite uniform probability measure",
+      "candidate_count": 24,
+      "exact_candidate_count": 1,
+      "proof": "20/20",
+      "hidden": "12/12",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "joint",
+      "run_id": "RUN-autonomous-joint-20260820T024629791655Z",
+      "semantic_id": "JSEM-574dab5540cd43e9",
+      "foundation_level": 11,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "set intersection",
+      "candidate_count": 14,
+      "exact_candidate_count": 2,
+      "proof": "20/20",
+      "hidden": "8/8",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "weighted",
+      "run_id": "RUN-autonomous-weighted-20260820T024918812264Z",
+      "semantic_id": "WSEM-0e6a1b1f31e2d2c5",
+      "foundation_level": 12,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "weighted arithmetic mean accumulator",
+      "candidate_count": 32,
+      "exact_candidate_count": 1,
+      "proof": "20/20",
+      "hidden": "8/8",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "rational",
+      "run_id": "RUN-autonomous-rational-20260820T025227563659Z",
+      "semantic_id": "ZSEM-90254f138d3cc064",
+      "foundation_level": 13,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "signed rational subtraction and squared deviation",
+      "candidate_count": 120,
+      "exact_candidate_count": 2,
+      "proof": "22/22",
+      "hidden": "7/7",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "paired",
+      "run_id": "RUN-autonomous-paired-20260820T025651207194Z",
+      "semantic_id": "BSEM-55ca95b38dcf0bfe",
+      "foundation_level": 14,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "paired weighted product accumulator",
+      "candidate_count": 24,
+      "exact_candidate_count": 1,
+      "proof": "20/20",
+      "hidden": "6/6",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "exact_root",
+      "run_id": "RUN-autonomous-exact-root-20260820T031851256832Z",
+      "semantic_id": "RSEM-a80a8102b32768d6",
+      "foundation_level": 15,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "exact rational square-root extractor",
+      "candidate_count": 200,
+      "exact_candidate_count": 4,
+      "proof": "21/21",
+      "hidden": "11/11",
+      "finite_sampling_used_as_proof": false
+    },
+    {
+      "stage": "interval_memory",
+      "run_id": "RUN-autonomous-interval-memory-20260820T031910506925Z",
+      "semantic_id": "ISEM-0ca406080fcca1af",
+      "foundation_level": 16,
+      "counts_as_new_foundation": true,
+      "posthoc_name": "certified rational bisection enclosure for a nonnegative square root",
+      "candidate_count": 54,
+      "exact_candidate_count": 1,
+      "proof": "20/20",
+      "hidden": "10/10",
+      "finite_sampling_used_as_proof": false
+    }
+  ],
+  "aggregate": {
+    "anonymous_candidates_evaluated": 546,
+    "exact_candidates_observed": 16,
+    "symbolic_obligations_passed": 183,
+    "symbolic_obligations_total": 183,
+    "hidden_cases_passed": 89,
+    "hidden_cases_total": 89,
+    "adversarial_cases_passed": 215194,
+    "adversarial_cases_total": 215194,
+    "python_regression": "238/238",
+    "dashboard_render_regression": "20/20"
+  },
+  "token_accounting_correction": {
+    "old_root_semantic_preserved": "RSEM-30a850b39cea7e9a",
+    "new_exact_accounting_semantic": "RSEM-a80a8102b32768d6",
+    "new_program": {
+      "program_id": "RBP-c37fc47094a438cd",
+      "numerator_mode": 3,
+      "denominator_mode": 3,
+      "negative_mode": 0,
+      "require_exact": true,
+      "preprocess_reduce": true,
+      "token_accounting_version": 1
+    },
+    "old_event_overwritten": false,
+    "both_hash_chained_versions_replay": true
+  },
+  "completion_boundary": {
+    "run_id": "RUN-completion-boundary-probe-20260820T032056305791Z",
+    "candidate_count": 6,
+    "promotable_candidate_count": 0,
+    "foundation_count_changed": false,
+    "finding": "Every rule based only on a fixed finite interval prefix confuses sufficiently close distinct radicands. The only exact candidate compares the already-normalized rational inputs, so it reuses an old equality semantic and does not construct a quotient or limit object.",
+    "next_missing_dependency": "quotient_type_and_universal_stream_equivalence"
+  },
+  "honesty_constraints": {
+    "math_names_visible_to_search": false,
+    "finite_sampling_claimed_as_universal_proof": false,
+    "adversarial_audit_universal_claim": false,
+    "failed_or_non_novel_candidates_promoted": false,
+    "real_completion_claimed": false,
+    "calculus_claimed": false
+  },
+  "dashboard_url": "http://localhost:5174/foundation",
+  "primary_artifacts": {
+    "latest_interval_report": "reports/data/autonomous_interval_memory_latest.json",
+    "latest_adversarial_audit": "reports/data/deep_frontier_adversarial_audit_latest.json",
+    "completion_boundary_probe": "reports/data/completion_boundary_probe_latest.json"
+  },
+  "summary_hash": "430b66df5e31a0154be48358857bf45967b730f283304457b682caf63a8a7e5c"
+}

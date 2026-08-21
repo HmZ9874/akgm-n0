@@ -1,0 +1,1132 @@
+{
+  "report_version": "collision-mechanics-discovery-v25.0",
+  "run_id": "RUN-collision-mechanics-v25-20260821T070221420798Z",
+  "created_at": "2026-08-21T07:02:21.420798Z",
+  "verdict": "anonymous_collision_programs_and_dual_conservation_discovered",
+  "acceptance": {
+    "benchmark_version": "collision-mechanics-discovery-v25.0",
+    "passed": true,
+    "classification": "verified_anonymous_construction_of_exact_two_entity_elastic_collision_mechanics",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "collision_rows": [
+        {
+          "experiment_id": "TC-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TC-1",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TC-2",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TC-3",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 9,
+              "denominator": 10
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 10
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TC-4",
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TC-5",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 2
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 10
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 17,
+              "negative": 0,
+              "denominator": 10
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        }
+      ],
+      "formula_supplied": false,
+      "physics_names_supplied": false
+    },
+    "discovery": {
+      "candidates_per_output": 1280,
+      "selected_programs": [
+        {
+          "output_channel": 1,
+          "program_id": "COL-3ae3b045aabe2724",
+          "policy": {
+            "substrate": "four_weighted_atoms_plus_denominator_router_v25",
+            "atom_routes": [
+              "KEEP",
+              "TURN",
+              "ZERO",
+              "DOUBLE"
+            ],
+            "denominator_route": "MERGE<Q0,Q2>",
+            "human_operation_name": null
+          },
+          "opaque_program": "COL<KEEP,TURN,ZERO,DOUBLE;DEN:MERGE<Q0,Q2>>",
+          "training_cases": 6,
+          "human_collision_law": null
+        },
+        {
+          "output_channel": 3,
+          "program_id": "COL-763b1ba539c45bfd",
+          "policy": {
+            "substrate": "four_weighted_atoms_plus_denominator_router_v25",
+            "atom_routes": [
+              "DOUBLE",
+              "ZERO",
+              "TURN",
+              "KEEP"
+            ],
+            "denominator_route": "MERGE<Q0,Q2>",
+            "human_operation_name": null
+          },
+          "opaque_program": "COL<DOUBLE,ZERO,TURN,KEEP;DEN:MERGE<Q0,Q2>>",
+          "training_cases": 6,
+          "human_collision_law": null
+        }
+      ],
+      "quadratic_invariant_candidates": 6,
+      "selected_quadratic_invariant": {
+        "invariant_id": "PHX-10ce2586bbc39554",
+        "invariant_family": "QF1",
+        "expression": {
+          "op": "combine",
+          "args": [
+            {
+              "op": "interact",
+              "args": [
+                {
+                  "op": "read",
+                  "channel": 0
+                },
+                {
+                  "op": "interact",
+                  "args": [
+                    {
+                      "op": "read",
+                      "channel": 1
+                    },
+                    {
+                      "op": "read",
+                      "channel": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "op": "interact",
+              "args": [
+                {
+                  "op": "read",
+                  "channel": 2
+                },
+                {
+                  "op": "interact",
+                  "args": [
+                    {
+                      "op": "read",
+                      "channel": 3
+                    },
+                    {
+                      "op": "read",
+                      "channel": 3
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "opaque_program": "MERGE<SEM<q0,SEM<q1,q1>>,SEM<q2,SEM<q3,q3>>>",
+        "training_cases": 6,
+        "human_quantity_name": null
+      },
+      "inherited_linear_invariant": {
+        "invariant_id": "PHX-69cb5d81c98f391b",
+        "invariant_family": "LF0",
+        "expression": {
+          "op": "combine",
+          "args": [
+            {
+              "op": "interact",
+              "args": [
+                {
+                  "op": "read",
+                  "channel": 0
+                },
+                {
+                  "op": "read",
+                  "channel": 1
+                }
+              ]
+            },
+            {
+              "op": "interact",
+              "args": [
+                {
+                  "op": "read",
+                  "channel": 2
+                },
+                {
+                  "op": "read",
+                  "channel": 3
+                }
+              ]
+            }
+          ]
+        },
+        "opaque_program": "MERGE<SEM<q0,q1>,SEM<q2,q3>>",
+        "training_cases": 6,
+        "human_quantity_name": null
+      },
+      "collision_training_cases": 6
+    },
+    "proofs": {
+      "collision_programs": {
+        "proof_id": "V25-PROOF-TWO-ENTITY-COLLISION-PROGRAMS",
+        "passed": true,
+        "universal_statement": "the selected routers define exact directed-rational post-collision states for all positive q0,q2",
+        "obligations": [
+          {
+            "obligation_id": "unique_q1_collision_program",
+            "passed": true,
+            "evidence": "one of 1280 executable routers fits q1'"
+          },
+          {
+            "obligation_id": "unique_q3_collision_program",
+            "passed": true,
+            "evidence": "one of 1280 executable routers fits q3'"
+          },
+          {
+            "obligation_id": "universal_rational_execution",
+            "passed": true,
+            "evidence": "V21 ring laws and positive MERGE<q0,q2> denominator make both programs total"
+          },
+          {
+            "obligation_id": "entity_parameters_persist",
+            "passed": true,
+            "evidence": "q0 and q2 are unchanged direct state channels"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "experiment_id": "SC-0",
+            "predicted": [
+              {
+                "positive": 1,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 5,
+                "negative": 0,
+                "denominator": 2
+              },
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 1,
+                "denominator": 2
+              }
+            ],
+            "observed": [
+              {
+                "positive": 1,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 5,
+                "negative": 0,
+                "denominator": 2
+              },
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 1,
+                "denominator": 2
+              }
+            ],
+            "passed": true
+          },
+          {
+            "experiment_id": "SC-1",
+            "predicted": [
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 13,
+                "negative": 0,
+                "denominator": 14
+              },
+              {
+                "positive": 5,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 1,
+                "denominator": 14
+              }
+            ],
+            "observed": [
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 13,
+                "negative": 0,
+                "denominator": 14
+              },
+              {
+                "positive": 5,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 1,
+                "denominator": 14
+              }
+            ],
+            "passed": true
+          },
+          {
+            "experiment_id": "SC-2",
+            "predicted": [
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 1,
+                "denominator": 6
+              },
+              {
+                "positive": 1,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 2
+              }
+            ],
+            "observed": [
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 1,
+                "denominator": 6
+              },
+              {
+                "positive": 1,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 2
+              }
+            ],
+            "passed": true
+          },
+          {
+            "experiment_id": "SC-3",
+            "predicted": [
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 11,
+                "negative": 0,
+                "denominator": 14
+              },
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 5,
+                "denominator": 7
+              }
+            ],
+            "observed": [
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 11,
+                "negative": 0,
+                "denominator": 14
+              },
+              {
+                "positive": 3,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 0,
+                "negative": 5,
+                "denominator": 7
+              }
+            ],
+            "passed": true
+          }
+        ]
+      },
+      "dual_conservation": {
+        "proof_id": "V25-PROOF-LINEAR-AND-QUADRATIC-CONSERVATION",
+        "passed": true,
+        "universal_statement": "every selected two-entity collision preserves both weighted linear and weighted quadratic totals",
+        "obligations": [
+          {
+            "obligation_id": "v24_linear_invariant_transfers",
+            "passed": true,
+            "evidence": "weighted linear total is unchanged"
+          },
+          {
+            "obligation_id": "unique_quadratic_pairing",
+            "passed": true,
+            "evidence": "only same-entity parameter-times-square pairing survives all collisions"
+          },
+          {
+            "obligation_id": "universal_two_invariant_identity",
+            "passed": true,
+            "evidence": "symbolic expansion of the selected routers cancels exactly in the V21 commutative ring"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "experiment_id": "SC-0",
+            "linear_passed": true,
+            "quadratic_passed": true,
+            "linear_before": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            "linear_after": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            "quadratic_before": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            "quadratic_after": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            }
+          },
+          {
+            "experiment_id": "SC-1",
+            "linear_passed": true,
+            "quadratic_passed": true,
+            "linear_before": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            "linear_after": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            "quadratic_before": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 4
+            },
+            "quadratic_after": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 4
+            }
+          },
+          {
+            "experiment_id": "SC-2",
+            "linear_passed": true,
+            "quadratic_passed": true,
+            "linear_before": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            "linear_after": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            "quadratic_before": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 3
+            },
+            "quadratic_after": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 3
+            }
+          },
+          {
+            "experiment_id": "SC-3",
+            "linear_passed": true,
+            "quadratic_passed": true,
+            "linear_before": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            "linear_after": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            "quadratic_before": {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            "quadratic_after": {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "swap_states_without_parameter_weighting",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        }
+      },
+      {
+        "mutation": "use_product_denominator",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        }
+      },
+      {
+        "mutation": "reuse_first_output_for_second",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        }
+      },
+      {
+        "mutation": "claim_quadratic_conservation_for_sticking_collision",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "mutated_after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 4
+            }
+          ]
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v24_inertial_response_dependency_reverified",
+        "passed": true
+      },
+      {
+        "obligation_id": "collision_rows_are_anonymous",
+        "passed": true
+      },
+      {
+        "obligation_id": "collision_search_is_nontrivial",
+        "passed": true
+      },
+      {
+        "obligation_id": "both_collision_outputs_are_uniquely_selected",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_collisions_replay",
+        "passed": true
+      },
+      {
+        "obligation_id": "linear_weighted_conservation_transfers",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_quadratic_conservation_is_unique",
+        "passed": true
+      },
+      {
+        "obligation_id": "unequal_parameters_and_fractional_states_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_collision_mutations_are_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "sticking_collision_is_distinguished_from_double_conservation",
+        "passed": true
+      },
+      {
+        "obligation_id": "research_names_are_assigned_after_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_transformer_regression_or_collision_formula_is_learner_input",
+        "passed": true
+      }
+    ],
+    "research_registry": {
+      "registry_version": "mechanics-research-registry-v25.0",
+      "naming_stage": "post_proof_only",
+      "supplied_to_learner": false,
+      "relations": [
+        {
+          "research_symbol": "P_L",
+          "research_name": "线性加权运动总量",
+          "physics_alias": "total momentum",
+          "program_id": "PHX-69cb5d81c98f391b"
+        },
+        {
+          "research_symbol": "E_Q",
+          "research_name": "二次加权运动总量",
+          "physics_alias": "twice kinetic energy",
+          "program_id": "PHX-10ce2586bbc39554"
+        },
+        {
+          "research_symbol": "C_E",
+          "research_name": "双实体双守恒碰撞变换",
+          "physics_alias": "one-dimensional elastic collision",
+          "program_ids": [
+            "COL-3ae3b045aabe2724",
+            "COL-763b1ba539c45bfd"
+          ]
+        }
+      ],
+      "note": "The conventional factor 1/2 is not identifiable from conservation alone; V25 stores m*v^2 rather than naming 1/2*m*v^2 as primitive."
+    },
+    "posthoc_translation": {
+      "linear_invariant": "m1*v1 + m2*v2 (total momentum)",
+      "quadratic_invariant": "m1*v1^2 + m2*v2^2 (twice kinetic energy)",
+      "collision_programs": "exact one-dimensional elastic collision update"
+    },
+    "limitations": [
+      "Training observations are generated by an exact hidden collision oracle, not physical sensors.",
+      "The learner selects within a finite four-atom router grammar; unrestricted mechanics invention is not claimed.",
+      "Only one-dimensional, instantaneous, two-entity, perfectly elastic collisions are represented.",
+      "The factor one-half in conventional kinetic energy cannot be inferred from conservation alone.",
+      "Rotation, angular momentum, deformable bodies, friction, gravity, fields, and continuous trajectories remain future work."
+    ]
+  },
+  "capability_change": {
+    "before": "V24 represented parameter-dependent response and one weighted linear invariant",
+    "after": "V25 constructs both post-collision entity programs and proves simultaneous linear and quadratic weighted conservation",
+    "collision_formula_supplied_to_learner": false
+  },
+  "claim": {
+    "achieved": "exact symbolic reconstruction of one-dimensional elastic two-body collision mechanics inside the V21-V24 substrate",
+    "not_claimed": "sensor-derived mechanics, arbitrary collision geometry, rotation, friction, deformation, or unrestricted law invention"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v25/success/collision_mechanics_latest.json",
+    "mistake_room": "artifacts/physics/v25/mistakes/rejected_collision_mutations.jsonl",
+    "accepted_programs": 4,
+    "rejected_mutations": 4
+  },
+  "content_digest": "1db9a9bce4b54d05f0aa653ffc3e5624a1c038528ee4bea3bf50707a8408a0bf"
+}

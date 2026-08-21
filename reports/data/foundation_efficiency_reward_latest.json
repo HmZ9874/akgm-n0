@@ -1,0 +1,193 @@
+{
+  "report_version": "foundation-efficiency-reward-v0.1",
+  "run_id": "RUN-foundation-efficiency-reward-20260819T215519795417Z",
+  "created_at": "2026-08-19T21:55:19.795417Z",
+  "verdict": "correctness_gated_token_efficiency_reward_active",
+  "policy": {
+    "execution_token_definition": "one expanded primitive instruction dispatch",
+    "program_token_definition": "one opcode plus each explicit operand and jump target field",
+    "total_token_cost": "execution_token_cost + program_token_cost",
+    "exact_candidate_reward": "1,000,000 - total_token_cost",
+    "inexact_candidate_reward": "1,000 * passed_development_cases - total_token_cost",
+    "promotion_rule": "only exact candidates are eligible; among exact candidates maximize reward",
+    "macro_accounting": "charge expanded primitive execution, not only the macro call"
+  },
+  "comparisons": [
+    {
+      "comparison_id": "count_minimal_vs_redundant",
+      "selected": {
+        "program_id": "FKP-7c298fe7599227ec",
+        "source_plan": [
+          0
+        ],
+        "exact": true,
+        "passed_examples": 5,
+        "example_count": 5,
+        "execution_token_cost": 74,
+        "program_token_cost": 9,
+        "total_token_cost": 83,
+        "reward": 999917
+      },
+      "redundant": {
+        "program_id": "FKP-312f58b237690648",
+        "source_plan": [
+          0,
+          0
+        ],
+        "exact": true,
+        "passed_examples": 5,
+        "example_count": 5,
+        "execution_token_cost": 79,
+        "program_token_cost": 17,
+        "total_token_cost": 96,
+        "reward": 999904
+      },
+      "selected_total_tokens": 83,
+      "redundant_total_tokens": 96,
+      "token_reduction": 13,
+      "selected_reward": 999917,
+      "redundant_reward": 999904,
+      "reward_gain": 13
+    },
+    {
+      "comparison_id": "combine_minimal_vs_redundant",
+      "selected": {
+        "program_id": "FKP-8e9c4a06b5dfe2cc",
+        "source_plan": [
+          0,
+          1
+        ],
+        "exact": true,
+        "passed_examples": 6,
+        "example_count": 6,
+        "execution_token_cost": 94,
+        "program_token_cost": 17,
+        "total_token_cost": 111,
+        "reward": 999889
+      },
+      "redundant": {
+        "program_id": "FKP-bb6042221e0a0134",
+        "source_plan": [
+          0,
+          0,
+          1
+        ],
+        "exact": true,
+        "passed_examples": 6,
+        "example_count": 6,
+        "execution_token_cost": 100,
+        "program_token_cost": 25,
+        "total_token_cost": 125,
+        "reward": 999875
+      },
+      "selected_total_tokens": 111,
+      "redundant_total_tokens": 125,
+      "token_reduction": 14,
+      "selected_reward": 999889,
+      "redundant_reward": 999875,
+      "reward_gain": 14
+    }
+  ],
+  "cheap_incorrect_control": {
+    "program_id": "FKP-1a7ab05311158538",
+    "source_plan": [],
+    "exact": false,
+    "passed_examples": 1,
+    "example_count": 6,
+    "execution_token_cost": 6,
+    "program_token_cost": 1,
+    "total_token_cost": 7,
+    "reward": 993
+  },
+  "equal_efficiency_order_control": {
+    "selected": {
+      "program_id": "FKP-8e9c4a06b5dfe2cc",
+      "source_plan": [
+        0,
+        1
+      ],
+      "exact": true,
+      "passed_examples": 6,
+      "example_count": 6,
+      "execution_token_cost": 94,
+      "program_token_cost": 17,
+      "total_token_cost": 111,
+      "reward": 999889
+    },
+    "reversed": {
+      "program_id": "FKP-83071d3209addc3a",
+      "source_plan": [
+        1,
+        0
+      ],
+      "exact": true,
+      "passed_examples": 6,
+      "example_count": 6,
+      "execution_token_cost": 94,
+      "program_token_cost": 17,
+      "total_token_cost": 111,
+      "reward": 999889
+    }
+  },
+  "gates": [
+    {
+      "gate_id": "exactness_is_required_before_efficiency_promotion",
+      "passed": true,
+      "actual": {
+        "selected_exact": true,
+        "cheap_control_exact": false
+      },
+      "required": {
+        "selected_exact": true,
+        "cheap_control_exact": false
+      }
+    },
+    {
+      "gate_id": "fewer_honest_tokens_receive_higher_reward",
+      "passed": true,
+      "actual": [
+        13,
+        14
+      ],
+      "required": "all positive"
+    },
+    {
+      "gate_id": "redundant_exact_loops_are_not_selected",
+      "passed": true,
+      "actual": [
+        13,
+        14
+      ],
+      "required": "all positive"
+    },
+    {
+      "gate_id": "cheap_incorrect_program_cannot_beat_exact_program",
+      "passed": true,
+      "actual": {
+        "exact_reward": 999889,
+        "cheap_incorrect_reward": 993
+      },
+      "required": "exact reward greater and correctness gate passed"
+    },
+    {
+      "gate_id": "equally_efficient_distinct_orders_keep_equal_reward",
+      "passed": true,
+      "actual": [
+        999889,
+        999889
+      ],
+      "required": "equal"
+    },
+    {
+      "gate_id": "macro_calls_charge_expanded_primitive_work",
+      "passed": true,
+      "actual": "execution_token_cost counts ZeroArithmeticExecutor primitive dispatches",
+      "required": "no one-token macro discount"
+    }
+  ],
+  "limitations": [
+    "Efficiency reward changes selection pressure; it does not by itself add a new instruction or make an inexpressible operation discoverable.",
+    "The current reward treats each primitive dispatch equally; future memory, branching, and parallel operations may require calibrated costs.",
+    "Creativity is operationalized as a cheaper exact executable solution, not visual novelty or a new name for the same work."
+  ]
+}

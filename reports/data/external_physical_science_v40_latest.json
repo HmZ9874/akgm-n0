@@ -1,0 +1,676 @@
+{
+  "report_version": "external-physical-science-v40.0",
+  "run_id": "RUN-external-physical-science-v40-20260821T172756202904Z",
+  "created_at": "2026-08-21T17:27:56.202904+00:00",
+  "verdict": "external_physical_experiment_verified",
+  "acceptance": {
+    "benchmark_version": "external-physical-science-v40.0",
+    "passed": true,
+    "classification": "verified_domain_blind_live_external_optical_apparatus_experiment",
+    "apparatus": {
+      "primary": {
+        "ok": true,
+        "broker_pid": 33632,
+        "apparatus": "anonymous_external_wia_optical_sensor_v40",
+        "available_anonymous_levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "safe_control_min": 0,
+        "safe_control_max": 7,
+        "human_quantity_names_exposed_to_learner": false,
+        "measurement_exists_before_request": false,
+        "raw_images_retained": false
+      },
+      "replica": {
+        "ok": true,
+        "broker_pid": 17836,
+        "apparatus": "anonymous_external_wia_optical_sensor_v40",
+        "available_anonymous_levels": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "safe_control_min": 0,
+        "safe_control_max": 7,
+        "human_quantity_names_exposed_to_learner": false,
+        "measurement_exists_before_request": false,
+        "raw_images_retained": false
+      }
+    },
+    "observations": [
+      {
+        "anonymous_control": 3,
+        "anonymous_response": 0.958400565087146,
+        "dispersion": 0.11087717159975226,
+        "raw_digest": "7b14ea0439feb25e6877e99aec90bce93c6fff8ca6275616f413c25a20fd6082",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 7,
+        "anonymous_response": 0.9878782849945534,
+        "dispersion": 0.04704798257316585,
+        "raw_digest": "98e6019d5452d7e13f29f71e372d3cc856748a48194ac43221a5435c9c0f5465",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 0,
+        "anonymous_response": 0.7253901994825708,
+        "dispersion": 0.11052729683984397,
+        "raw_digest": "60c8fa549fbbd6fc8977b2a5fa621b0f5b6772a144244c6fedf7423fdbf2a7c6",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 2,
+        "anonymous_response": 0.8964941619008715,
+        "dispersion": 0.11610108413402966,
+        "raw_digest": "b4370e2b0a63193998d2814906e2070c03f51f5d3cf61eb89bd4e31025923747",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 5,
+        "anonymous_response": 0.9784271173747277,
+        "dispersion": 0.07911966915454625,
+        "raw_digest": "784109ffe32030c53f19f93c0a84538305b20cbc2c20b8144cbf24c16767202a",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 4,
+        "anonymous_response": 0.973600047657952,
+        "dispersion": 0.09518193013044113,
+        "raw_digest": "1ce14426850591bc055c6d88af616462c2cbbdcd3764bf913dee7b2edcdbb829",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 6,
+        "anonymous_response": 0.9824750646786492,
+        "dispersion": 0.06305108435308147,
+        "raw_digest": "7f61a42f1449fb46ed26b9e476cfeea004368e8ff533e78918d7cba5bab361f1",
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_control": 1,
+        "anonymous_response": 0.8101400803376907,
+        "dispersion": 0.11334854876234869,
+        "raw_digest": "0c8d50cfd76543fc24586a0608d6b3b3f64d3dd9a0e1e5a7547d2705050938a6",
+        "human_quantity_names": null
+      }
+    ],
+    "created_semantic": {
+      "semantic_id": "PHYS-SEM-97df0a28f607243e",
+      "opaque_program": "LOCAL_MEMORY<0:0.7253902;2:0.89649416;3:0.95840057;5:0.97842712;7:0.98787828>::NEAREST_DELTA_BLEND",
+      "knot_count": 5,
+      "cross_validation_error": 0.015763718681917283,
+      "human_law_name": null,
+      "domain_formula_supplied": false
+    },
+    "candidate_audit": {
+      "candidate_count": 3,
+      "constant_memory": {
+        "program": "CONST_MEMORY",
+        "training_median_absolute_error": 0.06910905160675374
+      },
+      "global_delta": {
+        "program": "GLOBAL_DELTA",
+        "training_median_absolute_error": 0.04683153893216352
+      },
+      "created_local_memory": {
+        "semantic_id": "PHYS-SEM-97df0a28f607243e",
+        "opaque_program": "LOCAL_MEMORY<0:0.7253902;2:0.89649416;3:0.95840057;5:0.97842712;7:0.98787828>::NEAREST_DELTA_BLEND",
+        "knot_count": 5,
+        "cross_validation_error": 0.015763718681917283,
+        "human_law_name": null,
+        "domain_formula_supplied": false
+      },
+      "domain_specific_formula_candidate_present": false
+    },
+    "adaptive_experiment_audit": {
+      "round_count": 3,
+      "plans": [
+        {
+          "round_index": 0,
+          "selected_levels": [
+            0,
+            3,
+            7
+          ],
+          "reason": "boundary_and_center_initialization",
+          "maximum_gap_score": 0.0
+        },
+        {
+          "round_index": 1,
+          "selected_levels": [
+            2
+          ],
+          "reason": "largest_response_weighted_knowledge_gap",
+          "maximum_gap_score": 0.7590310968137257
+        },
+        {
+          "round_index": 2,
+          "selected_levels": [
+            5
+          ],
+          "reason": "largest_response_weighted_knowledge_gap",
+          "maximum_gap_score": 0.19791087962962978
+        }
+      ],
+      "later_rounds_gap_driven": true,
+      "training_level_count": 5
+    },
+    "randomization_and_commitment_audit": {
+      "batches": [
+        {
+          "batch_id": "V40-PRIMARY-0",
+          "planned_levels": [
+            0,
+            3,
+            7
+          ],
+          "randomized_order": [
+            3,
+            7,
+            0
+          ],
+          "seed_commitment": "b993c8014a9a736ee31cb4d3369778bed3c20b1e72bb27e5ebe4f9b68afd418b",
+          "batch_commitment": "a3db61eb3a56eb035451b8f4d32fef6b46ba5c6f8b32b425a20eb4a2a52b56db",
+          "commit_event_index": 0,
+          "measurement_event_index": 1,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787333276277035400,
+          "ended_at_unix_ns": 1787333287095212800
+        },
+        {
+          "batch_id": "V40-PRIMARY-1",
+          "planned_levels": [
+            2
+          ],
+          "randomized_order": [
+            2
+          ],
+          "seed_commitment": "999130f810676dbf8a4a8fd80740e1a244bd5a134e6adbabf67515ce79631b2c",
+          "batch_commitment": "ece19fc553362685f8379d1a2df852662499445ff8661a2405036d7c129ed038",
+          "commit_event_index": 2,
+          "measurement_event_index": 3,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787333287096213500,
+          "ended_at_unix_ns": 1787333290628319300
+        },
+        {
+          "batch_id": "V40-PRIMARY-2",
+          "planned_levels": [
+            5
+          ],
+          "randomized_order": [
+            5
+          ],
+          "seed_commitment": "5a097027cc3d1898c207b309d2d8b0b7844fd45818bd5b12fddd70d92c96f77e",
+          "batch_commitment": "dccad189cca7d93e26f98c66580756f06db8cf060219975c1995f1dde8b85abc",
+          "commit_event_index": 4,
+          "measurement_event_index": 5,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787333290628319300,
+          "ended_at_unix_ns": 1787333294203046100
+        },
+        {
+          "batch_id": "V40-PROSPECTIVE-HOLDOUT",
+          "planned_levels": [
+            4
+          ],
+          "randomized_order": [
+            4
+          ],
+          "seed_commitment": "3d2b4b912adf9449f788cefa1f6f8ce7f0d8cbe6de55f1208f65cf2ae9e69c88",
+          "batch_commitment": "96ecae2afafb878396b854274309a9e1d29a1a6fc9195174224fd815940b948a",
+          "commit_event_index": 7,
+          "measurement_event_index": 8,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787333294203046100,
+          "ended_at_unix_ns": 1787333297659447700
+        },
+        {
+          "batch_id": "V40-NEW-PROCESS-REPLICATION",
+          "planned_levels": [
+            1,
+            6
+          ],
+          "randomized_order": [
+            6,
+            1
+          ],
+          "seed_commitment": "f07a47a13ad6cc8018b978204e19d882443ca8cd95ee80b8a42c0241e21289e5",
+          "batch_commitment": "1c9ae768e3b208c32e9315597d9416b5585f62e1d78a5d7c38888591323bf574",
+          "commit_event_index": 2,
+          "measurement_event_index": 3,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787333297659447700,
+          "ended_at_unix_ns": 1787333304770933000
+        }
+      ],
+      "all_commit_before_measurement": true,
+      "all_multi_level_orders_randomized": true
+    },
+    "prospective_holdout_audit": {
+      "anonymous_level": 4,
+      "predicted": 0.9684138412309369,
+      "observed": 0.973600047657952,
+      "absolute_error": 0.005186206427015172,
+      "absolute_percentage_error": 0.005326834606767814,
+      "committed_prediction": 0.9684138412309369,
+      "prediction_commitment": "17fb2c83e85c5dfaa84361fd2ed789438b4f82ce12ee6415d98174b0a3a71e20",
+      "prediction_commit_event_index": 6,
+      "measurement_event_index": 8,
+      "commitment_precedes_measurement": true,
+      "passed": true
+    },
+    "new_process_replication_audit": {
+      "new_broker_process": true,
+      "primary_broker_pid": 33632,
+      "replica_broker_pid": 17836,
+      "prediction_commitments": [
+        {
+          "anonymous_level": 1,
+          "commitment": "4618c7e62a809627a56bddc91f14b05059daa8720da26e655784fefb73d6b63b",
+          "prediction": 0.8109421806917212,
+          "event_index": 0
+        },
+        {
+          "anonymous_level": 6,
+          "commitment": "ec19075d66e67b167db45d1eb1aff66210988506f3e9ef28501134b7ad9a321b",
+          "prediction": 0.9831527011846406,
+          "event_index": 1
+        }
+      ],
+      "batch_audit": {
+        "batch_id": "V40-NEW-PROCESS-REPLICATION",
+        "planned_levels": [
+          1,
+          6
+        ],
+        "randomized_order": [
+          6,
+          1
+        ],
+        "seed_commitment": "f07a47a13ad6cc8018b978204e19d882443ca8cd95ee80b8a42c0241e21289e5",
+        "batch_commitment": "1c9ae768e3b208c32e9315597d9416b5585f62e1d78a5d7c38888591323bf574",
+        "commit_event_index": 2,
+        "measurement_event_index": 3,
+        "commit_precedes_measurement": true,
+        "order_differs_from_sorted": true,
+        "started_at_unix_ns": 1787333297659447700,
+        "ended_at_unix_ns": 1787333304770933000
+      },
+      "cases": [
+        {
+          "anonymous_level": 6,
+          "predicted": 0.9831527011846406,
+          "observed": 0.9824750646786492,
+          "absolute_error": 0.0006776365059913969,
+          "absolute_percentage_error": 0.0006897238722420301
+        },
+        {
+          "anonymous_level": 1,
+          "predicted": 0.8109421806917212,
+          "observed": 0.8101400803376907,
+          "absolute_error": 0.0008021003540304994,
+          "absolute_percentage_error": 0.0009900761281878066
+        }
+      ],
+      "median_absolute_percentage_error": 0.0008399000002149183,
+      "passed": true
+    },
+    "physical_receipt_audit": {
+      "receipt_count": 8,
+      "unique_raw_digest_count": 8,
+      "all_device_transactions_have_duration": true,
+      "all_raw_images_deleted_after_statistics": true,
+      "device_id_consistent": true,
+      "response_range": 0.26248808551198266,
+      "raw_digests": [
+        "7b14ea0439feb25e6877e99aec90bce93c6fff8ca6275616f413c25a20fd6082",
+        "98e6019d5452d7e13f29f71e372d3cc856748a48194ac43221a5435c9c0f5465",
+        "60c8fa549fbbd6fc8977b2a5fa621b0f5b6772a144244c6fedf7423fdbf2a7c6",
+        "b4370e2b0a63193998d2814906e2070c03f51f5d3cf61eb89bd4e31025923747",
+        "784109ffe32030c53f19f93c0a84538305b20cbc2c20b8144cbf24c16767202a",
+        "1ce14426850591bc055c6d88af616462c2cbbdcd3764bf913dee7b2edcdbb829",
+        "7f61a42f1449fb46ed26b9e476cfeea004368e8ff533e78918d7cba5bab361f1",
+        "0c8d50cfd76543fc24586a0608d6b3b3f64d3dd9a0e1e5a7547d2705050938a6"
+      ],
+      "receipts": [
+        {
+          "anonymous_level": 3,
+          "response": 0.958400565087146,
+          "dispersion": 0.11087717159975226,
+          "dark_fraction": 0.0,
+          "bright_fraction": 0.9011501736111112,
+          "raw_digest": "7b14ea0439feb25e6877e99aec90bce93c6fff8ca6275616f413c25a20fd6082",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333279907978600,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333278722,
+            "ended_at_unix_ms": 1787333279833,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 7,
+          "response": 0.9878782849945534,
+          "dispersion": 0.04704798257316585,
+          "dark_fraction": 0.0,
+          "bright_fraction": 0.9417317708333334,
+          "raw_digest": "98e6019d5452d7e13f29f71e372d3cc856748a48194ac43221a5435c9c0f5465",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333283431757900,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333282310,
+            "ended_at_unix_ms": 1787333283366,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 0,
+          "response": 0.7253901994825708,
+          "dispersion": 0.11052729683984397,
+          "dark_fraction": 0.00043402777777777775,
+          "bright_fraction": 0.00021701388888888888,
+          "raw_digest": "60c8fa549fbbd6fc8977b2a5fa621b0f5b6772a144244c6fedf7423fdbf2a7c6",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333287095212800,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333285861,
+            "ended_at_unix_ms": 1787333287027,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 2,
+          "response": 0.8964941619008715,
+          "dispersion": 0.11610108413402966,
+          "dark_fraction": 0.00010850694444444444,
+          "bright_fraction": 0.23763020833333334,
+          "raw_digest": "b4370e2b0a63193998d2814906e2070c03f51f5d3cf61eb89bd4e31025923747",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333290628319300,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333289531,
+            "ended_at_unix_ms": 1787333290563,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 5,
+          "response": 0.9784271173747277,
+          "dispersion": 0.07911966915454625,
+          "dark_fraction": 0.0,
+          "bright_fraction": 0.9229600694444444,
+          "raw_digest": "784109ffe32030c53f19f93c0a84538305b20cbc2c20b8144cbf24c16767202a",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333294203046100,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333293021,
+            "ended_at_unix_ms": 1787333294137,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 4,
+          "response": 0.973600047657952,
+          "dispersion": 0.09518193013044113,
+          "dark_fraction": 0.00010850694444444444,
+          "bright_fraction": 0.9185112847222222,
+          "raw_digest": "1ce14426850591bc055c6d88af616462c2cbbdcd3764bf913dee7b2edcdbb829",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333297658447400,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333296587,
+            "ended_at_unix_ms": 1787333297592,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 6,
+          "response": 0.9824750646786492,
+          "dispersion": 0.06305108435308147,
+          "dark_fraction": 0.0,
+          "bright_fraction": 0.9256727430555556,
+          "raw_digest": "7f61a42f1449fb46ed26b9e476cfeea004368e8ff533e78918d7cba5bab361f1",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333301279282700,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333300073,
+            "ended_at_unix_ms": 1787333301207,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        },
+        {
+          "anonymous_level": 1,
+          "response": 0.8101400803376907,
+          "dispersion": 0.11334854876234869,
+          "dark_fraction": 0.00010850694444444444,
+          "bright_fraction": 0.0015190972222222222,
+          "raw_digest": "0c8d50cfd76543fc24586a0608d6b3b3f64d3dd9a0e1e5a7547d2705050938a6",
+          "raw_bytes": 27702,
+          "measured_at_unix_ns": 1787333304770933000,
+          "device_receipt": {
+            "ok": true,
+            "device_id_sha256": "7a308ee21bf40f141a2fa4f32b00029836bb3eb62b4e9de65655944fb5eac5b2",
+            "bytes": 27702,
+            "started_at_unix_ms": 1787333303671,
+            "ended_at_unix_ms": 1787333304706,
+            "applied_resolution": 75,
+            "applied_extent": 96,
+            "adapter_attempt_count": 1
+          },
+          "raw_image_retained": false
+        }
+      ]
+    },
+    "mutation_audits": [
+      {
+        "mutation": "domain_names_visible_to_learner",
+        "rejected": true
+      },
+      {
+        "mutation": "measurement_before_commit",
+        "rejected": true
+      },
+      {
+        "mutation": "prediction_after_reveal",
+        "rejected": true
+      },
+      {
+        "mutation": "raw_scan_retained",
+        "rejected": true
+      },
+      {
+        "mutation": "same_process_replication",
+        "rejected": true
+      }
+    ],
+    "discovery_gates": {
+      "external_physical_apparatus": true,
+      "fresh_sensor_measurements": true,
+      "isolated_apparatus_process": true,
+      "domain_blind_learner": true,
+      "bounded_safe_controls": true,
+      "adaptive_experiment_selection": true,
+      "randomized_intervention_order": true,
+      "commit_before_measurement": true,
+      "prospective_holdout_prediction": true,
+      "new_process_replication": true,
+      "physical_response_varies": true,
+      "raw_receipts_unique": true,
+      "privacy_preserving_raw_deletion": true,
+      "new_local_semantic_created": true,
+      "human_unknown_natural_law": false
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "external_physical_apparatus",
+        "passed": true
+      },
+      {
+        "obligation_id": "fresh_sensor_measurements",
+        "passed": true
+      },
+      {
+        "obligation_id": "isolated_apparatus_process",
+        "passed": true
+      },
+      {
+        "obligation_id": "domain_blind_learner",
+        "passed": true
+      },
+      {
+        "obligation_id": "bounded_safe_controls",
+        "passed": true
+      },
+      {
+        "obligation_id": "adaptive_experiment_selection",
+        "passed": true
+      },
+      {
+        "obligation_id": "randomized_intervention_order",
+        "passed": true
+      },
+      {
+        "obligation_id": "commit_before_measurement",
+        "passed": true
+      },
+      {
+        "obligation_id": "prospective_holdout_prediction",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_process_replication",
+        "passed": true
+      },
+      {
+        "obligation_id": "physical_response_varies",
+        "passed": true
+      },
+      {
+        "obligation_id": "raw_receipts_unique",
+        "passed": true
+      },
+      {
+        "obligation_id": "privacy_preserving_raw_deletion",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_local_semantic_created",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_unknown_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "five_protocol_mutations_rejected",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "external_physical_experiment_verified": true,
+      "human_unknown_claim_allowed": false,
+      "new_natural_law_claim_allowed": false,
+      "current_label": "DOMAIN_BLIND_EXTERNAL_OPTICAL_APPARATUS_CALIBRATION"
+    },
+    "posthoc_translation": {
+      "apparatus": "HP WIA flatbed optical scanner",
+      "anonymous_control": "scanner brightness setting selected from eight safe levels",
+      "anonymous_response": "normalized mean luminance of a 96 x 96 sensor crop",
+      "created_semantic": "local-memory interpolation over neighboring intervention receipts",
+      "control_mapping_after_discovery": {
+        "0": 200,
+        "1": 425,
+        "2": 650,
+        "3": 875,
+        "4": 1125,
+        "5": 1350,
+        "6": 1575,
+        "7": 1800
+      }
+    },
+    "limitations": [
+      "This is a genuine external physical sensor transaction, but it studies an engineered scanner rather than an uncontrolled natural system.",
+      "The learner was blinded to control and response names; the evaluator and safety adapter necessarily knew the device mapping.",
+      "Only a small optical crop and eight interventions were measured on one device at one site.",
+      "Raw images were deleted immediately for privacy, so replication relies on receipts, hashes and derived statistics.",
+      "The created local-memory semantic is an empirical calibration rule, not evidence of a human-unknown natural law."
+    ]
+  },
+  "dependency": {
+    "v39_run_id": "RUN-live-randomized-science-v39-20260821T165207038865Z",
+    "v39_passed": true
+  },
+  "claim": {
+    "achieved": "domain-blind control of an external optical sensor, adaptive interventions, prospective prediction and new-process replication",
+    "not_achieved": "a human-unknown natural law or multi-site independent replication"
+  },
+  "storage": {
+    "physical_calibration_room": "artifacts/science/v40/calibrations/external_optical_latest.json",
+    "receipt_room": "artifacts/science/v40/receipts/physical_receipts.jsonl",
+    "mistake_room": "artifacts/science/v40/mistakes/rejected_protocol_mutations.jsonl",
+    "raw_image_room": null,
+    "human_discovery_room": null
+  },
+  "content_digest": "3167dad9e917b313ff2440134d878fb7bf186c347cd8a06022899c35a5dd4e2d"
+}

@@ -1,0 +1,1099 @@
+{
+  "report_version": "adaptive-control-discovery-report-v0.1",
+  "run_id": "RUN-adaptive-control-20260818T052241162394Z",
+  "created_at": "2026-08-18T05:22:41.181984Z",
+  "title": "匿名自适应控制语义发现实验",
+  "evaluator_posthoc_task_name": "remainder_behavior_probe",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "candidate_defined_state_initialization_guard_halt_polarity_update_and_output",
+  "learner_received": {
+    "development_input_rows": [
+      [
+        5,
+        2
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        11,
+        4
+      ],
+      [
+        12,
+        5
+      ],
+      [
+        17,
+        5
+      ],
+      [
+        20,
+        6
+      ],
+      [
+        23,
+        7
+      ],
+      [
+        6,
+        3
+      ],
+      [
+        3,
+        5
+      ]
+    ],
+    "development_output_values": [
+      1,
+      1,
+      2,
+      3,
+      2,
+      2,
+      2,
+      2,
+      0,
+      3
+    ],
+    "natural_language": false,
+    "target_concept_name": false,
+    "target_symbol": false,
+    "target_formula": false,
+    "sealed_cases_visible_during_search": false,
+    "available_value_operations": [
+      "a_input",
+      "a_state",
+      "a_constant",
+      "a_add",
+      "a_subtract"
+    ],
+    "available_guard_sensors": [
+      "a_equal",
+      "a_less"
+    ]
+  },
+  "search": {
+    "programs_generated": 19200,
+    "programs_executed": 12570,
+    "nonhalting_programs": 6630,
+    "behavior_classes": 74,
+    "evidence_constants": [
+      {
+        "value": 0.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": 0.0,
+          "right": 0.0
+        }
+      },
+      {
+        "value": -1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": 0.0,
+          "right": 1.0
+        }
+      },
+      {
+        "value": 1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": 1.0,
+          "right": 0.0
+        }
+      }
+    ]
+  },
+  "five_candidate_feedback": [
+    {
+      "rank": 1,
+      "candidate_id": "AC-2f51ec5cf9134520",
+      "program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_input",
+          "index": 0
+        },
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_state"
+          },
+          "right": {
+            "op": "a_input",
+            "index": 1
+          },
+          "halt_when": true
+        },
+        "update_when_continuing": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_input",
+              "index": 1
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      },
+      "fit_mse": 0.0,
+      "maximum_absolute_error": 0.0,
+      "maximum_steps_used": 3,
+      "training_outputs": [
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        0.0,
+        3.0
+      ],
+      "behavior_signature": [
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        0.0,
+        3.0,
+        2.0,
+        6.0
+      ],
+      "logic_signature": "ALOGIC-3d8c3b347654028e",
+      "program_nodes": 8,
+      "exact": true,
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "predicted": 7.0,
+          "observed": 7,
+          "absolute_error": 0.0,
+          "step_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            44,
+            9
+          ],
+          "predicted": 8.0,
+          "observed": 8,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            64,
+            7
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 9,
+          "passed": true
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "step_count": 0,
+          "passed": true
+        },
+        {
+          "input": [
+            81,
+            10
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 8,
+          "passed": true
+        }
+      ],
+      "sealed_exact": true,
+      "disposition": "success_room",
+      "mistake_id": null
+    },
+    {
+      "rank": 2,
+      "candidate_id": "AC-03f396cffa9c0000",
+      "program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_constant",
+          "constant": 1.0
+        },
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_constant",
+            "constant": 1.0
+          },
+          "right": {
+            "op": "a_state"
+          },
+          "halt_when": true
+        },
+        "update_when_continuing": {
+          "op": "a_add",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_constant",
+              "constant": 1.0
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      },
+      "fit_mse": 0.8,
+      "maximum_absolute_error": 2.0,
+      "maximum_steps_used": 1,
+      "training_outputs": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "behavior_signature": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "logic_signature": "ALOGIC-29e4d5f40c793dc9",
+      "program_nodes": 8,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 2.0,
+          "observed": 5,
+          "absolute_error": 3.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "predicted": 2.0,
+          "observed": 7,
+          "absolute_error": 5.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            44,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 8,
+          "absolute_error": 6.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            64,
+            7
+          ],
+          "predicted": 2.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "step_count": 1,
+          "passed": true
+        },
+        {
+          "input": [
+            81,
+            10
+          ],
+          "predicted": 2.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 1,
+          "passed": false
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-e861a9374301e8e2"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "AC-12ec7ddefa907266",
+      "program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_input",
+          "index": 0
+        },
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_input",
+            "index": 1
+          },
+          "right": {
+            "op": "a_state"
+          },
+          "halt_when": false
+        },
+        "update_when_continuing": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_input",
+              "index": 1
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      },
+      "fit_mse": 0.9,
+      "maximum_absolute_error": 3.0,
+      "maximum_steps_used": 3,
+      "training_outputs": [
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        3.0
+      ],
+      "behavior_signature": [
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        3.0,
+        3.0,
+        2.0,
+        6.0
+      ],
+      "logic_signature": "ALOGIC-e35b152691995ecb",
+      "program_nodes": 8,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "predicted": 7.0,
+          "observed": 7,
+          "absolute_error": 0.0,
+          "step_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            44,
+            9
+          ],
+          "predicted": 8.0,
+          "observed": 8,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            64,
+            7
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 9,
+          "passed": true
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "step_count": 0,
+          "passed": true
+        },
+        {
+          "input": [
+            81,
+            10
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 8,
+          "passed": true
+        }
+      ],
+      "sealed_exact": true,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-ce3313b52b4e2e3d"
+    },
+    {
+      "rank": 4,
+      "candidate_id": "AC-00f5820a41c1ccbf",
+      "program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_input",
+          "index": 0
+        },
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_constant",
+            "constant": 0.0
+          },
+          "right": {
+            "op": "a_state"
+          },
+          "halt_when": true
+        },
+        "update_when_continuing": {
+          "op": "a_state"
+        },
+        "output": {
+          "op": "a_constant",
+          "constant": 1.0
+        }
+      },
+      "fit_mse": 1.4,
+      "maximum_absolute_error": 2.0,
+      "maximum_steps_used": 0,
+      "training_outputs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "behavior_signature": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "logic_signature": "ALOGIC-aac1f2f7168fed64",
+      "program_nodes": 6,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 1.0,
+          "observed": 5,
+          "absolute_error": 4.0,
+          "step_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "predicted": 1.0,
+          "observed": 7,
+          "absolute_error": 6.0,
+          "step_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            44,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 8,
+          "absolute_error": 7.0,
+          "step_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            64,
+            7
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 0,
+          "passed": true
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "step_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            81,
+            10
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 0,
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-db3b58cddb2b34e4"
+    },
+    {
+      "rank": 5,
+      "candidate_id": "AC-0a25c42575243c69",
+      "program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_constant",
+          "constant": 1.0
+        },
+        "guard": {
+          "op": "a_equal",
+          "left": {
+            "op": "a_constant",
+            "constant": 1.0
+          },
+          "right": {
+            "op": "a_state"
+          },
+          "halt_when": false
+        },
+        "update_when_continuing": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_input",
+              "index": 0
+            },
+            {
+              "op": "a_state"
+            }
+          ]
+        },
+        "output": {
+          "op": "a_constant",
+          "constant": 1.0
+        }
+      },
+      "fit_mse": 1.4,
+      "maximum_absolute_error": 2.0,
+      "maximum_steps_used": 1,
+      "training_outputs": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "behavior_signature": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        null,
+        1.0
+      ],
+      "logic_signature": "ALOGIC-7c80a47ae399cd93",
+      "program_nodes": 8,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 1.0,
+          "observed": 5,
+          "absolute_error": 4.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "predicted": 1.0,
+          "observed": 7,
+          "absolute_error": 6.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            44,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 8,
+          "absolute_error": 7.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            64,
+            7
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 1,
+          "passed": true
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "predicted": null,
+          "observed": 2,
+          "absolute_error": null,
+          "step_count": null,
+          "passed": false,
+          "error": "InvalidAdaptiveProgram"
+        },
+        {
+          "input": [
+            81,
+            10
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 1,
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-eb0af885f0cbb1fa"
+    }
+  ],
+  "winner": {
+    "candidate_id": "AC-2f51ec5cf9134520",
+    "program": {
+      "substrate": "anonymous_single_state_control_v0.1",
+      "initial_state": {
+        "op": "a_input",
+        "index": 0
+      },
+      "guard": {
+        "op": "a_less",
+        "left": {
+          "op": "a_state"
+        },
+        "right": {
+          "op": "a_input",
+          "index": 1
+        },
+        "halt_when": true
+      },
+      "update_when_continuing": {
+        "op": "a_subtract",
+        "args": [
+          {
+            "op": "a_state"
+          },
+          {
+            "op": "a_input",
+            "index": 1
+          }
+        ]
+      },
+      "output": {
+        "op": "a_state"
+      }
+    },
+    "fit_mse": 0.0,
+    "maximum_absolute_error": 0.0,
+    "maximum_steps_used": 3,
+    "training_outputs": [
+      1.0,
+      1.0,
+      2.0,
+      3.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      3.0
+    ],
+    "behavior_signature": [
+      1.0,
+      1.0,
+      2.0,
+      3.0,
+      2.0,
+      2.0,
+      2.0,
+      2.0,
+      0.0,
+      3.0,
+      2.0,
+      6.0
+    ],
+    "logic_signature": "ALOGIC-3d8c3b347654028e",
+    "program_nodes": 8,
+    "exact": true,
+    "sealed_results": [
+      {
+        "input": [
+          29,
+          6
+        ],
+        "predicted": 5.0,
+        "observed": 5,
+        "absolute_error": 0.0,
+        "step_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          31,
+          8
+        ],
+        "predicted": 7.0,
+        "observed": 7,
+        "absolute_error": 0.0,
+        "step_count": 3,
+        "passed": true
+      },
+      {
+        "input": [
+          44,
+          9
+        ],
+        "predicted": 8.0,
+        "observed": 8,
+        "absolute_error": 0.0,
+        "step_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          64,
+          7
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "step_count": 9,
+        "passed": true
+      },
+      {
+        "input": [
+          2,
+          9
+        ],
+        "predicted": 2.0,
+        "observed": 2,
+        "absolute_error": 0.0,
+        "step_count": 0,
+        "passed": true
+      },
+      {
+        "input": [
+          81,
+          10
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "step_count": 8,
+        "passed": true
+      }
+    ],
+    "adversarial_results": [
+      {
+        "input": [
+          0,
+          3
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 0,
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          1
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 1,
+        "passed": true
+      },
+      {
+        "input": [
+          100,
+          1
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 100,
+        "passed": true
+      },
+      {
+        "input": [
+          127,
+          16
+        ],
+        "predicted": 15.0,
+        "observed": 15,
+        "absolute_error": 0.0,
+        "step_count": 7,
+        "passed": true
+      },
+      {
+        "input": [
+          255,
+          32
+        ],
+        "predicted": 31.0,
+        "observed": 31,
+        "absolute_error": 0.0,
+        "step_count": 7,
+        "passed": true
+      }
+    ],
+    "posthoc_human_interpretation": "Initialize state from input 0; stop when state is below input 1; otherwise subtract input 1 and repeat; output state."
+  },
+  "gates": [
+    {
+      "gate_id": "learner_program_contains_no_target_operation_name",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "development_rows_exact",
+      "passed": true,
+      "actual": 0.0,
+      "threshold": 0
+    },
+    {
+      "gate_id": "sealed_rows_exact",
+      "passed": true,
+      "actual": 6,
+      "threshold": 6
+    },
+    {
+      "gate_id": "boundary_and_adversarial_rows_exact",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "candidate_created_nonzero_loop_depth",
+      "passed": true,
+      "actual": 3,
+      "threshold": 1
+    },
+    {
+      "gate_id": "five_distinct_logic_structures_reported",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    }
+  ],
+  "success_room_record": {
+    "room_record_id": "SF-0693be24cc616771",
+    "operation_id": "CTRL-2f51ec5cf9134520",
+    "definition": {
+      "substrate": "anonymous_single_state_control_v0.1",
+      "initial_state": {
+        "op": "a_input",
+        "index": 0
+      },
+      "guard": {
+        "op": "a_less",
+        "left": {
+          "op": "a_state"
+        },
+        "right": {
+          "op": "a_input",
+          "index": 1
+        },
+        "halt_when": true
+      },
+      "update_when_continuing": {
+        "op": "a_subtract",
+        "args": [
+          {
+            "op": "a_state"
+          },
+          {
+            "op": "a_input",
+            "index": 1
+          }
+        ]
+      },
+      "output": {
+        "op": "a_state"
+      }
+    },
+    "parent_operation_ids": [
+      "anonymous_single_state_control_v0.1"
+    ],
+    "validation_scope": "anonymous_two_input_control_nonnegative_positive_domain_v0.1",
+    "knowledge_status": "bounded",
+    "evidence": {
+      "run_id": "RUN-adaptive-control-20260818T052241162394Z",
+      "development_case_count": 10,
+      "sealed_case_count": 6,
+      "adversarial_case_count": 5,
+      "all_exact": true
+    }
+  },
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The host provides generic equality and order sensors; the candidate chooses how to use them.",
+    "The synthesized controller has one mutable state cell and no nested or branching subprograms.",
+    "Validation is bounded to nonnegative first inputs, positive second inputs, and 256 steps.",
+    "Zero or negative second inputs are outside the admitted scope."
+  ]
+}

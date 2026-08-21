@@ -1,0 +1,288 @@
+{
+  "report_version": "mistake-replay-report-v0.1",
+  "run_id": "RUN-mistake-replay-20260817T191526996591Z",
+  "created_at": "2026-08-17T19:15:26.997591Z",
+  "title": "错题库：等价错误回放拦截实验",
+  "verdict": "conditionally_passed",
+  "claim_scope": "same_objective_same_registered_failure_condition",
+  "architecture": "append_only_equivalence_aware_replay_memory",
+  "first_failure": {
+    "candidate": {
+      "candidate_id": "CAND-0c00d10d803ddac3",
+      "program_ast": {
+        "op": "p_subtract",
+        "args": [
+          {
+            "op": "p_read_offset",
+            "offset": 0
+          },
+          {
+            "op": "p_scalar_parameter",
+            "parameter_slot": 0
+          }
+        ]
+      },
+      "parameters": {
+        "0": -3.0
+      },
+      "train_mse": 0.0,
+      "validation_mse": 0.0,
+      "normalized_validation_mse": 0.0,
+      "program_nodes": 3,
+      "program_depth": 2,
+      "objective_score": 0.003
+    },
+    "verification": {
+      "verifier_version": "independent-verifier-v0.1",
+      "candidate_id": "CAND-0c00d10d803ddac3",
+      "status": "bounded",
+      "summary": {
+        "case_count": 1,
+        "passed_case_count": 0,
+        "failed_case_count": 1,
+        "counterexample_count": 6
+      },
+      "case_results": [
+        {
+          "case_id": "CASE-205c35d7c44f5c36",
+          "scope": "adversarial_challenge",
+          "required_for_validity": false,
+          "passed": false,
+          "fitted_parameters": {
+            "0": -6.0
+          },
+          "validation_count": 6,
+          "mse": 111.66666666666667,
+          "normalized_mse": 0.1315057738231542,
+          "maximum_absolute_error": 15.0,
+          "counterexamples": [
+            {
+              "case_id": "CASE-205c35d7c44f5c36",
+              "index": 5,
+              "readable_values": [
+                17.0,
+                26.0
+              ],
+              "predicted_value": 32.0,
+              "observed_value": 37.0,
+              "absolute_error": 5.0
+            },
+            {
+              "case_id": "CASE-205c35d7c44f5c36",
+              "index": 6,
+              "readable_values": [
+                26.0,
+                37.0
+              ],
+              "predicted_value": 43.0,
+              "observed_value": 50.0,
+              "absolute_error": 7.0
+            },
+            {
+              "case_id": "CASE-205c35d7c44f5c36",
+              "index": 7,
+              "readable_values": [
+                37.0,
+                50.0
+              ],
+              "predicted_value": 56.0,
+              "observed_value": 65.0,
+              "absolute_error": 9.0
+            },
+            {
+              "case_id": "CASE-205c35d7c44f5c36",
+              "index": 8,
+              "readable_values": [
+                50.0,
+                65.0
+              ],
+              "predicted_value": 71.0,
+              "observed_value": 82.0,
+              "absolute_error": 11.0
+            },
+            {
+              "case_id": "CASE-205c35d7c44f5c36",
+              "index": 9,
+              "readable_values": [
+                65.0,
+                82.0
+              ],
+              "predicted_value": 88.0,
+              "observed_value": 101.0,
+              "absolute_error": 13.0
+            },
+            {
+              "case_id": "CASE-205c35d7c44f5c36",
+              "index": 10,
+              "readable_values": [
+                82.0,
+                101.0
+              ],
+              "predicted_value": 107.0,
+              "observed_value": 122.0,
+              "absolute_error": 15.0
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "stored_mistake": {
+    "mistake_id": "M-5159793c74334913",
+    "objective_id": "predict_next_numeric_value_v0.1",
+    "failed_scope": "adversarial_challenge",
+    "condition_key": "registered_curve_challenge_v0.1",
+    "family_signature": "{\"parameter:0\":1,\"read:0\":1}",
+    "representative_program_ast": {
+      "op": "p_subtract",
+      "args": [
+        {
+          "op": "p_read_offset",
+          "offset": 0
+        },
+        {
+          "op": "p_scalar_parameter",
+          "parameter_slot": 0
+        }
+      ]
+    },
+    "counterexamples": [
+      {
+        "case_id": "CASE-205c35d7c44f5c36",
+        "index": 5,
+        "readable_values": [
+          17.0,
+          26.0
+        ],
+        "predicted_value": 32.0,
+        "observed_value": 37.0,
+        "absolute_error": 5.0
+      },
+      {
+        "case_id": "CASE-205c35d7c44f5c36",
+        "index": 6,
+        "readable_values": [
+          26.0,
+          37.0
+        ],
+        "predicted_value": 43.0,
+        "observed_value": 50.0,
+        "absolute_error": 7.0
+      },
+      {
+        "case_id": "CASE-205c35d7c44f5c36",
+        "index": 7,
+        "readable_values": [
+          37.0,
+          50.0
+        ],
+        "predicted_value": 56.0,
+        "observed_value": 65.0,
+        "absolute_error": 9.0
+      },
+      {
+        "case_id": "CASE-205c35d7c44f5c36",
+        "index": 8,
+        "readable_values": [
+          50.0,
+          65.0
+        ],
+        "predicted_value": 71.0,
+        "observed_value": 82.0,
+        "absolute_error": 11.0
+      },
+      {
+        "case_id": "CASE-205c35d7c44f5c36",
+        "index": 9,
+        "readable_values": [
+          65.0,
+          82.0
+        ],
+        "predicted_value": 88.0,
+        "observed_value": 101.0,
+        "absolute_error": 13.0
+      },
+      {
+        "case_id": "CASE-205c35d7c44f5c36",
+        "index": 10,
+        "readable_values": [
+          82.0,
+          101.0
+        ],
+        "predicted_value": 107.0,
+        "observed_value": 122.0,
+        "absolute_error": 15.0
+      }
+    ],
+    "source_candidate_id": "CAND-0c00d10d803ddac3"
+  },
+  "equivalence_probe": {
+    "probe_program_ast": {
+      "op": "p_add",
+      "args": [
+        {
+          "op": "p_scalar_parameter",
+          "parameter_slot": 0
+        },
+        {
+          "op": "p_read_offset",
+          "offset": 0
+        }
+      ]
+    },
+    "structurally_identical": false,
+    "matched_mistake_ids": [
+      "M-5159793c74334913"
+    ]
+  },
+  "replay_search": {
+    "programs_generated": 15,
+    "programs_filtered_before_scoring": 2,
+    "programs_scored": 13,
+    "old_family_returned": false,
+    "top_candidate_ids": [
+      "CAND-6340b262cac71e13",
+      "CAND-76ca63746acf6014",
+      "CAND-159c77efdd7f90cd",
+      "CAND-1a7a74a9691f5706",
+      "CAND-162fd3bd7779a372"
+    ]
+  },
+  "library": {
+    "record_count": 1,
+    "path": "artifacts/mistakes/mistake_library.jsonl",
+    "append_only_hash_chain": true
+  },
+  "gates": [
+    {
+      "gate_id": "counterexample_required_before_storage",
+      "passed": true,
+      "actual": 6,
+      "threshold": 1
+    },
+    {
+      "gate_id": "equivalent_structure_recalled",
+      "passed": true,
+      "actual": 1,
+      "threshold": 1
+    },
+    {
+      "gate_id": "old_family_blocked_before_scoring",
+      "passed": true,
+      "actual": 2,
+      "threshold": 1
+    },
+    {
+      "gate_id": "cross_condition_behavior",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    }
+  ],
+  "limitations": [
+    "Replay blocking applies only when objective, failure scope, and registered condition all match.",
+    "Equivalence is complete only for the current linear add/subtract program language.",
+    "A newly generated, non-equivalent hypothesis can still be wrong and must be independently challenged.",
+    "The library prevents repeated evaluation of known failures; it does not prove remaining candidates correct."
+  ]
+}

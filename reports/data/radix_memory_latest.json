@@ -1,0 +1,7040 @@
+{
+  "report_version": "multistage-residual-discovery-report-v0.1",
+  "run_id": "RUN-multistage-residual-20260818T082512954727Z",
+  "created_at": "2026-08-18T08:25:12.998495Z",
+  "title": "匿名非整数输出多级余量发现实验",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "verified_trace_parent_plus_candidate_multistage_residual_memory",
+  "learner_received": {
+    "development_input_rows": [
+      [
+        1,
+        10
+      ],
+      [
+        1,
+        100
+      ],
+      [
+        1,
+        1000
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        1,
+        8
+      ],
+      [
+        7,
+        20
+      ],
+      [
+        9,
+        25
+      ],
+      [
+        13,
+        40
+      ],
+      [
+        -1,
+        8
+      ],
+      [
+        -7,
+        20
+      ],
+      [
+        23,
+        -10
+      ]
+    ],
+    "development_output_values": [
+      "0.1",
+      "0.01",
+      "0.001",
+      "0.5",
+      "0.75",
+      "0.125",
+      "0.35",
+      "0.36",
+      "0.325",
+      "-0.125",
+      "-0.35",
+      "2.3"
+    ],
+    "cycle_width_candidates": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "evidence_weights": [
+      {
+        "value": "0.001",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.001"
+        }
+      },
+      {
+        "value": "0.01",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.01"
+        }
+      },
+      {
+        "value": "0.1",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.1"
+        }
+      },
+      {
+        "value": "0.125",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.125"
+        }
+      },
+      {
+        "value": "0.325",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.325"
+        }
+      },
+      {
+        "value": "0.35",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.35"
+        }
+      },
+      {
+        "value": "0.36",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.36"
+        }
+      },
+      {
+        "value": "0.5",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.5"
+        }
+      },
+      {
+        "value": "0.75",
+        "provenance": {
+          "op": "observed_output_atom_magnitude",
+          "observed": "0.75"
+        }
+      }
+    ],
+    "target_concept_name": false,
+    "target_formula": false,
+    "named_radix": false,
+    "multiply_operation": false,
+    "divide_operation": false,
+    "sealed_cases_visible_during_search": false,
+    "parent_operation_id": "TRACE-04ec46485b805d91"
+  },
+  "search": {
+    "programs_generated": 9009,
+    "programs_executed": 9009,
+    "programs_rejected": 0,
+    "behavior_classes": 9009
+  },
+  "five_candidate_feedback": [
+    {
+      "rank": 1,
+      "candidate_id": "RM-12affae0298660f3",
+      "program": {
+        "substrate": "anonymous_multistage_residual_memory_v0.1",
+        "parent_operation_id": "TRACE-04ec46485b805d91",
+        "parent_program": {
+          "substrate": "anonymous_dual_state_trace_memory_v0.1",
+          "parent_operation_id": "ADAPT-051ea7f44518dc30",
+          "parent_program": {
+            "substrate": "anonymous_conditional_input_adapter_v0.1",
+            "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+            "parent_program": {
+              "substrate": "anonymous_priority_branch_control_v0.1",
+              "parent_operation_id": "CTRL-2f51ec5cf9134520",
+              "base_program": {
+                "substrate": "anonymous_single_state_control_v0.1",
+                "initial_state": {
+                  "op": "a_input",
+                  "index": 0
+                },
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_state"
+                  },
+                  "right": {
+                    "op": "a_input",
+                    "index": 1
+                  },
+                  "halt_when": true
+                },
+                "update_when_continuing": {
+                  "op": "a_subtract",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "output": {
+                  "op": "a_state"
+                }
+              },
+              "priority_branch": {
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_constant",
+                    "constant": -1.0
+                  },
+                  "right": {
+                    "op": "a_state"
+                  },
+                  "halt_when": false
+                },
+                "update_when_triggered": {
+                  "op": "a_add",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "then": "restart_control_cycle"
+              }
+            },
+            "adapter": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": false
+              },
+              "second_input_when_triggered": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_constant",
+                    "constant": 0.0
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "second_input_otherwise": {
+                "op": "a_input",
+                "index": 1
+              }
+            }
+          },
+          "memory": {
+            "initial": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "update_on_priority_transition": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "update_on_base_transition": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          }
+        },
+        "cycle": {
+          "width": 10,
+          "stage_weights": [
+            "0.1",
+            "0.01",
+            "0.001"
+          ],
+          "residual_update": "bounded_repeated_addition_then_parent_call",
+          "output_update": "bounded_repeated_addition_of_stage_weight"
+        }
+      },
+      "fit_mse": 0.0,
+      "maximum_absolute_error": 0.0,
+      "coherence_error": 0.0,
+      "training_outputs": [
+        "0.1",
+        "0.01",
+        "0.001",
+        "0.5",
+        "0.75",
+        "0.125",
+        "0.35",
+        "0.36",
+        "0.325",
+        "-0.125",
+        "-0.35",
+        "2.3"
+      ],
+      "behavior_signature": [
+        "0.1",
+        "0.01",
+        "0.001",
+        "0.5",
+        "0.75",
+        "0.125",
+        "0.35",
+        "0.36",
+        "0.325",
+        "-0.125",
+        "-0.35",
+        "2.3",
+        "2.125",
+        "-2.125",
+        "0.999",
+        "-0.999"
+      ],
+      "logic_signature": "RMLOGIC-49b3b4b5bd03d27f",
+      "program_nodes": 41,
+      "exact": true,
+      "development_results": [
+        {
+          "input": [
+            1,
+            10
+          ],
+          "predicted": "0.1",
+          "observed": "0.1",
+          "absolute_error": "0.0",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            100
+          ],
+          "predicted": "0.01",
+          "observed": "0.01",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            1000
+          ],
+          "predicted": "0.001",
+          "observed": "0.001",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            1000.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 0,
+              "next_residual": "100.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "100.0",
+              "scaled_residual": "1000.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            2
+          ],
+          "predicted": "0.5",
+          "observed": "0.5",
+          "absolute_error": "0.0",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            2.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            3,
+            4
+          ],
+          "predicted": "0.75",
+          "observed": "0.75",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            3.0,
+            4.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "30.0",
+              "emitted_count": 7,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            8
+          ],
+          "predicted": "0.125",
+          "observed": "0.125",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            7,
+            20
+          ],
+          "predicted": "0.35",
+          "observed": "0.35",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 3,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            9,
+            25
+          ],
+          "predicted": "0.36",
+          "observed": "0.36",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "9.0",
+          "adapted_inputs": [
+            9.0,
+            25.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "9.0",
+              "scaled_residual": "90.0",
+              "emitted_count": 3,
+              "next_residual": "15.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "15.0",
+              "scaled_residual": "150.0",
+              "emitted_count": 6,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            13,
+            40
+          ],
+          "predicted": "0.325",
+          "observed": "0.325",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            13.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "130.0",
+              "emitted_count": 3,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 2,
+              "next_residual": "20.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "20.0",
+              "scaled_residual": "200.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -1,
+            8
+          ],
+          "predicted": "-0.125",
+          "observed": "-0.125",
+          "absolute_error": "0.000",
+          "integer_memory": -1,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 8,
+              "next_residual": "6.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "6.0",
+              "scaled_residual": "60.0",
+              "emitted_count": 7,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -7,
+            20
+          ],
+          "predicted": "-0.35",
+          "observed": "-0.35",
+          "absolute_error": "0.00",
+          "integer_memory": -1,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            -7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "130.0",
+              "emitted_count": 6,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            23,
+            -10
+          ],
+          "predicted": "2.3",
+          "observed": "2.3",
+          "absolute_error": "0.0",
+          "integer_memory": 2,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            23.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "30.0",
+              "emitted_count": 3,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            17,
+            8
+          ],
+          "predicted": "2.125",
+          "observed": "2.125",
+          "absolute_error": "0.000",
+          "integer_memory": 2,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -17,
+            -8
+          ],
+          "predicted": "-2.125",
+          "observed": "-2.125",
+          "absolute_error": "0.000",
+          "integer_memory": -3,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 8,
+              "next_residual": "6.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "6.0",
+              "scaled_residual": "60.0",
+              "emitted_count": 7,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            19,
+            20
+          ],
+          "predicted": "0.95",
+          "observed": "0.95",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "19.0",
+          "adapted_inputs": [
+            19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "19.0",
+              "scaled_residual": "190.0",
+              "emitted_count": 9,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -19,
+            20
+          ],
+          "predicted": "-0.95",
+          "observed": "-0.95",
+          "absolute_error": "0.00",
+          "integer_memory": -1,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            -19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            37,
+            40
+          ],
+          "predicted": "0.925",
+          "observed": "0.925",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "37.0",
+          "adapted_inputs": [
+            37.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "37.0",
+              "scaled_residual": "370.0",
+              "emitted_count": 9,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 2,
+              "next_residual": "20.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "20.0",
+              "scaled_residual": "200.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            99,
+            100
+          ],
+          "predicted": "0.99",
+          "observed": "0.99",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "99.0",
+          "adapted_inputs": [
+            99.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "99.0",
+              "scaled_residual": "990.0",
+              "emitted_count": 9,
+              "next_residual": "90.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "90.0",
+              "scaled_residual": "900.0",
+              "emitted_count": 9,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            125
+          ],
+          "predicted": "0.008",
+          "observed": "0.008",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 0,
+              "next_residual": "100.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "100.0",
+              "scaled_residual": "1000.0",
+              "emitted_count": 8,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -1,
+            125
+          ],
+          "predicted": "-0.008",
+          "observed": "-0.008",
+          "absolute_error": "0.000",
+          "integer_memory": -1,
+          "initial_residual": "124.0",
+          "adapted_inputs": [
+            -1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "124.0",
+              "scaled_residual": "1240.0",
+              "emitted_count": 9,
+              "next_residual": "115.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "115.0",
+              "scaled_residual": "1150.0",
+              "emitted_count": 9,
+              "next_residual": "25.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "25.0",
+              "scaled_residual": "250.0",
+              "emitted_count": 2,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            123,
+            100
+          ],
+          "predicted": "1.23",
+          "observed": "1.23",
+          "absolute_error": "0.00",
+          "integer_memory": 1,
+          "initial_residual": "23.0",
+          "adapted_inputs": [
+            123.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "23.0",
+              "scaled_residual": "230.0",
+              "emitted_count": 2,
+              "next_residual": "30.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "30.0",
+              "scaled_residual": "300.0",
+              "emitted_count": 3,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "sealed_exact": true,
+      "disposition": "success_room",
+      "mistake_id": null
+    },
+    {
+      "rank": 2,
+      "candidate_id": "RM-2e86a225e8aefe47",
+      "program": {
+        "substrate": "anonymous_multistage_residual_memory_v0.1",
+        "parent_operation_id": "TRACE-04ec46485b805d91",
+        "parent_program": {
+          "substrate": "anonymous_dual_state_trace_memory_v0.1",
+          "parent_operation_id": "ADAPT-051ea7f44518dc30",
+          "parent_program": {
+            "substrate": "anonymous_conditional_input_adapter_v0.1",
+            "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+            "parent_program": {
+              "substrate": "anonymous_priority_branch_control_v0.1",
+              "parent_operation_id": "CTRL-2f51ec5cf9134520",
+              "base_program": {
+                "substrate": "anonymous_single_state_control_v0.1",
+                "initial_state": {
+                  "op": "a_input",
+                  "index": 0
+                },
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_state"
+                  },
+                  "right": {
+                    "op": "a_input",
+                    "index": 1
+                  },
+                  "halt_when": true
+                },
+                "update_when_continuing": {
+                  "op": "a_subtract",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "output": {
+                  "op": "a_state"
+                }
+              },
+              "priority_branch": {
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_constant",
+                    "constant": -1.0
+                  },
+                  "right": {
+                    "op": "a_state"
+                  },
+                  "halt_when": false
+                },
+                "update_when_triggered": {
+                  "op": "a_add",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "then": "restart_control_cycle"
+              }
+            },
+            "adapter": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": false
+              },
+              "second_input_when_triggered": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_constant",
+                    "constant": 0.0
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "second_input_otherwise": {
+                "op": "a_input",
+                "index": 1
+              }
+            }
+          },
+          "memory": {
+            "initial": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "update_on_priority_transition": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "update_on_base_transition": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          }
+        },
+        "cycle": {
+          "width": 10,
+          "stage_weights": [
+            "0.1",
+            "0.01"
+          ],
+          "residual_update": "bounded_repeated_addition_then_parent_call",
+          "output_update": "bounded_repeated_addition_of_stage_weight"
+        }
+      },
+      "fit_mse": 6.333333333333333e-06,
+      "maximum_absolute_error": 0.005,
+      "coherence_error": 0.0,
+      "training_outputs": [
+        "0.1",
+        "0.01",
+        "0",
+        "0.5",
+        "0.75",
+        "0.12",
+        "0.35",
+        "0.36",
+        "0.32",
+        "-0.13",
+        "-0.35",
+        "2.3"
+      ],
+      "behavior_signature": [
+        "0.1",
+        "0.01",
+        "0",
+        "0.5",
+        "0.75",
+        "0.12",
+        "0.35",
+        "0.36",
+        "0.32",
+        "-0.13",
+        "-0.35",
+        "2.3",
+        "2.12",
+        "-2.13",
+        "0.99",
+        "-1"
+      ],
+      "logic_signature": "RMLOGIC-c58296196ce1dffd",
+      "program_nodes": 40,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            1,
+            10
+          ],
+          "predicted": "0.1",
+          "observed": "0.1",
+          "absolute_error": "0.0",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            100
+          ],
+          "predicted": "0.01",
+          "observed": "0.01",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            1000
+          ],
+          "predicted": "0",
+          "observed": "0.001",
+          "absolute_error": "0.001",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            1000.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 0,
+              "next_residual": "100.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            2
+          ],
+          "predicted": "0.5",
+          "observed": "0.5",
+          "absolute_error": "0.0",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            2.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            3,
+            4
+          ],
+          "predicted": "0.75",
+          "observed": "0.75",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            3.0,
+            4.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "30.0",
+              "emitted_count": 7,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            8
+          ],
+          "predicted": "0.12",
+          "observed": "0.125",
+          "absolute_error": "0.005",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            7,
+            20
+          ],
+          "predicted": "0.35",
+          "observed": "0.35",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 3,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            9,
+            25
+          ],
+          "predicted": "0.36",
+          "observed": "0.36",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "9.0",
+          "adapted_inputs": [
+            9.0,
+            25.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "9.0",
+              "scaled_residual": "90.0",
+              "emitted_count": 3,
+              "next_residual": "15.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "15.0",
+              "scaled_residual": "150.0",
+              "emitted_count": 6,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            13,
+            40
+          ],
+          "predicted": "0.32",
+          "observed": "0.325",
+          "absolute_error": "0.005",
+          "integer_memory": 0,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            13.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "130.0",
+              "emitted_count": 3,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 2,
+              "next_residual": "20.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            8
+          ],
+          "predicted": "-0.13",
+          "observed": "-0.125",
+          "absolute_error": "0.005",
+          "integer_memory": -1,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 8,
+              "next_residual": "6.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "6.0",
+              "scaled_residual": "60.0",
+              "emitted_count": 7,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -7,
+            20
+          ],
+          "predicted": "-0.35",
+          "observed": "-0.35",
+          "absolute_error": "0.00",
+          "integer_memory": -1,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            -7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "130.0",
+              "emitted_count": 6,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            23,
+            -10
+          ],
+          "predicted": "2.3",
+          "observed": "2.3",
+          "absolute_error": "0.0",
+          "integer_memory": 2,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            23.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "30.0",
+              "emitted_count": 3,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            17,
+            8
+          ],
+          "predicted": "2.12",
+          "observed": "2.125",
+          "absolute_error": "0.005",
+          "integer_memory": 2,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -17,
+            -8
+          ],
+          "predicted": "-2.13",
+          "observed": "-2.125",
+          "absolute_error": "0.005",
+          "integer_memory": -3,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 8,
+              "next_residual": "6.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "6.0",
+              "scaled_residual": "60.0",
+              "emitted_count": 7,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            19,
+            20
+          ],
+          "predicted": "0.95",
+          "observed": "0.95",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "19.0",
+          "adapted_inputs": [
+            19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "19.0",
+              "scaled_residual": "190.0",
+              "emitted_count": 9,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -19,
+            20
+          ],
+          "predicted": "-0.95",
+          "observed": "-0.95",
+          "absolute_error": "0.00",
+          "integer_memory": -1,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            -19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            37,
+            40
+          ],
+          "predicted": "0.92",
+          "observed": "0.925",
+          "absolute_error": "0.005",
+          "integer_memory": 0,
+          "initial_residual": "37.0",
+          "adapted_inputs": [
+            37.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "37.0",
+              "scaled_residual": "370.0",
+              "emitted_count": 9,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 2,
+              "next_residual": "20.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            99,
+            100
+          ],
+          "predicted": "0.99",
+          "observed": "0.99",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "99.0",
+          "adapted_inputs": [
+            99.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "99.0",
+              "scaled_residual": "990.0",
+              "emitted_count": 9,
+              "next_residual": "90.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "90.0",
+              "scaled_residual": "900.0",
+              "emitted_count": 9,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            125
+          ],
+          "predicted": "0",
+          "observed": "0.008",
+          "absolute_error": "0.008",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 0,
+              "next_residual": "100.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            125
+          ],
+          "predicted": "-0.01",
+          "observed": "-0.008",
+          "absolute_error": "0.002",
+          "integer_memory": -1,
+          "initial_residual": "124.0",
+          "adapted_inputs": [
+            -1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "124.0",
+              "scaled_residual": "1240.0",
+              "emitted_count": 9,
+              "next_residual": "115.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "115.0",
+              "scaled_residual": "1150.0",
+              "emitted_count": 9,
+              "next_residual": "25.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            123,
+            100
+          ],
+          "predicted": "1.23",
+          "observed": "1.23",
+          "absolute_error": "0.00",
+          "integer_memory": 1,
+          "initial_residual": "23.0",
+          "adapted_inputs": [
+            123.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "23.0",
+              "scaled_residual": "230.0",
+              "emitted_count": 2,
+              "next_residual": "30.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "30.0",
+              "scaled_residual": "300.0",
+              "emitted_count": 3,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-f9797903f23c162c"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "RM-7903db03bce5b97f",
+      "program": {
+        "substrate": "anonymous_multistage_residual_memory_v0.1",
+        "parent_operation_id": "TRACE-04ec46485b805d91",
+        "parent_program": {
+          "substrate": "anonymous_dual_state_trace_memory_v0.1",
+          "parent_operation_id": "ADAPT-051ea7f44518dc30",
+          "parent_program": {
+            "substrate": "anonymous_conditional_input_adapter_v0.1",
+            "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+            "parent_program": {
+              "substrate": "anonymous_priority_branch_control_v0.1",
+              "parent_operation_id": "CTRL-2f51ec5cf9134520",
+              "base_program": {
+                "substrate": "anonymous_single_state_control_v0.1",
+                "initial_state": {
+                  "op": "a_input",
+                  "index": 0
+                },
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_state"
+                  },
+                  "right": {
+                    "op": "a_input",
+                    "index": 1
+                  },
+                  "halt_when": true
+                },
+                "update_when_continuing": {
+                  "op": "a_subtract",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "output": {
+                  "op": "a_state"
+                }
+              },
+              "priority_branch": {
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_constant",
+                    "constant": -1.0
+                  },
+                  "right": {
+                    "op": "a_state"
+                  },
+                  "halt_when": false
+                },
+                "update_when_triggered": {
+                  "op": "a_add",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "then": "restart_control_cycle"
+              }
+            },
+            "adapter": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": false
+              },
+              "second_input_when_triggered": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_constant",
+                    "constant": 0.0
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "second_input_otherwise": {
+                "op": "a_input",
+                "index": 1
+              }
+            }
+          },
+          "memory": {
+            "initial": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "update_on_priority_transition": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "update_on_base_transition": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          }
+        },
+        "cycle": {
+          "width": 8,
+          "stage_weights": [
+            "0.125",
+            "0.01",
+            "0.01"
+          ],
+          "residual_update": "bounded_repeated_addition_then_parent_call",
+          "output_update": "bounded_repeated_addition_of_stage_weight"
+        }
+      },
+      "fit_mse": 0.00039591666666666665,
+      "maximum_absolute_error": 0.04,
+      "coherence_error": 0.115,
+      "training_outputs": [
+        "0.09",
+        "0.05",
+        "0",
+        "0.500",
+        "0.750",
+        "0.125",
+        "0.340",
+        "0.320",
+        "0.350",
+        "-0.125",
+        "-0.325",
+        "2.290"
+      ],
+      "behavior_signature": [
+        "0.09",
+        "0.05",
+        "0",
+        "0.500",
+        "0.750",
+        "0.125",
+        "0.340",
+        "0.320",
+        "0.350",
+        "-0.125",
+        "-0.325",
+        "2.290",
+        "2.125",
+        "-2.125",
+        "1.015",
+        "-1"
+      ],
+      "logic_signature": "RMLOGIC-3eb319b64ae65c31",
+      "program_nodes": 39,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            1,
+            10
+          ],
+          "predicted": "0.09",
+          "observed": "0.1",
+          "absolute_error": "0.01",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 6,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 3,
+              "next_residual": "2.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            100
+          ],
+          "predicted": "0.05",
+          "observed": "0.01",
+          "absolute_error": "0.04",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 0,
+              "next_residual": "64.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "64.0",
+              "scaled_residual": "512.0",
+              "emitted_count": 5,
+              "next_residual": "12.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            1000
+          ],
+          "predicted": "0",
+          "observed": "0.001",
+          "absolute_error": "0.001",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            1000.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 0,
+              "next_residual": "64.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "64.0",
+              "scaled_residual": "512.0",
+              "emitted_count": 0,
+              "next_residual": "512.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            2
+          ],
+          "predicted": "0.500",
+          "observed": "0.5",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            2.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 4,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            3,
+            4
+          ],
+          "predicted": "0.750",
+          "observed": "0.75",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            3.0,
+            4.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "24.0",
+              "emitted_count": 6,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            8
+          ],
+          "predicted": "0.125",
+          "observed": "0.125",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            7,
+            20
+          ],
+          "predicted": "0.340",
+          "observed": "0.35",
+          "absolute_error": "0.010",
+          "integer_memory": 0,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "56.0",
+              "emitted_count": 2,
+              "next_residual": "16.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "16.0",
+              "scaled_residual": "128.0",
+              "emitted_count": 6,
+              "next_residual": "8.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 3,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            9,
+            25
+          ],
+          "predicted": "0.320",
+          "observed": "0.36",
+          "absolute_error": "0.040",
+          "integer_memory": 0,
+          "initial_residual": "9.0",
+          "adapted_inputs": [
+            9.0,
+            25.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "9.0",
+              "scaled_residual": "72.0",
+              "emitted_count": 2,
+              "next_residual": "22.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "22.0",
+              "scaled_residual": "176.0",
+              "emitted_count": 7,
+              "next_residual": "1.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            13,
+            40
+          ],
+          "predicted": "0.350",
+          "observed": "0.325",
+          "absolute_error": "0.025",
+          "integer_memory": 0,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            13.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "104.0",
+              "emitted_count": 2,
+              "next_residual": "24.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "24.0",
+              "scaled_residual": "192.0",
+              "emitted_count": 4,
+              "next_residual": "32.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "32.0",
+              "scaled_residual": "256.0",
+              "emitted_count": 6,
+              "next_residual": "16.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            8
+          ],
+          "predicted": "-0.125",
+          "observed": "-0.125",
+          "absolute_error": "0.000",
+          "integer_memory": -1,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "56.0",
+              "emitted_count": 7,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -7,
+            20
+          ],
+          "predicted": "-0.325",
+          "observed": "-0.35",
+          "absolute_error": "0.025",
+          "integer_memory": -1,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            -7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "104.0",
+              "emitted_count": 5,
+              "next_residual": "4.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 1,
+              "next_residual": "12.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "12.0",
+              "scaled_residual": "96.0",
+              "emitted_count": 4,
+              "next_residual": "16.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            23,
+            -10
+          ],
+          "predicted": "2.290",
+          "observed": "2.3",
+          "absolute_error": "0.010",
+          "integer_memory": 2,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            23.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "24.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 3,
+              "next_residual": "2.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "2.0",
+              "scaled_residual": "16.0",
+              "emitted_count": 1,
+              "next_residual": "6.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            17,
+            8
+          ],
+          "predicted": "2.125",
+          "observed": "2.125",
+          "absolute_error": "0.000",
+          "integer_memory": 2,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -17,
+            -8
+          ],
+          "predicted": "-2.125",
+          "observed": "-2.125",
+          "absolute_error": "0.000",
+          "integer_memory": -3,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "56.0",
+              "emitted_count": 7,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            19,
+            20
+          ],
+          "predicted": "0.975",
+          "observed": "0.95",
+          "absolute_error": "0.025",
+          "integer_memory": 0,
+          "initial_residual": "19.0",
+          "adapted_inputs": [
+            19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "19.0",
+              "scaled_residual": "152.0",
+              "emitted_count": 7,
+              "next_residual": "12.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "12.0",
+              "scaled_residual": "96.0",
+              "emitted_count": 4,
+              "next_residual": "16.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "16.0",
+              "scaled_residual": "128.0",
+              "emitted_count": 6,
+              "next_residual": "8.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -19,
+            20
+          ],
+          "predicted": "-0.96",
+          "observed": "-0.95",
+          "absolute_error": "0.01",
+          "integer_memory": -1,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            -19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 3,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 1,
+              "next_residual": "12.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            37,
+            40
+          ],
+          "predicted": "0.915",
+          "observed": "0.925",
+          "absolute_error": "0.010",
+          "integer_memory": 0,
+          "initial_residual": "37.0",
+          "adapted_inputs": [
+            37.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "37.0",
+              "scaled_residual": "296.0",
+              "emitted_count": 7,
+              "next_residual": "16.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "16.0",
+              "scaled_residual": "128.0",
+              "emitted_count": 3,
+              "next_residual": "8.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 1,
+              "next_residual": "24.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            99,
+            100
+          ],
+          "predicted": "0.965",
+          "observed": "0.99",
+          "absolute_error": "0.025",
+          "integer_memory": 0,
+          "initial_residual": "99.0",
+          "adapted_inputs": [
+            99.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "99.0",
+              "scaled_residual": "792.0",
+              "emitted_count": 7,
+              "next_residual": "92.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "92.0",
+              "scaled_residual": "736.0",
+              "emitted_count": 7,
+              "next_residual": "36.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "36.0",
+              "scaled_residual": "288.0",
+              "emitted_count": 2,
+              "next_residual": "88.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            125
+          ],
+          "predicted": "0.04",
+          "observed": "0.008",
+          "absolute_error": "0.032",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 0,
+              "next_residual": "64.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "64.0",
+              "scaled_residual": "512.0",
+              "emitted_count": 4,
+              "next_residual": "12.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            125
+          ],
+          "predicted": "-0.025",
+          "observed": "-0.008",
+          "absolute_error": "0.017",
+          "integer_memory": -1,
+          "initial_residual": "124.0",
+          "adapted_inputs": [
+            -1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "124.0",
+              "scaled_residual": "992.0",
+              "emitted_count": 7,
+              "next_residual": "117.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "117.0",
+              "scaled_residual": "936.0",
+              "emitted_count": 7,
+              "next_residual": "61.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "61.0",
+              "scaled_residual": "488.0",
+              "emitted_count": 3,
+              "next_residual": "113.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            123,
+            100
+          ],
+          "predicted": "1.235",
+          "observed": "1.23",
+          "absolute_error": "0.005",
+          "integer_memory": 1,
+          "initial_residual": "23.0",
+          "adapted_inputs": [
+            123.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "23.0",
+              "scaled_residual": "184.0",
+              "emitted_count": 1,
+              "next_residual": "84.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "84.0",
+              "scaled_residual": "672.0",
+              "emitted_count": 6,
+              "next_residual": "72.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "72.0",
+              "scaled_residual": "576.0",
+              "emitted_count": 5,
+              "next_residual": "76.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-46b7582cd9352b31"
+    },
+    {
+      "rank": 4,
+      "candidate_id": "RM-b79f429a087ad96b",
+      "program": {
+        "substrate": "anonymous_multistage_residual_memory_v0.1",
+        "parent_operation_id": "TRACE-04ec46485b805d91",
+        "parent_program": {
+          "substrate": "anonymous_dual_state_trace_memory_v0.1",
+          "parent_operation_id": "ADAPT-051ea7f44518dc30",
+          "parent_program": {
+            "substrate": "anonymous_conditional_input_adapter_v0.1",
+            "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+            "parent_program": {
+              "substrate": "anonymous_priority_branch_control_v0.1",
+              "parent_operation_id": "CTRL-2f51ec5cf9134520",
+              "base_program": {
+                "substrate": "anonymous_single_state_control_v0.1",
+                "initial_state": {
+                  "op": "a_input",
+                  "index": 0
+                },
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_state"
+                  },
+                  "right": {
+                    "op": "a_input",
+                    "index": 1
+                  },
+                  "halt_when": true
+                },
+                "update_when_continuing": {
+                  "op": "a_subtract",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "output": {
+                  "op": "a_state"
+                }
+              },
+              "priority_branch": {
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_constant",
+                    "constant": -1.0
+                  },
+                  "right": {
+                    "op": "a_state"
+                  },
+                  "halt_when": false
+                },
+                "update_when_triggered": {
+                  "op": "a_add",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "then": "restart_control_cycle"
+              }
+            },
+            "adapter": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": false
+              },
+              "second_input_when_triggered": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_constant",
+                    "constant": 0.0
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "second_input_otherwise": {
+                "op": "a_input",
+                "index": 1
+              }
+            }
+          },
+          "memory": {
+            "initial": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "update_on_priority_transition": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "update_on_base_transition": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          }
+        },
+        "cycle": {
+          "width": 8,
+          "stage_weights": [
+            "0.125",
+            "0.01",
+            "0.001"
+          ],
+          "residual_update": "bounded_repeated_addition_then_parent_call",
+          "output_update": "bounded_repeated_addition_of_stage_weight"
+        }
+      },
+      "fit_mse": 0.0004739166666666666,
+      "maximum_absolute_error": 0.04,
+      "coherence_error": 0.047,
+      "training_outputs": [
+        "0.063",
+        "0.005",
+        "0",
+        "0.500",
+        "0.750",
+        "0.125",
+        "0.313",
+        "0.320",
+        "0.296",
+        "-0.125",
+        "-0.361",
+        "2.281"
+      ],
+      "behavior_signature": [
+        "0.063",
+        "0.005",
+        "0",
+        "0.500",
+        "0.750",
+        "0.125",
+        "0.313",
+        "0.320",
+        "0.296",
+        "-0.125",
+        "-0.361",
+        "2.281",
+        "2.125",
+        "-2.125",
+        "0.952",
+        "-1"
+      ],
+      "logic_signature": "RMLOGIC-4a4c5a774b61e534",
+      "program_nodes": 39,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            1,
+            10
+          ],
+          "predicted": "0.063",
+          "observed": "0.1",
+          "absolute_error": "0.037",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 6,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 3,
+              "next_residual": "2.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            100
+          ],
+          "predicted": "0.005",
+          "observed": "0.01",
+          "absolute_error": "0.005",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 0,
+              "next_residual": "64.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "64.0",
+              "scaled_residual": "512.0",
+              "emitted_count": 5,
+              "next_residual": "12.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            1000
+          ],
+          "predicted": "0",
+          "observed": "0.001",
+          "absolute_error": "0.001",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            1000.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 0,
+              "next_residual": "64.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "64.0",
+              "scaled_residual": "512.0",
+              "emitted_count": 0,
+              "next_residual": "512.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            2
+          ],
+          "predicted": "0.500",
+          "observed": "0.5",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            2.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 4,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            3,
+            4
+          ],
+          "predicted": "0.750",
+          "observed": "0.75",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            3.0,
+            4.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "24.0",
+              "emitted_count": 6,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            8
+          ],
+          "predicted": "0.125",
+          "observed": "0.125",
+          "absolute_error": "0.000",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            7,
+            20
+          ],
+          "predicted": "0.313",
+          "observed": "0.35",
+          "absolute_error": "0.037",
+          "integer_memory": 0,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "56.0",
+              "emitted_count": 2,
+              "next_residual": "16.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "16.0",
+              "scaled_residual": "128.0",
+              "emitted_count": 6,
+              "next_residual": "8.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 3,
+              "next_residual": "4.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            9,
+            25
+          ],
+          "predicted": "0.320",
+          "observed": "0.36",
+          "absolute_error": "0.040",
+          "integer_memory": 0,
+          "initial_residual": "9.0",
+          "adapted_inputs": [
+            9.0,
+            25.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "9.0",
+              "scaled_residual": "72.0",
+              "emitted_count": 2,
+              "next_residual": "22.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "22.0",
+              "scaled_residual": "176.0",
+              "emitted_count": 7,
+              "next_residual": "1.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            13,
+            40
+          ],
+          "predicted": "0.296",
+          "observed": "0.325",
+          "absolute_error": "0.029",
+          "integer_memory": 0,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            13.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "104.0",
+              "emitted_count": 2,
+              "next_residual": "24.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "24.0",
+              "scaled_residual": "192.0",
+              "emitted_count": 4,
+              "next_residual": "32.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "32.0",
+              "scaled_residual": "256.0",
+              "emitted_count": 6,
+              "next_residual": "16.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            8
+          ],
+          "predicted": "-0.125",
+          "observed": "-0.125",
+          "absolute_error": "0.000",
+          "integer_memory": -1,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "56.0",
+              "emitted_count": 7,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -7,
+            20
+          ],
+          "predicted": "-0.361",
+          "observed": "-0.35",
+          "absolute_error": "0.011",
+          "integer_memory": -1,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            -7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "104.0",
+              "emitted_count": 5,
+              "next_residual": "4.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 1,
+              "next_residual": "12.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "12.0",
+              "scaled_residual": "96.0",
+              "emitted_count": 4,
+              "next_residual": "16.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            23,
+            -10
+          ],
+          "predicted": "2.281",
+          "observed": "2.3",
+          "absolute_error": "0.019",
+          "integer_memory": 2,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            23.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "24.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 3,
+              "next_residual": "2.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "2.0",
+              "scaled_residual": "16.0",
+              "emitted_count": 1,
+              "next_residual": "6.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            17,
+            8
+          ],
+          "predicted": "2.125",
+          "observed": "2.125",
+          "absolute_error": "0.000",
+          "integer_memory": 2,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -17,
+            -8
+          ],
+          "predicted": "-2.125",
+          "observed": "-2.125",
+          "absolute_error": "0.000",
+          "integer_memory": -3,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "56.0",
+              "emitted_count": 7,
+              "next_residual": "0.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            19,
+            20
+          ],
+          "predicted": "0.921",
+          "observed": "0.95",
+          "absolute_error": "0.029",
+          "integer_memory": 0,
+          "initial_residual": "19.0",
+          "adapted_inputs": [
+            19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "19.0",
+              "scaled_residual": "152.0",
+              "emitted_count": 7,
+              "next_residual": "12.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "12.0",
+              "scaled_residual": "96.0",
+              "emitted_count": 4,
+              "next_residual": "16.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "16.0",
+              "scaled_residual": "128.0",
+              "emitted_count": 6,
+              "next_residual": "8.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -19,
+            20
+          ],
+          "predicted": "-0.969",
+          "observed": "-0.95",
+          "absolute_error": "0.019",
+          "integer_memory": -1,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            -19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 3,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "32.0",
+              "emitted_count": 1,
+              "next_residual": "12.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            37,
+            40
+          ],
+          "predicted": "0.906",
+          "observed": "0.925",
+          "absolute_error": "0.019",
+          "integer_memory": 0,
+          "initial_residual": "37.0",
+          "adapted_inputs": [
+            37.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "37.0",
+              "scaled_residual": "296.0",
+              "emitted_count": 7,
+              "next_residual": "16.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "16.0",
+              "scaled_residual": "128.0",
+              "emitted_count": 3,
+              "next_residual": "8.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 1,
+              "next_residual": "24.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            99,
+            100
+          ],
+          "predicted": "0.947",
+          "observed": "0.99",
+          "absolute_error": "0.043",
+          "integer_memory": 0,
+          "initial_residual": "99.0",
+          "adapted_inputs": [
+            99.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "99.0",
+              "scaled_residual": "792.0",
+              "emitted_count": 7,
+              "next_residual": "92.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "92.0",
+              "scaled_residual": "736.0",
+              "emitted_count": 7,
+              "next_residual": "36.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "36.0",
+              "scaled_residual": "288.0",
+              "emitted_count": 2,
+              "next_residual": "88.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            125
+          ],
+          "predicted": "0.004",
+          "observed": "0.008",
+          "absolute_error": "0.004",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "8.0",
+              "emitted_count": 0,
+              "next_residual": "8.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "8.0",
+              "scaled_residual": "64.0",
+              "emitted_count": 0,
+              "next_residual": "64.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "64.0",
+              "scaled_residual": "512.0",
+              "emitted_count": 4,
+              "next_residual": "12.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            125
+          ],
+          "predicted": "-0.052",
+          "observed": "-0.008",
+          "absolute_error": "0.044",
+          "integer_memory": -1,
+          "initial_residual": "124.0",
+          "adapted_inputs": [
+            -1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "124.0",
+              "scaled_residual": "992.0",
+              "emitted_count": 7,
+              "next_residual": "117.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "117.0",
+              "scaled_residual": "936.0",
+              "emitted_count": 7,
+              "next_residual": "61.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "61.0",
+              "scaled_residual": "488.0",
+              "emitted_count": 3,
+              "next_residual": "113.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            123,
+            100
+          ],
+          "predicted": "1.190",
+          "observed": "1.23",
+          "absolute_error": "0.040",
+          "integer_memory": 1,
+          "initial_residual": "23.0",
+          "adapted_inputs": [
+            123.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "23.0",
+              "scaled_residual": "184.0",
+              "emitted_count": 1,
+              "next_residual": "84.0",
+              "stage_weight": "0.125"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "84.0",
+              "scaled_residual": "672.0",
+              "emitted_count": 6,
+              "next_residual": "72.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "72.0",
+              "scaled_residual": "576.0",
+              "emitted_count": 5,
+              "next_residual": "76.0",
+              "stage_weight": "0.001"
+            }
+          ],
+          "passed": false
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-e3e8e4b5ed6ef1fe"
+    },
+    {
+      "rank": 5,
+      "candidate_id": "RM-927ddb7f341b9dc1",
+      "program": {
+        "substrate": "anonymous_multistage_residual_memory_v0.1",
+        "parent_operation_id": "TRACE-04ec46485b805d91",
+        "parent_program": {
+          "substrate": "anonymous_dual_state_trace_memory_v0.1",
+          "parent_operation_id": "ADAPT-051ea7f44518dc30",
+          "parent_program": {
+            "substrate": "anonymous_conditional_input_adapter_v0.1",
+            "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+            "parent_program": {
+              "substrate": "anonymous_priority_branch_control_v0.1",
+              "parent_operation_id": "CTRL-2f51ec5cf9134520",
+              "base_program": {
+                "substrate": "anonymous_single_state_control_v0.1",
+                "initial_state": {
+                  "op": "a_input",
+                  "index": 0
+                },
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_state"
+                  },
+                  "right": {
+                    "op": "a_input",
+                    "index": 1
+                  },
+                  "halt_when": true
+                },
+                "update_when_continuing": {
+                  "op": "a_subtract",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "output": {
+                  "op": "a_state"
+                }
+              },
+              "priority_branch": {
+                "guard": {
+                  "op": "a_less",
+                  "left": {
+                    "op": "a_constant",
+                    "constant": -1.0
+                  },
+                  "right": {
+                    "op": "a_state"
+                  },
+                  "halt_when": false
+                },
+                "update_when_triggered": {
+                  "op": "a_add",
+                  "args": [
+                    {
+                      "op": "a_state"
+                    },
+                    {
+                      "op": "a_input",
+                      "index": 1
+                    }
+                  ]
+                },
+                "then": "restart_control_cycle"
+              }
+            },
+            "adapter": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": false
+              },
+              "second_input_when_triggered": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_constant",
+                    "constant": 0.0
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "second_input_otherwise": {
+                "op": "a_input",
+                "index": 1
+              }
+            }
+          },
+          "memory": {
+            "initial": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "update_on_priority_transition": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "update_on_base_transition": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_constant",
+                  "constant": 1.0
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          }
+        },
+        "cycle": {
+          "width": 10,
+          "stage_weights": [
+            "0.1",
+            "0.01",
+            "0.01"
+          ],
+          "residual_update": "bounded_repeated_addition_then_parent_call",
+          "output_update": "bounded_repeated_addition_of_stage_weight"
+        }
+      },
+      "fit_mse": 0.0005129999999999999,
+      "maximum_absolute_error": 0.045,
+      "coherence_error": 0.09,
+      "training_outputs": [
+        "0.1",
+        "0.01",
+        "0.01",
+        "0.5",
+        "0.75",
+        "0.17",
+        "0.35",
+        "0.36",
+        "0.37",
+        "-0.08",
+        "-0.35",
+        "2.3"
+      ],
+      "behavior_signature": [
+        "0.1",
+        "0.01",
+        "0.01",
+        "0.5",
+        "0.75",
+        "0.17",
+        "0.35",
+        "0.36",
+        "0.37",
+        "-0.08",
+        "-0.35",
+        "2.3",
+        "2.17",
+        "-2.08",
+        "1.08",
+        "-0.99"
+      ],
+      "logic_signature": "RMLOGIC-b4e9da55c9d2031a",
+      "program_nodes": 41,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            1,
+            10
+          ],
+          "predicted": "0.1",
+          "observed": "0.1",
+          "absolute_error": "0.0",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            100
+          ],
+          "predicted": "0.01",
+          "observed": "0.01",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            1000
+          ],
+          "predicted": "0.01",
+          "observed": "0.001",
+          "absolute_error": "0.009",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            1000.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 0,
+              "next_residual": "100.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "100.0",
+              "scaled_residual": "1000.0",
+              "emitted_count": 1,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            1,
+            2
+          ],
+          "predicted": "0.5",
+          "observed": "0.5",
+          "absolute_error": "0.0",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            2.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            3,
+            4
+          ],
+          "predicted": "0.75",
+          "observed": "0.75",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            3.0,
+            4.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "30.0",
+              "emitted_count": 7,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            8
+          ],
+          "predicted": "0.17",
+          "observed": "0.125",
+          "absolute_error": "0.045",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            7,
+            20
+          ],
+          "predicted": "0.35",
+          "observed": "0.35",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 3,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            9,
+            25
+          ],
+          "predicted": "0.36",
+          "observed": "0.36",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "9.0",
+          "adapted_inputs": [
+            9.0,
+            25.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "9.0",
+              "scaled_residual": "90.0",
+              "emitted_count": 3,
+              "next_residual": "15.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "15.0",
+              "scaled_residual": "150.0",
+              "emitted_count": 6,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            13,
+            40
+          ],
+          "predicted": "0.37",
+          "observed": "0.325",
+          "absolute_error": "0.045",
+          "integer_memory": 0,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            13.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "130.0",
+              "emitted_count": 3,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 2,
+              "next_residual": "20.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "20.0",
+              "scaled_residual": "200.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            8
+          ],
+          "predicted": "-0.08",
+          "observed": "-0.125",
+          "absolute_error": "0.045",
+          "integer_memory": -1,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -1.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 8,
+              "next_residual": "6.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "6.0",
+              "scaled_residual": "60.0",
+              "emitted_count": 7,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -7,
+            20
+          ],
+          "predicted": "-0.35",
+          "observed": "-0.35",
+          "absolute_error": "0.00",
+          "integer_memory": -1,
+          "initial_residual": "13.0",
+          "adapted_inputs": [
+            -7.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "13.0",
+              "scaled_residual": "130.0",
+              "emitted_count": 6,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            23,
+            -10
+          ],
+          "predicted": "2.3",
+          "observed": "2.3",
+          "absolute_error": "0.0",
+          "integer_memory": 2,
+          "initial_residual": "3.0",
+          "adapted_inputs": [
+            23.0,
+            10.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "3.0",
+              "scaled_residual": "30.0",
+              "emitted_count": 3,
+              "next_residual": "0.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            17,
+            8
+          ],
+          "predicted": "2.17",
+          "observed": "2.125",
+          "absolute_error": "0.045",
+          "integer_memory": 2,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 1,
+              "next_residual": "2.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "2.0",
+              "scaled_residual": "20.0",
+              "emitted_count": 2,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -17,
+            -8
+          ],
+          "predicted": "-2.08",
+          "observed": "-2.125",
+          "absolute_error": "0.045",
+          "integer_memory": -3,
+          "initial_residual": "7.0",
+          "adapted_inputs": [
+            -17.0,
+            8.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "7.0",
+              "scaled_residual": "70.0",
+              "emitted_count": 8,
+              "next_residual": "6.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "6.0",
+              "scaled_residual": "60.0",
+              "emitted_count": 7,
+              "next_residual": "4.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "4.0",
+              "scaled_residual": "40.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            19,
+            20
+          ],
+          "predicted": "0.95",
+          "observed": "0.95",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "19.0",
+          "adapted_inputs": [
+            19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "19.0",
+              "scaled_residual": "190.0",
+              "emitted_count": 9,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            -19,
+            20
+          ],
+          "predicted": "-0.95",
+          "observed": "-0.95",
+          "absolute_error": "0.00",
+          "integer_memory": -1,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            -19.0,
+            20.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            37,
+            40
+          ],
+          "predicted": "0.97",
+          "observed": "0.925",
+          "absolute_error": "0.045",
+          "integer_memory": 0,
+          "initial_residual": "37.0",
+          "adapted_inputs": [
+            37.0,
+            40.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "37.0",
+              "scaled_residual": "370.0",
+              "emitted_count": 9,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 2,
+              "next_residual": "20.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "20.0",
+              "scaled_residual": "200.0",
+              "emitted_count": 5,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            99,
+            100
+          ],
+          "predicted": "0.99",
+          "observed": "0.99",
+          "absolute_error": "0.00",
+          "integer_memory": 0,
+          "initial_residual": "99.0",
+          "adapted_inputs": [
+            99.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "99.0",
+              "scaled_residual": "990.0",
+              "emitted_count": 9,
+              "next_residual": "90.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "90.0",
+              "scaled_residual": "900.0",
+              "emitted_count": 9,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        },
+        {
+          "input": [
+            1,
+            125
+          ],
+          "predicted": "0.08",
+          "observed": "0.008",
+          "absolute_error": "0.072",
+          "integer_memory": 0,
+          "initial_residual": "1.0",
+          "adapted_inputs": [
+            1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "1.0",
+              "scaled_residual": "10.0",
+              "emitted_count": 0,
+              "next_residual": "10.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "10.0",
+              "scaled_residual": "100.0",
+              "emitted_count": 0,
+              "next_residual": "100.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "100.0",
+              "scaled_residual": "1000.0",
+              "emitted_count": 8,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            -1,
+            125
+          ],
+          "predicted": "0.01",
+          "observed": "-0.008",
+          "absolute_error": "0.018",
+          "integer_memory": -1,
+          "initial_residual": "124.0",
+          "adapted_inputs": [
+            -1.0,
+            125.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "124.0",
+              "scaled_residual": "1240.0",
+              "emitted_count": 9,
+              "next_residual": "115.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "115.0",
+              "scaled_residual": "1150.0",
+              "emitted_count": 9,
+              "next_residual": "25.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "25.0",
+              "scaled_residual": "250.0",
+              "emitted_count": 2,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": false
+        },
+        {
+          "input": [
+            123,
+            100
+          ],
+          "predicted": "1.23",
+          "observed": "1.23",
+          "absolute_error": "0.00",
+          "integer_memory": 1,
+          "initial_residual": "23.0",
+          "adapted_inputs": [
+            123.0,
+            100.0
+          ],
+          "stages": [
+            {
+              "stage_index": 0,
+              "input_residual": "23.0",
+              "scaled_residual": "230.0",
+              "emitted_count": 2,
+              "next_residual": "30.0",
+              "stage_weight": "0.1"
+            },
+            {
+              "stage_index": 1,
+              "input_residual": "30.0",
+              "scaled_residual": "300.0",
+              "emitted_count": 3,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            },
+            {
+              "stage_index": 2,
+              "input_residual": "0.0",
+              "scaled_residual": "0.0",
+              "emitted_count": 0,
+              "next_residual": "0.0",
+              "stage_weight": "0.01"
+            }
+          ],
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-18029c2313103a7e"
+    }
+  ],
+  "winner": {
+    "candidate_id": "RM-12affae0298660f3",
+    "program": {
+      "substrate": "anonymous_multistage_residual_memory_v0.1",
+      "parent_operation_id": "TRACE-04ec46485b805d91",
+      "parent_program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": 0.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "cycle": {
+        "width": 10,
+        "stage_weights": [
+          "0.1",
+          "0.01",
+          "0.001"
+        ],
+        "residual_update": "bounded_repeated_addition_then_parent_call",
+        "output_update": "bounded_repeated_addition_of_stage_weight"
+      }
+    },
+    "fit_mse": 0.0,
+    "maximum_absolute_error": 0.0,
+    "coherence_error": 0.0,
+    "training_outputs": [
+      "0.1",
+      "0.01",
+      "0.001",
+      "0.5",
+      "0.75",
+      "0.125",
+      "0.35",
+      "0.36",
+      "0.325",
+      "-0.125",
+      "-0.35",
+      "2.3"
+    ],
+    "behavior_signature": [
+      "0.1",
+      "0.01",
+      "0.001",
+      "0.5",
+      "0.75",
+      "0.125",
+      "0.35",
+      "0.36",
+      "0.325",
+      "-0.125",
+      "-0.35",
+      "2.3",
+      "2.125",
+      "-2.125",
+      "0.999",
+      "-0.999"
+    ],
+    "logic_signature": "RMLOGIC-49b3b4b5bd03d27f",
+    "program_nodes": 41,
+    "exact": true,
+    "development_results": [
+      {
+        "input": [
+          1,
+          10
+        ],
+        "predicted": "0.1",
+        "observed": "0.1",
+        "absolute_error": "0.0",
+        "integer_memory": 0,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1.0,
+          10.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 1,
+            "next_residual": "0.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          100
+        ],
+        "predicted": "0.01",
+        "observed": "0.01",
+        "absolute_error": "0.00",
+        "integer_memory": 0,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1.0,
+          100.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 0,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 1,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          1000
+        ],
+        "predicted": "0.001",
+        "observed": "0.001",
+        "absolute_error": "0.000",
+        "integer_memory": 0,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1.0,
+          1000.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 0,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 0,
+            "next_residual": "100.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "100.0",
+            "scaled_residual": "1000.0",
+            "emitted_count": 1,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          2
+        ],
+        "predicted": "0.5",
+        "observed": "0.5",
+        "absolute_error": "0.0",
+        "integer_memory": 0,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1.0,
+          2.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          3,
+          4
+        ],
+        "predicted": "0.75",
+        "observed": "0.75",
+        "absolute_error": "0.00",
+        "integer_memory": 0,
+        "initial_residual": "3.0",
+        "adapted_inputs": [
+          3.0,
+          4.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "3.0",
+            "scaled_residual": "30.0",
+            "emitted_count": 7,
+            "next_residual": "2.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "2.0",
+            "scaled_residual": "20.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          8
+        ],
+        "predicted": "0.125",
+        "observed": "0.125",
+        "absolute_error": "0.000",
+        "integer_memory": 0,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1.0,
+          8.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 1,
+            "next_residual": "2.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "2.0",
+            "scaled_residual": "20.0",
+            "emitted_count": 2,
+            "next_residual": "4.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "4.0",
+            "scaled_residual": "40.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          7,
+          20
+        ],
+        "predicted": "0.35",
+        "observed": "0.35",
+        "absolute_error": "0.00",
+        "integer_memory": 0,
+        "initial_residual": "7.0",
+        "adapted_inputs": [
+          7.0,
+          20.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "7.0",
+            "scaled_residual": "70.0",
+            "emitted_count": 3,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          9,
+          25
+        ],
+        "predicted": "0.36",
+        "observed": "0.36",
+        "absolute_error": "0.00",
+        "integer_memory": 0,
+        "initial_residual": "9.0",
+        "adapted_inputs": [
+          9.0,
+          25.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "9.0",
+            "scaled_residual": "90.0",
+            "emitted_count": 3,
+            "next_residual": "15.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "15.0",
+            "scaled_residual": "150.0",
+            "emitted_count": 6,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          13,
+          40
+        ],
+        "predicted": "0.325",
+        "observed": "0.325",
+        "absolute_error": "0.000",
+        "integer_memory": 0,
+        "initial_residual": "13.0",
+        "adapted_inputs": [
+          13.0,
+          40.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "13.0",
+            "scaled_residual": "130.0",
+            "emitted_count": 3,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 2,
+            "next_residual": "20.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "20.0",
+            "scaled_residual": "200.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -1,
+          8
+        ],
+        "predicted": "-0.125",
+        "observed": "-0.125",
+        "absolute_error": "0.000",
+        "integer_memory": -1,
+        "initial_residual": "7.0",
+        "adapted_inputs": [
+          -1.0,
+          8.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "7.0",
+            "scaled_residual": "70.0",
+            "emitted_count": 8,
+            "next_residual": "6.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "6.0",
+            "scaled_residual": "60.0",
+            "emitted_count": 7,
+            "next_residual": "4.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "4.0",
+            "scaled_residual": "40.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -7,
+          20
+        ],
+        "predicted": "-0.35",
+        "observed": "-0.35",
+        "absolute_error": "0.00",
+        "integer_memory": -1,
+        "initial_residual": "13.0",
+        "adapted_inputs": [
+          -7.0,
+          20.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "13.0",
+            "scaled_residual": "130.0",
+            "emitted_count": 6,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          23,
+          -10
+        ],
+        "predicted": "2.3",
+        "observed": "2.3",
+        "absolute_error": "0.0",
+        "integer_memory": 2,
+        "initial_residual": "3.0",
+        "adapted_inputs": [
+          23.0,
+          10.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "3.0",
+            "scaled_residual": "30.0",
+            "emitted_count": 3,
+            "next_residual": "0.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "sealed_results": [
+      {
+        "input": [
+          17,
+          8
+        ],
+        "predicted": "2.125",
+        "observed": "2.125",
+        "absolute_error": "0.000",
+        "integer_memory": 2,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          17.0,
+          8.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 1,
+            "next_residual": "2.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "2.0",
+            "scaled_residual": "20.0",
+            "emitted_count": 2,
+            "next_residual": "4.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "4.0",
+            "scaled_residual": "40.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -17,
+          -8
+        ],
+        "predicted": "-2.125",
+        "observed": "-2.125",
+        "absolute_error": "0.000",
+        "integer_memory": -3,
+        "initial_residual": "7.0",
+        "adapted_inputs": [
+          -17.0,
+          8.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "7.0",
+            "scaled_residual": "70.0",
+            "emitted_count": 8,
+            "next_residual": "6.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "6.0",
+            "scaled_residual": "60.0",
+            "emitted_count": 7,
+            "next_residual": "4.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "4.0",
+            "scaled_residual": "40.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          19,
+          20
+        ],
+        "predicted": "0.95",
+        "observed": "0.95",
+        "absolute_error": "0.00",
+        "integer_memory": 0,
+        "initial_residual": "19.0",
+        "adapted_inputs": [
+          19.0,
+          20.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "19.0",
+            "scaled_residual": "190.0",
+            "emitted_count": 9,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -19,
+          20
+        ],
+        "predicted": "-0.95",
+        "observed": "-0.95",
+        "absolute_error": "0.00",
+        "integer_memory": -1,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          -19.0,
+          20.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 0,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          37,
+          40
+        ],
+        "predicted": "0.925",
+        "observed": "0.925",
+        "absolute_error": "0.000",
+        "integer_memory": 0,
+        "initial_residual": "37.0",
+        "adapted_inputs": [
+          37.0,
+          40.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "37.0",
+            "scaled_residual": "370.0",
+            "emitted_count": 9,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 2,
+            "next_residual": "20.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "20.0",
+            "scaled_residual": "200.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          99,
+          100
+        ],
+        "predicted": "0.99",
+        "observed": "0.99",
+        "absolute_error": "0.00",
+        "integer_memory": 0,
+        "initial_residual": "99.0",
+        "adapted_inputs": [
+          99.0,
+          100.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "99.0",
+            "scaled_residual": "990.0",
+            "emitted_count": 9,
+            "next_residual": "90.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "90.0",
+            "scaled_residual": "900.0",
+            "emitted_count": 9,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          125
+        ],
+        "predicted": "0.008",
+        "observed": "0.008",
+        "absolute_error": "0.000",
+        "integer_memory": 0,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1.0,
+          125.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 0,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 0,
+            "next_residual": "100.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "100.0",
+            "scaled_residual": "1000.0",
+            "emitted_count": 8,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -1,
+          125
+        ],
+        "predicted": "-0.008",
+        "observed": "-0.008",
+        "absolute_error": "0.000",
+        "integer_memory": -1,
+        "initial_residual": "124.0",
+        "adapted_inputs": [
+          -1.0,
+          125.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "124.0",
+            "scaled_residual": "1240.0",
+            "emitted_count": 9,
+            "next_residual": "115.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "115.0",
+            "scaled_residual": "1150.0",
+            "emitted_count": 9,
+            "next_residual": "25.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "25.0",
+            "scaled_residual": "250.0",
+            "emitted_count": 2,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          123,
+          100
+        ],
+        "predicted": "1.23",
+        "observed": "1.23",
+        "absolute_error": "0.00",
+        "integer_memory": 1,
+        "initial_residual": "23.0",
+        "adapted_inputs": [
+          123.0,
+          100.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "23.0",
+            "scaled_residual": "230.0",
+            "emitted_count": 2,
+            "next_residual": "30.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "30.0",
+            "scaled_residual": "300.0",
+            "emitted_count": 3,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "adversarial_results": [
+      {
+        "input": [
+          999,
+          1000
+        ],
+        "predicted": "0.999",
+        "observed": "0.999",
+        "absolute_error": "0.000",
+        "integer_memory": 0,
+        "initial_residual": "999.0",
+        "adapted_inputs": [
+          999.0,
+          1000.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "999.0",
+            "scaled_residual": "9990.0",
+            "emitted_count": 9,
+            "next_residual": "990.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "990.0",
+            "scaled_residual": "9900.0",
+            "emitted_count": 9,
+            "next_residual": "900.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "900.0",
+            "scaled_residual": "9000.0",
+            "emitted_count": 9,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -999,
+          1000
+        ],
+        "predicted": "-0.999",
+        "observed": "-0.999",
+        "absolute_error": "0.000",
+        "integer_memory": -1,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          -999.0,
+          1000.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 0,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 0,
+            "next_residual": "100.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "100.0",
+            "scaled_residual": "1000.0",
+            "emitted_count": 1,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          1001,
+          1000
+        ],
+        "predicted": "1.001",
+        "observed": "1.001",
+        "absolute_error": "0.000",
+        "integer_memory": 1,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          1001.0,
+          1000.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 0,
+            "next_residual": "10.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "10.0",
+            "scaled_residual": "100.0",
+            "emitted_count": 0,
+            "next_residual": "100.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "100.0",
+            "scaled_residual": "1000.0",
+            "emitted_count": 1,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -1001,
+          -1000
+        ],
+        "predicted": "-1.001",
+        "observed": "-1.001",
+        "absolute_error": "0.000",
+        "integer_memory": -2,
+        "initial_residual": "999.0",
+        "adapted_inputs": [
+          -1001.0,
+          1000.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "999.0",
+            "scaled_residual": "9990.0",
+            "emitted_count": 9,
+            "next_residual": "990.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "990.0",
+            "scaled_residual": "9900.0",
+            "emitted_count": 9,
+            "next_residual": "900.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "900.0",
+            "scaled_residual": "9000.0",
+            "emitted_count": 9,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          255,
+          8
+        ],
+        "predicted": "31.875",
+        "observed": "31.875",
+        "absolute_error": "0.000",
+        "integer_memory": 31,
+        "initial_residual": "7.0",
+        "adapted_inputs": [
+          255.0,
+          8.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "7.0",
+            "scaled_residual": "70.0",
+            "emitted_count": 8,
+            "next_residual": "6.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "6.0",
+            "scaled_residual": "60.0",
+            "emitted_count": 7,
+            "next_residual": "4.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "4.0",
+            "scaled_residual": "40.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          -255,
+          8
+        ],
+        "predicted": "-31.875",
+        "observed": "-31.875",
+        "absolute_error": "0.000",
+        "integer_memory": -32,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          -255.0,
+          8.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 1,
+            "next_residual": "2.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "2.0",
+            "scaled_residual": "20.0",
+            "emitted_count": 2,
+            "next_residual": "4.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "4.0",
+            "scaled_residual": "40.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          5,
+          2
+        ],
+        "predicted": "2.5",
+        "observed": "2.5",
+        "absolute_error": "0.0",
+        "integer_memory": 2,
+        "initial_residual": "1.0",
+        "adapted_inputs": [
+          5.0,
+          2.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "1.0",
+            "scaled_residual": "10.0",
+            "emitted_count": 5,
+            "next_residual": "0.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      },
+      {
+        "input": [
+          0,
+          125
+        ],
+        "predicted": "0",
+        "observed": "0",
+        "absolute_error": "0",
+        "integer_memory": 0,
+        "initial_residual": "0.0",
+        "adapted_inputs": [
+          0.0,
+          125.0
+        ],
+        "stages": [
+          {
+            "stage_index": 0,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.1"
+          },
+          {
+            "stage_index": 1,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.01"
+          },
+          {
+            "stage_index": 2,
+            "input_residual": "0.0",
+            "scaled_residual": "0.0",
+            "emitted_count": 0,
+            "next_residual": "0.0",
+            "stage_weight": "0.001"
+          }
+        ],
+        "passed": true
+      }
+    ],
+    "posthoc_human_interpretation": "The candidate selected a cycle width of ten and coherent stage weights 0.1, 0.01, and 0.001, then generated successive output positions through repeated addition and verified parent calls."
+  },
+  "gates": [
+    {
+      "gate_id": "verified_trace_memory_parent_loaded",
+      "passed": true,
+      "actual": "TRACE-04ec46485b805d91",
+      "threshold": "active verified parent"
+    },
+    {
+      "gate_id": "target_names_and_operations_absent",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "development_exact",
+      "passed": true,
+      "actual": 0.0,
+      "threshold": 0
+    },
+    {
+      "gate_id": "internal_stage_weights_are_coherent",
+      "passed": true,
+      "actual": {
+        "cycle_width": 10,
+        "stage_weights": [
+          "0.1",
+          "0.01",
+          "0.001"
+        ]
+      },
+      "threshold": "each later weight repeated cycle_width times equals prior weight"
+    },
+    {
+      "gate_id": "sealed_noninteger_outputs_exact",
+      "passed": true,
+      "actual": 9,
+      "threshold": 9
+    },
+    {
+      "gate_id": "adversarial_thousandths_exact",
+      "passed": true,
+      "actual": 8,
+      "threshold": 8
+    },
+    {
+      "gate_id": "five_distinct_program_structures_reported",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    }
+  ],
+  "success_room_record": {
+    "room_record_id": "SF-1f9f1465815a0f8c",
+    "operation_id": "STAGE-12affae0298660f3",
+    "definition": {
+      "substrate": "anonymous_multistage_residual_memory_v0.1",
+      "parent_operation_id": "TRACE-04ec46485b805d91",
+      "parent_program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": 0.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "cycle": {
+        "width": 10,
+        "stage_weights": [
+          "0.1",
+          "0.01",
+          "0.001"
+        ],
+        "residual_update": "bounded_repeated_addition_then_parent_call",
+        "output_update": "bounded_repeated_addition_of_stage_weight"
+      }
+    },
+    "parent_operation_ids": [
+      "TRACE-04ec46485b805d91"
+    ],
+    "validation_scope": "anonymous_noninteger_output_three_stage_v0.1",
+    "knowledge_status": "bounded",
+    "evidence": {
+      "run_id": "RUN-multistage-residual-20260818T082512954727Z",
+      "development_case_count": 12,
+      "sealed_case_count": 9,
+      "adversarial_case_count": 8,
+      "all_exact": true
+    }
+  },
+  "success_room_active_count": 9,
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The result is bounded to at most three generated output stages.",
+    "The registered evidence covers terminating noninteger outputs, not recurring expansions.",
+    "Inputs remain integer pairs and the second input must be nonzero.",
+    "The host enumerates anonymous cycle widths 2 through 12 and exposes observed output magnitudes as candidate weights.",
+    "The evaluator uses exact Decimal arithmetic after the learner selects its program."
+  ]
+}

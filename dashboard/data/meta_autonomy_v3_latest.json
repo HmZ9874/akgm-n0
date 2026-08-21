@@ -1,0 +1,2822 @@
+{
+  "run_id": "RUN-meta-autonomy-v3-20260820T050223485321Z",
+  "created_at": "2026-08-20T05:02:23.485321Z",
+  "verdict": "bounded_threshold_reached",
+  "benchmark": {
+    "report_version": "meta-autonomy-v3-benchmark-v0.1",
+    "claim": "bounded_meta_autonomy_benchmark_only",
+    "required_score_per_dimension": 8.0,
+    "overall_score": 8.0,
+    "passed": true,
+    "learner_information_boundary": {
+      "received": [
+        "opaque world id",
+        "integer input rows",
+        "integer output rows",
+        "generic grammar mutations"
+      ],
+      "withheld": [
+        "sealed rows",
+        "mathematical names",
+        "target formulas",
+        "benchmark scoring",
+        "proof boundary expectation"
+      ]
+    },
+    "initial_genome": {
+      "input_channels": 1,
+      "state_cells": 1,
+      "loop_depth": 0,
+      "branch_slots": 0,
+      "output_arity": 1
+    },
+    "final_genome": {
+      "input_channels": 2,
+      "state_cells": 2,
+      "loop_depth": 1,
+      "branch_slots": 1,
+      "output_arity": 2
+    },
+    "autonomous_selections": [
+      {
+        "selection_index": 0,
+        "selected_world_id": "AW-c203",
+        "learner_score": 101,
+        "solved": true,
+        "grammar_before": {
+          "input_channels": 1,
+          "state_cells": 1,
+          "loop_depth": 0,
+          "branch_slots": 0,
+          "output_arity": 1
+        },
+        "grammar_after": {
+          "input_channels": 2,
+          "state_cells": 1,
+          "loop_depth": 1,
+          "branch_slots": 0,
+          "output_arity": 1
+        },
+        "mutations": [
+          "grow_input_channel",
+          "grow_counter_fold"
+        ],
+        "host_selected": false
+      },
+      {
+        "selection_index": 1,
+        "selected_world_id": "AW-e52a",
+        "learner_score": 94,
+        "solved": true,
+        "grammar_before": {
+          "input_channels": 2,
+          "state_cells": 1,
+          "loop_depth": 1,
+          "branch_slots": 0,
+          "output_arity": 1
+        },
+        "grammar_after": {
+          "input_channels": 2,
+          "state_cells": 1,
+          "loop_depth": 1,
+          "branch_slots": 0,
+          "output_arity": 2
+        },
+        "mutations": [
+          "grow_product_output"
+        ],
+        "host_selected": false
+      },
+      {
+        "selection_index": 2,
+        "selected_world_id": "AW-d814",
+        "learner_score": 78,
+        "solved": true,
+        "grammar_before": {
+          "input_channels": 2,
+          "state_cells": 1,
+          "loop_depth": 1,
+          "branch_slots": 0,
+          "output_arity": 2
+        },
+        "grammar_after": {
+          "input_channels": 2,
+          "state_cells": 2,
+          "loop_depth": 1,
+          "branch_slots": 0,
+          "output_arity": 2
+        },
+        "mutations": [
+          "grow_state_cell"
+        ],
+        "host_selected": false
+      },
+      {
+        "selection_index": 3,
+        "selected_world_id": "AW-91bc",
+        "learner_score": 26,
+        "solved": true,
+        "grammar_before": {
+          "input_channels": 2,
+          "state_cells": 2,
+          "loop_depth": 1,
+          "branch_slots": 0,
+          "output_arity": 2
+        },
+        "grammar_after": {
+          "input_channels": 2,
+          "state_cells": 2,
+          "loop_depth": 1,
+          "branch_slots": 1,
+          "output_arity": 2
+        },
+        "mutations": [
+          "grow_guarded_path"
+        ],
+        "host_selected": false
+      },
+      {
+        "selection_index": 4,
+        "selected_world_id": "AW-7fa1",
+        "learner_score": -6,
+        "solved": true,
+        "grammar_before": {
+          "input_channels": 2,
+          "state_cells": 2,
+          "loop_depth": 1,
+          "branch_slots": 1,
+          "output_arity": 2
+        },
+        "grammar_after": {
+          "input_channels": 2,
+          "state_cells": 2,
+          "loop_depth": 1,
+          "branch_slots": 1,
+          "output_arity": 2
+        },
+        "mutations": [],
+        "host_selected": false
+      }
+    ],
+    "sealed_results": [
+      {
+        "world_id": "AW-7fa1",
+        "program": {
+          "program_id": "M3P-b00bd8c91e3f5bdc",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                2,
+                -1
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        "sealed_case_count": 3,
+        "sealed_passed_count": 3,
+        "passed": true,
+        "posthoc_equivalent": "two-input affine relation",
+        "target_name_seen_by_learner": false
+      },
+      {
+        "world_id": "AW-91bc",
+        "program": {
+          "program_id": "M3P-f1b8f161646c229b",
+          "kind": "guarded",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 0,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                -1
+              ],
+              "bias": 0
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        "sealed_case_count": 3,
+        "sealed_passed_count": 3,
+        "passed": true,
+        "posthoc_equivalent": "sign-guarded magnitude",
+        "target_name_seen_by_learner": false
+      },
+      {
+        "world_id": "AW-c203",
+        "program": {
+          "program_id": "M3P-24a1ddce7efcaf60",
+          "kind": "counter_fold",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "sealed_case_count": 4,
+        "sealed_passed_count": 4,
+        "passed": true,
+        "posthoc_equivalent": "repeated accumulation; equivalent to natural multiplication",
+        "target_name_seen_by_learner": false
+      },
+      {
+        "world_id": "AW-d814",
+        "program": {
+          "program_id": "M3P-c5f2bfdff598e9eb",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              -1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1,
+            -1
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "sealed_case_count": 3,
+        "sealed_passed_count": 3,
+        "passed": true,
+        "posthoc_equivalent": "two-state triangular accumulation",
+        "target_name_seen_by_learner": false
+      },
+      {
+        "world_id": "AW-e52a",
+        "program": {
+          "program_id": "M3P-867befcd2c5c1b54",
+          "kind": "product_output",
+          "input_width": 1,
+          "output_arity": 2,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        "sealed_case_count": 3,
+        "sealed_passed_count": 3,
+        "passed": true,
+        "posthoc_equivalent": "two-output product construction",
+        "target_name_seen_by_learner": false
+      }
+    ],
+    "mistake_transfer": {
+      "context": "shape:2>1",
+      "training_programs": [
+        {
+          "program_id": "M3P-b8d4b04809b7439f",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-30a19823953f24d0",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                2,
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        }
+      ],
+      "unseen_programs": [
+        {
+          "program_id": "M3P-2d91de202b72842f",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                -2,
+                0
+              ],
+              "bias": -2
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-80ea55a02669e17c",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                -2,
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-575f5e20dc3ddde9",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                -1,
+                0
+              ],
+              "bias": 2
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-8a25ac8ccae478cf",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1,
+                0
+              ],
+              "bias": -2
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-bccb74cfb3c16a2e",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1,
+                0
+              ],
+              "bias": 2
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-5ee425437fbd046d",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                2,
+                0
+              ],
+              "bias": -2
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-257014a6fe6715a0",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                2,
+                0
+              ],
+              "bias": 2
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        },
+        {
+          "program_id": "M3P-8c09871817c5edaf",
+          "kind": "affine",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                -1,
+                0
+              ],
+              "bias": -1
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": []
+        }
+      ],
+      "correct_program": {
+        "program_id": "M3P-b00bd8c91e3f5bdc",
+        "kind": "affine",
+        "input_width": 2,
+        "output_arity": 1,
+        "affine_outputs": [
+          {
+            "coefficients": [
+              2,
+              -1
+            ],
+            "bias": 1
+          }
+        ],
+        "guard_input": -1,
+        "guard_mode": -1,
+        "triggered_outputs": [],
+        "counter_input": -1,
+        "initial_registers": [],
+        "update_matrix": [],
+        "update_bias": [],
+        "output_registers": []
+      },
+      "clause": {
+        "clause_id": "FCL-305dd5cc19fd3e83",
+        "context_key": "shape:2>1",
+        "required_atoms": [
+          "active_inputs:0",
+          "has_guard:0",
+          "has_loop:0",
+          "kind:affine",
+          "output_arity:1",
+          "state_width:0"
+        ],
+        "support": 2,
+        "counterexample_count": 2
+      },
+      "unseen_rejected": [
+        "M3P-2d91de202b72842f",
+        "M3P-80ea55a02669e17c",
+        "M3P-575f5e20dc3ddde9",
+        "M3P-8a25ac8ccae478cf",
+        "M3P-bccb74cfb3c16a2e",
+        "M3P-5ee425437fbd046d",
+        "M3P-257014a6fe6715a0",
+        "M3P-8c09871817c5edaf"
+      ],
+      "unseen_count": 8,
+      "false_positive_on_correct": false
+    },
+    "formal_proof_results": [
+      {
+        "case_id": "FP-01",
+        "program": {
+          "program_id": "M3P-dac1c27f26d55d77",
+          "kind": "counter_fold",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 1,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "degree_bound": 2,
+        "invariant_expected": true,
+        "certificate_count": 1,
+        "certificates": [
+          {
+            "certificate_id": "INV-dbae6daf24c8356f",
+            "program_id": "M3P-dac1c27f26d55d77",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              -1,
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 2
+          }
+        ],
+        "kernel_results": [
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          }
+        ],
+        "passed": true
+      },
+      {
+        "case_id": "FP-02",
+        "program": {
+          "program_id": "M3P-feaf1c6e3ae94bd3",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            0,
+            1
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "degree_bound": 2,
+        "invariant_expected": true,
+        "certificate_count": 4,
+        "certificates": [
+          {
+            "certificate_id": "INV-55c62a7cee86143c",
+            "program_id": "M3P-feaf1c6e3ae94bd3",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              1,
+              1,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          },
+          {
+            "certificate_id": "INV-2038de1ef3675944",
+            "program_id": "M3P-feaf1c6e3ae94bd3",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          },
+          {
+            "certificate_id": "INV-8efb7b9b9d0f3a22",
+            "program_id": "M3P-feaf1c6e3ae94bd3",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              1,
+              1,
+              -2,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -2,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          },
+          {
+            "certificate_id": "INV-e3763acd7128a9a8",
+            "program_id": "M3P-feaf1c6e3ae94bd3",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              1,
+              1,
+              -1,
+              2,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          }
+        ],
+        "kernel_results": [
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          }
+        ],
+        "passed": true
+      },
+      {
+        "case_id": "FP-03",
+        "program": {
+          "program_id": "M3P-53b2324264d8951b",
+          "kind": "counter_fold",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 1,
+          "initial_registers": [
+            {
+              "coefficients": [
+                1,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "update_bias": [
+            3
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "degree_bound": 2,
+        "invariant_expected": true,
+        "certificate_count": 4,
+        "certificates": [
+          {
+            "certificate_id": "INV-6f69b88dc5be2355",
+            "program_id": "M3P-53b2324264d8951b",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              1,
+              3,
+              -3,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 2
+          },
+          {
+            "certificate_id": "INV-4f6b8742a383ec68",
+            "program_id": "M3P-53b2324264d8951b",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              3,
+              -3,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 2
+          },
+          {
+            "certificate_id": "INV-c19511d1ca707ee0",
+            "program_id": "M3P-53b2324264d8951b",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              0,
+              0,
+              3,
+              -3,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 2
+          },
+          {
+            "certificate_id": "INV-645a2e401850de5b",
+            "program_id": "M3P-53b2324264d8951b",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1,
+              6,
+              0,
+              0,
+              9,
+              0,
+              0,
+              -9,
+              -6,
+              -1
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 2
+          }
+        ],
+        "kernel_results": [
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          }
+        ],
+        "passed": true
+      },
+      {
+        "case_id": "FP-04",
+        "program": {
+          "program_id": "M3P-8f91a0789be35a96",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ]
+          ],
+          "update_bias": [
+            0,
+            2
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "degree_bound": 2,
+        "invariant_expected": true,
+        "certificate_count": 4,
+        "certificates": [
+          {
+            "certificate_id": "INV-b4641e4da246f0c0",
+            "program_id": "M3P-8f91a0789be35a96",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              1,
+              2,
+              -2,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          },
+          {
+            "certificate_id": "INV-a5330dce81128ef1",
+            "program_id": "M3P-8f91a0789be35a96",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              2,
+              -2,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          },
+          {
+            "certificate_id": "INV-acf73533f7b1ecfa",
+            "program_id": "M3P-8f91a0789be35a96",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              0,
+              0,
+              1,
+              -1,
+              0,
+              1,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              -1,
+              0,
+              0,
+              0
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          },
+          {
+            "certificate_id": "INV-c910ecc2d1f6aed3",
+            "program_id": "M3P-8f91a0789be35a96",
+            "variable_count": 4,
+            "degree": 2,
+            "coefficients": [
+              1,
+              4,
+              -4,
+              4,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1
+            ],
+            "monomials": [
+              [
+                0,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                0,
+                1
+              ],
+              [
+                2,
+                0,
+                0,
+                0
+              ],
+              [
+                1,
+                1,
+                0,
+                0
+              ],
+              [
+                1,
+                0,
+                1,
+                0
+              ],
+              [
+                1,
+                0,
+                0,
+                1
+              ],
+              [
+                0,
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                1,
+                0
+              ],
+              [
+                0,
+                1,
+                0,
+                1
+              ],
+              [
+                0,
+                0,
+                2,
+                0
+              ],
+              [
+                0,
+                0,
+                1,
+                1
+              ],
+              [
+                0,
+                0,
+                0,
+                2
+              ]
+            ],
+            "ranking_variable": 1
+          }
+        ],
+        "kernel_results": [
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          },
+          {
+            "passed": true,
+            "obligations": [
+              {
+                "id": "program_binding",
+                "passed": true
+              },
+              {
+                "id": "nonzero_polynomial",
+                "passed": true
+              },
+              {
+                "id": "initialization_identity",
+                "passed": true
+              },
+              {
+                "id": "transition_preservation_identity",
+                "passed": true
+              },
+              {
+                "id": "natural_counter_ranking",
+                "passed": true
+              }
+            ]
+          }
+        ],
+        "passed": true
+      },
+      {
+        "case_id": "FP-05",
+        "program": {
+          "program_id": "M3P-b76bc29e366947aa",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              2,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ]
+        },
+        "degree_bound": 2,
+        "invariant_expected": false,
+        "certificate_count": 0,
+        "certificates": [],
+        "kernel_results": [],
+        "passed": true
+      }
+    ],
+    "dimension_scores": {
+      "mistake_family_transfer": 10.0,
+      "autonomous_frontier_choice": 10.0,
+      "grammar_self_extension": 10.0,
+      "formal_proof_autonomy": 8.0,
+      "sealed_open_ended_generalization": 10.0
+    },
+    "limitations": [
+      "The score is for five declared capabilities on this sealed finite benchmark, not a universal intelligence score.",
+      "Program synthesis is restricted to integer affine, guarded, bounded counter-fold, and product-output genomes.",
+      "The proof miner is complete only for polynomial invariants up to degree two in its supported transition language.",
+      "The geometric-growth boundary is intentionally not certified by the degree-two invariant kernel."
+    ],
+    "content_digest": "7045bc1dc9108104689a7b75f2fc434daf9ba7be589998c5f684bae777130df2"
+  },
+  "verification": {
+    "verifier_version": "meta-autonomy-v3-independent-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "id": "report_version",
+        "passed": true,
+        "actual": "meta-autonomy-v3-benchmark-v0.1"
+      },
+      {
+        "id": "content_digest",
+        "passed": true,
+        "actual": "7045bc1dc9108104689a7b75f2fc434daf9ba7be589998c5f684bae777130df2"
+      },
+      {
+        "id": "targets_withheld",
+        "passed": true,
+        "actual": {
+          "received": [
+            "opaque world id",
+            "integer input rows",
+            "integer output rows",
+            "generic grammar mutations"
+          ],
+          "withheld": [
+            "sealed rows",
+            "mathematical names",
+            "target formulas",
+            "benchmark scoring",
+            "proof boundary expectation"
+          ]
+        }
+      },
+      {
+        "id": "all_sealed_programs_replay",
+        "passed": true,
+        "actual": 5
+      },
+      {
+        "id": "mistake_family_replays",
+        "passed": true,
+        "actual": {
+          "clause_id": "FCL-305dd5cc19fd3e83",
+          "context_key": "shape:2>1",
+          "required_atoms": [
+            "active_inputs:0",
+            "has_guard:0",
+            "has_loop:0",
+            "kind:affine",
+            "output_arity:1",
+            "state_width:0"
+          ],
+          "support": 2,
+          "counterexample_count": 2
+        }
+      },
+      {
+        "id": "formal_proofs_replay",
+        "passed": true,
+        "actual": 5
+      },
+      {
+        "id": "every_dimension_at_least_eight",
+        "passed": true,
+        "actual": {
+          "mistake_family_transfer": 10.0,
+          "autonomous_frontier_choice": 10.0,
+          "grammar_self_extension": 10.0,
+          "formal_proof_autonomy": 8.0,
+          "sealed_open_ended_generalization": 10.0
+        }
+      },
+      {
+        "id": "learner_selected_every_frontier",
+        "passed": true,
+        "actual": 5
+      }
+    ]
+  },
+  "rooms": {
+    "success_path": "artifacts/meta_autonomy/v3/success/benchmarks.jsonl",
+    "mistake_path": "artifacts/meta_autonomy/v3/mistakes/generalized_failure_families.jsonl",
+    "success_count": 1,
+    "mistake_count": 10,
+    "success_event_hash": "4561343a2e8180c7589ae0378cec2d7a4f89998edfd98be22d5cf3337522c976",
+    "hash_chained": true,
+    "proof_replayed_on_load": true
+  }
+}

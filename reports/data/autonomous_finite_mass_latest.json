@@ -1,0 +1,1172 @@
+{
+  "report_version": "autonomous-finite-mass-v0.1",
+  "run_id": "RUN-autonomous-finite-mass-20260820T024320796010Z",
+  "created_at": "2026-08-20T02:43:20.796010Z",
+  "verdict": "finite_uniform_probability_and_binomial_mass_derived_without_new_foundation_inflation",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-ratio-20260820T024007776553Z",
+    "frontier": {
+      "world_id": "WORLD-finite-uniform-event-mass-61",
+      "structural_signature": "finite_uniform_event_mass",
+      "status": "ready",
+      "dependencies": [
+        "binomial_coefficient",
+        "normalized_ratio_representation"
+      ],
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "search": {
+    "candidate_count": 24,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "MAP-2ec02f41af6c1032",
+      "numerator_mode": 0,
+      "denominator_mode": 0,
+      "normalize": true
+    },
+    "selected_token_cost": 245,
+    "selected_reward": 999755
+  },
+  "derived_discovery": {
+    "semantic": {
+      "semantic_id": "MSEM-3e8b2a2c8bfae1e3",
+      "program": {
+        "program_id": "MAP-2ec02f41af6c1032",
+        "numerator_mode": 0,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "dependency_semantic_ids": [
+        "QSEM-3b412465307b4dee",
+        "CSEM-b9aacd5426b56d40",
+        "ASEM-4b7c892702eaa68a"
+      ],
+      "source_task_ids": [
+        "WORLD-finite-uniform-event-mass-61"
+      ]
+    },
+    "structural_origin": "assign each finite subcollection its normalized cardinality relative to a nonempty finite whole",
+    "posthoc_name": "finite uniform probability measure",
+    "posthoc_formula": "mu(E)=|E|/|Omega|; for binary length n, mu(K=k)=C(n,k)/2^n",
+    "derived_results": [
+      "finite probability normalization and additivity",
+      "fair binary binomial distribution"
+    ],
+    "counts_as_new_foundation": false
+  },
+  "verification": {
+    "verifier_version": "independent-finite-mass-verifier-v0.1",
+    "semantic_id": "MSEM-3e8b2a2c8bfae1e3",
+    "passed": true,
+    "structural_statement": "assign each finite subcollection its normalized cardinality relative to a nonempty finite whole",
+    "posthoc_mathematical_name": "finite uniform probability measure",
+    "posthoc_formula": "mu(E)=|E|/|Omega|; for binary length n, mu(K=k)=C(n,k)/2^n",
+    "derived_results": [
+      "finite probability normalization and additivity",
+      "fair binary binomial distribution"
+    ],
+    "declared_domain": "finite uniform nonempty sample spaces and their subcollections",
+    "not_claimed": "nonuniform probability, expectation, independence, conditional probability, infinite sample spaces, sigma-additivity, or measure theory",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "finite cardinality partition identities composed with the proved unique rational normal form",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "MSEM-3e8b2a2c8bfae1e3"
+      },
+      {
+        "obligation_id": "exact_mass_program_binding",
+        "passed": true,
+        "evidence": "MAP-2ec02f41af6c1032"
+      },
+      {
+        "obligation_id": "event_over_whole_normalized_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "MAP-2ec02f41af6c1032",
+          "numerator_mode": 0,
+          "denominator_mode": 0,
+          "normalize": true
+        }
+      },
+      {
+        "obligation_id": "depends_on_combination_and_ratio_semantics",
+        "passed": true,
+        "evidence": [
+          "QSEM-3b412465307b4dee",
+          "CSEM-b9aacd5426b56d40",
+          "ASEM-4b7c892702eaa68a"
+        ]
+      },
+      {
+        "obligation_id": "finite_nonempty_whole_domain",
+        "passed": true,
+        "evidence": "whole cardinality is positive and event is a subcollection"
+      },
+      {
+        "obligation_id": "empty_event_has_zero_mass",
+        "passed": true,
+        "evidence": [
+          0,
+          1
+        ]
+      },
+      {
+        "obligation_id": "whole_event_has_unit_mass",
+        "passed": true,
+        "evidence": [
+          1,
+          1
+        ]
+      },
+      {
+        "obligation_id": "mass_is_nonnegative_and_bounded",
+        "passed": true,
+        "evidence": "0<=event<=whole"
+      },
+      {
+        "obligation_id": "disjoint_finite_additivity",
+        "passed": true,
+        "evidence": [
+          {
+            "whole": 5,
+            "parts": [
+              1,
+              2
+            ],
+            "passed": true
+          },
+          {
+            "whole": 7,
+            "parts": [
+              3,
+              2
+            ],
+            "passed": true
+          },
+          {
+            "whole": 12,
+            "parts": [
+              4,
+              5
+            ],
+            "passed": true
+          },
+          {
+            "whole": 31,
+            "parts": [
+              7,
+              11
+            ],
+            "passed": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "complement_mass_sums_to_unit",
+        "passed": true,
+        "evidence": "event and complement partition the whole"
+      },
+      {
+        "obligation_id": "uniform_singletons_have_equal_mass",
+        "passed": true,
+        "evidence": "one object in a finite uniform whole"
+      },
+      {
+        "obligation_id": "isomorphic_finite_events_have_equal_mass",
+        "passed": true,
+        "evidence": "mass depends only on event and whole cardinalities"
+      },
+      {
+        "obligation_id": "independent_hidden_mass_replay",
+        "passed": true,
+        "evidence": "12/12 cases"
+      },
+      {
+        "obligation_id": "binary_word_whole_cardinality",
+        "passed": true,
+        "evidence": "prior recursive expansion gives two choices per position"
+      },
+      {
+        "obligation_id": "marked_position_event_cardinality",
+        "passed": true,
+        "evidence": "canonical selections partition binary words by marked-position count"
+      },
+      {
+        "obligation_id": "binomial_row_normalization",
+        "passed": true,
+        "evidence": [
+          {
+            "row_size": 0,
+            "counts": [
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                1
+              ]
+            ],
+            "count_sum": 1,
+            "whole_count": 1,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 1,
+            "counts": [
+              1,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "count_sum": 2,
+            "whole_count": 2,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 2,
+            "counts": [
+              1,
+              2,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            "count_sum": 4,
+            "whole_count": 4,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 3,
+            "counts": [
+              1,
+              3,
+              3,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                8
+              ],
+              [
+                3,
+                8
+              ],
+              [
+                3,
+                8
+              ],
+              [
+                1,
+                8
+              ]
+            ],
+            "count_sum": 8,
+            "whole_count": 8,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 4,
+            "counts": [
+              1,
+              4,
+              6,
+              4,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                16
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                3,
+                8
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                1,
+                16
+              ]
+            ],
+            "count_sum": 16,
+            "whole_count": 16,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 5,
+            "counts": [
+              1,
+              5,
+              10,
+              10,
+              5,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                32
+              ],
+              [
+                5,
+                32
+              ],
+              [
+                5,
+                16
+              ],
+              [
+                5,
+                16
+              ],
+              [
+                5,
+                32
+              ],
+              [
+                1,
+                32
+              ]
+            ],
+            "count_sum": 32,
+            "whole_count": 32,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 6,
+            "counts": [
+              1,
+              6,
+              15,
+              20,
+              15,
+              6,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                64
+              ],
+              [
+                3,
+                32
+              ],
+              [
+                15,
+                64
+              ],
+              [
+                5,
+                16
+              ],
+              [
+                15,
+                64
+              ],
+              [
+                3,
+                32
+              ],
+              [
+                1,
+                64
+              ]
+            ],
+            "count_sum": 64,
+            "whole_count": 64,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 7,
+            "counts": [
+              1,
+              7,
+              21,
+              35,
+              35,
+              21,
+              7,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                128
+              ],
+              [
+                7,
+                128
+              ],
+              [
+                21,
+                128
+              ],
+              [
+                35,
+                128
+              ],
+              [
+                35,
+                128
+              ],
+              [
+                21,
+                128
+              ],
+              [
+                7,
+                128
+              ],
+              [
+                1,
+                128
+              ]
+            ],
+            "count_sum": 128,
+            "whole_count": 128,
+            "mass_sum": "1",
+            "passed": true
+          },
+          {
+            "row_size": 8,
+            "counts": [
+              1,
+              8,
+              28,
+              56,
+              70,
+              56,
+              28,
+              8,
+              1
+            ],
+            "mass_pairs": [
+              [
+                1,
+                256
+              ],
+              [
+                1,
+                32
+              ],
+              [
+                7,
+                64
+              ],
+              [
+                7,
+                32
+              ],
+              [
+                35,
+                128
+              ],
+              [
+                7,
+                32
+              ],
+              [
+                7,
+                64
+              ],
+              [
+                1,
+                32
+              ],
+              [
+                1,
+                256
+              ]
+            ],
+            "count_sum": 256,
+            "whole_count": 256,
+            "mass_sum": "1",
+            "passed": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "binomial_symmetry",
+        "passed": true,
+        "evidence": "complement marked positions"
+      },
+      {
+        "obligation_id": "derived_not_new_foundation",
+        "passed": true,
+        "evidence": "the mass program composes already proved count, combination, power, and normalized-ratio semantics"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "all source collections and derived rows are finite"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "search used integer numerator/denominator modes and structural cases, not probability or binomial-distribution labels"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "MASS-HIDDEN-00",
+        "cardinalities": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_pair": [
+          0,
+          1
+        ],
+        "primitive_execution_tokens": 7
+      },
+      {
+        "case_id": "MASS-HIDDEN-01",
+        "cardinalities": [
+          1,
+          1
+        ],
+        "passed": true,
+        "output_pair": [
+          1,
+          1
+        ],
+        "primitive_execution_tokens": 8
+      },
+      {
+        "case_id": "MASS-HIDDEN-02",
+        "cardinalities": [
+          0,
+          7
+        ],
+        "passed": true,
+        "output_pair": [
+          0,
+          1
+        ],
+        "primitive_execution_tokens": 19
+      },
+      {
+        "case_id": "MASS-HIDDEN-03",
+        "cardinalities": [
+          1,
+          7
+        ],
+        "passed": true,
+        "output_pair": [
+          1,
+          7
+        ],
+        "primitive_execution_tokens": 14
+      },
+      {
+        "case_id": "MASS-HIDDEN-04",
+        "cardinalities": [
+          2,
+          4
+        ],
+        "passed": true,
+        "output_pair": [
+          1,
+          2
+        ],
+        "primitive_execution_tokens": 13
+      },
+      {
+        "case_id": "MASS-HIDDEN-05",
+        "cardinalities": [
+          3,
+          9
+        ],
+        "passed": true,
+        "output_pair": [
+          1,
+          3
+        ],
+        "primitive_execution_tokens": 20
+      },
+      {
+        "case_id": "MASS-HIDDEN-06",
+        "cardinalities": [
+          4,
+          10
+        ],
+        "passed": true,
+        "output_pair": [
+          2,
+          5
+        ],
+        "primitive_execution_tokens": 21
+      },
+      {
+        "case_id": "MASS-HIDDEN-07",
+        "cardinalities": [
+          6,
+          8
+        ],
+        "passed": true,
+        "output_pair": [
+          3,
+          4
+        ],
+        "primitive_execution_tokens": 21
+      },
+      {
+        "case_id": "MASS-HIDDEN-08",
+        "cardinalities": [
+          12,
+          30
+        ],
+        "passed": true,
+        "output_pair": [
+          2,
+          5
+        ],
+        "primitive_execution_tokens": 53
+      },
+      {
+        "case_id": "MASS-HIDDEN-09",
+        "cardinalities": [
+          17,
+          42
+        ],
+        "passed": true,
+        "output_pair": [
+          17,
+          42
+        ],
+        "primitive_execution_tokens": 65
+      },
+      {
+        "case_id": "MASS-HIDDEN-10",
+        "cardinalities": [
+          31,
+          64
+        ],
+        "passed": true,
+        "output_pair": [
+          31,
+          64
+        ],
+        "primitive_execution_tokens": 101
+      },
+      {
+        "case_id": "MASS-HIDDEN-11",
+        "cardinalities": [
+          42,
+          56
+        ],
+        "passed": true,
+        "output_pair": [
+          3,
+          4
+        ],
+        "primitive_execution_tokens": 117
+      }
+    ],
+    "additivity_cases": [
+      {
+        "whole": 5,
+        "parts": [
+          1,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "whole": 7,
+        "parts": [
+          3,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "whole": 12,
+        "parts": [
+          4,
+          5
+        ],
+        "passed": true
+      },
+      {
+        "whole": 31,
+        "parts": [
+          7,
+          11
+        ],
+        "passed": true
+      }
+    ],
+    "binomial_rows": [
+      {
+        "row_size": 0,
+        "counts": [
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            1
+          ]
+        ],
+        "count_sum": 1,
+        "whole_count": 1,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 1,
+        "counts": [
+          1,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "count_sum": 2,
+        "whole_count": 2,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 2,
+        "counts": [
+          1,
+          2,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "count_sum": 4,
+        "whole_count": 4,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 3,
+        "counts": [
+          1,
+          3,
+          3,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            1,
+            8
+          ]
+        ],
+        "count_sum": 8,
+        "whole_count": 8,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 4,
+        "counts": [
+          1,
+          4,
+          6,
+          4,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            16
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            1,
+            16
+          ]
+        ],
+        "count_sum": 16,
+        "whole_count": 16,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 5,
+        "counts": [
+          1,
+          5,
+          10,
+          10,
+          5,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            32
+          ],
+          [
+            5,
+            32
+          ],
+          [
+            5,
+            16
+          ],
+          [
+            5,
+            16
+          ],
+          [
+            5,
+            32
+          ],
+          [
+            1,
+            32
+          ]
+        ],
+        "count_sum": 32,
+        "whole_count": 32,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 6,
+        "counts": [
+          1,
+          6,
+          15,
+          20,
+          15,
+          6,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            64
+          ],
+          [
+            3,
+            32
+          ],
+          [
+            15,
+            64
+          ],
+          [
+            5,
+            16
+          ],
+          [
+            15,
+            64
+          ],
+          [
+            3,
+            32
+          ],
+          [
+            1,
+            64
+          ]
+        ],
+        "count_sum": 64,
+        "whole_count": 64,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 7,
+        "counts": [
+          1,
+          7,
+          21,
+          35,
+          35,
+          21,
+          7,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            128
+          ],
+          [
+            7,
+            128
+          ],
+          [
+            21,
+            128
+          ],
+          [
+            35,
+            128
+          ],
+          [
+            35,
+            128
+          ],
+          [
+            21,
+            128
+          ],
+          [
+            7,
+            128
+          ],
+          [
+            1,
+            128
+          ]
+        ],
+        "count_sum": 128,
+        "whole_count": 128,
+        "mass_sum": "1",
+        "passed": true
+      },
+      {
+        "row_size": 8,
+        "counts": [
+          1,
+          8,
+          28,
+          56,
+          70,
+          56,
+          28,
+          8,
+          1
+        ],
+        "mass_pairs": [
+          [
+            1,
+            256
+          ],
+          [
+            1,
+            32
+          ],
+          [
+            7,
+            64
+          ],
+          [
+            7,
+            32
+          ],
+          [
+            35,
+            128
+          ],
+          [
+            7,
+            32
+          ],
+          [
+            7,
+            64
+          ],
+          [
+            1,
+            32
+          ],
+          [
+            1,
+            256
+          ]
+        ],
+        "count_sum": 256,
+        "whole_count": 256,
+        "mass_sum": "1",
+        "passed": true
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 10,
+    "verified_derived_theorem_count_added": 2,
+    "derived_path": [
+      "有限均匀概率",
+      "公平二元二项分布"
+    ]
+  },
+  "next_frontier": {
+    "world_id": "WORLD-conditioned-event-mass-68",
+    "structural_signature": "conditioned_finite_event_mass",
+    "status": "dependency_blocked",
+    "missing_dependency": "joint_event_intersection",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/derived/success/finite_mass_semantics.jsonl",
+    "mistakes": "artifacts/derived/mistakes/finite_mass_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 23,
+    "event_hash": "6055e03b55098f3f6b5f46df4ddef634c48a5268faf9f7f66283b7b5f3ceace9"
+  },
+  "gates": [
+    {
+      "gate_id": "ready_frontier_composes_prior_proved_semantics",
+      "passed": true,
+      "actual": [
+        "QSEM-3b412465307b4dee",
+        "CSEM-b9aacd5426b56d40",
+        "ASEM-4b7c892702eaa68a"
+      ],
+      "required": 3
+    },
+    {
+      "gate_id": "anonymous_mass_mappings_compete",
+      "passed": true,
+      "actual": 24,
+      "required": 24
+    },
+    {
+      "gate_id": "event_over_whole_normalized_mapping_selected",
+      "passed": true,
+      "actual": {
+        "program_id": "MAP-2ec02f41af6c1032",
+        "numerator_mode": 0,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "required": "event / whole normalized"
+    },
+    {
+      "gate_id": "finite_mass_world_exactly_compressed",
+      "passed": true,
+      "actual": 10,
+      "required": 10
+    },
+    {
+      "gate_id": "finite_probability_axioms_proved",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_mass_cases_pass",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "binomial_rows_normalize",
+      "passed": true,
+      "actual": 9,
+      "required": 9
+    },
+    {
+      "gate_id": "derived_semantic_does_not_inflate_foundation_count",
+      "passed": true,
+      "actual": 10,
+      "required": 10
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 23
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 23
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_probability_or_binomial_target",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "Only finite uniform sample spaces are proved.",
+    "Nonuniform weights, expectation, independence, conditioning, infinite spaces, and sigma-additivity remain unproved.",
+    "The binomial result is limited to fair binary structural choices."
+  ]
+}

@@ -1,0 +1,518 @@
+{
+  "report_version": "interventional-science-v38.0",
+  "run_id": "RUN-interventional-science-v38-20260821T162813760676Z",
+  "created_at": "2026-08-21T16:28:13.760676+00:00",
+  "verdict": "controlled_intervention_direction_and_known_calibration_mechanism_verified_with_drift_block",
+  "acceptance": {
+    "benchmark_version": "interventional-science-v38.0",
+    "passed": true,
+    "classification": "verified_real_controlled_intervention_direction_and_known_quadratic_calibration_with_drift_gate",
+    "dataset": {
+      "metadata": {
+        "ok": true,
+        "broker_pid": 34364,
+        "rows": 40,
+        "training_rows": 10,
+        "future_rows": 20,
+        "controlled_slot": "Q0",
+        "response_slot": "Q1",
+        "experimental_batches": 2,
+        "randomized_order": false,
+        "training_levels": 10,
+        "future_unseen_levels": 10
+      },
+      "provenance_audit": {
+        "passed": true,
+        "provider": "National Institute of Standards and Technology",
+        "dataset": "Pontius load cell calibration",
+        "source_url": "https://www.itl.nist.gov/div898/handbook/pmd/section6/pmd611.htm",
+        "reference_dataset_url": "https://www.itl.nist.gov/div898/strd/lls/data/LINKS/i-Pontius.shtml",
+        "doi": "https://doi.org/10.18434/T43G6C",
+        "snapshot_sha256": "6904de8843d939dcf6e70a24b9370b957a56ac8df7fc829fcd8e5d30bc54a23d",
+        "row_count": 40,
+        "experimental_design": "Known load was applied to a load cell and corresponding deflection measured; two sets were collected in increasing load order.",
+        "units": {
+          "load": "dataset load unit",
+          "deflection": "dataset deflection unit"
+        },
+        "known_risk": "Systematic increasing run order makes equipment or load-cell drift difficult to distinguish from the load response."
+      }
+    },
+    "discovery": {
+      "graph_candidates": [
+        "Q0_TO_Q1",
+        "Q1_TO_Q0",
+        "NO_LINK"
+      ],
+      "polynomial_degrees_per_direction": 6,
+      "candidate_count": 13,
+      "selected_mechanism": {
+        "program_id": "CAU-759e07bc9a29b606",
+        "direction": "Q0_TO_Q1",
+        "degree": 2,
+        "coefficients": [
+          0.0005549318181820306,
+          2.1963696969696973,
+          -0.028712121212122372
+        ],
+        "bic": -166.82939287816137,
+        "normalized_sse": 7.349390312275993e-08,
+        "opaque_program": "MECHANISM<Q0_TO_Q1;C0<0.000554931818>*Q0^0;C1<2.1963697>*Q0^1;C2<-0.0287121212>*Q0^2>",
+        "human_mechanism_name": null
+      },
+      "forward_runner_up": {
+        "program_id": "CAU-5f767b94e5c9a214",
+        "direction": "Q0_TO_Q1",
+        "degree": 5,
+        "coefficients": [
+          -0.0002837733804741592,
+          2.215634680302893,
+          -0.14693677118509696,
+          0.2919125864477184,
+          -0.31311188704837406,
+          0.1215384611170936
+        ],
+        "bic": -166.1482711816215,
+        "normalized_sse": 3.943047891707339e-08,
+        "opaque_program": "MECHANISM<Q0_TO_Q1;C0<-0.00028377338>*Q0^0;C1<2.21563468>*Q0^1;C2<-0.146936771>*Q0^2;C3<0.291912586>*Q0^3;C4<-0.313111887>*Q0^4;C5<0.121538461>*Q0^5>",
+        "human_mechanism_name": null
+      },
+      "bic_margin": 0.6811216965398614,
+      "controlled_slot": "Q0",
+      "response_slot": "Q1",
+      "direction_selected_from_intervention_role": true,
+      "formula_name_supplied": false
+    },
+    "direction_audit": {
+      "selected_graph": "Q0_TO_Q1",
+      "controlled_slot": "Q0",
+      "response_slot": "Q1",
+      "forward_best": {
+        "program_id": "CAU-759e07bc9a29b606",
+        "direction": "Q0_TO_Q1",
+        "degree": 2,
+        "coefficients": [
+          0.0005549318181820306,
+          2.1963696969696973,
+          -0.028712121212122372
+        ],
+        "bic": -166.82939287816137,
+        "normalized_sse": 7.349390312275993e-08,
+        "opaque_program": "MECHANISM<Q0_TO_Q1;C0<0.000554931818>*Q0^0;C1<2.1963697>*Q0^1;C2<-0.0287121212>*Q0^2>",
+        "human_mechanism_name": null
+      },
+      "reverse_best": {
+        "program_id": "CAU-e670736981abd072",
+        "direction": "Q1_TO_Q0",
+        "degree": 2,
+        "coefficients": [
+          -0.0002344984846588266,
+          0.4551972130840991,
+          0.002818871393127035
+        ],
+        "bic": -182.34922813306324,
+        "normalized_sse": 7.315090369462826e-08,
+        "opaque_program": "MECHANISM<Q1_TO_Q0;C0<-0.000234498485>*Q0^0;C1<0.455197213>*Q0^1;C2<0.00281887139>*Q0^2>",
+        "human_mechanism_name": null
+      },
+      "no_link": {
+        "program_id": "CAU-2ca3cfeb203bd931",
+        "direction": "Q0_TO_Q1",
+        "degree": 0,
+        "coefficients": [
+          1.089193
+        ],
+        "bic": -7.173929215359773,
+        "normalized_sse": 1.0,
+        "opaque_program": "MECHANISM<Q0_TO_Q1;C0<1.089193>*Q0^0>",
+        "human_mechanism_name": null
+      },
+      "observational_fit_alone_determines_direction": false,
+      "intervention_role_selects_direction": true,
+      "reverse_graph_rejected_reason": "Q1 was not assigned by the experiment; it was observed after do(Q0)"
+    },
+    "preregistration": {
+      "commitment": "8b5dc554c437ea6fcf0064c97e73da828b49b4c95159315ce57f30450894c537",
+      "prediction_count": 20,
+      "commitment_precedes_reveal": true
+    },
+    "future_batch_audit": {
+      "passed": true,
+      "case_count": 20,
+      "unseen_intervention_count": 10,
+      "median_absolute_percentage_error": 0.00017687612427181058,
+      "unseen_intervention_mape": 0.0002150318781503464,
+      "root_mean_square_error": 0.00025742296788575347,
+      "cases": [
+        {
+          "row_id": "INT-f8f25d6ae0cbece5",
+          "normalized_intervention": 0.05,
+          "unseen_intervention_level": false,
+          "predicted": 0.1103016363636366,
+          "observed": 0.11052,
+          "absolute_error": 0.00021836363636339173,
+          "absolute_percentage_error": 0.0019757838976057884
+        },
+        {
+          "row_id": "INT-e8c57701545ab0f0",
+          "normalized_intervention": 0.1,
+          "unseen_intervention_level": true,
+          "predicted": 0.21990478030303057,
+          "observed": 0.22018,
+          "absolute_error": 0.00027521969696941984,
+          "absolute_percentage_error": 0.0012499759150214364
+        },
+        {
+          "row_id": "INT-6883937a75e511b5",
+          "normalized_intervention": 0.15,
+          "unseen_intervention_level": false,
+          "predicted": 0.3293643636363639,
+          "observed": 0.32939,
+          "absolute_error": 2.5636363636116766e-05,
+          "absolute_percentage_error": 7.782981765116356e-05
+        },
+        {
+          "row_id": "INT-425215b40d0c1874",
+          "normalized_intervention": 0.2,
+          "unseen_intervention_level": true,
+          "predicted": 0.43868038636363665,
+          "observed": 0.43886,
+          "absolute_error": 0.00017961363636331829,
+          "absolute_percentage_error": 0.000409273199570064
+        },
+        {
+          "row_id": "INT-21521ce4d0abd4cb",
+          "normalized_intervention": 0.25,
+          "unseen_intervention_level": false,
+          "predicted": 0.5478528484848487,
+          "observed": 0.54798,
+          "absolute_error": 0.00012715151515130252,
+          "absolute_percentage_error": 0.0002320367808155453
+        },
+        {
+          "row_id": "INT-4b97dfa5466608d3",
+          "normalized_intervention": 0.3,
+          "unseen_intervention_level": true,
+          "predicted": 0.6568817500000003,
+          "observed": 0.65739,
+          "absolute_error": 0.0005082499999997658,
+          "absolute_percentage_error": 0.0007731331477505983
+        },
+        {
+          "row_id": "INT-31cb02477563d5da",
+          "normalized_intervention": 0.35,
+          "unseen_intervention_level": false,
+          "predicted": 0.765767090909091,
+          "observed": 0.76596,
+          "absolute_error": 0.0001929090909089659,
+          "absolute_percentage_error": 0.000251852695844386
+        },
+        {
+          "row_id": "INT-e9c8314b75b895be",
+          "normalized_intervention": 0.4,
+          "unseen_intervention_level": true,
+          "predicted": 0.8745088712121214,
+          "observed": 0.87474,
+          "absolute_error": 0.00023112878787856506,
+          "absolute_percentage_error": 0.00026422569892604094
+        },
+        {
+          "row_id": "INT-9e0fca642cd0ce66",
+          "normalized_intervention": 0.45,
+          "unseen_intervention_level": false,
+          "predicted": 0.983107090909091,
+          "observed": 0.983,
+          "absolute_error": 0.00010709090909100105,
+          "absolute_percentage_error": 0.00010894293905493494
+        },
+        {
+          "row_id": "INT-b0fdd6e3bbd5b49d",
+          "normalized_intervention": 0.5,
+          "unseen_intervention_level": true,
+          "predicted": 1.09156175,
+          "observed": 1.0915,
+          "absolute_error": 6.17500000001936e-05,
+          "absolute_percentage_error": 5.657352267539496e-05
+        },
+        {
+          "row_id": "INT-f14a19c4ad3fae63",
+          "normalized_intervention": 0.55,
+          "unseen_intervention_level": false,
+          "predicted": 1.1998728484848487,
+          "observed": 1.20004,
+          "absolute_error": 0.00016715151515134252,
+          "absolute_percentage_error": 0.0001392882863499071
+        },
+        {
+          "row_id": "INT-854914d04b0d5e46",
+          "normalized_intervention": 0.6,
+          "unseen_intervention_level": true,
+          "predicted": 1.3080403863636365,
+          "observed": 1.30818,
+          "absolute_error": 0.0001396136363633893,
+          "absolute_percentage_error": 0.00010672356737099582
+        },
+        {
+          "row_id": "INT-f710b92cf7f987b2",
+          "normalized_intervention": 0.65,
+          "unseen_intervention_level": false,
+          "predicted": 1.4160643636363637,
+          "observed": 1.41613,
+          "absolute_error": 6.563636363643433e-05,
+          "absolute_percentage_error": 4.634910893522086e-05
+        },
+        {
+          "row_id": "INT-cd3dce0976e0b536",
+          "normalized_intervention": 0.7,
+          "unseen_intervention_level": true,
+          "predicted": 1.5239447803030302,
+          "observed": 1.52408,
+          "absolute_error": 0.00013521969696994596,
+          "absolute_percentage_error": 8.872217794994091e-05
+        },
+        {
+          "row_id": "INT-3cd537e8a11d4ec2",
+          "normalized_intervention": 0.75,
+          "unseen_intervention_level": false,
+          "predicted": 1.6316816363636364,
+          "observed": 1.63159,
+          "absolute_error": 9.16363636362938e-05,
+          "absolute_percentage_error": 5.616384240911858e-05
+        },
+        {
+          "row_id": "INT-2dc18e106f5bcb8e",
+          "normalized_intervention": 0.8,
+          "unseen_intervention_level": true,
+          "predicted": 1.7392749318181817,
+          "observed": 1.73965,
+          "absolute_error": 0.00037506818181820556,
+          "absolute_percentage_error": 0.00021559979410697874
+        },
+        {
+          "row_id": "INT-f057b66aace21e31",
+          "normalized_intervention": 0.85,
+          "unseen_intervention_level": false,
+          "predicted": 1.8467246666666663,
+          "observed": 1.84696,
+          "absolute_error": 0.0002353333333335872,
+          "absolute_percentage_error": 0.00012741658364750033
+        },
+        {
+          "row_id": "INT-a4b2463c81f8ff8c",
+          "normalized_intervention": 0.9,
+          "unseen_intervention_level": true,
+          "predicted": 1.9540308409090905,
+          "observed": 1.95445,
+          "absolute_error": 0.00041915909090950443,
+          "absolute_percentage_error": 0.00021446396219371405
+        },
+        {
+          "row_id": "INT-db0d8beb1a8efabd",
+          "normalized_intervention": 0.95,
+          "unseen_intervention_level": false,
+          "predicted": 2.061193454545454,
+          "observed": 2.06177,
+          "absolute_error": 0.0005765454545461068,
+          "absolute_percentage_error": 0.00027963616433749
+        },
+        {
+          "row_id": "INT-e5fe73af6ba96413",
+          "normalized_intervention": 1.0,
+          "unseen_intervention_level": true,
+          "predicted": 2.168212507575757,
+          "observed": 2.16829,
+          "absolute_error": 7.749242424281988e-05,
+          "absolute_percentage_error": 3.5738957539268215e-05
+        }
+      ]
+    },
+    "repeatability_audit": {
+      "paired_levels": 20,
+      "mean_signed_batch_difference": 0.00014349999999998668,
+      "mean_absolute_batch_difference": 0.0002384999999999929,
+      "repeatability_standard_deviation": 0.0002745767077176275,
+      "systematic_order_in_both_batches": true,
+      "randomized_order": false,
+      "drift_separable_from_response": false
+    },
+    "shape_certificate": {
+      "proof_id": "V38-PROOF-MONOTONE-INTERVENTION-RESPONSE",
+      "domain": "0.05 <= Q0 <= 1.0",
+      "derivative": "2.19636969697+2*(-0.0287121212121)*Q0",
+      "endpoint_derivatives": [
+        2.193498484848485,
+        2.1389454545454525
+      ],
+      "passed": true
+    },
+    "mutation_audits": [
+      {
+        "mutation": "no_link",
+        "rejected": true,
+        "evidence": {
+          "program_id": "CAU-2ca3cfeb203bd931",
+          "direction": "Q0_TO_Q1",
+          "degree": 0,
+          "coefficients": [
+            1.089193
+          ],
+          "bic": -7.173929215359773,
+          "normalized_sse": 1.0,
+          "opaque_program": "MECHANISM<Q0_TO_Q1;C0<1.089193>*Q0^0>",
+          "human_mechanism_name": null
+        }
+      },
+      {
+        "mutation": "linear_only",
+        "rejected": true,
+        "evidence": {
+          "program_id": "CAU-2570b7cf2560ea1f",
+          "direction": "Q0_TO_Q1",
+          "degree": 1,
+          "coefficients": [
+            0.005364212121212519,
+            2.167657575757575
+          ],
+          "bic": -118.77660034720023,
+          "normalized_sse": 1.1302059157910227e-05,
+          "opaque_program": "MECHANISM<Q0_TO_Q1;C0<0.00536421212>*Q0^0;C1<2.16765758>*Q0^1>",
+          "human_mechanism_name": null
+        }
+      },
+      {
+        "mutation": "reverse_arrow",
+        "rejected": true,
+        "evidence": "Q1 was not assigned by the experiment; it was observed after do(Q0)"
+      },
+      {
+        "mutation": "decreasing_response",
+        "rejected": true,
+        "evidence": {
+          "proof_id": "V38-PROOF-MONOTONE-INTERVENTION-RESPONSE",
+          "domain": "0.05 <= Q0 <= 1.0",
+          "derivative": "2.19636969697+2*(-0.0287121212121)*Q0",
+          "endpoint_derivatives": [
+            2.193498484848485,
+            2.1389454545454525
+          ],
+          "passed": true
+        }
+      }
+    ],
+    "known_law_audit": {
+      "catalog_id": "NIST-PONTIUS-QUADRATIC-CALIBRATION",
+      "matched": true,
+      "human_novelty": false
+    },
+    "discovery_gates": {
+      "real_controlled_experiment": true,
+      "separate_data_process": true,
+      "commit_before_second_batch": true,
+      "causal_direction_from_intervention": true,
+      "mechanism_complexity_selected": true,
+      "unseen_intervention_prediction": true,
+      "repeatability_noise_measured": true,
+      "monotone_shape_certificate": true,
+      "alternative_graphs_falsified": true,
+      "known_calibration_match": true,
+      "randomized_intervention_order": false,
+      "drift_separated": false,
+      "live_new_intervention": false,
+      "human_novelty": false
+    },
+    "claim_state": {
+      "interventional_pipeline_verified": true,
+      "clean_causal_effect_claim_allowed": false,
+      "human_unknown_claim_allowed": false,
+      "current_label": "CONTROLLED_INTERVENTION_KNOWN_CALIBRATION_REDISCOVERY"
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "nist_intervention_provenance",
+        "passed": true
+      },
+      {
+        "obligation_id": "data_process_isolated",
+        "passed": true
+      },
+      {
+        "obligation_id": "future_batch_locked_until_commit",
+        "passed": true
+      },
+      {
+        "obligation_id": "three_causal_graphs_compete",
+        "passed": true
+      },
+      {
+        "obligation_id": "intervention_role_selects_direction",
+        "passed": true
+      },
+      {
+        "obligation_id": "quadratic_complexity_selected_by_bic",
+        "passed": true
+      },
+      {
+        "obligation_id": "quadratic_beats_runner_up",
+        "passed": true
+      },
+      {
+        "obligation_id": "second_batch_prediction",
+        "passed": true
+      },
+      {
+        "obligation_id": "unseen_intervention_levels_predicted",
+        "passed": true
+      },
+      {
+        "obligation_id": "repeatability_noise_quantified",
+        "passed": true
+      },
+      {
+        "obligation_id": "monotone_response_proved",
+        "passed": true
+      },
+      {
+        "obligation_id": "alternative_mechanisms_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "known_nist_model_not_called_novel",
+        "passed": true
+      },
+      {
+        "obligation_id": "nonrandomized_drift_risk_blocks_clean_effect_claim",
+        "passed": true
+      },
+      {
+        "obligation_id": "live_discovery_claim_remains_blocked",
+        "passed": true
+      }
+    ],
+    "posthoc_translation": {
+      "Q0": "applied load divided by 3,000,000",
+      "Q1": "load-cell deflection",
+      "mechanism": "quadratic calibration response"
+    },
+    "limitations": [
+      "The data are a historical NIST calibration experiment and the quadratic model is human-known.",
+      "The intervention order increased systematically in both batches, so temporal drift is not separable from load response.",
+      "The second batch is sealed computationally now but was not prospectively collected for this project.",
+      "Causal direction uses supplied anonymous intervention-role metadata; observational fit alone does not orient the edge.",
+      "No live apparatus, randomized intervention schedule, adaptive next experiment, or human-novel mechanism is present."
+    ]
+  },
+  "dependency": {
+    "v37_run_id": "RUN-empirical-science-v37-20260821T155028851553Z",
+    "v37_passed": true
+  },
+  "claim": {
+    "achieved": "controlled-variable causal direction, mechanism complexity selection, sealed second-batch prediction, repeatability noise and drift-risk audit",
+    "not_achieved": "a randomized drift-free live causal discovery or a human-novel mechanism"
+  },
+  "storage": {
+    "rediscovery_room": "artifacts/science/v38/rediscoveries/nist_quadratic_calibration_latest.json",
+    "mistake_room": "artifacts/science/v38/mistakes/rejected_causal_graphs.jsonl",
+    "human_discovery_room": null
+  },
+  "content_digest": "e77aa655cb23bb71b30420f41af8a6a947d4e0a8771186231c39c411f7acae78"
+}

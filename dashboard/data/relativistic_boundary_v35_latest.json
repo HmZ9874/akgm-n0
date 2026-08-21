@@ -1,0 +1,1168 @@
+{
+  "report_version": "relativistic-validity-boundary-v35.0",
+  "run_id": "RUN-relativistic-boundary-v35-20260821T091317282574Z",
+  "created_at": "2026-08-21T09:13:17.282574+00:00",
+  "verdict": "v27_classical_mechanics_capability_graph_complete_15_of_15",
+  "acceptance": {
+    "benchmark_version": "relativistic-validity-boundary-v35.0",
+    "passed": true,
+    "classification": "verified_anonymous_finite_speed_composition_classical_limit_and_validity_boundary",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "frame_rows": [
+        {
+          "experiment_id": "TF-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 25,
+            "negative": 0,
+            "denominator": 9
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-1",
+          "anonymous_inputs": [
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 6,
+            "negative": 0,
+            "denominator": 5
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-2",
+          "anonymous_inputs": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 8,
+            "denominator": 7
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-3",
+          "anonymous_inputs": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 49,
+            "negative": 0,
+            "denominator": 11
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-4",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 25,
+            "denominator": 7
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-5",
+          "anonymous_inputs": [
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 448,
+            "negative": 0,
+            "denominator": 131
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "boundary_rows": [
+        {
+          "experiment_id": "TB-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 5,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TB-1",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 5,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TB-2",
+          "anonymous_inputs": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 7,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TB-3",
+          "anonymous_inputs": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 7,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "formulas_supplied": false,
+      "physics_names_supplied": false
+    },
+    "discovery": {
+      "candidate_count": 25,
+      "selected_program": {
+        "program_id": "FRM-44077a9501b8347b",
+        "opaque_program": "FRAME<MERGE<Q1,Q2>;DEN:MERGE<ONE,SEM<Q1,Q2>/SEM<Q0,Q0>>>",
+        "policy": {
+          "numerator_route": "ADD",
+          "denominator_route": "PLUS_RATIO",
+          "human_operation_name": null
+        }
+      },
+      "invariant_role_candidates": 4,
+      "selected_invariant_role": "Q0",
+      "human_interpretation_during_search": null
+    },
+    "proofs": {
+      "sealed_transfer": {
+        "proof_id": "V35-PROOF-SEALED-FRAME-TRANSFER",
+        "passed": true,
+        "cases": [
+          {
+            "experiment_id": "SF-0",
+            "passed": true,
+            "predicted": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            },
+            "observed": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            }
+          },
+          {
+            "experiment_id": "SF-1",
+            "passed": true,
+            "predicted": {
+              "positive": 0,
+              "negative": 25,
+              "denominator": 23
+            },
+            "observed": {
+              "positive": 0,
+              "negative": 25,
+              "denominator": 23
+            }
+          },
+          {
+            "experiment_id": "SF-2",
+            "passed": true,
+            "predicted": {
+              "positive": 0,
+              "negative": 245,
+              "denominator": 86
+            },
+            "observed": {
+              "positive": 0,
+              "negative": 245,
+              "denominator": 86
+            }
+          },
+          {
+            "experiment_id": "SF-3",
+            "passed": true,
+            "predicted": {
+              "positive": 0,
+              "negative": 54,
+              "denominator": 19
+            },
+            "observed": {
+              "positive": 0,
+              "negative": 54,
+              "denominator": 19
+            }
+          },
+          {
+            "experiment_id": "SF-4",
+            "passed": true,
+            "predicted": {
+              "positive": 0,
+              "negative": 40,
+              "denominator": 17
+            },
+            "observed": {
+              "positive": 0,
+              "negative": 40,
+              "denominator": 17
+            }
+          },
+          {
+            "experiment_id": "SB-0",
+            "passed": true,
+            "predicted": {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 1
+            }
+          },
+          {
+            "experiment_id": "SB-1",
+            "passed": true,
+            "predicted": {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 1
+            }
+          },
+          {
+            "experiment_id": "SB-2",
+            "passed": true,
+            "predicted": {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            }
+          }
+        ]
+      },
+      "universal": {
+        "proof_id": "V35-PROOF-UNIVERSAL-FINITE-SPEED-COMPOSITION",
+        "domain": "rational c>0 and |u|,|v|,|z|<c",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "finite_bound_fixed_point",
+            "passed": true,
+            "identity": "(c+v)/(1+cv/c^2)=c"
+          },
+          {
+            "obligation_id": "open_interval_closure",
+            "passed": true,
+            "identity": "c-w=(c-u)(c-v)/(c^2+uv)>0; c+w=(c+u)(c+v)/(c^2+uv)>0"
+          },
+          {
+            "obligation_id": "identity_and_inverse",
+            "passed": true,
+            "identity": "compose(u,0)=u and compose(u,-u)=0"
+          },
+          {
+            "obligation_id": "associative_composition",
+            "passed": true,
+            "identity": "both nestings=(u+v+z+uvz/c^2)/(1+(uv+uz+vz)/c^2)"
+          }
+        ],
+        "exact_exhaustive_replay_count": 959,
+        "exact_exhaustive_replay_passed": true
+      },
+      "low_speed_limit": {
+        "proof_id": "V35-PROOF-CLASSICAL-LOW-SPEED-LIMIT",
+        "passed": true,
+        "exact_identity": "w-(u+v)=-(u+v)uv/(c^2+uv)",
+        "scaling_identity": "u=ha,v=hb gives an O(h^3) correction and w=(u+v)+O(h^3)",
+        "interpretation": "ordinary addition is the leading low-speed approximation, not the exact finite-speed law",
+        "refinement": [
+          {
+            "c": 10,
+            "a": 1,
+            "b": 2,
+            "h": "1/2",
+            "absolute_error": "1/134",
+            "error_over_h_cubed": "4/67",
+            "passed": true
+          },
+          {
+            "c": 10,
+            "a": 1,
+            "b": 2,
+            "h": "1/4",
+            "absolute_error": "1/1068",
+            "error_over_h_cubed": "16/267",
+            "passed": true
+          },
+          {
+            "c": 10,
+            "a": 1,
+            "b": 2,
+            "h": "1/8",
+            "absolute_error": "1/8536",
+            "error_over_h_cubed": "64/1067",
+            "passed": true
+          },
+          {
+            "c": 12,
+            "a": -2,
+            "b": 3,
+            "h": "1/2",
+            "absolute_error": "1/190",
+            "error_over_h_cubed": "4/95",
+            "passed": true
+          },
+          {
+            "c": 12,
+            "a": -2,
+            "b": 3,
+            "h": "1/4",
+            "absolute_error": "1/1532",
+            "error_over_h_cubed": "16/383",
+            "passed": true
+          },
+          {
+            "c": 12,
+            "a": -2,
+            "b": 3,
+            "h": "1/8",
+            "absolute_error": "1/12280",
+            "error_over_h_cubed": "64/1535",
+            "passed": true
+          },
+          {
+            "c": 9,
+            "a": 2,
+            "b": -1,
+            "h": "1/2",
+            "absolute_error": "1/322",
+            "error_over_h_cubed": "4/161",
+            "passed": true
+          },
+          {
+            "c": 9,
+            "a": 2,
+            "b": -1,
+            "h": "1/4",
+            "absolute_error": "1/2588",
+            "error_over_h_cubed": "16/647",
+            "passed": true
+          },
+          {
+            "c": 9,
+            "a": 2,
+            "b": -1,
+            "h": "1/8",
+            "absolute_error": "1/20728",
+            "error_over_h_cubed": "64/2591",
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "galilean_addition",
+        "opaque_program": "FRAME<MERGE<Q1,Q2>;DEN:ONE>",
+        "rejected": true,
+        "counterexample": {
+          "experiment": {
+            "experiment_id": "SF-0",
+            "anonymous_inputs": [
+              {
+                "positive": 9,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              }
+            ],
+            "anonymous_target": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            },
+            "human_names": null,
+            "human_formula": null
+          },
+          "predicted": {
+            "positive": 6,
+            "negative": 0,
+            "denominator": 1
+          }
+        }
+      },
+      {
+        "mutation": "wrong_denominator_sign",
+        "opaque_program": "FRAME<MERGE<Q1,Q2>;DEN:MERGE<ONE,TURN<SEM<Q1,Q2>/SEM<Q0,Q0>>>>",
+        "rejected": true,
+        "counterexample": {
+          "experiment": {
+            "experiment_id": "SF-0",
+            "anonymous_inputs": [
+              {
+                "positive": 9,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              }
+            ],
+            "anonymous_target": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            },
+            "human_names": null,
+            "human_formula": null
+          },
+          "predicted": {
+            "positive": 486,
+            "negative": 0,
+            "denominator": 73
+          }
+        }
+      },
+      {
+        "mutation": "wrong_numerator_sign",
+        "opaque_program": "FRAME<MERGE<Q1,TURN<Q2>>;DEN:MERGE<ONE,SEM<Q1,Q2>/SEM<Q0,Q0>>>",
+        "rejected": true,
+        "counterexample": {
+          "experiment": {
+            "experiment_id": "SF-0",
+            "anonymous_inputs": [
+              {
+                "positive": 9,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              }
+            ],
+            "anonymous_target": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            },
+            "human_names": null,
+            "human_formula": null
+          },
+          "predicted": {
+            "positive": 0,
+            "negative": 162,
+            "denominator": 89
+          }
+        }
+      },
+      {
+        "mutation": "omit_boundary_scale",
+        "opaque_program": "FRAME<MERGE<Q1,Q2>;DEN:SEM<Q0,Q0>>",
+        "rejected": true,
+        "counterexample": {
+          "experiment": {
+            "experiment_id": "SF-0",
+            "anonymous_inputs": [
+              {
+                "positive": 9,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              }
+            ],
+            "anonymous_target": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            },
+            "human_names": null,
+            "human_formula": null
+          },
+          "predicted": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 27
+          }
+        }
+      },
+      {
+        "mutation": "asymmetric_denominator",
+        "opaque_program": "FRAME<MERGE<Q1,Q2>;DEN:MERGE<ONE,Q1/Q0>>",
+        "rejected": true,
+        "counterexample": {
+          "experiment": {
+            "experiment_id": "SF-0",
+            "anonymous_inputs": [
+              {
+                "positive": 9,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 2,
+                "negative": 0,
+                "denominator": 1
+              },
+              {
+                "positive": 4,
+                "negative": 0,
+                "denominator": 1
+              }
+            ],
+            "anonymous_target": {
+              "positive": 486,
+              "negative": 0,
+              "denominator": 89
+            },
+            "human_names": null,
+            "human_formula": null
+          },
+          "predicted": {
+            "positive": 54,
+            "negative": 0,
+            "denominator": 11
+          }
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v34_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_observations",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_program_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "unique_composition",
+        "passed": true
+      },
+      {
+        "obligation_id": "unique_invariant_role",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "universal_finite_speed_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "classical_low_speed_limit",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m15_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_gate_open",
+        "passed": true
+      },
+      {
+        "obligation_id": "complete_evidence_manifest",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30"
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "verified",
+          "evidence_version": "V31"
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "verified",
+          "evidence_version": "V32"
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "verified",
+          "evidence_version": "V33"
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "verified",
+          "evidence_version": "V34"
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "verified",
+          "evidence_version": "V35"
+        }
+      ],
+      "verified_domains": 15,
+      "total_domains": 15,
+      "completion_ratio": 1.0,
+      "full_mechanics_claim_allowed": true,
+      "next_selected_gap": null,
+      "selection_reason": "all domains in the frozen V27 classical-mechanics capability graph have verified evidence"
+    },
+    "completion_audit": {
+      "frozen_graph_version": "V27",
+      "passed": true,
+      "evidence_manifest": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21",
+          "report": "reports/data/directed_rational_construction_v21_latest.json",
+          "dashboard_route": "/foundation-v21",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22",
+          "report": "reports/data/anonymous_physics_discovery_v22_latest.json",
+          "dashboard_route": "/physics-v22",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23",
+          "report": "reports/data/autonomous_physics_worlds_v23_latest.json",
+          "dashboard_route": "/physics-worlds-v23",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24",
+          "report": "reports/data/inertial_response_discovery_v24_latest.json",
+          "dashboard_route": "/physics-v24",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25",
+          "report": "reports/data/collision_mechanics_discovery_v25_latest.json",
+          "dashboard_route": "/mechanics-v25",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26",
+          "report": "reports/data/planar_rotation_discovery_v26_latest.json",
+          "dashboard_route": "/mechanics-v26",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27",
+          "report": "reports/data/rigid_body_mechanics_v27_latest.json",
+          "dashboard_route": "/mechanics-v27",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28",
+          "report": "reports/data/continuous_dynamics_v28_latest.json",
+          "dashboard_route": "/mechanics-v28",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29",
+          "report": "reports/data/constraint_mechanics_v29_latest.json",
+          "dashboard_route": "/mechanics-v29",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30",
+          "report": "reports/data/oscillation_stability_v30_latest.json",
+          "dashboard_route": "/mechanics-v30",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "verified",
+          "evidence_version": "V31",
+          "report": "reports/data/gravity_orbits_v31_latest.json",
+          "dashboard_route": "/mechanics-v31",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "verified",
+          "evidence_version": "V32",
+          "report": "reports/data/lagrangian_mechanics_v32_latest.json",
+          "dashboard_route": "/mechanics-v32",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "verified",
+          "evidence_version": "V33",
+          "report": "reports/data/hamiltonian_mechanics_v33_latest.json",
+          "dashboard_route": "/mechanics-v33",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "verified",
+          "evidence_version": "V34",
+          "report": "reports/data/continuum_mechanics_v34_latest.json",
+          "dashboard_route": "/mechanics-v34",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "verified",
+          "evidence_version": "V35",
+          "report": "reports/data/relativistic_boundary_v35_latest.json",
+          "dashboard_route": "/mechanics-v35",
+          "evidence_dimensions": {
+            "anonymous_discovery": true,
+            "executable_program": true,
+            "sealed_transfer": true,
+            "proof_certificate": true,
+            "counterexample_audit": true,
+            "reporting_page": true
+          }
+        }
+      ],
+      "claim_scope": "the 15-domain synthetic, exact-rational classical-mechanics research capability graph declared in V27"
+    },
+    "posthoc_translation": {
+      "q0": "finite invariant speed c",
+      "q1_q2": "two collinear frame velocities u,v",
+      "composition": "(u+v)/(1+uv/c^2)",
+      "classical_limit": "u+v with a cubic low-speed correction"
+    },
+    "limitations": [
+      "This verifies the frozen 15-domain research benchmark, not all of real-world mechanics.",
+      "Only one-dimensional rational velocities are represented; no spacetime geometry, Lorentz matrices, fields, or relativistic dynamics.",
+      "The unnamed finite bound is supplied as an observed quantity; the system discovers its invariant role and composition law, not its empirical value in SI units.",
+      "Exact synthetic observations replace laboratory uncertainty and model selection under noise."
+    ]
+  },
+  "claim": {
+    "achieved": "all 15 domains in the frozen V27 mechanics capability graph have executable, transferable, proof-carrying, counterexample-audited evidence",
+    "not_claimed": "an exhaustive theory of all real-world classical or relativistic mechanics"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v35/success/relativistic_boundary_latest.json",
+    "mistake_room": "artifacts/physics/v35/mistakes/rejected_frame_mutations.jsonl"
+  },
+  "content_digest": "94afeb68908cf5e2d254f138deef17505d8a3220bcd988c2044af7280222cc9d"
+}

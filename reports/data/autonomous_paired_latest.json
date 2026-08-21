@@ -1,0 +1,460 @@
+{
+  "report_version": "autonomous-paired-covariance-v0.1",
+  "run_id": "RUN-autonomous-paired-20260820T025651207194Z",
+  "created_at": "2026-08-20T02:56:51.207194Z",
+  "verdict": "paired_weighted_accumulator_invented_then_covariance_derived",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-rational-20260820T025227563659Z",
+    "frontier": {
+      "world_id": "WORLD-paired-centered-outcomes-91",
+      "structural_signature": "paired_weighted_center_product",
+      "status": "dependency_blocked",
+      "missing_dependency": "paired_weighted_accumulator",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "search": {
+    "candidate_count": 24,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "BAP-ab01750d28d344a3",
+      "term_mode": 0,
+      "denominator_mode": 0,
+      "normalize": true
+    },
+    "selected_token_cost": 180,
+    "selected_reward": 999820
+  },
+  "discovery": {
+    "foundation_level": 14,
+    "semantic": {
+      "semantic_id": "BSEM-55ca95b38dcf0bfe",
+      "opcode": 15,
+      "program": {
+        "program_id": "BAP-ab01750d28d344a3",
+        "term_mode": 0,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "dependency_semantic_ids": [
+        "ZSEM-90254f138d3cc064",
+        "WSEM-0e6a1b1f31e2d2c5"
+      ],
+      "source_task_ids": [
+        "WORLD-paired-centered-outcomes-91"
+      ],
+      "invented_dependency_signature": "paired_weighted_accumulator"
+    },
+    "structural_origin": "compress weighted paired centered rational records to a normalized cross-center",
+    "posthoc_name": "paired weighted product accumulator",
+    "posthoc_formula": "cross_center=sum_i(weight_i*x_i*y_i)/sum_i(weight_i)",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "derived_results": [
+    "finite weighted covariance",
+    "Cov(X,Y)=Cov(Y,X)",
+    "Cov(X,X)=Var(X)",
+    "balanced independent product grid has zero covariance"
+  ],
+  "verification": {
+    "verifier_version": "independent-paired-weighted-verifier-v0.1",
+    "semantic_id": "BSEM-55ca95b38dcf0bfe",
+    "passed": true,
+    "invented_mechanism": "multiply each finite pair of centered rational values, repeat by its weight, accumulate, divide by total weight, and normalize",
+    "structural_statement": "compress weighted paired centered rational records to a normalized cross-center",
+    "posthoc_mathematical_name": "paired weighted product accumulator",
+    "posthoc_formula": "cross_center=sum_i(weight_i*x_i*y_i)/sum_i(weight_i)",
+    "derived_results": [
+      "finite weighted covariance",
+      "Cov(X,Y)=Cov(Y,X)",
+      "Cov(X,X)=Var(X)",
+      "balanced independent product grid has zero covariance"
+    ],
+    "declared_domain": "finite centered signed-rational pairs with positive natural weights",
+    "not_claimed": "correlation coefficient, causal independence, covariance matrices, stochastic processes, infinite distributions, or Hilbert-space theory",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "finite rational bilinearity, centered-product identities, and weighted normalization",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "BSEM-55ca95b38dcf0bfe"
+      },
+      {
+        "obligation_id": "exact_paired_program_binding",
+        "passed": true,
+        "evidence": "BAP-ab01750d28d344a3"
+      },
+      {
+        "obligation_id": "paired_weighted_accumulator_invented",
+        "passed": true,
+        "evidence": "paired_weighted_accumulator"
+      },
+      {
+        "obligation_id": "product_over_total_weight_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "BAP-ab01750d28d344a3",
+          "term_mode": 0,
+          "denominator_mode": 0,
+          "normalize": true
+        }
+      },
+      {
+        "obligation_id": "depends_on_rational_algebra_and_weighted_accumulator",
+        "passed": true,
+        "evidence": [
+          "ZSEM-90254f138d3cc064",
+          "WSEM-0e6a1b1f31e2d2c5"
+        ]
+      },
+      {
+        "obligation_id": "positive_total_weight_domain",
+        "passed": true,
+        "evidence": "finite positive weights"
+      },
+      {
+        "obligation_id": "one_product_per_paired_record",
+        "passed": true,
+        "evidence": "each centered pair contributes x*y repeated by its weight"
+      },
+      {
+        "obligation_id": "paired_accumulation_finite_additive",
+        "passed": true,
+        "evidence": "record concatenation adds product sums and total weights"
+      },
+      {
+        "obligation_id": "symmetric_under_pair_swap",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "bilinear_scaling",
+        "passed": true,
+        "evidence": "scaling all left centered values by rational c scales every product and the center by c"
+      },
+      {
+        "obligation_id": "self_pair_equals_second_moment",
+        "passed": true,
+        "evidence": "5/2"
+      },
+      {
+        "obligation_id": "independent_balanced_grid_has_zero_cross_center",
+        "passed": true,
+        "evidence": "0"
+      },
+      {
+        "obligation_id": "opposite_centered_pairs_have_negative_value",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "independent_hidden_paired_replay",
+        "passed": true,
+        "evidence": "6/6"
+      },
+      {
+        "obligation_id": "finite_covariance_identity",
+        "passed": true,
+        "evidence": "for centered X,Y the paired weighted center is E[(X-EX)(Y-EY)]"
+      },
+      {
+        "obligation_id": "covariance_symmetry",
+        "passed": true,
+        "evidence": "commutativity of rational multiplication"
+      },
+      {
+        "obligation_id": "covariance_self_is_variance",
+        "passed": true,
+        "evidence": "setting Y=X yields weighted squared deviation"
+      },
+      {
+        "obligation_id": "covariance_is_derived_not_extra_foundation",
+        "passed": true,
+        "evidence": "covariance composes centering with the new paired accumulator"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "finite rational products, weighted accumulation, and normalization terminate"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "search saw integer paired term modes and signed rational records, not covariance, correlation, or formulas"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "PAIRED-HIDDEN-00",
+        "records": [
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            1
+          ]
+        ],
+        "output": [
+          0,
+          1
+        ],
+        "passed": true,
+        "tokens": 7
+      },
+      {
+        "case_id": "PAIRED-HIDDEN-01",
+        "records": [
+          [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            1
+          ]
+        ],
+        "output": [
+          1,
+          1
+        ],
+        "passed": true,
+        "tokens": 8
+      },
+      {
+        "case_id": "PAIRED-HIDDEN-02",
+        "records": [
+          [
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            1
+          ]
+        ],
+        "output": [
+          1,
+          1
+        ],
+        "passed": true,
+        "tokens": 11
+      },
+      {
+        "case_id": "PAIRED-HIDDEN-03",
+        "records": [
+          [
+            [
+              -1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            1
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              -1,
+              1
+            ],
+            1
+          ]
+        ],
+        "output": [
+          -1,
+          1
+        ],
+        "passed": true,
+        "tokens": 11
+      },
+      {
+        "case_id": "PAIRED-HIDDEN-04",
+        "records": [
+          [
+            [
+              -1,
+              1
+            ],
+            [
+              -2,
+              1
+            ],
+            2
+          ],
+          [
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            2
+          ]
+        ],
+        "output": [
+          2,
+          1
+        ],
+        "passed": true,
+        "tokens": 19
+      },
+      {
+        "case_id": "PAIRED-HIDDEN-05",
+        "records": [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            3
+          ],
+          [
+            [
+              -1,
+              2
+            ],
+            [
+              -2,
+              3
+            ],
+            3
+          ]
+        ],
+        "output": [
+          1,
+          3
+        ],
+        "passed": true,
+        "tokens": 15
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 14,
+    "new_foundation": "配对加权乘积累积",
+    "verified_derived_results_added": 4
+  },
+  "next_frontier": {
+    "world_id": "WORLD-rational-root-boundary-101",
+    "structural_signature": "normalized_inverse_square_boundary",
+    "status": "dependency_blocked",
+    "missing_dependency": "rational_square_root_normalizer",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/paired_weighted_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/paired_weighted_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 23,
+    "event_hash": "f0fd72d473839eebbbc7cd3be75713a354e5bb1266db66b966baf716e61a3e3b"
+  },
+  "gates": [
+    {
+      "gate_id": "paired_gap_taken_from_prior_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-paired-centered-outcomes-91",
+        "structural_signature": "paired_weighted_center_product",
+        "status": "dependency_blocked",
+        "missing_dependency": "paired_weighted_accumulator",
+        "posthoc_math_name": null
+      },
+      "required": "recorded gap"
+    },
+    {
+      "gate_id": "anonymous_paired_search_completed",
+      "passed": true,
+      "actual": 24,
+      "required": 24
+    },
+    {
+      "gate_id": "product_weight_normalize_program_induced",
+      "passed": true,
+      "actual": {
+        "program_id": "BAP-ab01750d28d344a3",
+        "term_mode": 0,
+        "denominator_mode": 0,
+        "normalize": true
+      },
+      "required": "anonymous exact mode"
+    },
+    {
+      "gate_id": "world_exactly_compressed",
+      "passed": true,
+      "actual": 6,
+      "required": 6
+    },
+    {
+      "gate_id": "paired_semantic_universally_proved",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_paired_cases_pass",
+      "passed": true,
+      "actual": 6,
+      "required": 6
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 23
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 23
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_covariance_formula",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "This proves a finite paired rational accumulator, not every bilinear space.",
+    "Covariance is derived only for finite positive rational-weight models.",
+    "Zero covariance is not claimed to imply independence.",
+    "Correlation, square-root normalization, real completion, and stochastic processes remain unproved."
+  ]
+}

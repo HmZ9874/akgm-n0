@@ -1,0 +1,53 @@
+{
+  "benchmark_id": "gen0-sealed-structure-v0.1",
+  "visibility": "evaluator_only",
+  "protocol_version": "gen0-v0.1",
+  "human_target": {
+    "label": "first_difference",
+    "equivalent_program": {
+      "op": "p_subtract",
+      "args": [
+        {"op": "p_read_offset", "offset": 1},
+        {"op": "p_read_offset", "offset": 0}
+      ]
+    }
+  },
+  "registered_runs": {
+    "independent_seeds": [104729, 130363, 155921, 181081, 206369],
+    "blind_task_count": 100,
+    "development_task_count": 120,
+    "validation_task_count": 60
+  },
+  "task_families": {
+    "development": [
+      "affine_sequences",
+      "low_order_polynomial_sequences",
+      "alternating_increment_sequences"
+    ],
+    "validation": [
+      "shifted_parameter_ranges",
+      "rescaled_sequences",
+      "sparse_anomaly_sequences"
+    ],
+    "blind": [
+      "held_out_generators",
+      "held_out_lengths",
+      "held_out_numeric_scales"
+    ]
+  },
+  "baselines": [
+    "fixed_library",
+    "growing_library_cross_task_mdl",
+    "ceiling_with_target_primitive",
+    "random_fragment_cache"
+  ],
+  "success_gates": {
+    "minimum_independent_emergence_runs": 4,
+    "minimum_median_search_cost_reduction": 0.30,
+    "maximum_false_admission_rate": 0.01,
+    "maximum_recovery_rate_degradation": 0.02,
+    "requires_blind_reuse": true,
+    "requires_counterexample_search": true
+  }
+}
+

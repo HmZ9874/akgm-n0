@@ -1,0 +1,240 @@
+{
+  "report_version": "strict-parametric-formula-proof-v0.1",
+  "run_id": "RUN-parametric-power-proof-20260818T212540562229Z",
+  "created_at": "2026-08-18T21:25:40.562229Z",
+  "title": "首个严格参数化公式证明",
+  "verdict": "strict_parametric_formula_proven",
+  "formula": "F(a,n)=a^n",
+  "domain": "a,n in N; 0^0=1",
+  "source_discovery_run_id": "RUN-parametric-power-20260818T211513181223Z",
+  "candidate_id": "G2-ccc5dc26b9bec943",
+  "source_room_record_id": "SF-2ed1dc0b57cebacd",
+  "source_operation_id": "PARAM-ccc5dc26b9bec943",
+  "parametric_room_record_id": "UF-059b87aeaf465fb1",
+  "strict_parametric_formula_count": 1,
+  "classification_correction": {
+    "fixed_base_instances": [
+      "2^n",
+      "3^n"
+    ],
+    "fixed_base_instances_count_as_new_parametric_formulas": false,
+    "derived_composition_examples_count_as_new_parametric_formulas": false,
+    "required_free_runtime_inputs": [
+      "a",
+      "n"
+    ]
+  },
+  "discovery_trace": {
+    "cegis_round_count": 2,
+    "first_round_was_fixed_base_instance": true,
+    "counterexample_that_forced_abstraction": {
+      "inputs": [
+        3,
+        1
+      ],
+      "predicted": 2.0,
+      "observed": 3
+    },
+    "unseen_bases": [
+      5,
+      7,
+      9,
+      11
+    ],
+    "unseen_cases_passed": 7,
+    "unseen_case_count": 7
+  },
+  "program": {
+    "substrate": "anonymous_unified_word_machine_v0.1",
+    "word_width": 2,
+    "words": [
+      14,
+      4,
+      1,
+      1,
+      3,
+      62,
+      4,
+      1,
+      3,
+      63,
+      2,
+      62,
+      12,
+      28,
+      2,
+      63,
+      9,
+      0,
+      3,
+      64,
+      4,
+      0,
+      3,
+      65,
+      2,
+      64,
+      12,
+      21,
+      2,
+      65,
+      5,
+      0,
+      3,
+      65,
+      2,
+      64,
+      10,
+      1,
+      3,
+      64,
+      11,
+      12,
+      2,
+      65,
+      9,
+      0,
+      3,
+      63,
+      2,
+      62,
+      10,
+      1,
+      3,
+      62,
+      11,
+      5,
+      2,
+      63,
+      15,
+      0,
+      0,
+      0
+    ]
+  },
+  "proof": {
+    "verifier_version": "independent-universal-verifier-v0.1",
+    "theorem_kind": "natural_parameterized_power",
+    "passed": true,
+    "recomputed_statement": "for every a,n in N, output(a,n) = a^n, with 0^0=1",
+    "obligations": [
+      {
+        "obligation_id": "certificate_version",
+        "passed": true,
+        "evidence": "universal-formula-certificate-v0.1"
+      },
+      {
+        "obligation_id": "registered_theorem_rule",
+        "passed": true,
+        "evidence": "natural_parameterized_power"
+      },
+      {
+        "obligation_id": "program_digest_binding",
+        "passed": true,
+        "evidence": "recomputed sha256=ccc5dc26b9bec94318d40354e10a823faa0f6d4fdf552e77545f392ac6778510"
+      },
+      {
+        "obligation_id": "explicit_domain",
+        "passed": true,
+        "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+      },
+      {
+        "obligation_id": "statement_binding",
+        "passed": true,
+        "evidence": "recomputed: for every a,n in N, output(a,n) = a^n, with 0^0=1"
+      },
+      {
+        "obligation_id": "invariant_binding",
+        "passed": true,
+        "evidence": "recomputed: ['outer_counter=n-t', 'result=a^t', '0<=t<=n', 'inner_counter=a^t-j', 'temporary=j*a', '0<=j<=a^t']"
+      },
+      {
+        "obligation_id": "termination_measure_binding",
+        "passed": true,
+        "evidence": "recomputed: nested natural counters: inner decreases by 1; after inner exit outer decreases by 1"
+      },
+      {
+        "obligation_id": "exact_program_structure",
+        "passed": true,
+        "evidence": "decoded nested loops: outer=n,result=1; inner=result,temp=0; temp+=a until inner=0"
+      },
+      {
+        "obligation_id": "both_runtime_inputs_are_free",
+        "passed": true,
+        "evidence": "input 0 supplies the runtime base a and input 1 supplies the runtime exponent n"
+      },
+      {
+        "obligation_id": "no_fixed_base_or_power_opcode",
+        "passed": true,
+        "evidence": "the base is read from input 0; the VM has no multiply or power opcode"
+      },
+      {
+        "obligation_id": "induction_base",
+        "passed": true,
+        "evidence": "at t=0: result=1=a^0 and outer_counter=n"
+      },
+      {
+        "obligation_id": "inner_induction_step",
+        "passed": true,
+        "evidence": "temp=j*a and inner=a^t-j imply temp'=(j+1)*a and inner'=a^t-(j+1)"
+      },
+      {
+        "obligation_id": "inner_exit_correctness",
+        "passed": true,
+        "evidence": "inner=0 implies j=a^t, so temp=a^t*a=a^(t+1)"
+      },
+      {
+        "obligation_id": "outer_induction_step",
+        "passed": true,
+        "evidence": "committing temp establishes result=a^(t+1) and decrementing outer gives n-(t+1)"
+      },
+      {
+        "obligation_id": "zero_boundary_cases",
+        "passed": true,
+        "evidence": "n=0 emits 1 for every a; a=0,n>0 makes the first completed outer update equal 0"
+      },
+      {
+        "obligation_id": "termination",
+        "passed": true,
+        "evidence": "outer is natural and decreases n times; each inner counter starts at finite a^t and decreases by 1"
+      },
+      {
+        "obligation_id": "exit_correctness",
+        "passed": true,
+        "evidence": "outer=0 implies t=n, hence emitted result=a^n"
+      }
+    ],
+    "certificate_digest": "8a5285fa3c19d9a92d0f572ca4e66c9b892f867fb82611bdfa5d65abf9c8883a"
+  },
+  "proof_obligation_count": 17,
+  "proof_obligation_passed_count": 17,
+  "invariants": [
+    "outer_counter=n-t",
+    "result=a^t",
+    "0<=t<=n",
+    "inner_counter=a^t-j",
+    "temporary=j*a",
+    "0<=j<=a^t"
+  ],
+  "termination_measure": "nested natural counters: inner decreases by 1; after inner exit outer decreases by 1",
+  "learner_received": {
+    "natural_language": false,
+    "formula_name": false,
+    "target_formula": false,
+    "fixed_base_hint": false,
+    "multiply_opcode": false,
+    "power_opcode": false,
+    "anonymous_numeric_input_output_rows": true,
+    "generic_nested_counter_grammar": true
+  },
+  "autonomy_boundary": {
+    "learner_selected": "two-input nested state transfer, runtime base use, runtime exponent use, update direction and halt path",
+    "host_supplied": "generic nested-counter grammar, addition/subtraction VM semantics, anonymous numeric evidence and resource bounds",
+    "posthoc_only": "the symbols a^n, exponent terminology and proof theorem name"
+  },
+  "limitations": [
+    "The learner selected a host-supplied generic nested-counter layout; it did not invent the loop grammar in this run.",
+    "Finite hidden cases establish transfer to unseen bases but are not the universal proof.",
+    "The formula name and exponent interpretation were assigned only after discovery."
+  ]
+}

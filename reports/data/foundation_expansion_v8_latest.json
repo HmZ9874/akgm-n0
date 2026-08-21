@@ -1,0 +1,252 @@
+{
+  "run_id": "RUN-foundation-expansion-v8-20260820T164157186669Z",
+  "created_at": "2026-08-20T16:41:57.186669Z",
+  "verdict": "four_new_foundation_mechanisms_levels_17_to_20_verified",
+  "foundation": {
+    "report_version": "foundation-expansion-v8-report-v0.1",
+    "claim": "four_anonymously_searched_and_universally_verified_foundation_mechanisms",
+    "names_or_target_formulas_visible_to_search": false,
+    "foundation_count_before": 16,
+    "new_foundation_count": 4,
+    "foundation_count_after": 20,
+    "expansion": {
+      "quotient": {
+        "program_id": "Q17-b1e62a385de2e503",
+        "numerator_term": 1,
+        "denominator_term": 2,
+        "normalize_sign": true
+      },
+      "norm_composition": {
+        "program_id": "N18-40461ef77e20290a",
+        "first_coefficients": [
+          1,
+          0,
+          0,
+          -1
+        ],
+        "second_coefficients": [
+          0,
+          1,
+          1,
+          0
+        ]
+      },
+      "inverse_search": {
+        "program_id": "I19-a3583fe1b9ebf55a",
+        "seed_mode": 1,
+        "update_mode": 1,
+        "stop_mode": 1,
+        "output_offset": 0
+      },
+      "contraction_limit": {
+        "program_id": "L20-7abf512b64a0a5e2",
+        "limit_mode": 0,
+        "bound_mode": 0
+      },
+      "candidate_counts": [
+        128,
+        6561,
+        72,
+        15
+      ],
+      "exact_counts": [
+        1,
+        1,
+        2,
+        2
+      ]
+    },
+    "proof": {
+      "verifier_version": "foundation-expansion-v8-independent-v0.1",
+      "passed": true,
+      "foundations": [
+        {
+          "foundation_level": 17,
+          "semantic_id": "Q17-b1e62a385de2e503",
+          "posthoc_name": "signed rational multiplicative inverse and quotient",
+          "passed": true,
+          "universal_statement": "for b,d,c nonzero, (a/b)/(c/d)=ad/(bc), normalized with positive denominator",
+          "obligations": [
+            {
+              "id": "exact_cross-product_structure",
+              "passed": true
+            },
+            {
+              "id": "multiplicative_inverse_law",
+              "passed": true,
+              "evidence": "(a/b)*(b/a)=1 for a nonzero"
+            },
+            {
+              "id": "zero_divisor_rejected",
+              "passed": true
+            },
+            {
+              "id": "name_hidden_from_search",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "foundation_level": 18,
+          "semantic_id": "N18-40461ef77e20290a",
+          "posthoc_name": "quadratic-norm-preserving bilinear composition / rational angle addition",
+          "passed": true,
+          "universal_statement": "(ac-bd,ad+bc) has squared norm (a^2+b^2)(c^2+d^2)",
+          "obligations": [
+            {
+              "id": "exact_bilinear_structure",
+              "passed": true
+            },
+            {
+              "id": "norm_identity",
+              "passed": true,
+              "evidence": "(ac-bd)^2+(ad+bc)^2=(a^2+b^2)(c^2+d^2)"
+            },
+            {
+              "id": "unit_circle_closure",
+              "passed": true
+            },
+            {
+              "id": "associative_identity_element",
+              "passed": true,
+              "evidence": "bilinear expansion; identity=(1,0)"
+            },
+            {
+              "id": "trigonometric_name_hidden_from_search",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "foundation_level": 19,
+          "semantic_id": "I19-a3583fe1b9ebf55a",
+          "posthoc_name": "monotone inverse enumeration / exact discrete logarithm",
+          "passed": true,
+          "universal_statement": "for base>1, state starts (n,current)=(0,1) and preserves current=base^n until equality or strict overshoot",
+          "obligations": [
+            {
+              "id": "seed_and_update_structure",
+              "passed": true
+            },
+            {
+              "id": "power_invariant",
+              "passed": true
+            },
+            {
+              "id": "monotone_termination",
+              "passed": true,
+              "evidence": "current strictly increases for base>1"
+            },
+            {
+              "id": "non_power_rejected_on_overshoot",
+              "passed": true
+            },
+            {
+              "id": "logarithm_name_hidden_from_search",
+              "passed": true
+            }
+          ]
+        },
+        {
+          "foundation_level": 20,
+          "semantic_id": "L20-7abf512b64a0a5e2",
+          "posthoc_name": "certified affine-contraction limit",
+          "passed": true,
+          "universal_statement": "if |p|<1 and x_(n+1)=p*x_n+q, L=q/(1-p) and |x_n-L|=|p|^n|x_0-L| tends to zero",
+          "obligations": [
+            {
+              "id": "fixed_point_structure",
+              "passed": true
+            },
+            {
+              "id": "error_induction",
+              "passed": true,
+              "evidence": "x_(n+1)-L=p(x_n-L)"
+            },
+            {
+              "id": "explicit_convergence_modulus",
+              "passed": true,
+              "evidence": "geometric bound |p|^n|x0-L|"
+            },
+            {
+              "id": "noncontractions_rejected",
+              "passed": true
+            },
+            {
+              "id": "limit_name_hidden_from_search",
+              "passed": true
+            }
+          ]
+        }
+      ],
+      "obligations": [
+        {
+          "id": "four_foundations_pass",
+          "passed": true
+        },
+        {
+          "id": "candidate_spaces_nontrivial",
+          "passed": true,
+          "actual": [
+            128,
+            6561,
+            72,
+            15
+          ]
+        },
+        {
+          "id": "at_least_one_exact_each",
+          "passed": true,
+          "actual": [
+            1,
+            1,
+            2,
+            2
+          ]
+        },
+        {
+          "id": "levels_contiguous_17_to_20",
+          "passed": true
+        }
+      ]
+    },
+    "passed": true,
+    "limitations": [
+      "The quotient foundation completes exact signed rational division, not division over a completed real field.",
+      "The norm composition proves rational unit-circle angle composition; general transcendental sine and cosine remain absent.",
+      "The inverse search proves exact discrete logarithms only; arbitrary real logarithms remain absent.",
+      "The limit foundation covers affine rational contractions with an explicit modulus, not arbitrary sequence or function limits."
+    ],
+    "content_digest": "4e3b138dc943b0b03cc222ab2d4932ec71f56282461cd6dd420abbc4e50bd94d"
+  },
+  "verification": {
+    "verifier_version": "foundation-expansion-v8-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "id": "content_digest",
+        "passed": true
+      },
+      {
+        "id": "proof_recomputed",
+        "passed": true
+      },
+      {
+        "id": "foundation_counts",
+        "passed": true
+      },
+      {
+        "id": "names_hidden",
+        "passed": true
+      }
+    ]
+  },
+  "rooms": {
+    "success_path": "artifacts/foundation/v8/success/foundation_expansion.jsonl",
+    "mistake_path": "artifacts/foundation/v8/mistakes/nonselected_mechanisms.jsonl",
+    "bundle_event_count": 1,
+    "verified_foundation_count": 4,
+    "mistake_summary_count": 4,
+    "latest_event_hash": "c8265abd050985c2d81e79090d1e90d2dd76219092c76d1fda7b0cebbb87e29c"
+  }
+}

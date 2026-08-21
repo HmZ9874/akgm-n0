@@ -1,0 +1,555 @@
+{
+  "report_version": "zero-arithmetic-foundation-v0.1",
+  "run_id": "RUN-zero-arithmetic-foundation-20260819T213621847278Z",
+  "created_at": "2026-08-19T21:36:21.847278Z",
+  "verdict": "first_two_foundational_semantics_discovered_without_arithmetic_primitives",
+  "architecture": {
+    "lineage": "foundation-lineage-v1",
+    "learner_visible_representation": "finite collections of opaque symbols",
+    "learner_visible_opcodes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "learner_visible_opcode_names": false,
+    "arithmetic_values_visible": false,
+    "addition_subtraction_multiplication_division_visible": false,
+    "search_grammar": "bounded enumeration of finite jump programs compiled from anonymous source-slot plans"
+  },
+  "discoveries": [
+    {
+      "foundation_level": 1,
+      "semantic": {
+        "semantic_id": "FSEM-3d1a4d19fab44d62",
+        "opcode": 1,
+        "source_slots": [
+          0
+        ],
+        "program": {
+          "program_id": "FKP-7c298fe7599227ec",
+          "source_plan": [
+            0
+          ],
+          "instructions": [
+            {
+              "opcode": 0,
+              "operand": 0,
+              "target": 4
+            },
+            {
+              "opcode": 1,
+              "operand": 0
+            },
+            {
+              "opcode": 2
+            },
+            {
+              "opcode": 3,
+              "target": 0
+            },
+            {
+              "opcode": 4
+            }
+          ]
+        },
+        "dependency_semantic_ids": [],
+        "source_task_ids": [
+          "TASK-opaque-7f31"
+        ]
+      },
+      "posthoc_name": "counting / unary cardinality representation",
+      "posthoc_formula": "|X| markers for a finite collection X",
+      "search": {
+        "task_id": "TASK-opaque-7f31",
+        "candidates_evaluated": 3,
+        "selected_program_id": "FKP-7c298fe7599227ec",
+        "selected_source_plan": [
+          0
+        ],
+        "selected_instruction_count": 5,
+        "passed_examples": 5,
+        "example_count": 5,
+        "formula_or_math_name_visible_to_search": false
+      },
+      "verification": {
+        "verifier_version": "independent-zero-arithmetic-foundation-verifier-v0.1",
+        "semantic_id": "FSEM-3d1a4d19fab44d62",
+        "passed": true,
+        "universal_statement": "for every finite opaque collection X, the output contains exactly one marker for each member of X",
+        "finite_sampling_used_as_proof": false,
+        "proof_method": "well-founded induction on remaining opaque symbols plus exact instruction-structure binding",
+        "obligations": [
+          {
+            "obligation_id": "semantic_id_binding",
+            "passed": true,
+            "evidence": "FSEM-3d1a4d19fab44d62"
+          },
+          {
+            "obligation_id": "canonical_program_binding",
+            "passed": true,
+            "evidence": "FKP-7c298fe7599227ec"
+          },
+          {
+            "obligation_id": "zero_arithmetic_instruction_set",
+            "passed": true,
+            "evidence": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "obligation_id": "each_source_consumed_at_most_once",
+            "passed": true,
+            "evidence": [
+              0
+            ]
+          },
+          {
+            "obligation_id": "dependency_precedes_composition",
+            "passed": true,
+            "evidence": []
+          },
+          {
+            "obligation_id": "empty_input_base_case",
+            "passed": true,
+            "evidence": "an empty source branches past its loop and emits no marker"
+          },
+          {
+            "obligation_id": "one_symbol_induction_step",
+            "passed": true,
+            "evidence": "one loop removes one opaque source symbol, emits one marker, and leaves the same invariant on a shorter finite source"
+          },
+          {
+            "obligation_id": "finite_source_termination",
+            "passed": true,
+            "evidence": "every taken branch strictly shortens one finite source; each source is visited once"
+          },
+          {
+            "obligation_id": "sequential_source_conservation",
+            "passed": true,
+            "evidence": "completed source loops preserve all prior output and append exactly one marker per subsequently consumed symbol"
+          },
+          {
+            "obligation_id": "independent_hidden_replay",
+            "passed": true,
+            "evidence": "7/7 cases"
+          }
+        ],
+        "case_results": [
+          {
+            "case_id": "COUNT-HIDDEN-00",
+            "source_lengths": [
+              0
+            ],
+            "passed": true,
+            "output_length": 0,
+            "expected_length": 0,
+            "error": null
+          },
+          {
+            "case_id": "COUNT-HIDDEN-01",
+            "source_lengths": [
+              1
+            ],
+            "passed": true,
+            "output_length": 1,
+            "expected_length": 1,
+            "error": null
+          },
+          {
+            "case_id": "COUNT-HIDDEN-02",
+            "source_lengths": [
+              3
+            ],
+            "passed": true,
+            "output_length": 3,
+            "expected_length": 3,
+            "error": null
+          },
+          {
+            "case_id": "COUNT-HIDDEN-03",
+            "source_lengths": [
+              7
+            ],
+            "passed": true,
+            "output_length": 7,
+            "expected_length": 7,
+            "error": null
+          },
+          {
+            "case_id": "COUNT-HIDDEN-04",
+            "source_lengths": [
+              13
+            ],
+            "passed": true,
+            "output_length": 13,
+            "expected_length": 13,
+            "error": null
+          },
+          {
+            "case_id": "COUNT-HIDDEN-05",
+            "source_lengths": [
+              31
+            ],
+            "passed": true,
+            "output_length": 31,
+            "expected_length": 31,
+            "error": null
+          },
+          {
+            "case_id": "COUNT-HIDDEN-06",
+            "source_lengths": [
+              64
+            ],
+            "passed": true,
+            "output_length": 64,
+            "expected_length": 64,
+            "error": null
+          }
+        ]
+      }
+    },
+    {
+      "foundation_level": 2,
+      "semantic": {
+        "semantic_id": "FSEM-cf58189608902a55",
+        "opcode": 2,
+        "source_slots": [
+          0,
+          1
+        ],
+        "program": {
+          "program_id": "FKP-8e9c4a06b5dfe2cc",
+          "source_plan": [
+            0,
+            1
+          ],
+          "instructions": [
+            {
+              "opcode": 0,
+              "operand": 0,
+              "target": 4
+            },
+            {
+              "opcode": 1,
+              "operand": 0
+            },
+            {
+              "opcode": 2
+            },
+            {
+              "opcode": 3,
+              "target": 0
+            },
+            {
+              "opcode": 0,
+              "operand": 1,
+              "target": 8
+            },
+            {
+              "opcode": 1,
+              "operand": 1
+            },
+            {
+              "opcode": 2
+            },
+            {
+              "opcode": 3,
+              "target": 4
+            },
+            {
+              "opcode": 4
+            }
+          ]
+        },
+        "dependency_semantic_ids": [
+          "FSEM-3d1a4d19fab44d62"
+        ],
+        "source_task_ids": [
+          "TASK-opaque-c294"
+        ]
+      },
+      "posthoc_name": "addition as conserved combination of two counted collections",
+      "posthoc_formula": "|X ⊎ Y| = |X| + |Y|",
+      "search": {
+        "task_id": "TASK-opaque-c294",
+        "candidates_evaluated": 15,
+        "selected_program_id": "FKP-8e9c4a06b5dfe2cc",
+        "selected_source_plan": [
+          0,
+          1
+        ],
+        "selected_instruction_count": 9,
+        "passed_examples": 6,
+        "example_count": 6,
+        "formula_or_math_name_visible_to_search": false
+      },
+      "verification": {
+        "verifier_version": "independent-zero-arithmetic-foundation-verifier-v0.1",
+        "semantic_id": "FSEM-cf58189608902a55",
+        "passed": true,
+        "universal_statement": "for every pair of finite opaque collections X,Y, the output contains exactly one marker for every member consumed from X and Y",
+        "finite_sampling_used_as_proof": false,
+        "proof_method": "well-founded induction on remaining opaque symbols plus exact instruction-structure binding",
+        "obligations": [
+          {
+            "obligation_id": "semantic_id_binding",
+            "passed": true,
+            "evidence": "FSEM-cf58189608902a55"
+          },
+          {
+            "obligation_id": "canonical_program_binding",
+            "passed": true,
+            "evidence": "FKP-8e9c4a06b5dfe2cc"
+          },
+          {
+            "obligation_id": "zero_arithmetic_instruction_set",
+            "passed": true,
+            "evidence": [
+              0,
+              1,
+              2,
+              3,
+              4
+            ]
+          },
+          {
+            "obligation_id": "each_source_consumed_at_most_once",
+            "passed": true,
+            "evidence": [
+              0,
+              1
+            ]
+          },
+          {
+            "obligation_id": "dependency_precedes_composition",
+            "passed": true,
+            "evidence": [
+              "FSEM-3d1a4d19fab44d62"
+            ]
+          },
+          {
+            "obligation_id": "empty_input_base_case",
+            "passed": true,
+            "evidence": "an empty source branches past its loop and emits no marker"
+          },
+          {
+            "obligation_id": "one_symbol_induction_step",
+            "passed": true,
+            "evidence": "one loop removes one opaque source symbol, emits one marker, and leaves the same invariant on a shorter finite source"
+          },
+          {
+            "obligation_id": "finite_source_termination",
+            "passed": true,
+            "evidence": "every taken branch strictly shortens one finite source; each source is visited once"
+          },
+          {
+            "obligation_id": "sequential_source_conservation",
+            "passed": true,
+            "evidence": "completed source loops preserve all prior output and append exactly one marker per subsequently consumed symbol"
+          },
+          {
+            "obligation_id": "independent_hidden_replay",
+            "passed": true,
+            "evidence": "7/7 cases"
+          }
+        ],
+        "case_results": [
+          {
+            "case_id": "COMBINE-HIDDEN-00",
+            "source_lengths": [
+              0,
+              0
+            ],
+            "passed": true,
+            "output_length": 0,
+            "expected_length": 0,
+            "error": null
+          },
+          {
+            "case_id": "COMBINE-HIDDEN-01",
+            "source_lengths": [
+              0,
+              9
+            ],
+            "passed": true,
+            "output_length": 9,
+            "expected_length": 9,
+            "error": null
+          },
+          {
+            "case_id": "COMBINE-HIDDEN-02",
+            "source_lengths": [
+              11,
+              0
+            ],
+            "passed": true,
+            "output_length": 11,
+            "expected_length": 11,
+            "error": null
+          },
+          {
+            "case_id": "COMBINE-HIDDEN-03",
+            "source_lengths": [
+              1,
+              1
+            ],
+            "passed": true,
+            "output_length": 2,
+            "expected_length": 2,
+            "error": null
+          },
+          {
+            "case_id": "COMBINE-HIDDEN-04",
+            "source_lengths": [
+              3,
+              8
+            ],
+            "passed": true,
+            "output_length": 11,
+            "expected_length": 11,
+            "error": null
+          },
+          {
+            "case_id": "COMBINE-HIDDEN-05",
+            "source_lengths": [
+              13,
+              21
+            ],
+            "passed": true,
+            "output_length": 34,
+            "expected_length": 34,
+            "error": null
+          },
+          {
+            "case_id": "COMBINE-HIDDEN-06",
+            "source_lengths": [
+              32,
+              17
+            ],
+            "passed": true,
+            "output_length": 49,
+            "expected_length": 49,
+            "error": null
+          }
+        ]
+      }
+    }
+  ],
+  "capability_graph": {
+    "verified_foundation_count": 2,
+    "verified_path": [
+      {
+        "node": "FSEM-3d1a4d19fab44d62",
+        "human_label_added_after_proof": "计数"
+      },
+      {
+        "node": "FSEM-cf58189608902a55",
+        "human_label_added_after_proof": "加法"
+      }
+    ],
+    "next_frontier": {
+      "learner_label": null,
+      "evaluator_only_interpretation": "inverse/cancellation tasks that may support subtraction and negative direction",
+      "status": "not_yet_discovered"
+    },
+    "composite_formula_library": {
+      "record_count": 1000,
+      "classification": "derived affine programs",
+      "counts_as_foundational_discovery": false
+    }
+  },
+  "proof_summary": {
+    "obligations_passed": 20,
+    "obligations_total": 20,
+    "hidden_cases_passed": 14,
+    "hidden_cases_total": 14,
+    "finite_sampling_used_as_universal_proof": false
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/foundation_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/rejected_programs.jsonl",
+    "success_count": 2,
+    "mistake_count": 16,
+    "hash_chained": true,
+    "success_proof_replayed_on_load": true
+  },
+  "gates": [
+    {
+      "gate_id": "learner_instruction_set_contains_zero_arithmetic_operations",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    },
+    {
+      "gate_id": "anonymous_single_collection_task_solved",
+      "passed": true,
+      "actual": [
+        0
+      ],
+      "required": [
+        0
+      ]
+    },
+    {
+      "gate_id": "anonymous_two_collection_task_solved",
+      "passed": true,
+      "actual": [
+        0,
+        1
+      ],
+      "required": "each source exactly once"
+    },
+    {
+      "gate_id": "second_semantic_depends_on_first",
+      "passed": true,
+      "actual": [
+        "FSEM-3d1a4d19fab44d62"
+      ],
+      "required": [
+        "FSEM-3d1a4d19fab44d62"
+      ]
+    },
+    {
+      "gate_id": "all_universal_induction_obligations_pass",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_symbol_replays_pass",
+      "passed": true,
+      "actual": 14,
+      "required": 14
+    },
+    {
+      "gate_id": "foundation_semantics_persisted_with_replayable_proofs",
+      "passed": true,
+      "actual": 2,
+      "required": 2
+    },
+    {
+      "gate_id": "failed_or_redundant_programs_enter_mistake_room",
+      "passed": true,
+      "actual": 16,
+      "required": 16
+    },
+    {
+      "gate_id": "thousand_affine_compositions_excluded_from_foundation_count",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    }
+  ],
+  "limitations": [
+    "The learner did not receive arithmetic opcodes, but the host still supplied the symbol-machine instruction grammar and bounded program enumeration strategy.",
+    "The second semantic is currently a unary collection-combination operation; posthoc calling it addition does not yet provide positional numerals or efficient large-number arithmetic.",
+    "Subtraction, negative direction, multiplication, division, and every later mathematical level remain unverified in this new foundation lineage.",
+    "The curriculum labels are evaluator-side reporting metadata and are not inputs to learner search."
+  ]
+}

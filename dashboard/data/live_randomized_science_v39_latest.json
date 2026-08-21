@@ -1,0 +1,502 @@
+{
+  "report_version": "live-randomized-science-v39.0",
+  "run_id": "RUN-live-randomized-science-v39-20260821T165207038865Z",
+  "created_at": "2026-08-21T16:52:07.038865+00:00",
+  "verdict": "live_randomized_adaptive_computational_experiment_loop_verified",
+  "acceptance": {
+    "benchmark_version": "live-randomized-science-v39.0",
+    "passed": true,
+    "classification": "verified_live_randomized_adaptive_computational_apparatus_scale_calibration",
+    "apparatus": {
+      "primary": {
+        "ok": true,
+        "broker_pid": 6892,
+        "apparatus": "live_nested_workload_timer_v39",
+        "available_levels": [
+          48,
+          64,
+          80,
+          96,
+          112,
+          128,
+          160,
+          192,
+          224,
+          256,
+          288,
+          320,
+          352
+        ],
+        "clock": "perf_counter_ns",
+        "measurement_exists_before_request": false
+      },
+      "replica": {
+        "ok": true,
+        "broker_pid": 18948,
+        "apparatus": "live_nested_workload_timer_v39",
+        "available_levels": [
+          48,
+          64,
+          80,
+          96,
+          112,
+          128,
+          160,
+          192,
+          224,
+          256,
+          288,
+          320,
+          352
+        ],
+        "clock": "perf_counter_ns",
+        "measurement_exists_before_request": false
+      },
+      "natural_physical_system": false
+    },
+    "measurements": [
+      {
+        "anonymous_level": 160,
+        "response": 1289669.5652173914,
+        "mad": 11484.782608695561,
+        "round_index": 0,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 288,
+        "response": 4325457.142857143,
+        "mad": 80357.14285714272,
+        "round_index": 0,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 64,
+        "response": 210555.13698630137,
+        "mad": 3823.287671232887,
+        "round_index": 0,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 320,
+        "response": 5410645.454545454,
+        "mad": 99536.36363636423,
+        "round_index": 1,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 48,
+        "response": 122087.5,
+        "mad": 661.1538461538439,
+        "round_index": 1,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 96,
+        "response": 462046.1538461539,
+        "mad": 9579.230769230751,
+        "round_index": 2,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 80,
+        "response": 327015.50802139036,
+        "mad": 5029.411764705845,
+        "round_index": 2,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 352,
+        "response": 6748900.0,
+        "mad": 220055.55555555597,
+        "round_index": 3,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 288,
+        "response": 4449128.571428572,
+        "mad": 75371.4285714291,
+        "round_index": 4,
+        "human_quantity_names": null
+      },
+      {
+        "anonymous_level": 128,
+        "response": 852604.1095890411,
+        "mad": 27238.356164383586,
+        "round_index": 4,
+        "human_quantity_names": null
+      }
+    ],
+    "adaptive_experiment_audit": {
+      "round_count": 3,
+      "plans": [
+        {
+          "round_index": 0,
+          "selected_anonymous_levels": [
+            64,
+            160,
+            288
+          ],
+          "candidate_count": 9,
+          "maximum_log_prediction_spread": 0.0
+        },
+        {
+          "round_index": 1,
+          "selected_anonymous_levels": [
+            48,
+            320
+          ],
+          "candidate_count": 9,
+          "maximum_log_prediction_spread": 2.407945608651872
+        },
+        {
+          "round_index": 2,
+          "selected_anonymous_levels": [
+            80,
+            96
+          ],
+          "candidate_count": 9,
+          "maximum_log_prediction_spread": 1.386294361119889
+        }
+      ],
+      "later_rounds_use_model_disagreement": true,
+      "unique_measured_levels": 7
+    },
+    "randomization_and_commitment_audit": {
+      "batches": [
+        {
+          "batch_id": "V39-PRIMARY-0",
+          "planned_levels": [
+            64,
+            160,
+            288
+          ],
+          "randomized_order": [
+            160,
+            288,
+            64
+          ],
+          "seed_commitment": "698544fb178905a6fbde3614e09bed0e97d6c4dbd30567ad69cd527bd45c3b31",
+          "batch_commitment": "949af8396d31b7bbf6369da3b25b9ab4da22be0785110d647f2cd15e99d4ac82",
+          "commit_event_index": 0,
+          "measurement_event_index": 1,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787331127098995400,
+          "ended_at_unix_ns": 1787331128002174800
+        },
+        {
+          "batch_id": "V39-PRIMARY-1",
+          "planned_levels": [
+            48,
+            320
+          ],
+          "randomized_order": [
+            320,
+            48
+          ],
+          "seed_commitment": "032d5b110fc23c24c505cfc3b358ab716d0e82eb829a90f0e7fc2872bfa95073",
+          "batch_commitment": "49d58150f4d83956d243ed6518d971eb3401d0990358145460f3a8cc51c2b2a9",
+          "commit_event_index": 2,
+          "measurement_event_index": 3,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787331128002174800,
+          "ended_at_unix_ns": 1787331128619082700
+        },
+        {
+          "batch_id": "V39-PRIMARY-2",
+          "planned_levels": [
+            80,
+            96
+          ],
+          "randomized_order": [
+            96,
+            80
+          ],
+          "seed_commitment": "4f5e1f866de578aa1ff5fdec5111e2c9f0e99867cf45d7df75a01feb300f468a",
+          "batch_commitment": "5aa4961eeb0ddcb56db9fe25c8622b9099f8020332046a83b9a5e986d3c796e7",
+          "commit_event_index": 4,
+          "measurement_event_index": 5,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787331128619082700,
+          "ended_at_unix_ns": 1787331129229085900
+        },
+        {
+          "batch_id": "V39-PROSPECTIVE-HOLDOUT",
+          "planned_levels": [
+            352
+          ],
+          "randomized_order": [
+            352
+          ],
+          "seed_commitment": "b1a2e2d2c2f397648b30fd4dd2b4728ffb7b3af77e03ee8392f1e92dbec98db1",
+          "batch_commitment": "b74373e827b996776cd2d0ecb109d7f16587bc34f04e20382f5629bb37b91981",
+          "commit_event_index": 7,
+          "measurement_event_index": 8,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787331129229085900,
+          "ended_at_unix_ns": 1787331129535594900
+        },
+        {
+          "batch_id": "V39-NEW-PROCESS-REPLICATION",
+          "planned_levels": [
+            128,
+            288
+          ],
+          "randomized_order": [
+            288,
+            128
+          ],
+          "seed_commitment": "8817ea8295f35d03919a5e04c6a6f5e73f75ed3a83a7b598573e6c332f87f73c",
+          "batch_commitment": "9e880c8ab9624b13710b38683b82065a5093d51a4af82256e7aeccc539cd9291",
+          "commit_event_index": 2,
+          "measurement_event_index": 3,
+          "commit_precedes_measurement": true,
+          "order_differs_from_sorted": true,
+          "started_at_unix_ns": 1787331129535594900,
+          "ended_at_unix_ns": 1787331130198877800
+        }
+      ],
+      "all_committed_before_measurement": true,
+      "all_multi_level_orders_randomized": true
+    },
+    "model_competition": {
+      "candidate_count": 9,
+      "selected": {
+        "program_id": "LIVE-36da1f0fe8d71daf",
+        "opaque_program": "LIVE_POWER<SCALE<51.4050627>;Q0^8/4>",
+        "exponent_quarters": 8,
+        "fitted_scale": 51.40506274079627,
+        "robust_score": 1.2064802002096249,
+        "human_law_name": null
+      },
+      "runner_up": {
+        "program_id": "LIVE-cf3b2e858a60efa1",
+        "opaque_program": "LIVE_POWER<SCALE<156.931708>;Q0^7/4>",
+        "exponent_quarters": 7,
+        "fitted_scale": 156.9317080440072,
+        "robust_score": 7.861281295897153,
+        "human_law_name": null
+      },
+      "linear_null": {
+        "program_id": "LIVE-23db51c40153a297",
+        "opaque_program": "LIVE_POWER<SCALE<4812.98077>;Q0^4/4>",
+        "exponent_quarters": 4,
+        "fitted_scale": 4812.980769230769,
+        "robust_score": 34.37672690608208,
+        "human_law_name": null
+      },
+      "cubic_null": {
+        "program_id": "LIVE-a6ed7f8f91f4deaa",
+        "opaque_program": "LIVE_POWER<SCALE<0.522241837>;Q0^12/4>",
+        "exponent_quarters": 12,
+        "fitted_scale": 0.5222418369391026,
+        "robust_score": 33.73335626271666,
+        "human_law_name": null
+      },
+      "selected_beats_boundary_nulls": true,
+      "matches_quadratic_kernel_band": true
+    },
+    "prospective_holdout_audit": {
+      "anonymous_level": 352,
+      "predicted_response": 6369292.893835621,
+      "observed_response": 6748900.0,
+      "absolute_percentage_error": 0.05624725602163005,
+      "prediction_commitment": "7ada957249e2c8a1c0124f9a87188b755d7db046180180a511306a080c75b95a",
+      "committed_prediction": 6369292.893835621,
+      "prediction_commit_event_index": 6,
+      "measurement_event_index": 8,
+      "commitment_precedes_measurement": true,
+      "passed": true
+    },
+    "timing_noise_audit": {
+      "measurement_count": 10,
+      "median_mad_fraction": 0.01827726210966721,
+      "maximum_mad_fraction": 0.03260613663790484,
+      "passed": true
+    },
+    "new_process_replication_audit": {
+      "passed": true,
+      "new_process": true,
+      "primary_broker_pid": 6892,
+      "replica_broker_pid": 18948,
+      "prediction_commitments": [
+        {
+          "level": 128,
+          "commitment": "d7c28b16f8c8de53bc47687ae17b3a6fa0ae8fe20d8c9ed3274735e759bdb782",
+          "prediction": 842220.547945206,
+          "event_index": 0
+        },
+        {
+          "level": 288,
+          "commitment": "7cf0b314a282573e8ab7c9da0a3d313bf2a286534ebbf5149a4b58ba37beac39",
+          "prediction": 4263741.523972605,
+          "event_index": 1
+        }
+      ],
+      "batch_audit": {
+        "batch_id": "V39-NEW-PROCESS-REPLICATION",
+        "planned_levels": [
+          128,
+          288
+        ],
+        "randomized_order": [
+          288,
+          128
+        ],
+        "seed_commitment": "8817ea8295f35d03919a5e04c6a6f5e73f75ed3a83a7b598573e6c332f87f73c",
+        "batch_commitment": "9e880c8ab9624b13710b38683b82065a5093d51a4af82256e7aeccc539cd9291",
+        "commit_event_index": 2,
+        "measurement_event_index": 3,
+        "commit_precedes_measurement": true,
+        "order_differs_from_sorted": true,
+        "started_at_unix_ns": 1787331129535594900,
+        "ended_at_unix_ns": 1787331130198877800
+      },
+      "median_absolute_percentage_error": 0.026923407037065326,
+      "cases": [
+        {
+          "anonymous_level": 288,
+          "predicted_response": 4263741.523972605,
+          "observed_response": 4449128.571428572,
+          "absolute_percentage_error": 0.04166817040228633
+        },
+        {
+          "anonymous_level": 128,
+          "predicted_response": 842220.547945206,
+          "observed_response": 852604.1095890411,
+          "absolute_percentage_error": 0.012178643671844324
+        }
+      ]
+    },
+    "mutation_audits": [
+      {
+        "mutation": "linear_scaling_only",
+        "rejected": true
+      },
+      {
+        "mutation": "cubic_scaling_only",
+        "rejected": true
+      },
+      {
+        "mutation": "measure_before_batch_commitment",
+        "rejected": true
+      },
+      {
+        "mutation": "predict_after_holdout_reveal",
+        "rejected": true
+      },
+      {
+        "mutation": "same_process_replication",
+        "rejected": true
+      }
+    ],
+    "discovery_gates": {
+      "live_new_measurements": true,
+      "independent_apparatus_process": true,
+      "adaptive_experiment_selection": true,
+      "randomized_batch_order": true,
+      "commit_before_measurement": true,
+      "prospective_holdout_prediction": true,
+      "timing_noise_quantified": true,
+      "scale_law_competition": true,
+      "new_process_replication": true,
+      "known_kernel_scaling_match": true,
+      "natural_physical_system": false,
+      "external_laboratory": false,
+      "human_novelty": false
+    },
+    "claim_state": {
+      "live_computational_experiment_loop_verified": true,
+      "natural_science_discovery_claim_allowed": false,
+      "human_unknown_claim_allowed": false,
+      "current_label": "LIVE_RANDOMIZED_COMPUTATIONAL_APPARATUS_CALIBRATION"
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "live_new_measurements",
+        "passed": true
+      },
+      {
+        "obligation_id": "independent_apparatus_process",
+        "passed": true
+      },
+      {
+        "obligation_id": "adaptive_experiment_selection",
+        "passed": true
+      },
+      {
+        "obligation_id": "randomized_batch_order",
+        "passed": true
+      },
+      {
+        "obligation_id": "commit_before_measurement",
+        "passed": true
+      },
+      {
+        "obligation_id": "prospective_holdout_prediction",
+        "passed": true
+      },
+      {
+        "obligation_id": "timing_noise_quantified",
+        "passed": true
+      },
+      {
+        "obligation_id": "scale_law_competition",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_process_replication",
+        "passed": true
+      },
+      {
+        "obligation_id": "known_kernel_scaling_match",
+        "passed": true
+      },
+      {
+        "obligation_id": "natural_system_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "external_lab_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_novelty_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "five_protocol_mutations_rejected",
+        "passed": true
+      }
+    ],
+    "posthoc_translation": {
+      "anonymous_level": "nested-loop side length",
+      "response": "median elapsed nanoseconds per kernel cycle",
+      "selected_exponent": "empirical workload scaling exponent"
+    },
+    "limitations": [
+      "The apparatus is a local computational workload, not a natural physical system or external laboratory.",
+      "Wall-clock timing depends on the operating system, interpreter and processor load.",
+      "The quadratic nested-loop structure is known to the evaluator and is not a human-novel discovery.",
+      "Randomization, adaptive planning and commitments validate the discovery protocol, not scientific novelty.",
+      "Replication uses a new process on the same machine, not an independent site or instrument."
+    ]
+  },
+  "dependency": {
+    "v38_run_id": "RUN-interventional-science-v38-20260821T162813760676Z",
+    "v38_passed": true
+  },
+  "claim": {
+    "achieved": "live measurement, randomized intervention order, adaptive next-experiment choice, prospective holdout and new-process replication",
+    "not_achieved": "natural-science discovery, an external laboratory result, or a human-unknown law"
+  },
+  "storage": {
+    "calibration_room": "artifacts/science/v39/calibrations/live_scale_latest.json",
+    "mistake_room": "artifacts/science/v39/mistakes/rejected_protocol_mutations.jsonl",
+    "human_discovery_room": null
+  },
+  "content_digest": "d19e9ac2085be3ff175864b7c2ca9dabac33a68514a41bd4bcb7b8e3145ad963"
+}

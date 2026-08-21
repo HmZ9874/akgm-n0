@@ -1,0 +1,536 @@
+{
+  "report_version": "proof-carrying-reasoning-optimization-v0.1",
+  "run_id": "RUN-reasoning-optimization-20260819T062802801302Z",
+  "created_at": "2026-08-19T06:28:02.802302Z",
+  "verdict": "variable_depth_reasoning_verified",
+  "reasoner": {
+    "primitive_operation_count": 8,
+    "maximum_depth": 4,
+    "maximum_binary_depth": 3,
+    "maximum_nodes": 7,
+    "graph_template_supplied": false,
+    "formula_names_supplied": false,
+    "host_selected_episode_operation_pool": true,
+    "behavioral_hypotheses_per_signature": 5
+  },
+  "experiment": {
+    "host_seed_count": 3,
+    "self_selected_query_count": 2,
+    "total_observation_count": 5,
+    "self_selected_queries": [
+      {
+        "input_row": [
+          9.0
+        ],
+        "distinct_output_count": 7,
+        "disagreeing_candidate_pairs": 42,
+        "candidate_outputs": [
+          49.0,
+          19683.0,
+          6561.0,
+          19683.0,
+          6561.0,
+          49.0,
+          1.0,
+          26.0,
+          9.0,
+          25.0
+        ]
+      },
+      {
+        "input_row": [
+          3.0
+        ],
+        "distinct_output_count": 2,
+        "disagreeing_candidate_pairs": 6,
+        "candidate_outputs": [
+          25.0,
+          25.0,
+          9.0,
+          9.0,
+          9.0
+        ]
+      }
+    ],
+    "rounds": [
+      {
+        "round_index": 0,
+        "observation_count": 3,
+        "exact_candidate_count": 10,
+        "selected_candidate_id": "RSN-7dd0d52590506bce",
+        "proposed_experiment": {
+          "input_row": [
+            9.0
+          ],
+          "distinct_output_count": 7,
+          "disagreeing_candidate_pairs": 42,
+          "candidate_outputs": [
+            49.0,
+            19683.0,
+            6561.0,
+            19683.0,
+            6561.0,
+            49.0,
+            1.0,
+            26.0,
+            9.0,
+            25.0
+          ]
+        },
+        "observed_output": 225.0
+      },
+      {
+        "round_index": 1,
+        "observation_count": 4,
+        "exact_candidate_count": 5,
+        "selected_candidate_id": "RSN-51ae0cb9578ccf45",
+        "proposed_experiment": {
+          "input_row": [
+            3.0
+          ],
+          "distinct_output_count": 2,
+          "disagreeing_candidate_pairs": 6,
+          "candidate_outputs": [
+            25.0,
+            25.0,
+            9.0,
+            9.0,
+            9.0
+          ]
+        },
+        "observed_output": 25.0
+      },
+      {
+        "round_index": 2,
+        "observation_count": 5,
+        "exact_candidate_count": 2,
+        "selected_candidate_id": "RSN-51ae0cb9578ccf45",
+        "proposed_experiment": {
+          "input_row": [
+            4.0
+          ],
+          "distinct_output_count": 1,
+          "disagreeing_candidate_pairs": 0,
+          "candidate_outputs": [
+            49.0,
+            49.0
+          ]
+        },
+        "observed_output": null
+      }
+    ]
+  },
+  "result": {
+    "candidate": {
+      "candidate_id": "RSN-51ae0cb9578ccf45",
+      "program": {
+        "substrate": "anonymous_verified_composition_graph_v0.1",
+        "nodes": [
+          {
+            "operation_id": "G2NEW-4f6b5de649cfa951",
+            "arguments": [
+              "input:0"
+            ]
+          },
+          {
+            "operation_id": "G4NEW-1914cf632033656b",
+            "arguments": [
+              "input:0"
+            ]
+          },
+          {
+            "operation_id": "G4NEW-687cca22ba6069f5",
+            "arguments": [
+              "node:0",
+              "node:1"
+            ]
+          },
+          {
+            "operation_id": "G3NEW-5682429236b9b26a",
+            "arguments": [
+              "node:2"
+            ]
+          },
+          {
+            "operation_id": "G3NEW-2d402424e2bb97f1",
+            "arguments": [
+              "node:3"
+            ]
+          }
+        ],
+        "output": "node:4"
+      },
+      "fit_error": 0.0,
+      "maximum_absolute_error": 0.0,
+      "outputs": [
+        0.0,
+        1.0,
+        9.0,
+        225.0,
+        25.0
+      ],
+      "behavior_signature": [
+        0.0,
+        1.0,
+        9.0,
+        225.0,
+        25.0
+      ],
+      "reasoning_depth": 4,
+      "reasoning_steps": [
+        {
+          "node_index": 0,
+          "operation_id": "G2NEW-4f6b5de649cfa951",
+          "arguments": [
+            "input:0"
+          ],
+          "component_proof_record_id": "UF-acf6631ac2ca1895"
+        },
+        {
+          "node_index": 1,
+          "operation_id": "G4NEW-1914cf632033656b",
+          "arguments": [
+            "input:0"
+          ],
+          "component_proof_record_id": "UF-585f8194a03eefe9"
+        },
+        {
+          "node_index": 2,
+          "operation_id": "G4NEW-687cca22ba6069f5",
+          "arguments": [
+            "node:0",
+            "node:1"
+          ],
+          "component_proof_record_id": "UF-62d45798c2efe627"
+        },
+        {
+          "node_index": 3,
+          "operation_id": "G3NEW-5682429236b9b26a",
+          "arguments": [
+            "node:2"
+          ],
+          "component_proof_record_id": "UF-0ba151968dafcca3"
+        },
+        {
+          "node_index": 4,
+          "operation_id": "G3NEW-2d402424e2bb97f1",
+          "arguments": [
+            "node:3"
+          ],
+          "component_proof_record_id": "UF-737e219163274b6c"
+        }
+      ],
+      "instruction_count": 5,
+      "exact": true
+    },
+    "reasoning_depth": 4,
+    "reasoning_step_count": 5,
+    "posthoc_interpretation": "bit_length(abs(3^n - 2^n))^2",
+    "component_proof_records": [
+      "UF-acf6631ac2ca1895",
+      "UF-585f8194a03eefe9",
+      "UF-62d45798c2efe627",
+      "UF-0ba151968dafcca3",
+      "UF-737e219163274b6c"
+    ],
+    "layers": [
+      {
+        "depth": 1,
+        "programs_generated": 8,
+        "programs_executed": 8,
+        "programs_rejected": 0,
+        "retained_states": 8,
+        "exact_states": 0
+      },
+      {
+        "depth": 2,
+        "programs_generated": 208,
+        "programs_executed": 200,
+        "programs_rejected": 8,
+        "retained_states": 126,
+        "exact_states": 0
+      },
+      {
+        "depth": 3,
+        "programs_generated": 37044,
+        "programs_executed": 36892,
+        "programs_rejected": 152,
+        "retained_states": 5847,
+        "exact_states": 0
+      },
+      {
+        "depth": 4,
+        "programs_generated": 27576,
+        "programs_executed": 20790,
+        "programs_rejected": 6786,
+        "retained_states": 10782,
+        "exact_states": 2
+      }
+    ]
+  },
+  "sealed_transfer": {
+    "passed": 5,
+    "total": 5,
+    "cases": [
+      {
+        "inputs": [
+          21.0
+        ],
+        "predicted": 1156.0,
+        "observed": 1156.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          22.0
+        ],
+        "predicted": 1225.0,
+        "observed": 1225.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          23.0
+        ],
+        "predicted": 1369.0,
+        "observed": 1369.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          24.0
+        ],
+        "predicted": 1521.0,
+        "observed": 1521.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          25.0
+        ],
+        "predicted": 1600.0,
+        "observed": 1600.0,
+        "passed": true
+      }
+    ]
+  },
+  "fixed_depth_baseline": {
+    "maximum_graph_nodes": 3,
+    "candidate": {
+      "candidate_id": "CG-e87554ad90616304",
+      "program": {
+        "substrate": "anonymous_verified_composition_graph_v0.1",
+        "nodes": [
+          {
+            "operation_id": "G4NEW-1914cf632033656b",
+            "arguments": [
+              "input:0"
+            ]
+          },
+          {
+            "operation_id": "G2CTRL-de057ef1810f4943",
+            "arguments": [
+              "node:0"
+            ]
+          }
+        ],
+        "output": "node:1"
+      },
+      "fit_error": 1532.4,
+      "maximum_absolute_error": 85.0,
+      "outputs": [
+        1.0,
+        1.0,
+        3.0,
+        140.0,
+        5.0
+      ],
+      "behavior_signature": [
+        1.0,
+        1.0,
+        3.0,
+        140.0,
+        5.0
+      ],
+      "instruction_count": 2,
+      "exact": false
+    },
+    "sealed_passed": 0,
+    "sealed_total": 5,
+    "cases": [
+      {
+        "inputs": [
+          21.0
+        ],
+        "predicted": null,
+        "observed": 1156.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          22.0
+        ],
+        "predicted": null,
+        "observed": 1225.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          23.0
+        ],
+        "predicted": null,
+        "observed": 1369.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          24.0
+        ],
+        "predicted": null,
+        "observed": 1521.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          25.0
+        ],
+        "predicted": null,
+        "observed": 1600.0,
+        "passed": false
+      }
+    ]
+  },
+  "verification": {
+    "verifier_version": "reasoning-trace-verifier-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "obligation_id": "trace_structure_matches_program",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_components_have_proof_records",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_replay_cases_exact",
+        "passed": true
+      }
+    ],
+    "case_results": [
+      {
+        "inputs": [
+          21.0
+        ],
+        "predicted": 1156.0,
+        "observed": 1156.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          22.0
+        ],
+        "predicted": 1225.0,
+        "observed": 1225.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          23.0
+        ],
+        "predicted": 1369.0,
+        "observed": 1369.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          24.0
+        ],
+        "predicted": 1521.0,
+        "observed": 1521.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          25.0
+        ],
+        "predicted": 1600.0,
+        "observed": 1600.0,
+        "passed": true
+      }
+    ]
+  },
+  "mistake_feedback": {
+    "new_mistake_ids": [
+      "AM-f08d80d7662da71c",
+      "AM-9f8bc8641b03a90f",
+      "AM-27785ccf643bb780",
+      "AM-b4849131d799ea02",
+      "AM-c81ac5fcd50c3ddf",
+      "AM-7a6efb68dbc4c4f2",
+      "AM-0f8ed8d797376808",
+      "AM-351a8f7bf99febc8",
+      "AM-66633599054fe0af",
+      "AM-2bccc6e1462eaa34"
+    ],
+    "count": 10
+  },
+  "gates": [
+    {
+      "gate_id": "variable_depth_path_created",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "all_steps_backed_by_universal_records",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "self_selected_counterexamples_exist",
+      "passed": true,
+      "actual": 2,
+      "threshold": 1
+    },
+    {
+      "gate_id": "sealed_transfer_exact",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "outperforms_fixed_depth_baseline",
+      "passed": true,
+      "actual": "5>0",
+      "threshold": "strictly_better"
+    },
+    {
+      "gate_id": "independent_trace_replay",
+      "passed": true,
+      "actual": 3,
+      "threshold": 3
+    },
+    {
+      "gate_id": "wrong_paths_enter_mistake_room",
+      "passed": true,
+      "actual": 10,
+      "threshold": 10
+    }
+  ],
+  "learner_received": {
+    "anonymous_numeric_rows": true,
+    "anonymous_verified_operation_ids": true,
+    "component_proof_record_ids": true,
+    "operation_or_formula_names": false,
+    "target_graph": false,
+    "target_intermediate_values": false
+  },
+  "limitations": [
+    "Reasoning is bounded by configured depth, node count, beam size, and unary/binary arity.",
+    "The components were previously proven; this run created a new reasoning path rather than new primitive semantics.",
+    "The host selected an eight-operation working-memory episode; full 30-operation reasoning still exceeds the current beam.",
+    "Sealed transfer and proof-lineage replay do not replace a new symbolic theorem certificate for the posthoc formula."
+  ]
+}

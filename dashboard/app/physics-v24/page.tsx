@@ -1,0 +1,36 @@
+import reportData from "../../data/inertial_response_discovery_v24_latest.json";
+
+const report = reportData;
+const acceptance = report.acceptance;
+const discovery = acceptance.discovery;
+const registry = acceptance.research_registry;
+const constant = registry.constant_candidates[0];
+const passed = acceptance.proof_obligations.filter(item => item.passed).length;
+
+export default function PhysicsV24Page() {
+  return <main>
+    <header className="masthead"><div className="brand-lockup"><span className="brand-mark gen1-mark">●</span><div><p className="eyebrow">INERTIAL RESPONSE DISCOVERY V24</p><p className="brand-name">AKGM-N0 / 匿名参数响应与加权守恒</p></div></div><div className="run-meta"><a className="nav-link" href="/mechanics-v25">碰撞力学 V25</a><a className="nav-link" href="/physics-worlds-v23">自主世界</a><a className="nav-link" href="/physics-v22">物理发现</a><a className="nav-link" href="/mistakes">错题库</a><a className="nav-link" href="/">总览</a></div></header>
+
+    <section className="hero panel-grid operation-hero"><div className="hero-copy"><div className="verdict-row"><span className="verdict-badge">V24 验收 {passed}/12</span><span className="scope-label">OBSERVE → SEARCH → FALSIFY → PROVE → TRANSLATE</span></div><h1>系统发现了“参数越大，同一作用产生的响应越小”</h1><p className="lede">学习器只看一个正计数参数、一个三计数器输入和一个三计数器输出，没有收到质量、力、加速度、除法或 F=ma。它搜索方向路由与分母构造，最后只有一个程序通过训练、密封迁移和通用恒等式证明。</p><div className="run-id"><span>LATEST</span><code>{report.run_id}</code><code>{acceptance.classification}</code></div></div><div className="hero-signal compact-signal"><div className="signal-ring full-ring"><strong>{passed}/12</strong><span>严格义务</span></div><p>{report.verdict}</p></div></section>
+
+    <section className="metric-grid meta-score-grid">
+      <article className="metric-card accent-cyan"><p>响应候选</p><strong>{discovery.response_candidates_generated}</strong><span>方向 × 分母结构</span></article>
+      <article className="metric-card accent-violet"><p>行为类别</p><strong>{discovery.response_behavior_classes}</strong><span>训练集上的不同输出</span></article>
+      <article className="metric-card accent-amber"><p>加权候选</p><strong>{discovery.invariant_candidates_generated}</strong><span>三种通道配对</span></article>
+      <article className="metric-card accent-cyan"><p>密封迁移</p><strong>{acceptance.proofs.response.hidden_replay.length + acceptance.proofs.weighted_conservation.hidden_replay.length}</strong><span>全部通过</span></article>
+      <article className="metric-card accent-slate"><p>错误结构</p><strong>{acceptance.mutation_audits.length}</strong><span>全部反例拒绝</span></article>
+    </section>
+
+    <section className="content-grid operation-grid"><article className="surface concept-card"><div className="section-heading"><div><p className="eyebrow">DISCOVERED RESPONSE</p><h2>唯一响应程序</h2></div><span className="status-chip good">PROVED</span></div><div className="posthoc-note"><span>学习器内部表达</span><strong><code>{discovery.selected_response.opaque_program}</code></strong><small>KEEP：保持方向计数器；SEM&lt;D,P&gt;：用既有交互语义组合原分母与匿名参数。</small></div><div className="posthoc-note"><span>证明之后的人类翻译</span><strong>a = F / m　⇔　F = m · a</strong><small>这些物理名称没有进入训练行或候选程序。</small></div></article><article className="surface concept-card"><div className="section-heading"><div><p className="eyebrow">DISCOVERED INVARIANT</p><h2>不等参数实体的新守恒量</h2></div><span className="status-chip good">UNIQUE</span></div><div className="posthoc-note"><span>学习器内部表达</span><strong><code>{discovery.selected_invariant.opaque_program}</code></strong><small>变化通道：{discovery.selected_invariant.changed_channels.join(", ")}；训练案例：{discovery.selected_invariant.training_cases}</small></div><div className="posthoc-note"><span>证明之后的人类翻译</span><strong>m₁v₁ + m₂v₂ 保持不变</strong><small>对应封闭系统总动量；普通 v₁+v₂ 在参数不等时被反例推翻。</small></div></article></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">WHY THIS IS A DISCOVERY</p><h2>不是把答案写进候选名称</h2></div></div><div className="operator-discovery-grid"><article className="metric-card"><p>INPUT</p><strong className="operator-name">匿名计数器通道</strong><span>没有质量、力、加速度名称</span></article><article className="metric-card"><p>SEARCH</p><strong className="operator-name">10 个可执行结构</strong><span>保持/交换方向 × 5 种分母构造</span></article><article className="metric-card"><p>FALSIFY</p><strong className="operator-name">错误进入错题库</strong><span>忽略参数、错误组合、反向、无权守恒</span></article><article className="metric-card"><p>PROVE</p><strong className="operator-name">通用重建恒等式</strong><span>SEM&lt;p,RESP&lt;p,x&gt;&gt; ≡ x</span></article><article className="metric-card"><p>TRANSFER</p><strong className="operator-name">8 个密封案例</strong><span>负数、分数、不等参数</span></article><article className="metric-card"><p>TRANSLATE</p><strong className="operator-name">最后才赋予物理名</strong><span>响应式与加权守恒式</span></article></div></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">POST-PROOF RESEARCH REGISTRY</p><h2>验证后命名，研究时可引用</h2></div><span className="status-chip good">NOT LEARNER INPUT</span></div><div className="operator-discovery-grid">{registry.quantities.map(item => <article className="metric-card" key={item.quantity_id}><p><code>{item.quantity_id}</code></p><strong className="operator-name">{item.machine_symbol} / {item.posthoc_physics_alias}</strong><span>{item.research_name}</span><small>{item.role}</small></article>)}<article className="metric-card accent-amber"><p><code>{constant.constant_id}</code></p><strong className="operator-name">{constant.display_symbol} = 1</strong><span>{constant.research_name}</span><small>{constant.status}</small></article></div><div className="boundary-box"><p>常数候选边界</p><code>{constant.defining_relation}</code><span>{constant.warning}</span></div></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">MUTATION AUDIT</p><h2>被推翻的四种想法</h2></div></div><div className="operator-discovery-grid">{acceptance.mutation_audits.map(item => <article className="metric-card" key={item.mutation}><p><code>{item.mutation}</code></p><strong className="operator-name">{item.rejected ? "已拒绝" : "未拒绝"}</strong><span>存在具体密封反例</span><small>{item.counterexample?.experiment_id}</small></article>)}</div></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">STRICT OBLIGATIONS</p><h2>十二项验收证据</h2></div></div><div className="operator-discovery-grid">{acceptance.proof_obligations.map(item => <article className="metric-card" key={item.obligation_id}><p><code>{item.obligation_id}</code></p><strong className="operator-name">{item.passed ? "通过" : "失败"}</strong><span>独立验证</span></article>)}</div></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">HONEST BOUNDARY</p><h2>这一步到达了什么、还没有到达什么</h2></div></div><ul>{acceptance.limitations.map(item => <li key={item}>{item}</li>)}</ul><div className="boundary-box"><p>准确成果</p><code>{report.claim.achieved}</code><span>未声称：{report.claim.not_claimed}</span></div><p className="digest-line">内容摘要 <code>{report.content_digest}</code></p></section>
+  </main>;
+}

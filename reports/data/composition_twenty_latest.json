@@ -1,0 +1,4589 @@
+{
+  "report_version": "composition-twenty-v0.1",
+  "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+  "created_at": "2026-08-18T18:38:04.151460Z",
+  "verdict": "twenty_bounded_compositions_awaiting_proof",
+  "stop_policy": {
+    "policy_version": "formula-discovery-stop-policy-v0.2",
+    "minimum_new_successful_formulas_per_batch": 20,
+    "require_distinct_executable_behavior": true,
+    "require_distinct_logic_signature": true,
+    "require_hidden_and_adversarial_exactness": true,
+    "require_explicit_domain": true,
+    "require_termination_proof": true,
+    "require_correctness_invariant": true,
+    "require_independent_proof_replay": true,
+    "allow_parameter_only_variants_to_count_as_new": false
+  },
+  "tasks": [
+    {
+      "opaque_task": "c00",
+      "mechanism": "square_after_power3",
+      "posthoc_formula": "(3^n)^2",
+      "candidate": {
+        "candidate_id": "CG-63a3c7a592321402",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-1914cf632033656b",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          9.0,
+          81.0
+        ],
+        "behavior_signature": [
+          1.0,
+          9.0,
+          81.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "038b1e842dba433a00f6463ca52872f4e204e6e934ce29626799246326f89898",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-63a3c7a592321402",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G4NEW-1914cf632033656b",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              9.0,
+              81.0
+            ],
+            "behavior_signature": [
+              1.0,
+              9.0,
+              81.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-d7edafa5b0195dcc",
+        "operation_id": "CGNEW-63a3c7a592321402",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-1914cf632033656b",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G4NEW-1914cf632033656b",
+          "G3NEW-2d402424e2bb97f1"
+        ],
+        "validation_scope": "opaque_composition_c00",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "038b1e842dba433a00f6463ca52872f4e204e6e934ce29626799246326f89898",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-b56c2b97b6ef8752",
+        "AM-a4e248708928870a",
+        "AM-cd62f655f9c95741",
+        "AM-adc921bd072746d2"
+      ]
+    },
+    {
+      "opaque_task": "c01",
+      "mechanism": "cube_after_power2",
+      "posthoc_formula": "(2^n)^3",
+      "candidate": {
+        "candidate_id": "CG-ab1941e8c5f4e746",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2NEW-4f6b5de649cfa951",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          8.0,
+          64.0
+        ],
+        "behavior_signature": [
+          1.0,
+          8.0,
+          64.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "90f4078ef2e9b17bb25c90b0745534dde01b18eedb028cfbcc1f285661103fe4",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-ab1941e8c5f4e746",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2NEW-4f6b5de649cfa951",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-56569b1d93a9c4c9",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              8.0,
+              64.0
+            ],
+            "behavior_signature": [
+              1.0,
+              8.0,
+              64.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-cff92ec58f8651bf",
+        "operation_id": "CGNEW-ab1941e8c5f4e746",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2NEW-4f6b5de649cfa951",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G2NEW-4f6b5de649cfa951",
+          "G4NEW-56569b1d93a9c4c9"
+        ],
+        "validation_scope": "opaque_composition_c01",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "90f4078ef2e9b17bb25c90b0745534dde01b18eedb028cfbcc1f285661103fe4",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-3810765ce7d582e5",
+        "AM-559ee32dd7831e38",
+        "AM-61d2e3e24c014c34",
+        "AM-d73cfe428060198b"
+      ]
+    },
+    {
+      "opaque_task": "c02",
+      "mechanism": "bit_length_after_cube",
+      "posthoc_formula": "bit_length(n^3)",
+      "candidate": {
+        "candidate_id": "CG-740448f0bdf6f08b",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-5682429236b9b26a",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          4.0,
+          5.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          4.0,
+          5.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "77dcf6bf99f3162d8b891020195d70a1fe77c10f032e879429d1e75c74dafa2c",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-d10da8d401256174",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              4.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              4.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-740448f0bdf6f08b",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G4NEW-56569b1d93a9c4c9",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-5682429236b9b26a",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              4.0,
+              5.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              4.0,
+              5.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-1372d64f867a11e8",
+        "operation_id": "CGNEW-740448f0bdf6f08b",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-5682429236b9b26a",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G4NEW-56569b1d93a9c4c9",
+          "G3NEW-5682429236b9b26a"
+        ],
+        "validation_scope": "opaque_composition_c02",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "77dcf6bf99f3162d8b891020195d70a1fe77c10f032e879429d1e75c74dafa2c",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-c956fa447edc146e",
+        "AM-f9047fa09eb339e4",
+        "AM-2d56d1ae6c90402d",
+        "AM-e21f2080b4509654"
+      ]
+    },
+    {
+      "opaque_task": "c03",
+      "mechanism": "square_after_bit_length",
+      "posthoc_formula": "bit_length(n)^2",
+      "candidate": {
+        "candidate_id": "CG-d71fd2cd55f653dd",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-5682429236b9b26a",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          4.0,
+          4.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          4.0,
+          4.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "8f7fc40340bea805d25300da36f0e9a314053442e851f7b6f500670c99137e31",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-d10da8d401256174",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              4.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              4.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-d71fd2cd55f653dd",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-5682429236b9b26a",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              4.0,
+              4.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              4.0,
+              4.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-866198e7f386a7af",
+        "operation_id": "CGNEW-d71fd2cd55f653dd",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-5682429236b9b26a",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G3NEW-5682429236b9b26a",
+          "G3NEW-2d402424e2bb97f1"
+        ],
+        "validation_scope": "opaque_composition_c03",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "8f7fc40340bea805d25300da36f0e9a314053442e851f7b6f500670c99137e31",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-0e21e2baa7ff4b51",
+        "AM-3d1481003fa088d3",
+        "AM-fe6c70eaba00f950",
+        "AM-7c819ac6c76e0bd3"
+      ]
+    },
+    {
+      "opaque_task": "c04",
+      "mechanism": "sqrt_after_cube",
+      "posthoc_formula": "floor(sqrt(n^3))",
+      "candidate": {
+        "candidate_id": "CG-5ae2212fb006b803",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2CTRL-de057ef1810f4943",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          2.0,
+          5.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          2.0,
+          5.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "9cb8a5000c58fee7feefeb86858cf51847c0fac61b1c3c63d8791940182383ef",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-3005995618609b28",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-5682429236b9b26a",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              2.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              2.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-5ae2212fb006b803",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G4NEW-56569b1d93a9c4c9",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              2.0,
+              5.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              2.0,
+              5.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-ed1fd598f243de2c",
+        "operation_id": "CGNEW-5ae2212fb006b803",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2CTRL-de057ef1810f4943",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G4NEW-56569b1d93a9c4c9",
+          "G2CTRL-de057ef1810f4943"
+        ],
+        "validation_scope": "opaque_composition_c04",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "9cb8a5000c58fee7feefeb86858cf51847c0fac61b1c3c63d8791940182383ef",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-eac23b0aab50b280",
+        "AM-98513f357ffe9adf",
+        "AM-1337c9313ec9d313",
+        "AM-51d942ce86d2b839"
+      ]
+    },
+    {
+      "opaque_task": "c05",
+      "mechanism": "cube_after_sqrt",
+      "posthoc_formula": "floor(sqrt(n))^3",
+      "candidate": {
+        "candidate_id": "CG-1a19c3bdee337e03",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-de057ef1810f4943",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          1.0,
+          8.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          1.0,
+          8.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "fc6a065a6593f10bec7e089ac9369cb2497e88752276aa8ff6ec38a8d877961e",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-92ef33f6403332f7",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-1a19c3bdee337e03",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-56569b1d93a9c4c9",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              1.0,
+              8.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              1.0,
+              8.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-17b690870e61b7a7",
+        "operation_id": "CGNEW-1a19c3bdee337e03",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-de057ef1810f4943",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G2CTRL-de057ef1810f4943",
+          "G4NEW-56569b1d93a9c4c9"
+        ],
+        "validation_scope": "opaque_composition_c05",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "fc6a065a6593f10bec7e089ac9369cb2497e88752276aa8ff6ec38a8d877961e",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-74b53cc6435d94b4",
+        "AM-906403c5fb4f498b",
+        "AM-1dbafc7a9b3f149d",
+        "AM-32556be43a36441b"
+      ]
+    },
+    {
+      "opaque_task": "c06",
+      "mechanism": "choose3_after_square",
+      "posthoc_formula": "C(n^2,3)",
+      "candidate": {
+        "candidate_id": "CG-1ca92b0baabe0b55",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2CTRL-aa1ab30803291692",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          4.0,
+          84.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          4.0,
+          84.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "6903e165dd3650810eecef88aecf271272f9a909461e41c834ce01bea4aa98f9",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-3c303218819c2347",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2NEW-4f6b5de649cfa951",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              4.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              4.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-1ca92b0baabe0b55",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              4.0,
+              84.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              4.0,
+              84.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-40a4a7eb866e6a72",
+        "operation_id": "CGNEW-1ca92b0baabe0b55",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2CTRL-aa1ab30803291692",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G3NEW-2d402424e2bb97f1",
+          "G2CTRL-aa1ab30803291692"
+        ],
+        "validation_scope": "opaque_composition_c06",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "6903e165dd3650810eecef88aecf271272f9a909461e41c834ce01bea4aa98f9",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-23dd69eb5956e7fd",
+        "AM-4e58f92c8acae912",
+        "AM-d0125d8847c931e0",
+        "AM-24f644f2e383f82c"
+      ]
+    },
+    {
+      "opaque_task": "c07",
+      "mechanism": "square_after_choose3",
+      "posthoc_formula": "C(n,3)^2",
+      "candidate": {
+        "candidate_id": "CG-c3512dd01363349e",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-aa1ab30803291692",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          16.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          16.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "6325ed92d6bf8dbeba79f9a6a97f36098efb96fa33df47323028926ddc8f12a7",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-6ba6c02c5fd9c7f9",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-c3512dd01363349e",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              16.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              16.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-db3808c4bac7d886",
+        "operation_id": "CGNEW-c3512dd01363349e",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-aa1ab30803291692",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G2CTRL-aa1ab30803291692",
+          "G3NEW-2d402424e2bb97f1"
+        ],
+        "validation_scope": "opaque_composition_c07",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "6325ed92d6bf8dbeba79f9a6a97f36098efb96fa33df47323028926ddc8f12a7",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-943e15988778100c",
+        "AM-cacdf3b5bac78973",
+        "AM-b463bc517691754a",
+        "AM-3a64b1598d7cbe73"
+      ]
+    },
+    {
+      "opaque_task": "c08",
+      "mechanism": "choose4_after_bit_length",
+      "posthoc_formula": "C(bit_length(n),4)",
+      "candidate": {
+        "candidate_id": "CG-e243f65d84f6db1d",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-5682429236b9b26a",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          5.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "18fee6fff69831523013bec58ccb6d076867477979e9068b27014dcd041a6945",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-6ba6c02c5fd9c7f9",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-c9e38b2e4cd4aa21",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-da8637fcf10cd441",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-6197e8bd097a8d4b",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 5,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 3,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "candidate": {
+            "candidate_id": "CG-bcdedacfbe0c3c1e",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 8,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 4,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            8
+          ],
+          "candidate": {
+            "candidate_id": "CG-e243f65d84f6db1d",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-5682429236b9b26a",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              5.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              5.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1006
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-fa3a6b769da01a2f",
+        "operation_id": "CGNEW-e243f65d84f6db1d",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-5682429236b9b26a",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G3NEW-5682429236b9b26a",
+          "G3NEW-98a7cc88ec88ae78"
+        ],
+        "validation_scope": "opaque_composition_c08",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "18fee6fff69831523013bec58ccb6d076867477979e9068b27014dcd041a6945",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-9aaf052832da7304",
+        "AM-209d15ddd9e1fc75",
+        "AM-752f316ce41a8c75",
+        "AM-fadce4fefc85a23d"
+      ]
+    },
+    {
+      "opaque_task": "c09",
+      "mechanism": "mod4_after_cube",
+      "posthoc_formula": "n^3 mod 4",
+      "candidate": {
+        "candidate_id": "CG-ca17e1ccfe534736",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          0.0,
+          3.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          0.0,
+          3.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "2cdcaabd7e2a85b0f54d6860d0ba496c8ff6c3baec63492f7c17ebec1351cd0d",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-292718228bb6d349",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-ca17e1ccfe534736",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G4NEW-56569b1d93a9c4c9",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              0.0,
+              3.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              0.0,
+              3.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-42e3f1b799fcfc1c",
+        "operation_id": "CGNEW-ca17e1ccfe534736",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-56569b1d93a9c4c9",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G4NEW-56569b1d93a9c4c9",
+          "G2CTRL-f5ffb2c49416a134"
+        ],
+        "validation_scope": "opaque_composition_c09",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "2cdcaabd7e2a85b0f54d6860d0ba496c8ff6c3baec63492f7c17ebec1351cd0d",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-c7b90b1531face34",
+        "AM-d407abef4efda43a",
+        "AM-983d8e38a10b7d8e",
+        "AM-616adc03f7b267ef"
+      ]
+    },
+    {
+      "opaque_task": "c10",
+      "mechanism": "mod3_after_choose4",
+      "posthoc_formula": "C(n,4) mod 3",
+      "candidate": {
+        "candidate_id": "CG-63437f7bcb3e0738",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          2.0,
+          0.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          2.0,
+          0.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "e642ea8a515c4bb8487fd96e01d2758815b39c9e9f67a46a8450222d1740653f",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-6ba6c02c5fd9c7f9",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-c9e38b2e4cd4aa21",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-1ac369dc7f706d4c",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 5,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 3,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "candidate": {
+            "candidate_id": "CG-6c5b2a044c1260d1",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              2.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              2.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 6,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 4,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "candidate": {
+            "candidate_id": "CG-63437f7bcb3e0738",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-b074e6fff182dcc2",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              2.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              2.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1047
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-f67ad91282ccb687",
+        "operation_id": "CGNEW-63437f7bcb3e0738",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G3NEW-98a7cc88ec88ae78",
+          "G4NEW-b074e6fff182dcc2"
+        ],
+        "validation_scope": "opaque_composition_c10",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "e642ea8a515c4bb8487fd96e01d2758815b39c9e9f67a46a8450222d1740653f",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-e9eee0da24d675db",
+        "AM-066fe71aa1fcf78d",
+        "AM-a41a46cab18e9316",
+        "AM-8e48869436933376"
+      ]
+    },
+    {
+      "opaque_task": "c11",
+      "mechanism": "floor3_after_square",
+      "posthoc_formula": "floor(n^2/3)",
+      "candidate": {
+        "candidate_id": "CG-d2d6dae50a8a2702",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-9d4c8b094b2250a5",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          1.0,
+          3.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "28ff264d75006189fc5d4026f1405788fc2c91e9d23decbd51a8689b89e247c3",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-b00fd7efb4929c5b",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-d2d6dae50a8a2702",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-9d4c8b094b2250a5",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              1.0,
+              3.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              1.0,
+              3.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-c196b81f2a662ed5",
+        "operation_id": "CGNEW-d2d6dae50a8a2702",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-9d4c8b094b2250a5",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G3NEW-2d402424e2bb97f1",
+          "G4NEW-9d4c8b094b2250a5"
+        ],
+        "validation_scope": "opaque_composition_c11",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "28ff264d75006189fc5d4026f1405788fc2c91e9d23decbd51a8689b89e247c3",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-8d565f913f01855b",
+        "AM-054cc1d228d88de8",
+        "AM-dccc13395281e509",
+        "AM-71511791545cd7b5"
+      ]
+    },
+    {
+      "opaque_task": "c12",
+      "mechanism": "ternary_length_after_square",
+      "posthoc_formula": "ternary_length(n^2)",
+      "candidate": {
+        "candidate_id": "CG-e600e470260f546b",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-ba41949ee04c20cb",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          3.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          3.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "2100acd08024309a556ba351cf026dd63984b30cac6347c4daa8e315e0ddfdc0",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-3005995618609b28",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-5682429236b9b26a",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              2.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              2.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-dc325c309364520c",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              2.0,
+              3.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              2.0,
+              3.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-e600e470260f546b",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-2d402424e2bb97f1",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-ba41949ee04c20cb",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              3.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              2.0,
+              3.0,
+              3.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-0ec51550a00878bb",
+        "operation_id": "CGNEW-e600e470260f546b",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-2d402424e2bb97f1",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-ba41949ee04c20cb",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G3NEW-2d402424e2bb97f1",
+          "G4NEW-ba41949ee04c20cb"
+        ],
+        "validation_scope": "opaque_composition_c12",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "2100acd08024309a556ba351cf026dd63984b30cac6347c4daa8e315e0ddfdc0",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-4d75b2dc7dacbadc",
+        "AM-f5ad3949c41a7e7f",
+        "AM-f1bb7716e58bc94c",
+        "AM-45e9591525a5e2e4"
+      ]
+    },
+    {
+      "opaque_task": "c13",
+      "mechanism": "power2_after_mod3",
+      "posthoc_formula": "2^(n mod 3)",
+      "candidate": {
+        "candidate_id": "CG-0ce304a70ceb3732",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2NEW-4f6b5de649cfa951",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          2.0,
+          4.0,
+          1.0
+        ],
+        "behavior_signature": [
+          1.0,
+          2.0,
+          4.0,
+          1.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "8f49299450c811aa3c4460e4d56a4402fbc08f2efb123c9814e7554d062fec5e",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-833143cb67550314",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2NEW-4f6b5de649cfa951",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              2.0,
+              4.0
+            ],
+            "behavior_signature": [
+              1.0,
+              2.0,
+              4.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-0ce304a70ceb3732",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G4NEW-b074e6fff182dcc2",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2NEW-4f6b5de649cfa951",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              2.0,
+              4.0,
+              1.0
+            ],
+            "behavior_signature": [
+              1.0,
+              2.0,
+              4.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-f02bc9c5b6859759",
+        "operation_id": "CGNEW-0ce304a70ceb3732",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G2NEW-4f6b5de649cfa951",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G4NEW-b074e6fff182dcc2",
+          "G2NEW-4f6b5de649cfa951"
+        ],
+        "validation_scope": "opaque_composition_c13",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "8f49299450c811aa3c4460e4d56a4402fbc08f2efb123c9814e7554d062fec5e",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-22155c25d02d6660",
+        "AM-added5bac942d9b9",
+        "AM-4630aebf442ac8a9",
+        "AM-c135a3f206471354"
+      ]
+    },
+    {
+      "opaque_task": "c14",
+      "mechanism": "power3_after_mod4",
+      "posthoc_formula": "3^(n mod 4)",
+      "candidate": {
+        "candidate_id": "CG-95bacec65fd495fe",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-1914cf632033656b",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          3.0,
+          9.0
+        ],
+        "behavior_signature": [
+          1.0,
+          3.0,
+          9.0
+        ],
+        "instruction_count": 2,
+        "exact": true
+      },
+      "logic_signature": "eb29788635bbc41217cbc76fe80efea5fdee0efdfbce1d7794bbabde69fad22c",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-95bacec65fd495fe",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-1914cf632033656b",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              3.0,
+              9.0
+            ],
+            "behavior_signature": [
+              1.0,
+              3.0,
+              9.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-6ab1f083c4370ad0",
+        "operation_id": "CGNEW-95bacec65fd495fe",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-1914cf632033656b",
+              "arguments": [
+                "node:0"
+              ]
+            }
+          ],
+          "output": "node:1"
+        },
+        "parent_operation_ids": [
+          "G2CTRL-f5ffb2c49416a134",
+          "G4NEW-1914cf632033656b"
+        ],
+        "validation_scope": "opaque_composition_c14",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "eb29788635bbc41217cbc76fe80efea5fdee0efdfbce1d7794bbabde69fad22c",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-d36b75c9e4afc1d9",
+        "AM-6fb14b9a7880ce95",
+        "AM-5faea4d526fd6f25",
+        "AM-4e49ef1b4f426f95"
+      ]
+    },
+    {
+      "opaque_task": "c15",
+      "mechanism": "parallel_power_difference",
+      "posthoc_formula": "abs(3^n-2^n)",
+      "candidate": {
+        "candidate_id": "CG-a75a68b6b1adaa43",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2NEW-4f6b5de649cfa951",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-1914cf632033656b",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-687cca22ba6069f5",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          5.0
+        ],
+        "instruction_count": 3,
+        "exact": true
+      },
+      "logic_signature": "4aa93a7bd7644aa2a861a3495e4f13fa85f0c7ab92d6f2caffa2f5a1f31a426d",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-a75a68b6b1adaa43",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2NEW-4f6b5de649cfa951",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-1914cf632033656b",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-687cca22ba6069f5",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              5.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              5.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-51e37541bd31921b",
+        "operation_id": "CGNEW-a75a68b6b1adaa43",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2NEW-4f6b5de649cfa951",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-1914cf632033656b",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-687cca22ba6069f5",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "parent_operation_ids": [
+          "G2NEW-4f6b5de649cfa951",
+          "G4NEW-1914cf632033656b",
+          "G4NEW-687cca22ba6069f5"
+        ],
+        "validation_scope": "opaque_composition_c15",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "4aa93a7bd7644aa2a861a3495e4f13fa85f0c7ab92d6f2caffa2f5a1f31a426d",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-c78b75e77f040e79",
+        "AM-3f14e151a4e54dd0",
+        "AM-168cd0d7411964c7",
+        "AM-49fa46dc5b4ac49d"
+      ]
+    },
+    {
+      "opaque_task": "c16",
+      "mechanism": "parallel_residue_equality",
+      "posthoc_formula": "1[n mod 3 = n mod 4]",
+      "candidate": {
+        "candidate_id": "CG-6576eebf679d0b93",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-4f8ce015861a67a4",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "behavior_signature": [
+          1.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "instruction_count": 3,
+        "exact": true
+      },
+      "logic_signature": "72d40a1036b516929c2bc00655a65aa2762ff1491eea5fdaf0656435526c55ef",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-0c44d27b3db0db12",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2NEW-4f6b5de649cfa951",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-dd3a3b75aa603975",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-4f8ce015861a67a4",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": 7,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            7
+          ],
+          "candidate": {
+            "candidate_id": "CG-7780286d6f2276a5",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-6197e8bd097a8d4b",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-4f8ce015861a67a4",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": 8,
+          "programs_generated": 1050,
+          "programs_executed": 1045
+        },
+        {
+          "round_index": 3,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            7,
+            8
+          ],
+          "candidate": {
+            "candidate_id": "CG-6576eebf679d0b93",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-b074e6fff182dcc2",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-4f8ce015861a67a4",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1022
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-7b3ade8b358cd481",
+        "operation_id": "CGNEW-6576eebf679d0b93",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-4f8ce015861a67a4",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "parent_operation_ids": [
+          "G2CTRL-f5ffb2c49416a134",
+          "G4NEW-b074e6fff182dcc2",
+          "G4NEW-4f8ce015861a67a4"
+        ],
+        "validation_scope": "opaque_composition_c16",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "72d40a1036b516929c2bc00655a65aa2762ff1491eea5fdaf0656435526c55ef",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-42e880cccacb04aa",
+        "AM-ac91a675fe4ef969",
+        "AM-6dd1c3e0c276ff27",
+        "AM-b7c6788af176d5e9"
+      ]
+    },
+    {
+      "opaque_task": "c17",
+      "mechanism": "parallel_residue_order",
+      "posthoc_formula": "1[n mod 4 < n mod 3]",
+      "candidate": {
+        "candidate_id": "CG-11f5abd396436aaa",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-f9e488fd9f8130c6",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        "instruction_count": 3,
+        "exact": true
+      },
+      "logic_signature": "84e3a0807fd0952bc2918594fa19733d796a95ffd4e865373b5e8c58bc02a743",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-6ba6c02c5fd9c7f9",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-c9e38b2e4cd4aa21",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-1ac369dc7f706d4c",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 5,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 3,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "candidate": {
+            "candidate_id": "CG-27a6b021ae9f31d2",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 6,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 4,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "candidate": {
+            "candidate_id": "CG-b89b6c310959500b",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-f9e488fd9f8130c6",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": 8,
+          "programs_generated": 1050,
+          "programs_executed": 1047
+        },
+        {
+          "round_index": 5,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            8
+          ],
+          "candidate": {
+            "candidate_id": "CG-11f5abd396436aaa",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-f5ffb2c49416a134",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-b074e6fff182dcc2",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-f9e488fd9f8130c6",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              1.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1035
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-e0f684a1ddcb08a9",
+        "operation_id": "CGNEW-11f5abd396436aaa",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-f5ffb2c49416a134",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-b074e6fff182dcc2",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-f9e488fd9f8130c6",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "parent_operation_ids": [
+          "G2CTRL-f5ffb2c49416a134",
+          "G4NEW-b074e6fff182dcc2",
+          "G4NEW-f9e488fd9f8130c6"
+        ],
+        "validation_scope": "opaque_composition_c17",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "84e3a0807fd0952bc2918594fa19733d796a95ffd4e865373b5e8c58bc02a743",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-ff34f63ba82519d6",
+        "AM-3edfcf52ee1fad3a",
+        "AM-73a8a1e4fd69fb92",
+        "AM-782b6e8de7547856"
+      ]
+    },
+    {
+      "opaque_task": "c18",
+      "mechanism": "parallel_binomial_difference",
+      "posthoc_formula": "abs(C(n,5)-C(n,4))",
+      "candidate": {
+        "candidate_id": "CG-a8fb1cc3e53aed5f",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-6197e8bd097a8d4b",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-687cca22ba6069f5",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.0,
+          9.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          4.0,
+          9.0
+        ],
+        "instruction_count": 3,
+        "exact": true
+      },
+      "logic_signature": "820a3c647df5772fd068a44a1bbd0906a95bc67c8b9477b0bb81e968277ffac6",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-6ba6c02c5fd9c7f9",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-c9e38b2e4cd4aa21",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-1ac369dc7f706d4c",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 5,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 3,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "candidate": {
+            "candidate_id": "CG-a34aefb06c427440",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-6d032c98e59a7ab9",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              4.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              4.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": 6,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 4,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "candidate": {
+            "candidate_id": "CG-a8fb1cc3e53aed5f",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-6197e8bd097a8d4b",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-687cca22ba6069f5",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              4.0,
+              9.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              4.0,
+              9.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1047
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-dce78a90cfb1695a",
+        "operation_id": "CGNEW-a8fb1cc3e53aed5f",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-6197e8bd097a8d4b",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-687cca22ba6069f5",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "parent_operation_ids": [
+          "G3NEW-98a7cc88ec88ae78",
+          "G4NEW-6197e8bd097a8d4b",
+          "G4NEW-687cca22ba6069f5"
+        ],
+        "validation_scope": "opaque_composition_c18",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "820a3c647df5772fd068a44a1bbd0906a95bc67c8b9477b0bb81e968277ffac6",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-bf5c0bf1163e6fc4",
+        "AM-0eecd02d05a1a9b5",
+        "AM-4ea0dcc36a402033",
+        "AM-4c2c72883246a005"
+      ]
+    },
+    {
+      "opaque_task": "c19",
+      "mechanism": "parallel_binomial_minimum",
+      "posthoc_formula": "min(C(n,3),C(n,4))",
+      "candidate": {
+        "candidate_id": "CG-82d127038bfcec8b",
+        "program": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-aa1ab30803291692",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-6d032c98e59a7ab9",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          5.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.0,
+          5.0
+        ],
+        "instruction_count": 3,
+        "exact": true
+      },
+      "logic_signature": "4592260722afce94c462ac50fbfdf29726b944db39112a15b0159b5f5b71052f",
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "CG-6ba6c02c5fd9c7f9",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G2CTRL-de057ef1810f4943",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "CG-c9e38b2e4cd4aa21",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-600694e4b7fde733",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 4,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 2,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "candidate": {
+            "candidate_id": "CG-1ac369dc7f706d4c",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "node:0"
+                  ]
+                }
+              ],
+              "output": "node:1"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 2,
+            "exact": true
+          },
+          "added_counterexample_index": 5,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        },
+        {
+          "round_index": 3,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "candidate": {
+            "candidate_id": "CG-82d127038bfcec8b",
+            "program": {
+              "substrate": "anonymous_verified_composition_graph_v0.1",
+              "nodes": [
+                {
+                  "operation_id": "G2CTRL-aa1ab30803291692",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G3NEW-98a7cc88ec88ae78",
+                  "arguments": [
+                    "input:0"
+                  ]
+                },
+                {
+                  "operation_id": "G4NEW-6d032c98e59a7ab9",
+                  "arguments": [
+                    "node:0",
+                    "node:1"
+                  ]
+                }
+              ],
+              "output": "node:2"
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              5.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              0.0,
+              1.0,
+              5.0
+            ],
+            "instruction_count": 3,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 1050,
+          "programs_executed": 1050
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-39eb835ff81c7065",
+        "operation_id": "CGNEW-82d127038bfcec8b",
+        "definition": {
+          "substrate": "anonymous_verified_composition_graph_v0.1",
+          "nodes": [
+            {
+              "operation_id": "G2CTRL-aa1ab30803291692",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G3NEW-98a7cc88ec88ae78",
+              "arguments": [
+                "input:0"
+              ]
+            },
+            {
+              "operation_id": "G4NEW-6d032c98e59a7ab9",
+              "arguments": [
+                "node:0",
+                "node:1"
+              ]
+            }
+          ],
+          "output": "node:2"
+        },
+        "parent_operation_ids": [
+          "G2CTRL-aa1ab30803291692",
+          "G3NEW-98a7cc88ec88ae78",
+          "G4NEW-6d032c98e59a7ab9"
+        ],
+        "validation_scope": "opaque_composition_c19",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-composition-twenty-20260818T183750916424Z",
+          "logic_signature": "4592260722afce94c462ac50fbfdf29726b944db39112a15b0159b5f5b71052f",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-9be032723bf72de2",
+        "AM-6c2968b9f61f32fc",
+        "AM-7e0e359cdfd96f7d",
+        "AM-28570c00d281c77d"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "twenty_compositions_exact",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    },
+    {
+      "gate_id": "twenty_semantic_targets_selected",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    },
+    {
+      "gate_id": "twenty_distinct_composition_logics",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    }
+  ],
+  "success_room_active_count": 68,
+  "mistake_feedback_count": 80,
+  "learner_received": {
+    "formula_names": false,
+    "anonymous_proven_operation_ids": true,
+    "target_graphs": false,
+    "host_graph_grammar": true
+  },
+  "limitations": [
+    "The learner composed previously proven anonymous operations; it did not invent the component semantics in this run.",
+    "Hidden exactness is not an infinite-domain proof."
+  ]
+}

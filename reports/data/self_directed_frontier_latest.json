@@ -1,0 +1,567 @@
+{
+  "report_version": "self-directed-foundation-loop-v0.1",
+  "run_id": "RUN-self-directed-frontier-20260820T012842538545Z",
+  "created_at": "2026-08-20T01:28:42.538545Z",
+  "verdict": "frontier_controller_selected_and_proved_a_new_foundation_without_a_user_named_math_target",
+  "control_logic": {
+    "selection_inputs": [
+      "structural novelty",
+      "compression gain",
+      "dependency readiness",
+      "experiment cost",
+      "past failure penalty"
+    ],
+    "selection_formula": "11*novelty + 5*compression - experiment_cost - 7*prior_failures",
+    "math_names_visible_to_controller": false,
+    "automatic_cycle": [
+      "generate/scan anonymous worlds",
+      "skip explained signatures",
+      "block missing dependencies",
+      "select highest score",
+      "search compressor",
+      "independent proof",
+      "promote or record mistake",
+      "re-rank frontier"
+    ],
+    "stop_condition": "no ready unexplained world remains under the current generator catalog"
+  },
+  "frontier_before": [
+    {
+      "world": {
+        "world_id": "WORLD-state-closure-27",
+        "structural_signature": "recursive_state_expansion",
+        "dependency_signatures": [
+          "nested_pairing"
+        ],
+        "novelty_weight": 9,
+        "compression_gain": 12,
+        "estimated_experiment_cost": 7
+      },
+      "status": "ready",
+      "score": 152,
+      "reasons": [
+        "novelty:9",
+        "compression:12",
+        "cost:7",
+        "failure_penalty:0"
+      ]
+    },
+    {
+      "world": {
+        "world_id": "WORLD-distinct-route-31",
+        "structural_signature": "distinct_choice_expansion",
+        "dependency_signatures": [
+          "object_exclusion_memory"
+        ],
+        "novelty_weight": 10,
+        "compression_gain": 14,
+        "estimated_experiment_cost": 8
+      },
+      "status": "dependency_blocked",
+      "score": null,
+      "reasons": [
+        "missing:object_exclusion_memory"
+      ]
+    },
+    {
+      "world": {
+        "world_id": "WORLD-opaque-drain-04",
+        "structural_signature": "unary_cardinality",
+        "dependency_signatures": [],
+        "novelty_weight": 2,
+        "compression_gain": 3,
+        "estimated_experiment_cost": 1
+      },
+      "status": "already_explained",
+      "score": null,
+      "reasons": [
+        "signature already has a verified compressor"
+      ]
+    },
+    {
+      "world": {
+        "world_id": "WORLD-opaque-grid-19",
+        "structural_signature": "nested_pairing",
+        "dependency_signatures": [
+          "conserved_combination"
+        ],
+        "novelty_weight": 6,
+        "compression_gain": 8,
+        "estimated_experiment_cost": 4
+      },
+      "status": "already_explained",
+      "score": null,
+      "reasons": [
+        "signature already has a verified compressor"
+      ]
+    }
+  ],
+  "selected_world": {
+    "world": {
+      "world_id": "WORLD-state-closure-27",
+      "structural_signature": "recursive_state_expansion",
+      "dependency_signatures": [
+        "nested_pairing"
+      ],
+      "novelty_weight": 9,
+      "compression_gain": 12,
+      "estimated_experiment_cost": 7
+    },
+    "status": "ready",
+    "score": 152,
+    "reasons": [
+      "novelty:9",
+      "compression:12",
+      "cost:7",
+      "failure_penalty:0"
+    ]
+  },
+  "search": {
+    "candidate_count": 24,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "ARP-99035818f2678380",
+      "controller_slot": 1,
+      "base_slot": 0,
+      "seed_mode": 0,
+      "update_mode": 1
+    },
+    "selected_token_cost": 568,
+    "selected_reward": 999432
+  },
+  "discovery": {
+    "foundation_level": 7,
+    "semantic": {
+      "semantic_id": "ASEM-4b7c892702eaa68a",
+      "opcode": 7,
+      "program": {
+        "program_id": "ARP-99035818f2678380",
+        "controller_slot": 1,
+        "base_slot": 0,
+        "seed_mode": 0,
+        "update_mode": 1
+      },
+      "dependency_semantic_ids": [
+        "NSEM-52a33255cdea401f"
+      ],
+      "source_task_ids": [
+        "WORLD-state-closure-27"
+      ],
+      "structural_signature": "recursive_state_expansion"
+    },
+    "structural_origin": "start with one empty record; for each object in a controller collection, append every base object to every current record",
+    "posthoc_name": "natural-number exponentiation",
+    "posthoc_formula": "for every b,n in N, the output cardinality is b^n, with the empty-controller unit convention b^0=1",
+    "name_given_to_controller_or_search": false,
+    "counts_as_new_foundation": true
+  },
+  "verification": {
+    "verifier_version": "independent-autonomous-recursive-foundation-verifier-v0.1",
+    "semantic_id": "ASEM-4b7c892702eaa68a",
+    "passed": true,
+    "structural_statement": "start with one empty record; for each object in a controller collection, append every base object to every current record",
+    "posthoc_mathematical_name": "natural-number exponentiation",
+    "posthoc_cardinality_statement": "for every b,n in N, the output cardinality is b^n, with the empty-controller unit convention b^0=1",
+    "declared_domain": "finite base and controller collections / natural-number cardinalities",
+    "not_claimed": "negative, rational, real, complex, matrix, ordinal, or cardinal exponentiation",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "state-language invariant and structural induction over the controller collection",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "ASEM-4b7c892702eaa68a"
+      },
+      {
+        "obligation_id": "exact_recursive_program_binding",
+        "passed": true,
+        "evidence": "ARP-99035818f2678380"
+      },
+      {
+        "obligation_id": "anonymous_structural_signature_binding",
+        "passed": true,
+        "evidence": "recursive_state_expansion"
+      },
+      {
+        "obligation_id": "unit_seed_and_base_expansion_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "ARP-99035818f2678380",
+          "controller_slot": 1,
+          "base_slot": 0,
+          "seed_mode": 0,
+          "update_mode": 1
+        }
+      },
+      {
+        "obligation_id": "depends_on_prior_nested_pairing_semantic",
+        "passed": true,
+        "evidence": [
+          "NSEM-52a33255cdea401f"
+        ]
+      },
+      {
+        "obligation_id": "zero_controller_base_case",
+        "passed": true,
+        "evidence": "before any controller visit the state contains exactly one empty record"
+      },
+      {
+        "obligation_id": "one_update_per_controller_object",
+        "passed": true,
+        "evidence": "the controller cursor advances once per state rewrite and never rewinds"
+      },
+      {
+        "obligation_id": "recursive_update_is_prior_pairing_reuse",
+        "passed": true,
+        "evidence": "each update pairs every current record with every base object and appends that object"
+      },
+      {
+        "obligation_id": "word_length_invariant",
+        "passed": true,
+        "evidence": "after k controller visits every record has length k"
+      },
+      {
+        "obligation_id": "word_completeness_invariant",
+        "passed": true,
+        "evidence": "after k visits every length-k word over the base collection appears exactly once"
+      },
+      {
+        "obligation_id": "cardinality_recurrence",
+        "passed": true,
+        "evidence": "C(0)=1 and C(k+1)=C(k)*|B|"
+      },
+      {
+        "obligation_id": "universal_natural_cardinality_result",
+        "passed": true,
+        "evidence": "structural induction gives C(n)=|B|^n for every finite controller"
+      },
+      {
+        "obligation_id": "independent_hidden_replay",
+        "passed": true,
+        "evidence": "12/12 hidden replays"
+      },
+      {
+        "obligation_id": "finite_recursive_termination",
+        "passed": true,
+        "evidence": "the controller is finite and each finite expansion finishes before the next controller visit"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "selection and search used structural signatures plus integer modes; no power name, caret symbol, or target formula was visible"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "RECURSIVE-HIDDEN-00",
+        "source_lengths": [
+          0,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 3
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-01",
+        "source_lengths": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 4
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-02",
+        "source_lengths": [
+          0,
+          4
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 7
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-03",
+        "source_lengths": [
+          1,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 3
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-04",
+        "source_lengths": [
+          1,
+          7
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 31
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-05",
+        "source_lengths": [
+          2,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 3
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-06",
+        "source_lengths": [
+          2,
+          1
+        ],
+        "passed": true,
+        "output_count": 2,
+        "posthoc_expected_cardinality": 2,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 10
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-07",
+        "source_lengths": [
+          2,
+          5
+        ],
+        "passed": true,
+        "output_count": 32,
+        "posthoc_expected_cardinality": 32,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 194
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-08",
+        "source_lengths": [
+          3,
+          2
+        ],
+        "passed": true,
+        "output_count": 9,
+        "posthoc_expected_cardinality": 9,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 41
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-09",
+        "source_lengths": [
+          4,
+          3
+        ],
+        "passed": true,
+        "output_count": 64,
+        "posthoc_expected_cardinality": 64,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 258
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-10",
+        "source_lengths": [
+          5,
+          2
+        ],
+        "passed": true,
+        "output_count": 25,
+        "posthoc_expected_cardinality": 25,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 95
+      },
+      {
+        "case_id": "RECURSIVE-HIDDEN-11",
+        "source_lengths": [
+          7,
+          3
+        ],
+        "passed": true,
+        "output_count": 343,
+        "posthoc_expected_cardinality": 343,
+        "records_are_unique": true,
+        "primitive_execution_tokens": 1203
+      }
+    ]
+  },
+  "frontier_after": [
+    {
+      "world": {
+        "world_id": "WORLD-distinct-route-31",
+        "structural_signature": "distinct_choice_expansion",
+        "dependency_signatures": [
+          "object_exclusion_memory"
+        ],
+        "novelty_weight": 10,
+        "compression_gain": 14,
+        "estimated_experiment_cost": 8
+      },
+      "status": "dependency_blocked",
+      "score": null,
+      "reasons": [
+        "missing:object_exclusion_memory"
+      ]
+    },
+    {
+      "world": {
+        "world_id": "WORLD-opaque-drain-04",
+        "structural_signature": "unary_cardinality",
+        "dependency_signatures": [],
+        "novelty_weight": 2,
+        "compression_gain": 3,
+        "estimated_experiment_cost": 1
+      },
+      "status": "already_explained",
+      "score": null,
+      "reasons": [
+        "signature already has a verified compressor"
+      ]
+    },
+    {
+      "world": {
+        "world_id": "WORLD-opaque-grid-19",
+        "structural_signature": "nested_pairing",
+        "dependency_signatures": [
+          "conserved_combination"
+        ],
+        "novelty_weight": 6,
+        "compression_gain": 8,
+        "estimated_experiment_cost": 4
+      },
+      "status": "already_explained",
+      "score": null,
+      "reasons": [
+        "signature already has a verified compressor"
+      ]
+    },
+    {
+      "world": {
+        "world_id": "WORLD-state-closure-27",
+        "structural_signature": "recursive_state_expansion",
+        "dependency_signatures": [
+          "nested_pairing"
+        ],
+        "novelty_weight": 9,
+        "compression_gain": 12,
+        "estimated_experiment_cost": 7
+      },
+      "status": "already_explained",
+      "score": null,
+      "reasons": [
+        "signature already has a verified compressor"
+      ]
+    }
+  ],
+  "next_selection": null,
+  "stop_reason": "remaining novel world requires an as-yet-undiscovered exclusion-memory dependency",
+  "capability_graph": {
+    "verified_foundation_count": 7,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差",
+      "有符号自然数差",
+      "自然数乘法",
+      "带余数的自然数除法",
+      "自然数幂"
+    ]
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/autonomous_frontier_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/autonomous_frontier_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 23,
+    "event_hash": "6de7d5ac3e33db2896d5bfc51c16555862756e8598f2bf3cbc4425e4f36a04be"
+  },
+  "gates": [
+    {
+      "gate_id": "frontier_target_selected_without_math_name",
+      "passed": true,
+      "actual": "WORLD-state-closure-27",
+      "required": "highest-scoring ready unexplained structural world"
+    },
+    {
+      "gate_id": "already_explained_worlds_skipped",
+      "passed": true,
+      "actual": 2,
+      "required": 2
+    },
+    {
+      "gate_id": "missing_dependency_world_blocked",
+      "passed": true,
+      "actual": [
+        "WORLD-distinct-route-31"
+      ],
+      "required": "at least one"
+    },
+    {
+      "gate_id": "self_selected_world_exactly_compressed",
+      "passed": true,
+      "actual": 10,
+      "required": 10
+    },
+    {
+      "gate_id": "token_reward_selects_best_exact_compressor",
+      "passed": true,
+      "actual": 999432,
+      "required": 999432
+    },
+    {
+      "gate_id": "universal_proof_before_promotion",
+      "passed": true,
+      "actual": 15,
+      "required": 15
+    },
+    {
+      "gate_id": "all_hidden_recursive_cases_pass",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 23
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 23
+      }
+    },
+    {
+      "gate_id": "loop_replans_after_promotion",
+      "passed": true,
+      "actual": "frontier_exhausted_or_dependency_blocked",
+      "required": "re-rank after every promotion"
+    },
+    {
+      "gate_id": "user_did_not_specify_discovered_operation",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "The loop is autonomous over registered anonymous world generators; it does not yet invent arbitrary new sensors or environments from nothing.",
+    "The host supplied generic structural world generators, scoring dimensions, search grammars, and proof adapters, but did not name or request the discovered mathematical operation.",
+    "Only proof-carrying discoveries are promoted; an unproved but interesting compressor remains in the mistake/frontier state.",
+    "This run stopped because the remaining novel world needs exclusion memory, which is not yet a verified dependency.",
+    "The new semantic is limited to natural cardinalities and unary finite structures."
+  ]
+}

@@ -1,0 +1,1655 @@
+{
+  "run_id": "RUN-operator-frontier-v4-20260820T060202511193Z",
+  "created_at": "2026-08-20T06:02:02.511193Z",
+  "verdict": "twelve_verified_operators_promoted",
+  "frontier": {
+    "report_version": "operator-frontier-v4-report-v0.1",
+    "claim": "verified_executable_operators_on_declared_domains",
+    "candidate_world_count": 12,
+    "promoted_operator_count": 12,
+    "all_behavior_signatures_distinct": true,
+    "operators": [
+      {
+        "operator_id": "OPV4-11a",
+        "world_id": "OW-11a",
+        "program": {
+          "program_id": "M3P-1175375ee7db5751",
+          "kind": "guarded",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 0,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "ca34ece1b0e546fffa19da6c3a7a719494f8a63d8fdb1f53c4cf3f07452a1372",
+        "posthoc_name": "positive projection",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "all integers",
+        "mutations": [
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 3,
+          "total": 3
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "x<0 maps to 0; otherwise x",
+          "domain_contract": "all integers",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-22b",
+        "world_id": "OW-22b",
+        "program": {
+          "program_id": "M3P-7d0fb0c69e62e76f",
+          "kind": "guarded",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 0,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "67140fff6660a4905d72526569cbd23b8618d11b90abf9abeb503a8e73e2795a",
+        "posthoc_name": "negative projection",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "all integers",
+        "mutations": [
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 3,
+          "total": 3
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "x<0 maps to x; otherwise 0",
+          "domain_contract": "all integers",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-33c",
+        "world_id": "OW-33c",
+        "program": {
+          "program_id": "M3P-fa1659585c029585",
+          "kind": "guarded",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 1,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "fd4f18ae8028ae3eba3f2509f637a7364e3ea19407427e31d7779e1f289b280f",
+        "posthoc_name": "zero indicator",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "all integers",
+        "mutations": [
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 3,
+          "total": 3
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "x=0 maps to 1; otherwise 0",
+          "domain_contract": "all integers",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-44d",
+        "world_id": "OW-44d",
+        "program": {
+          "program_id": "M3P-beb6b6744ee23eff",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              -1,
+              0
+            ]
+          ],
+          "update_bias": [
+            1
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "3bb4db0c55400ff5255154b115e3dcecba241c77dffdce7bf58bc3f9af2ad54b",
+        "posthoc_name": "parity residue",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "natural numbers",
+        "mutations": [
+          "grow_counter_fold"
+        ],
+        "sealed": {
+          "passed": 4,
+          "total": 4
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "r0=0; r'=1-r, so r_n is the residue of n modulo 2",
+          "domain_contract": "natural numbers",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-beb6b6744ee23eff",
+            "certificate": {
+              "certificate_id": "INV-d6887b009db578c5",
+              "program_id": "M3P-beb6b6744ee23eff",
+              "variable_count": 3,
+              "degree": 2,
+              "coefficients": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                -1
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 1
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-beb6b6744ee23eff",
+            "certificate": {
+              "certificate_id": "ACFINV-fb1d5764c82caa14",
+              "program_id": "M3P-beb6b6744ee23eff",
+              "output_register": 0,
+              "augmented_dimension": 2,
+              "characteristic_coefficients": [
+                0,
+                -1
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 2
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-55e",
+        "world_id": "OW-55e",
+        "program": {
+          "program_id": "M3P-caeab884d24e373b",
+          "kind": "guarded",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 1,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                0,
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "995a8fad5ae0ad8a9f475bc508c8293746f77396ac72e5a2606276a701d03410",
+        "posthoc_name": "Boolean disjunction",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "complete Boolean pair domain",
+        "mutations": [
+          "grow_input_channel",
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 0,
+          "total": 0
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "all four elements of the declared finite Boolean-pair domain were exhausted",
+          "domain_contract": "complete Boolean pair domain",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-66f",
+        "world_id": "OW-66f",
+        "program": {
+          "program_id": "M3P-8bdbf5381fefc089",
+          "kind": "guarded",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                0,
+                -1
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 1,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                0,
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "31c9ed86404f42c394b19a5e7e4b24b332d832cf48bca36afa80274621a29d23",
+        "posthoc_name": "Boolean exclusive disjunction",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "complete Boolean pair domain",
+        "mutations": [
+          "grow_input_channel",
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 0,
+          "total": 0
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "all four elements of the declared finite Boolean-pair domain were exhausted",
+          "domain_contract": "complete Boolean pair domain",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-77a",
+        "world_id": "OW-77a",
+        "program": {
+          "program_id": "M3P-e9a08f38b22ad15b",
+          "kind": "guarded",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                0,
+                -1
+              ],
+              "bias": 1
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 1,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "8fcbfcd705a6763a70273b5b9f43bd661ecd335181b3553a7573592320ff3596",
+        "posthoc_name": "Boolean NAND",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "complete Boolean pair domain",
+        "mutations": [
+          "grow_input_channel",
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 0,
+          "total": 0
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "all four elements of the declared finite Boolean-pair domain were exhausted",
+          "domain_contract": "complete Boolean pair domain",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-88b",
+        "world_id": "OW-88b",
+        "program": {
+          "program_id": "M3P-8647f492f882bc3a",
+          "kind": "guarded",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                0,
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": 0,
+          "guard_mode": 1,
+          "triggered_outputs": [
+            {
+              "coefficients": [
+                0,
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "3d370a5d7c7c3b2a61bba21305854c11db33481c550c479a29c65c6b4a309668",
+        "posthoc_name": "Boolean implication",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "complete Boolean pair domain",
+        "mutations": [
+          "grow_input_channel",
+          "grow_guarded_path"
+        ],
+        "sealed": {
+          "passed": 0,
+          "total": 0
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "all four elements of the declared finite Boolean-pair domain were exhausted",
+          "domain_contract": "complete Boolean pair domain",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-99c",
+        "world_id": "OW-99c",
+        "program": {
+          "program_id": "M3P-1ab10c4120af2024",
+          "kind": "counter_fold",
+          "input_width": 3,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 1,
+          "initial_registers": [
+            {
+              "coefficients": [
+                1,
+                0,
+                0
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              1,
+              0,
+              0,
+              1
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "e65ac559f8b1487ac21f8cd6a38b7a92b14a555ac032b705dcb276bbb840ac3d",
+        "posthoc_name": "iterated affine step",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "integer start/step and natural count",
+        "mutations": [
+          "grow_guarded_path",
+          "grow_input_channel",
+          "grow_input_channel",
+          "grow_counter_fold"
+        ],
+        "sealed": {
+          "passed": 3,
+          "total": 3
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "r0=a; repeat n times r'=r+d, hence r=a+n*d",
+          "domain_contract": "integer start/step and natural count",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [
+          {
+            "proof_domain": "polynomial_equality",
+            "program_id": "M3P-1ab10c4120af2024",
+            "certificate": {
+              "certificate_id": "INV-990c7533aabb4c4a",
+              "program_id": "M3P-1ab10c4120af2024",
+              "variable_count": 5,
+              "degree": 2,
+              "coefficients": [
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                -1,
+                0,
+                0,
+                0,
+                0
+              ],
+              "monomials": [
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  2,
+                  0,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  1,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  2,
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  1,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  1,
+                  0,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  2,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1,
+                  0,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  1,
+                  1
+                ],
+                [
+                  0,
+                  0,
+                  0,
+                  0,
+                  2
+                ]
+              ],
+              "ranking_variable": 3
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_polynomial",
+                  "passed": true
+                },
+                {
+                  "id": "initialization_identity",
+                  "passed": true
+                },
+                {
+                  "id": "transition_preservation_identity",
+                  "passed": true
+                },
+                {
+                  "id": "natural_counter_ranking",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-aad",
+        "world_id": "OW-aad",
+        "program": {
+          "program_id": "M3P-b18d9f70b2da8b2c",
+          "kind": "product_output",
+          "input_width": 2,
+          "output_arity": 2,
+          "affine_outputs": [
+            {
+              "coefficients": [
+                1,
+                1
+              ],
+              "bias": 0
+            },
+            {
+              "coefficients": [
+                1,
+                -1
+              ],
+              "bias": 0
+            }
+          ],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": -1,
+          "initial_registers": [],
+          "update_matrix": [],
+          "update_bias": [],
+          "output_registers": [],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "bb4bb75d9a4a0c9803ba9eb132ff0c087bc01a60230af89a1628d986d3c9c390",
+        "posthoc_name": "paired sum and difference",
+        "name_visible_to_learner": false,
+        "classification": "derived_executable_operator",
+        "domain_contract": "all integer pairs",
+        "mutations": [
+          "grow_product_output",
+          "grow_input_channel"
+        ],
+        "sealed": {
+          "passed": 3,
+          "total": 3
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "the two outputs are universally a+b and a-b",
+          "domain_contract": "all integer pairs",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-bbe",
+        "world_id": "OW-bbe",
+        "program": {
+          "program_id": "M3P-35cd02fc9cb58f42",
+          "kind": "counter_fold",
+          "input_width": 2,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0,
+                1
+              ],
+              "bias": 0
+            }
+          ],
+          "update_matrix": [
+            [
+              0,
+              0,
+              0
+            ]
+          ],
+          "update_bias": [
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [
+            0
+          ],
+          "counter_state_matrix": [
+            [
+              1
+            ]
+          ]
+        },
+        "behavior_signature": "675246f0bac7239254934418c10259d65e86f1106c3b31623619f1ab1815ee49",
+        "posthoc_name": "scaled descending product",
+        "name_visible_to_learner": false,
+        "classification": "new_counter_interaction_operator",
+        "domain_contract": "natural count and integer scale",
+        "mutations": [
+          "grow_input_channel",
+          "grow_guarded_path",
+          "grow_state_cell",
+          "grow_counter_fold",
+          "grow_counter_interaction"
+        ],
+        "sealed": {
+          "passed": 3,
+          "total": 3
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "r0=b; r'=r*c while c descends, hence r=b*n!",
+          "domain_contract": "natural count and integer scale",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [
+          {
+            "proof_domain": "scaled_counter_product_induction",
+            "program_id": "M3P-35cd02fc9cb58f42",
+            "certificate": {
+              "certificate_id": "SCPINV-1cd04a9a528d6af8",
+              "program_id": "M3P-35cd02fc9cb58f42",
+              "counter_input": 0,
+              "initial_expression": {
+                "coefficients": [
+                  0,
+                  1
+                ],
+                "bias": 0
+              },
+              "induction_shape": "r(0)=affine(inputs); r(next)=r*remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "pure_state_counter_interaction",
+                  "passed": true
+                },
+                {
+                  "id": "initial_expression_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "scaled_product_induction",
+                  "passed": true,
+                  "identity": "r_k = initial*product(n-k+1..n)"
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "promoted": true
+      },
+      {
+        "operator_id": "OPV4-ccf",
+        "world_id": "OW-ccf",
+        "program": {
+          "program_id": "M3P-79671347bb139678",
+          "kind": "counter_fold",
+          "input_width": 1,
+          "output_arity": 1,
+          "affine_outputs": [],
+          "guard_input": -1,
+          "guard_mode": -1,
+          "triggered_outputs": [],
+          "counter_input": 0,
+          "initial_registers": [
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            },
+            {
+              "coefficients": [
+                0
+              ],
+              "bias": 1
+            }
+          ],
+          "update_matrix": [
+            [
+              -1,
+              -1,
+              0
+            ],
+            [
+              -1,
+              -1,
+              0
+            ]
+          ],
+          "update_bias": [
+            0,
+            0
+          ],
+          "output_registers": [
+            0
+          ],
+          "counter_coefficients": [],
+          "counter_state_matrix": []
+        },
+        "behavior_signature": "8d90e09e80cf4227c1a64082294a452dcdb9f3b5d92dc4fd470648cfbeb9d3c5",
+        "posthoc_name": "signed scale recurrence",
+        "name_visible_to_learner": false,
+        "classification": "new_scaling_operator",
+        "domain_contract": "natural numbers",
+        "mutations": [
+          "grow_guarded_path",
+          "grow_state_cell",
+          "grow_counter_fold"
+        ],
+        "sealed": {
+          "passed": 4,
+          "total": 4
+        },
+        "symbolic_verification": {
+          "verifier_version": "operator-frontier-v4-symbolic-v0.1",
+          "passed": true,
+          "universal_statement": "equal states remain equal and each step maps r to -2r",
+          "domain_contract": "natural numbers",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_exact_or_finite_domain_complete",
+              "passed": true
+            },
+            {
+              "id": "symbolic_structure",
+              "passed": true
+            },
+            {
+              "id": "target_name_was_evaluator_only",
+              "passed": true
+            }
+          ]
+        },
+        "portfolio_proofs": [
+          {
+            "proof_domain": "affine_scaling_conservation",
+            "program_id": "M3P-79671347bb139678",
+            "certificate": {
+              "certificate_id": "AINV-e1d71a3a3493a775",
+              "program_id": "M3P-79671347bb139678",
+              "state_weights": [
+                1,
+                -1
+              ],
+              "input_weights": [
+                0
+              ],
+              "bias": 0,
+              "scale": 0,
+              "counter_input": 0,
+              "initial_expression": {
+                "coefficients": [
+                  0
+                ],
+                "bias": 0
+              },
+              "conserved_shape": "affine_state_form * scale^remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_state_form",
+                  "passed": true
+                },
+                {
+                  "id": "admissible_eigen_relation",
+                  "passed": true,
+                  "mode": "inductive_zero_set"
+                },
+                {
+                  "id": "state_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "input_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "constant_identity",
+                  "passed": true
+                },
+                {
+                  "id": "initial_form_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "symbolic_conservation_step",
+                  "passed": true,
+                  "identity": "q=0 and q'=scale*q => q'=0"
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_scaling_conservation",
+            "program_id": "M3P-79671347bb139678",
+            "certificate": {
+              "certificate_id": "AINV-720bb7bdfc52ce67",
+              "program_id": "M3P-79671347bb139678",
+              "state_weights": [
+                1,
+                1
+              ],
+              "input_weights": [
+                0
+              ],
+              "bias": 0,
+              "scale": -2,
+              "counter_input": 0,
+              "initial_expression": {
+                "coefficients": [
+                  0
+                ],
+                "bias": 2
+              },
+              "conserved_shape": "affine_state_form * scale^remaining_counter"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "nonzero_state_form",
+                  "passed": true
+                },
+                {
+                  "id": "admissible_eigen_relation",
+                  "passed": true,
+                  "mode": "scaling_conservation"
+                },
+                {
+                  "id": "state_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "input_coefficient_identity",
+                  "passed": true
+                },
+                {
+                  "id": "constant_identity",
+                  "passed": true
+                },
+                {
+                  "id": "initial_form_binding",
+                  "passed": true
+                },
+                {
+                  "id": "counter_binding",
+                  "passed": true
+                },
+                {
+                  "id": "symbolic_conservation_step",
+                  "passed": true,
+                  "identity": "q'=scale*q => q'*scale^(c-1)=q*scale^c"
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "cfinite_characteristic_recurrence",
+            "program_id": "M3P-79671347bb139678",
+            "certificate": {
+              "certificate_id": "CFINV-7ceb2036ef48a51e",
+              "program_id": "M3P-79671347bb139678",
+              "output_register": 0,
+              "trace": -2,
+              "determinant": 0,
+              "recurrence": "x[t+2] = trace*x[t+1] - determinant*x[t]"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "two_state_matrix",
+                  "passed": true
+                },
+                {
+                  "id": "homogeneous_transition",
+                  "passed": true
+                },
+                {
+                  "id": "trace_binding",
+                  "passed": true
+                },
+                {
+                  "id": "determinant_binding",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "A^2 - trace(A)A + determinant(A)I = 0"
+                },
+                {
+                  "id": "component_recurrence",
+                  "passed": true,
+                  "identity": "each selected state component obeys the characteristic recurrence"
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          },
+          {
+            "proof_domain": "affine_cfinite_recurrence",
+            "program_id": "M3P-79671347bb139678",
+            "certificate": {
+              "certificate_id": "ACFINV-857933100402017e",
+              "program_id": "M3P-79671347bb139678",
+              "output_register": 0,
+              "augmented_dimension": 3,
+              "characteristic_coefficients": [
+                1,
+                -2,
+                0
+              ],
+              "recurrence": "Cayley-Hamilton recurrence of the constant-augmented transition"
+            },
+            "verification": {
+              "passed": true,
+              "obligations": [
+                {
+                  "id": "program_binding",
+                  "passed": true
+                },
+                {
+                  "id": "constant_augmentation_admissible",
+                  "passed": true
+                },
+                {
+                  "id": "dimension_binding",
+                  "passed": true
+                },
+                {
+                  "id": "characteristic_coefficients",
+                  "passed": true
+                },
+                {
+                  "id": "output_binding",
+                  "passed": true
+                },
+                {
+                  "id": "cayley_hamilton_identity",
+                  "passed": true,
+                  "identity": "the augmented transition annihilates its characteristic polynomial"
+                },
+                {
+                  "id": "selected_component_recurrence",
+                  "passed": true,
+                  "order": 3
+                },
+                {
+                  "id": "natural_counter_termination",
+                  "passed": true
+                }
+              ]
+            }
+          }
+        ],
+        "promoted": true
+      }
+    ],
+    "passed": true,
+    "limitations": [
+      "These are executable operator semantics; most are compositions of already learned control and state mechanisms, not twelve new mathematical foundations.",
+      "Boolean operators are universally checked by exhausting their declared finite domain.",
+      "Integer operators require symbolic structural proof plus sealed tests; sealed tests alone never authorize promotion.",
+      "General division, arbitrary remainder, roots, and variable-base exponentiation remain outside this operator batch."
+    ],
+    "content_digest": "f3c95552557a36425e01d03d611be864782cbbbe85848f71801f72e21b0a4512"
+  },
+  "verification": {
+    "verifier_version": "operator-frontier-v4-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "id": "content_digest",
+        "passed": true
+      },
+      {
+        "id": "all_twelve_replay",
+        "passed": true,
+        "actual": 12
+      },
+      {
+        "id": "portfolio_proofs_replay",
+        "passed": true
+      },
+      {
+        "id": "distinct_behavior_signatures",
+        "passed": true
+      },
+      {
+        "id": "promotion_count",
+        "passed": true
+      }
+    ]
+  },
+  "rooms": {
+    "success_path": "artifacts/operators/v4/success/verified_operators.jsonl",
+    "boundary_path": "artifacts/operators/v4/mistakes/expression_boundaries.jsonl",
+    "success_count": 12,
+    "boundary_count": 4,
+    "latest_event_hash": "a5e03601a1a3a76de617f3c57f9268835c7fec1eaa0ed1070d9fbc061a1547f6"
+  }
+}

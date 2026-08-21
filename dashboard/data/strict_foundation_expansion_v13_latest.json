@@ -1,0 +1,1524 @@
+{
+  "report_version": "strict-foundation-expansion-v13.1",
+  "run_id": "RUN-strict-expansion-v13-20260820T184812604526Z",
+  "created_at": "2026-08-20T18:48:12.604526Z",
+  "verdict": "all_three_strict_foundations_expanded_and_universally_proven",
+  "source_foundations": [
+    {
+      "version": "V10",
+      "semantic": "STRICT-FSEM-82df58ba4ce6f41c",
+      "domain": "N×N→N"
+    },
+    {
+      "version": "V11",
+      "semantic": "strict_v11_two_output",
+      "domain": "N×N+→N×N"
+    },
+    {
+      "version": "V12",
+      "semantic": "strict_v12_fold",
+      "domain": "N×N→N"
+    }
+  ],
+  "expansions": [
+    {
+      "source": "V10",
+      "search": {
+        "policies_generated": 16,
+        "behavior_classes": 16,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "SP-2e3dcfb41e035ae7",
+          "family": "signed_product",
+          "policy": {
+            "substrate": "sign_router_over_strict_v10",
+            "negative_table": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "magnitude_semantic": "STRICT-FSEM-82df58ba4ce6f41c"
+          },
+          "law_profile": {
+            "commutative": true,
+            "associative": true,
+            "integer_identity": true,
+            "zero_annihilator": true,
+            "distributive_over_integer_combine": true
+          },
+          "behavior_signature": [
+            16,
+            12,
+            8,
+            4,
+            0,
+            -4,
+            -8,
+            -12,
+            -16,
+            12,
+            9,
+            6,
+            3,
+            0,
+            -3,
+            -6,
+            -9,
+            -12,
+            8,
+            6,
+            4,
+            2,
+            0,
+            -2,
+            -4,
+            -6,
+            -8,
+            4,
+            3,
+            2,
+            1,
+            0,
+            -1,
+            -2,
+            -3,
+            -4,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -4,
+            -3,
+            -2,
+            -1,
+            0,
+            1,
+            2,
+            3,
+            4,
+            -8,
+            -6,
+            -4,
+            -2,
+            0,
+            2,
+            4,
+            6,
+            8,
+            -12,
+            -9,
+            -6,
+            -3,
+            0,
+            3,
+            6,
+            9,
+            12,
+            -16,
+            -12,
+            -8,
+            -4,
+            0,
+            4,
+            8,
+            12,
+            16
+          ],
+          "passed": true
+        }
+      },
+      "proof": {
+        "passed": true,
+        "verifier_version": "strict-signed-product-verifier-v13.1",
+        "expansion_id": "STRICT-EXP-2e3dcfb41e035ae7",
+        "posthoc_name": "整数乘法域扩张",
+        "domain": "Z×Z→Z",
+        "universal_statement": "for every a,b in Z, the expanded program returns the unique ring product a*b",
+        "obligations": [
+          {
+            "obligation_id": "v10_dependency",
+            "passed": true,
+            "evidence": "magnitude product is universally proven on N"
+          },
+          {
+            "obligation_id": "sign_truth_table",
+            "passed": true,
+            "evidence": "negative exactly when input signs differ"
+          },
+          {
+            "obligation_id": "four_sign_cases",
+            "passed": true,
+            "evidence": "++, +-, -+, -- replay to +, -, -, +"
+          },
+          {
+            "obligation_id": "integer_identity",
+            "passed": true,
+            "evidence": "unit magnitude and positive sign preserve every signed input"
+          },
+          {
+            "obligation_id": "zero_boundary",
+            "passed": true,
+            "evidence": "zero magnitude removes sign"
+          },
+          {
+            "obligation_id": "associative_sign_composition",
+            "passed": true,
+            "evidence": "exclusive sign difference is associative"
+          },
+          {
+            "obligation_id": "distributive_completion",
+            "passed": true,
+            "evidence": "magnitude distributivity plus additive inverses covers all integer sign cases"
+          },
+          {
+            "obligation_id": "sealed_replay",
+            "passed": true,
+            "evidence": "five signed cases outside search grid"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "inputs": [
+              -37,
+              -19
+            ],
+            "output": 703,
+            "passed": true
+          },
+          {
+            "inputs": [
+              -37,
+              19
+            ],
+            "output": -703,
+            "passed": true
+          },
+          {
+            "inputs": [
+              37,
+              -19
+            ],
+            "output": -703,
+            "passed": true
+          },
+          {
+            "inputs": [
+              0,
+              -91
+            ],
+            "output": 0,
+            "passed": true
+          },
+          {
+            "inputs": [
+              123,
+              45
+            ],
+            "output": 5535,
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "source": "V11",
+      "search": {
+        "policies_generated": 64,
+        "behavior_classes": 64,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "IP-518850870684a6b2",
+          "family": "integer_partition",
+          "policy": {
+            "substrate": "signed_correction_over_strict_v11",
+            "negative_output_table": [
+              false,
+              true,
+              true,
+              false
+            ],
+            "adjust_negative_nonexact": true,
+            "complement_negative_residual": true,
+            "partition_semantic": "strict_v11_two_output"
+          },
+          "law_profile": {
+            "integer_reconstruction": true,
+            "canonical_nonnegative_residual": true,
+            "exact_cases_preserved": true,
+            "unique_canonical_pair": true
+          },
+          "behavior_signature": [
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              3
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              5,
+              1
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              -9,
+              0
+            ],
+            [
+              -5,
+              1
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              -3,
+              3
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              -8,
+              0
+            ],
+            [
+              -4,
+              0
+            ],
+            [
+              -3,
+              1
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              -7,
+              0
+            ],
+            [
+              -4,
+              1
+            ],
+            [
+              -3,
+              2
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -2,
+              3
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              -6,
+              0
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -2,
+              4
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              -5,
+              0
+            ],
+            [
+              -3,
+              1
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -2,
+              3
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              -4,
+              0
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              -1,
+              3
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              -1,
+              3
+            ],
+            [
+              -1,
+              4
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -4,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              0,
+              4
+            ],
+            [
+              -1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -5,
+              0
+            ],
+            [
+              5,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              0
+            ],
+            [
+              -1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              -6,
+              0
+            ],
+            [
+              6,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              -1,
+              3
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -3,
+              1
+            ],
+            [
+              -7,
+              0
+            ],
+            [
+              7,
+              0
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              -1,
+              3
+            ],
+            [
+              -2,
+              0
+            ],
+            [
+              -2,
+              2
+            ],
+            [
+              -4,
+              0
+            ],
+            [
+              -8,
+              0
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              4,
+              0
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              0
+            ],
+            [
+              1,
+              3
+            ],
+            [
+              -1,
+              4
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              -3,
+              0
+            ],
+            [
+              -4,
+              1
+            ],
+            [
+              -9,
+              0
+            ],
+            [
+              9,
+              0
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              4
+            ]
+          ],
+          "passed": true
+        }
+      },
+      "proof": {
+        "passed": true,
+        "verifier_version": "strict-integer-partition-verifier-v13.1",
+        "expansion_id": "STRICT-EXP-518850870684a6b2",
+        "posthoc_name": "整数欧几里得商余域扩张",
+        "domain": "Z×(Z\\{0})→Z×N",
+        "universal_statement": "for every n in Z and nonzero d in Z, the program uniquely returns q,r with n=dq+r and 0<=r<|d|",
+        "obligations": [
+          {
+            "obligation_id": "v11_dependency",
+            "passed": true,
+            "evidence": "absolute magnitudes have unique natural q0,r0 with |n|=|d|q0+r0"
+          },
+          {
+            "obligation_id": "quotient_sign_router",
+            "passed": true,
+            "evidence": "quotient sign changes exactly when stream and template signs differ"
+          },
+          {
+            "obligation_id": "nonnegative_stream_case",
+            "passed": true,
+            "evidence": "natural decomposition is preserved and quotient sign follows d"
+          },
+          {
+            "obligation_id": "negative_exact_case",
+            "passed": true,
+            "evidence": "when r0=0 only quotient sign changes"
+          },
+          {
+            "obligation_id": "negative_nonexact_correction",
+            "passed": true,
+            "evidence": "q magnitude advances by one and residual becomes |d|-r0"
+          },
+          {
+            "obligation_id": "negative_template_case",
+            "passed": true,
+            "evidence": "quotient sign flip preserves n=dq+r while residual stays canonical"
+          },
+          {
+            "obligation_id": "residual_bound",
+            "passed": true,
+            "evidence": "r0=0 or 0<|d|-r0<|d|"
+          },
+          {
+            "obligation_id": "uniqueness",
+            "passed": true,
+            "evidence": "the difference of two canonical decompositions is a multiple of |d| strictly smaller than |d|"
+          },
+          {
+            "obligation_id": "sealed_replay",
+            "passed": true,
+            "evidence": "six signed cases outside search grid"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "inputs": [
+              -997,
+              31
+            ],
+            "outputs": [
+              -33,
+              26
+            ],
+            "passed": true
+          },
+          {
+            "inputs": [
+              -997,
+              -31
+            ],
+            "outputs": [
+              33,
+              26
+            ],
+            "passed": true
+          },
+          {
+            "inputs": [
+              997,
+              -31
+            ],
+            "outputs": [
+              -32,
+              5
+            ],
+            "passed": true
+          },
+          {
+            "inputs": [
+              -64,
+              8
+            ],
+            "outputs": [
+              -8,
+              0
+            ],
+            "passed": true
+          },
+          {
+            "inputs": [
+              -65,
+              8
+            ],
+            "outputs": [
+              -9,
+              7
+            ],
+            "passed": true
+          },
+          {
+            "inputs": [
+              0,
+              -13
+            ],
+            "outputs": [
+              0,
+              0
+            ],
+            "passed": true
+          }
+        ]
+      }
+    },
+    {
+      "source": "V12",
+      "search": {
+        "policies_generated": 32,
+        "behavior_classes": 32,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "RP-a0ecad0a8a4785ae",
+          "family": "rational_integer_power",
+          "policy": {
+            "substrate": "reciprocal_sign_router_over_strict_v12",
+            "swap_on_negative_count": true,
+            "negative_table": [
+              false,
+              false,
+              false,
+              true
+            ],
+            "fold_semantic": "strict_v12_fold"
+          },
+          "law_profile": {
+            "zero_count_identity": true,
+            "integer_successor_recurrence": true,
+            "opposite_counts_are_inverses": true,
+            "count_addition_homomorphism": true
+          },
+          "behavior_signature": [
+            [
+              -8,
+              27
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              -2,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              -3,
+              2
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              -27,
+              8
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              -8,
+              1
+            ],
+            [
+              -8,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              -2,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              -1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              -1,
+              8
+            ],
+            [
+              8,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              8,
+              27
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              9,
+              4
+            ],
+            [
+              27,
+              8
+            ],
+            [
+              1,
+              8
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              1
+            ]
+          ],
+          "passed": true
+        }
+      },
+      "proof": {
+        "passed": true,
+        "verifier_version": "strict-rational-integer-power-verifier-v13.1",
+        "expansion_id": "STRICT-EXP-a0ecad0a8a4785ae",
+        "posthoc_name": "有理底数整数幂域扩张",
+        "domain": "Q×Z→Q (excluding 0 with negative count)",
+        "universal_statement": "for every nonzero b in Q and e in Z, the program returns the unique multiplicative extension b^e; nonnegative e also permits b=0",
+        "obligations": [
+          {
+            "obligation_id": "v12_dependency",
+            "passed": true,
+            "evidence": "numerator and denominator magnitudes use the universally proven natural fold"
+          },
+          {
+            "obligation_id": "zero_count_identity",
+            "passed": true,
+            "evidence": "empty numerator and denominator folds both return one"
+          },
+          {
+            "obligation_id": "positive_count_induction",
+            "passed": true,
+            "evidence": "positive counts independently fold numerator and denominator magnitudes"
+          },
+          {
+            "obligation_id": "negative_count_reciprocal",
+            "passed": true,
+            "evidence": "negative count swaps the two nonzero folded magnitudes"
+          },
+          {
+            "obligation_id": "parity_sign_router",
+            "passed": true,
+            "evidence": "negative sign appears exactly for a negative base and odd absolute count"
+          },
+          {
+            "obligation_id": "successor_recurrence",
+            "passed": true,
+            "evidence": "both positive and negative branches satisfy F(b,e+1)=F(b,e)*b"
+          },
+          {
+            "obligation_id": "opposite_count_inverse",
+            "passed": true,
+            "evidence": "swapped magnitude pairs multiply to the rational identity"
+          },
+          {
+            "obligation_id": "count_addition_law",
+            "passed": true,
+            "evidence": "recurrence and inverse extend the natural count law to all integer counts"
+          },
+          {
+            "obligation_id": "sealed_replay",
+            "passed": true,
+            "evidence": "six rational/integer cases outside search grid"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "input": [
+              -7,
+              3,
+              -5
+            ],
+            "output": [
+              -243,
+              16807
+            ],
+            "passed": true
+          },
+          {
+            "input": [
+              -7,
+              3,
+              6
+            ],
+            "output": [
+              117649,
+              729
+            ],
+            "passed": true
+          },
+          {
+            "input": [
+              5,
+              11,
+              -4
+            ],
+            "output": [
+              14641,
+              625
+            ],
+            "passed": true
+          },
+          {
+            "input": [
+              2,
+              1,
+              -12
+            ],
+            "output": [
+              1,
+              4096
+            ],
+            "passed": true
+          },
+          {
+            "input": [
+              0,
+              1,
+              9
+            ],
+            "output": [
+              0,
+              1
+            ],
+            "passed": true
+          },
+          {
+            "input": [
+              1,
+              13,
+              0
+            ],
+            "output": [
+              1,
+              1
+            ],
+            "passed": true
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "foundations_considered": 3,
+    "foundations_expanded": 3,
+    "new_foundations_claimed": 0,
+    "verified_domain_extensions": 3,
+    "proof_obligations_passed": 26,
+    "proof_obligations_total": 26
+  },
+  "classification": {
+    "label": "verified_domain_closure_of_strict_foundations",
+    "target_output_rows": false,
+    "policy_search_is_bounded": true,
+    "host_supplied": [
+      "domain representations",
+      "policy grammars",
+      "law detectors",
+      "universal case proof schemas"
+    ],
+    "human_novel_mathematics_claim": false
+  },
+  "content_digest": "9eacf5c423dffdefa58d48d547dec95e3025cce32f00f5047a455b6e795095cd"
+}

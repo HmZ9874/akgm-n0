@@ -1,0 +1,22 @@
+{
+  "snapshot_version": "nasa-exoplanet-v37-20260821",
+  "retrieved_at": "2026-08-21T15:45:25.2762733Z",
+  "provider": "NASA Exoplanet Archive",
+  "table": "pscomppars",
+  "endpoint": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+  "query": "select top 60 pl_name,pl_orbper,pl_orbpererr1,pl_orbpererr2,pl_orbsmax,pl_orbsmaxerr1,pl_orbsmaxerr2,st_mass,st_masserr1,st_masserr2 from pscomppars where pl_orbper is not null and pl_orbsmax is not null and st_mass is not null order by pl_name",
+  "format": "json",
+  "snapshot_rows_retained": 53,
+  "snapshot_sha256": "0bc98e91401a2b0dd7075f5073698c86fd7347601629376c0a2afc100e5f26da",
+  "source_documentation": [
+    "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+    "https://exoplanetarchive.ipac.caltech.edu/docs/API_TD_columns.html",
+    "https://exoplanetarchive.ipac.caltech.edu/docs/pscp_calc.html"
+  ],
+  "units": {
+    "pl_orbper": "day",
+    "pl_orbsmax": "astronomical_unit",
+    "st_mass": "solar_mass"
+  },
+  "important_caveat": "PSCompPars may combine values from different references and some semimajor axes may be derived rather than independently measured."
+}

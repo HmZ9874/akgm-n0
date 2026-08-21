@@ -1,0 +1,695 @@
+{
+  "report_version": "multiview-relational-report-v0.1",
+  "run_id": "RUN-multiview-relational-20260818T042820204629Z",
+  "created_at": "2026-08-18T04:28:20.213139Z",
+  "title": "多视角关系图与可寻址内存实验",
+  "verdict": "bounded_local_structure_found",
+  "knowledge_status": "bounded",
+  "architecture": "sequence_view_plus_relation_hypergraph_plus_append_only_addressable_memory",
+  "learner_received": {
+    "numeric_values": [
+      17.0,
+      42.0,
+      8.0,
+      31.0,
+      56.0,
+      23.0,
+      64.0,
+      11.0
+    ],
+    "target_formula": false,
+    "next_value_question": false,
+    "natural_language_math_concepts": false,
+    "opaque_semantic_operation_ids": [
+      "SEM-33bf3587fc82db18"
+    ],
+    "memory_address_choices": "candidate_selected",
+    "instruction_order": "candidate_selected"
+  },
+  "views": {
+    "sequence_difference_workspace": {
+      "construction": "generic_adjacent_subtraction",
+      "first_layer": [
+        25.0,
+        -34.0,
+        23.0,
+        25.0,
+        -33.0,
+        41.0,
+        -53.0
+      ],
+      "second_layer": [
+        -59.0,
+        57.0,
+        2.0,
+        -58.0,
+        74.0,
+        -94.0
+      ],
+      "evidence_constants": [
+        {
+          "value": 0.0,
+          "provenance": {
+            "op": "subtract_observed_or_derived_numeric_atoms",
+            "left": -94.0,
+            "right": -94.0
+          }
+        },
+        {
+          "value": -1.0,
+          "provenance": {
+            "op": "subtract_observed_or_derived_numeric_atoms",
+            "left": -59.0,
+            "right": -58.0
+          }
+        },
+        {
+          "value": 1.0,
+          "provenance": {
+            "op": "subtract_observed_or_derived_numeric_atoms",
+            "left": -58.0,
+            "right": -59.0
+          }
+        },
+        {
+          "value": -2.0,
+          "provenance": {
+            "op": "subtract_observed_or_derived_numeric_atoms",
+            "left": 0.0,
+            "right": 2.0
+          }
+        },
+        {
+          "value": 2.0,
+          "provenance": {
+            "op": "subtract_observed_or_derived_numeric_atoms",
+            "left": 2.0,
+            "right": 0.0
+          }
+        }
+      ]
+    },
+    "relation_graph": {
+      "fact_count": 10,
+      "covered_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "covered_values": [
+        42.0,
+        8.0,
+        31.0,
+        56.0,
+        23.0,
+        64.0,
+        11.0
+      ],
+      "uncovered_indices": [
+        0
+      ],
+      "uncovered_values": [
+        17.0
+      ]
+    }
+  },
+  "exact_relation_facts": [
+    {
+      "fact_id": "RF-360175cb674b1705",
+      "instruction": {
+        "op": "r_add",
+        "left_address": 3,
+        "right_address": 7,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        3,
+        7
+      ],
+      "target_index": 1,
+      "output_value": 42.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "31 + 11",
+      "target_value": 42.0,
+      "assertion": "31 + 11 = 42"
+    },
+    {
+      "fact_id": "RF-3a6e0529f21ef950",
+      "instruction": {
+        "op": "r_add",
+        "left_address": 2,
+        "right_address": 5,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        2,
+        5
+      ],
+      "target_index": 3,
+      "output_value": 31.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "8 + 23",
+      "target_value": 31.0,
+      "assertion": "8 + 23 = 31"
+    },
+    {
+      "fact_id": "RF-78a84f684fc5eaed",
+      "instruction": {
+        "op": "r_add",
+        "left_address": 2,
+        "right_address": 4,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        2,
+        4
+      ],
+      "target_index": 6,
+      "output_value": 64.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "8 + 56",
+      "target_value": 64.0,
+      "assertion": "8 + 56 = 64"
+    },
+    {
+      "fact_id": "RF-7c71ff0dec484b19",
+      "instruction": {
+        "op": "r_semantic_call",
+        "left_address": 2,
+        "right_address": 2,
+        "write": "append_next_address",
+        "operation_id": "SEM-33bf3587fc82db18"
+      },
+      "source_indices": [
+        2,
+        2
+      ],
+      "target_index": 6,
+      "output_value": 64.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "SEM-33bf3587fc82db18⟨8, 8⟩",
+      "target_value": 64.0,
+      "assertion": "SEM-33bf3587fc82db18⟨8, 8⟩ = 64"
+    },
+    {
+      "fact_id": "RF-82cbb9ff2ebca160",
+      "instruction": {
+        "op": "r_subtract",
+        "left_address": 3,
+        "right_address": 5,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        3,
+        5
+      ],
+      "target_index": 2,
+      "output_value": 8.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "31 - 23",
+      "target_value": 8.0,
+      "assertion": "31 - 23 = 8"
+    },
+    {
+      "fact_id": "RF-e69f2a38f55b9d3d",
+      "instruction": {
+        "op": "r_subtract",
+        "left_address": 6,
+        "right_address": 4,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        6,
+        4
+      ],
+      "target_index": 2,
+      "output_value": 8.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "64 - 56",
+      "target_value": 8.0,
+      "assertion": "64 - 56 = 8"
+    },
+    {
+      "fact_id": "RF-ab38115336c15ded",
+      "instruction": {
+        "op": "r_subtract",
+        "left_address": 1,
+        "right_address": 7,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        1,
+        7
+      ],
+      "target_index": 3,
+      "output_value": 31.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "42 - 11",
+      "target_value": 31.0,
+      "assertion": "42 - 11 = 31"
+    },
+    {
+      "fact_id": "RF-569b0cdd6fe15f6b",
+      "instruction": {
+        "op": "r_subtract",
+        "left_address": 6,
+        "right_address": 2,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        6,
+        2
+      ],
+      "target_index": 4,
+      "output_value": 56.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "64 - 8",
+      "target_value": 56.0,
+      "assertion": "64 - 8 = 56"
+    },
+    {
+      "fact_id": "RF-ae8da9b4c8b7a06e",
+      "instruction": {
+        "op": "r_subtract",
+        "left_address": 3,
+        "right_address": 2,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        3,
+        2
+      ],
+      "target_index": 5,
+      "output_value": 23.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "31 - 8",
+      "target_value": 23.0,
+      "assertion": "31 - 8 = 23"
+    },
+    {
+      "fact_id": "RF-c55462d33a87f0d9",
+      "instruction": {
+        "op": "r_subtract",
+        "left_address": 1,
+        "right_address": 3,
+        "write": "append_next_address"
+      },
+      "source_indices": [
+        1,
+        3
+      ],
+      "target_index": 7,
+      "output_value": 11.0,
+      "exact_on_observed_atoms": true,
+      "readable_execution": "42 - 31",
+      "target_value": 11.0,
+      "assertion": "42 - 31 = 11"
+    }
+  ],
+  "five_program_feedback": [
+    {
+      "rank": 1,
+      "candidate_id": "RC-6184c601960d2fa7",
+      "kind": "graph_control",
+      "program": {
+        "substrate": "addressable_relational_memory_v0.1",
+        "input_width": 8,
+        "initial_memory": "ordered_observed_numeric_atoms",
+        "instructions": [
+          {
+            "op": "r_subtract",
+            "left_address": 6,
+            "right_address": 4,
+            "write": "append_next_address"
+          },
+          {
+            "op": "r_add",
+            "left_address": 3,
+            "right_address": 7,
+            "write": "append_next_address"
+          },
+          {
+            "op": "r_subtract",
+            "left_address": 3,
+            "right_address": 2,
+            "write": "append_next_address"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "r_assert_equal",
+            "result_address": 8,
+            "observed_address": 2
+          },
+          {
+            "op": "r_assert_equal",
+            "result_address": 9,
+            "observed_address": 1
+          },
+          {
+            "op": "r_assert_equal",
+            "result_address": 10,
+            "observed_address": 5
+          }
+        ]
+      },
+      "logic_signature": "RLOGIC-fac76e24dab04b8d",
+      "covered_indices": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "coverage_count": 7,
+      "instruction_outputs": [
+        8.0,
+        42.0,
+        23.0
+      ],
+      "assertion_results": [
+        true,
+        true,
+        true
+      ],
+      "exact": true,
+      "readable_steps": [
+        "64 - 56 -> 8",
+        "31 + 11 -> 42",
+        "31 - 8 -> 23"
+      ],
+      "disposition": "bounded_local_evidence_not_formula_room"
+    },
+    {
+      "rank": 2,
+      "candidate_id": "RC-49ade76d132e02cc",
+      "kind": "generated_address_reuse",
+      "program": {
+        "substrate": "addressable_relational_memory_v0.1",
+        "input_width": 8,
+        "initial_memory": "ordered_observed_numeric_atoms",
+        "instructions": [
+          {
+            "op": "r_subtract",
+            "left_address": 6,
+            "right_address": 4,
+            "write": "append_next_address"
+          },
+          {
+            "op": "r_add",
+            "left_address": 8,
+            "right_address": 5,
+            "write": "append_next_address"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "r_assert_equal",
+            "result_address": 8,
+            "observed_address": 2
+          },
+          {
+            "op": "r_assert_equal",
+            "result_address": 9,
+            "observed_address": 3
+          }
+        ]
+      },
+      "logic_signature": "RLOGIC-c009238a55a28982",
+      "covered_indices": [
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "coverage_count": 5,
+      "instruction_outputs": [
+        8.0,
+        31.0
+      ],
+      "assertion_results": [
+        true,
+        true
+      ],
+      "exact": true,
+      "readable_steps": [
+        "64 - 56 -> 8",
+        "8 + 23 -> 31"
+      ],
+      "disposition": "bounded_local_evidence_not_formula_room"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "RC-c9a29c7fcbebb58f",
+      "kind": "direct",
+      "program": {
+        "substrate": "addressable_relational_memory_v0.1",
+        "input_width": 8,
+        "initial_memory": "ordered_observed_numeric_atoms",
+        "instructions": [
+          {
+            "op": "r_subtract",
+            "left_address": 3,
+            "right_address": 5,
+            "write": "append_next_address"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "r_assert_equal",
+            "result_address": 8,
+            "observed_address": 2
+          }
+        ]
+      },
+      "logic_signature": "RLOGIC-24cee1c158092b24",
+      "covered_indices": [
+        2,
+        3,
+        5
+      ],
+      "coverage_count": 3,
+      "instruction_outputs": [
+        8.0
+      ],
+      "assertion_results": [
+        true
+      ],
+      "exact": true,
+      "readable_steps": [
+        "31 - 23 -> 8"
+      ],
+      "disposition": "bounded_local_evidence_not_formula_room"
+    },
+    {
+      "rank": 4,
+      "candidate_id": "RC-fddcebef27c62c6c",
+      "kind": "direct",
+      "program": {
+        "substrate": "addressable_relational_memory_v0.1",
+        "input_width": 8,
+        "initial_memory": "ordered_observed_numeric_atoms",
+        "instructions": [
+          {
+            "op": "r_add",
+            "left_address": 3,
+            "right_address": 7,
+            "write": "append_next_address"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "r_assert_equal",
+            "result_address": 8,
+            "observed_address": 1
+          }
+        ]
+      },
+      "logic_signature": "RLOGIC-f242e21ccf0a827f",
+      "covered_indices": [
+        1,
+        3,
+        7
+      ],
+      "coverage_count": 3,
+      "instruction_outputs": [
+        42.0
+      ],
+      "assertion_results": [
+        true
+      ],
+      "exact": true,
+      "readable_steps": [
+        "31 + 11 -> 42"
+      ],
+      "disposition": "bounded_local_evidence_not_formula_room"
+    },
+    {
+      "rank": 5,
+      "candidate_id": "RC-41fb367b8bd67215",
+      "kind": "direct",
+      "program": {
+        "substrate": "addressable_relational_memory_v0.1",
+        "input_width": 8,
+        "initial_memory": "ordered_observed_numeric_atoms",
+        "instructions": [
+          {
+            "op": "r_semantic_call",
+            "left_address": 2,
+            "right_address": 2,
+            "write": "append_next_address",
+            "operation_id": "SEM-33bf3587fc82db18"
+          }
+        ],
+        "assertions": [
+          {
+            "op": "r_assert_equal",
+            "result_address": 8,
+            "observed_address": 6
+          }
+        ]
+      },
+      "logic_signature": "RLOGIC-ef4a3499baae4ff0",
+      "covered_indices": [
+        2,
+        6
+      ],
+      "coverage_count": 2,
+      "instruction_outputs": [
+        64.0
+      ],
+      "assertion_results": [
+        true
+      ],
+      "exact": true,
+      "readable_steps": [
+        "SEM-33bf3587fc82db18⟨8, 8⟩ -> 64"
+      ],
+      "disposition": "bounded_local_evidence_not_formula_room"
+    }
+  ],
+  "graph_program": {
+    "candidate_id": "RC-6184c601960d2fa7",
+    "kind": "graph_control",
+    "program": {
+      "substrate": "addressable_relational_memory_v0.1",
+      "input_width": 8,
+      "initial_memory": "ordered_observed_numeric_atoms",
+      "instructions": [
+        {
+          "op": "r_subtract",
+          "left_address": 6,
+          "right_address": 4,
+          "write": "append_next_address"
+        },
+        {
+          "op": "r_add",
+          "left_address": 3,
+          "right_address": 7,
+          "write": "append_next_address"
+        },
+        {
+          "op": "r_subtract",
+          "left_address": 3,
+          "right_address": 2,
+          "write": "append_next_address"
+        }
+      ],
+      "assertions": [
+        {
+          "op": "r_assert_equal",
+          "result_address": 8,
+          "observed_address": 2
+        },
+        {
+          "op": "r_assert_equal",
+          "result_address": 9,
+          "observed_address": 1
+        },
+        {
+          "op": "r_assert_equal",
+          "result_address": 10,
+          "observed_address": 5
+        }
+      ]
+    },
+    "logic_signature": "RLOGIC-fac76e24dab04b8d",
+    "covered_indices": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "coverage_count": 7,
+    "instruction_outputs": [
+      8.0,
+      42.0,
+      23.0
+    ],
+    "assertion_results": [
+      true,
+      true,
+      true
+    ],
+    "exact": true
+  },
+  "gates": [
+    {
+      "gate_id": "five_distinct_control_structures",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "all_declared_local_assertions_exact",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "generated_memory_address_is_reused",
+      "passed": true,
+      "actual": [
+        "graph_control",
+        "generated_address_reuse",
+        "direct",
+        "direct",
+        "direct"
+      ],
+      "threshold": "generated_address_reuse"
+    },
+    {
+      "gate_id": "uncovered_atoms_are_explicit",
+      "passed": true,
+      "actual": [
+        0
+      ],
+      "threshold": "nonempty when graph is incomplete"
+    },
+    {
+      "gate_id": "incomplete_graph_not_admitted_as_global_formula",
+      "passed": true,
+      "actual": null,
+      "threshold": null
+    }
+  ],
+  "formula_success_room_record": null,
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The programs verify local equalities among supplied atoms, not a global generating law.",
+    "One observed atom remains disconnected from every registered exact relation.",
+    "The controller chooses addresses and instruction order but does not yet invent new instruction encodings or branch semantics.",
+    "No local coincidence is admitted to the reusable formula room without cross-instance validation."
+  ]
+}

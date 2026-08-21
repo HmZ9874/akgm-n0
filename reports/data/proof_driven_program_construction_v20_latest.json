@@ -1,0 +1,1500 @@
+{
+  "report_version": "proof-driven-program-construction-v20.0",
+  "run_id": "RUN-proof-construction-v20-20260821T022918041799Z",
+  "created_at": "2026-08-21T02:29:18.041799Z",
+  "verdict": "constructed_equation_and_rational_pair_programs_universally_proved",
+  "acceptance": {
+    "benchmark_version": "proof-driven-program-construction-v20.0",
+    "passed": true,
+    "classification": "verified_program_construction_from_anonymous_semantics_to_equations_and_rational_pair_operations",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "construction": {
+      "operation_program": {
+        "substrate": "anonymous_counter_transfer_v10",
+        "initial_registers": [
+          "input_0",
+          "input_1",
+          0,
+          0
+        ],
+        "program": {
+          "while_nonempty": 0,
+          "body": [
+            {
+              "op": "decrement_one",
+              "register": 0
+            },
+            {
+              "while_nonempty": 3,
+              "body": [
+                {
+                  "op": "decrement_one",
+                  "register": 3
+                },
+                {
+                  "op": "increment_one",
+                  "register": 1
+                }
+              ]
+            },
+            {
+              "while_nonempty": 1,
+              "body": [
+                {
+                  "op": "decrement_one",
+                  "register": 1
+                },
+                {
+                  "op": "increment_one",
+                  "register": 2
+                },
+                {
+                  "op": "increment_one",
+                  "register": 3
+                }
+              ]
+            }
+          ]
+        },
+        "output_register": 2
+      },
+      "partition_programs_generated": 3072,
+      "partition_behavior_classes": 6,
+      "partition_promotable_classes": 1,
+      "partition_selected": {
+        "candidate_id": "EV-008b1597aed53d52",
+        "program": {
+          "substrate": "anonymous_event_counter_v11",
+          "initial_registers": [
+            "input_0",
+            "input_1",
+            0,
+            0,
+            0,
+            0
+          ],
+          "roles": {
+            "stream_input": 1,
+            "template_input": 0,
+            "state_a": 3,
+            "state_b": 4,
+            "work": 5,
+            "scratch": 2
+          },
+          "policy_bits": {
+            "preserve_template": true,
+            "consume_work": true,
+            "increment_state_b": true,
+            "boundary_increment_state_a": true,
+            "boundary_clear_state_b": true,
+            "boundary_refill_work": true
+          },
+          "outputs": [
+            3,
+            4
+          ]
+        },
+        "behavior_signature": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            6,
+            0
+          ],
+          [
+            3,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "conservation_profile": {
+          "reconstructs_stream_with_prior_binary_semantic": true,
+          "residual_is_strictly_bounded": true,
+          "zero_residual_matches_exact_boundary": true,
+          "first_state_is_monotone_in_stream": true,
+          "deterministic_replay": true,
+          "law_count": 5,
+          "promotable": true
+        },
+        "primitive_node_count": 11,
+        "probe_step_cost": 1036
+      },
+      "pair_programs_generated": 2176,
+      "pair_behavior_classes": 816,
+      "promoted_pair_operations": [
+        {
+          "candidate_id": "PAIR-2f49d4c7971361a0",
+          "program": {
+            "substrate": "anonymous_positive_pair_program_v20",
+            "numerator": {
+              "op": "merge",
+              "args": [
+                {
+                  "op": "omega",
+                  "args": [
+                    {
+                      "op": "atom",
+                      "atom": "a"
+                    },
+                    {
+                      "op": "atom",
+                      "atom": "d"
+                    }
+                  ]
+                },
+                {
+                  "op": "omega",
+                  "args": [
+                    {
+                      "op": "atom",
+                      "atom": "b"
+                    },
+                    {
+                      "op": "atom",
+                      "atom": "c"
+                    }
+                  ]
+                }
+              ]
+            },
+            "denominator": {
+              "op": "omega",
+              "args": [
+                {
+                  "op": "atom",
+                  "atom": "b"
+                },
+                {
+                  "op": "atom",
+                  "atom": "d"
+                }
+              ]
+            },
+            "human_operation_name": null
+          },
+          "law_profile": {
+            "closed_positive_pair": true,
+            "representation_invariant": true,
+            "commutative": true,
+            "associative": true,
+            "identity_pair": [
+              0,
+              1
+            ],
+            "zero_pair_annihilator": false,
+            "depends_on_both_inputs": true,
+            "promotable": true
+          },
+          "behavior_signature": [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              7,
+              6
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              3,
+              1
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              7,
+              6
+            ],
+            [
+              8,
+              3
+            ],
+            [
+              12,
+              9
+            ],
+            [
+              13,
+              6
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              8,
+              4
+            ],
+            [
+              7,
+              2
+            ],
+            [
+              13,
+              6
+            ],
+            [
+              12,
+              4
+            ]
+          ],
+          "program_nodes": 10
+        },
+        {
+          "candidate_id": "PAIR-6088f4bcd017e9cc",
+          "program": {
+            "substrate": "anonymous_positive_pair_program_v20",
+            "numerator": {
+              "op": "omega",
+              "args": [
+                {
+                  "op": "atom",
+                  "atom": "a"
+                },
+                {
+                  "op": "atom",
+                  "atom": "c"
+                }
+              ]
+            },
+            "denominator": {
+              "op": "omega",
+              "args": [
+                {
+                  "op": "atom",
+                  "atom": "b"
+                },
+                {
+                  "op": "atom",
+                  "atom": "d"
+                }
+              ]
+            },
+            "human_operation_name": null
+          },
+          "law_profile": {
+            "closed_positive_pair": true,
+            "representation_invariant": true,
+            "commutative": true,
+            "associative": true,
+            "identity_pair": [
+              1,
+              1
+            ],
+            "zero_pair_annihilator": true,
+            "depends_on_both_inputs": true,
+            "promotable": true
+          },
+          "behavior_signature": [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              4
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              0,
+              1
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              2
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              3
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              9
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              0,
+              2
+            ],
+            [
+              3,
+              2
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              6
+            ],
+            [
+              9,
+              4
+            ]
+          ],
+          "program_nodes": 6
+        }
+      ],
+      "equation_examples": [
+        {
+          "coefficient": 3,
+          "target": 21,
+          "candidate": 7,
+          "residual": 0,
+          "solved": true
+        },
+        {
+          "coefficient": 4,
+          "target": 18,
+          "candidate": 4,
+          "residual": 2,
+          "solved": false
+        },
+        {
+          "coefficient": 5,
+          "target": 0,
+          "candidate": 0,
+          "residual": 0,
+          "solved": true
+        },
+        {
+          "coefficient": 7,
+          "target": 49,
+          "candidate": 7,
+          "residual": 0,
+          "solved": true
+        },
+        {
+          "coefficient": 8,
+          "target": 65,
+          "candidate": 8,
+          "residual": 1,
+          "solved": false
+        },
+        {
+          "coefficient": 11,
+          "target": 121,
+          "candidate": 11,
+          "residual": 0,
+          "solved": true
+        }
+      ],
+      "named_target_program_supplied": false
+    },
+    "proofs": {
+      "operation": {
+        "verifier_version": "strict-counter-invariant-verifier-v10.1",
+        "passed": true,
+        "semantic_id": "STRICT-FSEM-82df58ba4ce6f41c",
+        "posthoc_name": "自然数乘法（证明后命名）",
+        "universal_statement": "for every x,y in N, the selected counter program halts and returns x*y",
+        "derived_normal_form": "x*y",
+        "obligations": [
+          {
+            "obligation_id": "output_uses_zero_initialized_accumulator",
+            "passed": true,
+            "evidence": "R2 starts at zero"
+          },
+          {
+            "obligation_id": "one_scratch_register_available",
+            "passed": true,
+            "evidence": "scratch=3"
+          },
+          {
+            "obligation_id": "zero_input_base_case",
+            "passed": true,
+            "evidence": "when x=0 the zero-initialized output is returned"
+          },
+          {
+            "obligation_id": "first_phase_control",
+            "passed": true,
+            "evidence": "the first step leaves x-1 control marks"
+          },
+          {
+            "obligation_id": "first_phase_accumulation",
+            "passed": true,
+            "evidence": "the first step moves one complete y quantity into the accumulator"
+          },
+          {
+            "obligation_id": "inductive_control_decrease",
+            "passed": true,
+            "evidence": "for t>=1, control changes from x-t to x-(t+1)"
+          },
+          {
+            "obligation_id": "inductive_carrier_phase",
+            "passed": true,
+            "evidence": "the discovered carrier layout repeats after every later step"
+          },
+          {
+            "obligation_id": "inductive_accumulation",
+            "passed": true,
+            "evidence": "accumulator changes from t*y to (t+1)*y"
+          },
+          {
+            "obligation_id": "phase_base_case",
+            "passed": true,
+            "evidence": "at t=1 the inferred steady phase has accumulator=y"
+          },
+          {
+            "obligation_id": "natural_termination",
+            "passed": true,
+            "evidence": "control is a natural counter and decreases exactly once per outer iteration"
+          },
+          {
+            "obligation_id": "terminal_normal_form",
+            "passed": true,
+            "evidence": "at t=x the accumulator is x*y"
+          },
+          {
+            "obligation_id": "independent_law_replay",
+            "passed": true,
+            "evidence": "{\"annihilator\": 0, \"associative\": true, \"commutative\": true, \"depends_on_both_inputs\": true, \"has_cross_input_interaction\": true, \"identity\": 1, \"law_count\": 9, \"left_distributive_over_previously_verified_combine\": true, \"monotone\": true, \"promotable\": true, \"right_distributive_over_previously_verified_combine\": true}"
+          },
+          {
+            "obligation_id": "sealed_numeric_replay",
+            "passed": true,
+            "evidence": "six cases outside the search probe grid"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "inputs": [
+              0,
+              17
+            ],
+            "output": 0,
+            "oracle_free_expected_from_proven_normal_form": 0,
+            "passed": true
+          },
+          {
+            "inputs": [
+              1,
+              29
+            ],
+            "output": 29,
+            "oracle_free_expected_from_proven_normal_form": 29,
+            "passed": true
+          },
+          {
+            "inputs": [
+              7,
+              11
+            ],
+            "output": 77,
+            "oracle_free_expected_from_proven_normal_form": 77,
+            "passed": true
+          },
+          {
+            "inputs": [
+              13,
+              5
+            ],
+            "output": 65,
+            "oracle_free_expected_from_proven_normal_form": 65,
+            "passed": true
+          },
+          {
+            "inputs": [
+              21,
+              21
+            ],
+            "output": 441,
+            "oracle_free_expected_from_proven_normal_form": 441,
+            "passed": true
+          },
+          {
+            "inputs": [
+              37,
+              9
+            ],
+            "output": 333,
+            "oracle_free_expected_from_proven_normal_form": 333,
+            "passed": true
+          }
+        ]
+      },
+      "partition": {
+        "verifier_version": "strict-partition-invariant-verifier-v11.1",
+        "passed": true,
+        "semantic_id": "STRICT-FSEM-008b1597aed53d52",
+        "posthoc_name": "欧几里得商余分解（证明后命名）",
+        "universal_statement": "for every n in N and d in N+, the program uniquely returns q,r with n=d*q+r and 0<=r<d",
+        "derived_normal_form": [
+          "q=floor(n/d)",
+          "r=n-d*q"
+        ],
+        "obligations": [
+          {
+            "obligation_id": "distinct_state_roles",
+            "passed": true,
+            "evidence": "four anonymous state registers have distinct roles"
+          },
+          {
+            "obligation_id": "template_preserved",
+            "passed": true,
+            "evidence": "unit transfer copies the positive template through scratch storage"
+          },
+          {
+            "obligation_id": "one_stream_and_work_mark_consumed",
+            "passed": true,
+            "evidence": "each main transition consumes one stream mark and one work mark"
+          },
+          {
+            "obligation_id": "residual_state_advances",
+            "passed": true,
+            "evidence": "each consumed stream mark advances the second output state by one"
+          },
+          {
+            "obligation_id": "boundary_advances_first_state",
+            "passed": true,
+            "evidence": "an empty work counter advances the first output state"
+          },
+          {
+            "obligation_id": "boundary_resets_residual",
+            "passed": true,
+            "evidence": "a completed block clears the second output state"
+          },
+          {
+            "obligation_id": "boundary_restores_work",
+            "passed": true,
+            "evidence": "a completed block restores exactly one template-sized work counter"
+          },
+          {
+            "obligation_id": "base_invariant",
+            "passed": true,
+            "evidence": "at processed=0: state_a=0, state_b=0, work=d"
+          },
+          {
+            "obligation_id": "partial_block_induction",
+            "passed": true,
+            "evidence": "if residual+1<d, first state is unchanged, residual advances, and work decreases"
+          },
+          {
+            "obligation_id": "complete_block_induction",
+            "passed": true,
+            "evidence": "if residual+1=d, first state advances, residual resets, and work is restored to d"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "the finite stream counter decreases exactly once per main transition"
+          },
+          {
+            "obligation_id": "terminal_decomposition",
+            "passed": true,
+            "evidence": "at termination n=d*q+r with 0<=r<d"
+          },
+          {
+            "obligation_id": "uniqueness",
+            "passed": true,
+            "evidence": "two bounded-residual decompositions differ by a multiple of d whose magnitude is strictly below d, so both components agree"
+          },
+          {
+            "obligation_id": "independent_conservation_replay",
+            "passed": true,
+            "evidence": "{\"deterministic_replay\": true, \"first_state_is_monotone_in_stream\": true, \"law_count\": 5, \"promotable\": true, \"reconstructs_stream_with_prior_binary_semantic\": true, \"residual_is_strictly_bounded\": true, \"zero_residual_matches_exact_boundary\": true}"
+          },
+          {
+            "obligation_id": "sealed_replay",
+            "passed": true,
+            "evidence": "seven cases outside the discovery grid"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "stream": 0,
+            "template": 1,
+            "outputs": [
+              0,
+              0
+            ],
+            "reconstruction": 0,
+            "passed": true
+          },
+          {
+            "stream": 1,
+            "template": 7,
+            "outputs": [
+              0,
+              1
+            ],
+            "reconstruction": 1,
+            "passed": true
+          },
+          {
+            "stream": 17,
+            "template": 5,
+            "outputs": [
+              3,
+              2
+            ],
+            "reconstruction": 17,
+            "passed": true
+          },
+          {
+            "stream": 42,
+            "template": 8,
+            "outputs": [
+              5,
+              2
+            ],
+            "reconstruction": 42,
+            "passed": true
+          },
+          {
+            "stream": 101,
+            "template": 9,
+            "outputs": [
+              11,
+              2
+            ],
+            "reconstruction": 101,
+            "passed": true
+          },
+          {
+            "stream": 255,
+            "template": 16,
+            "outputs": [
+              15,
+              15
+            ],
+            "reconstruction": 255,
+            "passed": true
+          },
+          {
+            "stream": 997,
+            "template": 31,
+            "outputs": [
+              32,
+              5
+            ],
+            "reconstruction": 997,
+            "passed": true
+          }
+        ]
+      },
+      "pair_equivalence": {
+        "proof_id": "V20-PROOF-PAIR-EQUIVALENCE",
+        "passed": true,
+        "posthoc_name": "正分母整数对的有理等价关系（证明后命名）",
+        "universal_statement": "cross-product equality is an equivalence relation on N x N+",
+        "obligations": [
+          {
+            "obligation_id": "domain",
+            "passed": true,
+            "evidence": "pairs are (a,b) with a in N and b in N+"
+          },
+          {
+            "obligation_id": "reflexive",
+            "passed": true,
+            "evidence": "SEM<a,b>=SEM<a,b>"
+          },
+          {
+            "obligation_id": "symmetric",
+            "passed": true,
+            "evidence": "equality symmetry exchanges the two cross-products"
+          },
+          {
+            "obligation_id": "transitive",
+            "passed": true,
+            "evidence": "cross-product equalities compose; positive-factor cancellation follows from the proved natural counter semantic"
+          },
+          {
+            "obligation_id": "representation_scaling",
+            "passed": true,
+            "evidence": "(a,b) and (SEM<a,k>,SEM<b,k>) have identical cross-products for k>0"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "left": [
+              1,
+              2
+            ],
+            "right": [
+              2,
+              4
+            ],
+            "passed": true
+          },
+          {
+            "left": [
+              3,
+              5
+            ],
+            "right": [
+              9,
+              15
+            ],
+            "passed": true
+          },
+          {
+            "left": [
+              0,
+              7
+            ],
+            "right": [
+              0,
+              19
+            ],
+            "passed": true
+          },
+          {
+            "left": [
+              2,
+              3
+            ],
+            "right": [
+              4,
+              6
+            ],
+            "passed": true
+          }
+        ]
+      },
+      "equation_solver": {
+        "proof_id": "V20-PROOF-EQUATION-SOLVER",
+        "passed": true,
+        "posthoc_name": "自然数一次乘法方程判定与求解（证明后命名）",
+        "universal_statement": "for all c>0,t>=0, the program returns the unique x with SEM<c,x>=t exactly when one exists",
+        "obligations": [
+          {
+            "obligation_id": "partition_dependency",
+            "passed": true,
+            "evidence": "for every target and coefficient>0, target=SEM<q,coefficient> MERGE r with 0<=r<coefficient"
+          },
+          {
+            "obligation_id": "exact_case_sound",
+            "passed": true,
+            "evidence": "r=0 gives SEM<coefficient,q>=target by V19 commutativity"
+          },
+          {
+            "obligation_id": "exact_case_unique",
+            "passed": true,
+            "evidence": "positive coefficient cancellation makes q unique"
+          },
+          {
+            "obligation_id": "nonexact_case_unsatisfiable",
+            "passed": true,
+            "evidence": "r>0 contradicts the unique bounded-residual decomposition of any exact product"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "the finite target stream loses exactly one counter mark per event step"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "coefficient": 2,
+            "target": 997,
+            "candidate": 498,
+            "residual": 1,
+            "solved": false,
+            "expected_solved": false,
+            "replay_output": 996,
+            "passed": true
+          },
+          {
+            "coefficient": 17,
+            "target": 289,
+            "candidate": 17,
+            "residual": 0,
+            "solved": true,
+            "expected_solved": true,
+            "replay_output": 289,
+            "passed": true
+          },
+          {
+            "coefficient": 31,
+            "target": 999,
+            "candidate": 32,
+            "residual": 7,
+            "solved": false,
+            "expected_solved": false,
+            "replay_output": 992,
+            "passed": true
+          },
+          {
+            "coefficient": 37,
+            "target": 1369,
+            "candidate": 37,
+            "residual": 0,
+            "solved": true,
+            "expected_solved": true,
+            "replay_output": 1369,
+            "passed": true
+          },
+          {
+            "coefficient": 64,
+            "target": 4097,
+            "candidate": 64,
+            "residual": 1,
+            "solved": false,
+            "expected_solved": false,
+            "replay_output": 4096,
+            "passed": true
+          },
+          {
+            "coefficient": 101,
+            "target": 10201,
+            "candidate": 101,
+            "residual": 0,
+            "solved": true,
+            "expected_solved": true,
+            "replay_output": 10201,
+            "passed": true
+          }
+        ]
+      },
+      "pair_operations": [
+        {
+          "proof_id": "V20-PROOF-PAIR-2f49d4c7971361a0",
+          "passed": true,
+          "posthoc_name": "有理数加法（证明后命名）",
+          "universal_statement": "[(a,b)] o [(c,d)] = [(a*d+c*b,b*d)] is well-defined on all positive-denominator equivalence classes",
+          "obligations": [
+            {
+              "obligation_id": "recognized_constructed_normal_form",
+              "passed": true,
+              "evidence": "pair_merge_extension"
+            },
+            {
+              "obligation_id": "positive_denominator_closure",
+              "passed": true,
+              "evidence": "SEM<b,d> is positive whenever b,d are positive"
+            },
+            {
+              "obligation_id": "well_defined_on_equivalence_classes",
+              "passed": true,
+              "evidence": "cross-multiplication and distributive normalization remove representation choice"
+            },
+            {
+              "obligation_id": "commutative",
+              "passed": true,
+              "evidence": "V19 SEM and counter MERGE are commutative"
+            },
+            {
+              "obligation_id": "associative",
+              "passed": true,
+              "evidence": "both bracketings normalize to the same integer polynomial"
+            },
+            {
+              "obligation_id": "identity",
+              "passed": true,
+              "evidence": "(0,1) for MERGE extension; (1,1) for SEM extension"
+            },
+            {
+              "obligation_id": "semantic_role_matches_profile",
+              "passed": true,
+              "evidence": "{'closed_positive_pair': True, 'representation_invariant': True, 'commutative': True, 'associative': True, 'identity_pair': [0, 1], 'zero_pair_annihilator': False, 'depends_on_both_inputs': True, 'promotable': True}"
+            },
+            {
+              "obligation_id": "sealed_replay",
+              "passed": true,
+              "evidence": "four values outside the construction probe set"
+            }
+          ],
+          "hidden_replay": [
+            {
+              "left": [
+                7,
+                13
+              ],
+              "right": [
+                11,
+                17
+              ],
+              "output": [
+                262,
+                221
+              ],
+              "passed": true
+            },
+            {
+              "left": [
+                0,
+                19
+              ],
+              "right": [
+                23,
+                29
+              ],
+              "output": [
+                437,
+                551
+              ],
+              "passed": true
+            },
+            {
+              "left": [
+                31,
+                37
+              ],
+              "right": [
+                41,
+                43
+              ],
+              "output": [
+                2850,
+                1591
+              ],
+              "passed": true
+            },
+            {
+              "left": [
+                5,
+                8
+              ],
+              "right": [
+                13,
+                21
+              ],
+              "output": [
+                209,
+                168
+              ],
+              "passed": true
+            }
+          ]
+        },
+        {
+          "proof_id": "V20-PROOF-PAIR-6088f4bcd017e9cc",
+          "passed": true,
+          "posthoc_name": "有理数乘法（证明后命名）",
+          "universal_statement": "[(a,b)] o [(c,d)] = [(a*c,b*d)] is well-defined on all positive-denominator equivalence classes",
+          "obligations": [
+            {
+              "obligation_id": "recognized_constructed_normal_form",
+              "passed": true,
+              "evidence": "pair_omega_extension"
+            },
+            {
+              "obligation_id": "positive_denominator_closure",
+              "passed": true,
+              "evidence": "SEM<b,d> is positive whenever b,d are positive"
+            },
+            {
+              "obligation_id": "well_defined_on_equivalence_classes",
+              "passed": true,
+              "evidence": "cross-multiplication and distributive normalization remove representation choice"
+            },
+            {
+              "obligation_id": "commutative",
+              "passed": true,
+              "evidence": "V19 SEM and counter MERGE are commutative"
+            },
+            {
+              "obligation_id": "associative",
+              "passed": true,
+              "evidence": "both bracketings normalize to the same integer polynomial"
+            },
+            {
+              "obligation_id": "identity",
+              "passed": true,
+              "evidence": "(0,1) for MERGE extension; (1,1) for SEM extension"
+            },
+            {
+              "obligation_id": "semantic_role_matches_profile",
+              "passed": true,
+              "evidence": "{'closed_positive_pair': True, 'representation_invariant': True, 'commutative': True, 'associative': True, 'identity_pair': [1, 1], 'zero_pair_annihilator': True, 'depends_on_both_inputs': True, 'promotable': True}"
+            },
+            {
+              "obligation_id": "sealed_replay",
+              "passed": true,
+              "evidence": "four values outside the construction probe set"
+            }
+          ],
+          "hidden_replay": [
+            {
+              "left": [
+                7,
+                13
+              ],
+              "right": [
+                11,
+                17
+              ],
+              "output": [
+                77,
+                221
+              ],
+              "passed": true
+            },
+            {
+              "left": [
+                0,
+                19
+              ],
+              "right": [
+                23,
+                29
+              ],
+              "output": [
+                0,
+                551
+              ],
+              "passed": true
+            },
+            {
+              "left": [
+                31,
+                37
+              ],
+              "right": [
+                41,
+                43
+              ],
+              "output": [
+                1271,
+                1591
+              ],
+              "passed": true
+            },
+            {
+              "left": [
+                5,
+                8
+              ],
+              "right": [
+                13,
+                21
+              ],
+              "output": [
+                65,
+                168
+              ],
+              "passed": true
+            }
+          ]
+        }
+      ]
+    },
+    "mutation_audits": [
+      {
+        "source_program": "PAIR-2f49d4c7971361a0",
+        "rejected": true,
+        "counterexample": [
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ]
+        ],
+        "mutated_output": [
+          3,
+          6
+        ],
+        "expected": [
+          5,
+          6
+        ]
+      },
+      {
+        "source_program": "PAIR-6088f4bcd017e9cc",
+        "rejected": true,
+        "counterexample": [
+          [
+            2,
+            3
+          ],
+          [
+            5,
+            7
+          ]
+        ],
+        "mutated_output": [
+          10,
+          15
+        ],
+        "expected": [
+          10,
+          21
+        ]
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v19_operation_reproved",
+        "passed": true
+      },
+      {
+        "obligation_id": "partition_program_selected_from_3072",
+        "passed": true
+      },
+      {
+        "obligation_id": "partition_behavior_is_unique_and_universally_proven",
+        "passed": true
+      },
+      {
+        "obligation_id": "equation_solver_is_sound_complete_and_unique",
+        "passed": true
+      },
+      {
+        "obligation_id": "positive_pair_relation_is_an_equivalence",
+        "passed": true
+      },
+      {
+        "obligation_id": "pair_search_is_nontrivial",
+        "passed": true
+      },
+      {
+        "obligation_id": "exactly_two_distinct_pair_roles_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_pair_programs_have_universal_proofs",
+        "passed": true
+      },
+      {
+        "obligation_id": "representation_choice_does_not_change_results",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutated_shortcuts_are_counterexample_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_names_are_posthoc",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_next_term_or_solution_witness_was_supplied",
+        "passed": true
+      }
+    ],
+    "posthoc_capability_translation": {
+      "partition_program": "自然数欧几里得商余分解",
+      "equation_program": "自然数域 c*x=t 的存在性判定与唯一解",
+      "pair_relation": "非负有理数的分数等价关系",
+      "PAIR-2f49d4c7971361a0": "非负有理数加法",
+      "PAIR-6088f4bcd017e9cc": "非负有理数乘法"
+    },
+    "limitations": [
+      "The constructed pair domain represents nonnegative rationals only; signed integers and additive inverses are not integrated into this V20 chain.",
+      "The equation solver covers one positive natural coefficient and one unknown, not general symbolic equations.",
+      "The constructor enumerates a bounded expression grammar; the promoted programs are universally proved, but the grammar is not universal.",
+      "Human-readable arithmetic names are evaluator-side translations added only after proof."
+    ]
+  },
+  "capability_change": {
+    "before": "V19 discovered one anonymous operation, its laws, and a factor concept",
+    "after": "V20 composes proven semantics into executable partition, equation, equivalence-class, and two rational-pair programs",
+    "named_solution_program_supplied": false
+  },
+  "claim": {
+    "achieved": "verified program construction from anonymous natural-counter semantics through nonnegative rational operations",
+    "not_claimed": "general symbolic algebra, signed rational field closure, or unrestricted function discovery"
+  },
+  "storage": {
+    "success_room": "artifacts/foundation/v20/success/proof_driven_programs_latest.json",
+    "mistake_room": "artifacts/foundation/v20/mistakes/rejected_program_mutations.jsonl",
+    "promoted_programs": 4,
+    "rejected_mutations": 2
+  },
+  "content_digest": "3492ef14a6a0493e8d9ac6d44f5420273823795e5b7db0a570766fc4d00e3b43"
+}

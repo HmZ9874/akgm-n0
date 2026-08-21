@@ -1,0 +1,25 @@
+{
+  "contract_id": "learner-contract-operation-growth-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "operation-growth-v0.1",
+  "input_interface": {
+    "observation_type": "anonymous_numeric_table",
+    "fields": [
+      "opaque_session_id",
+      "input_rows",
+      "output_values",
+      "validity_mask",
+      "action_receipt"
+    ],
+    "column_names_visible": false,
+    "identifiers": "randomized_per_run"
+  },
+  "feedback_interface": {
+    "development_feedback": ["numeric_fit_error", "executable_program_cost"],
+    "blind_feedback_during_search": []
+  },
+  "network_access": false,
+  "natural_language_input": false,
+  "pretrained_model_access": false
+}
+

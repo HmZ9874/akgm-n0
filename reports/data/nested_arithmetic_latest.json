@@ -1,0 +1,1077 @@
+{
+  "report_version": "nested-arithmetic-discovery-v0.1",
+  "run_id": "RUN-nested-arithmetic-20260819T235525035322Z",
+  "created_at": "2026-08-19T23:55:25.035322Z",
+  "verdict": "anonymous_nested_and_group_cycles_induce_natural_cardinality_multiplication_and_euclidean_division",
+  "learner_received": {
+    "multiplication_name_or_symbol": false,
+    "division_name_or_symbol": false,
+    "target_formula": false,
+    "numeric_constants": false,
+    "arithmetic_opcodes": [],
+    "anonymous_capabilities": [
+      "cursor empty test",
+      "cursor advance",
+      "cursor rewind",
+      "register-pair record emit",
+      "temporary buffer",
+      "jump",
+      "halt"
+    ],
+    "observations": [
+      "opaque pair collections",
+      "complete stencil markers plus incomplete residue"
+    ],
+    "token_efficiency_reward": true
+  },
+  "searches": {
+    "nested": {
+      "task_id": "TASK-opaque-nested-pairing-71c4",
+      "candidate_count": 20,
+      "exact_candidate_count": 1,
+      "selected_program": {
+        "program_id": "NCP-a37c78b0e77023ff",
+        "outer_slot": 0,
+        "inner_slot": 1,
+        "rewind_inner": true,
+        "emit_mode": 1,
+        "instructions": [
+          {
+            "opcode": 0,
+            "slot": 0,
+            "target": 8
+          },
+          {
+            "opcode": 1,
+            "slot": 0
+          },
+          {
+            "opcode": 2,
+            "slot": 1
+          },
+          {
+            "opcode": 0,
+            "slot": 1,
+            "target": 7
+          },
+          {
+            "opcode": 1,
+            "slot": 1
+          },
+          {
+            "opcode": 3,
+            "mode": 1
+          },
+          {
+            "opcode": 5,
+            "target": 3
+          },
+          {
+            "opcode": 5,
+            "target": 0
+          },
+          {
+            "opcode": 6
+          }
+        ]
+      },
+      "selected_token_cost": 593,
+      "selected_reward": 999407
+    },
+    "partition": {
+      "task_id": "TASK-opaque-repeated-stencil-4d92",
+      "candidate_count": 24,
+      "exact_candidate_count": 1,
+      "selected_program": {
+        "program_id": "GCP-af38f0616790120e",
+        "source_slot": 0,
+        "stencil_slot": 1,
+        "restart_stencil": true,
+        "emit_mode": 1,
+        "preserve_incomplete": true,
+        "instructions": [
+          {
+            "opcode": 7
+          },
+          {
+            "opcode": 0,
+            "slot": 0,
+            "target": 13
+          },
+          {
+            "opcode": 2,
+            "slot": 1
+          },
+          {
+            "opcode": 0,
+            "slot": 1,
+            "target": 9
+          },
+          {
+            "opcode": 0,
+            "slot": 0,
+            "target": 11
+          },
+          {
+            "opcode": 1,
+            "slot": 0
+          },
+          {
+            "opcode": 4,
+            "slot": 0
+          },
+          {
+            "opcode": 1,
+            "slot": 1
+          },
+          {
+            "opcode": 5,
+            "target": 3
+          },
+          {
+            "opcode": 3,
+            "mode": 4
+          },
+          {
+            "opcode": 5,
+            "target": 0
+          },
+          {
+            "opcode": 8
+          },
+          {
+            "opcode": 6
+          },
+          {
+            "opcode": 6
+          }
+        ]
+      },
+      "selected_token_cost": 955,
+      "selected_reward": 999045
+    }
+  },
+  "discoveries": [
+    {
+      "foundation_level": 5,
+      "semantic": {
+        "semantic_id": "NSEM-52a33255cdea401f",
+        "opcode": 5,
+        "program": {
+          "program_id": "NCP-a37c78b0e77023ff",
+          "outer_slot": 0,
+          "inner_slot": 1,
+          "rewind_inner": true,
+          "emit_mode": 1,
+          "instructions": [
+            {
+              "opcode": 0,
+              "slot": 0,
+              "target": 8
+            },
+            {
+              "opcode": 1,
+              "slot": 0
+            },
+            {
+              "opcode": 2,
+              "slot": 1
+            },
+            {
+              "opcode": 0,
+              "slot": 1,
+              "target": 7
+            },
+            {
+              "opcode": 1,
+              "slot": 1
+            },
+            {
+              "opcode": 3,
+              "mode": 1
+            },
+            {
+              "opcode": 5,
+              "target": 3
+            },
+            {
+              "opcode": 5,
+              "target": 0
+            },
+            {
+              "opcode": 6
+            }
+          ]
+        },
+        "dependency_semantic_ids": [
+          "FSEM-3d1a4d19fab44d62",
+          "FSEM-cf58189608902a55",
+          "RSEM-6082532054ec1e05",
+          "DSEM-be8bf9c60762e0f0"
+        ],
+        "source_task_ids": [
+          "TASK-opaque-nested-pairing-71c4"
+        ]
+      },
+      "posthoc_name": "multiplication of natural cardinalities",
+      "posthoc_formula": "|output(X,Y)| = |X| * |Y|",
+      "structural_origin": "for every two finite collections X,Y, output is the ordered collection of every opaque pair (x,y) with x in X and y in Y exactly once",
+      "proof": {
+        "verifier_version": "independent-nested-foundation-verifier-v0.1",
+        "semantic_id": "NSEM-52a33255cdea401f",
+        "passed": true,
+        "structural_statement": "for every two finite collections X,Y, output is the ordered collection of every opaque pair (x,y) with x in X and y in Y exactly once",
+        "posthoc_mathematical_name": "multiplication of natural cardinalities",
+        "posthoc_cardinality_statement": "|output(X,Y)| = |X| * |Y|",
+        "declared_domain": "pairs of finite collections / natural-number cardinalities",
+        "not_claimed": "signed, fractional, real, or complex multiplication",
+        "finite_sampling_used_as_proof": false,
+        "proof_method": "nested-loop invariant and structural induction over the outer collection",
+        "obligations": [
+          {
+            "obligation_id": "semantic_id_binding",
+            "passed": true,
+            "evidence": "NSEM-52a33255cdea401f"
+          },
+          {
+            "obligation_id": "exact_nested_program_binding",
+            "passed": true,
+            "evidence": "NCP-a37c78b0e77023ff"
+          },
+          {
+            "obligation_id": "zero_arithmetic_cycle_opcodes",
+            "passed": true,
+            "evidence": [
+              0,
+              1,
+              2,
+              3,
+              5,
+              6
+            ]
+          },
+          {
+            "obligation_id": "outer_inner_rewind_pair_shape",
+            "passed": true,
+            "evidence": {
+              "program_id": "NCP-a37c78b0e77023ff",
+              "outer_slot": 0,
+              "inner_slot": 1,
+              "rewind_inner": true,
+              "emit_mode": 1,
+              "instructions": [
+                {
+                  "opcode": 0,
+                  "slot": 0,
+                  "target": 8
+                },
+                {
+                  "opcode": 1,
+                  "slot": 0
+                },
+                {
+                  "opcode": 2,
+                  "slot": 1
+                },
+                {
+                  "opcode": 0,
+                  "slot": 1,
+                  "target": 7
+                },
+                {
+                  "opcode": 1,
+                  "slot": 1
+                },
+                {
+                  "opcode": 3,
+                  "mode": 1
+                },
+                {
+                  "opcode": 5,
+                  "target": 3
+                },
+                {
+                  "opcode": 5,
+                  "target": 0
+                },
+                {
+                  "opcode": 6
+                }
+              ]
+            }
+          },
+          {
+            "obligation_id": "depends_on_prior_count_and_combine_semantics",
+            "passed": true,
+            "evidence": [
+              "FSEM-3d1a4d19fab44d62",
+              "FSEM-cf58189608902a55",
+              "RSEM-6082532054ec1e05",
+              "DSEM-be8bf9c60762e0f0"
+            ]
+          },
+          {
+            "obligation_id": "outer_loop_visits_each_left_object_once",
+            "passed": true,
+            "evidence": "the outer cursor advances once and only the outer back-edge can repeat the outer body"
+          },
+          {
+            "obligation_id": "inner_cursor_restarts_for_each_outer_object",
+            "passed": true,
+            "evidence": "inner head is reset before every inner traversal"
+          },
+          {
+            "obligation_id": "inner_loop_visits_each_right_object_once_per_outer_object",
+            "passed": true,
+            "evidence": "after rewind, the inner cursor advances monotonically to blank"
+          },
+          {
+            "obligation_id": "one_pair_record_emitted_per_nested_visit",
+            "passed": true,
+            "evidence": "emit binds the two current opaque registers"
+          },
+          {
+            "obligation_id": "ordered_cartesian_pairing_is_complete",
+            "passed": true,
+            "evidence": "12/12 hidden replays"
+          },
+          {
+            "obligation_id": "cardinality_is_repeated_combination",
+            "passed": true,
+            "evidence": "for each of |X| outer visits, exactly |Y| records are emitted"
+          },
+          {
+            "obligation_id": "finite_nested_termination",
+            "passed": true,
+            "evidence": "both cursors move monotonically within finite loops; only the inner cursor is rewound at an outer boundary"
+          },
+          {
+            "obligation_id": "not_a_preinstalled_arithmetic_operator",
+            "passed": true,
+            "evidence": "the learner program contains only cursor/control/record instructions and no arithmetic labels or numeric constants"
+          }
+        ],
+        "case_results": [
+          {
+            "case_id": "NESTED-HIDDEN-00",
+            "source_lengths": [
+              0,
+              0
+            ],
+            "passed": true,
+            "output_count": 0,
+            "posthoc_expected_cardinality": 0,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 2
+          },
+          {
+            "case_id": "NESTED-HIDDEN-01",
+            "source_lengths": [
+              0,
+              7
+            ],
+            "passed": true,
+            "output_count": 0,
+            "posthoc_expected_cardinality": 0,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 2
+          },
+          {
+            "case_id": "NESTED-HIDDEN-02",
+            "source_lengths": [
+              5,
+              0
+            ],
+            "passed": true,
+            "output_count": 0,
+            "posthoc_expected_cardinality": 0,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 27
+          },
+          {
+            "case_id": "NESTED-HIDDEN-03",
+            "source_lengths": [
+              1,
+              1
+            ],
+            "passed": true,
+            "output_count": 1,
+            "posthoc_expected_cardinality": 1,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 11
+          },
+          {
+            "case_id": "NESTED-HIDDEN-04",
+            "source_lengths": [
+              1,
+              9
+            ],
+            "passed": true,
+            "output_count": 9,
+            "posthoc_expected_cardinality": 9,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 43
+          },
+          {
+            "case_id": "NESTED-HIDDEN-05",
+            "source_lengths": [
+              9,
+              1
+            ],
+            "passed": true,
+            "output_count": 9,
+            "posthoc_expected_cardinality": 9,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 83
+          },
+          {
+            "case_id": "NESTED-HIDDEN-06",
+            "source_lengths": [
+              2,
+              3
+            ],
+            "passed": true,
+            "output_count": 6,
+            "posthoc_expected_cardinality": 6,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 36
+          },
+          {
+            "case_id": "NESTED-HIDDEN-07",
+            "source_lengths": [
+              3,
+              2
+            ],
+            "passed": true,
+            "output_count": 6,
+            "posthoc_expected_cardinality": 6,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 41
+          },
+          {
+            "case_id": "NESTED-HIDDEN-08",
+            "source_lengths": [
+              4,
+              7
+            ],
+            "passed": true,
+            "output_count": 28,
+            "posthoc_expected_cardinality": 28,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 134
+          },
+          {
+            "case_id": "NESTED-HIDDEN-09",
+            "source_lengths": [
+              7,
+              4
+            ],
+            "passed": true,
+            "output_count": 28,
+            "posthoc_expected_cardinality": 28,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 149
+          },
+          {
+            "case_id": "NESTED-HIDDEN-10",
+            "source_lengths": [
+              11,
+              6
+            ],
+            "passed": true,
+            "output_count": 66,
+            "posthoc_expected_cardinality": 66,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 321
+          },
+          {
+            "case_id": "NESTED-HIDDEN-11",
+            "source_lengths": [
+              17,
+              11
+            ],
+            "passed": true,
+            "output_count": 187,
+            "posthoc_expected_cardinality": 187,
+            "all_pair_records_unique": true,
+            "primitive_execution_tokens": 835
+          }
+        ]
+      },
+      "counts_as_new_foundation": true
+    },
+    {
+      "foundation_level": 6,
+      "semantic": {
+        "semantic_id": "PSEM-b6863ee740b31807",
+        "opcode": 6,
+        "program": {
+          "program_id": "GCP-af38f0616790120e",
+          "source_slot": 0,
+          "stencil_slot": 1,
+          "restart_stencil": true,
+          "emit_mode": 1,
+          "preserve_incomplete": true,
+          "instructions": [
+            {
+              "opcode": 7
+            },
+            {
+              "opcode": 0,
+              "slot": 0,
+              "target": 13
+            },
+            {
+              "opcode": 2,
+              "slot": 1
+            },
+            {
+              "opcode": 0,
+              "slot": 1,
+              "target": 9
+            },
+            {
+              "opcode": 0,
+              "slot": 0,
+              "target": 11
+            },
+            {
+              "opcode": 1,
+              "slot": 0
+            },
+            {
+              "opcode": 4,
+              "slot": 0
+            },
+            {
+              "opcode": 1,
+              "slot": 1
+            },
+            {
+              "opcode": 5,
+              "target": 3
+            },
+            {
+              "opcode": 3,
+              "mode": 4
+            },
+            {
+              "opcode": 5,
+              "target": 0
+            },
+            {
+              "opcode": 8
+            },
+            {
+              "opcode": 6
+            },
+            {
+              "opcode": 6
+            }
+          ]
+        },
+        "dependency_semantic_ids": [
+          "FSEM-3d1a4d19fab44d62",
+          "FSEM-cf58189608902a55",
+          "RSEM-6082532054ec1e05",
+          "DSEM-be8bf9c60762e0f0",
+          "NSEM-52a33255cdea401f"
+        ],
+        "source_task_ids": [
+          "TASK-opaque-repeated-stencil-4d92"
+        ]
+      },
+      "posthoc_name": "Euclidean division with remainder on natural cardinalities",
+      "posthoc_formula": "for every a in N and b in N with b>0, a = q*b + r and 0 <= r < b",
+      "structural_origin": "repeatedly match a nonempty stencil against consecutive source objects, emit one marker for each complete match, and retain the final incomplete buffer",
+      "proof": {
+        "verifier_version": "independent-partition-foundation-verifier-v0.1",
+        "semantic_id": "PSEM-b6863ee740b31807",
+        "passed": true,
+        "structural_statement": "repeatedly match a nonempty stencil against consecutive source objects, emit one marker for each complete match, and retain the final incomplete buffer",
+        "posthoc_mathematical_name": "Euclidean division with remainder on natural cardinalities",
+        "posthoc_cardinality_statement": "for every a in N and b in N with b>0, a = q*b + r and 0 <= r < b",
+        "declared_domain": "natural-number cardinality a and positive natural-number cardinality b",
+        "undefined_boundary": "empty stencil / divisor cardinality zero",
+        "not_claimed": "fractional, signed, real, polynomial, or complex division",
+        "finite_sampling_used_as_proof": false,
+        "proof_method": "completed-group loop invariant, incomplete-buffer bound, reconstruction, and uniqueness",
+        "obligations": [
+          {
+            "obligation_id": "semantic_id_binding",
+            "passed": true,
+            "evidence": "PSEM-b6863ee740b31807"
+          },
+          {
+            "obligation_id": "exact_group_program_binding",
+            "passed": true,
+            "evidence": "GCP-af38f0616790120e"
+          },
+          {
+            "obligation_id": "zero_arithmetic_group_opcodes",
+            "passed": true,
+            "evidence": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          {
+            "obligation_id": "restart_complete_emit_and_residue_shape",
+            "passed": true,
+            "evidence": {
+              "program_id": "GCP-af38f0616790120e",
+              "source_slot": 0,
+              "stencil_slot": 1,
+              "restart_stencil": true,
+              "emit_mode": 1,
+              "preserve_incomplete": true,
+              "instructions": [
+                {
+                  "opcode": 7
+                },
+                {
+                  "opcode": 0,
+                  "slot": 0,
+                  "target": 13
+                },
+                {
+                  "opcode": 2,
+                  "slot": 1
+                },
+                {
+                  "opcode": 0,
+                  "slot": 1,
+                  "target": 9
+                },
+                {
+                  "opcode": 0,
+                  "slot": 0,
+                  "target": 11
+                },
+                {
+                  "opcode": 1,
+                  "slot": 0
+                },
+                {
+                  "opcode": 4,
+                  "slot": 0
+                },
+                {
+                  "opcode": 1,
+                  "slot": 1
+                },
+                {
+                  "opcode": 5,
+                  "target": 3
+                },
+                {
+                  "opcode": 3,
+                  "mode": 4
+                },
+                {
+                  "opcode": 5,
+                  "target": 0
+                },
+                {
+                  "opcode": 8
+                },
+                {
+                  "opcode": 6
+                },
+                {
+                  "opcode": 6
+                }
+              ]
+            }
+          },
+          {
+            "obligation_id": "depends_on_nested_cardinality_semantic",
+            "passed": true,
+            "evidence": [
+              "FSEM-3d1a4d19fab44d62",
+              "FSEM-cf58189608902a55",
+              "RSEM-6082532054ec1e05",
+              "DSEM-be8bf9c60762e0f0",
+              "NSEM-52a33255cdea401f"
+            ]
+          },
+          {
+            "obligation_id": "positive_stencil_domain",
+            "passed": true,
+            "evidence": "the stencil collection must be non-empty; the empty-stencil case is rejected rather than assigned a result"
+          },
+          {
+            "obligation_id": "each_completed_cycle_consumes_one_stencil_sized_block",
+            "passed": true,
+            "evidence": "source and stencil cursors advance together until stencil blank"
+          },
+          {
+            "obligation_id": "stencil_restarts_between_completed_cycles",
+            "passed": true,
+            "evidence": "rewind occurs at every group boundary"
+          },
+          {
+            "obligation_id": "one_marker_per_completed_group",
+            "passed": true,
+            "evidence": "no marker is emitted for a partial group"
+          },
+          {
+            "obligation_id": "incomplete_group_is_preserved_as_residue",
+            "passed": true,
+            "evidence": "buffered source objects are emitted to the residue channel on early source blank"
+          },
+          {
+            "obligation_id": "residue_is_strictly_smaller_than_stencil",
+            "passed": true,
+            "evidence": "a partial cycle stops before filling one stencil"
+          },
+          {
+            "obligation_id": "source_reconstruction_identity",
+            "passed": true,
+            "evidence": "completed blocks followed by the buffered residue reconstruct the source cardinality"
+          },
+          {
+            "obligation_id": "quotient_and_remainder_are_unique",
+            "passed": true,
+            "evidence": "for positive b, if a=q*b+r with 0<=r<b, q and r are unique"
+          },
+          {
+            "obligation_id": "independent_hidden_replay",
+            "passed": true,
+            "evidence": "13/13 hidden replays"
+          },
+          {
+            "obligation_id": "finite_group_termination",
+            "passed": true,
+            "evidence": "every completed or partial nonempty cycle consumes source objects; finite source exhaustion halts"
+          },
+          {
+            "obligation_id": "not_a_preinstalled_arithmetic_operator",
+            "passed": true,
+            "evidence": "the learner sees restart, cursor, buffer, and emit opcodes without division names, slash symbols, formulas, or numeric constants"
+          }
+        ],
+        "case_results": [
+          {
+            "case_id": "GROUP-HIDDEN-00",
+            "source_lengths": [
+              0,
+              1
+            ],
+            "passed": true,
+            "completed_group_count": 0,
+            "residue_count": 0,
+            "posthoc_expected_quotient": 0,
+            "posthoc_expected_remainder": 0,
+            "reconstruction_count": 0,
+            "primitive_execution_tokens": 3
+          },
+          {
+            "case_id": "GROUP-HIDDEN-01",
+            "source_lengths": [
+              1,
+              1
+            ],
+            "passed": true,
+            "completed_group_count": 1,
+            "residue_count": 0,
+            "posthoc_expected_quotient": 1,
+            "posthoc_expected_remainder": 0,
+            "reconstruction_count": 1,
+            "primitive_execution_tokens": 15
+          },
+          {
+            "case_id": "GROUP-HIDDEN-02",
+            "source_lengths": [
+              7,
+              1
+            ],
+            "passed": true,
+            "completed_group_count": 7,
+            "residue_count": 0,
+            "posthoc_expected_quotient": 7,
+            "posthoc_expected_remainder": 0,
+            "reconstruction_count": 7,
+            "primitive_execution_tokens": 87
+          },
+          {
+            "case_id": "GROUP-HIDDEN-03",
+            "source_lengths": [
+              1,
+              2
+            ],
+            "passed": true,
+            "completed_group_count": 0,
+            "residue_count": 1,
+            "posthoc_expected_quotient": 0,
+            "posthoc_expected_remainder": 1,
+            "reconstruction_count": 1,
+            "primitive_execution_tokens": 13
+          },
+          {
+            "case_id": "GROUP-HIDDEN-04",
+            "source_lengths": [
+              2,
+              2
+            ],
+            "passed": true,
+            "completed_group_count": 1,
+            "residue_count": 0,
+            "posthoc_expected_quotient": 1,
+            "posthoc_expected_remainder": 0,
+            "reconstruction_count": 2,
+            "primitive_execution_tokens": 21
+          },
+          {
+            "case_id": "GROUP-HIDDEN-05",
+            "source_lengths": [
+              3,
+              2
+            ],
+            "passed": true,
+            "completed_group_count": 1,
+            "residue_count": 1,
+            "posthoc_expected_quotient": 1,
+            "posthoc_expected_remainder": 1,
+            "reconstruction_count": 3,
+            "primitive_execution_tokens": 31
+          },
+          {
+            "case_id": "GROUP-HIDDEN-06",
+            "source_lengths": [
+              8,
+              3
+            ],
+            "passed": true,
+            "completed_group_count": 2,
+            "residue_count": 2,
+            "posthoc_expected_quotient": 2,
+            "posthoc_expected_remainder": 2,
+            "reconstruction_count": 8,
+            "primitive_execution_tokens": 67
+          },
+          {
+            "case_id": "GROUP-HIDDEN-07",
+            "source_lengths": [
+              9,
+              3
+            ],
+            "passed": true,
+            "completed_group_count": 3,
+            "residue_count": 0,
+            "posthoc_expected_quotient": 3,
+            "posthoc_expected_remainder": 0,
+            "reconstruction_count": 9,
+            "primitive_execution_tokens": 75
+          },
+          {
+            "case_id": "GROUP-HIDDEN-08",
+            "source_lengths": [
+              10,
+              3
+            ],
+            "passed": true,
+            "completed_group_count": 3,
+            "residue_count": 1,
+            "posthoc_expected_quotient": 3,
+            "posthoc_expected_remainder": 1,
+            "reconstruction_count": 10,
+            "primitive_execution_tokens": 85
+          },
+          {
+            "case_id": "GROUP-HIDDEN-09",
+            "source_lengths": [
+              31,
+              7
+            ],
+            "passed": true,
+            "completed_group_count": 4,
+            "residue_count": 3,
+            "posthoc_expected_quotient": 4,
+            "posthoc_expected_remainder": 3,
+            "reconstruction_count": 31,
+            "primitive_execution_tokens": 217
+          },
+          {
+            "case_id": "GROUP-HIDDEN-10",
+            "source_lengths": [
+              64,
+              9
+            ],
+            "passed": true,
+            "completed_group_count": 7,
+            "residue_count": 1,
+            "posthoc_expected_quotient": 7,
+            "posthoc_expected_remainder": 1,
+            "reconstruction_count": 64,
+            "primitive_execution_tokens": 433
+          },
+          {
+            "case_id": "GROUP-HIDDEN-11",
+            "source_lengths": [
+              101,
+              10
+            ],
+            "passed": true,
+            "completed_group_count": 10,
+            "residue_count": 1,
+            "posthoc_expected_quotient": 10,
+            "posthoc_expected_remainder": 1,
+            "reconstruction_count": 101,
+            "primitive_execution_tokens": 673
+          },
+          {
+            "case_id": "GROUP-HIDDEN-12",
+            "source_lengths": [
+              122,
+              11
+            ],
+            "passed": true,
+            "completed_group_count": 11,
+            "residue_count": 1,
+            "posthoc_expected_quotient": 11,
+            "posthoc_expected_remainder": 1,
+            "reconstruction_count": 122,
+            "primitive_execution_tokens": 805
+          }
+        ]
+      },
+      "counts_as_new_foundation": true
+    }
+  ],
+  "capability_graph": {
+    "verified_foundation_count": 6,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差",
+      "有符号自然数差",
+      "自然数乘法",
+      "带余数的自然数除法"
+    ],
+    "next_frontier": {
+      "learner_label": null,
+      "evaluator_only_interpretation": "compress unary representations, then extend these laws to signed operands and fraction pairs",
+      "status": "not_yet_discovered"
+    }
+  },
+  "rooms": {
+    "nested_success": "artifacts/foundation/success/nested_semantics.jsonl",
+    "partition_success": "artifacts/foundation/success/partition_semantics.jsonl",
+    "nested_mistakes": "artifacts/foundation/mistakes/nested_programs.jsonl",
+    "partition_mistakes": "artifacts/foundation/mistakes/partition_programs.jsonl",
+    "nested_success_count": 1,
+    "partition_success_count": 1,
+    "nested_mistake_count": 19,
+    "partition_mistake_count": 23,
+    "nested_event_hash": "bc9c650c5710cbfce6882826ad24047b18c5dcee0a8118f71907ed3e864c5114",
+    "partition_event_hash": "c66d95fbec02095152283b8f8540ecef94f761e1e50f82b65d2276cae97ac04e"
+  },
+  "gates": [
+    {
+      "gate_id": "no_multiplication_or_division_label_visible_to_learner",
+      "passed": true,
+      "actual": false,
+      "required": false
+    },
+    {
+      "gate_id": "no_numeric_arithmetic_opcode_or_constant_visible",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    },
+    {
+      "gate_id": "nested_pairing_task_exactly_solved",
+      "passed": true,
+      "actual": 11,
+      "required": 11
+    },
+    {
+      "gate_id": "nested_semantic_universally_proved",
+      "passed": true,
+      "actual": 13,
+      "required": 13
+    },
+    {
+      "gate_id": "all_nested_hidden_cases_pass",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "repeated_stencil_task_exactly_solved",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "partition_semantic_universally_proved",
+      "passed": true,
+      "actual": 16,
+      "required": 16
+    },
+    {
+      "gate_id": "all_partition_hidden_cases_pass",
+      "passed": true,
+      "actual": 13,
+      "required": 13
+    },
+    {
+      "gate_id": "zero_stencil_is_rejected_not_fabricated",
+      "passed": true,
+      "actual": "empty stencil / divisor cardinality zero",
+      "required": "undefined"
+    },
+    {
+      "gate_id": "token_reward_selects_maximum_reward_exact_programs",
+      "passed": true,
+      "actual": [
+        999407,
+        999045
+      ],
+      "required": [
+        999407,
+        999045
+      ]
+    },
+    {
+      "gate_id": "success_and_mistake_rooms_persist",
+      "passed": true,
+      "actual": {
+        "nested_success": 1,
+        "partition_success": 1,
+        "nested_mistakes": 19,
+        "partition_mistakes": 23
+      },
+      "required": {
+        "nested_success": 1,
+        "partition_success": 1,
+        "nested_mistakes": 19,
+        "partition_mistakes": 23
+      }
+    },
+    {
+      "gate_id": "claims_limited_to_natural_cardinalities",
+      "passed": true,
+      "actual": [
+        "signed, fractional, real, or complex multiplication",
+        "fractional, signed, real, polynomial, or complex division"
+      ],
+      "required": "no signed/fractional overclaim"
+    }
+  ],
+  "limitations": [
+    "Both induced semantics currently operate on unary finite-collection cardinalities and are inefficient for large values.",
+    "The first discovery proves natural-cardinality multiplication only; signed, fractional, real, and complex multiplication remain undiscovered.",
+    "The second discovery proves Euclidean quotient and remainder only for a positive divisor cardinality; division by zero is rejected.",
+    "Decimal and fractional quotient representations are not produced by this foundation stage.",
+    "Cursor rewind, pair-record construction, and buffering were exposed as anonymous generic machine capabilities, not as arithmetic operations."
+  ]
+}

@@ -1,0 +1,1398 @@
+{
+  "report_version": "unbound-symbol-semantics-report-v0.1",
+  "run_id": "RUN-unbound-symbol-20260818T020721632334Z",
+  "created_at": "2026-08-18T02:07:21.643159Z",
+  "title": "无意义符号的可执行语义生成实验",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "enumerated_microstate_semantics_not_transformer",
+  "unbound_symbol": {
+    "glyph": "*",
+    "intrinsic_semantics": false,
+    "call_before_binding_rejected": true
+  },
+  "learner_received": {
+    "natural_language": false,
+    "target_formula": false,
+    "human_operation_name": false,
+    "predefined_loop_program": false,
+    "iterate_node": false,
+    "multiply_node": false,
+    "divide_node": false,
+    "numeric_input_output_rows": true,
+    "registered_substrate": [
+      "two_numeric_registers",
+      "single_step_scheduler",
+      "numeric_read_write",
+      "evidence_derived_constants",
+      "addition",
+      "subtraction",
+      "equality_selected_halt",
+      "simultaneous_state_update"
+    ]
+  },
+  "search": {
+    "programs_generated": 145200,
+    "programs_executed": 51344,
+    "programs_filtered_by_mistake_memory": 0,
+    "nonhalting_programs": 93856,
+    "evidence_constants": [
+      {
+        "value": 0.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -6.0,
+          "right": -6.0
+        }
+      },
+      {
+        "value": -1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": 2.0,
+          "right": 3.0
+        }
+      },
+      {
+        "value": 1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": 3.0,
+          "right": 2.0
+        }
+      }
+    ],
+    "development_exact_candidate_count": 8,
+    "selected_candidate": {
+      "candidate_id": "MC-33bf3587fc82db18",
+      "program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          },
+          {
+            "op": "m_input",
+            "index": 1
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_constant",
+                "constant": -1.0
+              }
+            ]
+          }
+        ],
+        "output_register": 0
+      },
+      "fit_error": 0.0,
+      "maximum_steps_used": 5,
+      "program_nodes": 11
+    },
+    "first_five_exact_candidates": [
+      {
+        "candidate": {
+          "candidate_id": "MC-1e3413bfe6966414",
+          "program": {
+            "substrate": "anonymous_microstate_v0.1",
+            "initial_registers": [
+              {
+                "op": "m_input",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ],
+            "halt_condition": {
+              "op": "m_equal",
+              "left": {
+                "op": "m_register",
+                "index": 0
+              },
+              "right": {
+                "op": "m_constant",
+                "constant": 1.0
+              }
+            },
+            "simultaneous_updates": [
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 0
+                  },
+                  {
+                    "op": "m_constant",
+                    "constant": -1.0
+                  }
+                ]
+              },
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 1
+                  },
+                  {
+                    "op": "m_input",
+                    "index": 0
+                  }
+                ]
+              }
+            ],
+            "output_register": 1
+          },
+          "fit_error": 0.0,
+          "maximum_steps_used": 4,
+          "program_nodes": 11
+        },
+        "blind_passed": false,
+        "blind_cases": [
+          {
+            "case_index": 0,
+            "input_row": [
+              7.0,
+              5.0
+            ],
+            "predicted_value": 35.0,
+            "observed_value": 35.0,
+            "step_count": 4,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 1,
+            "input_row": [
+              -4.0,
+              6.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 5,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          },
+          {
+            "case_index": 3,
+            "input_row": [
+              2.0,
+              9.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 8,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 4,
+            "input_row": [
+              9.0,
+              2.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 1,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 5,
+            "input_row": [
+              -3.0,
+              8.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 7,
+            "passed": true,
+            "failure": null
+          }
+        ]
+      },
+      {
+        "candidate": {
+          "candidate_id": "MC-89ae67c62b2a03a3",
+          "program": {
+            "substrate": "anonymous_microstate_v0.1",
+            "initial_registers": [
+              {
+                "op": "m_input",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 1
+              }
+            ],
+            "halt_condition": {
+              "op": "m_equal",
+              "left": {
+                "op": "m_register",
+                "index": 1
+              },
+              "right": {
+                "op": "m_constant",
+                "constant": 1.0
+              }
+            },
+            "simultaneous_updates": [
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 0
+                  },
+                  {
+                    "op": "m_input",
+                    "index": 0
+                  }
+                ]
+              },
+              {
+                "op": "m_subtract",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 1
+                  },
+                  {
+                    "op": "m_constant",
+                    "constant": 1.0
+                  }
+                ]
+              }
+            ],
+            "output_register": 0
+          },
+          "fit_error": 0.0,
+          "maximum_steps_used": 4,
+          "program_nodes": 11
+        },
+        "blind_passed": false,
+        "blind_cases": [
+          {
+            "case_index": 0,
+            "input_row": [
+              7.0,
+              5.0
+            ],
+            "predicted_value": 35.0,
+            "observed_value": 35.0,
+            "step_count": 4,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 1,
+            "input_row": [
+              -4.0,
+              6.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 5,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          },
+          {
+            "case_index": 3,
+            "input_row": [
+              2.0,
+              9.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 8,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 4,
+            "input_row": [
+              9.0,
+              2.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 1,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 5,
+            "input_row": [
+              -3.0,
+              8.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 7,
+            "passed": true,
+            "failure": null
+          }
+        ]
+      },
+      {
+        "candidate": {
+          "candidate_id": "MC-aa13064e59b5293e",
+          "program": {
+            "substrate": "anonymous_microstate_v0.1",
+            "initial_registers": [
+              {
+                "op": "m_input",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ],
+            "halt_condition": {
+              "op": "m_equal",
+              "left": {
+                "op": "m_register",
+                "index": 0
+              },
+              "right": {
+                "op": "m_constant",
+                "constant": 1.0
+              }
+            },
+            "simultaneous_updates": [
+              {
+                "op": "m_subtract",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 0
+                  },
+                  {
+                    "op": "m_constant",
+                    "constant": 1.0
+                  }
+                ]
+              },
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 1
+                  },
+                  {
+                    "op": "m_input",
+                    "index": 0
+                  }
+                ]
+              }
+            ],
+            "output_register": 1
+          },
+          "fit_error": 0.0,
+          "maximum_steps_used": 4,
+          "program_nodes": 11
+        },
+        "blind_passed": false,
+        "blind_cases": [
+          {
+            "case_index": 0,
+            "input_row": [
+              7.0,
+              5.0
+            ],
+            "predicted_value": 35.0,
+            "observed_value": 35.0,
+            "step_count": 4,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 1,
+            "input_row": [
+              -4.0,
+              6.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 5,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          },
+          {
+            "case_index": 3,
+            "input_row": [
+              2.0,
+              9.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 8,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 4,
+            "input_row": [
+              9.0,
+              2.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 1,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 5,
+            "input_row": [
+              -3.0,
+              8.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 7,
+            "passed": true,
+            "failure": null
+          }
+        ]
+      },
+      {
+        "candidate": {
+          "candidate_id": "MC-c064cd0a06b2d4e2",
+          "program": {
+            "substrate": "anonymous_microstate_v0.1",
+            "initial_registers": [
+              {
+                "op": "m_input",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 1
+              }
+            ],
+            "halt_condition": {
+              "op": "m_equal",
+              "left": {
+                "op": "m_register",
+                "index": 1
+              },
+              "right": {
+                "op": "m_constant",
+                "constant": 1.0
+              }
+            },
+            "simultaneous_updates": [
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 0
+                  },
+                  {
+                    "op": "m_input",
+                    "index": 0
+                  }
+                ]
+              },
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 1
+                  },
+                  {
+                    "op": "m_constant",
+                    "constant": -1.0
+                  }
+                ]
+              }
+            ],
+            "output_register": 0
+          },
+          "fit_error": 0.0,
+          "maximum_steps_used": 4,
+          "program_nodes": 11
+        },
+        "blind_passed": false,
+        "blind_cases": [
+          {
+            "case_index": 0,
+            "input_row": [
+              7.0,
+              5.0
+            ],
+            "predicted_value": 35.0,
+            "observed_value": 35.0,
+            "step_count": 4,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 1,
+            "input_row": [
+              -4.0,
+              6.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 5,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          },
+          {
+            "case_index": 3,
+            "input_row": [
+              2.0,
+              9.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 8,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 4,
+            "input_row": [
+              9.0,
+              2.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 1,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 5,
+            "input_row": [
+              -3.0,
+              8.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 7,
+            "passed": true,
+            "failure": null
+          }
+        ]
+      },
+      {
+        "candidate": {
+          "candidate_id": "MC-33bf3587fc82db18",
+          "program": {
+            "substrate": "anonymous_microstate_v0.1",
+            "initial_registers": [
+              {
+                "op": "m_constant",
+                "constant": 0.0
+              },
+              {
+                "op": "m_input",
+                "index": 1
+              }
+            ],
+            "halt_condition": {
+              "op": "m_equal",
+              "left": {
+                "op": "m_register",
+                "index": 1
+              },
+              "right": {
+                "op": "m_constant",
+                "constant": 0.0
+              }
+            },
+            "simultaneous_updates": [
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 0
+                  },
+                  {
+                    "op": "m_input",
+                    "index": 0
+                  }
+                ]
+              },
+              {
+                "op": "m_add",
+                "args": [
+                  {
+                    "op": "m_register",
+                    "index": 1
+                  },
+                  {
+                    "op": "m_constant",
+                    "constant": -1.0
+                  }
+                ]
+              }
+            ],
+            "output_register": 0
+          },
+          "fit_error": 0.0,
+          "maximum_steps_used": 5,
+          "program_nodes": 11
+        },
+        "blind_passed": true,
+        "blind_cases": [
+          {
+            "case_index": 0,
+            "input_row": [
+              7.0,
+              5.0
+            ],
+            "predicted_value": 35.0,
+            "observed_value": 35.0,
+            "step_count": 5,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 1,
+            "input_row": [
+              -4.0,
+              6.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 6,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": 0.0,
+            "observed_value": 0.0,
+            "step_count": 0,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 3,
+            "input_row": [
+              2.0,
+              9.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 9,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 4,
+            "input_row": [
+              9.0,
+              2.0
+            ],
+            "predicted_value": 18.0,
+            "observed_value": 18.0,
+            "step_count": 2,
+            "passed": true,
+            "failure": null
+          },
+          {
+            "case_index": 5,
+            "input_row": [
+              -3.0,
+              8.0
+            ],
+            "predicted_value": -24.0,
+            "observed_value": -24.0,
+            "step_count": 8,
+            "passed": true,
+            "failure": null
+          }
+        ]
+      }
+    ]
+  },
+  "independent_verification": {
+    "blind_cases": [
+      {
+        "case_index": 0,
+        "input_row": [
+          7.0,
+          5.0
+        ],
+        "predicted_value": 35.0,
+        "observed_value": 35.0,
+        "step_count": 5,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 1,
+        "input_row": [
+          -4.0,
+          6.0
+        ],
+        "predicted_value": -24.0,
+        "observed_value": -24.0,
+        "step_count": 6,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 2,
+        "input_row": [
+          11.0,
+          0.0
+        ],
+        "predicted_value": 0.0,
+        "observed_value": 0.0,
+        "step_count": 0,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 3,
+        "input_row": [
+          2.0,
+          9.0
+        ],
+        "predicted_value": 18.0,
+        "observed_value": 18.0,
+        "step_count": 9,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 4,
+        "input_row": [
+          9.0,
+          2.0
+        ],
+        "predicted_value": 18.0,
+        "observed_value": 18.0,
+        "step_count": 2,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 5,
+        "input_row": [
+          -3.0,
+          8.0
+        ],
+        "predicted_value": -24.0,
+        "observed_value": -24.0,
+        "step_count": 8,
+        "passed": true,
+        "failure": null
+      }
+    ],
+    "adversarial_cases": [
+      {
+        "case_index": 0,
+        "input_row": [
+          0.0,
+          7.0
+        ],
+        "predicted_value": 0.0,
+        "observed_value": 0.0,
+        "step_count": 7,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 1,
+        "input_row": [
+          8.0,
+          0.0
+        ],
+        "predicted_value": 0.0,
+        "observed_value": 0.0,
+        "step_count": 0,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 2,
+        "input_row": [
+          -5.0,
+          7.0
+        ],
+        "predicted_value": -35.0,
+        "observed_value": -35.0,
+        "step_count": 7,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 3,
+        "input_row": [
+          12.0,
+          8.0
+        ],
+        "predicted_value": 96.0,
+        "observed_value": 96.0,
+        "step_count": 8,
+        "passed": true,
+        "failure": null
+      },
+      {
+        "case_index": 4,
+        "input_row": [
+          1.0,
+          64.0
+        ],
+        "predicted_value": 64.0,
+        "observed_value": 64.0,
+        "step_count": 64,
+        "passed": true,
+        "failure": null
+      }
+    ],
+    "development_exact_candidates_rejected_by_blind": 4
+  },
+  "mistake_memory": {
+    "path": "artifacts/mistakes/micro_mistakes.jsonl",
+    "new_records": [
+      {
+        "mistake_id": "MM-06e4ba5fd2a47cc2",
+        "failed_scope": "sealed_blind_semantic_validation",
+        "condition_key": "semantic-grid-ee3e0bf674c5db03",
+        "program_signature": "{\"halt_condition\":{\"left\":{\"index\":0,\"op\":\"m_register\"},\"op\":\"m_equal\",\"right\":{\"constant\":1.0,\"op\":\"m_constant\"}},\"initial_registers\":[{\"index\":1,\"op\":\"m_input\"},{\"index\":0,\"op\":\"m_input\"}],\"output_register\":1,\"simultaneous_updates\":[{\"args\":[{\"index\":0,\"op\":\"m_register\"},{\"constant\":-1.0,\"op\":\"m_constant\"}],\"op\":\"m_add\"},{\"args\":[{\"index\":1,\"op\":\"m_register\"},{\"index\":0,\"op\":\"m_input\"}],\"op\":\"m_add\"}],\"substrate\":\"anonymous_microstate_v0.1\"}",
+        "counterexamples": [
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          }
+        ],
+        "source_candidate_id": "MC-1e3413bfe6966414"
+      },
+      {
+        "mistake_id": "MM-6af0689416236102",
+        "failed_scope": "sealed_blind_semantic_validation",
+        "condition_key": "semantic-grid-ee3e0bf674c5db03",
+        "program_signature": "{\"halt_condition\":{\"left\":{\"index\":1,\"op\":\"m_register\"},\"op\":\"m_equal\",\"right\":{\"constant\":1.0,\"op\":\"m_constant\"}},\"initial_registers\":[{\"index\":0,\"op\":\"m_input\"},{\"index\":1,\"op\":\"m_input\"}],\"output_register\":0,\"simultaneous_updates\":[{\"args\":[{\"index\":0,\"op\":\"m_register\"},{\"index\":0,\"op\":\"m_input\"}],\"op\":\"m_add\"},{\"args\":[{\"index\":1,\"op\":\"m_register\"},{\"constant\":1.0,\"op\":\"m_constant\"}],\"op\":\"m_subtract\"}],\"substrate\":\"anonymous_microstate_v0.1\"}",
+        "counterexamples": [
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          }
+        ],
+        "source_candidate_id": "MC-89ae67c62b2a03a3"
+      },
+      {
+        "mistake_id": "MM-3cf81d6fa42a6eef",
+        "failed_scope": "sealed_blind_semantic_validation",
+        "condition_key": "semantic-grid-ee3e0bf674c5db03",
+        "program_signature": "{\"halt_condition\":{\"left\":{\"index\":0,\"op\":\"m_register\"},\"op\":\"m_equal\",\"right\":{\"constant\":1.0,\"op\":\"m_constant\"}},\"initial_registers\":[{\"index\":1,\"op\":\"m_input\"},{\"index\":0,\"op\":\"m_input\"}],\"output_register\":1,\"simultaneous_updates\":[{\"args\":[{\"index\":0,\"op\":\"m_register\"},{\"constant\":1.0,\"op\":\"m_constant\"}],\"op\":\"m_subtract\"},{\"args\":[{\"index\":1,\"op\":\"m_register\"},{\"index\":0,\"op\":\"m_input\"}],\"op\":\"m_add\"}],\"substrate\":\"anonymous_microstate_v0.1\"}",
+        "counterexamples": [
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          }
+        ],
+        "source_candidate_id": "MC-aa13064e59b5293e"
+      },
+      {
+        "mistake_id": "MM-410ed871b729fe2b",
+        "failed_scope": "sealed_blind_semantic_validation",
+        "condition_key": "semantic-grid-ee3e0bf674c5db03",
+        "program_signature": "{\"halt_condition\":{\"left\":{\"index\":1,\"op\":\"m_register\"},\"op\":\"m_equal\",\"right\":{\"constant\":1.0,\"op\":\"m_constant\"}},\"initial_registers\":[{\"index\":0,\"op\":\"m_input\"},{\"index\":1,\"op\":\"m_input\"}],\"output_register\":0,\"simultaneous_updates\":[{\"args\":[{\"index\":0,\"op\":\"m_register\"},{\"index\":0,\"op\":\"m_input\"}],\"op\":\"m_add\"},{\"args\":[{\"index\":1,\"op\":\"m_register\"},{\"constant\":-1.0,\"op\":\"m_constant\"}],\"op\":\"m_add\"}],\"substrate\":\"anonymous_microstate_v0.1\"}",
+        "counterexamples": [
+          {
+            "case_index": 2,
+            "input_row": [
+              11.0,
+              0.0
+            ],
+            "predicted_value": null,
+            "observed_value": 0.0,
+            "step_count": null,
+            "passed": false,
+            "failure": "candidate did not halt within the registered bound"
+          }
+        ],
+        "source_candidate_id": "MC-c064cd0a06b2d4e2"
+      }
+    ],
+    "total_records": 4
+  },
+  "binding": {
+    "operation_id": "SEM-33bf3587fc82db18",
+    "definition": {
+      "substrate": "anonymous_microstate_v0.1",
+      "initial_registers": [
+        {
+          "op": "m_constant",
+          "constant": 0.0
+        },
+        {
+          "op": "m_input",
+          "index": 1
+        }
+      ],
+      "halt_condition": {
+        "op": "m_equal",
+        "left": {
+          "op": "m_register",
+          "index": 1
+        },
+        "right": {
+          "op": "m_constant",
+          "constant": 0.0
+        }
+      },
+      "simultaneous_updates": [
+        {
+          "op": "m_add",
+          "args": [
+            {
+              "op": "m_register",
+              "index": 0
+            },
+            {
+              "op": "m_input",
+              "index": 0
+            }
+          ]
+        },
+        {
+          "op": "m_add",
+          "args": [
+            {
+              "op": "m_register",
+              "index": 1
+            },
+            {
+              "op": "m_constant",
+              "constant": -1.0
+            }
+          ]
+        }
+      ],
+      "output_register": 0
+    },
+    "verification_status": "bounded",
+    "human_interpretation": null
+  },
+  "glyph_randomization": [
+    {
+      "glyph": "*",
+      "operation_id": "SEM-33bf3587fc82db18",
+      "probe_output": 35.0
+    },
+    {
+      "glyph": "@",
+      "operation_id": "SEM-33bf3587fc82db18",
+      "probe_output": 35.0
+    },
+    {
+      "glyph": "#",
+      "operation_id": "SEM-33bf3587fc82db18",
+      "probe_output": 35.0
+    }
+  ],
+  "success_formula_room_record": {
+    "room_record_id": "SF-7150ee80d932c1be",
+    "operation_id": "SEM-33bf3587fc82db18",
+    "definition": {
+      "substrate": "anonymous_microstate_v0.1",
+      "initial_registers": [
+        {
+          "op": "m_constant",
+          "constant": 0.0
+        },
+        {
+          "op": "m_input",
+          "index": 1
+        }
+      ],
+      "halt_condition": {
+        "op": "m_equal",
+        "left": {
+          "op": "m_register",
+          "index": 1
+        },
+        "right": {
+          "op": "m_constant",
+          "constant": 0.0
+        }
+      },
+      "simultaneous_updates": [
+        {
+          "op": "m_add",
+          "args": [
+            {
+              "op": "m_register",
+              "index": 0
+            },
+            {
+              "op": "m_input",
+              "index": 0
+            }
+          ]
+        },
+        {
+          "op": "m_add",
+          "args": [
+            {
+              "op": "m_register",
+              "index": 1
+            },
+            {
+              "op": "m_constant",
+              "constant": -1.0
+            }
+          ]
+        }
+      ],
+      "output_register": 0
+    },
+    "parent_operation_ids": [
+      "two_numeric_registers",
+      "single_step_scheduler",
+      "numeric_read_write",
+      "addition",
+      "subtraction",
+      "equality_halt"
+    ],
+    "validation_scope": "unbound_symbol_semantics_v0.1",
+    "knowledge_status": "bounded",
+    "evidence": {
+      "run_id": "RUN-unbound-symbol-20260818T020721632334Z",
+      "blind_cases": [
+        {
+          "case_index": 0,
+          "input_row": [
+            7.0,
+            5.0
+          ],
+          "predicted_value": 35.0,
+          "observed_value": 35.0,
+          "step_count": 5,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 1,
+          "input_row": [
+            -4.0,
+            6.0
+          ],
+          "predicted_value": -24.0,
+          "observed_value": -24.0,
+          "step_count": 6,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 2,
+          "input_row": [
+            11.0,
+            0.0
+          ],
+          "predicted_value": 0.0,
+          "observed_value": 0.0,
+          "step_count": 0,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 3,
+          "input_row": [
+            2.0,
+            9.0
+          ],
+          "predicted_value": 18.0,
+          "observed_value": 18.0,
+          "step_count": 9,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 4,
+          "input_row": [
+            9.0,
+            2.0
+          ],
+          "predicted_value": 18.0,
+          "observed_value": 18.0,
+          "step_count": 2,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 5,
+          "input_row": [
+            -3.0,
+            8.0
+          ],
+          "predicted_value": -24.0,
+          "observed_value": -24.0,
+          "step_count": 8,
+          "passed": true,
+          "failure": null
+        }
+      ],
+      "adversarial_cases": [
+        {
+          "case_index": 0,
+          "input_row": [
+            0.0,
+            7.0
+          ],
+          "predicted_value": 0.0,
+          "observed_value": 0.0,
+          "step_count": 7,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 1,
+          "input_row": [
+            8.0,
+            0.0
+          ],
+          "predicted_value": 0.0,
+          "observed_value": 0.0,
+          "step_count": 0,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 2,
+          "input_row": [
+            -5.0,
+            7.0
+          ],
+          "predicted_value": -35.0,
+          "observed_value": -35.0,
+          "step_count": 7,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 3,
+          "input_row": [
+            12.0,
+            8.0
+          ],
+          "predicted_value": 96.0,
+          "observed_value": 96.0,
+          "step_count": 8,
+          "passed": true,
+          "failure": null
+        },
+        {
+          "case_index": 4,
+          "input_row": [
+            1.0,
+            64.0
+          ],
+          "predicted_value": 64.0,
+          "observed_value": 64.0,
+          "step_count": 64,
+          "passed": true,
+          "failure": null
+        }
+      ],
+      "glyph_ablation": [
+        {
+          "glyph": "*",
+          "operation_id": "SEM-33bf3587fc82db18",
+          "probe_output": 35.0
+        },
+        {
+          "glyph": "@",
+          "operation_id": "SEM-33bf3587fc82db18",
+          "probe_output": 35.0
+        },
+        {
+          "glyph": "#",
+          "operation_id": "SEM-33bf3587fc82db18",
+          "probe_output": 35.0
+        }
+      ]
+    }
+  },
+  "post_hoc_evaluator_interpretation": {
+    "assigned_after_all_completed_gates": true,
+    "equivalent_on_registered_domain": "integer multiplication with a non-negative integer control input"
+  },
+  "gates": [
+    {
+      "gate_id": "glyph_has_no_intrinsic_behavior",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "minimum_five_development_exact_semantics",
+      "passed": true,
+      "actual": 8,
+      "threshold": 5
+    },
+    {
+      "gate_id": "sealed_blind_rows_exact",
+      "passed": true,
+      "actual": 6,
+      "threshold": 6
+    },
+    {
+      "gate_id": "adversarial_boundary_rows_exact",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "forbidden_target_nodes_absent",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "glyph_randomization_ablation",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "negative_control_input_semantics",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    },
+    {
+      "gate_id": "non_integer_input_semantics",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    }
+  ],
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The glyph itself contributes no semantics; the learned micro-program is authoritative.",
+    "The host supplies a generic bounded single-step scheduler, two registers, equality, addition, and subtraction.",
+    "The candidate creates initialization, memory updates, halt condition, and output selection; it does not create the host scheduler from nothing.",
+    "The registered domain requires the second input to be an integer from zero through 64.",
+    "Negative control and non-integer behavior remain undefined and are not admitted claims."
+  ]
+}

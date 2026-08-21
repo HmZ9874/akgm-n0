@@ -1,0 +1,997 @@
+{
+  "report_version": "continuum-mechanics-v34.0",
+  "run_id": "RUN-continuum-v34-20260821T090130988431Z",
+  "created_at": "2026-08-21T09:01:30.988431+00:00",
+  "verdict": "finite_volume_continuum_conservation_verified",
+  "acceptance": {
+    "benchmark_version": "continuum-mechanics-v34.0",
+    "passed": true,
+    "classification": "verified_anonymous_finite_volume_mass_momentum_flux_and_grid_conservation",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "flux_rows": [
+        {
+          "experiment_id": "TF-0",
+          "anonymous_inputs": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-1",
+          "anonymous_inputs": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-2",
+          "anonymous_inputs": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 4
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-3",
+          "anonymous_inputs": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-4",
+          "anonymous_inputs": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 17,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      ],
+      "balance_rows": [
+        {
+          "experiment_id": "TB-0",
+          "dx": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TB-1",
+          "dx": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TB-2",
+          "dx": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 3
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TB-3",
+          "dx": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "formulas_supplied": false
+    },
+    "discovery": {
+      "mass_flux_candidates": 6,
+      "selected_mass_flux": {
+        "program_id": "CFX-20876e6a4c7f2a5d",
+        "opaque_program": "SEM<RHO,U>",
+        "policy": {
+          "atoms": [
+            [
+              "RHO",
+              "U"
+            ]
+          ],
+          "human_quantity_name": null
+        }
+      },
+      "momentum_flux_candidates": 15,
+      "selected_momentum_flux": {
+        "program_id": "CFX-11b2f0605fe0a373",
+        "opaque_program": "MERGE<SEM<RHO,U,U>,P>",
+        "policy": {
+          "atoms": [
+            [
+              "RHO",
+              "U",
+              "U"
+            ],
+            [
+              "P"
+            ]
+          ],
+          "human_quantity_name": null
+        }
+      },
+      "balance_candidates": 16,
+      "selected_balance": {
+        "program_id": "BAL-fd3ce34f12aeefdf",
+        "opaque_program": "BALANCE<L:KEEP;R:TURN;DT^1;DX:DIV>",
+        "policy": {
+          "left_turn": false,
+          "right_turn": true,
+          "interval_power": 1,
+          "divide_dx": true,
+          "human_operation_name": null
+        }
+      },
+      "local_equations": [
+        "D_T<RHO>+D_X<RHO*U>=ZERO",
+        "D_T<RHO*U>+D_X<RHO*U*U+P>=ZERO"
+      ]
+    },
+    "proofs": {
+      "continuum": {
+        "proof_id": "V34-PROOF-FINITE-VOLUME-CONTINUUM",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_mass_flux",
+            "passed": true,
+            "evidence": "one of six atoms"
+          },
+          {
+            "obligation_id": "unique_momentum_flux",
+            "passed": true,
+            "evidence": "one of fifteen pairs"
+          },
+          {
+            "obligation_id": "unique_finite_volume_balance",
+            "passed": true,
+            "evidence": "one of sixteen update routers"
+          },
+          {
+            "obligation_id": "internal_flux_cancellation",
+            "passed": true,
+            "evidence": "every interface appears once KEEP and once TURN"
+          },
+          {
+            "obligation_id": "mass_and_momentum_transfer",
+            "passed": true,
+            "evidence": "same balance program applies to two conserved fields"
+          }
+        ],
+        "flux_hidden": [
+          {
+            "experiment_id": "SF-0",
+            "mass_passed": true,
+            "momentum_passed": true
+          },
+          {
+            "experiment_id": "SF-1",
+            "mass_passed": true,
+            "momentum_passed": true
+          },
+          {
+            "experiment_id": "SF-2",
+            "mass_passed": true,
+            "momentum_passed": true
+          }
+        ],
+        "balance_hidden": [
+          {
+            "experiment_id": "SB-0",
+            "update_passed": true,
+            "closed_global_conservation": true
+          },
+          {
+            "experiment_id": "SB-1",
+            "update_passed": true,
+            "closed_global_conservation": true
+          },
+          {
+            "experiment_id": "SB-2",
+            "update_passed": true,
+            "closed_global_conservation": true
+          }
+        ]
+      },
+      "refinement": {
+        "proof_id": "V34-PROOF-GRID-REFINEMENT-CONSISTENCY",
+        "passed": true,
+        "universal_statement": "splitting a cell preserves integrated update because the new internal interface cancels",
+        "hidden_replay": [
+          {
+            "coarse_dx": 2,
+            "fine_dx": 1,
+            "passed": true
+          },
+          {
+            "coarse_dx": 2,
+            "fine_dx": 1,
+            "passed": true
+          },
+          {
+            "coarse_dx": 2,
+            "fine_dx": 1,
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "same_sign_interfaces",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-0",
+          "dx": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 2
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "omit_dx",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-0",
+          "dx": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 2
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "omit_dt",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-1",
+          "dx": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "dt": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "interfaces": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 3
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "omit_pressure_flux",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 17,
+              "negative": 0,
+              "denominator": 4
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v33_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_cells",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "continuum_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_flux_and_balance",
+        "passed": true
+      },
+      {
+        "obligation_id": "global_conservation",
+        "passed": true
+      },
+      {
+        "obligation_id": "grid_refinement",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m14_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_m15",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_formula_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30"
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "verified",
+          "evidence_version": "V31"
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "verified",
+          "evidence_version": "V32"
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "verified",
+          "evidence_version": "V33"
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "verified",
+          "evidence_version": "V34"
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 14,
+      "total_domains": 15,
+      "completion_ratio": 0.9333333333333333,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M15:relativistic_validity_boundary",
+      "selection_reason": "all declared classical domains are present except an experimentally falsifiable validity boundary"
+    },
+    "posthoc_translation": {
+      "mass_flux": "rho u",
+      "momentum_flux": "rho u^2+p",
+      "balance": "q_t+(flux)_x=0",
+      "method": "finite volume"
+    },
+    "limitations": [
+      "One-dimensional inviscid barotropic balance only.",
+      "No viscosity, heat conduction, shocks, entropy conditions, or multidimensional stress tensors.",
+      "Exact cell data are synthetic oracle observations.",
+      "Completion remains 14/15."
+    ]
+  },
+  "claim": {
+    "achieved": "local mass/momentum fluxes, finite-volume balance, global conservation, and refinement transfer",
+    "not_claimed": "general viscous multidimensional continuum mechanics"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v34/success/continuum_latest.json",
+    "mistake_room": "artifacts/physics/v34/mistakes/rejected_continuum_mutations.jsonl"
+  },
+  "content_digest": "284fd8c9ddb021b23119c9e0ebfb679ad98d459be8f1706a87042156cdcaf83f"
+}

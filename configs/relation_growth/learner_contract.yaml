@@ -1,0 +1,23 @@
+{
+  "contract_id": "learner-contract-relation-growth-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "relation-growth-v0.1",
+  "input_interface": {
+    "observation_type": "unordered_numeric_collection",
+    "fields": [
+      "opaque_session_id",
+      "numeric_values",
+      "validity_mask",
+      "action_receipt"
+    ],
+    "input_order_has_semantics": false,
+    "natural_language_labels": false
+  },
+  "feedback_interface": {
+    "development_feedback": ["direct_relation_coverage", "program_cost"],
+    "blind_feedback_during_search": []
+  },
+  "network_access": false,
+  "natural_language_input": false,
+  "pretrained_model_access": false
+}

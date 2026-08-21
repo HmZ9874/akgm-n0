@@ -1,0 +1,1012 @@
+{
+  "run_id": "RUN-high-school-core-v6-20260820T065929595683Z",
+  "created_at": "2026-08-20T06:59:29.595683Z",
+  "verdict": "high_school_core_symbolic_threshold_passed",
+  "benchmark": {
+    "report_version": "high-school-core-v6-report-v0.1",
+    "claim": "representative_exact_symbolic_high_school_core_benchmark",
+    "competency_count": 20,
+    "passed_competency_count": 20,
+    "category_count": 9,
+    "passed_category_count": 9,
+    "categories": [
+      "analytic_geometry",
+      "equations",
+      "exponential_log",
+      "functions",
+      "number_systems",
+      "probability",
+      "sequences",
+      "sets_inequalities",
+      "trigonometry"
+    ],
+    "prerequisite_audit": {
+      "passed": true,
+      "checks": [
+        {
+          "id": "fifty_operator_catalog",
+          "passed": true
+        },
+        {
+          "id": "euclidean_quotient_remainder",
+          "passed": true
+        },
+        {
+          "id": "strict_parametric_formula_room",
+          "passed": true
+        },
+        {
+          "id": "normalized_ratio",
+          "passed": true
+        },
+        {
+          "id": "signed_rational_algebra",
+          "passed": true
+        },
+        {
+          "id": "exact_rational_root",
+          "passed": true
+        },
+        {
+          "id": "certified_irrational_root_interval",
+          "passed": true
+        }
+      ]
+    },
+    "competencies": [
+      {
+        "competency_id": "HS-N01",
+        "task_id": "AHS-00-a7001d2b",
+        "category": "number_systems",
+        "posthoc_name": "normalized rational quotient",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-beb378056706d8f0",
+          "opaque_mode": 0
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 26,
+        "behavior_signature": "984a149af1ca8fc3253401838d374300d757635d2bf7976e5389d463e0770b19",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "two nonzero normalized rational operands",
+          "universal_statement": "(a/b)/(c/d)=ad/(bc), followed by unique gcd normalization",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "(a/b)/(c/d)=ad/(bc), followed by unique gcd normalization"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-A01",
+        "task_id": "AHS-01-a59cbfd0",
+        "category": "equations",
+        "posthoc_name": "one-variable linear equation",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-c137d9c3c048fa13",
+          "opaque_mode": 1
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "60f3515ca21e1ac8f2cbf2764b0165448dba198dc0559dd1ca5a3f1273022a72",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer a,b,c with a nonzero",
+          "universal_statement": "the returned x uniquely satisfies a*x+b=c",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "the returned x uniquely satisfies a*x+b=c"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-A02",
+        "task_id": "AHS-02-51d86cfa",
+        "category": "equations",
+        "posthoc_name": "nonsingular two-variable linear system",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-4064b48f6ff6b32d",
+          "opaque_mode": 2
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 32,
+        "behavior_signature": "8f07a6ca059d9ecf903920b4ddcfdc4309c6a619e03df422de7b4155d71d1473",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer 2x2 systems with nonzero determinant",
+          "universal_statement": "Cramer identities produce the unique pair satisfying both equations",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "Cramer identities produce the unique pair satisfying both equations"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-A03",
+        "task_id": "AHS-03-25a0279f",
+        "category": "equations",
+        "posthoc_name": "exact quadratic roots",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-2ba2192d55090953",
+          "opaque_mode": 3
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 30,
+        "behavior_signature": "c5f7cd34fb639cfdc1b3ad634ea2012126dc3b4e589a9900f528465a05b0859f",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "quadratics with two rational-exact roots",
+          "universal_statement": "the two ordered outputs satisfy Vieta sum=-b/a and product=c/a",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "the two ordered outputs satisfy Vieta sum=-b/a and product=c/a"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-A04",
+        "task_id": "AHS-04-d89a351b",
+        "category": "equations",
+        "posthoc_name": "quadratic discriminant classification",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-18086b42a455a053",
+          "opaque_mode": 4
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "5f79d40defe10cca30b254a516a74cb90b735dbdbabe3ae3273de2b3fe92905e",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer quadratic coefficients",
+          "universal_statement": "the output is sign(b^2-4ac), classifying two, repeated, or no real roots",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "the output is sign(b^2-4ac), classifying two, repeated, or no real roots"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-S01",
+        "task_id": "AHS-05-8ce4a33b",
+        "category": "sequences",
+        "posthoc_name": "arithmetic sequence term",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-03adf64be2057b6e",
+          "opaque_mode": 5
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "a1344e0a8504e0739aa525d181b816712c32aef317338158121f68a89ac53d17",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer first term/difference and positive index",
+          "universal_statement": "induction gives a_n=a_1+(n-1)d",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "induction gives a_n=a_1+(n-1)d"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-S02",
+        "task_id": "AHS-06-aa534224",
+        "category": "sequences",
+        "posthoc_name": "arithmetic sequence finite sum",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-2094637a04498313",
+          "opaque_mode": 6
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "a22d7c74a77f3643e8ffb763f339a5b6c51f3845f5b8587dd7f99b3cb12085d5",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer first term/difference and natural count",
+          "universal_statement": "pairing terms gives S_n=n(2a_1+(n-1)d)/2",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "pairing terms gives S_n=n(2a_1+(n-1)d)/2"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-S03",
+        "task_id": "AHS-07-1f4fa627",
+        "category": "sequences",
+        "posthoc_name": "geometric sequence term",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-30932f3ff4758be4",
+          "opaque_mode": 7
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "fdd3b344a39bbbdc7d64d1cb2e3d2cc5a0bdeefbec033e217e0c35dba0b53d05",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer first term/ratio and positive index",
+          "universal_statement": "induction gives a_n=a_1*q^(n-1)",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "induction gives a_n=a_1*q^(n-1)"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-S04",
+        "task_id": "AHS-08-babafe4b",
+        "category": "sequences",
+        "posthoc_name": "geometric sequence finite sum",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-de21960f97154923",
+          "opaque_mode": 8
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "31ca51550fbbd23821662327a5fbf6dd54f77e048059647d6de09dd45c9b75b9",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer first term/ratio and natural count",
+          "universal_statement": "multiplying by q and subtracting yields the finite geometric-sum identity",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "multiplying by q and subtracting yields the finite geometric-sum identity"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-F01",
+        "task_id": "AHS-09-d811af02",
+        "category": "functions",
+        "posthoc_name": "cubic polynomial evaluation",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-5428450d08bce4a4",
+          "opaque_mode": 9
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 30,
+        "behavior_signature": "b751e5c0875e851ea080391bec02a5929deb4cd735403dc3a28bac98ba7ac3cf",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer cubic coefficients and integer argument",
+          "universal_statement": "Horner composition equals ax^3+bx^2+cx+d identically",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "Horner composition equals ax^3+bx^2+cx+d identically"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-F02",
+        "task_id": "AHS-0a-dfbdcd53",
+        "category": "functions",
+        "posthoc_name": "cubic derivative evaluation",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-71f42915d934e214",
+          "opaque_mode": 10
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 30,
+        "behavior_signature": "76a1ecb2569e679a7df4d3491d6646ac71a560a20193b2fd3a33597e5e02313c",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer cubic coefficients and integer argument",
+          "universal_statement": "formal linearity and the power rule give 3ax^2+2bx+c",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "formal linearity and the power rule give 3ax^2+2bx+c"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-F03",
+        "task_id": "AHS-0b-e2847221",
+        "category": "functions",
+        "posthoc_name": "affine function composition",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-e448f4c6d41a259a",
+          "opaque_mode": 11
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 30,
+        "behavior_signature": "679cd8e51d806fb07bca53f093e3b62324bdd012058879c6de4e0ad355a4333d",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "two integer affine maps and an integer argument",
+          "universal_statement": "substitution gives f(g(x))=a(cx+d)+b",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "substitution gives f(g(x))=a(cx+d)+b"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-E01",
+        "task_id": "AHS-0c-ba7d5559",
+        "category": "exponential_log",
+        "posthoc_name": "exact integer logarithm",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-89f3b267c5a31daa",
+          "opaque_mode": 12
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "7488fecd9aca03e71cea1ce53c88bc8f0bcd1d4217202c5f1243ce995597c6c3",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer base>1 and exact positive power",
+          "universal_statement": "the terminating scale loop returns the unique n with base^n=value",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "the terminating scale loop returns the unique n with base^n=value"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-G01",
+        "task_id": "AHS-0d-3c532203",
+        "category": "analytic_geometry",
+        "posthoc_name": "coordinate midpoint",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-0e01deef1af154f9",
+          "opaque_mode": 13
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 34,
+        "behavior_signature": "1aedabef71cf04b525e23785afbab8bee90e98cb37af1c0d1a10c39139a81ada",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer coordinate pairs",
+          "universal_statement": "componentwise averaging is the affine midpoint invariant",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "componentwise averaging is the affine midpoint invariant"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-G02",
+        "task_id": "AHS-0e-051d1df4",
+        "category": "analytic_geometry",
+        "posthoc_name": "nonvertical line slope",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-2bf32de987fe97ca",
+          "opaque_mode": 14
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 26,
+        "behavior_signature": "5dbf398161076424796336ffb3492306bba3fa688c58bffd8047aa4357924b3b",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer coordinate pairs with distinct x coordinates",
+          "universal_statement": "the quotient of coordinate differences is invariant along the line",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "the quotient of coordinate differences is invariant along the line"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-G03",
+        "task_id": "AHS-0f-10ae87b7",
+        "category": "analytic_geometry",
+        "posthoc_name": "squared Euclidean distance",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-e0056da36499a642",
+          "opaque_mode": 15
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 26,
+        "behavior_signature": "7028cc2105c7ae1e4280339a64adedbafc64e614c41528745779815ca78b8b74",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer coordinate pairs",
+          "universal_statement": "translation and Pythagorean decomposition give dx^2+dy^2",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "translation and Pythagorean decomposition give dx^2+dy^2"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-T01",
+        "task_id": "AHS-10-c389ff2c",
+        "category": "trigonometry",
+        "posthoc_name": "right-triangle sine/cosine ratios",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-668c37cddbe7e714",
+          "opaque_mode": 16
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 30,
+        "behavior_signature": "41768d63e14511a28aa14d81051fe5de989134d0b0011dbff37eb953a8447db0",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "positive integer Pythagorean triples",
+          "universal_statement": "normalized legs satisfy sin^2+cos^2=1 exactly",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "normalized legs satisfy sin^2+cos^2=1 exactly"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-P01",
+        "task_id": "AHS-11-fa65eef9",
+        "category": "probability",
+        "posthoc_name": "symmetric binomial point probability",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-e2e26b7e739b76b0",
+          "opaque_mode": 17
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 22,
+        "behavior_signature": "8c9287023e0a7b085e50dc7cae92cd174dd8a877e9192819eb55bedd7d931e08",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "natural n and 0<=k<=n",
+          "universal_statement": "finite counting gives C(n,k)/2^n",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "finite counting gives C(n,k)/2^n"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-I01",
+        "task_id": "AHS-12-50a7e983",
+        "category": "sets_inequalities",
+        "posthoc_name": "closed interval intersection",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-90022000791738ec",
+          "opaque_mode": 18
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 42,
+        "behavior_signature": "7a231b61e1e6243dda758f3d6799782da2c9e6a3dea68103375724fa20c66431",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "two well-formed closed integer intervals",
+          "universal_statement": "max of lower bounds and min of upper bounds exactly characterize intersection",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "max of lower bounds and min of upper bounds exactly characterize intersection"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      },
+      {
+        "competency_id": "HS-N02",
+        "task_id": "AHS-13-27044429",
+        "category": "number_systems",
+        "posthoc_name": "signed rational normalization",
+        "name_visible_to_learner": false,
+        "program": {
+          "program_id": "HSP-ca88f3a71f79efbe",
+          "opaque_mode": 19
+        },
+        "candidate_count": 20,
+        "exact_candidate_count": 1,
+        "selected_token_cost": 18,
+        "behavior_signature": "580e102e54d5f344710c7c782958aca4f2be256d6d88a107c2f9a438ef1d1f7e",
+        "verification": {
+          "verifier_version": "high-school-core-v6-independent-v0.1",
+          "passed": true,
+          "domain_contract": "integer numerator and nonzero denominator",
+          "universal_statement": "gcd reduction gives the unique positive-denominator normal form",
+          "obligations": [
+            {
+              "id": "development_exact",
+              "passed": true
+            },
+            {
+              "id": "sealed_transfer_exact",
+              "passed": true
+            },
+            {
+              "id": "opaque_program_digest_binding",
+              "passed": true
+            },
+            {
+              "id": "exact_algebraic_identity_or_finite_induction",
+              "passed": true,
+              "evidence": "gcd reduction gives the unique positive-denominator normal form"
+            },
+            {
+              "id": "name_and_formula_hidden_during_search",
+              "passed": true
+            }
+          ]
+        },
+        "passed": true
+      }
+    ],
+    "threshold": {
+      "required_competencies": 20,
+      "required_categories": 9,
+      "all_core_prerequisites_must_replay": true
+    },
+    "level_verdict": "high_school_core_symbolic_threshold_passed",
+    "passed": true,
+    "limitations": [
+      "This is a representative exact-symbolic benchmark, not proof of mastering every regional high-school curriculum.",
+      "Trigonometry is currently exact on rational right-triangle ratios; general angle reduction and transcendental sin/cos are not implemented.",
+      "Logarithms are exact integer inverses of integer powers; arbitrary real logarithms require the unfinished completion layer.",
+      "Quadratic roots are exact rational roots; irrational roots rely on certified intervals rather than a completed real-number object.",
+      "Natural-language word problems, diagram understanding, and open-ended theorem construction are outside this benchmark."
+    ],
+    "content_digest": "b68af51c459c02f7f895c36e8820a8dd319fc586a5c2c7eddd04d4c92ac176c9"
+  },
+  "verification": {
+    "verifier_version": "high-school-core-v6-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "id": "content_digest",
+        "passed": true
+      },
+      {
+        "id": "twenty_competencies_replay",
+        "passed": true,
+        "actual": 20
+      },
+      {
+        "id": "nine_categories",
+        "passed": true
+      },
+      {
+        "id": "prerequisites_replayed",
+        "passed": true
+      },
+      {
+        "id": "distinct_behavior_records",
+        "passed": true
+      },
+      {
+        "id": "level_verdict",
+        "passed": true
+      }
+    ]
+  },
+  "rooms": {
+    "success_path": "artifacts/high_school/v6/success/verified_competencies.jsonl",
+    "mistake_path": "artifacts/high_school/v6/mistakes/rejected_compositions.jsonl",
+    "success_count": 20,
+    "mistake_count": 380,
+    "latest_success_hash": "fc4d8cc777fe2a4cfe6d599a51da2593d4fc5d97eca23eb9a7f0da19839e1fab"
+  }
+}

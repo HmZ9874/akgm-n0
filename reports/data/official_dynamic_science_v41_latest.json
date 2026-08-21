@@ -1,0 +1,628 @@
+{
+  "report_version": "official-dynamic-science-v41.0",
+  "run_id": "RUN-official-dynamic-science-v41-20260821T192007356995Z",
+  "created_at": "2026-08-21T19:20:07.356995+00:00",
+  "verdict": "official_nasa_dynamic_hidden_state_and_state_fold_semantic_verified",
+  "acceptance": {
+    "benchmark_version": "official-dynamic-science-v41.0",
+    "passed": true,
+    "classification": "verified_domain_blind_dynamic_state_discovery_on_official_nasa_physical_archive",
+    "dataset": {
+      "metadata": {
+        "ok": true,
+        "broker_pid": 24784,
+        "dataset_id": "NASA-PCOE-RANDOM-WALK-2-V41",
+        "anonymous_channels": [
+          "Q0",
+          "Q1",
+          "Q2",
+          "Q3"
+        ],
+        "human_quantity_names_exposed_to_learner": false,
+        "training_trace_count": 40,
+        "validation_trace_count": 20,
+        "future_trace_count_hidden": true,
+        "replication_cell_hidden": true,
+        "historical_archive": true,
+        "live_measurement": false
+      },
+      "provenance_audit": {
+        "provider": "NASA Ames Prognostics Center of Excellence",
+        "dataset": "Randomized Battery Usage 2: Room Temperature Random Walk",
+        "landing_page": "https://data.nasa.gov/dataset/randomized-battery-usage-2-room-temperature-random-walk",
+        "official_resource_url": "https://data.nasa.gov/docs/legacy/ames/2.Battery_Uniform_Distribution_Discharge_Room_Temp_DataSet_2Post.zip",
+        "access_level": "public",
+        "downloaded_at_utc": "2026-08-21T19:16:09.495079+00:00",
+        "archive_sha256": "18bf47337577e07872919327a6ee994adc59e33fd2901d69c5911c26102837b8",
+        "archive_bytes": 120125009,
+        "rw3_sha256": "f396291daf142d0cf9b59c6fa1344adb4156e4259a6e1129a8486fda2cfa60a4",
+        "rw4_sha256": "8505a7734995c89487be9769403011d5643f0b025631b2cd707fa11f32177437",
+        "snapshot_sha256": "bf5adc7d3d3b6bd9ec40cdc2acd0f1822c385ef667eaa28698738f6826ddbdd3",
+        "trace_count": 100,
+        "partition_counts": {
+          "training": 40,
+          "validation": 20,
+          "future_holdout": 20,
+          "cross_cell_replication": 20
+        },
+        "official_experiment_summary": "Four 18650 Li-ion cells were repeatedly charged and discharged using randomized current sequences at room temperature, with reference cycles after fixed intervals.",
+        "posthoc_channel_translation": {
+          "Q0": "absolute measured current",
+          "Q1": "terminal voltage",
+          "Q2": "battery temperature",
+          "Q3": "elapsed pulse time"
+        },
+        "learner_received_translation": false,
+        "archive_digest_recomputed": "18bf47337577e07872919327a6ee994adc59e33fd2901d69c5911c26102837b8",
+        "snapshot_digest_recomputed": "bf5adc7d3d3b6bd9ec40cdc2acd0f1822c385ef667eaa28698738f6826ddbdd3",
+        "passed": true
+      },
+      "randomized_protocol_audit": {
+        "official_description_declares_randomized_current_profiles": true,
+        "observed_anonymous_input_level_count": 12,
+        "observed_anonymous_input_levels": [
+          0.5,
+          0.51,
+          1.0,
+          1.01,
+          1.5,
+          2.0,
+          2.01,
+          2.5,
+          2.51,
+          3.0,
+          3.5,
+          4.0
+        ],
+        "passed": true
+      }
+    },
+    "discovery": {
+      "candidate_count": 3,
+      "selected": {
+        "program_id": "DYN-bb87df43ec46ed50",
+        "kind": "state_fold",
+        "opaque_program": "STATE_FOLD<S0=Q1;STEP<W0=-0.0207367186;W1=0.99907239;W2=-0.00283072368;W3=0.000833014422;W4=0.000265220314;W5=7.80798945e-06>;MEMORY=PREVIOUS_STATE>",
+        "coefficients": [
+          -0.020736718599150654,
+          0.9990723900536356,
+          -0.002830723678966217,
+          0.0008330144224636404,
+          0.0002652203138416437,
+          7.807989451436015e-06
+        ],
+        "validation_rmse": 0.04462644464569219,
+        "validation_mape": 0.00864619291962718,
+        "node_count": 11,
+        "created_operator": "STATE_FOLD",
+        "human_law_name": null,
+        "domain_formula_supplied": false
+      },
+      "candidates": [
+        {
+          "program_id": "DYN-dc23cc88351198e5",
+          "kind": "persistence",
+          "opaque_program": "PERSISTENCE<>",
+          "coefficients": [],
+          "validation_rmse": 0.09057808555789496,
+          "validation_mape": 0.018212629808492073,
+          "node_count": 1,
+          "created_operator": null,
+          "human_law_name": null,
+          "domain_formula_supplied": false
+        },
+        {
+          "program_id": "DYN-19fc85db1380c4d0",
+          "kind": "stateless",
+          "opaque_program": "STATELESS<4.90518271,-0.10642616,-0.0407522417,0.000211741284>",
+          "coefficients": [
+            4.905182708090653,
+            -0.10642615989692707,
+            -0.04075224167816738,
+            0.00021174128385793856
+          ],
+          "validation_rmse": 0.11463326117689646,
+          "validation_mape": 0.019450943611325745,
+          "node_count": 7,
+          "created_operator": null,
+          "human_law_name": null,
+          "domain_formula_supplied": false
+        },
+        {
+          "program_id": "DYN-bb87df43ec46ed50",
+          "kind": "state_fold",
+          "opaque_program": "STATE_FOLD<S0=Q1;STEP<W0=-0.0207367186;W1=0.99907239;W2=-0.00283072368;W3=0.000833014422;W4=0.000265220314;W5=7.80798945e-06>;MEMORY=PREVIOUS_STATE>",
+          "coefficients": [
+            -0.020736718599150654,
+            0.9990723900536356,
+            -0.002830723678966217,
+            0.0008330144224636404,
+            0.0002652203138416437,
+            7.807989451436015e-06
+          ],
+          "validation_rmse": 0.04462644464569219,
+          "validation_mape": 0.00864619291962718,
+          "node_count": 11,
+          "created_operator": "STATE_FOLD",
+          "human_law_name": null,
+          "domain_formula_supplied": false
+        }
+      ],
+      "stateful_to_stateless_rmse_ratio": 0.3892975231405729,
+      "stateful_to_persistence_rmse_ratio": 0.49268478540726307,
+      "selected_is_created_state_fold": true
+    },
+    "history_dependence_audit": {
+      "passed": true,
+      "same_current_tolerance": 0.03,
+      "same_elapsed_time_tolerance": 3,
+      "same_temperature_tolerance": 2,
+      "response_difference": 0.42399999999999993,
+      "case_a": {
+        "trace_id": "TRACE-2ef1447f91ab2acf",
+        "sequence_index": 2,
+        "q0": 2.5,
+        "q1": 3.637,
+        "q2": 26.53008,
+        "q3": 24.999999999941792
+      },
+      "case_b": {
+        "trace_id": "TRACE-0922d22c5e02a354",
+        "sequence_index": 21,
+        "q0": 2.5,
+        "q1": 3.213,
+        "q2": 27.044,
+        "q3": 26.999999999941792
+      },
+      "interpretation_available_to_learner": "matching anonymous inputs do not determine Q1 without trajectory history"
+    },
+    "preregistration": {
+      "program_commitment": "0a7ad4420316766fa05f6f9b25a485f4b597d7c0d4c99c72659cdf6b3c5342a0",
+      "commit_event_index": 2,
+      "future_reveal_event_index": 3,
+      "commitment_precedes_reveal": true
+    },
+    "future_trajectory_audit": {
+      "trace_count": 20,
+      "point_count": 480,
+      "rmse": 0.05906704170867207,
+      "median_absolute_percentage_error": 0.011766012648294518,
+      "cases": [
+        {
+          "trace_id": "TRACE-e127c4a2bbfeebe6",
+          "point_count": 24,
+          "trajectory_rmse": 0.05521789555968661,
+          "final_predicted": 3.4083453956057843,
+          "final_observed": 3.314
+        },
+        {
+          "trace_id": "TRACE-4860df5f6ae50d11",
+          "point_count": 24,
+          "trajectory_rmse": 0.1341624556859579,
+          "final_predicted": 3.622433635823952,
+          "final_observed": 3.401
+        },
+        {
+          "trace_id": "TRACE-f26c82fab72a77c8",
+          "point_count": 24,
+          "trajectory_rmse": 0.06046372349386938,
+          "final_predicted": 3.9611789768161043,
+          "final_observed": 4.035
+        },
+        {
+          "trace_id": "TRACE-74912e4011b1c1f7",
+          "point_count": 24,
+          "trajectory_rmse": 0.03249616730020569,
+          "final_predicted": 3.5754229593871343,
+          "final_observed": 3.528
+        },
+        {
+          "trace_id": "TRACE-aaf68cdb71aef165",
+          "point_count": 24,
+          "trajectory_rmse": 0.02839292721096622,
+          "final_predicted": 3.525012757481518,
+          "final_observed": 3.466
+        },
+        {
+          "trace_id": "TRACE-41fd0f63b10a46ad",
+          "point_count": 24,
+          "trajectory_rmse": 0.044475383895369404,
+          "final_predicted": 3.589919190642834,
+          "final_observed": 3.597
+        },
+        {
+          "trace_id": "TRACE-23431007d4dbe3ac",
+          "point_count": 24,
+          "trajectory_rmse": 0.11362778321000742,
+          "final_predicted": 3.6232255089860543,
+          "final_observed": 3.548
+        },
+        {
+          "trace_id": "TRACE-05e16956a7ec7673",
+          "point_count": 24,
+          "trajectory_rmse": 0.07551279426102153,
+          "final_predicted": 3.7805656275453647,
+          "final_observed": 3.67
+        },
+        {
+          "trace_id": "TRACE-8c85c468f5b4fe80",
+          "point_count": 24,
+          "trajectory_rmse": 0.05788001460090869,
+          "final_predicted": 3.4127727724242076,
+          "final_observed": 3.367
+        },
+        {
+          "trace_id": "TRACE-d1fa0500a58f3dfd",
+          "point_count": 24,
+          "trajectory_rmse": 0.03848697555756849,
+          "final_predicted": 3.9339776793138514,
+          "final_observed": 3.908
+        },
+        {
+          "trace_id": "TRACE-6db623d16c9e0a55",
+          "point_count": 24,
+          "trajectory_rmse": 0.01018377724968711,
+          "final_predicted": 3.47278105470074,
+          "final_observed": 3.485
+        },
+        {
+          "trace_id": "TRACE-6b2302613b8108f6",
+          "point_count": 24,
+          "trajectory_rmse": 0.059570056616578784,
+          "final_predicted": 3.2713393906835995,
+          "final_observed": 3.227
+        },
+        {
+          "trace_id": "TRACE-0e3a65e1eaa2d85c",
+          "point_count": 24,
+          "trajectory_rmse": 0.02429887301150669,
+          "final_predicted": 3.56864158963847,
+          "final_observed": 3.582
+        },
+        {
+          "trace_id": "TRACE-276ee3435c3a6711",
+          "point_count": 24,
+          "trajectory_rmse": 0.02511870251992879,
+          "final_predicted": 3.444410485468848,
+          "final_observed": 3.43
+        },
+        {
+          "trace_id": "TRACE-d248d8284f8e9e63",
+          "point_count": 24,
+          "trajectory_rmse": 0.014210105453839517,
+          "final_predicted": 3.335891550530016,
+          "final_observed": 3.3
+        },
+        {
+          "trace_id": "TRACE-5b370813fe2d714b",
+          "point_count": 24,
+          "trajectory_rmse": 0.016917921082396682,
+          "final_predicted": 3.9464645364642985,
+          "final_observed": 3.978
+        },
+        {
+          "trace_id": "TRACE-cac1722feea06341",
+          "point_count": 24,
+          "trajectory_rmse": 0.04409016764222615,
+          "final_predicted": 3.8210598707872925,
+          "final_observed": 3.851
+        },
+        {
+          "trace_id": "TRACE-dea32ef2783512c3",
+          "point_count": 24,
+          "trajectory_rmse": 0.06115321944532024,
+          "final_predicted": 3.4377539430702697,
+          "final_observed": 3.366
+        },
+        {
+          "trace_id": "TRACE-d17a85f97d454498",
+          "point_count": 24,
+          "trajectory_rmse": 0.045297681741646494,
+          "final_predicted": 3.706180085477477,
+          "final_observed": 3.687
+        },
+        {
+          "trace_id": "TRACE-fe5bcb696d1f44ee",
+          "point_count": 24,
+          "trajectory_rmse": 0.06849438463698698,
+          "final_predicted": 3.7579135108512682,
+          "final_observed": 3.802
+        }
+      ],
+      "passed": true
+    },
+    "cross_cell_replication_audit": {
+      "trace_count": 20,
+      "point_count": 480,
+      "rmse": 0.055706845996214366,
+      "median_absolute_percentage_error": 0.008652235345557376,
+      "cases": [
+        {
+          "trace_id": "TRACE-27b72590358c20e2",
+          "point_count": 24,
+          "trajectory_rmse": 0.15264386129880372,
+          "final_predicted": 3.5988347460673578,
+          "final_observed": 3.514
+        },
+        {
+          "trace_id": "TRACE-7d07be27d620ac99",
+          "point_count": 24,
+          "trajectory_rmse": 0.027457657677952427,
+          "final_predicted": 3.6118892066890975,
+          "final_observed": 3.623
+        },
+        {
+          "trace_id": "TRACE-5041b1d62f243d2a",
+          "point_count": 24,
+          "trajectory_rmse": 0.07674623244511766,
+          "final_predicted": 3.291523005989544,
+          "final_observed": 3.225
+        },
+        {
+          "trace_id": "TRACE-a0d0117693e45693",
+          "point_count": 24,
+          "trajectory_rmse": 0.09429097096824368,
+          "final_predicted": 3.4634682056974535,
+          "final_observed": 3.329
+        },
+        {
+          "trace_id": "TRACE-b05337ee75167e53",
+          "point_count": 24,
+          "trajectory_rmse": 0.03634666781545148,
+          "final_predicted": 3.538575992603366,
+          "final_observed": 3.58
+        },
+        {
+          "trace_id": "TRACE-b3e177cf53321de5",
+          "point_count": 24,
+          "trajectory_rmse": 0.028442272019947108,
+          "final_predicted": 3.3099173648875864,
+          "final_observed": 3.29
+        },
+        {
+          "trace_id": "TRACE-fee07a881551140e",
+          "point_count": 24,
+          "trajectory_rmse": 0.09162447680797733,
+          "final_predicted": 3.3359540943397423,
+          "final_observed": 3.2
+        },
+        {
+          "trace_id": "TRACE-2e5f57575d260ba5",
+          "point_count": 24,
+          "trajectory_rmse": 0.011049324955557015,
+          "final_predicted": 3.7444049386414986,
+          "final_observed": 3.743
+        },
+        {
+          "trace_id": "TRACE-229e8015b03b7d96",
+          "point_count": 24,
+          "trajectory_rmse": 0.02087120185280213,
+          "final_predicted": 3.486470401653559,
+          "final_observed": 3.442
+        },
+        {
+          "trace_id": "TRACE-f03edbde9446b562",
+          "point_count": 24,
+          "trajectory_rmse": 0.008279902343901932,
+          "final_predicted": 3.1913017258192777,
+          "final_observed": 3.2
+        },
+        {
+          "trace_id": "TRACE-e860fcf0f4de2766",
+          "point_count": 24,
+          "trajectory_rmse": 0.030053526865087506,
+          "final_predicted": 3.777506813360253,
+          "final_observed": 3.822
+        },
+        {
+          "trace_id": "TRACE-84ef9e21a40c6283",
+          "point_count": 24,
+          "trajectory_rmse": 0.04695832145817271,
+          "final_predicted": 3.5537580009142,
+          "final_observed": 3.601
+        },
+        {
+          "trace_id": "TRACE-835942df83106ae2",
+          "point_count": 24,
+          "trajectory_rmse": 0.03524930307618558,
+          "final_predicted": 3.4611451030753884,
+          "final_observed": 3.393
+        },
+        {
+          "trace_id": "TRACE-2922af718683b35f",
+          "point_count": 24,
+          "trajectory_rmse": 0.012304896353337556,
+          "final_predicted": 4.077790398404401,
+          "final_observed": 4.1
+        },
+        {
+          "trace_id": "TRACE-d1805b0e974d2559",
+          "point_count": 24,
+          "trajectory_rmse": 0.015555903981522115,
+          "final_predicted": 3.70966854615894,
+          "final_observed": 3.737
+        },
+        {
+          "trace_id": "TRACE-5f6141c74e42446a",
+          "point_count": 24,
+          "trajectory_rmse": 0.016691460689147338,
+          "final_predicted": 3.7831325435845033,
+          "final_observed": 3.761
+        },
+        {
+          "trace_id": "TRACE-33d9d19797b76204",
+          "point_count": 24,
+          "trajectory_rmse": 0.04931146141430553,
+          "final_predicted": 3.6536469294488776,
+          "final_observed": 3.587
+        },
+        {
+          "trace_id": "TRACE-efcc4d2a2791b42b",
+          "point_count": 24,
+          "trajectory_rmse": 0.03070558508082441,
+          "final_predicted": 3.133259098634775,
+          "final_observed": 3.2
+        },
+        {
+          "trace_id": "TRACE-7ffceb00f8d11572",
+          "point_count": 24,
+          "trajectory_rmse": 0.0531628958135345,
+          "final_predicted": 3.6710308786601638,
+          "final_observed": 3.615
+        },
+        {
+          "trace_id": "TRACE-7601af59244dff87",
+          "point_count": 24,
+          "trajectory_rmse": 0.029245714615062424,
+          "final_predicted": 3.7741086800179278,
+          "final_observed": 3.721
+        }
+      ],
+      "passed": true
+    },
+    "semantic_compression_audit": {
+      "uncompressed_step_applications_per_trace": 24,
+      "uncompressed_nodes_per_trace": 264,
+      "compressed_operator": "STATE_FOLD",
+      "compressed_call_nodes_per_trace": 13,
+      "compression_ratio": 20.307692307692307,
+      "passed": true
+    },
+    "mutation_audits": [
+      {
+        "mutation": "remove_memory",
+        "rejected": true,
+        "evidence": 0.3892975231405729
+      },
+      {
+        "mutation": "copy_state_only",
+        "rejected": true,
+        "evidence": 0.49268478540726307
+      },
+      {
+        "mutation": "reveal_future_before_commitment",
+        "rejected": true
+      },
+      {
+        "mutation": "single_cell_validation_only",
+        "rejected": true
+      },
+      {
+        "mutation": "domain_labels_visible_during_discovery",
+        "rejected": true
+      }
+    ],
+    "discovery_gates": {
+      "official_nasa_provenance": true,
+      "real_physical_experiment_archive": true,
+      "randomized_control_profiles": true,
+      "separate_sealed_archive_process": true,
+      "domain_blind_channels": true,
+      "future_partition_locked_until_commitment": true,
+      "history_dependence_counterexample": true,
+      "state_fold_operator_created": true,
+      "stateful_program_beats_stateless": true,
+      "prospective_future_trajectory_prediction": true,
+      "cross_cell_replication": true,
+      "repeated_steps_compressed": true,
+      "live_new_physical_measurement": false,
+      "human_unknown_natural_law": false
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "official_nasa_provenance",
+        "passed": true
+      },
+      {
+        "obligation_id": "real_physical_experiment_archive",
+        "passed": true
+      },
+      {
+        "obligation_id": "randomized_control_profiles",
+        "passed": true
+      },
+      {
+        "obligation_id": "separate_sealed_archive_process",
+        "passed": true
+      },
+      {
+        "obligation_id": "domain_blind_channels",
+        "passed": true
+      },
+      {
+        "obligation_id": "future_partition_locked_until_commitment",
+        "passed": true
+      },
+      {
+        "obligation_id": "history_dependence_counterexample",
+        "passed": true
+      },
+      {
+        "obligation_id": "state_fold_operator_created",
+        "passed": true
+      },
+      {
+        "obligation_id": "stateful_program_beats_stateless",
+        "passed": true
+      },
+      {
+        "obligation_id": "prospective_future_trajectory_prediction",
+        "passed": true
+      },
+      {
+        "obligation_id": "cross_cell_replication",
+        "passed": true
+      },
+      {
+        "obligation_id": "repeated_steps_compressed",
+        "passed": true
+      },
+      {
+        "obligation_id": "historical_not_live_claim_enforced",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_unknown_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "five_mutations_rejected",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "official_dynamic_archive_discovery_verified": true,
+      "live_physical_experiment_claim_allowed": false,
+      "human_unknown_claim_allowed": false,
+      "current_label": "OFFICIAL_NASA_DYNAMIC_STATE_REDISCOVERY"
+    },
+    "posthoc_translation": {
+      "Q0": "absolute measured current",
+      "Q1": "terminal voltage",
+      "Q2": "battery temperature",
+      "Q3": "elapsed pulse time"
+    },
+    "limitations": [
+      "NASA created the physical battery experiment and the project analyzes a historical archive; no new live battery measurement was made here.",
+      "The learner saw anonymous channels, but the archive adapter and posthoc evaluator knew the NASA field mapping.",
+      "STATE_FOLD is a system-created reusable semantic, not a claim that recurrent state models are new to humanity.",
+      "Cross-cell replication uses RW4 from the same NASA test campaign, not a different laboratory.",
+      "The result demonstrates hidden-state necessity and trajectory prediction, not a human-unknown electrochemical law."
+    ]
+  },
+  "dependency": {
+    "v40_run_id": "RUN-external-physical-science-v40-20260821T172756202904Z",
+    "v40_passed": true
+  },
+  "claim": {
+    "achieved": "official physical-archive provenance, anonymous hidden-state counterexample, recurrent semantic synthesis, future trajectory prediction and cross-cell replication",
+    "not_achieved": "a new live battery experiment, independent-laboratory replication, or a human-unknown electrochemical law"
+  },
+  "storage": {
+    "semantic_room": "artifacts/science/v41/semantics/nasa_state_fold_latest.json",
+    "mistake_room": "artifacts/science/v41/mistakes/rejected_dynamic_mutations.jsonl",
+    "official_archive": "data/nasa_v41/Battery_Random_Walk_Room_Temp_2Post.zip",
+    "human_discovery_room": null
+  },
+  "content_digest": "6efa5832fe1ec451fe076de3a1c1404d2574f70a9e720f069e41613df403eb2a"
+}

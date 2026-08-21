@@ -1,0 +1,454 @@
+{
+  "report_version": "empirical-science-v37.0",
+  "run_id": "RUN-empirical-science-v37-20260821T155028851553Z",
+  "created_at": "2026-08-21T15:50:28.851553+00:00",
+  "verdict": "real_archive_known_law_rediscovery_pipeline_verified",
+  "acceptance": {
+    "benchmark_version": "empirical-science-v37.0",
+    "passed": true,
+    "classification": "verified_real_archive_blind_known_law_rediscovery_with_sealed_holdout_and_uncertainty",
+    "dataset": {
+      "metadata": {
+        "ok": true,
+        "broker_pid": 45768,
+        "rows": 53,
+        "train_rows": 33,
+        "holdout_rows": 20,
+        "anonymous_units": {
+          "q0": "U0",
+          "q1": "U1",
+          "target": "U2"
+        }
+      },
+      "provenance_audit": {
+        "passed": true,
+        "snapshot_sha256": "0bc98e91401a2b0dd7075f5073698c86fd7347601629376c0a2afc100e5f26da",
+        "provider": "NASA Exoplanet Archive",
+        "table": "pscomppars",
+        "endpoint": "https://exoplanetarchive.ipac.caltech.edu/TAP/sync",
+        "query": "select top 60 pl_name,pl_orbper,pl_orbpererr1,pl_orbpererr2,pl_orbsmax,pl_orbsmaxerr1,pl_orbsmaxerr2,st_mass,st_masserr1,st_masserr2 from pscomppars where pl_orbper is not null and pl_orbsmax is not null and st_mass is not null order by pl_name",
+        "retrieved_at": "2026-08-21T15:45:25.2762733Z",
+        "row_count": 53,
+        "units": {
+          "pl_orbper": "day",
+          "pl_orbsmax": "astronomical_unit",
+          "st_mass": "solar_mass"
+        },
+        "source_documentation": [
+          "https://exoplanetarchive.ipac.caltech.edu/docs/TAP/usingTAP.html",
+          "https://exoplanetarchive.ipac.caltech.edu/docs/API_TD_columns.html",
+          "https://exoplanetarchive.ipac.caltech.edu/docs/pscp_calc.html"
+        ],
+        "derived_quantity_risk": "PSCompPars may combine values from different references and some semimajor axes may be derived rather than independently measured."
+      }
+    },
+    "discovery": {
+      "candidate_count": 81,
+      "selected_program": {
+        "program_id": "EMP-ded6dd18830aa0cc",
+        "opaque_program": "POWER<SCALE<367.01582>;KEEP_EXP<Q0^3/2>;TURN_EXP<Q1^1/2>>",
+        "alpha_twice": 3,
+        "beta_twice": -1,
+        "fitted_scale": 367.0158230525205,
+        "robust_score": 0.5025765020735588,
+        "median_absolute_log_error": 0.021297873367597864,
+        "human_law_name": null
+      },
+      "runner_up": {
+        "program_id": "EMP-08fdceb86568a5a9",
+        "opaque_program": "POWER<SCALE<350.00818>;KEEP_EXP<Q0^3/2>;TURN_EXP<Q1^1>>",
+        "alpha_twice": 3,
+        "beta_twice": -2,
+        "fitted_scale": 350.0081785567274,
+        "robust_score": 0.898941399541596,
+        "median_absolute_log_error": 0.096485914700708,
+        "human_law_name": null
+      },
+      "score_margin": 0.39636489746803727,
+      "bootstrap_runs": 12,
+      "bootstrap_selection_rate": 1.0,
+      "bootstrap_selected_pairs": [
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ],
+        [
+          3,
+          -1
+        ]
+      ],
+      "missing_uncertainty_rows": 20,
+      "formula_name_supplied": false
+    },
+    "preregistration": {
+      "commitment": "010842aee4857c4957b62653d4adfd553b207b502db27c720d4e9a33c8487f29",
+      "prediction_count": 20,
+      "commitment_precedes_reveal": true
+    },
+    "holdout_audit": {
+      "method": "training robust log-residual interval fixed before holdout reveal",
+      "multiplicative_factor": 1.0638446823482313,
+      "median_absolute_percentage_error": 0.009993017888889828,
+      "coverage": 0.9,
+      "cases": [
+        {
+          "row_id": "OBS-167266bbb31d4f98",
+          "predicted": 4.629485072263561,
+          "observed": 4.8101069,
+          "lower": 4.35165503863296,
+          "upper": 4.925053076138107,
+          "absolute_percentage_error": 0.037550480995846236,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-0d0ed9f6f8aff703",
+          "predicted": 3.1047195876739657,
+          "observed": 3.07634,
+          "lower": 2.9183955507686496,
+          "upper": 3.3029394235293417,
+          "absolute_percentage_error": 0.009225114153170861,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-a93833f42895e6c3",
+          "predicted": 1079.8570147073358,
+          "observed": 1120.0,
+          "lower": 1015.0513816770324,
+          "upper": 1148.800142792835,
+          "absolute_percentage_error": 0.03584195115416447,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-7c4342533e973598",
+          "predicted": 0.7299945717739886,
+          "observed": 0.71957926,
+          "lower": 0.6861852899077964,
+          "upper": 0.776600843324832,
+          "absolute_percentage_error": 0.014474168938649756,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-a15e508c7107ab71",
+          "predicted": 3.3323723826662013,
+          "observed": 3.313959,
+          "lower": 3.1323861818913588,
+          "upper": 3.5451266389035436,
+          "absolute_percentage_error": 0.00555630973895609,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-13f2147c16d2272d",
+          "predicted": 8.391018366095745,
+          "observed": 8.32727,
+          "lower": 7.887446828774098,
+          "upper": 8.926740268257301,
+          "absolute_percentage_error": 0.007655373981598327,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-419ce6d6da327774",
+          "predicted": 3.5751430673166174,
+          "observed": 3.471149,
+          "lower": 3.360587430324115,
+          "upper": 3.803396940798928,
+          "absolute_percentage_error": 0.02995955152504756,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-07f01e5dc95d2abc",
+          "predicted": 1.7348935134275263,
+          "observed": 1.7292684,
+          "lower": 1.630777069447849,
+          "upper": 1.8456572387003136,
+          "absolute_percentage_error": 0.003252886265386132,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-26d36127f757a785",
+          "predicted": 5.629021703723453,
+          "observed": 5.605,
+          "lower": 5.291206317165093,
+          "upper": 5.988404806328976,
+          "absolute_percentage_error": 0.00428576337617346,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-d5c7d4d8a0331ce2",
+          "predicted": 0.6502057364216226,
+          "observed": 0.68453862616,
+          "lower": 0.611184834788495,
+          "upper": 0.6917179151244589,
+          "absolute_percentage_error": 0.05015478809570153,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-b99ce3b68ec13a0c",
+          "predicted": 10.947711092464111,
+          "observed": 10.91647,
+          "lower": 10.290704342572976,
+          "upper": 11.64666422960269,
+          "absolute_percentage_error": 0.002861831019011701,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-eab4595704a72be2",
+          "predicted": 8.809207702045535,
+          "observed": 10.13202575,
+          "lower": 8.28053930071908,
+          "upper": 9.371628769522225,
+          "absolute_percentage_error": 0.13055810166633905,
+          "covered": false
+        },
+        {
+          "row_id": "OBS-b74f10d9a22bf3b8",
+          "predicted": 8.706654916016252,
+          "observed": 8.63043276,
+          "lower": 8.184141031562987,
+          "upper": 9.262528533444975,
+          "absolute_percentage_error": 0.008831788409212046,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-37b26d17bc40f7df",
+          "predicted": 5.971684155114095,
+          "observed": 5.99273738,
+          "lower": 5.613304511644273,
+          "upper": 6.35294443308132,
+          "absolute_percentage_error": 0.0035131232274866787,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-e57dab4b269fcac4",
+          "predicted": 5.821302285772715,
+          "observed": 5.78387022,
+          "lower": 5.471947533660004,
+          "upper": 6.192961481060906,
+          "absolute_percentage_error": 0.0064718025040187,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-18c589e85d3d60c2",
+          "predicted": 5.05882852535271,
+          "observed": 4.938864,
+          "lower": 4.755232233888057,
+          "upper": 5.381807825608025,
+          "absolute_percentage_error": 0.024289902567211853,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-bf628832690e27f4",
+          "predicted": 73.44725627383342,
+          "observed": 72.379334,
+          "lower": 69.03945424788213,
+          "upper": 78.13647301998544,
+          "absolute_percentage_error": 0.014754519208941844,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-ccdb1047a9702b45",
+          "predicted": 8.224319091098101,
+          "observed": 8.313783059,
+          "lower": 7.73075170422858,
+          "upper": 8.749398130999753,
+          "absolute_percentage_error": 0.010760921624608795,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-577ca83de48d7647",
+          "predicted": 11.309921826047045,
+          "observed": 11.3910025,
+          "lower": 10.631177665035258,
+          "upper": 12.032000192414346,
+          "absolute_percentage_error": 0.007117957699768365,
+          "covered": true
+        },
+        {
+          "row_id": "OBS-9b9dc9436289df74",
+          "predicted": 2.1210582844972135,
+          "observed": 2.47063,
+          "lower": 1.9937668718852717,
+          "upper": 2.2564765769130224,
+          "absolute_percentage_error": 0.14149092154745407,
+          "covered": false
+        }
+      ]
+    },
+    "null_audit": {
+      "method": "deterministic target-rotation nulls",
+      "null_count": 5,
+      "selected_score": 0.5025765020735588,
+      "null_scores": [
+        5.773757151456295,
+        6.715044436940233,
+        7.003216034848067,
+        6.703905790367545,
+        6.711128485950543
+      ],
+      "passed": true
+    },
+    "leakage_audit": {
+      "learner_received_planet_names": false,
+      "learner_received_archive_column_names": false,
+      "learner_received_formula_name": false,
+      "holdout_output_before_commit_rejected": true,
+      "broker_process_isolated": true,
+      "broker_pid": 45768,
+      "evaluator_pid": 43184,
+      "commit_event_index": 0,
+      "reveal_event_index": 1
+    },
+    "known_law_audit": {
+      "catalog_id": "KNOWN-KEPLER-THIRD-LAW-TWO-BODY-LIMIT",
+      "matched": true,
+      "expected_posthoc_form": "P_days approximately scale*a_AU^(3/2)*M_solar^(-1/2)",
+      "human_novelty": false
+    },
+    "discovery_gates": {
+      "real_public_archive_snapshot": true,
+      "source_and_query_provenance": true,
+      "separate_data_process": true,
+      "anonymous_columns": true,
+      "holdout_commit_before_reveal": true,
+      "measurement_uncertainty_handled": true,
+      "robust_model_selection": true,
+      "bootstrap_stability": true,
+      "holdout_prediction": true,
+      "null_model_rejection": true,
+      "known_law_catalog_match": true,
+      "independent_measurement_of_all_variables": false,
+      "human_novelty": false,
+      "external_laboratory_replication": false
+    },
+    "claim_state": {
+      "real_data_pipeline_verified": true,
+      "human_unknown_claim_allowed": false,
+      "current_label": "REAL_ARCHIVE_KNOWN_LAW_REDISCOVERY"
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "real_archive_provenance",
+        "passed": true
+      },
+      {
+        "obligation_id": "data_broker_runs_in_separate_process",
+        "passed": true
+      },
+      {
+        "obligation_id": "archive_semantics_hidden_during_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "holdout_cannot_reveal_before_commit",
+        "passed": true
+      },
+      {
+        "obligation_id": "eighty_one_power_models_compete",
+        "passed": true
+      },
+      {
+        "obligation_id": "expected_exponents_recovered",
+        "passed": true
+      },
+      {
+        "obligation_id": "selected_model_beats_runner_up",
+        "passed": true
+      },
+      {
+        "obligation_id": "subsample_stability",
+        "passed": true
+      },
+      {
+        "obligation_id": "missing_uncertainty_is_explicitly_handled",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_holdout_accuracy",
+        "passed": true
+      },
+      {
+        "obligation_id": "rotated_target_nulls_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "known_law_is_not_called_human_novel",
+        "passed": true
+      },
+      {
+        "obligation_id": "derived_variable_risk_blocks_independent_confirmation",
+        "passed": true
+      },
+      {
+        "obligation_id": "external_discovery_claim_remains_blocked",
+        "passed": true
+      }
+    ],
+    "posthoc_translation": {
+      "q0": "orbit semi-major axis in AU",
+      "q1": "stellar mass in solar masses",
+      "target": "orbital period in days",
+      "program": "P_days = fitted_scale * a_AU^(3/2) * M_solar^(-1/2)"
+    },
+    "limitations": [
+      "This is a re-discovery of a human-known relation, not a new law.",
+      "PSCompPars may combine parameters from different references, and semi-major axis may be derived using the same physical relation under test.",
+      "The supplied hypothesis language is a two-input power-law grid with half-integer exponents.",
+      "Missing uncertainties use an explicit three-percent log-error floor rather than inferred measurement distributions.",
+      "No causal intervention or external laboratory replication is possible in this static archive calibration."
+    ]
+  },
+  "dependency": {
+    "v36_run_id": "RUN-scientific-discovery-v36-20260821T151311902846Z",
+    "v36_passed": true
+  },
+  "claim": {
+    "achieved": "real public archive ingestion, subprocess sealing, anonymous robust law selection, preregistered holdout prediction, uncertainty and null audits",
+    "not_achieved": "independent confirmation of a new law of nature"
+  },
+  "storage": {
+    "rediscovery_room": "artifacts/science/v37/rediscoveries/kepler_like_relation_latest.json",
+    "human_discovery_room": null,
+    "data_snapshot": "data/nasa_exoplanet_v37_snapshot.csv",
+    "provenance": "data/nasa_exoplanet_v37_provenance.json"
+  },
+  "content_digest": "b15812645eed1ff9fcfd4e6a927fd109b32b9453d8b9dc7bbdc1bb8e2c3e2368"
+}

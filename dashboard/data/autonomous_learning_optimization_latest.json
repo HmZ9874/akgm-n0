@@ -1,0 +1,499 @@
+{
+  "report_version": "autonomous-learning-optimization-v0.1",
+  "run_id": "RUN-autonomous-learning-20260819T053250384476Z",
+  "created_at": "2026-08-19T05:32:50.384966Z",
+  "verdict": "experience_policy_active_experiments_and_permutation_transfer_passed",
+  "policy": {
+    "initial_policy_id": "POLICY-b2418d42677052c5",
+    "updated_policy_id": "POLICY-cfa82851e90429de",
+    "success_example_count": 33,
+    "failure_example_count_before": 325,
+    "failure_example_count_after": 335,
+    "feature_count": 136,
+    "new_mistake_ids": [
+      "AM-9619fcd9561e5186",
+      "AM-5029f32553802289",
+      "AM-5de7ca1695005972",
+      "AM-0605efa3579c9dc3",
+      "AM-3d4594cbf22c4aeb",
+      "AM-8f0a5121a4f990d9",
+      "AM-f71fc30232f44d3f",
+      "AM-4128f7e2b082e8d0",
+      "AM-e13d2f44d65416b0",
+      "AM-e74ce6b290fd3392"
+    ],
+    "policy_path": "artifacts\\policies\\learned_search_policy.json",
+    "replay_passed": true
+  },
+  "blind_task": {
+    "input_width": 5,
+    "input_permutations_searched": 120,
+    "learner_received_role_names": false,
+    "learner_received_column_mapping": false,
+    "host_seed_observation_count": 2,
+    "self_selected_experiment_count": 2,
+    "total_observation_count": 4,
+    "active_rounds": [
+      {
+        "round_index": 0,
+        "observation_count": 2,
+        "exact_candidate_count": 708,
+        "selected_candidate_id": "PI-01c78770a3ec5e5c",
+        "proposed_experiment": {
+          "input_row": [
+            2.0,
+            3.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "distinct_output_count": 23,
+          "disagreeing_candidate_pairs": 2593,
+          "candidate_outputs": [
+            1.0,
+            10.0,
+            8.0,
+            1.0,
+            20.0,
+            1.0,
+            125.0,
+            1.0,
+            1.0,
+            1.0,
+            15.0,
+            1.0,
+            1.0,
+            48.0,
+            31.0,
+            1.0,
+            31.0,
+            62.0,
+            64.0,
+            1.0,
+            79.0,
+            1.0,
+            20.0,
+            35.0,
+            12.0,
+            1.0,
+            31.0,
+            25.0,
+            50.0,
+            1.0,
+            12.0,
+            125.0,
+            5.0,
+            1.0,
+            50.0,
+            83.0,
+            19.0,
+            1.0,
+            1.0,
+            1.0,
+            1.0,
+            5.0,
+            1.0,
+            1.0,
+            5.0,
+            1.0,
+            1.0,
+            62.0,
+            11.0,
+            50.0,
+            1.0,
+            50.0,
+            1.0,
+            9.0,
+            8.0,
+            28.0,
+            64.0,
+            80.0,
+            1.0,
+            15.0,
+            80.0,
+            80.0,
+            1.0,
+            79.0,
+            48.0,
+            1.0,
+            50.0,
+            125.0,
+            10.0,
+            1.0,
+            1.0,
+            1.0,
+            11.0,
+            52.0,
+            1.0,
+            1.0,
+            12.0,
+            10.0,
+            1.0,
+            5.0
+          ]
+        },
+        "observed_output": 22.0
+      },
+      {
+        "round_index": 1,
+        "observation_count": 3,
+        "exact_candidate_count": 12,
+        "selected_candidate_id": "PI-6a7467dc2b97de77",
+        "proposed_experiment": {
+          "input_row": [
+            0.0,
+            2.0,
+            1.0,
+            3.0,
+            0.0
+          ],
+          "distinct_output_count": 5,
+          "disagreeing_candidate_pairs": 56,
+          "candidate_outputs": [
+            3.0,
+            3.0,
+            0.0,
+            0.0,
+            1.0,
+            2.0,
+            2.0,
+            6.0,
+            1.0,
+            1.0,
+            6.0,
+            1.0
+          ]
+        },
+        "observed_output": 0.0
+      },
+      {
+        "round_index": 2,
+        "observation_count": 4,
+        "exact_candidate_count": 2,
+        "selected_candidate_id": "PI-7903eccfdfde9b39",
+        "proposed_experiment": {
+          "input_row": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "distinct_output_count": 1,
+          "disagreeing_candidate_pairs": 0,
+          "candidate_outputs": [
+            0.0,
+            0.0
+          ]
+        },
+        "observed_output": null
+      }
+    ],
+    "selected_rows": [
+      [
+        2.0,
+        3.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      [
+        0.0,
+        2.0,
+        1.0,
+        3.0,
+        0.0
+      ]
+    ],
+    "posthoc_column_mapping": {
+      "column_0": "q",
+      "column_1": "n",
+      "column_2": "a",
+      "column_3": "p",
+      "column_4": "b"
+    }
+  },
+  "winner": {
+    "candidate_id": "PI-7903eccfdfde9b39",
+    "program": {
+      "substrate": "anonymous_unified_word_machine_v0.1",
+      "word_width": 2,
+      "words": [
+        14,
+        7,
+        1,
+        1,
+        3,
+        98,
+        1,
+        2,
+        3,
+        99,
+        1,
+        4,
+        3,
+        100,
+        2,
+        98,
+        12,
+        46,
+        1,
+        0,
+        3,
+        101,
+        4,
+        0,
+        3,
+        102,
+        2,
+        101,
+        12,
+        22,
+        2,
+        102,
+        7,
+        99,
+        3,
+        102,
+        2,
+        101,
+        10,
+        1,
+        3,
+        101,
+        11,
+        13,
+        1,
+        3,
+        3,
+        101,
+        4,
+        0,
+        3,
+        103,
+        2,
+        101,
+        12,
+        35,
+        2,
+        103,
+        7,
+        100,
+        3,
+        103,
+        2,
+        101,
+        10,
+        1,
+        3,
+        101,
+        11,
+        26,
+        2,
+        102,
+        7,
+        103,
+        3,
+        104,
+        2,
+        100,
+        3,
+        99,
+        2,
+        104,
+        3,
+        100,
+        2,
+        98,
+        10,
+        1,
+        3,
+        98,
+        11,
+        7,
+        2,
+        99,
+        15,
+        0,
+        0,
+        0
+      ]
+    },
+    "fit_error": 0.0,
+    "maximum_absolute_error": 0.0,
+    "outputs": [
+      1.0,
+      3.0,
+      22.0,
+      0.0
+    ],
+    "behavior_signature": [
+      1.0,
+      3.0,
+      22.0,
+      0.0
+    ],
+    "instruction_count": 49,
+    "exact": true
+  },
+  "sealed_results": [
+    {
+      "inputs": [
+        2,
+        3,
+        6,
+        4,
+        9
+      ],
+      "predicted": 210.0,
+      "observed": 210.0,
+      "passed": true
+    },
+    {
+      "inputs": [
+        4,
+        4,
+        2,
+        3,
+        5
+      ],
+      "predicted": 359.0,
+      "observed": 359.0,
+      "passed": true
+    },
+    {
+      "inputs": [
+        1,
+        2,
+        8,
+        5,
+        1
+      ],
+      "predicted": 13.0,
+      "observed": 13.0,
+      "passed": true
+    },
+    {
+      "inputs": [
+        5,
+        3,
+        9,
+        2,
+        7
+      ],
+      "predicted": 153.0,
+      "observed": 153.0,
+      "passed": true
+    },
+    {
+      "inputs": [
+        3,
+        5,
+        4,
+        2,
+        6
+      ],
+      "predicted": 606.0,
+      "observed": 606.0,
+      "passed": true
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "self_selected_queries_exist",
+      "passed": true,
+      "actual": 2,
+      "threshold": 1
+    },
+    {
+      "gate_id": "shuffled_input_unseen_exact",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "fixed_order_baseline_fails_transfer",
+      "passed": true,
+      "actual": 1,
+      "threshold": 5
+    },
+    {
+      "gate_id": "new_mistakes_update_policy",
+      "passed": true,
+      "actual": "POLICY-cfa82851e90429de",
+      "threshold": "different_from_POLICY-b2418d42677052c5"
+    }
+  ],
+  "baseline": {
+    "kind": "same_motif_search_without_input_permutation_wrapper",
+    "candidate_id": "MG-151c7d3d0357deca",
+    "sealed_results": [
+      {
+        "inputs": [
+          2,
+          3,
+          6,
+          4,
+          9
+        ],
+        "predicted": 200000.0,
+        "observed": 210.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          4,
+          4,
+          2,
+          3,
+          5
+        ],
+        "predicted": 500.0,
+        "observed": 359.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          1,
+          2,
+          8,
+          5,
+          1
+        ],
+        "predicted": 13.0,
+        "observed": 13.0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          5,
+          3,
+          9,
+          2,
+          7
+        ],
+        "predicted": 73205.0,
+        "observed": 153.0,
+        "passed": false
+      },
+      {
+        "inputs": [
+          3,
+          5,
+          4,
+          2,
+          6
+        ],
+        "predicted": 1080.0,
+        "observed": 606.0,
+        "passed": false
+      }
+    ]
+  },
+  "limitations": [
+    "The underlying candidate family remains the learned-motif recurrence generator.",
+    "Full permutation enumeration is factorial and currently capped at six columns.",
+    "The active learner queries a finite value pool; larger or continuous domains require a learned proposal distribution.",
+    "Experience weights are transparent log-odds features, not yet a neural or differentiable search policy."
+  ]
+}

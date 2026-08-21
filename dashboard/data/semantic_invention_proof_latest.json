@@ -1,0 +1,460 @@
+{
+  "report_version": "semantic-invention-universal-proof-v0.1",
+  "run_id": "RUN-semantic-invention-proof-20260819T035039570509Z",
+  "source_discovery_run_id": "RUN-semantic-invention-20260819T034903017774Z",
+  "created_at": "2026-08-19T03:50:39.570509Z",
+  "verdict": "invented_semantic_equivalence_and_formula_universally_proven",
+  "formula": "F(a,b,c,d,p,q,r,s,n): F0=a, F1=b, F2=c, F3=d, F(t+4)=p*F(t+3)+q*F(t+2)+r*F(t+1)+s*F(t)",
+  "theorem_kind": "natural_weighted_fourth_order_recurrence",
+  "invented_semantic": {
+    "semantic_id": "SEM-a53207275de5e536",
+    "opcode": 16,
+    "source_record_ids": [
+      "UF-a2d651ea9bae624b"
+    ],
+    "normalized_micro_shape": [
+      1,
+      3,
+      2,
+      12,
+      2,
+      7,
+      3,
+      2,
+      10,
+      3,
+      11
+    ],
+    "supporting_occurrence_count": 3,
+    "compression_saving_per_use": 10,
+    "effect_schema": "repeat source-cell accumulation into target-cell by runtime counter"
+  },
+  "domain": {
+    "kind": "natural_number_nonuples",
+    "arity": 9,
+    "includes_zero": true
+  },
+  "invariants": [
+    "outer_counter=n-t",
+    "(state_a,state_b,state_c,state_d)=(F_t,F_(t+1),F_(t+2),F_(t+3))",
+    "after semantic term p: next=p*F_(t+3)",
+    "after semantic term q: next=p*F_(t+3)+q*F_(t+2)",
+    "after semantic term r: next=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)",
+    "after semantic term s: next=F_(t+4)",
+    "0<=t<=n"
+  ],
+  "termination_measure": "each induced semantic expands to a finite natural-counter accumulation; after four semantic calls the outer natural counter decreases by 1",
+  "proof": {
+    "verifier_version": "independent-universal-verifier-v0.1",
+    "theorem_kind": "natural_weighted_fourth_order_recurrence",
+    "passed": true,
+    "recomputed_statement": "for every a,b,c,d,p,q,r,s,n in N, output(a,b,c,d,p,q,r,s,n)=F_n where F_0=a, F_1=b, F_2=c, F_3=d, and F_(t+4)=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)+s*F_t",
+    "obligations": [
+      {
+        "obligation_id": "certificate_version",
+        "passed": true,
+        "evidence": "universal-formula-certificate-v0.1"
+      },
+      {
+        "obligation_id": "registered_theorem_rule",
+        "passed": true,
+        "evidence": "natural_weighted_fourth_order_recurrence"
+      },
+      {
+        "obligation_id": "program_digest_binding",
+        "passed": true,
+        "evidence": "recomputed sha256=3d72735598fbe4af7f76d3560dcde75caae3c654dbcabf9fd13120cc72dd33d3"
+      },
+      {
+        "obligation_id": "explicit_domain",
+        "passed": true,
+        "evidence": "canonical domain: {\"arity\": 9, \"includes_zero\": true, \"kind\": \"natural_number_nonuples\"}"
+      },
+      {
+        "obligation_id": "statement_binding",
+        "passed": true,
+        "evidence": "recomputed: for every a,b,c,d,p,q,r,s,n in N, output(a,b,c,d,p,q,r,s,n)=F_n where F_0=a, F_1=b, F_2=c, F_3=d, and F_(t+4)=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)+s*F_t"
+      },
+      {
+        "obligation_id": "invariant_binding",
+        "passed": true,
+        "evidence": "recomputed: ['outer_counter=n-t', '(state_a,state_b,state_c,state_d)=(F_t,F_(t+1),F_(t+2),F_(t+3))', 'after semantic term p: next=p*F_(t+3)', 'after semantic term q: next=p*F_(t+3)+q*F_(t+2)', 'after semantic term r: next=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)', 'after semantic term s: next=F_(t+4)', '0<=t<=n']"
+      },
+      {
+        "obligation_id": "termination_measure_binding",
+        "passed": true,
+        "evidence": "recomputed: each induced semantic expands to a finite natural-counter accumulation; after four semantic calls the outer natural counter decreases by 1"
+      },
+      {
+        "obligation_id": "exact_program_structure",
+        "passed": true,
+        "evidence": "recomputed sha256=3d72735598fbe4af7f76d3560dcde75caae3c654dbcabf9fd13120cc72dd33d3"
+      },
+      {
+        "obligation_id": "invented_semantic_identity",
+        "passed": true,
+        "evidence": "semantic=SEM-a53207275de5e536; opcode=16"
+      },
+      {
+        "obligation_id": "microcode_shape_binding",
+        "passed": true,
+        "evidence": "opcode effect is bound to the extracted 11-instruction micro-shape"
+      },
+      {
+        "obligation_id": "proven_support_gate",
+        "passed": true,
+        "evidence": "supporting proven occurrences=3"
+      },
+      {
+        "obligation_id": "all_nine_arguments_runtime_free",
+        "passed": true,
+        "evidence": "runtime input references=[0, 1, 2, 3, 4, 5, 6, 7, 8]"
+      },
+      {
+        "obligation_id": "four_induced_semantic_calls",
+        "passed": true,
+        "evidence": "semantic call count=4"
+      },
+      {
+        "obligation_id": "semantic_equivalence_base",
+        "passed": true,
+        "evidence": "for counter 0, both the extracted micro-loop and opcode 16 leave target unchanged"
+      },
+      {
+        "obligation_id": "semantic_equivalence_step",
+        "passed": true,
+        "evidence": "one further natural-counter step adds source once; induction gives target'=target+counter*source"
+      },
+      {
+        "obligation_id": "no_intrinsic_multiply_divide_or_power",
+        "passed": true,
+        "evidence": "opcode 16 is defined by repeated OP_ADD_CELL microcode, not an intrinsic arithmetic primitive"
+      },
+      {
+        "obligation_id": "instruction_limit_crossing",
+        "passed": true,
+        "evidence": "compressed=34; equivalent expanded=74; former limit=64"
+      },
+      {
+        "obligation_id": "outer_induction_base",
+        "passed": true,
+        "evidence": "at t=0 state=(a,b,c,d)=(F_0,F_1,F_2,F_3), next=0 and counter=n"
+      },
+      {
+        "obligation_id": "four_term_accumulation",
+        "passed": true,
+        "evidence": "four semantic calls accumulate pF_(t+3)+qF_(t+2)+rF_(t+1)+sF_t=F_(t+4)"
+      },
+      {
+        "obligation_id": "four_state_shift",
+        "passed": true,
+        "evidence": "state shifts from (F_t..F_(t+3)) to (F_(t+1)..F_(t+4))"
+      },
+      {
+        "obligation_id": "zero_coefficient_boundaries",
+        "passed": true,
+        "evidence": "a zero runtime counter performs zero additions and preserves the shared accumulator"
+      },
+      {
+        "obligation_id": "termination",
+        "passed": true,
+        "evidence": "each induced semantic expands to a finite natural-counter accumulation; after four semantic calls the outer natural counter decreases by 1"
+      },
+      {
+        "obligation_id": "exit_correctness",
+        "passed": true,
+        "evidence": "outer counter zero implies t=n and emitted state_a=F_n"
+      }
+    ],
+    "certificate_digest": "16e28b03dcc4545a25c59c973d307d415343a8655fc994ab315b97990e228cbd"
+  },
+  "strict_room_record": {
+    "room_record_id": "UF-0f66f2b49b8d5983",
+    "source_room_record_id": "SF-c007e3c59c083afe",
+    "source_operation_id": "SEMANTIC-GROWN-3d72735598fbe4af",
+    "theorem_kind": "natural_weighted_fourth_order_recurrence",
+    "theorem_statement": "for every a,b,c,d,p,q,r,s,n in N, output(a,b,c,d,p,q,r,s,n)=F_n where F_0=a, F_1=b, F_2=c, F_3=d, and F_(t+4)=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)+s*F_t",
+    "domain": {
+      "kind": "natural_number_nonuples",
+      "arity": 9,
+      "includes_zero": true
+    },
+    "program": {
+      "substrate": "induced_semantic_word_machine_v0.1",
+      "word_width": 2,
+      "invented_semantic": {
+        "semantic_id": "SEM-a53207275de5e536",
+        "opcode": 16,
+        "source_record_ids": [
+          "UF-a2d651ea9bae624b"
+        ],
+        "normalized_micro_shape": [
+          1,
+          3,
+          2,
+          12,
+          2,
+          7,
+          3,
+          2,
+          10,
+          3,
+          11
+        ],
+        "supporting_occurrence_count": 3,
+        "compression_saving_per_use": 10,
+        "effect_schema": "repeat source-cell accumulation into target-cell by runtime counter"
+      },
+      "words": [
+        14,
+        6,
+        1,
+        8,
+        3,
+        68,
+        1,
+        0,
+        3,
+        69,
+        1,
+        1,
+        3,
+        70,
+        1,
+        2,
+        3,
+        71,
+        1,
+        3,
+        3,
+        72,
+        2,
+        68,
+        12,
+        31,
+        4,
+        0,
+        3,
+        73,
+        16,
+        47273,
+        16,
+        57173,
+        16,
+        67073,
+        16,
+        76973,
+        2,
+        70,
+        3,
+        69,
+        2,
+        71,
+        3,
+        70,
+        2,
+        72,
+        3,
+        71,
+        2,
+        73,
+        3,
+        72,
+        2,
+        68,
+        10,
+        1,
+        3,
+        68,
+        11,
+        11,
+        2,
+        69,
+        15,
+        0,
+        0,
+        0
+      ]
+    },
+    "certificate": {
+      "certificate_version": "universal-formula-certificate-v0.1",
+      "theorem_kind": "natural_weighted_fourth_order_recurrence",
+      "source_room_record_id": "SF-c007e3c59c083afe",
+      "source_operation_id": "SEMANTIC-GROWN-3d72735598fbe4af",
+      "program_digest": "3d72735598fbe4af7f76d3560dcde75caae3c654dbcabf9fd13120cc72dd33d3",
+      "domain": {
+        "kind": "natural_number_nonuples",
+        "arity": 9,
+        "includes_zero": true
+      },
+      "claimed_statement": "for every a,b,c,d,p,q,r,s,n in N, output(a,b,c,d,p,q,r,s,n)=F_n where F_0=a, F_1=b, F_2=c, F_3=d, and F_(t+4)=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)+s*F_t",
+      "claimed_invariants": [
+        "outer_counter=n-t",
+        "(state_a,state_b,state_c,state_d)=(F_t,F_(t+1),F_(t+2),F_(t+3))",
+        "after semantic term p: next=p*F_(t+3)",
+        "after semantic term q: next=p*F_(t+3)+q*F_(t+2)",
+        "after semantic term r: next=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)",
+        "after semantic term s: next=F_(t+4)",
+        "0<=t<=n"
+      ],
+      "claimed_termination_measure": "each induced semantic expands to a finite natural-counter accumulation; after four semantic calls the outer natural counter decreases by 1"
+    },
+    "verification": {
+      "verifier_version": "independent-universal-verifier-v0.1",
+      "theorem_kind": "natural_weighted_fourth_order_recurrence",
+      "passed": true,
+      "recomputed_statement": "for every a,b,c,d,p,q,r,s,n in N, output(a,b,c,d,p,q,r,s,n)=F_n where F_0=a, F_1=b, F_2=c, F_3=d, and F_(t+4)=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)+s*F_t",
+      "obligations": [
+        {
+          "obligation_id": "certificate_version",
+          "passed": true,
+          "evidence": "universal-formula-certificate-v0.1"
+        },
+        {
+          "obligation_id": "registered_theorem_rule",
+          "passed": true,
+          "evidence": "natural_weighted_fourth_order_recurrence"
+        },
+        {
+          "obligation_id": "program_digest_binding",
+          "passed": true,
+          "evidence": "recomputed sha256=3d72735598fbe4af7f76d3560dcde75caae3c654dbcabf9fd13120cc72dd33d3"
+        },
+        {
+          "obligation_id": "explicit_domain",
+          "passed": true,
+          "evidence": "canonical domain: {\"arity\": 9, \"includes_zero\": true, \"kind\": \"natural_number_nonuples\"}"
+        },
+        {
+          "obligation_id": "statement_binding",
+          "passed": true,
+          "evidence": "recomputed: for every a,b,c,d,p,q,r,s,n in N, output(a,b,c,d,p,q,r,s,n)=F_n where F_0=a, F_1=b, F_2=c, F_3=d, and F_(t+4)=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)+s*F_t"
+        },
+        {
+          "obligation_id": "invariant_binding",
+          "passed": true,
+          "evidence": "recomputed: ['outer_counter=n-t', '(state_a,state_b,state_c,state_d)=(F_t,F_(t+1),F_(t+2),F_(t+3))', 'after semantic term p: next=p*F_(t+3)', 'after semantic term q: next=p*F_(t+3)+q*F_(t+2)', 'after semantic term r: next=p*F_(t+3)+q*F_(t+2)+r*F_(t+1)', 'after semantic term s: next=F_(t+4)', '0<=t<=n']"
+        },
+        {
+          "obligation_id": "termination_measure_binding",
+          "passed": true,
+          "evidence": "recomputed: each induced semantic expands to a finite natural-counter accumulation; after four semantic calls the outer natural counter decreases by 1"
+        },
+        {
+          "obligation_id": "exact_program_structure",
+          "passed": true,
+          "evidence": "recomputed sha256=3d72735598fbe4af7f76d3560dcde75caae3c654dbcabf9fd13120cc72dd33d3"
+        },
+        {
+          "obligation_id": "invented_semantic_identity",
+          "passed": true,
+          "evidence": "semantic=SEM-a53207275de5e536; opcode=16"
+        },
+        {
+          "obligation_id": "microcode_shape_binding",
+          "passed": true,
+          "evidence": "opcode effect is bound to the extracted 11-instruction micro-shape"
+        },
+        {
+          "obligation_id": "proven_support_gate",
+          "passed": true,
+          "evidence": "supporting proven occurrences=3"
+        },
+        {
+          "obligation_id": "all_nine_arguments_runtime_free",
+          "passed": true,
+          "evidence": "runtime input references=[0, 1, 2, 3, 4, 5, 6, 7, 8]"
+        },
+        {
+          "obligation_id": "four_induced_semantic_calls",
+          "passed": true,
+          "evidence": "semantic call count=4"
+        },
+        {
+          "obligation_id": "semantic_equivalence_base",
+          "passed": true,
+          "evidence": "for counter 0, both the extracted micro-loop and opcode 16 leave target unchanged"
+        },
+        {
+          "obligation_id": "semantic_equivalence_step",
+          "passed": true,
+          "evidence": "one further natural-counter step adds source once; induction gives target'=target+counter*source"
+        },
+        {
+          "obligation_id": "no_intrinsic_multiply_divide_or_power",
+          "passed": true,
+          "evidence": "opcode 16 is defined by repeated OP_ADD_CELL microcode, not an intrinsic arithmetic primitive"
+        },
+        {
+          "obligation_id": "instruction_limit_crossing",
+          "passed": true,
+          "evidence": "compressed=34; equivalent expanded=74; former limit=64"
+        },
+        {
+          "obligation_id": "outer_induction_base",
+          "passed": true,
+          "evidence": "at t=0 state=(a,b,c,d)=(F_0,F_1,F_2,F_3), next=0 and counter=n"
+        },
+        {
+          "obligation_id": "four_term_accumulation",
+          "passed": true,
+          "evidence": "four semantic calls accumulate pF_(t+3)+qF_(t+2)+rF_(t+1)+sF_t=F_(t+4)"
+        },
+        {
+          "obligation_id": "four_state_shift",
+          "passed": true,
+          "evidence": "state shifts from (F_t..F_(t+3)) to (F_(t+1)..F_(t+4))"
+        },
+        {
+          "obligation_id": "zero_coefficient_boundaries",
+          "passed": true,
+          "evidence": "a zero runtime counter performs zero additions and preserves the shared accumulator"
+        },
+        {
+          "obligation_id": "termination",
+          "passed": true,
+          "evidence": "each induced semantic expands to a finite natural-counter accumulation; after four semantic calls the outer natural counter decreases by 1"
+        },
+        {
+          "obligation_id": "exit_correctness",
+          "passed": true,
+          "evidence": "outer counter zero implies t=n and emitted state_a=F_n"
+        }
+      ],
+      "certificate_digest": "16e28b03dcc4545a25c59c973d307d415343a8655fc994ab315b97990e228cbd"
+    }
+  },
+  "strict_formula_total_before": 32,
+  "strict_formula_total_after": 33,
+  "room_proof_obligation_count": 467,
+  "room_proof_obligation_passed_count": 467,
+  "discovery_summary": {
+    "compressed_instruction_count": 34,
+    "equivalent_expanded_instruction_count": 74,
+    "crossed_old_instruction_limit": true,
+    "cegis_round_count": 5,
+    "sealed_passed": 5,
+    "sealed_total": 5,
+    "mistakes_recorded": 10,
+    "first_counterexample": {
+      "inputs": [
+        1,
+        2,
+        3,
+        4,
+        1,
+        1,
+        1,
+        1,
+        3
+      ],
+      "predicted": 3.0,
+      "observed": 4
+    }
+  },
+  "autonomy_boundary": {
+    "invented": "the system detected a repeated proven 11-instruction microprogram, allocated unused opcode 16 and learned its descriptor roles without a preassigned mathematical name",
+    "verified": "the evaluator proved opcode 16 equivalent to natural-counter repeated addition before admitting the dependent formula",
+    "host_supplied": "the detector, descriptor codec, extended interpreter and proof schema are host code; semantic execution is therefore constrained invention, not unrestricted self-modification"
+  }
+}

@@ -1,0 +1,1402 @@
+{
+  "report_version": "signed-control-extension-report-v0.1",
+  "run_id": "RUN-signed-control-extension-20260818T064033720022Z",
+  "created_at": "2026-08-18T06:40:33.749314Z",
+  "title": "匿名负输入控制分支发现实验",
+  "evaluator_posthoc_convention": "nonnegative_result_for_positive_second_input",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "verified_parent_controller_plus_synthesized_priority_branch",
+  "learner_received": {
+    "development_input_rows": [
+      [
+        -7,
+        3
+      ],
+      [
+        -8,
+        3
+      ],
+      [
+        -11,
+        4
+      ],
+      [
+        -12,
+        5
+      ],
+      [
+        -17,
+        5
+      ],
+      [
+        -20,
+        6
+      ],
+      [
+        -3,
+        5
+      ],
+      [
+        7,
+        3
+      ],
+      [
+        8,
+        3
+      ],
+      [
+        0,
+        3
+      ]
+    ],
+    "development_output_values": [
+      2,
+      1,
+      1,
+      3,
+      3,
+      4,
+      2,
+      1,
+      2,
+      0
+    ],
+    "target_concept_name": false,
+    "target_formula": false,
+    "signed_rule_description": false,
+    "sealed_cases_visible_during_search": false,
+    "parent_operation_id": "CTRL-2f51ec5cf9134520",
+    "generic_branch_choices": {
+      "guard_sensors": [
+        "a_equal",
+        "a_less"
+      ],
+      "trigger_polarity": [
+        false,
+        true
+      ],
+      "updates": [
+        "a_state",
+        "a_add",
+        "a_subtract"
+      ]
+    }
+  },
+  "search": {
+    "programs_generated": 640,
+    "programs_executed": 230,
+    "nonhalting_programs": 410,
+    "behavior_classes": 38,
+    "evidence_constants": [
+      {
+        "value": 0.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -20.0,
+          "right": -20.0
+        }
+      },
+      {
+        "value": -1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -12.0,
+          "right": -11.0
+        }
+      },
+      {
+        "value": 1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -11.0,
+          "right": -12.0
+        }
+      }
+    ]
+  },
+  "five_candidate_feedback": [
+    {
+      "rank": 1,
+      "candidate_id": "AB-1d25f9c6d653bc96",
+      "program": {
+        "substrate": "anonymous_priority_branch_control_v0.1",
+        "parent_operation_id": "CTRL-2f51ec5cf9134520",
+        "base_program": {
+          "substrate": "anonymous_single_state_control_v0.1",
+          "initial_state": {
+            "op": "a_input",
+            "index": 0
+          },
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": true
+          },
+          "update_when_continuing": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        },
+        "priority_branch": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_constant",
+              "constant": -1.0
+            },
+            "right": {
+              "op": "a_state"
+            },
+            "halt_when": false
+          },
+          "update_when_triggered": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "then": "restart_control_cycle"
+        }
+      },
+      "fit_mse": 0.0,
+      "maximum_absolute_error": 0.0,
+      "maximum_steps_used": 4,
+      "training_outputs": [
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0,
+        1.0,
+        2.0,
+        0.0
+      ],
+      "behavior_signature": [
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0,
+        1.0,
+        2.0,
+        0.0,
+        1.0,
+        7.0,
+        5.0
+      ],
+      "logic_signature": "ABLOGIC-4faa91b77156ab8d",
+      "program_nodes": 14,
+      "exact": true,
+      "sealed_results": [
+        {
+          "input": [
+            -29,
+            6
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            -31,
+            8
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            -64,
+            7
+          ],
+          "predicted": 6.0,
+          "observed": 6,
+          "absolute_error": 0.0,
+          "step_count": 10,
+          "passed": true
+        },
+        {
+          "input": [
+            -2,
+            9
+          ],
+          "predicted": 7.0,
+          "observed": 7,
+          "absolute_error": 0.0,
+          "step_count": 1,
+          "passed": true
+        },
+        {
+          "input": [
+            -81,
+            10
+          ],
+          "predicted": 9.0,
+          "observed": 9,
+          "absolute_error": 0.0,
+          "step_count": 9,
+          "passed": true
+        },
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        }
+      ],
+      "sealed_exact": true,
+      "disposition": "success_room",
+      "mistake_id": null
+    },
+    {
+      "rank": 2,
+      "candidate_id": "AB-62333513f439e5d9",
+      "program": {
+        "substrate": "anonymous_priority_branch_control_v0.1",
+        "parent_operation_id": "CTRL-2f51ec5cf9134520",
+        "base_program": {
+          "substrate": "anonymous_single_state_control_v0.1",
+          "initial_state": {
+            "op": "a_input",
+            "index": 0
+          },
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": true
+          },
+          "update_when_continuing": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        },
+        "priority_branch": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "right": {
+              "op": "a_state"
+            },
+            "halt_when": false
+          },
+          "update_when_triggered": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              },
+              {
+                "op": "a_state"
+              }
+            ]
+          },
+          "then": "restart_control_cycle"
+        }
+      },
+      "fit_mse": 0.6,
+      "maximum_absolute_error": 2.0,
+      "maximum_steps_used": 5,
+      "training_outputs": [
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        1.0,
+        2.0,
+        1.0
+      ],
+      "behavior_signature": [
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        1.0,
+        2.0,
+        1.0,
+        1.0,
+        3.0,
+        5.0
+      ],
+      "logic_signature": "ABLOGIC-4af2e20ad55c164c",
+      "program_nodes": 14,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            -29,
+            6
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 7,
+          "passed": true
+        },
+        {
+          "input": [
+            -31,
+            8
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 6,
+          "passed": true
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 7,
+          "passed": true
+        },
+        {
+          "input": [
+            -64,
+            7
+          ],
+          "predicted": 2.0,
+          "observed": 6,
+          "absolute_error": 4.0,
+          "step_count": 10,
+          "passed": false
+        },
+        {
+          "input": [
+            -2,
+            9
+          ],
+          "predicted": 3.0,
+          "observed": 7,
+          "absolute_error": 4.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            -81,
+            10
+          ],
+          "predicted": 2.0,
+          "observed": 9,
+          "absolute_error": 7.0,
+          "step_count": 9,
+          "passed": false
+        },
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-038ee07c2fa0a290"
+    },
+    {
+      "rank": 3,
+      "candidate_id": "AB-17af4e4efae0454c",
+      "program": {
+        "substrate": "anonymous_priority_branch_control_v0.1",
+        "parent_operation_id": "CTRL-2f51ec5cf9134520",
+        "base_program": {
+          "substrate": "anonymous_single_state_control_v0.1",
+          "initial_state": {
+            "op": "a_input",
+            "index": 0
+          },
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": true
+          },
+          "update_when_continuing": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        },
+        "priority_branch": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_constant",
+              "constant": 0.0
+            },
+            "halt_when": true
+          },
+          "update_when_triggered": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              },
+              {
+                "op": "a_state"
+              }
+            ]
+          },
+          "then": "restart_control_cycle"
+        }
+      },
+      "fit_mse": 0.7,
+      "maximum_absolute_error": 2.0,
+      "maximum_steps_used": 4,
+      "training_outputs": [
+        2.0,
+        0.0,
+        0.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        1.0,
+        2.0,
+        0.0
+      ],
+      "behavior_signature": [
+        2.0,
+        0.0,
+        0.0,
+        3.0,
+        3.0,
+        3.0,
+        4.0,
+        1.0,
+        2.0,
+        0.0,
+        0.0,
+        3.0,
+        5.0
+      ],
+      "logic_signature": "ABLOGIC-6d674c3a743cfe70",
+      "program_nodes": 14,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            -29,
+            6
+          ],
+          "predicted": 0.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 6,
+          "passed": false
+        },
+        {
+          "input": [
+            -31,
+            8
+          ],
+          "predicted": 0.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "predicted": 0.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 6,
+          "passed": false
+        },
+        {
+          "input": [
+            -64,
+            7
+          ],
+          "predicted": 2.0,
+          "observed": 6,
+          "absolute_error": 4.0,
+          "step_count": 10,
+          "passed": false
+        },
+        {
+          "input": [
+            -2,
+            9
+          ],
+          "predicted": 3.0,
+          "observed": 7,
+          "absolute_error": 4.0,
+          "step_count": 1,
+          "passed": false
+        },
+        {
+          "input": [
+            -81,
+            10
+          ],
+          "predicted": 2.0,
+          "observed": 9,
+          "absolute_error": 7.0,
+          "step_count": 9,
+          "passed": false
+        },
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-3f1ed7379171a302"
+    },
+    {
+      "rank": 4,
+      "candidate_id": "AB-641a88f8b2061ca4",
+      "program": {
+        "substrate": "anonymous_priority_branch_control_v0.1",
+        "parent_operation_id": "CTRL-2f51ec5cf9134520",
+        "base_program": {
+          "substrate": "anonymous_single_state_control_v0.1",
+          "initial_state": {
+            "op": "a_input",
+            "index": 0
+          },
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": true
+          },
+          "update_when_continuing": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        },
+        "priority_branch": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_constant",
+              "constant": -1.0
+            },
+            "halt_when": true
+          },
+          "update_when_triggered": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "then": "restart_control_cycle"
+        }
+      },
+      "fit_mse": 0.9,
+      "maximum_absolute_error": 3.0,
+      "maximum_steps_used": 4,
+      "training_outputs": [
+        -1.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0,
+        1.0,
+        2.0,
+        0.0
+      ],
+      "behavior_signature": [
+        -1.0,
+        1.0,
+        1.0,
+        3.0,
+        3.0,
+        4.0,
+        2.0,
+        1.0,
+        2.0,
+        0.0,
+        1.0,
+        7.0,
+        5.0
+      ],
+      "logic_signature": "ABLOGIC-66a74800821b1c3e",
+      "program_nodes": 14,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            -29,
+            6
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            -31,
+            8
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "absolute_error": 0.0,
+          "step_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            -64,
+            7
+          ],
+          "predicted": -1.0,
+          "observed": 6,
+          "absolute_error": 7.0,
+          "step_count": 9,
+          "passed": false
+        },
+        {
+          "input": [
+            -2,
+            9
+          ],
+          "predicted": 7.0,
+          "observed": 7,
+          "absolute_error": 0.0,
+          "step_count": 1,
+          "passed": true
+        },
+        {
+          "input": [
+            -81,
+            10
+          ],
+          "predicted": -1.0,
+          "observed": 9,
+          "absolute_error": 10.0,
+          "step_count": 8,
+          "passed": false
+        },
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-759da69a1ae017f1"
+    },
+    {
+      "rank": 5,
+      "candidate_id": "AB-529ea386822e7251",
+      "program": {
+        "substrate": "anonymous_priority_branch_control_v0.1",
+        "parent_operation_id": "CTRL-2f51ec5cf9134520",
+        "base_program": {
+          "substrate": "anonymous_single_state_control_v0.1",
+          "initial_state": {
+            "op": "a_input",
+            "index": 0
+          },
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_state"
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": true
+          },
+          "update_when_continuing": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        },
+        "priority_branch": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_constant",
+              "constant": 1.0
+            },
+            "right": {
+              "op": "a_state"
+            },
+            "halt_when": false
+          },
+          "update_when_triggered": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "then": "restart_control_cycle"
+        }
+      },
+      "fit_mse": 1.3,
+      "maximum_absolute_error": 2.0,
+      "maximum_steps_used": 22,
+      "training_outputs": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0
+      ],
+      "behavior_signature": [
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        2.0,
+        5.0
+      ],
+      "logic_signature": "ABLOGIC-5e91fb850f7eb4cc",
+      "program_nodes": 14,
+      "exact": false,
+      "sealed_results": [
+        {
+          "input": [
+            -29,
+            6
+          ],
+          "predicted": 2.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 31,
+          "passed": false
+        },
+        {
+          "input": [
+            -31,
+            8
+          ],
+          "predicted": 2.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 33,
+          "passed": false
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 1,
+          "absolute_error": 1.0,
+          "step_count": 46,
+          "passed": false
+        },
+        {
+          "input": [
+            -64,
+            7
+          ],
+          "predicted": 2.0,
+          "observed": 6,
+          "absolute_error": 4.0,
+          "step_count": 66,
+          "passed": false
+        },
+        {
+          "input": [
+            -2,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 7,
+          "absolute_error": 5.0,
+          "step_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -81,
+            10
+          ],
+          "predicted": 2.0,
+          "observed": 9,
+          "absolute_error": 7.0,
+          "step_count": 83,
+          "passed": false
+        },
+        {
+          "input": [
+            29,
+            6
+          ],
+          "predicted": 5.0,
+          "observed": 5,
+          "absolute_error": 0.0,
+          "step_count": 4,
+          "passed": true
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-35151e2987a6a526"
+    }
+  ],
+  "winner": {
+    "candidate_id": "AB-1d25f9c6d653bc96",
+    "program": {
+      "substrate": "anonymous_priority_branch_control_v0.1",
+      "parent_operation_id": "CTRL-2f51ec5cf9134520",
+      "base_program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_input",
+          "index": 0
+        },
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_state"
+          },
+          "right": {
+            "op": "a_input",
+            "index": 1
+          },
+          "halt_when": true
+        },
+        "update_when_continuing": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_input",
+              "index": 1
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      },
+      "priority_branch": {
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_constant",
+            "constant": -1.0
+          },
+          "right": {
+            "op": "a_state"
+          },
+          "halt_when": false
+        },
+        "update_when_triggered": {
+          "op": "a_add",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_input",
+              "index": 1
+            }
+          ]
+        },
+        "then": "restart_control_cycle"
+      }
+    },
+    "fit_mse": 0.0,
+    "maximum_absolute_error": 0.0,
+    "maximum_steps_used": 4,
+    "training_outputs": [
+      2.0,
+      1.0,
+      1.0,
+      3.0,
+      3.0,
+      4.0,
+      2.0,
+      1.0,
+      2.0,
+      0.0
+    ],
+    "behavior_signature": [
+      2.0,
+      1.0,
+      1.0,
+      3.0,
+      3.0,
+      4.0,
+      2.0,
+      1.0,
+      2.0,
+      0.0,
+      1.0,
+      7.0,
+      5.0
+    ],
+    "logic_signature": "ABLOGIC-4faa91b77156ab8d",
+    "program_nodes": 14,
+    "exact": true,
+    "sealed_results": [
+      {
+        "input": [
+          -29,
+          6
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "step_count": 5,
+        "passed": true
+      },
+      {
+        "input": [
+          -31,
+          8
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "step_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          -44,
+          9
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "step_count": 5,
+        "passed": true
+      },
+      {
+        "input": [
+          -64,
+          7
+        ],
+        "predicted": 6.0,
+        "observed": 6,
+        "absolute_error": 0.0,
+        "step_count": 10,
+        "passed": true
+      },
+      {
+        "input": [
+          -2,
+          9
+        ],
+        "predicted": 7.0,
+        "observed": 7,
+        "absolute_error": 0.0,
+        "step_count": 1,
+        "passed": true
+      },
+      {
+        "input": [
+          -81,
+          10
+        ],
+        "predicted": 9.0,
+        "observed": 9,
+        "absolute_error": 0.0,
+        "step_count": 9,
+        "passed": true
+      },
+      {
+        "input": [
+          29,
+          6
+        ],
+        "predicted": 5.0,
+        "observed": 5,
+        "absolute_error": 0.0,
+        "step_count": 4,
+        "passed": true
+      }
+    ],
+    "adversarial_results": [
+      {
+        "input": [
+          -255,
+          32
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "step_count": 8,
+        "passed": true
+      },
+      {
+        "input": [
+          -256,
+          32
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 8,
+        "passed": true
+      },
+      {
+        "input": [
+          -1,
+          1
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 1,
+        "passed": true
+      },
+      {
+        "input": [
+          -100,
+          1
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 100,
+        "passed": true
+      },
+      {
+        "input": [
+          255,
+          32
+        ],
+        "predicted": 31.0,
+        "observed": 31,
+        "absolute_error": 0.0,
+        "step_count": 7,
+        "passed": true
+      },
+      {
+        "input": [
+          0,
+          7
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "step_count": 0,
+        "passed": true
+      }
+    ],
+    "posthoc_human_interpretation": "Before the parent controller, when the integer state is below zero, add the positive second input and restart the control cycle."
+  },
+  "gates": [
+    {
+      "gate_id": "parent_controller_loaded_from_success_room",
+      "passed": true,
+      "actual": "CTRL-2f51ec5cf9134520",
+      "threshold": "active verified parent"
+    },
+    {
+      "gate_id": "target_names_absent_from_learner_program",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "signed_development_rows_exact",
+      "passed": true,
+      "actual": 0.0,
+      "threshold": 0
+    },
+    {
+      "gate_id": "sealed_signed_and_positive_rows_exact",
+      "passed": true,
+      "actual": 7,
+      "threshold": 7
+    },
+    {
+      "gate_id": "boundary_rows_exact",
+      "passed": true,
+      "actual": 6,
+      "threshold": 6
+    },
+    {
+      "gate_id": "five_distinct_branch_structures_reported",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    }
+  ],
+  "success_room_record": {
+    "room_record_id": "SF-70937e5f29e9b04c",
+    "operation_id": "BRANCH-1d25f9c6d653bc96",
+    "definition": {
+      "substrate": "anonymous_priority_branch_control_v0.1",
+      "parent_operation_id": "CTRL-2f51ec5cf9134520",
+      "base_program": {
+        "substrate": "anonymous_single_state_control_v0.1",
+        "initial_state": {
+          "op": "a_input",
+          "index": 0
+        },
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_state"
+          },
+          "right": {
+            "op": "a_input",
+            "index": 1
+          },
+          "halt_when": true
+        },
+        "update_when_continuing": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_input",
+              "index": 1
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      },
+      "priority_branch": {
+        "guard": {
+          "op": "a_less",
+          "left": {
+            "op": "a_constant",
+            "constant": -1.0
+          },
+          "right": {
+            "op": "a_state"
+          },
+          "halt_when": false
+        },
+        "update_when_triggered": {
+          "op": "a_add",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_input",
+              "index": 1
+            }
+          ]
+        },
+        "then": "restart_control_cycle"
+      }
+    },
+    "parent_operation_ids": [
+      "CTRL-2f51ec5cf9134520"
+    ],
+    "validation_scope": "anonymous_signed_first_input_positive_second_input_v0.1",
+    "knowledge_status": "bounded",
+    "evidence": {
+      "run_id": "RUN-signed-control-extension-20260818T064033720022Z",
+      "development_case_count": 10,
+      "sealed_case_count": 7,
+      "adversarial_case_count": 6,
+      "all_exact": true
+    }
+  },
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The discovered extension defines signed first inputs only when the second input is positive.",
+    "Negative or zero second inputs remain outside scope and may require a different convention.",
+    "The host still provides generic equality and order sensors.",
+    "The extension adds one priority branch; arbitrary nested branching is not yet synthesized."
+  ]
+}

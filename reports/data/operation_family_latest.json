@@ -1,0 +1,515 @@
+{
+  "report_version": "operation-family-report-v0.1",
+  "run_id": "RUN-operation-family-20260818T022404877921Z",
+  "created_at": "2026-08-18T02:24:04.917400Z",
+  "title": "五公式可执行操作族创造实验",
+  "verdict": "failed",
+  "claim_scope": "five_distinct_unary_composed_operations",
+  "architecture": "opaque_operation_id_composition_not_concept_generation",
+  "input": {
+    "unordered_numeric_values": [
+      2.0,
+      6.0,
+      12.0,
+      20.0,
+      30.0,
+      42.0,
+      56.0
+    ],
+    "target_formulas": false,
+    "natural_language_labels": false,
+    "minimum_reported_formulas": 5
+  },
+  "seed_search": {
+    "programs_generated": 834,
+    "selected_candidate": {
+      "candidate_id": "REL-8ca24d00fd6fdba9",
+      "program": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -6.0
+          },
+          {
+            "op": "r_value"
+          }
+        ]
+      },
+      "program_nodes": 3,
+      "direct_edges": [
+        {
+          "source": 12.0,
+          "target": 6.0
+        }
+      ],
+      "best_observed_chain": [
+        42.0,
+        30.0,
+        12.0,
+        6.0
+      ],
+      "observed_chain_count": 4,
+      "bridges": [
+        {
+          "source": 20.0,
+          "target": 2.0,
+          "steps": 3,
+          "generated_intermediates": [
+            14.0,
+            8.0
+          ]
+        },
+        {
+          "source": 30.0,
+          "target": 12.0,
+          "steps": 3,
+          "generated_intermediates": [
+            24.0,
+            18.0
+          ]
+        },
+        {
+          "source": 42.0,
+          "target": 30.0,
+          "steps": 2,
+          "generated_intermediates": [
+            36.0
+          ]
+        },
+        {
+          "source": 56.0,
+          "target": 20.0,
+          "steps": 6,
+          "generated_intermediates": [
+            50.0,
+            44.0,
+            38.0,
+            32.0,
+            26.0
+          ]
+        }
+      ],
+      "generated_nodes": [
+        8.0,
+        14.0,
+        18.0,
+        24.0,
+        26.0,
+        32.0,
+        36.0,
+        38.0,
+        44.0,
+        50.0
+      ]
+    }
+  },
+  "formulas": [
+    {
+      "formula_index": 1,
+      "operation_id": "ROP-8ca24d00fd6fdba9",
+      "parent_operation_ids": [],
+      "machine_definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -6.0
+          },
+          {
+            "op": "r_value"
+          }
+        ]
+      },
+      "machine_formula": "seed_program",
+      "post_hoc_readable_formula": "F1(x) = (-6.0 + x)",
+      "underlying_logic_signature": "{\"control_state\":false,\"dynamic_storage\":false,\"primitive_operations\":[\"r_add\",\"r_constant\"],\"substrate_family\":\"stateless_unary_relation_ast\"}",
+      "observed_edges": [
+        {
+          "source": 12.0,
+          "target": 6.0
+        }
+      ],
+      "probe_results": [
+        {
+          "input": -7.0,
+          "output": -13.0
+        },
+        {
+          "input": 0.0,
+          "output": -6.0
+        },
+        {
+          "input": 3.0,
+          "output": -3.0
+        },
+        {
+          "input": 11.0,
+          "output": 5.0
+        }
+      ]
+    },
+    {
+      "formula_index": 2,
+      "operation_id": "ROP-a48f88a3d0c8c5fc",
+      "parent_operation_ids": [
+        "ROP-8ca24d00fd6fdba9",
+        "ROP-8ca24d00fd6fdba9"
+      ],
+      "machine_definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -6.0
+          },
+          {
+            "op": "r_add",
+            "args": [
+              {
+                "op": "r_constant",
+                "constant": -6.0
+              },
+              {
+                "op": "r_value"
+              }
+            ]
+          }
+        ]
+      },
+      "machine_formula": "compose(ROP-8ca24d00fd6fdba9, ROP-8ca24d00fd6fdba9)",
+      "post_hoc_readable_formula": "F2(x) = F1(F1(x))",
+      "underlying_logic_signature": "{\"control_state\":false,\"dynamic_storage\":false,\"primitive_operations\":[\"r_add\",\"r_constant\"],\"substrate_family\":\"stateless_unary_relation_ast\"}",
+      "observed_edges": [
+        {
+          "source": 42.0,
+          "target": 30.0
+        }
+      ],
+      "probe_results": [
+        {
+          "input": -7.0,
+          "output": -19.0
+        },
+        {
+          "input": 0.0,
+          "output": -12.0
+        },
+        {
+          "input": 3.0,
+          "output": -9.0
+        },
+        {
+          "input": 11.0,
+          "output": -1.0
+        }
+      ]
+    },
+    {
+      "formula_index": 3,
+      "operation_id": "ROP-b71caf05335957f7",
+      "parent_operation_ids": [
+        "ROP-8ca24d00fd6fdba9",
+        "ROP-a48f88a3d0c8c5fc"
+      ],
+      "machine_definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -6.0
+          },
+          {
+            "op": "r_add",
+            "args": [
+              {
+                "op": "r_constant",
+                "constant": -6.0
+              },
+              {
+                "op": "r_add",
+                "args": [
+                  {
+                    "op": "r_constant",
+                    "constant": -6.0
+                  },
+                  {
+                    "op": "r_value"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "machine_formula": "compose(ROP-8ca24d00fd6fdba9, ROP-a48f88a3d0c8c5fc)",
+      "post_hoc_readable_formula": "F3(x) = F1(F2(x))",
+      "underlying_logic_signature": "{\"control_state\":false,\"dynamic_storage\":false,\"primitive_operations\":[\"r_add\",\"r_constant\"],\"substrate_family\":\"stateless_unary_relation_ast\"}",
+      "observed_edges": [
+        {
+          "source": 20.0,
+          "target": 2.0
+        },
+        {
+          "source": 30.0,
+          "target": 12.0
+        }
+      ],
+      "probe_results": [
+        {
+          "input": -7.0,
+          "output": -25.0
+        },
+        {
+          "input": 0.0,
+          "output": -18.0
+        },
+        {
+          "input": 3.0,
+          "output": -15.0
+        },
+        {
+          "input": 11.0,
+          "output": -7.0
+        }
+      ]
+    },
+    {
+      "formula_index": 4,
+      "operation_id": "ROP-205907a29053a789",
+      "parent_operation_ids": [
+        "ROP-8ca24d00fd6fdba9",
+        "ROP-b71caf05335957f7"
+      ],
+      "machine_definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -6.0
+          },
+          {
+            "op": "r_add",
+            "args": [
+              {
+                "op": "r_constant",
+                "constant": -6.0
+              },
+              {
+                "op": "r_add",
+                "args": [
+                  {
+                    "op": "r_constant",
+                    "constant": -6.0
+                  },
+                  {
+                    "op": "r_add",
+                    "args": [
+                      {
+                        "op": "r_constant",
+                        "constant": -6.0
+                      },
+                      {
+                        "op": "r_value"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "machine_formula": "compose(ROP-8ca24d00fd6fdba9, ROP-b71caf05335957f7)",
+      "post_hoc_readable_formula": "F4(x) = F1(F3(x))",
+      "underlying_logic_signature": "{\"control_state\":false,\"dynamic_storage\":false,\"primitive_operations\":[\"r_add\",\"r_constant\"],\"substrate_family\":\"stateless_unary_relation_ast\"}",
+      "observed_edges": [
+        {
+          "source": 30.0,
+          "target": 6.0
+        }
+      ],
+      "probe_results": [
+        {
+          "input": -7.0,
+          "output": -31.0
+        },
+        {
+          "input": 0.0,
+          "output": -24.0
+        },
+        {
+          "input": 3.0,
+          "output": -21.0
+        },
+        {
+          "input": 11.0,
+          "output": -13.0
+        }
+      ]
+    },
+    {
+      "formula_index": 5,
+      "operation_id": "ROP-92e4909bd9f7acb8",
+      "parent_operation_ids": [
+        "ROP-8ca24d00fd6fdba9",
+        "ROP-205907a29053a789"
+      ],
+      "machine_definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_constant",
+            "constant": -6.0
+          },
+          {
+            "op": "r_add",
+            "args": [
+              {
+                "op": "r_constant",
+                "constant": -6.0
+              },
+              {
+                "op": "r_add",
+                "args": [
+                  {
+                    "op": "r_constant",
+                    "constant": -6.0
+                  },
+                  {
+                    "op": "r_add",
+                    "args": [
+                      {
+                        "op": "r_constant",
+                        "constant": -6.0
+                      },
+                      {
+                        "op": "r_add",
+                        "args": [
+                          {
+                            "op": "r_constant",
+                            "constant": -6.0
+                          },
+                          {
+                            "op": "r_value"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      "machine_formula": "compose(ROP-8ca24d00fd6fdba9, ROP-205907a29053a789)",
+      "post_hoc_readable_formula": "F5(x) = F1(F4(x))",
+      "underlying_logic_signature": "{\"control_state\":false,\"dynamic_storage\":false,\"primitive_operations\":[\"r_add\",\"r_constant\"],\"substrate_family\":\"stateless_unary_relation_ast\"}",
+      "observed_edges": [
+        {
+          "source": 42.0,
+          "target": 12.0
+        }
+      ],
+      "probe_results": [
+        {
+          "input": -7.0,
+          "output": -37.0
+        },
+        {
+          "input": 0.0,
+          "output": -30.0
+        },
+        {
+          "input": 3.0,
+          "output": -27.0
+        },
+        {
+          "input": 11.0,
+          "output": -19.0
+        }
+      ]
+    }
+  ],
+  "knowledge_records": [
+    {
+      "operation_id": "ROP-8ca24d00fd6fdba9",
+      "knowledge_id": "K-000001",
+      "status": "bounded"
+    },
+    {
+      "operation_id": "ROP-a48f88a3d0c8c5fc",
+      "knowledge_id": "K-000002",
+      "status": "bounded"
+    },
+    {
+      "operation_id": "ROP-b71caf05335957f7",
+      "knowledge_id": "K-000003",
+      "status": "bounded"
+    },
+    {
+      "operation_id": "ROP-205907a29053a789",
+      "knowledge_id": "K-000004",
+      "status": "bounded"
+    },
+    {
+      "operation_id": "ROP-92e4909bd9f7acb8",
+      "knowledge_id": "K-000005",
+      "status": "bounded"
+    }
+  ],
+  "success_formula_room": {
+    "path": "artifacts/formula_rooms/success/successful_formulas.jsonl",
+    "total_record_count": 3,
+    "records_for_this_run": [],
+    "append_only_hash_chain": true
+  },
+  "generated_concepts": [],
+  "generated_missing_values": [],
+  "gates": [
+    {
+      "gate_id": "minimum_formula_count",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "behaviorally_distinct_formulas",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "distinct_underlying_logic_families",
+      "passed": false,
+      "actual": 1,
+      "threshold": 5
+    },
+    {
+      "gate_id": "all_formulas_callable_by_operation_id",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "all_formulas_have_observed_relation",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "general_binary_operation",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    }
+  ],
+  "ledger_event_count": 20,
+  "limitations": [
+    "The five formulas are unary operations created by repeated composition of the first discovered operation.",
+    "They may collapse to identical behavior and are not a general two-input operation.",
+    "The base substrate still supplies value reading, addition, subtraction, and composition.",
+    "Readable formulas are exact renderings of the executable tree; operation ids and executable definitions remain authoritative."
+  ]
+}

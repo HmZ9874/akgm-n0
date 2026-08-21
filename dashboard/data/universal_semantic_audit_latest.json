@@ -1,0 +1,173 @@
+{
+  "report_version": "universal-semantic-audit-loop-v0.1",
+  "run_id": "RUN-universal-semantic-audit-20260819T094909287070Z",
+  "created_at": "2026-08-19T09:49:09.287070Z",
+  "verdict": "active_operator_library_reached_universally_proven_fixed_point",
+  "meaning_of_universal": {
+    "formal_domain": "all commutative additive groups (therefore Z, Q, R under exact addition, and Z/nZ)",
+    "proof_rule": "unique normal form in the free abelian group",
+    "not_claimed": "valid in every possible mathematical structure regardless of whether subtraction is defined"
+  },
+  "loop": {
+    "input_operator_count": 100,
+    "active_operator_count": 100,
+    "removed_operator_count": 0,
+    "round_count": 2,
+    "converged": true,
+    "rounds": [
+      {
+        "round": 1,
+        "input_count": 100,
+        "removed_count": 0,
+        "survivor_count": 100,
+        "active_digest": "e11a56553a91086f7d84dfbffa3fbeb815a81cfb3c5149005cd24479c3eb3b02",
+        "stable_round_count": 1
+      },
+      {
+        "round": 2,
+        "input_count": 100,
+        "removed_count": 0,
+        "survivor_count": 100,
+        "active_digest": "e11a56553a91086f7d84dfbffa3fbeb815a81cfb3c5149005cd24479c3eb3b02",
+        "stable_round_count": 2
+      }
+    ],
+    "active_digest": "e11a56553a91086f7d84dfbffa3fbeb815a81cfb3c5149005cd24479c3eb3b02"
+  },
+  "proof_summary": {
+    "active_semantics_passed": 100,
+    "active_semantics_total": 100,
+    "obligations_passed": 500,
+    "obligations_total": 500,
+    "natural_number_safe_without_subtraction_count": 28,
+    "requires_additive_inverse_count": 72
+  },
+  "negative_control": {
+    "description": "corrupt the first operator coefficient certificate to 999",
+    "audit": {
+      "auditor_version": "free-abelian-normal-form-auditor-v0.1",
+      "operator_id": "ESEM-204d24fdf54baf41",
+      "passed": false,
+      "universal_domain": "all commutative additive groups (therefore Z, Q, R under exact addition, and Z/nZ)",
+      "natural_number_safe": false,
+      "canonical_vector": [
+        999,
+        -1,
+        0,
+        0
+      ],
+      "obligations": [
+        {
+          "obligation_id": "declared_total_algebraic_domain",
+          "passed": true,
+          "evidence": "all commutative additive groups (therefore Z, Q, R under exact addition, and Z/nZ)"
+        },
+        {
+          "obligation_id": "instruction_free_group_normal_form",
+          "passed": false,
+          "evidence": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "obligation_id": "compiled_effect_free_group_normal_form",
+          "passed": false,
+          "evidence": [
+            1,
+            -1,
+            0,
+            0
+          ]
+        },
+        {
+          "obligation_id": "universal_equality_by_unique_normal_form",
+          "passed": false,
+          "evidence": "equal coefficient vectors are identical in the free abelian group, hence under every group homomorphism"
+        },
+        {
+          "obligation_id": "independent_executable_proof_still_passes",
+          "passed": false,
+          "evidence": "independent-evolved-operator-verifier-v0.1"
+        }
+      ]
+    },
+    "isolated_loop_rounds": [
+      {
+        "round": 1,
+        "input_count": 1,
+        "removed_count": 1,
+        "survivor_count": 0,
+        "active_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "stable_round_count": 0
+      },
+      {
+        "round": 2,
+        "input_count": 0,
+        "removed_count": 0,
+        "survivor_count": 0,
+        "active_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "stable_round_count": 1
+      },
+      {
+        "round": 3,
+        "input_count": 0,
+        "removed_count": 0,
+        "survivor_count": 0,
+        "active_digest": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "stable_round_count": 2
+      }
+    ],
+    "removed_from_active_catalog": true
+  },
+  "active_catalog": {
+    "path": "artifacts/semantics/active_evolved_semantics.json",
+    "count": 100,
+    "contains_only_passed_audits": true
+  },
+  "rejection_room": {
+    "path": "artifacts/mistakes/rejected_semantics.jsonl",
+    "new_actual_rejections": 0,
+    "history_is_preserved": true
+  },
+  "gates": [
+    {
+      "gate_id": "audit_loop_reached_fixed_point",
+      "passed": true,
+      "actual": 2,
+      "required": 2
+    },
+    {
+      "gate_id": "every_active_semantic_has_universal_domain_proof",
+      "passed": true,
+      "actual": 100,
+      "required": 100
+    },
+    {
+      "gate_id": "all_free_group_normal_form_obligations_pass",
+      "passed": true,
+      "actual": 500,
+      "required": 500
+    },
+    {
+      "gate_id": "failed_semantic_is_removed_from_active_catalog",
+      "passed": true,
+      "actual": 1,
+      "required": 1
+    },
+    {
+      "gate_id": "active_catalog_contains_no_failed_audit",
+      "passed": true,
+      "actual": 0,
+      "required": 0
+    }
+  ],
+  "limitations": [
+    "No nontrivial expression is meaningful in literally every mathematical structure; the audit therefore uses an explicit algebraic domain contract.",
+    "A semantic can be universally correct as an operator definition without being useful for every problem.",
+    "Natural numbers are not closed under unrestricted subtraction, so subtraction-based operators are tagged as requiring additive inverses rather than falsely claimed as N-to-N total functions.",
+    "Removal means exclusion from the active catalog; immutable proof and rejection history are retained for auditability."
+  ]
+}

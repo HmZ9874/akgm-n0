@@ -1,0 +1,47 @@
+{
+  "contract_id": "learner-contract-gen0-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "gen0-v0.1",
+  "input_interface": {
+    "observation_type": "anonymous_numeric_sequences",
+    "fields": [
+      "opaque_session_id",
+      "sequence_values",
+      "validity_mask",
+      "action_receipt"
+    ],
+    "ordering": "preserved_within_sequence",
+    "identifiers": "randomized_per_run",
+    "forbidden_metadata": [
+      "source_code",
+      "generator_parameters",
+      "semantic_names",
+      "family_identity",
+      "evaluation_split"
+    ]
+  },
+  "feedback_interface": {
+    "development_feedback": [
+      "numeric_fit_error",
+      "executable_program_cost",
+      "cross_task_reuse_gain",
+      "execution_status"
+    ],
+    "blind_feedback_during_search": []
+  },
+  "knowledge_interface": {
+    "readable_statuses": ["admitted", "bounded"],
+    "readable_fields": [
+      "knowledge_id",
+      "program_ast",
+      "parent_ids",
+      "valid_domain",
+      "numeric_evidence"
+    ],
+    "human_interpretation_visible": false
+  },
+  "network_access": false,
+  "natural_language_input": false,
+  "pretrained_model_access": false
+}
+

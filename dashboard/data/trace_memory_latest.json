@@ -1,0 +1,3578 @@
+{
+  "report_version": "trace-memory-discovery-report-v0.1",
+  "run_id": "RUN-trace-memory-20260818T074402724916Z",
+  "created_at": "2026-08-18T07:44:02.756416Z",
+  "title": "匿名转移轨迹第二记忆发现实验",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "verified_parent_plus_candidate_defined_second_memory_cell",
+  "learner_received": {
+    "development_input_rows": [
+      [
+        7,
+        3
+      ],
+      [
+        -7,
+        3
+      ],
+      [
+        8,
+        -3
+      ],
+      [
+        -8,
+        -3
+      ],
+      [
+        11,
+        4
+      ],
+      [
+        -12,
+        -5
+      ],
+      [
+        17,
+        -5
+      ],
+      [
+        -20,
+        -6
+      ],
+      [
+        2,
+        9
+      ],
+      [
+        0,
+        -7
+      ]
+    ],
+    "development_output_values": [
+      2,
+      -3,
+      2,
+      -3,
+      2,
+      -3,
+      3,
+      -4,
+      0,
+      0
+    ],
+    "transition_classes": [
+      "priority_transition",
+      "base_transition"
+    ],
+    "target_concept_name": false,
+    "target_formula": false,
+    "multiply_operation": false,
+    "divide_operation": false,
+    "host_step_count_as_output": false,
+    "sealed_cases_visible_during_search": false,
+    "parent_operation_id": "ADAPT-051ea7f44518dc30"
+  },
+  "search": {
+    "programs_generated": 7680,
+    "programs_executed": 7680,
+    "programs_rejected": 0,
+    "behavior_classes": 697,
+    "evidence_constants": [
+      {
+        "value": 0.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -20.0,
+          "right": -20.0
+        }
+      },
+      {
+        "value": -1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -8.0,
+          "right": -7.0
+        }
+      },
+      {
+        "value": 1.0,
+        "provenance": {
+          "op": "subtract_observed_numeric_atoms",
+          "left": -7.0,
+          "right": -8.0
+        }
+      }
+    ]
+  },
+  "five_candidate_feedback": [
+    {
+      "rank": 1,
+      "candidate_id": "TM-04ec46485b805d91",
+      "program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": 0.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "fit_mse": 0.0,
+      "maximum_absolute_error": 0.0,
+      "maximum_transitions_used": 4,
+      "training_outputs": [
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        3.0,
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "behavior_signature": [
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        3.0,
+        -4.0,
+        0.0,
+        0.0,
+        4.0,
+        -5.0,
+        3.0,
+        -4.0
+      ],
+      "logic_signature": "TMLOGIC-8bfcf874dd3c2d86",
+      "program_nodes": 28,
+      "exact": true,
+      "development_results": [
+        {
+          "input": [
+            7,
+            3
+          ],
+          "adapted_inputs": [
+            7.0,
+            3.0
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": true
+        },
+        {
+          "input": [
+            -7,
+            3
+          ],
+          "adapted_inputs": [
+            -7.0,
+            3.0
+          ],
+          "predicted": -3.0,
+          "observed": -3,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": -3.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            8,
+            -3
+          ],
+          "adapted_inputs": [
+            8.0,
+            3.0
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": true
+        },
+        {
+          "input": [
+            -8,
+            -3
+          ],
+          "adapted_inputs": [
+            -8.0,
+            3.0
+          ],
+          "predicted": -3.0,
+          "observed": -3,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -3.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            11,
+            4
+          ],
+          "adapted_inputs": [
+            11.0,
+            4.0
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "parent_output": 3.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": true
+        },
+        {
+          "input": [
+            -12,
+            -5
+          ],
+          "adapted_inputs": [
+            -12.0,
+            5.0
+          ],
+          "predicted": -3.0,
+          "observed": -3,
+          "absolute_error": 0.0,
+          "parent_output": 3.0,
+          "final_memory": -3.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            17,
+            -5
+          ],
+          "adapted_inputs": [
+            17.0,
+            5.0
+          ],
+          "predicted": 3.0,
+          "observed": 3,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            -20,
+            -6
+          ],
+          "adapted_inputs": [
+            -20.0,
+            6.0
+          ],
+          "predicted": -4.0,
+          "observed": -4,
+          "absolute_error": 0.0,
+          "parent_output": 4.0,
+          "final_memory": -4.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "adapted_inputs": [
+            2.0,
+            9.0
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": 0.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": true
+        },
+        {
+          "input": [
+            0,
+            -7
+          ],
+          "adapted_inputs": [
+            0.0,
+            7.0
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "absolute_error": 0.0,
+          "parent_output": 0.0,
+          "final_memory": 0.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": true
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            -6
+          ],
+          "adapted_inputs": [
+            29.0,
+            6.0
+          ],
+          "predicted": 4.0,
+          "observed": 4,
+          "absolute_error": 0.0,
+          "parent_output": 5.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            -29,
+            -6
+          ],
+          "adapted_inputs": [
+            -29.0,
+            6.0
+          ],
+          "predicted": -5.0,
+          "observed": -5,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -5.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "adapted_inputs": [
+            31.0,
+            8.0
+          ],
+          "predicted": 3.0,
+          "observed": 3,
+          "absolute_error": 0.0,
+          "parent_output": 7.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            -31,
+            -8
+          ],
+          "adapted_inputs": [
+            -31.0,
+            8.0
+          ],
+          "predicted": -4.0,
+          "observed": -4,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            44,
+            -9
+          ],
+          "adapted_inputs": [
+            44.0,
+            9.0
+          ],
+          "predicted": 4.0,
+          "observed": 4,
+          "absolute_error": 0.0,
+          "parent_output": 8.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "adapted_inputs": [
+            -44.0,
+            9.0
+          ],
+          "predicted": -5.0,
+          "observed": -5,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -5.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            63,
+            -7
+          ],
+          "adapted_inputs": [
+            63.0,
+            7.0
+          ],
+          "predicted": 9.0,
+          "observed": 9,
+          "absolute_error": 0.0,
+          "parent_output": 0.0,
+          "final_memory": 9.0,
+          "priority_transitions": 0,
+          "base_transitions": 9,
+          "transition_count": 9,
+          "passed": true
+        },
+        {
+          "input": [
+            -63,
+            -7
+          ],
+          "adapted_inputs": [
+            -63.0,
+            7.0
+          ],
+          "predicted": -9.0,
+          "observed": -9,
+          "absolute_error": 0.0,
+          "parent_output": 0.0,
+          "final_memory": -9.0,
+          "priority_transitions": 9,
+          "base_transitions": 0,
+          "transition_count": 9,
+          "passed": true
+        }
+      ],
+      "sealed_exact": true,
+      "disposition": "success_room",
+      "mistake_id": null
+    },
+    {
+      "rank": 2,
+      "candidate_id": "TM-60959b602af9e262",
+      "program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": 0.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "fit_mse": 0.0,
+      "maximum_absolute_error": 0.0,
+      "maximum_transitions_used": 4,
+      "training_outputs": [
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        3.0,
+        -4.0,
+        0.0,
+        0.0
+      ],
+      "behavior_signature": [
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        2.0,
+        -3.0,
+        3.0,
+        -4.0,
+        0.0,
+        0.0,
+        4.0,
+        -5.0,
+        3.0,
+        -4.0
+      ],
+      "logic_signature": "TMLOGIC-85383bbb3029d917",
+      "program_nodes": 28,
+      "exact": true,
+      "development_results": [
+        {
+          "input": [
+            7,
+            3
+          ],
+          "adapted_inputs": [
+            7.0,
+            3.0
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": true
+        },
+        {
+          "input": [
+            -7,
+            3
+          ],
+          "adapted_inputs": [
+            -7.0,
+            3.0
+          ],
+          "predicted": -3.0,
+          "observed": -3,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": -3.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            8,
+            -3
+          ],
+          "adapted_inputs": [
+            8.0,
+            3.0
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": true
+        },
+        {
+          "input": [
+            -8,
+            -3
+          ],
+          "adapted_inputs": [
+            -8.0,
+            3.0
+          ],
+          "predicted": -3.0,
+          "observed": -3,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -3.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            11,
+            4
+          ],
+          "adapted_inputs": [
+            11.0,
+            4.0
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "absolute_error": 0.0,
+          "parent_output": 3.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": true
+        },
+        {
+          "input": [
+            -12,
+            -5
+          ],
+          "adapted_inputs": [
+            -12.0,
+            5.0
+          ],
+          "predicted": -3.0,
+          "observed": -3,
+          "absolute_error": 0.0,
+          "parent_output": 3.0,
+          "final_memory": -3.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            17,
+            -5
+          ],
+          "adapted_inputs": [
+            17.0,
+            5.0
+          ],
+          "predicted": 3.0,
+          "observed": 3,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            -20,
+            -6
+          ],
+          "adapted_inputs": [
+            -20.0,
+            6.0
+          ],
+          "predicted": -4.0,
+          "observed": -4,
+          "absolute_error": 0.0,
+          "parent_output": 4.0,
+          "final_memory": -4.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "adapted_inputs": [
+            2.0,
+            9.0
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "absolute_error": 0.0,
+          "parent_output": 2.0,
+          "final_memory": 0.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": true
+        },
+        {
+          "input": [
+            0,
+            -7
+          ],
+          "adapted_inputs": [
+            0.0,
+            7.0
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "absolute_error": 0.0,
+          "parent_output": 0.0,
+          "final_memory": 0.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": true
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            -6
+          ],
+          "adapted_inputs": [
+            29.0,
+            6.0
+          ],
+          "predicted": 4.0,
+          "observed": 4,
+          "absolute_error": 0.0,
+          "parent_output": 5.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            -29,
+            -6
+          ],
+          "adapted_inputs": [
+            -29.0,
+            6.0
+          ],
+          "predicted": -5.0,
+          "observed": -5,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -5.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "adapted_inputs": [
+            31.0,
+            8.0
+          ],
+          "predicted": 3.0,
+          "observed": 3,
+          "absolute_error": 0.0,
+          "parent_output": 7.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": true
+        },
+        {
+          "input": [
+            -31,
+            -8
+          ],
+          "adapted_inputs": [
+            -31.0,
+            8.0
+          ],
+          "predicted": -4.0,
+          "observed": -4,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            44,
+            -9
+          ],
+          "adapted_inputs": [
+            44.0,
+            9.0
+          ],
+          "predicted": 4.0,
+          "observed": 4,
+          "absolute_error": 0.0,
+          "parent_output": 8.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": true
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "adapted_inputs": [
+            -44.0,
+            9.0
+          ],
+          "predicted": -5.0,
+          "observed": -5,
+          "absolute_error": 0.0,
+          "parent_output": 1.0,
+          "final_memory": -5.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": true
+        },
+        {
+          "input": [
+            63,
+            -7
+          ],
+          "adapted_inputs": [
+            63.0,
+            7.0
+          ],
+          "predicted": 9.0,
+          "observed": 9,
+          "absolute_error": 0.0,
+          "parent_output": 0.0,
+          "final_memory": 9.0,
+          "priority_transitions": 0,
+          "base_transitions": 9,
+          "transition_count": 9,
+          "passed": true
+        },
+        {
+          "input": [
+            -63,
+            -7
+          ],
+          "adapted_inputs": [
+            -63.0,
+            7.0
+          ],
+          "predicted": -9.0,
+          "observed": -9,
+          "absolute_error": 0.0,
+          "parent_output": 0.0,
+          "final_memory": -9.0,
+          "priority_transitions": 9,
+          "base_transitions": 0,
+          "transition_count": 9,
+          "passed": true
+        }
+      ],
+      "sealed_exact": true,
+      "disposition": "equivalent_success_not_admitted",
+      "mistake_id": null
+    },
+    {
+      "rank": 3,
+      "candidate_id": "TM-027ef471c7e6839d",
+      "program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": 1.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "fit_mse": 1.0,
+      "maximum_absolute_error": 1.0,
+      "maximum_transitions_used": 4,
+      "training_outputs": [
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        4.0,
+        -3.0,
+        1.0,
+        1.0
+      ],
+      "behavior_signature": [
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        4.0,
+        -3.0,
+        1.0,
+        1.0,
+        5.0,
+        -4.0,
+        4.0,
+        -3.0
+      ],
+      "logic_signature": "TMLOGIC-98137b5ada25f71d",
+      "program_nodes": 28,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            7,
+            3
+          ],
+          "adapted_inputs": [
+            7.0,
+            3.0
+          ],
+          "predicted": 3.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -7,
+            3
+          ],
+          "adapted_inputs": [
+            -7.0,
+            3.0
+          ],
+          "predicted": -2.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": -2.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            8,
+            -3
+          ],
+          "adapted_inputs": [
+            8.0,
+            3.0
+          ],
+          "predicted": 3.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -8,
+            -3
+          ],
+          "adapted_inputs": [
+            -8.0,
+            3.0
+          ],
+          "predicted": -2.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -2.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            11,
+            4
+          ],
+          "adapted_inputs": [
+            11.0,
+            4.0
+          ],
+          "predicted": 3.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 3.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -12,
+            -5
+          ],
+          "adapted_inputs": [
+            -12.0,
+            5.0
+          ],
+          "predicted": -2.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 3.0,
+          "final_memory": -2.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            17,
+            -5
+          ],
+          "adapted_inputs": [
+            17.0,
+            5.0
+          ],
+          "predicted": 4.0,
+          "observed": 3,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            -20,
+            -6
+          ],
+          "adapted_inputs": [
+            -20.0,
+            6.0
+          ],
+          "predicted": -3.0,
+          "observed": -4,
+          "absolute_error": 1.0,
+          "parent_output": 4.0,
+          "final_memory": -3.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "adapted_inputs": [
+            2.0,
+            9.0
+          ],
+          "predicted": 1.0,
+          "observed": 0,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            0,
+            -7
+          ],
+          "adapted_inputs": [
+            0.0,
+            7.0
+          ],
+          "predicted": 1.0,
+          "observed": 0,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": false
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            -6
+          ],
+          "adapted_inputs": [
+            29.0,
+            6.0
+          ],
+          "predicted": 5.0,
+          "observed": 4,
+          "absolute_error": 1.0,
+          "parent_output": 5.0,
+          "final_memory": 5.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -29,
+            -6
+          ],
+          "adapted_inputs": [
+            -29.0,
+            6.0
+          ],
+          "predicted": -4.0,
+          "observed": -5,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "adapted_inputs": [
+            31.0,
+            8.0
+          ],
+          "predicted": 4.0,
+          "observed": 3,
+          "absolute_error": 1.0,
+          "parent_output": 7.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            -31,
+            -8
+          ],
+          "adapted_inputs": [
+            -31.0,
+            8.0
+          ],
+          "predicted": -3.0,
+          "observed": -4,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -3.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            44,
+            -9
+          ],
+          "adapted_inputs": [
+            44.0,
+            9.0
+          ],
+          "predicted": 5.0,
+          "observed": 4,
+          "absolute_error": 1.0,
+          "parent_output": 8.0,
+          "final_memory": 5.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "adapted_inputs": [
+            -44.0,
+            9.0
+          ],
+          "predicted": -4.0,
+          "observed": -5,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            63,
+            -7
+          ],
+          "adapted_inputs": [
+            63.0,
+            7.0
+          ],
+          "predicted": 10.0,
+          "observed": 9,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": 10.0,
+          "priority_transitions": 0,
+          "base_transitions": 9,
+          "transition_count": 9,
+          "passed": false
+        },
+        {
+          "input": [
+            -63,
+            -7
+          ],
+          "adapted_inputs": [
+            -63.0,
+            7.0
+          ],
+          "predicted": -8.0,
+          "observed": -9,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": -8.0,
+          "priority_transitions": 9,
+          "base_transitions": 0,
+          "transition_count": 9,
+          "passed": false
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-bc480bfd713b5da9"
+    },
+    {
+      "rank": 4,
+      "candidate_id": "TM-2628739509e881d1",
+      "program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": -1.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "fit_mse": 1.0,
+      "maximum_absolute_error": 1.0,
+      "maximum_transitions_used": 4,
+      "training_outputs": [
+        1.0,
+        -4.0,
+        1.0,
+        -4.0,
+        1.0,
+        -4.0,
+        2.0,
+        -5.0,
+        -1.0,
+        -1.0
+      ],
+      "behavior_signature": [
+        1.0,
+        -4.0,
+        1.0,
+        -4.0,
+        1.0,
+        -4.0,
+        2.0,
+        -5.0,
+        -1.0,
+        -1.0,
+        3.0,
+        -6.0,
+        2.0,
+        -5.0
+      ],
+      "logic_signature": "TMLOGIC-d3f4ee24a3aedeb1",
+      "program_nodes": 28,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            7,
+            3
+          ],
+          "adapted_inputs": [
+            7.0,
+            3.0
+          ],
+          "predicted": 1.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -7,
+            3
+          ],
+          "adapted_inputs": [
+            -7.0,
+            3.0
+          ],
+          "predicted": -4.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": -4.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            8,
+            -3
+          ],
+          "adapted_inputs": [
+            8.0,
+            3.0
+          ],
+          "predicted": 1.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -8,
+            -3
+          ],
+          "adapted_inputs": [
+            -8.0,
+            3.0
+          ],
+          "predicted": -4.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            11,
+            4
+          ],
+          "adapted_inputs": [
+            11.0,
+            4.0
+          ],
+          "predicted": 1.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 3.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -12,
+            -5
+          ],
+          "adapted_inputs": [
+            -12.0,
+            5.0
+          ],
+          "predicted": -4.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 3.0,
+          "final_memory": -4.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            17,
+            -5
+          ],
+          "adapted_inputs": [
+            17.0,
+            5.0
+          ],
+          "predicted": 2.0,
+          "observed": 3,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            -20,
+            -6
+          ],
+          "adapted_inputs": [
+            -20.0,
+            6.0
+          ],
+          "predicted": -5.0,
+          "observed": -4,
+          "absolute_error": 1.0,
+          "parent_output": 4.0,
+          "final_memory": -5.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "adapted_inputs": [
+            2.0,
+            9.0
+          ],
+          "predicted": -1.0,
+          "observed": 0,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": -1.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            0,
+            -7
+          ],
+          "adapted_inputs": [
+            0.0,
+            7.0
+          ],
+          "predicted": -1.0,
+          "observed": 0,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": -1.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": false
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            -6
+          ],
+          "adapted_inputs": [
+            29.0,
+            6.0
+          ],
+          "predicted": 3.0,
+          "observed": 4,
+          "absolute_error": 1.0,
+          "parent_output": 5.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -29,
+            -6
+          ],
+          "adapted_inputs": [
+            -29.0,
+            6.0
+          ],
+          "predicted": -6.0,
+          "observed": -5,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -6.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "adapted_inputs": [
+            31.0,
+            8.0
+          ],
+          "predicted": 2.0,
+          "observed": 3,
+          "absolute_error": 1.0,
+          "parent_output": 7.0,
+          "final_memory": 2.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            -31,
+            -8
+          ],
+          "adapted_inputs": [
+            -31.0,
+            8.0
+          ],
+          "predicted": -5.0,
+          "observed": -4,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -5.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            44,
+            -9
+          ],
+          "adapted_inputs": [
+            44.0,
+            9.0
+          ],
+          "predicted": 3.0,
+          "observed": 4,
+          "absolute_error": 1.0,
+          "parent_output": 8.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "adapted_inputs": [
+            -44.0,
+            9.0
+          ],
+          "predicted": -6.0,
+          "observed": -5,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -6.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            63,
+            -7
+          ],
+          "adapted_inputs": [
+            63.0,
+            7.0
+          ],
+          "predicted": 8.0,
+          "observed": 9,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": 8.0,
+          "priority_transitions": 0,
+          "base_transitions": 9,
+          "transition_count": 9,
+          "passed": false
+        },
+        {
+          "input": [
+            -63,
+            -7
+          ],
+          "adapted_inputs": [
+            -63.0,
+            7.0
+          ],
+          "predicted": -10.0,
+          "observed": -9,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": -10.0,
+          "priority_transitions": 9,
+          "base_transitions": 0,
+          "transition_count": 9,
+          "passed": false
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-9f1917bfde717e44"
+    },
+    {
+      "rank": 5,
+      "candidate_id": "TM-42f9f6e1f5eb6f75",
+      "program": {
+        "substrate": "anonymous_dual_state_trace_memory_v0.1",
+        "parent_operation_id": "ADAPT-051ea7f44518dc30",
+        "parent_program": {
+          "substrate": "anonymous_conditional_input_adapter_v0.1",
+          "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+          "parent_program": {
+            "substrate": "anonymous_priority_branch_control_v0.1",
+            "parent_operation_id": "CTRL-2f51ec5cf9134520",
+            "base_program": {
+              "substrate": "anonymous_single_state_control_v0.1",
+              "initial_state": {
+                "op": "a_input",
+                "index": 0
+              },
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_state"
+                },
+                "right": {
+                  "op": "a_input",
+                  "index": 1
+                },
+                "halt_when": true
+              },
+              "update_when_continuing": {
+                "op": "a_subtract",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "output": {
+                "op": "a_state"
+              }
+            },
+            "priority_branch": {
+              "guard": {
+                "op": "a_less",
+                "left": {
+                  "op": "a_constant",
+                  "constant": -1.0
+                },
+                "right": {
+                  "op": "a_state"
+                },
+                "halt_when": false
+              },
+              "update_when_triggered": {
+                "op": "a_add",
+                "args": [
+                  {
+                    "op": "a_state"
+                  },
+                  {
+                    "op": "a_input",
+                    "index": 1
+                  }
+                ]
+              },
+              "then": "restart_control_cycle"
+            }
+          },
+          "adapter": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": false
+            },
+            "second_input_when_triggered": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_constant",
+                  "constant": 0.0
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "second_input_otherwise": {
+              "op": "a_input",
+              "index": 1
+            }
+          }
+        },
+        "memory": {
+          "initial": {
+            "op": "a_constant",
+            "constant": 1.0
+          },
+          "update_on_priority_transition": {
+            "op": "a_add",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          "update_on_base_transition": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_state"
+              },
+              {
+                "op": "a_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          "output": {
+            "op": "a_state"
+          }
+        }
+      },
+      "fit_mse": 1.0,
+      "maximum_absolute_error": 1.0,
+      "maximum_transitions_used": 4,
+      "training_outputs": [
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        4.0,
+        -3.0,
+        1.0,
+        1.0
+      ],
+      "behavior_signature": [
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        3.0,
+        -2.0,
+        4.0,
+        -3.0,
+        1.0,
+        1.0,
+        5.0,
+        -4.0,
+        4.0,
+        -3.0
+      ],
+      "logic_signature": "TMLOGIC-01fd9f01a58f7bb6",
+      "program_nodes": 28,
+      "exact": false,
+      "development_results": [
+        {
+          "input": [
+            7,
+            3
+          ],
+          "adapted_inputs": [
+            7.0,
+            3.0
+          ],
+          "predicted": 3.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -7,
+            3
+          ],
+          "adapted_inputs": [
+            -7.0,
+            3.0
+          ],
+          "predicted": -2.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": -2.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            8,
+            -3
+          ],
+          "adapted_inputs": [
+            8.0,
+            3.0
+          ],
+          "predicted": 3.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -8,
+            -3
+          ],
+          "adapted_inputs": [
+            -8.0,
+            3.0
+          ],
+          "predicted": -2.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -2.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            11,
+            4
+          ],
+          "adapted_inputs": [
+            11.0,
+            4.0
+          ],
+          "predicted": 3.0,
+          "observed": 2,
+          "absolute_error": 1.0,
+          "parent_output": 3.0,
+          "final_memory": 3.0,
+          "priority_transitions": 0,
+          "base_transitions": 2,
+          "transition_count": 2,
+          "passed": false
+        },
+        {
+          "input": [
+            -12,
+            -5
+          ],
+          "adapted_inputs": [
+            -12.0,
+            5.0
+          ],
+          "predicted": -2.0,
+          "observed": -3,
+          "absolute_error": 1.0,
+          "parent_output": 3.0,
+          "final_memory": -2.0,
+          "priority_transitions": 3,
+          "base_transitions": 0,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            17,
+            -5
+          ],
+          "adapted_inputs": [
+            17.0,
+            5.0
+          ],
+          "predicted": 4.0,
+          "observed": 3,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            -20,
+            -6
+          ],
+          "adapted_inputs": [
+            -20.0,
+            6.0
+          ],
+          "predicted": -3.0,
+          "observed": -4,
+          "absolute_error": 1.0,
+          "parent_output": 4.0,
+          "final_memory": -3.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            2,
+            9
+          ],
+          "adapted_inputs": [
+            2.0,
+            9.0
+          ],
+          "predicted": 1.0,
+          "observed": 0,
+          "absolute_error": 1.0,
+          "parent_output": 2.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": false
+        },
+        {
+          "input": [
+            0,
+            -7
+          ],
+          "adapted_inputs": [
+            0.0,
+            7.0
+          ],
+          "predicted": 1.0,
+          "observed": 0,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": 1.0,
+          "priority_transitions": 0,
+          "base_transitions": 0,
+          "transition_count": 0,
+          "passed": false
+        }
+      ],
+      "sealed_results": [
+        {
+          "input": [
+            29,
+            -6
+          ],
+          "adapted_inputs": [
+            29.0,
+            6.0
+          ],
+          "predicted": 5.0,
+          "observed": 4,
+          "absolute_error": 1.0,
+          "parent_output": 5.0,
+          "final_memory": 5.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -29,
+            -6
+          ],
+          "adapted_inputs": [
+            -29.0,
+            6.0
+          ],
+          "predicted": -4.0,
+          "observed": -5,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            31,
+            8
+          ],
+          "adapted_inputs": [
+            31.0,
+            8.0
+          ],
+          "predicted": 4.0,
+          "observed": 3,
+          "absolute_error": 1.0,
+          "parent_output": 7.0,
+          "final_memory": 4.0,
+          "priority_transitions": 0,
+          "base_transitions": 3,
+          "transition_count": 3,
+          "passed": false
+        },
+        {
+          "input": [
+            -31,
+            -8
+          ],
+          "adapted_inputs": [
+            -31.0,
+            8.0
+          ],
+          "predicted": -3.0,
+          "observed": -4,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -3.0,
+          "priority_transitions": 4,
+          "base_transitions": 0,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            44,
+            -9
+          ],
+          "adapted_inputs": [
+            44.0,
+            9.0
+          ],
+          "predicted": 5.0,
+          "observed": 4,
+          "absolute_error": 1.0,
+          "parent_output": 8.0,
+          "final_memory": 5.0,
+          "priority_transitions": 0,
+          "base_transitions": 4,
+          "transition_count": 4,
+          "passed": false
+        },
+        {
+          "input": [
+            -44,
+            9
+          ],
+          "adapted_inputs": [
+            -44.0,
+            9.0
+          ],
+          "predicted": -4.0,
+          "observed": -5,
+          "absolute_error": 1.0,
+          "parent_output": 1.0,
+          "final_memory": -4.0,
+          "priority_transitions": 5,
+          "base_transitions": 0,
+          "transition_count": 5,
+          "passed": false
+        },
+        {
+          "input": [
+            63,
+            -7
+          ],
+          "adapted_inputs": [
+            63.0,
+            7.0
+          ],
+          "predicted": 10.0,
+          "observed": 9,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": 10.0,
+          "priority_transitions": 0,
+          "base_transitions": 9,
+          "transition_count": 9,
+          "passed": false
+        },
+        {
+          "input": [
+            -63,
+            -7
+          ],
+          "adapted_inputs": [
+            -63.0,
+            7.0
+          ],
+          "predicted": -8.0,
+          "observed": -9,
+          "absolute_error": 1.0,
+          "parent_output": 0.0,
+          "final_memory": -8.0,
+          "priority_transitions": 9,
+          "base_transitions": 0,
+          "transition_count": 9,
+          "passed": false
+        }
+      ],
+      "sealed_exact": false,
+      "disposition": "mistake_library",
+      "mistake_id": "AM-2c2ae9a1bf78e957"
+    }
+  ],
+  "winner": {
+    "candidate_id": "TM-04ec46485b805d91",
+    "program": {
+      "substrate": "anonymous_dual_state_trace_memory_v0.1",
+      "parent_operation_id": "ADAPT-051ea7f44518dc30",
+      "parent_program": {
+        "substrate": "anonymous_conditional_input_adapter_v0.1",
+        "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+        "parent_program": {
+          "substrate": "anonymous_priority_branch_control_v0.1",
+          "parent_operation_id": "CTRL-2f51ec5cf9134520",
+          "base_program": {
+            "substrate": "anonymous_single_state_control_v0.1",
+            "initial_state": {
+              "op": "a_input",
+              "index": 0
+            },
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_state"
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": true
+            },
+            "update_when_continuing": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          },
+          "priority_branch": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_state"
+              },
+              "halt_when": false
+            },
+            "update_when_triggered": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "then": "restart_control_cycle"
+          }
+        },
+        "adapter": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_constant",
+              "constant": -1.0
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": false
+          },
+          "second_input_when_triggered": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_constant",
+                "constant": 0.0
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "second_input_otherwise": {
+            "op": "a_input",
+            "index": 1
+          }
+        }
+      },
+      "memory": {
+        "initial": {
+          "op": "a_constant",
+          "constant": 0.0
+        },
+        "update_on_priority_transition": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_constant",
+              "constant": 1.0
+            }
+          ]
+        },
+        "update_on_base_transition": {
+          "op": "a_add",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_constant",
+              "constant": 1.0
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      }
+    },
+    "fit_mse": 0.0,
+    "maximum_absolute_error": 0.0,
+    "maximum_transitions_used": 4,
+    "training_outputs": [
+      2.0,
+      -3.0,
+      2.0,
+      -3.0,
+      2.0,
+      -3.0,
+      3.0,
+      -4.0,
+      0.0,
+      0.0
+    ],
+    "behavior_signature": [
+      2.0,
+      -3.0,
+      2.0,
+      -3.0,
+      2.0,
+      -3.0,
+      3.0,
+      -4.0,
+      0.0,
+      0.0,
+      4.0,
+      -5.0,
+      3.0,
+      -4.0
+    ],
+    "logic_signature": "TMLOGIC-8bfcf874dd3c2d86",
+    "program_nodes": 28,
+    "exact": true,
+    "development_results": [
+      {
+        "input": [
+          7,
+          3
+        ],
+        "adapted_inputs": [
+          7.0,
+          3.0
+        ],
+        "predicted": 2.0,
+        "observed": 2,
+        "absolute_error": 0.0,
+        "parent_output": 1.0,
+        "final_memory": 2.0,
+        "priority_transitions": 0,
+        "base_transitions": 2,
+        "transition_count": 2,
+        "passed": true
+      },
+      {
+        "input": [
+          -7,
+          3
+        ],
+        "adapted_inputs": [
+          -7.0,
+          3.0
+        ],
+        "predicted": -3.0,
+        "observed": -3,
+        "absolute_error": 0.0,
+        "parent_output": 2.0,
+        "final_memory": -3.0,
+        "priority_transitions": 3,
+        "base_transitions": 0,
+        "transition_count": 3,
+        "passed": true
+      },
+      {
+        "input": [
+          8,
+          -3
+        ],
+        "adapted_inputs": [
+          8.0,
+          3.0
+        ],
+        "predicted": 2.0,
+        "observed": 2,
+        "absolute_error": 0.0,
+        "parent_output": 2.0,
+        "final_memory": 2.0,
+        "priority_transitions": 0,
+        "base_transitions": 2,
+        "transition_count": 2,
+        "passed": true
+      },
+      {
+        "input": [
+          -8,
+          -3
+        ],
+        "adapted_inputs": [
+          -8.0,
+          3.0
+        ],
+        "predicted": -3.0,
+        "observed": -3,
+        "absolute_error": 0.0,
+        "parent_output": 1.0,
+        "final_memory": -3.0,
+        "priority_transitions": 3,
+        "base_transitions": 0,
+        "transition_count": 3,
+        "passed": true
+      },
+      {
+        "input": [
+          11,
+          4
+        ],
+        "adapted_inputs": [
+          11.0,
+          4.0
+        ],
+        "predicted": 2.0,
+        "observed": 2,
+        "absolute_error": 0.0,
+        "parent_output": 3.0,
+        "final_memory": 2.0,
+        "priority_transitions": 0,
+        "base_transitions": 2,
+        "transition_count": 2,
+        "passed": true
+      },
+      {
+        "input": [
+          -12,
+          -5
+        ],
+        "adapted_inputs": [
+          -12.0,
+          5.0
+        ],
+        "predicted": -3.0,
+        "observed": -3,
+        "absolute_error": 0.0,
+        "parent_output": 3.0,
+        "final_memory": -3.0,
+        "priority_transitions": 3,
+        "base_transitions": 0,
+        "transition_count": 3,
+        "passed": true
+      },
+      {
+        "input": [
+          17,
+          -5
+        ],
+        "adapted_inputs": [
+          17.0,
+          5.0
+        ],
+        "predicted": 3.0,
+        "observed": 3,
+        "absolute_error": 0.0,
+        "parent_output": 2.0,
+        "final_memory": 3.0,
+        "priority_transitions": 0,
+        "base_transitions": 3,
+        "transition_count": 3,
+        "passed": true
+      },
+      {
+        "input": [
+          -20,
+          -6
+        ],
+        "adapted_inputs": [
+          -20.0,
+          6.0
+        ],
+        "predicted": -4.0,
+        "observed": -4,
+        "absolute_error": 0.0,
+        "parent_output": 4.0,
+        "final_memory": -4.0,
+        "priority_transitions": 4,
+        "base_transitions": 0,
+        "transition_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          2,
+          9
+        ],
+        "adapted_inputs": [
+          2.0,
+          9.0
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "parent_output": 2.0,
+        "final_memory": 0.0,
+        "priority_transitions": 0,
+        "base_transitions": 0,
+        "transition_count": 0,
+        "passed": true
+      },
+      {
+        "input": [
+          0,
+          -7
+        ],
+        "adapted_inputs": [
+          0.0,
+          7.0
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": 0.0,
+        "priority_transitions": 0,
+        "base_transitions": 0,
+        "transition_count": 0,
+        "passed": true
+      }
+    ],
+    "sealed_results": [
+      {
+        "input": [
+          29,
+          -6
+        ],
+        "adapted_inputs": [
+          29.0,
+          6.0
+        ],
+        "predicted": 4.0,
+        "observed": 4,
+        "absolute_error": 0.0,
+        "parent_output": 5.0,
+        "final_memory": 4.0,
+        "priority_transitions": 0,
+        "base_transitions": 4,
+        "transition_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          -29,
+          -6
+        ],
+        "adapted_inputs": [
+          -29.0,
+          6.0
+        ],
+        "predicted": -5.0,
+        "observed": -5,
+        "absolute_error": 0.0,
+        "parent_output": 1.0,
+        "final_memory": -5.0,
+        "priority_transitions": 5,
+        "base_transitions": 0,
+        "transition_count": 5,
+        "passed": true
+      },
+      {
+        "input": [
+          31,
+          8
+        ],
+        "adapted_inputs": [
+          31.0,
+          8.0
+        ],
+        "predicted": 3.0,
+        "observed": 3,
+        "absolute_error": 0.0,
+        "parent_output": 7.0,
+        "final_memory": 3.0,
+        "priority_transitions": 0,
+        "base_transitions": 3,
+        "transition_count": 3,
+        "passed": true
+      },
+      {
+        "input": [
+          -31,
+          -8
+        ],
+        "adapted_inputs": [
+          -31.0,
+          8.0
+        ],
+        "predicted": -4.0,
+        "observed": -4,
+        "absolute_error": 0.0,
+        "parent_output": 1.0,
+        "final_memory": -4.0,
+        "priority_transitions": 4,
+        "base_transitions": 0,
+        "transition_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          44,
+          -9
+        ],
+        "adapted_inputs": [
+          44.0,
+          9.0
+        ],
+        "predicted": 4.0,
+        "observed": 4,
+        "absolute_error": 0.0,
+        "parent_output": 8.0,
+        "final_memory": 4.0,
+        "priority_transitions": 0,
+        "base_transitions": 4,
+        "transition_count": 4,
+        "passed": true
+      },
+      {
+        "input": [
+          -44,
+          9
+        ],
+        "adapted_inputs": [
+          -44.0,
+          9.0
+        ],
+        "predicted": -5.0,
+        "observed": -5,
+        "absolute_error": 0.0,
+        "parent_output": 1.0,
+        "final_memory": -5.0,
+        "priority_transitions": 5,
+        "base_transitions": 0,
+        "transition_count": 5,
+        "passed": true
+      },
+      {
+        "input": [
+          63,
+          -7
+        ],
+        "adapted_inputs": [
+          63.0,
+          7.0
+        ],
+        "predicted": 9.0,
+        "observed": 9,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": 9.0,
+        "priority_transitions": 0,
+        "base_transitions": 9,
+        "transition_count": 9,
+        "passed": true
+      },
+      {
+        "input": [
+          -63,
+          -7
+        ],
+        "adapted_inputs": [
+          -63.0,
+          7.0
+        ],
+        "predicted": -9.0,
+        "observed": -9,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": -9.0,
+        "priority_transitions": 9,
+        "base_transitions": 0,
+        "transition_count": 9,
+        "passed": true
+      }
+    ],
+    "adversarial_results": [
+      {
+        "input": [
+          255,
+          -32
+        ],
+        "adapted_inputs": [
+          255.0,
+          32.0
+        ],
+        "predicted": 7.0,
+        "observed": 7,
+        "absolute_error": 0.0,
+        "parent_output": 31.0,
+        "final_memory": 7.0,
+        "priority_transitions": 0,
+        "base_transitions": 7,
+        "transition_count": 7,
+        "passed": true
+      },
+      {
+        "input": [
+          -255,
+          -32
+        ],
+        "adapted_inputs": [
+          -255.0,
+          32.0
+        ],
+        "predicted": -8.0,
+        "observed": -8,
+        "absolute_error": 0.0,
+        "parent_output": 1.0,
+        "final_memory": -8.0,
+        "priority_transitions": 8,
+        "base_transitions": 0,
+        "transition_count": 8,
+        "passed": true
+      },
+      {
+        "input": [
+          256,
+          -32
+        ],
+        "adapted_inputs": [
+          256.0,
+          32.0
+        ],
+        "predicted": 8.0,
+        "observed": 8,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": 8.0,
+        "priority_transitions": 0,
+        "base_transitions": 8,
+        "transition_count": 8,
+        "passed": true
+      },
+      {
+        "input": [
+          -256,
+          -32
+        ],
+        "adapted_inputs": [
+          -256.0,
+          32.0
+        ],
+        "predicted": -8.0,
+        "observed": -8,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": -8.0,
+        "priority_transitions": 8,
+        "base_transitions": 0,
+        "transition_count": 8,
+        "passed": true
+      },
+      {
+        "input": [
+          -1,
+          -1
+        ],
+        "adapted_inputs": [
+          -1.0,
+          1.0
+        ],
+        "predicted": -1.0,
+        "observed": -1,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": -1.0,
+        "priority_transitions": 1,
+        "base_transitions": 0,
+        "transition_count": 1,
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          -1
+        ],
+        "adapted_inputs": [
+          1.0,
+          1.0
+        ],
+        "predicted": 1.0,
+        "observed": 1,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": 1.0,
+        "priority_transitions": 0,
+        "base_transitions": 1,
+        "transition_count": 1,
+        "passed": true
+      },
+      {
+        "input": [
+          0,
+          7
+        ],
+        "adapted_inputs": [
+          0.0,
+          7.0
+        ],
+        "predicted": 0.0,
+        "observed": 0,
+        "absolute_error": 0.0,
+        "parent_output": 0.0,
+        "final_memory": 0.0,
+        "priority_transitions": 0,
+        "base_transitions": 0,
+        "transition_count": 0,
+        "passed": true
+      }
+    ],
+    "posthoc_human_interpretation": "Initialize a second memory cell at zero. On the parent's priority transition, change that memory by negative one; on the parent's base transition, change it by positive one; return the second memory instead of the parent's final state."
+  },
+  "gates": [
+    {
+      "gate_id": "verified_parent_loaded",
+      "passed": true,
+      "actual": "ADAPT-051ea7f44518dc30",
+      "threshold": "active verified parent"
+    },
+    {
+      "gate_id": "target_names_and_operations_absent",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "development_exact",
+      "passed": true,
+      "actual": 0.0,
+      "threshold": 0
+    },
+    {
+      "gate_id": "sealed_exact",
+      "passed": true,
+      "actual": 8,
+      "threshold": 8
+    },
+    {
+      "gate_id": "adversarial_exact",
+      "passed": true,
+      "actual": 7,
+      "threshold": 7
+    },
+    {
+      "gate_id": "five_distinct_memory_structures_reported",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "second_memory_is_executable_not_host_step_read",
+      "passed": true,
+      "actual": "a_state",
+      "threshold": "a_state"
+    }
+  ],
+  "success_room_record": {
+    "room_record_id": "SF-920632cdf65ef69f",
+    "operation_id": "TRACE-04ec46485b805d91",
+    "definition": {
+      "substrate": "anonymous_dual_state_trace_memory_v0.1",
+      "parent_operation_id": "ADAPT-051ea7f44518dc30",
+      "parent_program": {
+        "substrate": "anonymous_conditional_input_adapter_v0.1",
+        "parent_operation_id": "BRANCH-1d25f9c6d653bc96",
+        "parent_program": {
+          "substrate": "anonymous_priority_branch_control_v0.1",
+          "parent_operation_id": "CTRL-2f51ec5cf9134520",
+          "base_program": {
+            "substrate": "anonymous_single_state_control_v0.1",
+            "initial_state": {
+              "op": "a_input",
+              "index": 0
+            },
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_state"
+              },
+              "right": {
+                "op": "a_input",
+                "index": 1
+              },
+              "halt_when": true
+            },
+            "update_when_continuing": {
+              "op": "a_subtract",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "output": {
+              "op": "a_state"
+            }
+          },
+          "priority_branch": {
+            "guard": {
+              "op": "a_less",
+              "left": {
+                "op": "a_constant",
+                "constant": -1.0
+              },
+              "right": {
+                "op": "a_state"
+              },
+              "halt_when": false
+            },
+            "update_when_triggered": {
+              "op": "a_add",
+              "args": [
+                {
+                  "op": "a_state"
+                },
+                {
+                  "op": "a_input",
+                  "index": 1
+                }
+              ]
+            },
+            "then": "restart_control_cycle"
+          }
+        },
+        "adapter": {
+          "guard": {
+            "op": "a_less",
+            "left": {
+              "op": "a_constant",
+              "constant": -1.0
+            },
+            "right": {
+              "op": "a_input",
+              "index": 1
+            },
+            "halt_when": false
+          },
+          "second_input_when_triggered": {
+            "op": "a_subtract",
+            "args": [
+              {
+                "op": "a_constant",
+                "constant": 0.0
+              },
+              {
+                "op": "a_input",
+                "index": 1
+              }
+            ]
+          },
+          "second_input_otherwise": {
+            "op": "a_input",
+            "index": 1
+          }
+        }
+      },
+      "memory": {
+        "initial": {
+          "op": "a_constant",
+          "constant": 0.0
+        },
+        "update_on_priority_transition": {
+          "op": "a_subtract",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_constant",
+              "constant": 1.0
+            }
+          ]
+        },
+        "update_on_base_transition": {
+          "op": "a_add",
+          "args": [
+            {
+              "op": "a_state"
+            },
+            {
+              "op": "a_constant",
+              "constant": 1.0
+            }
+          ]
+        },
+        "output": {
+          "op": "a_state"
+        }
+      }
+    },
+    "parent_operation_ids": [
+      "ADAPT-051ea7f44518dc30"
+    ],
+    "validation_scope": "anonymous_signed_integer_trace_memory_v0.1",
+    "knowledge_status": "bounded",
+    "evidence": {
+      "run_id": "RUN-trace-memory-20260818T074402724916Z",
+      "development_case_count": 10,
+      "sealed_case_count": 8,
+      "adversarial_case_count": 7,
+      "all_exact": true
+    }
+  },
+  "success_room_active_count": 8,
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "The new memory program is bounded to registered integer inputs with a nonzero second input.",
+    "The host exposes two anonymous transition events and supplies the generic second memory substrate.",
+    "The candidate creates and updates memory itself; it is not given the host step counter as an output.",
+    "The posthoc quotient-like interpretation is an evaluator description, not a learner input."
+  ]
+}

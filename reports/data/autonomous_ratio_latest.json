@@ -1,0 +1,668 @@
+{
+  "report_version": "autonomous-ratio-normalization-v0.1",
+  "run_id": "RUN-autonomous-ratio-20260820T024007776553Z",
+  "created_at": "2026-08-20T02:40:07.776553Z",
+  "verdict": "normalized_ratio_representation_invented_by_remainder_chain_and_common_block_compression",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-canonicalization-20260820T023613046892Z",
+    "frontier": {
+      "world_id": "WORLD-normalized-selection-mass-53",
+      "structural_signature": "normalized_part_to_whole_mass",
+      "status": "dependency_blocked",
+      "missing_dependency": "normalized_ratio_representation",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "capability_invention": {
+    "candidate_strategy_modes": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "candidate_zero_modes": [
+      0,
+      1,
+      2
+    ],
+    "mode_names_visible_to_search": false,
+    "selected_strategy_mode": 4,
+    "selected_zero_mode": 1,
+    "proof_interpretation": "repeated remainder grouping followed by common-block compression and a unique zero normal form",
+    "new_dependency_signature": "normalized_ratio_representation"
+  },
+  "search": {
+    "candidate_count": 30,
+    "exact_candidate_count": 3,
+    "selected_program": {
+      "program_id": "QRP-5d4ca2cae355de6b",
+      "part_slot": 0,
+      "whole_slot": 1,
+      "strategy_mode": 4,
+      "zero_mode": 1
+    },
+    "selected_token_cost": 468,
+    "selected_reward": 999532
+  },
+  "discovery": {
+    "foundation_level": 10,
+    "semantic": {
+      "semantic_id": "QSEM-3b412465307b4dee",
+      "opcode": 10,
+      "program": {
+        "program_id": "QRP-5d4ca2cae355de6b",
+        "part_slot": 0,
+        "whole_slot": 1,
+        "strategy_mode": 4,
+        "zero_mode": 1
+      },
+      "dependency_semantic_ids": [
+        "CSEM-b9aacd5426b56d40",
+        "PSEM-b6863ee740b31807"
+      ],
+      "source_task_ids": [
+        "WORLD-normalized-selection-mass-53"
+      ],
+      "structural_signature": "normalized_part_to_whole_mass",
+      "invented_dependency_signature": "normalized_ratio_representation"
+    },
+    "structural_origin": "map every positive-whole pair of finite cardinalities to the unique coprime pair in the same common-scaling class",
+    "posthoc_name": "greatest common divisor reduction / nonnegative rational representation",
+    "posthoc_formula": "normalize(a,b)=(a/g,b/g) for b>0 and g=gcd(a,b), with normalize(0,b)=(0,1)",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "verification": {
+    "verifier_version": "independent-ratio-frontier-verifier-v0.1",
+    "semantic_id": "QSEM-3b412465307b4dee",
+    "passed": true,
+    "invented_mechanism": "repeated remainder grouping followed by common-block compression and a unique zero normal form",
+    "structural_statement": "map every positive-whole pair of finite cardinalities to the unique coprime pair in the same common-scaling class",
+    "posthoc_mathematical_name": "greatest common divisor reduction / nonnegative rational representation",
+    "posthoc_cardinality_statement": "normalize(a,b)=(a/g,b/g) for b>0 and g=gcd(a,b), with normalize(0,b)=(0,1)",
+    "declared_domain": "nonnegative part cardinality and positive whole cardinality",
+    "not_claimed": "negative rationals, rational arithmetic closure, real numbers, probability axioms, limits, or measure theory",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "Euclidean remainder invariant, strict descent, gcd maximality, and coprime-normal-form uniqueness",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "QSEM-3b412465307b4dee"
+      },
+      {
+        "obligation_id": "exact_ratio_program_binding",
+        "passed": true,
+        "evidence": "QRP-5d4ca2cae355de6b"
+      },
+      {
+        "obligation_id": "blocked_world_signature_binding",
+        "passed": true,
+        "evidence": "normalized_part_to_whole_mass"
+      },
+      {
+        "obligation_id": "normalized_ratio_dependency_invented",
+        "passed": true,
+        "evidence": "normalized_ratio_representation"
+      },
+      {
+        "obligation_id": "part_whole_remainder_chain_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "QRP-5d4ca2cae355de6b",
+          "part_slot": 0,
+          "whole_slot": 1,
+          "strategy_mode": 4,
+          "zero_mode": 1
+        }
+      },
+      {
+        "obligation_id": "depends_on_prior_division_and_combination_semantics",
+        "passed": true,
+        "evidence": [
+          "CSEM-b9aacd5426b56d40",
+          "PSEM-b6863ee740b31807"
+        ]
+      },
+      {
+        "obligation_id": "positive_whole_domain",
+        "passed": true,
+        "evidence": "empty whole is rejected; every verified input has positive whole cardinality"
+      },
+      {
+        "obligation_id": "zero_part_unique_normal_form",
+        "passed": true,
+        "evidence": "all zero-part pairs normalize to (0,1)"
+      },
+      {
+        "obligation_id": "remainder_chain_strictly_decreases",
+        "passed": true,
+        "evidence": "for y>0, the next second component is x mod y and lies in [0,y)"
+      },
+      {
+        "obligation_id": "remainder_chain_preserves_common_divisors",
+        "passed": true,
+        "evidence": "common divisors of (x,y) equal common divisors of (y,x mod y)"
+      },
+      {
+        "obligation_id": "terminal_nonzero_component_is_greatest_common_divisor",
+        "passed": true,
+        "evidence": "strict descent terminates at (g,0), and preserved divisors make g greatest"
+      },
+      {
+        "obligation_id": "both_components_divided_by_same_positive_block",
+        "passed": true,
+        "evidence": "output lengths are input cardinalities grouped by the terminal common block"
+      },
+      {
+        "obligation_id": "reduced_components_are_coprime",
+        "passed": true,
+        "evidence": "any remaining common block would contradict greatest-common termination"
+      },
+      {
+        "obligation_id": "scale_invariant_normal_form",
+        "passed": true,
+        "evidence": [
+          [
+            [
+              2,
+              3
+            ],
+            [
+              4,
+              6
+            ]
+          ],
+          [
+            [
+              3,
+              5
+            ],
+            [
+              21,
+              35
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              0,
+              19
+            ]
+          ],
+          [
+            [
+              17,
+              42
+            ],
+            [
+              34,
+              84
+            ]
+          ]
+        ]
+      },
+      {
+        "obligation_id": "equivalent_positive_pairs_have_same_normal_form",
+        "passed": true,
+        "evidence": "a/b=c/d with positive denominators iff cross-products agree; division by gcd yields the same coprime pair"
+      },
+      {
+        "obligation_id": "distinct_coprime_pairs_are_not_collapsed",
+        "passed": true,
+        "evidence": "coprime positive-denominator pairs are unique representatives of their scaling classes"
+      },
+      {
+        "obligation_id": "independent_hidden_replay",
+        "passed": true,
+        "evidence": "14/14 hidden replays"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "the nonnegative second component strictly decreases at every nonterminal remainder round"
+      },
+      {
+        "obligation_id": "honest_grouping_token_accounting",
+        "passed": true,
+        "evidence": "every remainder/grouping round and emitted unary mark is charged"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "the learner saw integer reduction and zero modes plus finite tapes, not gcd, fraction, rational, probability, or target formulas"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "RATIO-HIDDEN-00",
+        "source_lengths": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_lengths": [
+          0,
+          1
+        ],
+        "posthoc_common_divisor": 1,
+        "posthoc_expected_reduced_pair": [
+          0,
+          1
+        ],
+        "primitive_execution_tokens": 3,
+        "reduction_rounds": 0
+      },
+      {
+        "case_id": "RATIO-HIDDEN-01",
+        "source_lengths": [
+          0,
+          17
+        ],
+        "passed": true,
+        "output_lengths": [
+          0,
+          1
+        ],
+        "posthoc_common_divisor": 17,
+        "posthoc_expected_reduced_pair": [
+          0,
+          1
+        ],
+        "primitive_execution_tokens": 3,
+        "reduction_rounds": 0
+      },
+      {
+        "case_id": "RATIO-HIDDEN-02",
+        "source_lengths": [
+          1,
+          1
+        ],
+        "passed": true,
+        "output_lengths": [
+          1,
+          1
+        ],
+        "posthoc_common_divisor": 1,
+        "posthoc_expected_reduced_pair": [
+          1,
+          1
+        ],
+        "primitive_execution_tokens": 6,
+        "reduction_rounds": 1
+      },
+      {
+        "case_id": "RATIO-HIDDEN-03",
+        "source_lengths": [
+          1,
+          7
+        ],
+        "passed": true,
+        "output_lengths": [
+          1,
+          7
+        ],
+        "posthoc_common_divisor": 1,
+        "posthoc_expected_reduced_pair": [
+          1,
+          7
+        ],
+        "primitive_execution_tokens": 21,
+        "reduction_rounds": 2
+      },
+      {
+        "case_id": "RATIO-HIDDEN-04",
+        "source_lengths": [
+          2,
+          4
+        ],
+        "passed": true,
+        "output_lengths": [
+          1,
+          2
+        ],
+        "posthoc_common_divisor": 2,
+        "posthoc_expected_reduced_pair": [
+          1,
+          2
+        ],
+        "primitive_execution_tokens": 12,
+        "reduction_rounds": 2
+      },
+      {
+        "case_id": "RATIO-HIDDEN-05",
+        "source_lengths": [
+          3,
+          9
+        ],
+        "passed": true,
+        "output_lengths": [
+          1,
+          3
+        ],
+        "posthoc_common_divisor": 3,
+        "posthoc_expected_reduced_pair": [
+          1,
+          3
+        ],
+        "primitive_execution_tokens": 15,
+        "reduction_rounds": 2
+      },
+      {
+        "case_id": "RATIO-HIDDEN-06",
+        "source_lengths": [
+          4,
+          10
+        ],
+        "passed": true,
+        "output_lengths": [
+          2,
+          5
+        ],
+        "posthoc_common_divisor": 2,
+        "posthoc_expected_reduced_pair": [
+          2,
+          5
+        ],
+        "primitive_execution_tokens": 24,
+        "reduction_rounds": 3
+      },
+      {
+        "case_id": "RATIO-HIDDEN-07",
+        "source_lengths": [
+          6,
+          8
+        ],
+        "passed": true,
+        "output_lengths": [
+          3,
+          4
+        ],
+        "posthoc_common_divisor": 2,
+        "posthoc_expected_reduced_pair": [
+          3,
+          4
+        ],
+        "primitive_execution_tokens": 26,
+        "reduction_rounds": 3
+      },
+      {
+        "case_id": "RATIO-HIDDEN-08",
+        "source_lengths": [
+          12,
+          30
+        ],
+        "passed": true,
+        "output_lengths": [
+          2,
+          5
+        ],
+        "posthoc_common_divisor": 6,
+        "posthoc_expected_reduced_pair": [
+          2,
+          5
+        ],
+        "primitive_execution_tokens": 36,
+        "reduction_rounds": 3
+      },
+      {
+        "case_id": "RATIO-HIDDEN-09",
+        "source_lengths": [
+          17,
+          42
+        ],
+        "passed": true,
+        "output_lengths": [
+          17,
+          42
+        ],
+        "posthoc_common_divisor": 1,
+        "posthoc_expected_reduced_pair": [
+          17,
+          42
+        ],
+        "primitive_execution_tokens": 106,
+        "reduction_rounds": 4
+      },
+      {
+        "case_id": "RATIO-HIDDEN-10",
+        "source_lengths": [
+          31,
+          64
+        ],
+        "passed": true,
+        "output_lengths": [
+          31,
+          64
+        ],
+        "posthoc_common_divisor": 1,
+        "posthoc_expected_reduced_pair": [
+          31,
+          64
+        ],
+        "primitive_execution_tokens": 157,
+        "reduction_rounds": 4
+      },
+      {
+        "case_id": "RATIO-HIDDEN-11",
+        "source_lengths": [
+          42,
+          56
+        ],
+        "passed": true,
+        "output_lengths": [
+          3,
+          4
+        ],
+        "posthoc_common_divisor": 14,
+        "posthoc_expected_reduced_pair": [
+          3,
+          4
+        ],
+        "primitive_execution_tokens": 74,
+        "reduction_rounds": 3
+      },
+      {
+        "case_id": "RATIO-HIDDEN-12",
+        "source_lengths": [
+          84,
+          126
+        ],
+        "passed": true,
+        "output_lengths": [
+          2,
+          3
+        ],
+        "posthoc_common_divisor": 42,
+        "posthoc_expected_reduced_pair": [
+          2,
+          3
+        ],
+        "primitive_execution_tokens": 141,
+        "reduction_rounds": 3
+      },
+      {
+        "case_id": "RATIO-HIDDEN-13",
+        "source_lengths": [
+          144,
+          233
+        ],
+        "passed": true,
+        "output_lengths": [
+          144,
+          233
+        ],
+        "posthoc_common_divisor": 1,
+        "posthoc_expected_reduced_pair": [
+          144,
+          233
+        ],
+        "primitive_execution_tokens": 789,
+        "reduction_rounds": 12
+      }
+    ],
+    "scale_invariance_cases": [
+      {
+        "left": [
+          2,
+          3
+        ],
+        "right": [
+          4,
+          6
+        ],
+        "passed": true
+      },
+      {
+        "left": [
+          3,
+          5
+        ],
+        "right": [
+          21,
+          35
+        ],
+        "passed": true
+      },
+      {
+        "left": [
+          0,
+          1
+        ],
+        "right": [
+          0,
+          19
+        ],
+        "passed": true
+      },
+      {
+        "left": [
+          17,
+          42
+        ],
+        "right": [
+          34,
+          84
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 10,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差",
+      "有符号自然数差",
+      "自然数乘法",
+      "带余数的自然数除法",
+      "自然数幂",
+      "下降乘积/阶乘",
+      "组合数",
+      "最大公因数约简/非负有理数表示"
+    ]
+  },
+  "next_frontier": {
+    "world_id": "WORLD-finite-uniform-event-mass-61",
+    "structural_signature": "finite_uniform_event_mass",
+    "status": "ready",
+    "dependencies": [
+      "binomial_coefficient",
+      "normalized_ratio_representation"
+    ],
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/ratio_frontier_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/ratio_frontier_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 29,
+    "event_hash": "646049efb83686d9ec63b74f4f9b55a954d4c18275fa71dc0cade9c2127ba40a"
+  },
+  "gates": [
+    {
+      "gate_id": "ratio_gap_taken_from_autonomous_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-normalized-selection-mass-53",
+        "structural_signature": "normalized_part_to_whole_mass",
+        "status": "dependency_blocked",
+        "missing_dependency": "normalized_ratio_representation",
+        "posthoc_math_name": null
+      },
+      "required": "recorded gap"
+    },
+    {
+      "gate_id": "anonymous_reduction_strategies_compete",
+      "passed": true,
+      "actual": 30,
+      "required": 30
+    },
+    {
+      "gate_id": "remainder_chain_selected_by_exactness_and_token_reward",
+      "passed": true,
+      "actual": 4,
+      "required": 4
+    },
+    {
+      "gate_id": "normalized_pair_world_exactly_compressed",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "best_exact_ratio_program_selected",
+      "passed": true,
+      "actual": 999532,
+      "required": 999532
+    },
+    {
+      "gate_id": "ratio_semantic_universally_proved",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_ratio_cases_pass",
+      "passed": true,
+      "actual": 14,
+      "required": 14
+    },
+    {
+      "gate_id": "zero_whole_remains_undefined",
+      "passed": true,
+      "actual": "rejected",
+      "required": "rejected"
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 29
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 29
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_gcd_or_fraction_target",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "Only nonnegative numerator and positive denominator pairs are represented.",
+    "Rational addition, multiplication, ordering, and negative rationals are not yet proved.",
+    "Probability axioms and measure theory are not implied by a normalized ratio representation.",
+    "Unary tapes remain inefficient for large cardinalities."
+  ]
+}

@@ -1,0 +1,474 @@
+{
+  "report_version": "rewrite-growth-universal-proof-v0.1",
+  "run_id": "RUN-rewrite-growth-proof-20260819T032416653601Z",
+  "source_discovery_run_id": "RUN-rewrite-growth-20260819T032253466031Z",
+  "created_at": "2026-08-19T03:24:16.654108Z",
+  "verdict": "universally_proven_rewrite_grown_program_admitted",
+  "formula": "F(a,b,c,p,q,r,n): F0=a, F1=b, F2=c, F(t+3)=p*F(t+2)+q*F(t+1)+r*F(t)",
+  "theorem_kind": "natural_weighted_third_order_recurrence",
+  "domain": {
+    "kind": "natural_number_septuples",
+    "arity": 7,
+    "includes_zero": true
+  },
+  "invariants": [
+    "outer_counter=n-t",
+    "state_a=F_t",
+    "state_b=F_(t+1)",
+    "state_c=F_(t+2)",
+    "term_p: inner=p-j and next=j*F_(t+2)",
+    "term_q: inner=q-j and next=p*F_(t+2)+j*F_(t+1)",
+    "term_r: inner=r-j and next=p*F_(t+2)+q*F_(t+1)+j*F_t",
+    "0<=t<=n"
+  ],
+  "termination_measure": "lexicographic natural counters: each of p, q, r inner counters decreases by 1, then the outer counter decreases by 1",
+  "proof": {
+    "verifier_version": "independent-universal-verifier-v0.1",
+    "theorem_kind": "natural_weighted_third_order_recurrence",
+    "passed": true,
+    "recomputed_statement": "for every a,b,c,p,q,r,n in N, output(a,b,c,p,q,r,n)=F_n where F_0=a, F_1=b, F_2=c, and F_(t+3)=p*F_(t+2)+q*F_(t+1)+r*F_t",
+    "obligations": [
+      {
+        "obligation_id": "certificate_version",
+        "passed": true,
+        "evidence": "universal-formula-certificate-v0.1"
+      },
+      {
+        "obligation_id": "registered_theorem_rule",
+        "passed": true,
+        "evidence": "natural_weighted_third_order_recurrence"
+      },
+      {
+        "obligation_id": "program_digest_binding",
+        "passed": true,
+        "evidence": "recomputed sha256=106746a7262e1656ca2e0961e032e9110cf0965ce859f00886094993a8f27a3b"
+      },
+      {
+        "obligation_id": "explicit_domain",
+        "passed": true,
+        "evidence": "canonical domain: {\"arity\": 7, \"includes_zero\": true, \"kind\": \"natural_number_septuples\"}"
+      },
+      {
+        "obligation_id": "statement_binding",
+        "passed": true,
+        "evidence": "recomputed: for every a,b,c,p,q,r,n in N, output(a,b,c,p,q,r,n)=F_n where F_0=a, F_1=b, F_2=c, and F_(t+3)=p*F_(t+2)+q*F_(t+1)+r*F_t"
+      },
+      {
+        "obligation_id": "invariant_binding",
+        "passed": true,
+        "evidence": "recomputed: ['outer_counter=n-t', 'state_a=F_t', 'state_b=F_(t+1)', 'state_c=F_(t+2)', 'term_p: inner=p-j and next=j*F_(t+2)', 'term_q: inner=q-j and next=p*F_(t+2)+j*F_(t+1)', 'term_r: inner=r-j and next=p*F_(t+2)+q*F_(t+1)+j*F_t', '0<=t<=n']"
+      },
+      {
+        "obligation_id": "termination_measure_binding",
+        "passed": true,
+        "evidence": "recomputed: lexicographic natural counters: each of p, q, r inner counters decreases by 1, then the outer counter decreases by 1"
+      },
+      {
+        "obligation_id": "exact_program_structure",
+        "passed": true,
+        "evidence": "recomputed word-program sha256=106746a7262e1656ca2e0961e032e9110cf0965ce859f00886094993a8f27a3b"
+      },
+      {
+        "obligation_id": "all_seven_arguments_runtime_free",
+        "passed": true,
+        "evidence": "runtime input references=[0, 1, 2, 3, 4, 5, 6]"
+      },
+      {
+        "obligation_id": "no_multiply_divide_or_power_opcode",
+        "passed": true,
+        "evidence": "decoded VM contains only load/store, add/subtract, branch, memory, emit and halt"
+      },
+      {
+        "obligation_id": "outer_induction_base",
+        "passed": true,
+        "evidence": "at t=0 the state cells are (a,b,c)=(F_0,F_1,F_2) and counter=n"
+      },
+      {
+        "obligation_id": "shared_accumulator_base",
+        "passed": true,
+        "evidence": "the shared next cell is reset to zero at the start of every outer iteration"
+      },
+      {
+        "obligation_id": "first_term_induction",
+        "passed": true,
+        "evidence": "after j first-loop additions, next=j*F_(t+2), inner=p-j; exit contributes p*F_(t+2)"
+      },
+      {
+        "obligation_id": "second_term_induction",
+        "passed": true,
+        "evidence": "after j second-loop additions, next=p*F_(t+2)+j*F_(t+1), inner=q-j"
+      },
+      {
+        "obligation_id": "third_term_induction",
+        "passed": true,
+        "evidence": "after j third-loop additions, next=p*F_(t+2)+q*F_(t+1)+j*F_t, inner=r-j"
+      },
+      {
+        "obligation_id": "recurrence_value",
+        "passed": true,
+        "evidence": "after all three loops, next=p*F_(t+2)+q*F_(t+1)+r*F_t=F_(t+3)"
+      },
+      {
+        "obligation_id": "three_state_shift",
+        "passed": true,
+        "evidence": "(F_t,F_(t+1),F_(t+2)) shifts to (F_(t+1),F_(t+2),F_(t+3))"
+      },
+      {
+        "obligation_id": "zero_coefficient_boundaries",
+        "passed": true,
+        "evidence": "a zero coefficient skips its loop and adds exactly zero to the shared accumulator"
+      },
+      {
+        "obligation_id": "termination",
+        "passed": true,
+        "evidence": "lexicographic natural counters: each of p, q, r inner counters decreases by 1, then the outer counter decreases by 1"
+      },
+      {
+        "obligation_id": "exit_correctness",
+        "passed": true,
+        "evidence": "outer counter zero implies t=n, so emitted state_a is F_n"
+      }
+    ],
+    "certificate_digest": "1d297753c146ddbc7d487757745974c7f38a50aea4c5244b4ec85f3538d62180"
+  },
+  "strict_room_record": {
+    "room_record_id": "UF-a2d651ea9bae624b",
+    "source_room_record_id": "SF-c87a709ae162df7e",
+    "source_operation_id": "REWRITE-GROWN-106746a7262e1656",
+    "theorem_kind": "natural_weighted_third_order_recurrence",
+    "theorem_statement": "for every a,b,c,p,q,r,n in N, output(a,b,c,p,q,r,n)=F_n where F_0=a, F_1=b, F_2=c, and F_(t+3)=p*F_(t+2)+q*F_(t+1)+r*F_t",
+    "domain": {
+      "kind": "natural_number_septuples",
+      "arity": 7,
+      "includes_zero": true
+    },
+    "program": {
+      "substrate": "anonymous_unified_word_machine_v0.1",
+      "word_width": 2,
+      "words": [
+        14,
+        6,
+        1,
+        6,
+        3,
+        118,
+        1,
+        0,
+        3,
+        119,
+        1,
+        1,
+        3,
+        120,
+        1,
+        2,
+        3,
+        121,
+        2,
+        118,
+        12,
+        56,
+        4,
+        0,
+        3,
+        123,
+        1,
+        5,
+        3,
+        122,
+        2,
+        122,
+        12,
+        24,
+        2,
+        123,
+        7,
+        119,
+        3,
+        123,
+        2,
+        122,
+        10,
+        1,
+        3,
+        122,
+        11,
+        15,
+        1,
+        4,
+        3,
+        122,
+        2,
+        122,
+        12,
+        35,
+        2,
+        123,
+        7,
+        120,
+        3,
+        123,
+        2,
+        122,
+        10,
+        1,
+        3,
+        122,
+        11,
+        26,
+        1,
+        3,
+        3,
+        122,
+        2,
+        122,
+        12,
+        46,
+        2,
+        123,
+        7,
+        121,
+        3,
+        123,
+        2,
+        122,
+        10,
+        1,
+        3,
+        122,
+        11,
+        37,
+        2,
+        120,
+        3,
+        119,
+        2,
+        121,
+        3,
+        120,
+        2,
+        123,
+        3,
+        121,
+        2,
+        118,
+        10,
+        1,
+        3,
+        118,
+        11,
+        9,
+        2,
+        119,
+        15,
+        0,
+        0,
+        0
+      ]
+    },
+    "certificate": {
+      "certificate_version": "universal-formula-certificate-v0.1",
+      "theorem_kind": "natural_weighted_third_order_recurrence",
+      "source_room_record_id": "SF-c87a709ae162df7e",
+      "source_operation_id": "REWRITE-GROWN-106746a7262e1656",
+      "program_digest": "106746a7262e1656ca2e0961e032e9110cf0965ce859f00886094993a8f27a3b",
+      "domain": {
+        "kind": "natural_number_septuples",
+        "arity": 7,
+        "includes_zero": true
+      },
+      "claimed_statement": "for every a,b,c,p,q,r,n in N, output(a,b,c,p,q,r,n)=F_n where F_0=a, F_1=b, F_2=c, and F_(t+3)=p*F_(t+2)+q*F_(t+1)+r*F_t",
+      "claimed_invariants": [
+        "outer_counter=n-t",
+        "state_a=F_t",
+        "state_b=F_(t+1)",
+        "state_c=F_(t+2)",
+        "term_p: inner=p-j and next=j*F_(t+2)",
+        "term_q: inner=q-j and next=p*F_(t+2)+j*F_(t+1)",
+        "term_r: inner=r-j and next=p*F_(t+2)+q*F_(t+1)+j*F_t",
+        "0<=t<=n"
+      ],
+      "claimed_termination_measure": "lexicographic natural counters: each of p, q, r inner counters decreases by 1, then the outer counter decreases by 1"
+    },
+    "verification": {
+      "verifier_version": "independent-universal-verifier-v0.1",
+      "theorem_kind": "natural_weighted_third_order_recurrence",
+      "passed": true,
+      "recomputed_statement": "for every a,b,c,p,q,r,n in N, output(a,b,c,p,q,r,n)=F_n where F_0=a, F_1=b, F_2=c, and F_(t+3)=p*F_(t+2)+q*F_(t+1)+r*F_t",
+      "obligations": [
+        {
+          "obligation_id": "certificate_version",
+          "passed": true,
+          "evidence": "universal-formula-certificate-v0.1"
+        },
+        {
+          "obligation_id": "registered_theorem_rule",
+          "passed": true,
+          "evidence": "natural_weighted_third_order_recurrence"
+        },
+        {
+          "obligation_id": "program_digest_binding",
+          "passed": true,
+          "evidence": "recomputed sha256=106746a7262e1656ca2e0961e032e9110cf0965ce859f00886094993a8f27a3b"
+        },
+        {
+          "obligation_id": "explicit_domain",
+          "passed": true,
+          "evidence": "canonical domain: {\"arity\": 7, \"includes_zero\": true, \"kind\": \"natural_number_septuples\"}"
+        },
+        {
+          "obligation_id": "statement_binding",
+          "passed": true,
+          "evidence": "recomputed: for every a,b,c,p,q,r,n in N, output(a,b,c,p,q,r,n)=F_n where F_0=a, F_1=b, F_2=c, and F_(t+3)=p*F_(t+2)+q*F_(t+1)+r*F_t"
+        },
+        {
+          "obligation_id": "invariant_binding",
+          "passed": true,
+          "evidence": "recomputed: ['outer_counter=n-t', 'state_a=F_t', 'state_b=F_(t+1)', 'state_c=F_(t+2)', 'term_p: inner=p-j and next=j*F_(t+2)', 'term_q: inner=q-j and next=p*F_(t+2)+j*F_(t+1)', 'term_r: inner=r-j and next=p*F_(t+2)+q*F_(t+1)+j*F_t', '0<=t<=n']"
+        },
+        {
+          "obligation_id": "termination_measure_binding",
+          "passed": true,
+          "evidence": "recomputed: lexicographic natural counters: each of p, q, r inner counters decreases by 1, then the outer counter decreases by 1"
+        },
+        {
+          "obligation_id": "exact_program_structure",
+          "passed": true,
+          "evidence": "recomputed word-program sha256=106746a7262e1656ca2e0961e032e9110cf0965ce859f00886094993a8f27a3b"
+        },
+        {
+          "obligation_id": "all_seven_arguments_runtime_free",
+          "passed": true,
+          "evidence": "runtime input references=[0, 1, 2, 3, 4, 5, 6]"
+        },
+        {
+          "obligation_id": "no_multiply_divide_or_power_opcode",
+          "passed": true,
+          "evidence": "decoded VM contains only load/store, add/subtract, branch, memory, emit and halt"
+        },
+        {
+          "obligation_id": "outer_induction_base",
+          "passed": true,
+          "evidence": "at t=0 the state cells are (a,b,c)=(F_0,F_1,F_2) and counter=n"
+        },
+        {
+          "obligation_id": "shared_accumulator_base",
+          "passed": true,
+          "evidence": "the shared next cell is reset to zero at the start of every outer iteration"
+        },
+        {
+          "obligation_id": "first_term_induction",
+          "passed": true,
+          "evidence": "after j first-loop additions, next=j*F_(t+2), inner=p-j; exit contributes p*F_(t+2)"
+        },
+        {
+          "obligation_id": "second_term_induction",
+          "passed": true,
+          "evidence": "after j second-loop additions, next=p*F_(t+2)+j*F_(t+1), inner=q-j"
+        },
+        {
+          "obligation_id": "third_term_induction",
+          "passed": true,
+          "evidence": "after j third-loop additions, next=p*F_(t+2)+q*F_(t+1)+j*F_t, inner=r-j"
+        },
+        {
+          "obligation_id": "recurrence_value",
+          "passed": true,
+          "evidence": "after all three loops, next=p*F_(t+2)+q*F_(t+1)+r*F_t=F_(t+3)"
+        },
+        {
+          "obligation_id": "three_state_shift",
+          "passed": true,
+          "evidence": "(F_t,F_(t+1),F_(t+2)) shifts to (F_(t+1),F_(t+2),F_(t+3))"
+        },
+        {
+          "obligation_id": "zero_coefficient_boundaries",
+          "passed": true,
+          "evidence": "a zero coefficient skips its loop and adds exactly zero to the shared accumulator"
+        },
+        {
+          "obligation_id": "termination",
+          "passed": true,
+          "evidence": "lexicographic natural counters: each of p, q, r inner counters decreases by 1, then the outer counter decreases by 1"
+        },
+        {
+          "obligation_id": "exit_correctness",
+          "passed": true,
+          "evidence": "outer counter zero implies t=n, so emitted state_a is F_n"
+        }
+      ],
+      "certificate_digest": "1d297753c146ddbc7d487757745974c7f38a50aea4c5244b4ec85f3538d62180"
+    }
+  },
+  "strict_formula_total_before": 31,
+  "strict_formula_total_after": 32,
+  "room_proof_obligation_count": 444,
+  "room_proof_obligation_passed_count": 444,
+  "discovery_summary": {
+    "rewrite_rule": {
+      "rule_id": "REWRITE-76109ae8a795d077",
+      "kind": "extend_weighted_state_order_by_one",
+      "source_record_ids": [
+        "UF-055e30a6dc246def",
+        "UF-3695ac026118889d",
+        "UF-5346bc472a30e531",
+        "UF-6850cf70391b2036",
+        "UF-8de36f5279e82b24",
+        "UF-91dbdc8461d5c1a7",
+        "UF-92ee397983d8bc44",
+        "UF-9ab5491987e98b2a",
+        "UF-9b4ce698e56789c8",
+        "UF-e2f688c2054e2421"
+      ],
+      "observed_copy_chain_widths": [
+        2,
+        3,
+        4
+      ],
+      "edit_sequence": [
+        "append_one_runtime_seed_slot",
+        "append_one_runtime_coefficient_slot",
+        "duplicate_counted_accumulation_term",
+        "extend_state_copy_chain_by_one",
+        "preserve_natural_outer_descent"
+      ],
+      "evidence": {
+        "state_chain_width_progression": [
+          2,
+          3,
+          4
+        ],
+        "inferred_width_delta": 1,
+        "weighted_source_backward_loops": 3,
+        "uses_formula_or_theorem_labels": false,
+        "required_learned_motifs": [
+          "nested_counted_accumulation",
+          "synchronous_state_transition"
+        ]
+      }
+    },
+    "candidate_instruction_count": 59,
+    "cegis_round_count": 3,
+    "sealed_passed": 5,
+    "sealed_total": 5,
+    "mistakes_recorded": 10,
+    "first_counterexample": {
+      "inputs": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        1,
+        1
+      ],
+      "predicted": 3.0,
+      "observed": 2
+    }
+  },
+  "autonomy_boundary": {
+    "learned": "the 2->3->4 state-copy progression and +1 width edit were inferred from prior proven word code without theorem labels",
+    "applied": "the learned edit duplicated an accumulation term and extended the state shift; anonymous evidence selected seed, coefficient, source and output routing",
+    "host_supplied": "the structural detector, generic assembler, stable column positions and proof rule are still host-implemented"
+  }
+}

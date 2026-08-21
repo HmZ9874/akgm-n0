@@ -1,0 +1,845 @@
+{
+  "report_version": "user-sequence-probe-v0.1",
+  "run_id": "RUN-user-sequence-probe-20260817T195709604887Z",
+  "created_at": "2026-08-17T19:57:09.617899Z",
+  "claim": "hypothesis_from_user_supplied_prefix_only",
+  "knowledge_status": "rejected",
+  "learner_received": {
+    "sequence_values": [
+      2.0,
+      8.0,
+      16.0,
+      64.0,
+      4.0
+    ],
+    "natural_language_label": false,
+    "target_formula": false,
+    "future_values": false,
+    "available_operations": [
+      "p_read_offset",
+      "p_add",
+      "p_subtract",
+      "p_scalar_parameter"
+    ]
+  },
+  "search": {
+    "objective_id": "predict_next_numeric_value_v0.1",
+    "observation_id": "USER-SEQUENCE-PROBE",
+    "information_boundary": {
+      "readable_offsets": [
+        -1,
+        0
+      ],
+      "target_offset": 1
+    },
+    "train_example_count": 2,
+    "validation_example_count": 1,
+    "programs_generated": 123,
+    "programs_scored": 123,
+    "programs_rejected": 0,
+    "programs_filtered": 0,
+    "top_candidates": [
+      {
+        "candidate_id": "CAND-1d3d8189325e7c2f",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_read_offset",
+              "offset": -1
+            },
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {
+          "0": -47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-32a7fea859402309",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            },
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {
+          "0": 47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-6a32a3eeb0c416ca",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": -47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-7201cbe4d2bc59be",
+        "program_ast": {
+          "op": "p_add",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": -1
+            }
+          ]
+        },
+        "parameters": {
+          "0": 47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-7d2adf088514e417",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_read_offset",
+              "offset": -1
+            },
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {
+          "0": 47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-badfff2cdbed2f8a",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": 47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-cd3a751617231f57",
+        "program_ast": {
+          "op": "p_add",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                }
+              ]
+            },
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": 47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-ee38da6da422811d",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                }
+              ]
+            },
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": -47.0
+        },
+        "train_mse": 625.0,
+        "validation_mse": 25.0,
+        "normalized_validation_mse": 0.03720238095238095,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.04220238095238095
+      },
+      {
+        "candidate_id": "CAND-1a7a74a9691f5706",
+        "program_ast": {
+          "op": "p_read_offset",
+          "offset": -1
+        },
+        "parameters": {},
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 1,
+        "program_depth": 1,
+        "objective_score": 0.21528571428571427
+      },
+      {
+        "candidate_id": "CAND-4cc8e9e19efd40e2",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            },
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {
+          "0": 0.0
+        },
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-5b30733cee909aa7",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            },
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": 0.0
+        },
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-951be379cf437bd1",
+        "program_ast": {
+          "op": "p_add",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            }
+          ]
+        },
+        "parameters": {},
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-c0cdb5f686614e6e",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            }
+          ]
+        },
+        "parameters": {},
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-d628e8296b7ea97c",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": -1
+            }
+          ]
+        },
+        "parameters": {},
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-ed0b8abbc778d34b",
+        "program_ast": {
+          "op": "p_add",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            },
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": 0.0
+        },
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-ef4efbb500a9f6c6",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            },
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {},
+        "train_mse": 1666.0,
+        "validation_mse": 144.0,
+        "normalized_validation_mse": 0.21428571428571427,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.21928571428571428
+      },
+      {
+        "candidate_id": "CAND-455eaee34e1c955b",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_subtract",
+              "args": [
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": -1
+            }
+          ]
+        },
+        "parameters": {
+          "0": 50.0
+        },
+        "train_mse": 900.0,
+        "validation_mse": 196.0,
+        "normalized_validation_mse": 0.2916666666666667,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.2966666666666667
+      },
+      {
+        "candidate_id": "CAND-e8164002f98ead85",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            },
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                },
+                {
+                  "op": "p_read_offset",
+                  "offset": -1
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {
+          "0": 50.0
+        },
+        "train_mse": 900.0,
+        "validation_mse": 196.0,
+        "normalized_validation_mse": 0.2916666666666667,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.2966666666666667
+      },
+      {
+        "candidate_id": "CAND-60c5fab7dae57c79",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            },
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": 52.0
+        },
+        "train_mse": 784.0,
+        "validation_mse": 256.0,
+        "normalized_validation_mse": 0.38095238095238093,
+        "program_nodes": 3,
+        "program_depth": 2,
+        "objective_score": 0.38395238095238093
+      },
+      {
+        "candidate_id": "CAND-4f93741c4901f8e0",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            },
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            }
+          ]
+        },
+        "parameters": {
+          "0": 26.0
+        },
+        "train_mse": 784.0,
+        "validation_mse": 256.0,
+        "normalized_validation_mse": 0.38095238095238093,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 0.38595238095238094
+      }
+    ],
+    "exact_candidate_count_in_top_k": 0,
+    "selected_candidate": {
+      "candidate_id": "CAND-1d3d8189325e7c2f",
+      "program_ast": {
+        "op": "p_subtract",
+        "args": [
+          {
+            "op": "p_read_offset",
+            "offset": -1
+          },
+          {
+            "op": "p_add",
+            "args": [
+              {
+                "op": "p_read_offset",
+                "offset": 0
+              },
+              {
+                "op": "p_scalar_parameter",
+                "parameter_slot": 0
+              }
+            ]
+          }
+        ]
+      },
+      "parameters": {
+        "0": -47.0
+      },
+      "train_mse": 625.0,
+      "validation_mse": 25.0,
+      "normalized_validation_mse": 0.03720238095238095,
+      "program_nodes": 5,
+      "program_depth": 3,
+      "objective_score": 0.04220238095238095
+    }
+  },
+  "candidate_extrapolation": {
+    "predicted_values": [
+      107.0,
+      -56.0,
+      210.0
+    ],
+    "verified_against_unseen_observations": false
+  },
+  "full_supplied_prefix_check": {
+    "transition_count": 4,
+    "passed_transition_count": 0,
+    "evaluated_transition_count": 3,
+    "all_evaluated_passed": false,
+    "all_transitions_evaluable": false,
+    "case_results": [
+      {
+        "index": 0,
+        "current_value": 2.0,
+        "predicted_value": null,
+        "observed_value": 8.0,
+        "passed": null,
+        "unavailable_reason": "indexed read is outside the observation"
+      },
+      {
+        "index": 1,
+        "current_value": 8.0,
+        "predicted_value": 41.0,
+        "observed_value": 16.0,
+        "passed": false,
+        "unavailable_reason": null
+      },
+      {
+        "index": 2,
+        "current_value": 16.0,
+        "predicted_value": 39.0,
+        "observed_value": 64.0,
+        "passed": false,
+        "unavailable_reason": null
+      },
+      {
+        "index": 3,
+        "current_value": 64.0,
+        "predicted_value": -1.0,
+        "observed_value": 4.0,
+        "passed": false,
+        "unavailable_reason": null
+      }
+    ]
+  },
+  "structural_observation": {
+    "unregistered_multiply_node_present": false,
+    "unregistered_divide_node_present": false,
+    "same_current_value_read_count": 1
+  },
+  "post_hoc_interpretation": {
+    "assigned_after_search": true,
+    "statement": "The selected program adds the current value to itself.",
+    "common_human_sequence_label": "doubling geometric sequence"
+  },
+  "knowledge_id": "K-000001",
+  "mistake_record": {
+    "mistake_id": "M-ee6c122e2a462ad0",
+    "objective_id": "predict_next_numeric_value_v0.1",
+    "failed_scope": "user_supplied_prefix",
+    "condition_key": "user-sequence-7c5d060144aaba63",
+    "family_signature": "{\"parameter:0\":1,\"read:-1\":1,\"read:0\":-1}",
+    "representative_program_ast": {
+      "op": "p_subtract",
+      "args": [
+        {
+          "op": "p_read_offset",
+          "offset": -1
+        },
+        {
+          "op": "p_add",
+          "args": [
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            },
+            {
+              "op": "p_scalar_parameter",
+              "parameter_slot": 0
+            }
+          ]
+        }
+      ]
+    },
+    "counterexamples": [
+      {
+        "index": 1,
+        "current_value": 8.0,
+        "predicted_value": 41.0,
+        "observed_value": 16.0,
+        "passed": false,
+        "unavailable_reason": null
+      },
+      {
+        "index": 2,
+        "current_value": 16.0,
+        "predicted_value": 39.0,
+        "observed_value": 64.0,
+        "passed": false,
+        "unavailable_reason": null
+      },
+      {
+        "index": 3,
+        "current_value": 64.0,
+        "predicted_value": -1.0,
+        "observed_value": 4.0,
+        "passed": false,
+        "unavailable_reason": null
+      }
+    ],
+    "source_candidate_id": "CAND-1d3d8189325e7c2f"
+  },
+  "ledger_event_count": 2,
+  "limitations": [
+    "Only five supplied values were available, yielding three internal next-value examples.",
+    "The predicted continuation has not been checked against a withheld user-supplied value.",
+    "Many longer or more complex rules can agree with a finite prefix and diverge later.",
+    "The result is an executable hypothesis, not a verified general law."
+  ]
+}

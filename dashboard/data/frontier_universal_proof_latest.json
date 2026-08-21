@@ -1,0 +1,1048 @@
+{
+  "report_version": "universal-formula-proof-report-v0.2",
+  "run_id": "RUN-frontier-universal-proof-20260818T180243587994Z",
+  "created_at": "2026-08-18T18:02:43.587994Z",
+  "title": "十个程序的全定义域证明审查",
+  "verdict": "ten_formulas_proven_on_declared_abstract_integer_domains",
+  "declared_domain": "每条证书分别声明；九条为 N，一条为 a∈N 且整数 d≥1",
+  "scope_warning": "通用性指抽象无限精度整数转移语义上的声明定义域；当前浮点执行器仍有步数、精度和幅值资源边界。",
+  "audit_before_run": {
+    "bounded_active_formula_count": 28,
+    "universally_compliant_count": 5,
+    "reason": "此前只有第一批五条具备可重算终止证明与归纳不变量。"
+  },
+  "proof_method": {
+    "search_side": "anonymous numeric evidence plus host-supplied generic mechanism grammars",
+    "proof_side": "independent exact structural decoder, Fraction polynomial identities, recurrence induction, and ranking functions",
+    "finite_sampling_used_as_proof": false,
+    "external_symbolic_library": false,
+    "proof_recomputed_on_room_admission": true,
+    "semantic_model": "abstract unbounded integer transition semantics"
+  },
+  "formulas": [
+    {
+      "mechanism": "重复倍增",
+      "display_formula": "2^n",
+      "source_bounded_record_id": "SF-6e5151b34c144dea",
+      "source_operation_id": "G2NEW-4f6b5de649cfa951",
+      "universal_room_record_id": "UF-acf6631ac2ca1895",
+      "program_digest": "4f6b5de649cfa9513a8e550c5171ef29bc361db7ddb00079d884b64dbd63ea1b",
+      "instruction_count": 17,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = 2^n",
+      "invariants": [
+        "counter=n-t",
+        "state=2^t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_power_two",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = 2^n",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_power_two"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=4f6b5de649cfa9513a8e550c5171ef29bc361db7ddb00079d884b64dbd63ea1b"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = 2^n"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'state=2^t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded loop: counter=n; state=1; state=state+state; counter=counter-1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: state=1=2^0 and counter=n"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "state'=state+state=2^t+2^t=2^(t+1); counter'=n-(t+1)"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter is a natural-valued ranking function, starting at n and decreasing by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "counter=0 implies t=n, hence emitted state=2^n"
+          }
+        ],
+        "certificate_digest": "e6869e7e9490ae14f7167f922607a2867b2fa854f02c99329503b2ce5aa47d2a"
+      }
+    },
+    {
+      "mechanism": "双状态多项式递推",
+      "display_formula": "n^2+n+1",
+      "source_bounded_record_id": "SF-2146c70e3a21cbe4",
+      "source_operation_id": "G2NEW-52f45f3d817a0bbd",
+      "universal_room_record_id": "UF-3695ac026118889d",
+      "program_digest": "52f45f3d817a0bbd252f54183c08dcceb565c30459a6444ac028fdef64183e7e",
+      "instruction_count": 26,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = n^2 + n + 1",
+      "invariants": [
+        "counter=n-t",
+        "A=t^2+t+1",
+        "B=2t+2",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_quadratic_plus_linear",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = n^2 + n + 1",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_quadratic_plus_linear"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=52f45f3d817a0bbd252f54183c08dcceb565c30459a6444ac028fdef64183e7e"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = n^2 + n + 1"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=t^2+t+1', 'B=2t+2', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded simultaneous recurrence A'=A+B, B'=B+2"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "A(0)=1 and B(0)=2"
+          },
+          {
+            "obligation_id": "induction_step_A",
+            "passed": true,
+            "evidence": "exact polynomial identity A(t+1)=A(t)+B(t)"
+          },
+          {
+            "obligation_id": "induction_step_B",
+            "passed": true,
+            "evidence": "exact polynomial identity B(t+1)=B(t)+2"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=n^2+n+1"
+          }
+        ],
+        "certificate_digest": "69c05e9499d6949900a9d57c33190dba79a2591191b6973f808559c606fd31ba"
+      }
+    },
+    {
+      "mechanism": "三级累积级联",
+      "display_formula": "C(n,3)",
+      "source_bounded_record_id": "SF-5ec3065eebeaea17",
+      "source_operation_id": "G2CTRL-aa1ab30803291692",
+      "universal_room_record_id": "UF-9b4ce698e56789c8",
+      "program_digest": "aa1ab308032916920a699fcd90552181ef4856836ab0398c0edf93271cc70cc9",
+      "instruction_count": 33,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = C(n, 3)",
+      "invariants": [
+        "counter=n-t",
+        "A=C(t,3)",
+        "B=C(t,2)",
+        "C=t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_third_binomial",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = C(n, 3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_third_binomial"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=aa1ab308032916920a699fcd90552181ef4856836ab0398c0edf93271cc70cc9"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = C(n, 3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=C(t,3)', 'B=C(t,2)', 'C=t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded cascade A'=A+B, B'=B+C, C'=C+1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "A(0)=B(0)=C(0)=0"
+          },
+          {
+            "obligation_id": "induction_step_A",
+            "passed": true,
+            "evidence": "exact polynomial identity C(t+1,3)=C(t,3)+C(t,2)"
+          },
+          {
+            "obligation_id": "induction_step_B",
+            "passed": true,
+            "evidence": "exact polynomial identity C(t+1,2)=C(t,2)+t"
+          },
+          {
+            "obligation_id": "induction_step_C",
+            "passed": true,
+            "evidence": "exact polynomial identity (t+1)=t+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=n(n-1)(n-2)/6=C(n,3)"
+          }
+        ],
+        "certificate_digest": "34f5524317d307014a3b6d09e25b4a6a0f26ebfaa240e6dd885ea45fce01655c"
+      }
+    },
+    {
+      "mechanism": "有限状态阈值回绕",
+      "display_formula": "n mod 4",
+      "source_bounded_record_id": "SF-941858d5d23048fc",
+      "source_operation_id": "G2CTRL-f5ffb2c49416a134",
+      "universal_room_record_id": "UF-7ad3015c61d1b47b",
+      "program_digest": "f5ffb2c49416a134925e1e41b57d3f0e55dcfe81524de4b1c101adde07f9ca9d",
+      "instruction_count": 24,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = n mod 4",
+      "invariants": [
+        "counter=n-t",
+        "state=t mod 4",
+        "0<=state<4",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_modulo_four",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = n mod 4",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_modulo_four"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=f5ffb2c49416a134925e1e41b57d3f0e55dcfe81524de4b1c101adde07f9ca9d"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = n mod 4"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'state=t mod 4', '0<=state<4', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded transition s'=s+1 if s+1<4 else s'=s+1-4"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: state=0 and 0<=state<4"
+          },
+          {
+            "obligation_id": "complete_state_transition",
+            "passed": true,
+            "evidence": "exhaustive symbolic state domain {0,1,2,3}: transition=(s+1) mod 4"
+          },
+          {
+            "obligation_id": "invariant_preservation",
+            "passed": true,
+            "evidence": "0<=state<4 is preserved and state after t steps equals t mod 4"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted state=n mod 4"
+          }
+        ],
+        "certificate_digest": "9079fe8407452b282713dad10d76ce07cb61177d5fe514268e272efb3f4abd40"
+      }
+    },
+    {
+      "mechanism": "数据驱动停止",
+      "display_formula": "floor(sqrt(n))",
+      "source_bounded_record_id": "SF-c5876d5779920c09",
+      "source_operation_id": "G2CTRL-de057ef1810f4943",
+      "universal_room_record_id": "UF-0d6434bf2099e980",
+      "program_digest": "de057ef1810f49432a1203ebbfd6aae476b23098bff3883580db6c3626dcec8c",
+      "instruction_count": 21,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = floor(sqrt(n))",
+      "invariants": [
+        "remainder=n-c^2",
+        "step=2c+1",
+        "count=c",
+        "remainder>=0"
+      ],
+      "termination_measure": "successful iterations c satisfy c^2<=n and c strictly increases",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_floor_sqrt",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = floor(sqrt(n))",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_floor_sqrt"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=de057ef1810f49432a1203ebbfd6aae476b23098bff3883580db6c3626dcec8c"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = floor(sqrt(n))"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=n-c^2', 'step=2c+1', 'count=c', 'remainder>=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: successful iterations c satisfy c^2<=n and c strictly increases"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded r'=r-d, d'=d+2, c'=c+1 while r-d>=0"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at c=0: remainder=n, odd step=1, count=0"
+          },
+          {
+            "obligation_id": "induction_step_remainder",
+            "passed": true,
+            "evidence": "exact polynomial identity n-(c+1)^2 = n-c^2-(2c+1)"
+          },
+          {
+            "obligation_id": "induction_step_odd",
+            "passed": true,
+            "evidence": "exact polynomial identity 2(c+1)+1=(2c+1)+2"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a successful iteration requires (c+1)^2<=n; therefore at most n iterations on N"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "exit gives c^2<=n<(c+1)^2, the defining property of floor(sqrt(n))"
+          }
+        ],
+        "certificate_digest": "deb5f3a95ff63e2f80ad8de20adc8d45d41c42b70e4f44cca4fb769e355d31a9"
+      }
+    },
+    {
+      "mechanism": "自修改指令操作数",
+      "display_formula": "n^2",
+      "source_bounded_record_id": "SF-48fbc785c0f13cdd",
+      "source_operation_id": "G3NEW-2d402424e2bb97f1",
+      "universal_room_record_id": "UF-737e219163274b6c",
+      "program_digest": "2d402424e2bb97f1d6dee6ed8e6ad8c0b5956ecac8d5a2cee933cc960eebc991",
+      "instruction_count": 20,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = n^2",
+      "invariants": [
+        "counter=n-t",
+        "result=t^2",
+        "mutable_operand=2t+1",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_square_self_modifying",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = n^2",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_square_self_modifying"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=2d402424e2bb97f1d6dee6ed8e6ad8c0b5956ecac8d5a2cee933cc960eebc991"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = n^2"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'result=t^2', 'mutable_operand=2t+1', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded write to code word 17: result+=operand; operand+=2; counter-=1"
+          },
+          {
+            "obligation_id": "mutable_cell_is_operand_not_opcode",
+            "passed": true,
+            "evidence": "word 17 is the operand of instruction 8; opcode word 16 remains ADD_IMMEDIATE"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: result=0^2, mutable operand=1, counter=n"
+          },
+          {
+            "obligation_id": "induction_step_result",
+            "passed": true,
+            "evidence": "t^2+(2t+1)=(t+1)^2"
+          },
+          {
+            "obligation_id": "induction_step_code",
+            "passed": true,
+            "evidence": "mutable operand 2t+1 is rewritten to 2t+3=2(t+1)+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "counter=0 implies t=n and emitted result=n^2"
+          }
+        ],
+        "certificate_digest": "dd716ce00551bb58921563c6bd515cc34240ba02d6e585e045906ba39caf2b43"
+      }
+    },
+    {
+      "mechanism": "四级同步累积",
+      "display_formula": "C(n,4)",
+      "source_bounded_record_id": "SF-80b3eb3c75fb6348",
+      "source_operation_id": "G3NEW-98a7cc88ec88ae78",
+      "universal_room_record_id": "UF-6850cf70391b2036",
+      "program_digest": "98a7cc88ec88ae78d3cfec213a2fe557b1ffa9e6d64b553f0cff11409b9bd1ff",
+      "instruction_count": 40,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = C(n, 4)",
+      "invariants": [
+        "counter=n-t",
+        "A=C(t,4)",
+        "B=C(t,3)",
+        "C=C(t,2)",
+        "D=t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_fourth_binomial",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = C(n, 4)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_fourth_binomial"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=98a7cc88ec88ae78d3cfec213a2fe557b1ffa9e6d64b553f0cff11409b9bd1ff"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = C(n, 4)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=C(t,4)', 'B=C(t,3)', 'C=C(t,2)', 'D=t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded cascade A'=A+B, B'=B+C, C'=C+D, D'=D+1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "A(0)=B(0)=C(0)=D(0)=0"
+          },
+          {
+            "obligation_id": "induction_step_A",
+            "passed": true,
+            "evidence": "exact identity C(t+1,4)=C(t,4)+C(t,3)"
+          },
+          {
+            "obligation_id": "induction_step_B",
+            "passed": true,
+            "evidence": "exact identity C(t+1,3)=C(t,3)+C(t,2)"
+          },
+          {
+            "obligation_id": "induction_step_C",
+            "passed": true,
+            "evidence": "exact identity C(t+1,2)=C(t,2)+t"
+          },
+          {
+            "obligation_id": "induction_step_D",
+            "passed": true,
+            "evidence": "exact identity t+1=t+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=n(n-1)(n-2)(n-3)/24=C(n,4)"
+          }
+        ],
+        "certificate_digest": "b2fc1478ddc0030c952cb999b0b7144defe9c0e1a9d5c552ad48fe7f7ddf7ad5"
+      }
+    },
+    {
+      "mechanism": "三状态移位反馈",
+      "display_formula": "T_n (Tribonacci)",
+      "source_bounded_record_id": "SF-29f6d49e09e062c1",
+      "source_operation_id": "G3NEW-600694e4b7fde733",
+      "universal_room_record_id": "UF-e2f688c2054e2421",
+      "program_digest": "600694e4b7fde733d0d0f0056a32e6cdff60125ef9f46961ef2c0b255a600760",
+      "instruction_count": 34,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = T_n where T_0=0, T_1=0, T_2=1 and T_(n+3)=T_n+T_(n+1)+T_(n+2)",
+      "invariants": [
+        "counter=n-t",
+        "A=T_t",
+        "B=T_(t+1)",
+        "C=T_(t+2)",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_tribonacci",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = T_n where T_0=0, T_1=0, T_2=1 and T_(n+3)=T_n+T_(n+1)+T_(n+2)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_tribonacci"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=600694e4b7fde733d0d0f0056a32e6cdff60125ef9f46961ef2c0b255a600760"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = T_n where T_0=0, T_1=0, T_2=1 and T_(n+3)=T_n+T_(n+1)+T_(n+2)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=T_t', 'B=T_(t+1)', 'C=T_(t+2)', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded shift A'=B, B'=C, C'=A+B+C"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: (A,B,C)=(T_0,T_1,T_2)=(0,0,1)"
+          },
+          {
+            "obligation_id": "induction_step_shift",
+            "passed": true,
+            "evidence": "A'=T_(t+1), B'=T_(t+2), C'=T_t+T_(t+1)+T_(t+2)=T_(t+3)"
+          },
+          {
+            "obligation_id": "recurrence_definition_total",
+            "passed": true,
+            "evidence": "three bases and one deterministic recurrence define exactly one integer T_n for every n in N"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=T_n"
+          }
+        ],
+        "certificate_digest": "285db6ed3b60cab9232de7dfd97528becc0e9220ddd591f0cb9618bab28ddd7e"
+      }
+    },
+    {
+      "mechanism": "指数增长阈值",
+      "display_formula": "bit_length(n)",
+      "source_bounded_record_id": "SF-b30f3e5d2d2ed251",
+      "source_operation_id": "G3NEW-5682429236b9b26a",
+      "universal_room_record_id": "UF-0ba151968dafcca3",
+      "program_digest": "5682429236b9b26a69f172c7768b6f84b38773b60394bdfb791b88a535451d8a",
+      "instruction_count": 18,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(0)=0; for n>0 output(n) is the unique c with 2^(c-1)<=n<2^c",
+      "invariants": [
+        "threshold=2^count",
+        "count=c",
+        "every completed comparison had threshold<=n"
+      ],
+      "termination_measure": "positive threshold doubles until threshold>n",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_bit_length",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(0)=0; for n>0 output(n) is the unique c with 2^(c-1)<=n<2^c",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_bit_length"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=5682429236b9b26a69f172c7768b6f84b38773b60394bdfb791b88a535451d8a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(0)=0; for n>0 output(n) is the unique c with 2^(c-1)<=n<2^c"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['threshold=2^count', 'count=c', 'every completed comparison had threshold<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: positive threshold doubles until threshold>n"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded threshold=1,count=0; while threshold<=n: threshold+=threshold,count+=1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at count=0, threshold=1=2^0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "threshold'=2*2^c=2^(c+1) and count'=c+1"
+          },
+          {
+            "obligation_id": "zero_case",
+            "passed": true,
+            "evidence": "n=0 fails the first comparison and emits 0"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "2^c>=c+1; choosing c=n+1 guarantees threshold>n, so the loop terminates"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "for n>0 the last success gives 2^(c-1)<=n and exit gives n<2^c; c is unique"
+          }
+        ],
+        "certificate_digest": "2fb5316518cfbc533b9ecbd3b859b2794bb9104813684f6b83677ebc01136061"
+      }
+    },
+    {
+      "mechanism": "变量除数重复减法",
+      "display_formula": "floor(a/d)",
+      "source_bounded_record_id": "SF-c432c82175c92edb",
+      "source_operation_id": "G3NEW-3a697393414ca3e6",
+      "universal_room_record_id": "UF-7eb738379af6d614",
+      "program_digest": "3a697393414ca3e6789b733e6a42476df53a35a7fe25c8d886cd8cebf0751dca",
+      "instruction_count": 16,
+      "domain": {
+        "kind": "natural_dividend_positive_divisor",
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1
+      },
+      "theorem_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+      "invariants": [
+        "remainder=a-count*d",
+        "count=c",
+        "remainder>=0",
+        "d>=1"
+      ],
+      "termination_measure": "remainder in N decreases by d>=1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_integer_quotient",
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_integer_quotient"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=3a697393414ca3e6789b733e6a42476df53a35a7fe25c8d886cd8cebf0751dca"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d) = floor(a/d)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=a-count*d', 'count=c', 'remainder>=0', 'd>=1']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: remainder in N decreases by d>=1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded remainder=a,count=0; subtract d while nonnegative and count successes"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at c=0: remainder=a=a-0*d and remainder>=0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "a-cd>=d implies new remainder=a-(c+1)d>=0 and new count=c+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "d>=1, so each success decreases natural remainder by at least 1; at most a successes"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "exit gives a=cd+r with 0<=r<d, hence c=floor(a/d)"
+          }
+        ],
+        "certificate_digest": "102c2debd076255519d47d90a114eed57f154193b72335c626fdc07c05aae94f"
+      }
+    }
+  ],
+  "new_formula_count": 5,
+  "total_proven_formula_count": 10,
+  "gates": [
+    {
+      "gate_id": "five_new_distinct_program_digests",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "five_new_distinct_theorem_rules",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "all_new_exact_proof_obligations_passed",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "each_domain_explicit",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    },
+    {
+      "gate_id": "old_five_proofs_still_reproducible",
+      "passed": true,
+      "actual": 5,
+      "threshold": 5
+    }
+  ],
+  "universal_room_active_count": 10,
+  "proof_obligation_count": 132,
+  "proof_obligation_passed_count": 132,
+  "status_change": {
+    "bounded_hypotheses_retained": 28,
+    "newly_promoted_to_universal_room": 5,
+    "total_universal_room": 10,
+    "bounded_room_mutated_by_proof": false
+  },
+  "limitations": [
+    "全域证明针对抽象无限精度整数语义；部署执行器的浮点精度、幅值和 4096 步限制仍然存在。",
+    "九条是一元自然数公式；整数商公式只覆盖 a∈N、整数 d≥1，d=0 不在定义域。",
+    "证明的是十个具体程序，不自动覆盖搜索器将来生成的程序。",
+    "机制语法由宿主提供；学习器从匿名数值证据中选择程序结构与参数。",
+    "数学名称和证明规则仅在发现完成后由评价器使用。",
+    "其余 18 个活动候选仍为 bounded，不能称为通用公式。"
+  ]
+}

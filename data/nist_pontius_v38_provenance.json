@@ -1,0 +1,19 @@
+{
+  "snapshot_version": "nist-pontius-v38-20260821",
+  "retrieved_at": "2026-08-21T16:23:01.0076255Z",
+  "provider": "National Institute of Standards and Technology",
+  "dataset": "Pontius load cell calibration",
+  "source_url": "https://www.itl.nist.gov/div898/handbook/pmd/section6/pmd611.htm",
+  "reference_dataset_url": "https://www.itl.nist.gov/div898/strd/lls/data/LINKS/i-Pontius.shtml",
+  "doi": "https://doi.org/10.18434/T43G6C",
+  "row_count": 40,
+  "snapshot_sha256": "6904de8843d939dcf6e70a24b9370b957a56ac8df7fc829fcd8e5d30bc54a23d",
+  "design": "Known load was applied to a load cell and corresponding deflection measured; two sets were collected in increasing load order.",
+  "controlled_variable": "load",
+  "response_variable": "deflection",
+  "known_risk": "Systematic increasing run order makes equipment or load-cell drift difficult to distinguish from the load response.",
+  "units": {
+    "load": "dataset load unit",
+    "deflection": "dataset deflection unit"
+  }
+}

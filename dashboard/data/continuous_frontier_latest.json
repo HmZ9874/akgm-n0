@@ -1,0 +1,743 @@
+{
+  "report_version": "continuous-frontier-exploration-v0.1",
+  "run_id": "RUN-continuous-frontier-20260819T191023293116Z",
+  "created_at": "2026-08-19T19:10:23.293116Z",
+  "verdict": "two_calculus_precursor_semantics_verified_on_declared_polynomial_domain",
+  "exploration_scale": {
+    "anonymous_world_count": 5,
+    "local_observation_count": 150,
+    "partition_observation_count": 75,
+    "local_candidate_count": 96,
+    "partition_candidate_count": 36,
+    "total_candidate_count": 132
+  },
+  "discovered_semantics": [
+    {
+      "semantic": {
+        "semantic_id": "SEM-40d50eb6008bf37f",
+        "opcode": 129,
+        "forward_form": "right-center",
+        "backward_form": "center-left",
+        "denominator_power": 1,
+        "denominator_scale": 1,
+        "candidate_count": 96
+      },
+      "search_report": {
+        "semantic": {
+          "semantic_id": "SEM-40d50eb6008bf37f",
+          "opcode": 129,
+          "forward_form": "right-center",
+          "backward_form": "center-left",
+          "denominator_power": 1,
+          "denominator_scale": 1,
+          "candidate_count": 96
+        },
+        "candidate_count": 96,
+        "context_count": 150,
+        "best_score": [
+          "0",
+          "50",
+          "2"
+        ],
+        "runner_up_scores": [
+          {
+            "forward_form": "right-left",
+            "backward_form": "right-left",
+            "denominator_power": 1,
+            "denominator_scale": 2,
+            "score": [
+              "34125/1024",
+              "5115/1024",
+              "3"
+            ]
+          },
+          {
+            "forward_form": "right-center",
+            "backward_form": "right-left",
+            "denominator_power": 1,
+            "denominator_scale": 2,
+            "score": [
+              "19522395/262144",
+              "309307/4096",
+              "3"
+            ]
+          },
+          {
+            "forward_form": "right-left",
+            "backward_form": "center-left",
+            "denominator_power": 1,
+            "denominator_scale": 2,
+            "score": [
+              "5283081/65536",
+              "38775/512",
+              "3"
+            ]
+          },
+          {
+            "forward_form": "right-left",
+            "backward_form": "right-left",
+            "denominator_power": 0,
+            "denominator_scale": 1,
+            "score": [
+              "432126057/4194304",
+              "1969151/8192",
+              "1"
+            ]
+          },
+          {
+            "forward_form": "right-center",
+            "backward_form": "right-left",
+            "denominator_power": 1,
+            "denominator_scale": 1,
+            "score": [
+              "15154395/131072",
+              "309307/2048",
+              "2"
+            ]
+          }
+        ]
+      },
+      "posthoc_name": "two-sided local change-rate stabilization",
+      "name_given_to_learner": false
+    },
+    {
+      "semantic": {
+        "semantic_id": "SEM-11a96cb9aa1e206d",
+        "opcode": 130,
+        "anchor": "midpoint",
+        "aggregation": "sum",
+        "width_power": 1,
+        "scale": 1,
+        "candidate_count": 36
+      },
+      "search_report": {
+        "semantic": {
+          "semantic_id": "SEM-11a96cb9aa1e206d",
+          "opcode": 130,
+          "anchor": "midpoint",
+          "aggregation": "sum",
+          "width_power": 1,
+          "scale": 1,
+          "candidate_count": 36
+        },
+        "candidate_count": 36,
+        "sample_count": 75,
+        "best_score": [
+          "0",
+          "10966992029708173041021410754107290149027913994/14691938641593804952466669043272145703790855415",
+          "2",
+          "85/32"
+        ],
+        "runner_up_scores": [
+          {
+            "anchor": "midpoint",
+            "aggregation": "sum",
+            "width_power": 1,
+            "scale": 2,
+            "score": [
+              "0",
+              "10966992029708173041021410754107290149027913994/14691938641593804952466669043272145703790855415",
+              "3",
+              "85/64"
+            ]
+          },
+          {
+            "anchor": "left",
+            "aggregation": "sum",
+            "width_power": 1,
+            "scale": 1,
+            "score": [
+              "0",
+              "99263462038451044878490374721160452846162365487549/9140569820737153355561422070064997355347605908880",
+              "2",
+              "7025/128"
+            ]
+          },
+          {
+            "anchor": "left",
+            "aggregation": "sum",
+            "width_power": 1,
+            "scale": 2,
+            "score": [
+              "0",
+              "99263462038451044878490374721160452846162365487549/9140569820737153355561422070064997355347605908880",
+              "3",
+              "7025/256"
+            ]
+          },
+          {
+            "anchor": "right",
+            "aggregation": "sum",
+            "width_power": 1,
+            "scale": 1,
+            "score": [
+              "0",
+              "34719074165424624087569816474462253761636879392297/1809175418726563296462434610504219631008629907600",
+              "2",
+              "24785/512"
+            ]
+          },
+          {
+            "anchor": "right",
+            "aggregation": "sum",
+            "width_power": 1,
+            "scale": 2,
+            "score": [
+              "0",
+              "34719074165424624087569816474462253761636879392297/1809175418726563296462434610504219631008629907600",
+              "3",
+              "24785/1024"
+            ]
+          }
+        ]
+      },
+      "posthoc_name": "refinement-stable interval accumulation",
+      "name_given_to_learner": false
+    }
+  ],
+  "verification": {
+    "verifier_version": "independent-continuous-frontier-verifier-v0.1",
+    "passed": true,
+    "formal_domain": "univariate rational-coefficient polynomials of degree at most three; exact rational sample points",
+    "obligations": [
+      {
+        "obligation_id": "fresh_continuous_frontier_opcodes",
+        "passed": true,
+        "evidence": [
+          129,
+          130
+        ]
+      },
+      {
+        "obligation_id": "semantic_id_bindings",
+        "passed": true,
+        "evidence": [
+          "SEM-40d50eb6008bf37f",
+          "SEM-11a96cb9aa1e206d"
+        ]
+      },
+      {
+        "obligation_id": "local_program_selected_without_target_values",
+        "passed": true,
+        "evidence": {
+          "semantic_id": "SEM-40d50eb6008bf37f",
+          "opcode": 129,
+          "forward_form": "right-center",
+          "backward_form": "center-left",
+          "denominator_power": 1,
+          "denominator_scale": 1,
+          "candidate_count": 96
+        }
+      },
+      {
+        "obligation_id": "partition_program_selected_without_target_values",
+        "passed": true,
+        "evidence": {
+          "semantic_id": "SEM-11a96cb9aa1e206d",
+          "opcode": 130,
+          "anchor": "midpoint",
+          "aggregation": "sum",
+          "width_power": 1,
+          "scale": 1,
+          "candidate_count": 36
+        }
+      },
+      {
+        "obligation_id": "polynomial_local_limit_identity_degree_at_most_three",
+        "passed": true,
+        "evidence": "binomial expansion leaves the common coefficient-normal form plus terms containing h; those terms vanish as h approaches zero"
+      },
+      {
+        "obligation_id": "polynomial_partition_limit_identity_degree_at_most_three",
+        "passed": true,
+        "evidence": "finite power-sum identities reduce midpoint partitions to the exact polynomial antiderivative plus terms vanishing in 1/n"
+      },
+      {
+        "obligation_id": "hidden_local_convergence",
+        "passed": true,
+        "evidence": "12/12"
+      },
+      {
+        "obligation_id": "two_sided_cusp_counterexample_rejected",
+        "passed": true,
+        "evidence": [
+          "1",
+          "-1"
+        ]
+      },
+      {
+        "obligation_id": "hidden_partition_convergence",
+        "passed": true,
+        "evidence": "8/8"
+      },
+      {
+        "obligation_id": "partition_additivity",
+        "passed": true,
+        "evidence": "4/4"
+      }
+    ],
+    "local_cases": [
+      {
+        "coefficients": [
+          "7",
+          "-3"
+        ],
+        "point": "-3/2",
+        "initial_error": "0",
+        "final_error": "0",
+        "initial_side_disagreement": "0",
+        "final_side_disagreement": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "7",
+          "-3"
+        ],
+        "point": "0",
+        "initial_error": "0",
+        "final_error": "0",
+        "initial_side_disagreement": "0",
+        "final_side_disagreement": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "7",
+          "-3"
+        ],
+        "point": "5/3",
+        "initial_error": "0",
+        "final_error": "0",
+        "initial_side_disagreement": "0",
+        "final_side_disagreement": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "2",
+          "5",
+          "-2"
+        ],
+        "point": "-3/2",
+        "initial_error": "1",
+        "final_error": "1/256",
+        "initial_side_disagreement": "1",
+        "final_side_disagreement": "1/256",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "2",
+          "5",
+          "-2"
+        ],
+        "point": "0",
+        "initial_error": "1",
+        "final_error": "1/256",
+        "initial_side_disagreement": "1",
+        "final_side_disagreement": "1/256",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "2",
+          "5",
+          "-2"
+        ],
+        "point": "5/3",
+        "initial_error": "1",
+        "final_error": "1/256",
+        "initial_side_disagreement": "1",
+        "final_side_disagreement": "1/256",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "-1",
+          "4",
+          "3",
+          "-2"
+        ],
+        "point": "-3/2",
+        "initial_error": "6",
+        "final_error": "3/128",
+        "initial_side_disagreement": "6",
+        "final_side_disagreement": "3/128",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "-1",
+          "4",
+          "3",
+          "-2"
+        ],
+        "point": "0",
+        "initial_error": "3/2",
+        "final_error": "3/512",
+        "initial_side_disagreement": "3/2",
+        "final_side_disagreement": "3/512",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "-1",
+          "4",
+          "3",
+          "-2"
+        ],
+        "point": "5/3",
+        "initial_error": "7/2",
+        "final_error": "7/512",
+        "initial_side_disagreement": "7/2",
+        "final_side_disagreement": "7/512",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "3",
+          "-5",
+          "0",
+          "2"
+        ],
+        "point": "-3/2",
+        "initial_error": "9/2",
+        "final_error": "9/512",
+        "initial_side_disagreement": "9/2",
+        "final_side_disagreement": "9/512",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "3",
+          "-5",
+          "0",
+          "2"
+        ],
+        "point": "0",
+        "initial_error": "1/4",
+        "final_error": "1/262144",
+        "initial_side_disagreement": "0",
+        "final_side_disagreement": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "3",
+          "-5",
+          "0",
+          "2"
+        ],
+        "point": "5/3",
+        "initial_error": "5",
+        "final_error": "5/256",
+        "initial_side_disagreement": "5",
+        "final_side_disagreement": "5/256",
+        "passed": true
+      }
+    ],
+    "partition_cases": [
+      {
+        "coefficients": [
+          "7",
+          "-3"
+        ],
+        "interval": [
+          "-2",
+          "3"
+        ],
+        "initial_error": "0",
+        "final_error": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "7",
+          "-3"
+        ],
+        "interval": [
+          "0",
+          "5/2"
+        ],
+        "initial_error": "0",
+        "final_error": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "2",
+          "5",
+          "-2"
+        ],
+        "interval": [
+          "-2",
+          "3"
+        ],
+        "initial_error": "125/384",
+        "final_error": "125/98304",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "2",
+          "5",
+          "-2"
+        ],
+        "interval": [
+          "0",
+          "5/2"
+        ],
+        "initial_error": "125/3072",
+        "final_error": "125/786432",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "-1",
+          "4",
+          "3",
+          "-2"
+        ],
+        "interval": [
+          "-2",
+          "3"
+        ],
+        "initial_error": "0",
+        "final_error": "0",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "-1",
+          "4",
+          "3",
+          "-2"
+        ],
+        "interval": [
+          "0",
+          "5/2"
+        ],
+        "initial_error": "375/4096",
+        "final_error": "375/1048576",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "3",
+          "-5",
+          "0",
+          "2"
+        ],
+        "interval": [
+          "-2",
+          "3"
+        ],
+        "initial_error": "125/256",
+        "final_error": "125/65536",
+        "passed": true
+      },
+      {
+        "coefficients": [
+          "3",
+          "-5",
+          "0",
+          "2"
+        ],
+        "interval": [
+          "0",
+          "5/2"
+        ],
+        "initial_error": "625/4096",
+        "final_error": "625/1048576",
+        "passed": true
+      }
+    ],
+    "additivity_cases": [
+      {
+        "passed": true,
+        "error": "0"
+      },
+      {
+        "passed": true,
+        "error": "0"
+      },
+      {
+        "passed": true,
+        "error": "0"
+      },
+      {
+        "passed": true,
+        "error": "0"
+      }
+    ],
+    "counterexample": {
+      "kind": "anonymous cusp",
+      "forward_value": "1",
+      "backward_value": "-1",
+      "rejected": true
+    }
+  },
+  "counterexample": {
+    "kind": "anonymous cusp",
+    "forward_value": "1",
+    "backward_value": "-1",
+    "rejected": true,
+    "mistake_record": {
+      "mistake_id": "CM-e18b44e21760eda0",
+      "scope": "continuous_frontier_two_sided_local_stability",
+      "counterexample": {
+        "kind": "anonymous cusp",
+        "forward_value": "1",
+        "backward_value": "-1",
+        "rejected": true
+      }
+    }
+  },
+  "demonstrations": {
+    "anonymous_local_world": [
+      {
+        "step": "1/4",
+        "forward": "19/4",
+        "backward": "13/4"
+      },
+      {
+        "step": "1/16",
+        "forward": "67/16",
+        "backward": "61/16"
+      },
+      {
+        "step": "1/64",
+        "forward": "259/64",
+        "backward": "253/64"
+      },
+      {
+        "step": "1/256",
+        "forward": "1027/256",
+        "backward": "1021/256"
+      }
+    ],
+    "anonymous_partition_world": [
+      {
+        "partition_count": 8,
+        "value": "255/256"
+      },
+      {
+        "partition_count": 16,
+        "value": "1023/1024"
+      },
+      {
+        "partition_count": 32,
+        "value": "4095/4096"
+      },
+      {
+        "partition_count": 64,
+        "value": "16383/16384"
+      }
+    ]
+  },
+  "verified_room_events": [
+    {
+      "schema_version": "verified-continuous-semantic-event-v0.1",
+      "event_index": 0,
+      "semantic": {
+        "semantic_id": "SEM-40d50eb6008bf37f",
+        "opcode": 129,
+        "forward_form": "right-center",
+        "backward_form": "center-left",
+        "denominator_power": 1,
+        "denominator_scale": 1,
+        "candidate_count": 96
+      },
+      "verification_digest": "bf43ee9d484e0a42ad546e802fb757442e9fb47ef7313e795d76d41188ed8ba4",
+      "previous_event_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "event_hash": "18d5a3f56ab9ed9920746d4e43ca933497bcde8572625c3891f92ea53d249f4c"
+    },
+    {
+      "schema_version": "verified-continuous-semantic-event-v0.1",
+      "event_index": 1,
+      "semantic": {
+        "semantic_id": "SEM-11a96cb9aa1e206d",
+        "opcode": 130,
+        "anchor": "midpoint",
+        "aggregation": "sum",
+        "width_power": 1,
+        "scale": 1,
+        "candidate_count": 36
+      },
+      "verification_digest": "bf43ee9d484e0a42ad546e802fb757442e9fb47ef7313e795d76d41188ed8ba4",
+      "previous_event_hash": "18d5a3f56ab9ed9920746d4e43ca933497bcde8572625c3891f92ea53d249f4c",
+      "event_hash": "2da928e7c5229f46d067aca936d72f4585a77218d467787f5da15870def521e2"
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "large_anonymous_candidate_search_completed",
+      "passed": true,
+      "actual": 132,
+      "required": 132
+    },
+    {
+      "gate_id": "local_semantic_not_constant_or_unnormalized",
+      "passed": true,
+      "actual": {
+        "semantic_id": "SEM-40d50eb6008bf37f",
+        "opcode": 129,
+        "forward_form": "right-center",
+        "backward_form": "center-left",
+        "denominator_power": 1,
+        "denominator_scale": 1,
+        "candidate_count": 96
+      },
+      "required": "exact increment reconstruction with shrinking-step normalization"
+    },
+    {
+      "gate_id": "partition_semantic_is_additive_and_refinement_stable",
+      "passed": true,
+      "actual": {
+        "semantic_id": "SEM-11a96cb9aa1e206d",
+        "opcode": 130,
+        "anchor": "midpoint",
+        "aggregation": "sum",
+        "width_power": 1,
+        "scale": 1,
+        "candidate_count": 36
+      },
+      "required": "unscaled width-normalized partition sum"
+    },
+    {
+      "gate_id": "independent_polynomial_domain_proof",
+      "passed": true,
+      "actual": 10,
+      "required": 10
+    },
+    {
+      "gate_id": "nonsmooth_counterexample_enters_mistake_room",
+      "passed": true,
+      "actual": true,
+      "required": true
+    },
+    {
+      "gate_id": "both_semantics_enter_verified_room",
+      "passed": true,
+      "actual": 2,
+      "required": 2
+    }
+  ],
+  "learner_received": {
+    "calculus_terms": false,
+    "derivative_or_integral_formula": false,
+    "polynomial_coefficients": false,
+    "target_outputs": false,
+    "anonymous_exact_rational_samples": true,
+    "candidate_program_grammar": true,
+    "stability_additivity_and_simplicity_rewards": true
+  },
+  "limitations": [
+    "This is the first calculus precursor, not general calculus competence.",
+    "The universal proof is limited to univariate rational-coefficient polynomials of degree at most three.",
+    "The host supplied anonymous function worlds, sample locations, refinement schedules, candidate grammar, and proof rules.",
+    "The learner selected program structures without target rate or accumulation values, but it did not invent epsilon-delta logic or real-number completeness.",
+    "A cusp counterexample is rejected; broader discontinuous, oscillatory, and non-integrable families remain unexplored."
+  ]
+}

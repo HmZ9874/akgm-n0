@@ -1,0 +1,126 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akgm.local/schemas/run_result.schema.json",
+  "title": "AKGM-N0 experiment run result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "run_id",
+    "protocol_version",
+    "benchmark_id",
+    "created_at",
+    "status",
+    "execution",
+    "reproducibility",
+    "metrics",
+    "gates",
+    "artifacts"
+  ],
+  "properties": {
+    "schema_version": {"const": "run-result-v0.1"},
+    "run_id": {"type": "string", "pattern": "^RUN-[A-Za-z0-9._-]+$"},
+    "protocol_version": {"type": "string", "minLength": 1},
+    "benchmark_id": {"type": "string", "minLength": 1},
+    "created_at": {"type": "string", "format": "date-time"},
+    "finished_at": {"type": ["string", "null"], "format": "date-time"},
+    "status": {
+      "enum": ["queued", "running", "completed", "failed", "cancelled"]
+    },
+    "verdict": {
+      "enum": ["pending", "passed", "conditionally_passed", "failed"]
+    },
+    "execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["mode", "seed", "learner_contract_id", "primitive_manifest_id"],
+      "properties": {
+        "mode": {
+          "enum": [
+            "fixed_library",
+            "growing_library",
+            "evaluator_ceiling",
+            "random_fragment_cache"
+          ]
+        },
+        "seed": {"type": "integer"},
+        "learner_contract_id": {"type": "string", "minLength": 1},
+        "primitive_manifest_id": {"type": "string", "minLength": 1}
+      }
+    },
+    "reproducibility": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["code_hash", "config_hash", "data_hash", "verifier_hash"],
+      "properties": {
+        "code_hash": {"$ref": "#/$defs/sha256"},
+        "config_hash": {"$ref": "#/$defs/sha256"},
+        "data_hash": {"$ref": "#/$defs/sha256"},
+        "verifier_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "programs_evaluated",
+        "candidate_count",
+        "admitted_count",
+        "bounded_count",
+        "rejected_count",
+        "counterexample_count"
+      ],
+      "properties": {
+        "programs_evaluated": {"type": "integer", "minimum": 0},
+        "maximum_search_depth": {"type": "integer", "minimum": 0},
+        "candidate_count": {"type": "integer", "minimum": 0},
+        "admitted_count": {"type": "integer", "minimum": 0},
+        "bounded_count": {"type": "integer", "minimum": 0},
+        "rejected_count": {"type": "integer", "minimum": 0},
+        "counterexample_count": {"type": "integer", "minimum": 0},
+        "symbolic_recovery_rate": {"$ref": "#/$defs/rate"},
+        "false_admission_rate": {"$ref": "#/$defs/rate"},
+        "median_search_cost": {"type": "number", "minimum": 0},
+        "median_search_cost_reduction": {"$ref": "#/$defs/rate"},
+        "cross_task_reuse_rate": {"$ref": "#/$defs/rate"}
+      }
+    },
+    "gates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["gate_id", "metric", "comparison", "threshold", "actual", "passed"],
+        "properties": {
+          "gate_id": {"type": "string", "minLength": 1},
+          "metric": {"type": "string", "minLength": 1},
+          "comparison": {"enum": ["gte", "lte", "eq"]},
+          "threshold": {"type": ["number", "integer", "boolean"]},
+          "actual": {"type": ["number", "integer", "boolean", "null"]},
+          "passed": {"type": ["boolean", "null"]},
+          "note": {"type": "string"}
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["artifact_id", "path", "sha256", "visibility"],
+        "properties": {
+          "artifact_id": {"type": "string", "minLength": 1},
+          "path": {"type": "string", "minLength": 1},
+          "sha256": {"$ref": "#/$defs/sha256"},
+          "visibility": {"enum": ["learner_visible", "evaluator_only", "report_public"]},
+          "media_type": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "rate": {"type": "number", "minimum": 0, "maximum": 1},
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+  }
+}
+

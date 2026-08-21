@@ -1,0 +1,290 @@
+{
+  "report_version": "strict-algebraic-closure-v14.1",
+  "run_id": "RUN-strict-closure-v14-20260820T215251966773Z",
+  "created_at": "2026-08-20T21:52:51.966773Z",
+  "verdict": "four_composed_algebraic_closures_universally_proven",
+  "closures": [
+    {
+      "search": {
+        "generated": 4,
+        "behavior_classes": 4,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "QR-c6995b1929e585ca",
+          "family": "rational_product",
+          "policy": {
+            "substrate": "component_pairing_over_signed_product_v14",
+            "numerator_pair": [
+              "a",
+              "c"
+            ],
+            "denominator_pair": [
+              "b",
+              "d"
+            ]
+          },
+          "laws": {
+            "representation_independent": true,
+            "commutative": true,
+            "associative": true,
+            "identity": true
+          },
+          "passed": true
+        }
+      },
+      "proof": {
+        "verifier_version": "strict-algebraic-closure-verifier-v14.1",
+        "passed": true,
+        "closure_id": "STRICT-CLOSURE-c6995b1929e585ca",
+        "posthoc_name": "有理数乘法闭包",
+        "universal_statement": "for all a/b,c/d in Q with positive denominators, the component program returns ac/bd independently of representation",
+        "obligations": [
+          {
+            "obligation_id": "signed_product_dependency",
+            "passed": true,
+            "evidence": "integer component products use the proven V13 signed extension"
+          },
+          {
+            "obligation_id": "numerator_pairing",
+            "passed": true,
+            "evidence": "numerators are paired across operands"
+          },
+          {
+            "obligation_id": "denominator_pairing",
+            "passed": true,
+            "evidence": "positive denominators are paired across operands"
+          },
+          {
+            "obligation_id": "representation_independence",
+            "passed": true,
+            "evidence": "scaling either representation cancels between numerator and denominator"
+          },
+          {
+            "obligation_id": "field_multiplicative_laws",
+            "passed": true,
+            "evidence": "integer associativity and commutativity lift componentwise to rational equivalence classes"
+          }
+        ]
+      }
+    },
+    {
+      "search": {
+        "generated": 2,
+        "behavior_classes": 2,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "CG-b1f75c3e3db70714",
+          "family": "congruence_canonicalizer",
+          "policy": {
+            "substrate": "output_projection_over_integer_partition_v14",
+            "output_slot": 1
+          },
+          "laws": {
+            "canonical_range": true,
+            "representative_invariance": true,
+            "idempotent": true
+          },
+          "passed": true
+        }
+      },
+      "proof": {
+        "verifier_version": "strict-algebraic-closure-verifier-v14.1",
+        "passed": true,
+        "closure_id": "STRICT-CLOSURE-b1f75c3e3db70714",
+        "posthoc_name": "整数同余类标准化",
+        "universal_statement": "for every n in Z and m in N+, the projection returns the unique r in [0,m) representing n modulo m",
+        "obligations": [
+          {
+            "obligation_id": "partition_dependency",
+            "passed": true,
+            "evidence": "V13 integer Euclidean decomposition is universally proven"
+          },
+          {
+            "obligation_id": "residual_projection",
+            "passed": true,
+            "evidence": "the selected output is the bounded residual rather than the quotient"
+          },
+          {
+            "obligation_id": "canonical_range",
+            "passed": true,
+            "evidence": "V13 guarantees 0<=r<m"
+          },
+          {
+            "obligation_id": "representative_invariance",
+            "passed": true,
+            "evidence": "adding k*m changes only the quotient"
+          },
+          {
+            "obligation_id": "idempotence",
+            "passed": true,
+            "evidence": "a value already in [0,m) has quotient zero and unchanged residual"
+          },
+          {
+            "obligation_id": "uniqueness",
+            "passed": true,
+            "evidence": "two representatives in [0,m) differing by a multiple of m must be equal"
+          }
+        ]
+      }
+    },
+    {
+      "search": {
+        "generated": 8,
+        "behavior_classes": 5,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "MP-bb3c5fd51499f6fb",
+          "family": "modular_product",
+          "policy": {
+            "substrate": "reduction_placement_over_strict_product_v14",
+            "reduce_left": false,
+            "reduce_right": false,
+            "reduce_output": true
+          },
+          "laws": {
+            "canonical_output": true,
+            "representative_independence": true,
+            "commutative": true,
+            "associative": true,
+            "distributive": true
+          },
+          "passed": true
+        }
+      },
+      "proof": {
+        "verifier_version": "strict-algebraic-closure-verifier-v14.1",
+        "passed": true,
+        "closure_id": "STRICT-CLOSURE-bb3c5fd51499f6fb",
+        "posthoc_name": "同余类乘法闭包",
+        "universal_statement": "for every positive m, the program defines a well-defined commutative associative product on Z/mZ",
+        "obligations": [
+          {
+            "obligation_id": "integer_product_dependency",
+            "passed": true,
+            "evidence": "V13 signed product supplies representative multiplication"
+          },
+          {
+            "obligation_id": "congruence_dependency",
+            "passed": true,
+            "evidence": "the proven canonicalizer supplies the unique class representative"
+          },
+          {
+            "obligation_id": "output_reduction",
+            "passed": true,
+            "evidence": "the product is projected back to [0,m)"
+          },
+          {
+            "obligation_id": "representative_independence",
+            "passed": true,
+            "evidence": "(a+im)(b+jm)-ab is a multiple of m"
+          },
+          {
+            "obligation_id": "associativity_and_commutativity",
+            "passed": true,
+            "evidence": "integer product laws descend through representative independence"
+          },
+          {
+            "obligation_id": "distributivity",
+            "passed": true,
+            "evidence": "integer distributivity descends through canonical projection"
+          }
+        ]
+      }
+    },
+    {
+      "search": {
+        "generated": 23,
+        "behavior_classes": 13,
+        "passing_behavior_classes": 1,
+        "selected": {
+          "candidate_id": "MF-9272089766b08411",
+          "family": "modular_fold",
+          "policy": {
+            "substrate": "fold_over_modular_environment_v14",
+            "seed": "unit",
+            "operation": "product",
+            "reduce_each_step": true,
+            "reduce_final": false
+          },
+          "laws": {
+            "canonical_every_step_policy": true,
+            "zero_count_identity": true,
+            "successor_recurrence": true,
+            "count_addition_homomorphism": true,
+            "representative_independence": true
+          },
+          "passed": true
+        }
+      },
+      "proof": {
+        "verifier_version": "strict-algebraic-closure-verifier-v14.1",
+        "passed": true,
+        "closure_id": "STRICT-CLOSURE-9272089766b08411",
+        "posthoc_name": "模幂迭代闭包",
+        "universal_statement": "for all b,n in Z with n>=0 and m>0, the fold returns the canonical class of b^n modulo m",
+        "obligations": [
+          {
+            "obligation_id": "modular_product_dependency",
+            "passed": true,
+            "evidence": "each update uses the well-defined modular product"
+          },
+          {
+            "obligation_id": "unit_seed",
+            "passed": true,
+            "evidence": "the empty fold is the multiplicative identity class"
+          },
+          {
+            "obligation_id": "product_update",
+            "passed": true,
+            "evidence": "each iteration composes one additional base class"
+          },
+          {
+            "obligation_id": "canonical_state_invariant",
+            "passed": true,
+            "evidence": "every intermediate state is the unique representative in [0,m)"
+          },
+          {
+            "obligation_id": "inductive_invariant",
+            "passed": true,
+            "evidence": "after t iterations state is the canonical class of b^t"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "the natural count decreases once per iteration"
+          },
+          {
+            "obligation_id": "representative_independence",
+            "passed": true,
+            "evidence": "replacing b by b+k*m leaves every modular update unchanged"
+          },
+          {
+            "obligation_id": "count_addition_law",
+            "passed": true,
+            "evidence": "splitting the fold at i+j yields the modular product of the two subfolds"
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "verified_closures": 4,
+    "new_foundations_claimed": 0,
+    "proof_passed": 25,
+    "proof_total": 25,
+    "strict_foundation_count_unchanged": 3
+  },
+  "classification": {
+    "label": "verified_compositional_closure",
+    "target_output_rows": false,
+    "bounded_policy_grammars": true,
+    "host_supplied": [
+      "rational-pair representation",
+      "congruence-class representation",
+      "component/reduction/fold policy grammars",
+      "universal proof schemas"
+    ],
+    "human_novel_mathematics_claim": false
+  },
+  "content_digest": "7855debd45e813b658c6cba9ed3a601af6fae71af0e0c64f13de0fa60ed9725d"
+}

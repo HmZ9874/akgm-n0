@@ -1,0 +1,944 @@
+{
+  "report_version": "hamiltonian-mechanics-v33.0",
+  "run_id": "RUN-hamiltonian-v33-20260821T085353864394Z",
+  "created_at": "2026-08-21T08:53:53.864394+00:00",
+  "verdict": "canonical_hamiltonian_and_symplectic_map_verified",
+  "acceptance": {
+    "benchmark_version": "hamiltonian-mechanics-v33.0",
+    "passed": true,
+    "classification": "verified_anonymous_canonical_phase_flow_hamiltonian_and_symplectic_map",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "momentum_rows": [
+        {
+          "experiment_id": "TM-0",
+          "anonymous_inputs": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TM-1",
+          "anonymous_inputs": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 6,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TM-2",
+          "anonymous_inputs": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            }
+          ],
+          "anonymous_target": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 2
+          },
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TM-3",
+          "anonymous_inputs": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "anonymous_target": {
+            "positive": 0,
+            "negative": 2,
+            "denominator": 1
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "flow_rows": [
+        {
+          "experiment_id": "TF-0",
+          "anonymous_state": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-1",
+          "anonymous_state": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-2",
+          "anonymous_state": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TF-3",
+          "anonymous_state": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 8
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      ],
+      "phase_rows": [
+        {
+          "experiment_id": "TP-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 4,
+              "denominator": 5
+            }
+          ],
+          "human_names": null
+        },
+        {
+          "experiment_id": "TP-1",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 6,
+              "denominator": 5
+            }
+          ],
+          "human_names": null
+        },
+        {
+          "experiment_id": "TP-2",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            }
+          ],
+          "human_names": null
+        },
+        {
+          "experiment_id": "TP-3",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 19,
+              "negative": 0,
+              "denominator": 20
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            }
+          ],
+          "human_names": null
+        }
+      ],
+      "formulas_supplied": false
+    },
+    "discovery": {
+      "momentum_candidates": 4,
+      "selected_momentum": {
+        "program_id": "MOM-08f271887ce94707",
+        "opaque_program": "MOMENTUM<M,V>",
+        "policy": {
+          "weight": "M",
+          "human_quantity_name": null
+        }
+      },
+      "flow_candidates_per_output": 36,
+      "selected_q_flow": {
+        "program_id": "HFL-ff046e64c1a32ee1",
+        "opaque_program": "FLOW<KEEP;ONE*P/M>",
+        "policy": {
+          "source": "P",
+          "numerator_weight": "ONE",
+          "denominator": "M",
+          "turn": false,
+          "human_operation_name": null
+        }
+      },
+      "selected_p_flow": {
+        "program_id": "HFL-1edd39ebd568f047",
+        "opaque_program": "FLOW<TURN;K*Q/ONE>",
+        "policy": {
+          "source": "Q",
+          "numerator_weight": "K",
+          "denominator": "ONE",
+          "turn": true,
+          "human_operation_name": null
+        }
+      },
+      "hamiltonian_candidates": 18,
+      "selected_hamiltonian": {
+        "program_id": "HAM-f876dd162b7a56d3",
+        "opaque_program": "HAMILTON<P2/M,KEEP<K*Q2>>",
+        "policy": {
+          "kinetic_denominator": "M",
+          "potential_weight": "K",
+          "potential_turn": false,
+          "human_quantity_name": null
+        }
+      },
+      "symplectic_step": "P_NEXT=P-H*K*Q;Q_NEXT=Q+H*P_NEXT/M"
+    },
+    "proofs": {
+      "canonical": {
+        "proof_id": "V33-PROOF-CANONICAL-HAMILTONIAN-MECHANICS",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_canonical_momentum",
+            "passed": true,
+            "evidence": "p=m v"
+          },
+          {
+            "obligation_id": "unique_q_flow",
+            "passed": true,
+            "evidence": "qdot=p/m"
+          },
+          {
+            "obligation_id": "unique_p_flow",
+            "passed": true,
+            "evidence": "pdot=-kq"
+          },
+          {
+            "obligation_id": "unique_hamiltonian",
+            "passed": true,
+            "evidence": "H2=p^2/m+kq^2"
+          },
+          {
+            "obligation_id": "lagrangian_equivalence",
+            "passed": true,
+            "evidence": "eliminating p recovers m qddot+kq=0"
+          },
+          {
+            "obligation_id": "energy_generation",
+            "passed": true,
+            "evidence": "flows are half-gradients of H2 with canonical sign router"
+          }
+        ],
+        "momentum_hidden": [
+          {
+            "experiment_id": "SM-0",
+            "passed": true
+          },
+          {
+            "experiment_id": "SM-1",
+            "passed": true
+          },
+          {
+            "experiment_id": "SM-2",
+            "passed": true
+          }
+        ],
+        "flow_hidden": [
+          {
+            "experiment_id": "SF-0",
+            "q_passed": true,
+            "p_passed": true
+          },
+          {
+            "experiment_id": "SF-1",
+            "q_passed": true,
+            "p_passed": true
+          },
+          {
+            "experiment_id": "SF-2",
+            "q_passed": true,
+            "p_passed": true
+          }
+        ],
+        "phase_hidden": [
+          {
+            "experiment_id": "SP-0",
+            "passed": true
+          },
+          {
+            "experiment_id": "SP-1",
+            "passed": true
+          },
+          {
+            "experiment_id": "SP-2",
+            "passed": true
+          }
+        ]
+      },
+      "symplectic": {
+        "proof_id": "V33-PROOF-SYMPLECTIC-KICK-DRIFT",
+        "passed": true,
+        "universal_statement": "the kick-drift Jacobian determinant is exactly one for every positive m and rational h,k",
+        "hidden_replay": [
+          {
+            "m": 1,
+            "k": 1,
+            "h": "1",
+            "determinant": "1",
+            "executable": true,
+            "passed": true
+          },
+          {
+            "m": 2,
+            "k": 1,
+            "h": "1/2",
+            "determinant": "1",
+            "executable": true,
+            "passed": true
+          },
+          {
+            "m": 3,
+            "k": 2,
+            "h": "1/3",
+            "determinant": "1",
+            "executable": true,
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "momentum_omit_mass",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SM-0",
+          "anonymous_inputs": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            }
+          ],
+          "anonymous_target": {
+            "positive": 10,
+            "negative": 0,
+            "denominator": 3
+          },
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "q_flow_wrong_source",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF-0",
+          "anonymous_state": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      },
+      {
+        "mutation": "p_flow_wrong_sign",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF-0",
+          "anonymous_state": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            }
+          ],
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      },
+      {
+        "mutation": "swap_hamiltonian_weights",
+        "rejected": true,
+        "counterexample": {
+          "canonical_generation": "kinetic and potential gradients do not reproduce the selected q/p flows"
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v32_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_phase_rows",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "canonical_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_phase_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "symplectic_area",
+        "passed": true
+      },
+      {
+        "obligation_id": "lagrangian_equivalence",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m13_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_m14",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_formula_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30"
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "verified",
+          "evidence_version": "V31"
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "verified",
+          "evidence_version": "V32"
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "verified",
+          "evidence_version": "V33"
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 13,
+      "total_domains": 15,
+      "completion_ratio": 0.8666666666666667,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M14:continuum_mechanics",
+      "selection_reason": "local conservation and finite-cell limits are the remaining classical many-degree-of-freedom foundation"
+    },
+    "posthoc_translation": {
+      "momentum": "p=mv",
+      "q_flow": "qdot=p/m",
+      "p_flow": "pdot=-kq",
+      "hamiltonian": "H2=p^2/m+kq^2",
+      "map": "symplectic Euler kick-drift"
+    },
+    "limitations": [
+      "One canonical degree of freedom and quadratic Hamiltonians only.",
+      "No general Poisson manifolds, chaos, or field Hamiltonians.",
+      "Exact phase rotations are hidden oracle data.",
+      "Completion remains 13/15."
+    ]
+  },
+  "claim": {
+    "achieved": "canonical momentum, phase flows, Hamiltonian, and area-preserving step",
+    "not_claimed": "general nonlinear symplectic geometry"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v33/success/hamiltonian_latest.json",
+    "mistake_room": "artifacts/physics/v33/mistakes/rejected_hamiltonian_mutations.jsonl"
+  },
+  "content_digest": "3b5447f405fcc5cbb74e5c4dd4b35fdc5f8a4b270bfbd982697c618c6ab80771"
+}

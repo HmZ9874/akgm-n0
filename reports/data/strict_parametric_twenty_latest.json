@@ -1,0 +1,3869 @@
+{
+  "report_version": "strict-parametric-room-v0.1",
+  "run_id": "RUN-strict-parametric-twenty-proof-20260818T220807621083Z",
+  "created_at": "2026-08-18T22:08:07.621083Z",
+  "verdict": "twenty_strict_free_variable_formulas_proven",
+  "strict_formula_count": 20,
+  "prior_parametric_count": 1,
+  "historical_reclassified_count": 9,
+  "newly_synthesized_count": 10,
+  "new_formulas": [
+    {
+      "formula": "M(a,b)=a*b",
+      "mechanism": "mul",
+      "record_id": "UF-79ebb37eba04ba34",
+      "source_record_id": "SF-3cee56bfa0429d65",
+      "theorem_kind": "strict_parametric_s00",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s00",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, M(a,b)=a*b",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s00"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=9332f6b2f2533639879bb1ab234c8b07bd93e0821b7f89c445f8473985a10483"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, M(a,b)=a*b"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=b-t', 'result=t*a', '0<=t<=b']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=9332f6b2f2533639879bb1ab234c8b07bd93e0821b7f89c445f8473985a10483"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "t=0 gives result=0=0*a"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "result'=t*a+a=(t+1)*a while counter'=b-(t+1)"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields M(a,b)=a*b"
+          }
+        ],
+        "certificate_digest": "9232c7ebf5a90d0b90191d7eaed123cd1c6d66d444afe2d21fc4a19b32e8c489"
+      },
+      "invariants": [
+        "counter=b-t",
+        "result=t*a",
+        "0<=t<=b"
+      ],
+      "termination": "natural loop counters decrease by 1"
+    },
+    {
+      "formula": "MAX(a,b)=max(a,b)",
+      "mechanism": "max",
+      "record_id": "UF-dc84367210cfff2f",
+      "source_record_id": "SF-68723b60b475c19c",
+      "theorem_kind": "strict_parametric_s01",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s01",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, MAX(a,b)=max(a,b)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s01"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=92615f5768accb5a42661a1d89249151cdfbaa9ac7f890a103ee9bb22c2f984a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, MAX(a,b)=max(a,b)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['comparison partitions a<b, a=b, a>b', 'selected value is one runtime input']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=92615f5768accb5a42661a1d89249151cdfbaa9ac7f890a103ee9bb22c2f984a"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields MAX(a,b)=max(a,b)"
+          }
+        ],
+        "certificate_digest": "2de8fee15f7f06d7022311b5697dacd893b01223558892acbf09e382e4ed6b53"
+      },
+      "invariants": [
+        "comparison partitions a<b, a=b, a>b",
+        "selected value is one runtime input"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "D(a,b)=max(a-b,0)",
+      "mechanism": "trunc_sub",
+      "record_id": "UF-44aa1838fcb42f1c",
+      "source_record_id": "SF-bb491142f1c6d314",
+      "theorem_kind": "strict_parametric_s02",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s02",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, D(a,b)=max(a-b,0)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s02"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=89ee442f3b02e3299125b6fc250a24fe6827af3c1595422f03e23121f99fff5f"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, D(a,b)=max(a-b,0)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'negative branch maps to zero']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=89ee442f3b02e3299125b6fc250a24fe6827af3c1595422f03e23121f99fff5f"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields D(a,b)=max(a-b,0)"
+          }
+        ],
+        "certificate_digest": "be9fcbc918464036a32a8afc178967064c601f6fecd19b8300b49c1e2ad1ab96"
+      },
+      "invariants": [
+        "difference=a-b",
+        "negative branch maps to zero"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "NE(a,b)=1[a!=b]",
+      "mechanism": "not_equal",
+      "record_id": "UF-2ce18fbbf5eb66bf",
+      "source_record_id": "SF-7c408d139ca607a1",
+      "theorem_kind": "strict_parametric_s03",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s03",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, NE(a,b)=1[a!=b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s03"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=75f73608ecad46eef4708c1b5fda231674539fcde356c0b1bf5c653ec4c0e215"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, NE(a,b)=1[a!=b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'zero branch iff a=b']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=75f73608ecad46eef4708c1b5fda231674539fcde356c0b1bf5c653ec4c0e215"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields NE(a,b)=1[a!=b]"
+          }
+        ],
+        "certificate_digest": "6d45c204ad00d66edc8c67fd6fb82e14cf221a1079c0c5de7301fafb32c4326c"
+      },
+      "invariants": [
+        "difference=a-b",
+        "zero branch iff a=b"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "LE(a,b)=1[a<=b]",
+      "mechanism": "less_equal",
+      "record_id": "UF-718039f688c7b60e",
+      "source_record_id": "SF-f36e4d7703f78dbd",
+      "theorem_kind": "strict_parametric_s04",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s04",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, LE(a,b)=1[a<=b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s04"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=1fefa3480b7de758a1ae7eb7ac62acb691017ae32241d525e20cfe34a3f4cafc"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, LE(a,b)=1[a<=b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'true branch iff difference<=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=1fefa3480b7de758a1ae7eb7ac62acb691017ae32241d525e20cfe34a3f4cafc"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields LE(a,b)=1[a<=b]"
+          }
+        ],
+        "certificate_digest": "9c055517c459843085a8fa0c331e93b846c673243a5db396a1d1f5749b649001"
+      },
+      "invariants": [
+        "difference=a-b",
+        "true branch iff difference<=0"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "GT(a,b)=1[a>b]",
+      "mechanism": "greater",
+      "record_id": "UF-4ed246713c893848",
+      "source_record_id": "SF-29ffc54d4342d6e0",
+      "theorem_kind": "strict_parametric_s05",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s05",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, GT(a,b)=1[a>b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s05"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=af356acddebfec0a1a49292322cca762864405cd1bc032aefbc727cec076ab89"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, GT(a,b)=1[a>b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'true branch iff difference>0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=af356acddebfec0a1a49292322cca762864405cd1bc032aefbc727cec076ab89"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields GT(a,b)=1[a>b]"
+          }
+        ],
+        "certificate_digest": "923c487a2fbd1f6c1d77eb071a409a3022a77e96b209fd43285a1907634d5363"
+      },
+      "invariants": [
+        "difference=a-b",
+        "true branch iff difference>0"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "GE(a,b)=1[a>=b]",
+      "mechanism": "greater_equal",
+      "record_id": "UF-820860d87dd8bcd9",
+      "source_record_id": "SF-4504518a6a074387",
+      "theorem_kind": "strict_parametric_s06",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s06",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, GE(a,b)=1[a>=b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s06"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=979eedadd1afa9a8e0e516be20d254af077ea98baf24a1883114678da4ce7e06"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, GE(a,b)=1[a>=b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'true branch iff difference>=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=979eedadd1afa9a8e0e516be20d254af077ea98baf24a1883114678da4ce7e06"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields GE(a,b)=1[a>=b]"
+          }
+        ],
+        "certificate_digest": "067724589a13f0f19a069575cfc1e03c35740e7ab5f7de869856401b53e21531"
+      },
+      "invariants": [
+        "difference=a-b",
+        "true branch iff difference>=0"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "ABS(z)=|z|",
+      "mechanism": "absolute",
+      "record_id": "UF-dc91d45a2b0b0082",
+      "source_record_id": "SF-28d449fae6e7de4b",
+      "theorem_kind": "strict_parametric_s07",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s07",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, ABS(z)=|z|",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s07"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a8fc8752c33afb2abf9a353e96da8ba88c258d5d38af23a950a5b47ba2df6b8a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 1, \"includes_zero\": true, \"kind\": \"integers\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, ABS(z)=|z|"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['negative branch emits 0-z', 'nonnegative branch emits z']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=a8fc8752c33afb2abf9a353e96da8ba88c258d5d38af23a950a5b47ba2df6b8a"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields ABS(z)=|z|"
+          }
+        ],
+        "certificate_digest": "e20ecf2e9c7d5c85df39ef97588c3dce33ff161faddaef348311430900fe0a8a"
+      },
+      "invariants": [
+        "negative branch emits 0-z",
+        "nonnegative branch emits z"
+      ],
+      "termination": "acyclic finite branch"
+    },
+    {
+      "formula": "P(n,k)=0 if k>n else n!/(n-k)!",
+      "mechanism": "falling",
+      "record_id": "UF-f542ba0662aa2a0c",
+      "source_record_id": "SF-7cdb267ed8af145c",
+      "theorem_kind": "strict_parametric_s08",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s08",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, P(n,k)=0 if k>n else n!/(n-k)!",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s08"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a29e25d6ec8f6c6cb2727ba353ca7fe3b0fead959810e652ac73ab4abb84532a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, P(n,k)=0 if k>n else n!/(n-k)!"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['outer=k-t', 'factor=n-t', 'result=n!/(n-t)!', 'inner product by repeated addition']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=a29e25d6ec8f6c6cb2727ba353ca7fe3b0fead959810e652ac73ab4abb84532a"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "invalid_parameter_branch",
+            "passed": true,
+            "evidence": "k>n emits 0"
+          },
+          {
+            "obligation_id": "outer_induction",
+            "passed": true,
+            "evidence": "multiplying n!/(n-t)! by n-t yields n!/(n-(t+1))!"
+          },
+          {
+            "obligation_id": "inner_induction",
+            "passed": true,
+            "evidence": "temporary=j*factor and inner=result-j are preserved"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields P(n,k)=0 if k>n else n!/(n-k)!"
+          }
+        ],
+        "certificate_digest": "fd1f1d076d9d6b507148a40c6d5d286cb5f442dc631c97f4cc42c66a182106ab"
+      },
+      "invariants": [
+        "outer=k-t",
+        "factor=n-t",
+        "result=n!/(n-t)!",
+        "inner product by repeated addition"
+      ],
+      "termination": "natural loop counters decrease by 1"
+    },
+    {
+      "formula": "C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+      "mechanism": "choose",
+      "record_id": "UF-454a347759091822",
+      "source_record_id": "SF-7477170fbecf2c3f",
+      "theorem_kind": "strict_parametric_s09",
+      "proof": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s09",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s09"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=72ca63a9651d3a03f253705aab6b7f9a343d38b5f91e816216bd51923a7696e5"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, C(n,k)=0 if k>n else n!/(k!(n-k)!)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['outer=k-t', 'factor=n-k+t+1', 'divisor=t+1', 'result=C(n-k+t,t)']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=72ca63a9651d3a03f253705aab6b7f9a343d38b5f91e816216bd51923a7696e5"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "invalid_parameter_branch",
+            "passed": true,
+            "evidence": "k>n emits 0"
+          },
+          {
+            "obligation_id": "outer_induction",
+            "passed": true,
+            "evidence": "C(n-k+t,t)*(n-k+t+1)/(t+1)=C(n-k+t+1,t+1)"
+          },
+          {
+            "obligation_id": "exact_divisibility",
+            "passed": true,
+            "evidence": "the binomial recurrence numerator is divisible by t+1"
+          },
+          {
+            "obligation_id": "nested_loop_invariants",
+            "passed": true,
+            "evidence": "multiplication and quotient loops preserve product and Euclidean quotient invariants"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields C(n,k)=0 if k>n else n!/(k!(n-k)!)"
+          }
+        ],
+        "certificate_digest": "462c51d44184a46c37a381fa05c5e8330ff6c5f1ca3387466fb01df7755fca4d"
+      },
+      "invariants": [
+        "outer=k-t",
+        "factor=n-k+t+1",
+        "divisor=t+1",
+        "result=C(n-k+t,t)"
+      ],
+      "termination": "natural loop counters decrease by 1"
+    }
+  ],
+  "room_records": [
+    {
+      "room_record_id": "UF-059b87aeaf465fb1",
+      "source_room_record_id": "SF-2ed1dc0b57cebacd",
+      "source_operation_id": "PARAM-ccc5dc26b9bec943",
+      "theorem_kind": "natural_parameterized_power",
+      "theorem_statement": "for every a,n in N, output(a,n) = a^n, with 0^0=1",
+      "domain": {
+        "arity": 2,
+        "includes_zero": true,
+        "kind": "natural_number_pairs"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          4,
+          1,
+          1,
+          3,
+          62,
+          4,
+          1,
+          3,
+          63,
+          2,
+          62,
+          12,
+          28,
+          2,
+          63,
+          9,
+          0,
+          3,
+          64,
+          4,
+          0,
+          3,
+          65,
+          2,
+          64,
+          12,
+          21,
+          2,
+          65,
+          5,
+          0,
+          3,
+          65,
+          2,
+          64,
+          10,
+          1,
+          3,
+          64,
+          11,
+          12,
+          2,
+          65,
+          9,
+          0,
+          3,
+          63,
+          2,
+          62,
+          10,
+          1,
+          3,
+          62,
+          11,
+          5,
+          2,
+          63,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "outer_counter=n-t",
+          "result=a^t",
+          "0<=t<=n",
+          "inner_counter=a^t-j",
+          "temporary=j*a",
+          "0<=j<=a^t"
+        ],
+        "claimed_statement": "for every a,n in N, output(a,n) = a^n, with 0^0=1",
+        "claimed_termination_measure": "nested natural counters: inner decreases by 1; after inner exit outer decreases by 1",
+        "domain": {
+          "arity": 2,
+          "includes_zero": true,
+          "kind": "natural_number_pairs"
+        },
+        "program_digest": "ccc5dc26b9bec94318d40354e10a823faa0f6d4fdf552e77545f392ac6778510",
+        "source_operation_id": "PARAM-ccc5dc26b9bec943",
+        "source_room_record_id": "SF-2ed1dc0b57cebacd",
+        "theorem_kind": "natural_parameterized_power"
+      },
+      "verification": {
+        "certificate_digest": "8a5285fa3c19d9a92d0f572ca4e66c9b892f867fb82611bdfa5d65abf9c8883a",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "natural_parameterized_power",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=ccc5dc26b9bec94318d40354e10a823faa0f6d4fdf552e77545f392ac6778510",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a,n in N, output(a,n) = a^n, with 0^0=1",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['outer_counter=n-t', 'result=a^t', '0<=t<=n', 'inner_counter=a^t-j', 'temporary=j*a', '0<=j<=a^t']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: nested natural counters: inner decreases by 1; after inner exit outer decreases by 1",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "decoded nested loops: outer=n,result=1; inner=result,temp=0; temp+=a until inner=0",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "input 0 supplies the runtime base a and input 1 supplies the runtime exponent n",
+            "obligation_id": "both_runtime_inputs_are_free",
+            "passed": true
+          },
+          {
+            "evidence": "the base is read from input 0; the VM has no multiply or power opcode",
+            "obligation_id": "no_fixed_base_or_power_opcode",
+            "passed": true
+          },
+          {
+            "evidence": "at t=0: result=1=a^0 and outer_counter=n",
+            "obligation_id": "induction_base",
+            "passed": true
+          },
+          {
+            "evidence": "temp=j*a and inner=a^t-j imply temp'=(j+1)*a and inner'=a^t-(j+1)",
+            "obligation_id": "inner_induction_step",
+            "passed": true
+          },
+          {
+            "evidence": "inner=0 implies j=a^t, so temp=a^t*a=a^(t+1)",
+            "obligation_id": "inner_exit_correctness",
+            "passed": true
+          },
+          {
+            "evidence": "committing temp establishes result=a^(t+1) and decrementing outer gives n-(t+1)",
+            "obligation_id": "outer_induction_step",
+            "passed": true
+          },
+          {
+            "evidence": "n=0 emits 1 for every a; a=0,n>0 makes the first completed outer update equal 0",
+            "obligation_id": "zero_boundary_cases",
+            "passed": true
+          },
+          {
+            "evidence": "outer is natural and decreases n times; each inner counter starts at finite a^t and decreases by 1",
+            "obligation_id": "termination",
+            "passed": true
+          },
+          {
+            "evidence": "outer=0 implies t=n, hence emitted result=a^n",
+            "obligation_id": "exit_correctness",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a,n in N, output(a,n) = a^n, with 0^0=1",
+        "theorem_kind": "natural_parameterized_power",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-7eb738379af6d614",
+      "source_room_record_id": "SF-c432c82175c92edb",
+      "source_operation_id": "G3NEW-3a697393414ca3e6",
+      "theorem_kind": "natural_integer_quotient",
+      "theorem_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+      "domain": {
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1,
+        "kind": "natural_dividend_positive_divisor"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          2,
+          1,
+          0,
+          3,
+          32,
+          4,
+          0,
+          3,
+          33,
+          2,
+          32,
+          6,
+          1,
+          13,
+          13,
+          3,
+          32,
+          2,
+          33,
+          9,
+          1,
+          3,
+          33,
+          11,
+          5,
+          2,
+          33,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "remainder=a-count*d",
+          "count=c",
+          "remainder>=0",
+          "d>=1"
+        ],
+        "claimed_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+        "claimed_termination_measure": "remainder in N decreases by d>=1",
+        "domain": {
+          "arity": 2,
+          "dividend_includes_zero": true,
+          "divisor_minimum": 1,
+          "kind": "natural_dividend_positive_divisor"
+        },
+        "program_digest": "3a697393414ca3e6789b733e6a42476df53a35a7fe25c8d886cd8cebf0751dca",
+        "source_operation_id": "G3NEW-3a697393414ca3e6",
+        "source_room_record_id": "SF-c432c82175c92edb",
+        "theorem_kind": "natural_integer_quotient"
+      },
+      "verification": {
+        "certificate_digest": "102c2debd076255519d47d90a114eed57f154193b72335c626fdc07c05aae94f",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "natural_integer_quotient",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=3a697393414ca3e6789b733e6a42476df53a35a7fe25c8d886cd8cebf0751dca",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d) = floor(a/d)",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['remainder=a-count*d', 'count=c', 'remainder>=0', 'd>=1']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: remainder in N decreases by d>=1",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "decoded remainder=a,count=0; subtract d while nonnegative and count successes",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "at c=0: remainder=a=a-0*d and remainder>=0",
+            "obligation_id": "induction_base",
+            "passed": true
+          },
+          {
+            "evidence": "a-cd>=d implies new remainder=a-(c+1)d>=0 and new count=c+1",
+            "obligation_id": "induction_step",
+            "passed": true
+          },
+          {
+            "evidence": "d>=1, so each success decreases natural remainder by at least 1; at most a successes",
+            "obligation_id": "termination",
+            "passed": true
+          },
+          {
+            "evidence": "exit gives a=cd+r with 0<=r<d, hence c=floor(a/d)",
+            "obligation_id": "exit_correctness",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+        "theorem_kind": "natural_integer_quotient",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-1762e95bba47a616",
+      "source_room_record_id": "SF-fe628c51b2b434bc",
+      "source_operation_id": "G4NEW-6d032c98e59a7ab9",
+      "theorem_kind": "batch20_t12",
+      "theorem_statement": "for every a,b in N, output(a,b)=min(a,b)",
+      "domain": {
+        "arity": 2,
+        "includes_zero": true,
+        "kind": "natural_number_pairs"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          6,
+          1,
+          1,
+          15,
+          0,
+          0,
+          0,
+          1,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "branch condition is a-b<0"
+        ],
+        "claimed_statement": "for every a,b in N, output(a,b)=min(a,b)",
+        "claimed_termination_measure": "acyclic branch",
+        "domain": {
+          "arity": 2,
+          "includes_zero": true,
+          "kind": "natural_number_pairs"
+        },
+        "program_digest": "6d032c98e59a7ab98984677a4b23f8aae002983fc57a3fcfe5dd43344a57e2ed",
+        "source_operation_id": "G4NEW-6d032c98e59a7ab9",
+        "source_room_record_id": "SF-fe628c51b2b434bc",
+        "theorem_kind": "batch20_t12"
+      },
+      "verification": {
+        "certificate_digest": "40c341d4fde20603d421b7bf1c4b7b7ba882526ec6669f7a6294e1db87c1e2a0",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t12",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=6d032c98e59a7ab98984677a4b23f8aae002983fc57a3fcfe5dd43344a57e2ed",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a,b in N, output(a,b)=min(a,b)",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['branch condition is a-b<0']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: acyclic branch",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=6d032c98e59a7ab98984677a4b23f8aae002983fc57a3fcfe5dd43344a57e2ed",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "a-b<0 iff a<b, branch emits a",
+            "obligation_id": "negative_case",
+            "passed": true
+          },
+          {
+            "evidence": "a-b>=0 iff a>=b, branch emits b",
+            "obligation_id": "nonnegative_case",
+            "passed": true
+          },
+          {
+            "evidence": "the two ordered cases partition N^2",
+            "obligation_id": "case_exhaustiveness",
+            "passed": true
+          },
+          {
+            "evidence": "acyclic",
+            "obligation_id": "termination",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=min(a,b)",
+        "theorem_kind": "batch20_t12",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-62d45798c2efe627",
+      "source_room_record_id": "SF-0df1f1f08dea8c41",
+      "source_operation_id": "G4NEW-687cca22ba6069f5",
+      "theorem_kind": "batch20_t13",
+      "theorem_statement": "for every a,b in N, output(a,b)=abs(a-b)",
+      "domain": {
+        "arity": 2,
+        "includes_zero": true,
+        "kind": "natural_number_pairs"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          5,
+          15,
+          0,
+          0,
+          0,
+          1,
+          1,
+          6,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "accumulator is a-b before branch"
+        ],
+        "claimed_statement": "for every a,b in N, output(a,b)=abs(a-b)",
+        "claimed_termination_measure": "acyclic branch",
+        "domain": {
+          "arity": 2,
+          "includes_zero": true,
+          "kind": "natural_number_pairs"
+        },
+        "program_digest": "687cca22ba6069f5a4df2a7d69b977fa43987315645d2bc026e15370b87f5ef8",
+        "source_operation_id": "G4NEW-687cca22ba6069f5",
+        "source_room_record_id": "SF-0df1f1f08dea8c41",
+        "theorem_kind": "batch20_t13"
+      },
+      "verification": {
+        "certificate_digest": "ac84d7809add9eb7b3dccd90848d77a0241abd58a23ee9b10449025a98d3825a",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t13",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=687cca22ba6069f5a4df2a7d69b977fa43987315645d2bc026e15370b87f5ef8",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a,b in N, output(a,b)=abs(a-b)",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['accumulator is a-b before branch']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: acyclic branch",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=687cca22ba6069f5a4df2a7d69b977fa43987315645d2bc026e15370b87f5ef8",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "a>=b emits a-b",
+            "obligation_id": "nonnegative_case",
+            "passed": true
+          },
+          {
+            "evidence": "a<b recomputes and emits b-a",
+            "obligation_id": "negative_case",
+            "passed": true
+          },
+          {
+            "evidence": "both order cases covered",
+            "obligation_id": "case_exhaustiveness",
+            "passed": true
+          },
+          {
+            "evidence": "acyclic",
+            "obligation_id": "termination",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=abs(a-b)",
+        "theorem_kind": "batch20_t13",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-106a375b828e5603",
+      "source_room_record_id": "SF-c991a2802cd4a524",
+      "source_operation_id": "G4NEW-8940ecfed72a1131",
+      "theorem_kind": "batch20_t14",
+      "theorem_statement": "for every a in N and d>=1, output(a,d)=a mod d",
+      "domain": {
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1,
+        "kind": "natural_dividend_positive_divisor"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          1,
+          1,
+          0,
+          3,
+          22,
+          2,
+          22,
+          6,
+          1,
+          13,
+          8,
+          3,
+          22,
+          11,
+          3,
+          2,
+          22,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "remainder=a-qd",
+          "remainder>=0",
+          "d>=1"
+        ],
+        "claimed_statement": "for every a in N and d>=1, output(a,d)=a mod d",
+        "claimed_termination_measure": "remainder in N decreases by d>=1",
+        "domain": {
+          "arity": 2,
+          "dividend_includes_zero": true,
+          "divisor_minimum": 1,
+          "kind": "natural_dividend_positive_divisor"
+        },
+        "program_digest": "8940ecfed72a113146bbbe12729d84fdd57f7127fdfb7c3036932718a112bf10",
+        "source_operation_id": "G4NEW-8940ecfed72a1131",
+        "source_room_record_id": "SF-c991a2802cd4a524",
+        "theorem_kind": "batch20_t14"
+      },
+      "verification": {
+        "certificate_digest": "5fc6cc54ddbb28a6b49e80c91c112604a059eb7b5a5c65b81febddba38729644",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t14",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=8940ecfed72a113146bbbe12729d84fdd57f7127fdfb7c3036932718a112bf10",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d)=a mod d",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['remainder=a-qd', 'remainder>=0', 'd>=1']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: remainder in N decreases by d>=1",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=8940ecfed72a113146bbbe12729d84fdd57f7127fdfb7c3036932718a112bf10",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "r=a>=0",
+            "obligation_id": "induction_base",
+            "passed": true
+          },
+          {
+            "evidence": "when r>=d, r'=r-d preserves a=qd+r",
+            "obligation_id": "induction_step",
+            "passed": true
+          },
+          {
+            "evidence": "d>=1 strictly lowers r",
+            "obligation_id": "termination",
+            "passed": true
+          },
+          {
+            "evidence": "0<=r<d uniquely defines a mod d",
+            "obligation_id": "exit_correctness",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d)=a mod d",
+        "theorem_kind": "batch20_t14",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-23b24731b391ec23",
+      "source_room_record_id": "SF-f95e1e899ae4e35e",
+      "source_operation_id": "G4NEW-8758c920cf983196",
+      "theorem_kind": "batch20_t15",
+      "theorem_statement": "for every a in N and d>=1, output(a,d)=ceil(a/d)",
+      "domain": {
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1,
+        "kind": "natural_dividend_positive_divisor"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          2,
+          1,
+          0,
+          3,
+          36,
+          4,
+          0,
+          3,
+          37,
+          2,
+          36,
+          12,
+          15,
+          6,
+          1,
+          3,
+          36,
+          2,
+          37,
+          9,
+          1,
+          3,
+          37,
+          2,
+          36,
+          13,
+          15,
+          11,
+          5,
+          2,
+          37,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "remainder=a-cd",
+          "count=c",
+          "loop continues exactly while remainder>0"
+        ],
+        "claimed_statement": "for every a in N and d>=1, output(a,d)=ceil(a/d)",
+        "claimed_termination_measure": "remainder decreases by d>=1 until nonpositive",
+        "domain": {
+          "arity": 2,
+          "dividend_includes_zero": true,
+          "divisor_minimum": 1,
+          "kind": "natural_dividend_positive_divisor"
+        },
+        "program_digest": "8758c920cf9831962240eb9e63064b77a2fa4f99a27f2345a2f414531e665b48",
+        "source_operation_id": "G4NEW-8758c920cf983196",
+        "source_room_record_id": "SF-f95e1e899ae4e35e",
+        "theorem_kind": "batch20_t15"
+      },
+      "verification": {
+        "certificate_digest": "82a7f7d43bd30dc9f3cb2050d41a01fe95c909d5731c4895fbe49757d2ff351b",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t15",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=8758c920cf9831962240eb9e63064b77a2fa4f99a27f2345a2f414531e665b48",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d)=ceil(a/d)",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['remainder=a-cd', 'count=c', 'loop continues exactly while remainder>0']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: remainder decreases by d>=1 until nonpositive",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=8758c920cf9831962240eb9e63064b77a2fa4f99a27f2345a2f414531e665b48",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "a=0 exits with count 0",
+            "obligation_id": "zero_case",
+            "passed": true
+          },
+          {
+            "evidence": "each nonzero remainder performs r'=r-d,count'=count+1",
+            "obligation_id": "induction_step",
+            "passed": true
+          },
+          {
+            "evidence": "d>=1 reaches r<=0 after at most a steps",
+            "obligation_id": "termination",
+            "passed": true
+          },
+          {
+            "evidence": "for a>0, (c-1)d<a<=cd, hence c=ceil(a/d)",
+            "obligation_id": "exit_correctness",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d)=ceil(a/d)",
+        "theorem_kind": "batch20_t15",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-1b3a63c1827a85ba",
+      "source_room_record_id": "SF-fa3e617cf6db2f86",
+      "source_operation_id": "G4NEW-eb9f87487d18be3d",
+      "theorem_kind": "batch20_t16",
+      "theorem_statement": "for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0",
+      "domain": {
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1,
+        "kind": "natural_dividend_positive_divisor"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          1,
+          1,
+          0,
+          3,
+          30,
+          2,
+          30,
+          12,
+          9,
+          6,
+          1,
+          13,
+          12,
+          3,
+          30,
+          11,
+          3,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "remainder=a-qd",
+          "remainder>=0",
+          "d>=1"
+        ],
+        "claimed_statement": "for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0",
+        "claimed_termination_measure": "remainder in N decreases by d>=1",
+        "domain": {
+          "arity": 2,
+          "dividend_includes_zero": true,
+          "divisor_minimum": 1,
+          "kind": "natural_dividend_positive_divisor"
+        },
+        "program_digest": "eb9f87487d18be3d0e203129d7cb7b08b7cae567f04fec1f45cbfe9900701fc7",
+        "source_operation_id": "G4NEW-eb9f87487d18be3d",
+        "source_room_record_id": "SF-fa3e617cf6db2f86",
+        "theorem_kind": "batch20_t16"
+      },
+      "verification": {
+        "certificate_digest": "d8f20ca3f201b18f4a7682a9eaee5362f0938b8cba6fe78d49062c0e5116995a",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t16",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=eb9f87487d18be3d0e203129d7cb7b08b7cae567f04fec1f45cbfe9900701fc7",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['remainder=a-qd', 'remainder>=0', 'd>=1']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: remainder in N decreases by d>=1",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=eb9f87487d18be3d0e203129d7cb7b08b7cae567f04fec1f45cbfe9900701fc7",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "r=a",
+            "obligation_id": "induction_base",
+            "passed": true
+          },
+          {
+            "evidence": "every stored r equals a-qd and remains nonnegative",
+            "obligation_id": "induction_step",
+            "passed": true
+          },
+          {
+            "evidence": "d>=1 lowers r",
+            "obligation_id": "termination",
+            "passed": true
+          },
+          {
+            "evidence": "zero branch occurs exactly when a=qd",
+            "obligation_id": "accept_correctness",
+            "passed": true
+          },
+          {
+            "evidence": "negative attempted subtraction means 0<r<d",
+            "obligation_id": "reject_correctness",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0",
+        "theorem_kind": "batch20_t16",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-475877d3720a62bc",
+      "source_room_record_id": "SF-f3c6a17f313601d0",
+      "source_operation_id": "G4NEW-4f8ce015861a67a4",
+      "theorem_kind": "batch20_t17",
+      "theorem_statement": "for every a,b in N, output(a,b)=1 iff a=b, else 0",
+      "domain": {
+        "arity": 2,
+        "includes_zero": true,
+        "kind": "natural_number_pairs"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          12,
+          6,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "accumulator=a-b"
+        ],
+        "claimed_statement": "for every a,b in N, output(a,b)=1 iff a=b, else 0",
+        "claimed_termination_measure": "acyclic branch",
+        "domain": {
+          "arity": 2,
+          "includes_zero": true,
+          "kind": "natural_number_pairs"
+        },
+        "program_digest": "4f8ce015861a67a43a80fcbea29fec5a17377a6cace0d5cff2e8d3ac33325fef",
+        "source_operation_id": "G4NEW-4f8ce015861a67a4",
+        "source_room_record_id": "SF-f3c6a17f313601d0",
+        "theorem_kind": "batch20_t17"
+      },
+      "verification": {
+        "certificate_digest": "0f9313cf5cb3d1713251a1def7375e781b5e38c83fc191012a6b6a69b06c7a78",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t17",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=4f8ce015861a67a43a80fcbea29fec5a17377a6cace0d5cff2e8d3ac33325fef",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a,b in N, output(a,b)=1 iff a=b, else 0",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['accumulator=a-b']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: acyclic branch",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=4f8ce015861a67a43a80fcbea29fec5a17377a6cace0d5cff2e8d3ac33325fef",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "a-b=0 iff a=b; emits 1",
+            "obligation_id": "zero_case",
+            "passed": true
+          },
+          {
+            "evidence": "a-b!=0 iff a!=b; emits 0",
+            "obligation_id": "nonzero_case",
+            "passed": true
+          },
+          {
+            "evidence": "acyclic",
+            "obligation_id": "termination",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=1 iff a=b, else 0",
+        "theorem_kind": "batch20_t17",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-31960da7507a5f34",
+      "source_room_record_id": "SF-086f108614466d68",
+      "source_operation_id": "G4NEW-f9e488fd9f8130c6",
+      "theorem_kind": "batch20_t18",
+      "theorem_statement": "for every a,b in N, output(a,b)=1 iff a<b, else 0",
+      "domain": {
+        "arity": 2,
+        "includes_zero": true,
+        "kind": "natural_number_pairs"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          6,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "accumulator=a-b"
+        ],
+        "claimed_statement": "for every a,b in N, output(a,b)=1 iff a<b, else 0",
+        "claimed_termination_measure": "acyclic branch",
+        "domain": {
+          "arity": 2,
+          "includes_zero": true,
+          "kind": "natural_number_pairs"
+        },
+        "program_digest": "f9e488fd9f8130c6eeb6af8df51fd16a2110a23f101735769629518b7ab47759",
+        "source_operation_id": "G4NEW-f9e488fd9f8130c6",
+        "source_room_record_id": "SF-086f108614466d68",
+        "theorem_kind": "batch20_t18"
+      },
+      "verification": {
+        "certificate_digest": "c73b35259c43ba107dddf81546292105260dbf861548867e99fffb63a4066d33",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t18",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=f9e488fd9f8130c6eeb6af8df51fd16a2110a23f101735769629518b7ab47759",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every a,b in N, output(a,b)=1 iff a<b, else 0",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['accumulator=a-b']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: acyclic branch",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=f9e488fd9f8130c6eeb6af8df51fd16a2110a23f101735769629518b7ab47759",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "a-b<0 iff a<b; emits 1",
+            "obligation_id": "negative_case",
+            "passed": true
+          },
+          {
+            "evidence": "a>=b; emits 0",
+            "obligation_id": "nonnegative_case",
+            "passed": true
+          },
+          {
+            "evidence": "acyclic",
+            "obligation_id": "termination",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=1 iff a<b, else 0",
+        "theorem_kind": "batch20_t18",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-5dfab59e5699181e",
+      "source_room_record_id": "SF-292fac498b7a70a1",
+      "source_operation_id": "G4NEW-a671e30898942b6c",
+      "theorem_kind": "batch20_t19",
+      "theorem_statement": "for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0",
+      "domain": {
+        "arity": 1,
+        "includes_zero": true,
+        "kind": "integers"
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          12,
+          9,
+          13,
+          6,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          -1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "claimed_invariants": [
+          "three branches partition Z into z<0,z=0,z>0"
+        ],
+        "claimed_statement": "for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0",
+        "claimed_termination_measure": "acyclic three-way branch",
+        "domain": {
+          "arity": 1,
+          "includes_zero": true,
+          "kind": "integers"
+        },
+        "program_digest": "a671e30898942b6c61e24efcd770f2c81ccea5de99889cc3a705c3f74670aa46",
+        "source_operation_id": "G4NEW-a671e30898942b6c",
+        "source_room_record_id": "SF-292fac498b7a70a1",
+        "theorem_kind": "batch20_t19"
+      },
+      "verification": {
+        "certificate_digest": "607b9a2a0f95b1aeac4f402f06029bec93cb26c5849d57e45f5fa3a2be75db11",
+        "obligations": [
+          {
+            "evidence": "universal-formula-certificate-v0.1",
+            "obligation_id": "certificate_version",
+            "passed": true
+          },
+          {
+            "evidence": "batch20_t19",
+            "obligation_id": "registered_theorem_rule",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed sha256=a671e30898942b6c61e24efcd770f2c81ccea5de99889cc3a705c3f74670aa46",
+            "obligation_id": "program_digest_binding",
+            "passed": true
+          },
+          {
+            "evidence": "canonical domain: {\"arity\": 1, \"includes_zero\": true, \"kind\": \"integers\"}",
+            "obligation_id": "explicit_domain",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0",
+            "obligation_id": "statement_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: ['three branches partition Z into z<0,z=0,z>0']",
+            "obligation_id": "invariant_binding",
+            "passed": true
+          },
+          {
+            "evidence": "recomputed: acyclic three-way branch",
+            "obligation_id": "termination_measure_binding",
+            "passed": true
+          },
+          {
+            "evidence": "exact independent program sha256=a671e30898942b6c61e24efcd770f2c81ccea5de99889cc3a705c3f74670aa46",
+            "obligation_id": "exact_program_structure",
+            "passed": true
+          },
+          {
+            "evidence": "z<0 emits -1",
+            "obligation_id": "negative_case",
+            "passed": true
+          },
+          {
+            "evidence": "z=0 emits 0",
+            "obligation_id": "zero_case",
+            "passed": true
+          },
+          {
+            "evidence": "z>0 emits 1",
+            "obligation_id": "positive_case",
+            "passed": true
+          },
+          {
+            "evidence": "trichotomy partitions every integer",
+            "obligation_id": "case_exhaustiveness",
+            "passed": true
+          },
+          {
+            "evidence": "acyclic",
+            "obligation_id": "termination",
+            "passed": true
+          }
+        ],
+        "passed": true,
+        "recomputed_statement": "for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0",
+        "theorem_kind": "batch20_t19",
+        "verifier_version": "independent-universal-verifier-v0.1"
+      }
+    },
+    {
+      "room_record_id": "UF-79ebb37eba04ba34",
+      "source_room_record_id": "SF-3cee56bfa0429d65",
+      "source_operation_id": "STRICT-9332f6b2f2533639",
+      "theorem_kind": "strict_parametric_s00",
+      "theorem_statement": "for all declared inputs, M(a,b)=a*b",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          2,
+          1,
+          0,
+          3,
+          34,
+          4,
+          0,
+          3,
+          35,
+          2,
+          34,
+          12,
+          14,
+          2,
+          35,
+          5,
+          1,
+          3,
+          35,
+          2,
+          34,
+          10,
+          1,
+          3,
+          34,
+          11,
+          5,
+          2,
+          35,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s00",
+        "source_room_record_id": "SF-3cee56bfa0429d65",
+        "source_operation_id": "STRICT-9332f6b2f2533639",
+        "program_digest": "9332f6b2f2533639879bb1ab234c8b07bd93e0821b7f89c445f8473985a10483",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, M(a,b)=a*b",
+        "claimed_invariants": [
+          "counter=b-t",
+          "result=t*a",
+          "0<=t<=b"
+        ],
+        "claimed_termination_measure": "natural loop counters decrease by 1"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s00",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, M(a,b)=a*b",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s00"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=9332f6b2f2533639879bb1ab234c8b07bd93e0821b7f89c445f8473985a10483"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, M(a,b)=a*b"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=b-t', 'result=t*a', '0<=t<=b']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=9332f6b2f2533639879bb1ab234c8b07bd93e0821b7f89c445f8473985a10483"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "t=0 gives result=0=0*a"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "result'=t*a+a=(t+1)*a while counter'=b-(t+1)"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields M(a,b)=a*b"
+          }
+        ],
+        "certificate_digest": "9232c7ebf5a90d0b90191d7eaed123cd1c6d66d444afe2d21fc4a19b32e8c489"
+      }
+    },
+    {
+      "room_record_id": "UF-dc84367210cfff2f",
+      "source_room_record_id": "SF-68723b60b475c19c",
+      "source_operation_id": "STRICT-92615f5768accb5a",
+      "theorem_kind": "strict_parametric_s01",
+      "theorem_statement": "for all declared inputs, MAX(a,b)=max(a,b)",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          6,
+          1,
+          0,
+          15,
+          0,
+          0,
+          0,
+          1,
+          1,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s01",
+        "source_room_record_id": "SF-68723b60b475c19c",
+        "source_operation_id": "STRICT-92615f5768accb5a",
+        "program_digest": "92615f5768accb5a42661a1d89249151cdfbaa9ac7f890a103ee9bb22c2f984a",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, MAX(a,b)=max(a,b)",
+        "claimed_invariants": [
+          "comparison partitions a<b, a=b, a>b",
+          "selected value is one runtime input"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s01",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, MAX(a,b)=max(a,b)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s01"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=92615f5768accb5a42661a1d89249151cdfbaa9ac7f890a103ee9bb22c2f984a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, MAX(a,b)=max(a,b)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['comparison partitions a<b, a=b, a>b', 'selected value is one runtime input']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=92615f5768accb5a42661a1d89249151cdfbaa9ac7f890a103ee9bb22c2f984a"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields MAX(a,b)=max(a,b)"
+          }
+        ],
+        "certificate_digest": "2de8fee15f7f06d7022311b5697dacd893b01223558892acbf09e382e4ed6b53"
+      }
+    },
+    {
+      "room_record_id": "UF-44aa1838fcb42f1c",
+      "source_room_record_id": "SF-bb491142f1c6d314",
+      "source_operation_id": "STRICT-89ee442f3b02e329",
+      "theorem_kind": "strict_parametric_s02",
+      "theorem_statement": "for all declared inputs, D(a,b)=max(a-b,0)",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          5,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s02",
+        "source_room_record_id": "SF-bb491142f1c6d314",
+        "source_operation_id": "STRICT-89ee442f3b02e329",
+        "program_digest": "89ee442f3b02e3299125b6fc250a24fe6827af3c1595422f03e23121f99fff5f",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, D(a,b)=max(a-b,0)",
+        "claimed_invariants": [
+          "difference=a-b",
+          "negative branch maps to zero"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s02",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, D(a,b)=max(a-b,0)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s02"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=89ee442f3b02e3299125b6fc250a24fe6827af3c1595422f03e23121f99fff5f"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, D(a,b)=max(a-b,0)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'negative branch maps to zero']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=89ee442f3b02e3299125b6fc250a24fe6827af3c1595422f03e23121f99fff5f"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields D(a,b)=max(a-b,0)"
+          }
+        ],
+        "certificate_digest": "be9fcbc918464036a32a8afc178967064c601f6fecd19b8300b49c1e2ad1ab96"
+      }
+    },
+    {
+      "room_record_id": "UF-2ce18fbbf5eb66bf",
+      "source_room_record_id": "SF-7c408d139ca607a1",
+      "source_operation_id": "STRICT-75f73608ecad46ee",
+      "theorem_kind": "strict_parametric_s03",
+      "theorem_statement": "for all declared inputs, NE(a,b)=1[a!=b]",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          1,
+          6,
+          0,
+          12,
+          6,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s03",
+        "source_room_record_id": "SF-7c408d139ca607a1",
+        "source_operation_id": "STRICT-75f73608ecad46ee",
+        "program_digest": "75f73608ecad46eef4708c1b5fda231674539fcde356c0b1bf5c653ec4c0e215",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, NE(a,b)=1[a!=b]",
+        "claimed_invariants": [
+          "difference=a-b",
+          "zero branch iff a=b"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s03",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, NE(a,b)=1[a!=b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s03"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=75f73608ecad46eef4708c1b5fda231674539fcde356c0b1bf5c653ec4c0e215"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, NE(a,b)=1[a!=b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'zero branch iff a=b']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=75f73608ecad46eef4708c1b5fda231674539fcde356c0b1bf5c653ec4c0e215"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields NE(a,b)=1[a!=b]"
+          }
+        ],
+        "certificate_digest": "6d45c204ad00d66edc8c67fd6fb82e14cf221a1079c0c5de7301fafb32c4326c"
+      }
+    },
+    {
+      "room_record_id": "UF-718039f688c7b60e",
+      "source_room_record_id": "SF-f36e4d7703f78dbd",
+      "source_operation_id": "STRICT-1fefa3480b7de758",
+      "theorem_kind": "strict_parametric_s04",
+      "theorem_statement": "for all declared inputs, LE(a,b)=1[a<=b]",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          1,
+          6,
+          0,
+          13,
+          6,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s04",
+        "source_room_record_id": "SF-f36e4d7703f78dbd",
+        "source_operation_id": "STRICT-1fefa3480b7de758",
+        "program_digest": "1fefa3480b7de758a1ae7eb7ac62acb691017ae32241d525e20cfe34a3f4cafc",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, LE(a,b)=1[a<=b]",
+        "claimed_invariants": [
+          "difference=a-b",
+          "true branch iff difference<=0"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s04",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, LE(a,b)=1[a<=b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s04"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=1fefa3480b7de758a1ae7eb7ac62acb691017ae32241d525e20cfe34a3f4cafc"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, LE(a,b)=1[a<=b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'true branch iff difference<=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=1fefa3480b7de758a1ae7eb7ac62acb691017ae32241d525e20cfe34a3f4cafc"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields LE(a,b)=1[a<=b]"
+          }
+        ],
+        "certificate_digest": "9c055517c459843085a8fa0c331e93b846c673243a5db396a1d1f5749b649001"
+      }
+    },
+    {
+      "room_record_id": "UF-4ed246713c893848",
+      "source_room_record_id": "SF-29ffc54d4342d6e0",
+      "source_operation_id": "STRICT-af356acddebfec0a",
+      "theorem_kind": "strict_parametric_s05",
+      "theorem_statement": "for all declared inputs, GT(a,b)=1[a>b]",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          7,
+          12,
+          7,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s05",
+        "source_room_record_id": "SF-29ffc54d4342d6e0",
+        "source_operation_id": "STRICT-af356acddebfec0a",
+        "program_digest": "af356acddebfec0a1a49292322cca762864405cd1bc032aefbc727cec076ab89",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, GT(a,b)=1[a>b]",
+        "claimed_invariants": [
+          "difference=a-b",
+          "true branch iff difference>0"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s05",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, GT(a,b)=1[a>b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s05"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=af356acddebfec0a1a49292322cca762864405cd1bc032aefbc727cec076ab89"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, GT(a,b)=1[a>b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'true branch iff difference>0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=af356acddebfec0a1a49292322cca762864405cd1bc032aefbc727cec076ab89"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields GT(a,b)=1[a>b]"
+          }
+        ],
+        "certificate_digest": "923c487a2fbd1f6c1d77eb071a409a3022a77e96b209fd43285a1907634d5363"
+      }
+    },
+    {
+      "room_record_id": "UF-820860d87dd8bcd9",
+      "source_room_record_id": "SF-4504518a6a074387",
+      "source_operation_id": "STRICT-979eedadd1afa9a8",
+      "theorem_kind": "strict_parametric_s06",
+      "theorem_statement": "for all declared inputs, GE(a,b)=1[a>=b]",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          6,
+          1,
+          13,
+          6,
+          4,
+          1,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s06",
+        "source_room_record_id": "SF-4504518a6a074387",
+        "source_operation_id": "STRICT-979eedadd1afa9a8",
+        "program_digest": "979eedadd1afa9a8e0e516be20d254af077ea98baf24a1883114678da4ce7e06",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, GE(a,b)=1[a>=b]",
+        "claimed_invariants": [
+          "difference=a-b",
+          "true branch iff difference>=0"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s06",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, GE(a,b)=1[a>=b]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s06"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=979eedadd1afa9a8e0e516be20d254af077ea98baf24a1883114678da4ce7e06"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, GE(a,b)=1[a>=b]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['difference=a-b', 'true branch iff difference>=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=979eedadd1afa9a8e0e516be20d254af077ea98baf24a1883114678da4ce7e06"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields GE(a,b)=1[a>=b]"
+          }
+        ],
+        "certificate_digest": "067724589a13f0f19a069575cfc1e03c35740e7ab5f7de869856401b53e21531"
+      }
+    },
+    {
+      "room_record_id": "UF-dc91d45a2b0b0082",
+      "source_room_record_id": "SF-28d449fae6e7de4b",
+      "source_operation_id": "STRICT-a8fc8752c33afb2a",
+      "theorem_kind": "strict_parametric_s07",
+      "theorem_statement": "for all declared inputs, ABS(z)=|z|",
+      "domain": {
+        "kind": "integers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          1,
+          0,
+          13,
+          4,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          6,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s07",
+        "source_room_record_id": "SF-28d449fae6e7de4b",
+        "source_operation_id": "STRICT-a8fc8752c33afb2a",
+        "program_digest": "a8fc8752c33afb2abf9a353e96da8ba88c258d5d38af23a950a5b47ba2df6b8a",
+        "domain": {
+          "kind": "integers",
+          "arity": 1,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, ABS(z)=|z|",
+        "claimed_invariants": [
+          "negative branch emits 0-z",
+          "nonnegative branch emits z"
+        ],
+        "claimed_termination_measure": "acyclic finite branch"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s07",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, ABS(z)=|z|",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s07"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a8fc8752c33afb2abf9a353e96da8ba88c258d5d38af23a950a5b47ba2df6b8a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 1, \"includes_zero\": true, \"kind\": \"integers\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, ABS(z)=|z|"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['negative branch emits 0-z', 'nonnegative branch emits z']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic finite branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=a8fc8752c33afb2abf9a353e96da8ba88c258d5d38af23a950a5b47ba2df6b8a"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "complete_order_partition",
+            "passed": true,
+            "evidence": "exact branch program covers negative, zero and positive difference/sign cases"
+          },
+          {
+            "obligation_id": "branch_output_semantics",
+            "passed": true,
+            "evidence": "each partition emits the value specified by the registered relation"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic finite branch"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields ABS(z)=|z|"
+          }
+        ],
+        "certificate_digest": "e20ecf2e9c7d5c85df39ef97588c3dce33ff161faddaef348311430900fe0a8a"
+      }
+    },
+    {
+      "room_record_id": "UF-f542ba0662aa2a0c",
+      "source_room_record_id": "SF-7cdb267ed8af145c",
+      "source_operation_id": "STRICT-a29e25d6ec8f6c6c",
+      "theorem_kind": "strict_parametric_s08",
+      "theorem_statement": "for all declared inputs, P(n,k)=0 if k>n else n!/(n-k)!",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          5,
+          1,
+          1,
+          3,
+          80,
+          1,
+          0,
+          6,
+          1,
+          13,
+          37,
+          1,
+          0,
+          3,
+          82,
+          4,
+          1,
+          3,
+          81,
+          2,
+          80,
+          12,
+          34,
+          2,
+          81,
+          3,
+          83,
+          4,
+          0,
+          3,
+          84,
+          2,
+          83,
+          12,
+          25,
+          2,
+          84,
+          7,
+          82,
+          3,
+          84,
+          2,
+          83,
+          10,
+          1,
+          3,
+          83,
+          11,
+          16,
+          2,
+          84,
+          3,
+          81,
+          2,
+          82,
+          10,
+          1,
+          3,
+          82,
+          2,
+          80,
+          10,
+          1,
+          3,
+          80,
+          11,
+          10,
+          2,
+          81,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s08",
+        "source_room_record_id": "SF-7cdb267ed8af145c",
+        "source_operation_id": "STRICT-a29e25d6ec8f6c6c",
+        "program_digest": "a29e25d6ec8f6c6cb2727ba353ca7fe3b0fead959810e652ac73ab4abb84532a",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, P(n,k)=0 if k>n else n!/(n-k)!",
+        "claimed_invariants": [
+          "outer=k-t",
+          "factor=n-t",
+          "result=n!/(n-t)!",
+          "inner product by repeated addition"
+        ],
+        "claimed_termination_measure": "natural loop counters decrease by 1"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s08",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, P(n,k)=0 if k>n else n!/(n-k)!",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s08"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a29e25d6ec8f6c6cb2727ba353ca7fe3b0fead959810e652ac73ab4abb84532a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, P(n,k)=0 if k>n else n!/(n-k)!"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['outer=k-t', 'factor=n-t', 'result=n!/(n-t)!', 'inner product by repeated addition']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=a29e25d6ec8f6c6cb2727ba353ca7fe3b0fead959810e652ac73ab4abb84532a"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "invalid_parameter_branch",
+            "passed": true,
+            "evidence": "k>n emits 0"
+          },
+          {
+            "obligation_id": "outer_induction",
+            "passed": true,
+            "evidence": "multiplying n!/(n-t)! by n-t yields n!/(n-(t+1))!"
+          },
+          {
+            "obligation_id": "inner_induction",
+            "passed": true,
+            "evidence": "temporary=j*factor and inner=result-j are preserved"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields P(n,k)=0 if k>n else n!/(n-k)!"
+          }
+        ],
+        "certificate_digest": "fd1f1d076d9d6b507148a40c6d5d286cb5f442dc631c97f4cc42c66a182106ab"
+      }
+    },
+    {
+      "room_record_id": "UF-454a347759091822",
+      "source_room_record_id": "SF-7477170fbecf2c3f",
+      "source_operation_id": "STRICT-72ca63a9651d3a03",
+      "theorem_kind": "strict_parametric_s09",
+      "theorem_statement": "for all declared inputs, C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "program": {
+        "substrate": "anonymous_unified_word_machine_v0.1",
+        "word_width": 2,
+        "words": [
+          14,
+          8,
+          1,
+          1,
+          3,
+          114,
+          1,
+          0,
+          6,
+          1,
+          13,
+          54,
+          9,
+          1,
+          3,
+          116,
+          4,
+          1,
+          3,
+          117,
+          4,
+          1,
+          3,
+          115,
+          2,
+          114,
+          12,
+          51,
+          2,
+          115,
+          3,
+          118,
+          4,
+          0,
+          3,
+          119,
+          2,
+          118,
+          12,
+          27,
+          2,
+          119,
+          7,
+          116,
+          3,
+          119,
+          2,
+          118,
+          10,
+          1,
+          3,
+          118,
+          11,
+          18,
+          2,
+          119,
+          3,
+          120,
+          4,
+          0,
+          3,
+          121,
+          2,
+          120,
+          8,
+          117,
+          13,
+          39,
+          3,
+          120,
+          2,
+          121,
+          9,
+          1,
+          3,
+          121,
+          11,
+          31,
+          2,
+          121,
+          3,
+          115,
+          2,
+          116,
+          9,
+          1,
+          3,
+          116,
+          2,
+          117,
+          9,
+          1,
+          3,
+          117,
+          2,
+          114,
+          10,
+          1,
+          3,
+          114,
+          11,
+          12,
+          2,
+          115,
+          15,
+          0,
+          0,
+          0,
+          4,
+          0,
+          15,
+          0,
+          0,
+          0
+        ]
+      },
+      "certificate": {
+        "certificate_version": "universal-formula-certificate-v0.1",
+        "theorem_kind": "strict_parametric_s09",
+        "source_room_record_id": "SF-7477170fbecf2c3f",
+        "source_operation_id": "STRICT-72ca63a9651d3a03",
+        "program_digest": "72ca63a9651d3a03f253705aab6b7f9a343d38b5f91e816216bd51923a7696e5",
+        "domain": {
+          "kind": "natural_number_pairs",
+          "arity": 2,
+          "includes_zero": true
+        },
+        "claimed_statement": "for all declared inputs, C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+        "claimed_invariants": [
+          "outer=k-t",
+          "factor=n-k+t+1",
+          "divisor=t+1",
+          "result=C(n-k+t,t)"
+        ],
+        "claimed_termination_measure": "natural loop counters decrease by 1"
+      },
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "strict_parametric_s09",
+        "passed": true,
+        "recomputed_statement": "for all declared inputs, C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "strict_parametric_s09"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=72ca63a9651d3a03f253705aab6b7f9a343d38b5f91e816216bd51923a7696e5"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for all declared inputs, C(n,k)=0 if k>n else n!/(k!(n-k)!)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['outer=k-t', 'factor=n-k+t+1', 'divisor=t+1', 'result=C(n-k+t,t)']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "recomputed graph digest=72ca63a9651d3a03f253705aab6b7f9a343d38b5f91e816216bd51923a7696e5"
+          },
+          {
+            "obligation_id": "all_formula_arguments_runtime_free",
+            "passed": true,
+            "evidence": "runtime input references=[0, 1]"
+          },
+          {
+            "obligation_id": "no_multiply_divide_or_power_opcode",
+            "passed": true,
+            "evidence": "word-machine opcode registry contains only load/store, add/subtract, branch, memory, emit and halt"
+          },
+          {
+            "obligation_id": "invalid_parameter_branch",
+            "passed": true,
+            "evidence": "k>n emits 0"
+          },
+          {
+            "obligation_id": "outer_induction",
+            "passed": true,
+            "evidence": "C(n-k+t,t)*(n-k+t+1)/(t+1)=C(n-k+t+1,t+1)"
+          },
+          {
+            "obligation_id": "exact_divisibility",
+            "passed": true,
+            "evidence": "the binomial recurrence numerator is divisible by t+1"
+          },
+          {
+            "obligation_id": "nested_loop_invariants",
+            "passed": true,
+            "evidence": "multiplication and quotient loops preserve product and Euclidean quotient invariants"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural loop counters decrease by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the invariant at the registered exit yields C(n,k)=0 if k>n else n!/(k!(n-k)!)"
+          }
+        ],
+        "certificate_digest": "462c51d44184a46c37a381fa05c5e8330ff6c5f1ca3387466fb01df7755fca4d"
+      }
+    }
+  ],
+  "proof_obligation_count": 268,
+  "proof_obligation_passed_count": 268,
+  "classification": {
+    "fixed_base_instances_count": false,
+    "reducible_compositions_count": false,
+    "all_formula_arguments_must_be_runtime_free": true
+  },
+  "gates": [
+    {
+      "gate_id": "twenty_strict_room_records",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    },
+    {
+      "gate_id": "ten_new_syntheses",
+      "passed": true,
+      "actual": 10,
+      "threshold": 10
+    },
+    {
+      "gate_id": "nine_historical_reclassifications_labeled",
+      "passed": true,
+      "actual": 9,
+      "threshold": 9
+    },
+    {
+      "gate_id": "all_proofs_replay",
+      "passed": true,
+      "actual": 268,
+      "threshold": 268
+    }
+  ],
+  "limitations": [
+    "Nine entries are historical discoveries reclassified under the stricter rule, not new discoveries in this run.",
+    "The ten new programs were selected from a finite host-supplied frontier.",
+    "Distinct comparison relations have distinct executable branches but share subtraction-and-branch primitives."
+  ]
+}

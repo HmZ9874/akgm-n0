@@ -1,0 +1,1114 @@
+{
+  "report_version": "self-extending-substrate-v15.1",
+  "run_id": "RUN-self-extending-v15-20260820T221537832222Z",
+  "created_at": "2026-08-20T22:15:37.832222Z",
+  "verdict": "unified_substrate_migration_and_meta_learning_acceptance_passed",
+  "acceptance": {
+    "benchmark_version": "self-extending-substrate-v15.1",
+    "passed": true,
+    "classification": "verified_unified_substrate_with_migrated_training_memory",
+    "vm": {
+      "opcodes": [
+        "u_dec",
+        "u_emit",
+        "u_halt",
+        "u_inc",
+        "u_jump",
+        "u_jz",
+        "u_unit",
+        "u_zero"
+      ],
+      "programs": {
+        "WORLD-7f3a": {
+          "substrate": "unified_primitive_counter_vm_v15",
+          "program_id": "UVM-073dc68cd0ff5e1a",
+          "register_count": 4,
+          "input_registers": [
+            1,
+            2
+          ],
+          "instructions": [
+            {
+              "op": "u_jz",
+              "register": 1,
+              "target": 12
+            },
+            {
+              "op": "u_dec",
+              "register": 1
+            },
+            {
+              "op": "u_jz",
+              "register": 3,
+              "target": 6
+            },
+            {
+              "op": "u_dec",
+              "register": 3
+            },
+            {
+              "op": "u_inc",
+              "register": 2
+            },
+            {
+              "op": "u_jump",
+              "target": 2
+            },
+            {
+              "op": "u_jz",
+              "register": 2,
+              "target": 11
+            },
+            {
+              "op": "u_dec",
+              "register": 2
+            },
+            {
+              "op": "u_inc",
+              "register": 0
+            },
+            {
+              "op": "u_inc",
+              "register": 3
+            },
+            {
+              "op": "u_jump",
+              "target": 6
+            },
+            {
+              "op": "u_jump",
+              "target": 0
+            },
+            {
+              "op": "u_emit",
+              "register": 0
+            },
+            {
+              "op": "u_halt"
+            }
+          ],
+          "provenance": "register_renamed_reconstruction"
+        },
+        "WORLD-b184": {
+          "substrate": "unified_primitive_counter_vm_v15",
+          "program_id": "UVM-00319e1fc748c50e",
+          "register_count": 6,
+          "input_registers": [
+            0,
+            1
+          ],
+          "instructions": [
+            {
+              "op": "u_jz",
+              "register": 1,
+              "target": 5
+            },
+            {
+              "op": "u_dec",
+              "register": 1
+            },
+            {
+              "op": "u_inc",
+              "register": 3
+            },
+            {
+              "op": "u_inc",
+              "register": 5
+            },
+            {
+              "op": "u_jump",
+              "target": 0
+            },
+            {
+              "op": "u_jz",
+              "register": 5,
+              "target": 9
+            },
+            {
+              "op": "u_dec",
+              "register": 5
+            },
+            {
+              "op": "u_inc",
+              "register": 1
+            },
+            {
+              "op": "u_jump",
+              "target": 5
+            },
+            {
+              "op": "u_jz",
+              "register": 0,
+              "target": 29
+            },
+            {
+              "op": "u_dec",
+              "register": 0
+            },
+            {
+              "op": "u_dec",
+              "register": 3
+            },
+            {
+              "op": "u_inc",
+              "register": 4
+            },
+            {
+              "op": "u_jz",
+              "register": 3,
+              "target": 15
+            },
+            {
+              "op": "u_jump",
+              "target": 28
+            },
+            {
+              "op": "u_inc",
+              "register": 2
+            },
+            {
+              "op": "u_jz",
+              "register": 4,
+              "target": 19
+            },
+            {
+              "op": "u_dec",
+              "register": 4
+            },
+            {
+              "op": "u_jump",
+              "target": 16
+            },
+            {
+              "op": "u_jz",
+              "register": 1,
+              "target": 24
+            },
+            {
+              "op": "u_dec",
+              "register": 1
+            },
+            {
+              "op": "u_inc",
+              "register": 3
+            },
+            {
+              "op": "u_inc",
+              "register": 5
+            },
+            {
+              "op": "u_jump",
+              "target": 19
+            },
+            {
+              "op": "u_jz",
+              "register": 5,
+              "target": 28
+            },
+            {
+              "op": "u_dec",
+              "register": 5
+            },
+            {
+              "op": "u_inc",
+              "register": 1
+            },
+            {
+              "op": "u_jump",
+              "target": 24
+            },
+            {
+              "op": "u_jump",
+              "target": 9
+            },
+            {
+              "op": "u_emit",
+              "register": 2
+            },
+            {
+              "op": "u_emit",
+              "register": 4
+            },
+            {
+              "op": "u_halt"
+            }
+          ],
+          "provenance": "register_renamed_reconstruction"
+        },
+        "WORLD-43de": {
+          "substrate": "unified_primitive_counter_vm_v15",
+          "program_id": "UMUT-c1d7294c5a8fde93",
+          "register_count": 5,
+          "input_registers": [
+            0,
+            1
+          ],
+          "instructions": [
+            {
+              "op": "u_unit",
+              "register": 2
+            },
+            {
+              "op": "u_jz",
+              "register": 1,
+              "target": 21
+            },
+            {
+              "op": "u_dec",
+              "register": 1
+            },
+            {
+              "op": "u_zero",
+              "register": 4
+            },
+            {
+              "op": "u_jz",
+              "register": 2,
+              "target": 16
+            },
+            {
+              "op": "u_dec",
+              "register": 2
+            },
+            {
+              "op": "u_jz",
+              "register": 0,
+              "target": 11
+            },
+            {
+              "op": "u_dec",
+              "register": 0
+            },
+            {
+              "op": "u_inc",
+              "register": 3
+            },
+            {
+              "op": "u_inc",
+              "register": 4
+            },
+            {
+              "op": "u_jump",
+              "target": 6
+            },
+            {
+              "op": "u_jz",
+              "register": 4,
+              "target": 15
+            },
+            {
+              "op": "u_dec",
+              "register": 4
+            },
+            {
+              "op": "u_inc",
+              "register": 0
+            },
+            {
+              "op": "u_jump",
+              "target": 11
+            },
+            {
+              "op": "u_jump",
+              "target": 4
+            },
+            {
+              "op": "u_jz",
+              "register": 3,
+              "target": 20
+            },
+            {
+              "op": "u_dec",
+              "register": 3
+            },
+            {
+              "op": "u_inc",
+              "register": 2
+            },
+            {
+              "op": "u_jump",
+              "target": 16
+            },
+            {
+              "op": "u_jump",
+              "target": 1
+            },
+            {
+              "op": "u_emit",
+              "register": 2
+            },
+            {
+              "op": "u_halt"
+            }
+          ],
+          "provenance": "generic_single_instruction_mutation"
+        }
+      }
+    },
+    "reconstructions": [
+      {
+        "task_id": "WORLD-7f3a",
+        "candidate_count": 49,
+        "converged": true,
+        "selected_program_id": "UVM-073dc68cd0ff5e1a",
+        "round_count": 4,
+        "case_evaluations": 674,
+        "exhaustive_case_evaluations": 2401,
+        "evaluation_reduction": 0.719283631820075,
+        "rounds": [
+          {
+            "round_index": 0,
+            "active_case_indices": [
+              0,
+              1
+            ],
+            "candidates_replayed": 98,
+            "selected_program_id": "UMUT-6a9b1351106f313d",
+            "counterexample_index": 15
+          },
+          {
+            "round_index": 1,
+            "active_case_indices": [
+              0,
+              1,
+              15
+            ],
+            "candidates_replayed": 145,
+            "selected_program_id": "UMUT-7e835c35e816f20b",
+            "counterexample_index": 8
+          },
+          {
+            "round_index": 2,
+            "active_case_indices": [
+              0,
+              1,
+              15,
+              8
+            ],
+            "candidates_replayed": 160,
+            "selected_program_id": "UMUT-f355a04055ac87cd",
+            "counterexample_index": 22
+          },
+          {
+            "round_index": 3,
+            "active_case_indices": [
+              0,
+              1,
+              15,
+              8,
+              22
+            ],
+            "candidates_replayed": 174,
+            "selected_program_id": "UVM-073dc68cd0ff5e1a",
+            "counterexample_index": null
+          }
+        ]
+      },
+      {
+        "task_id": "WORLD-b184",
+        "candidate_count": 148,
+        "converged": true,
+        "selected_program_id": "UVM-00319e1fc748c50e",
+        "round_count": 5,
+        "case_evaluations": 2091,
+        "exhaustive_case_evaluations": 18648,
+        "evaluation_reduction": 0.8878700128700129,
+        "rounds": [
+          {
+            "round_index": 0,
+            "active_case_indices": [
+              0,
+              1
+            ],
+            "candidates_replayed": 262,
+            "selected_program_id": "UMUT-5547356dcd057fb6",
+            "counterexample_index": 6
+          },
+          {
+            "round_index": 1,
+            "active_case_indices": [
+              0,
+              1,
+              6
+            ],
+            "candidates_replayed": 376,
+            "selected_program_id": "UMUT-0477acf678dcf098",
+            "counterexample_index": 12
+          },
+          {
+            "round_index": 2,
+            "active_case_indices": [
+              0,
+              1,
+              6,
+              12
+            ],
+            "candidates_replayed": 409,
+            "selected_program_id": "UMUT-2695b8edbf7c20fa",
+            "counterexample_index": 7
+          },
+          {
+            "round_index": 3,
+            "active_case_indices": [
+              0,
+              1,
+              6,
+              12,
+              7
+            ],
+            "candidates_replayed": 428,
+            "selected_program_id": "UMUT-4d15caa64ca8c408",
+            "counterexample_index": 18
+          },
+          {
+            "round_index": 4,
+            "active_case_indices": [
+              0,
+              1,
+              6,
+              12,
+              7,
+              18
+            ],
+            "candidates_replayed": 443,
+            "selected_program_id": "UVM-00319e1fc748c50e",
+            "counterexample_index": null
+          }
+        ]
+      },
+      {
+        "task_id": "WORLD-43de",
+        "candidate_count": 92,
+        "converged": true,
+        "selected_program_id": "UMUT-c1d7294c5a8fde93",
+        "round_count": 3,
+        "case_evaluations": 738,
+        "exhaustive_case_evaluations": 3864,
+        "evaluation_reduction": 0.8090062111801242,
+        "rounds": [
+          {
+            "round_index": 0,
+            "active_case_indices": [
+              0,
+              1
+            ],
+            "candidates_replayed": 174,
+            "selected_program_id": "UMUT-a7f874d745552c20",
+            "counterexample_index": 8
+          },
+          {
+            "round_index": 1,
+            "active_case_indices": [
+              0,
+              1,
+              8
+            ],
+            "candidates_replayed": 238,
+            "selected_program_id": "UMUT-309be46cbf2d8280",
+            "counterexample_index": 16
+          },
+          {
+            "round_index": 2,
+            "active_case_indices": [
+              0,
+              1,
+              8,
+              16
+            ],
+            "candidates_replayed": 258,
+            "selected_program_id": "UMUT-c1d7294c5a8fde93",
+            "counterexample_index": null
+          }
+        ]
+      }
+    ],
+    "aggregate": {
+      "case_evaluations": 3503,
+      "exhaustive_case_evaluations": 24913,
+      "evaluation_reduction": 0.8593906795648858
+    },
+    "proposal_policy": {
+      "architecture": "first_order_recurrent_opcode_policy",
+      "transformer": false,
+      "positive_transition_count": 66,
+      "negative_transition_count": 6391
+    },
+    "macros": [
+      {
+        "macro_id": "UMAC-fd4e7fbf5b96fd7d",
+        "normalized_ops": [
+          "u_jump",
+          "u_jz",
+          "u_dec",
+          "u_inc"
+        ],
+        "task_support": 3,
+        "occurrence_support": 6,
+        "primitive_token_cost": 4,
+        "macro_token_cost": 1,
+        "savings_per_use": 3
+      },
+      {
+        "macro_id": "UMAC-6605d2c7c2aefd02",
+        "normalized_ops": [
+          "u_jz",
+          "u_dec",
+          "u_inc"
+        ],
+        "task_support": 3,
+        "occurrence_support": 9,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-082fa50ac09cf427",
+        "normalized_ops": [
+          "u_inc",
+          "u_jump",
+          "u_jz",
+          "u_dec",
+          "u_inc"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 5,
+        "macro_token_cost": 1,
+        "savings_per_use": 4
+      },
+      {
+        "macro_id": "UMAC-5105da3302fbcc19",
+        "normalized_ops": [
+          "u_jz",
+          "u_dec",
+          "u_inc",
+          "u_inc",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 5,
+        "macro_token_cost": 1,
+        "savings_per_use": 4
+      },
+      {
+        "macro_id": "UMAC-0e2257ed4155c888",
+        "normalized_ops": [
+          "u_jz",
+          "u_dec",
+          "u_inc",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 5,
+        "primitive_token_cost": 4,
+        "macro_token_cost": 1,
+        "savings_per_use": 3
+      },
+      {
+        "macro_id": "UMAC-2cafdfd0cdd87886",
+        "normalized_ops": [
+          "u_inc",
+          "u_jump",
+          "u_jz",
+          "u_dec"
+        ],
+        "task_support": 3,
+        "occurrence_support": 5,
+        "primitive_token_cost": 4,
+        "macro_token_cost": 1,
+        "savings_per_use": 3
+      },
+      {
+        "macro_id": "UMAC-df4b10cd42454c0c",
+        "normalized_ops": [
+          "u_jump",
+          "u_jz",
+          "u_dec"
+        ],
+        "task_support": 3,
+        "occurrence_support": 7,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-07784755b9e2998a",
+        "normalized_ops": [
+          "u_jz",
+          "u_dec"
+        ],
+        "task_support": 3,
+        "occurrence_support": 14,
+        "primitive_token_cost": 2,
+        "macro_token_cost": 1,
+        "savings_per_use": 1
+      },
+      {
+        "macro_id": "UMAC-4d63c95cb4c55260",
+        "normalized_ops": [
+          "u_dec",
+          "u_inc",
+          "u_inc",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 4,
+        "macro_token_cost": 1,
+        "savings_per_use": 3
+      },
+      {
+        "macro_id": "UMAC-c5ab72f30a6e037c",
+        "normalized_ops": [
+          "u_jz",
+          "u_dec",
+          "u_inc",
+          "u_inc"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 4,
+        "macro_token_cost": 1,
+        "savings_per_use": 3
+      },
+      {
+        "macro_id": "UMAC-00b41cb458cfddea",
+        "normalized_ops": [
+          "u_inc",
+          "u_jump",
+          "u_jz"
+        ],
+        "task_support": 3,
+        "occurrence_support": 5,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-57614f524520b6ab",
+        "normalized_ops": [
+          "u_dec",
+          "u_inc",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 5,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-6b1ddc1947a871be",
+        "normalized_ops": [
+          "u_dec",
+          "u_inc"
+        ],
+        "task_support": 3,
+        "occurrence_support": 10,
+        "primitive_token_cost": 2,
+        "macro_token_cost": 1,
+        "savings_per_use": 1
+      },
+      {
+        "macro_id": "UMAC-7dc6bb6b69efed95",
+        "normalized_ops": [
+          "u_inc",
+          "u_jump",
+          "u_jump",
+          "u_emit"
+        ],
+        "task_support": 3,
+        "occurrence_support": 3,
+        "primitive_token_cost": 4,
+        "macro_token_cost": 1,
+        "savings_per_use": 3
+      },
+      {
+        "macro_id": "UMAC-4619a425122eac01",
+        "normalized_ops": [
+          "u_inc",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 9,
+        "primitive_token_cost": 2,
+        "macro_token_cost": 1,
+        "savings_per_use": 1
+      },
+      {
+        "macro_id": "UMAC-1bd499017208892d",
+        "normalized_ops": [
+          "u_inc",
+          "u_jump",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-45a259b02f8c3977",
+        "normalized_ops": [
+          "u_inc",
+          "u_inc",
+          "u_jump"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-87947f28930b5597",
+        "normalized_ops": [
+          "u_dec",
+          "u_inc",
+          "u_inc"
+        ],
+        "task_support": 3,
+        "occurrence_support": 4,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      },
+      {
+        "macro_id": "UMAC-fb22c69f0840a420",
+        "normalized_ops": [
+          "u_jump",
+          "u_jz"
+        ],
+        "task_support": 3,
+        "occurrence_support": 7,
+        "primitive_token_cost": 2,
+        "macro_token_cost": 1,
+        "savings_per_use": 1
+      },
+      {
+        "macro_id": "UMAC-90760e7533d0da32",
+        "normalized_ops": [
+          "u_jump",
+          "u_jump",
+          "u_emit"
+        ],
+        "task_support": 3,
+        "occurrence_support": 3,
+        "primitive_token_cost": 3,
+        "macro_token_cost": 1,
+        "savings_per_use": 2
+      }
+    ],
+    "generic_laws": {
+      "WORLD-7f3a": [
+        {
+          "law_id": "LAW-1adee25e78be1ed7",
+          "family": "generic_binary_law",
+          "statement": "commutative",
+          "passed": true,
+          "evidence": {
+            "limit": 5
+          }
+        },
+        {
+          "law_id": "LAW-cce7ee718283ad0f",
+          "family": "generic_binary_law",
+          "statement": "identity_search",
+          "passed": true,
+          "evidence": {
+            "values": [
+              1
+            ]
+          }
+        },
+        {
+          "law_id": "LAW-8f870403c9a3bbd9",
+          "family": "generic_binary_law",
+          "statement": "annihilator_search",
+          "passed": true,
+          "evidence": {
+            "values": [
+              0
+            ]
+          }
+        },
+        {
+          "law_id": "LAW-cfe5c8ca5e2ac010",
+          "family": "generic_binary_law",
+          "statement": "associative",
+          "passed": true,
+          "evidence": {
+            "cube": 4
+          }
+        },
+        {
+          "law_id": "LAW-fe9080ac9d3e6ad7",
+          "family": "generic_binary_law",
+          "statement": "distributive_over_observed_combine",
+          "passed": true,
+          "evidence": {
+            "cube": 4
+          }
+        },
+        {
+          "law_id": "LAW-8a3103c07c0b2e07",
+          "family": "generic_library_recurrence",
+          "statement": "F(input_0,input_1+1)=LIB(F(input_0,input_1),input_0)",
+          "passed": false,
+          "evidence": {
+            "library_program_id": "UVM-073dc68cd0ff5e1a",
+            "comparisons": 7
+          }
+        },
+        {
+          "law_id": "LAW-63ae609632c55472",
+          "family": "generic_library_recurrence",
+          "statement": "F(input_0,input_1+1)=LIB(F(input_0,input_1),input_0)",
+          "passed": false,
+          "evidence": {
+            "library_program_id": "UVM-00319e1fc748c50e",
+            "comparisons": 7
+          }
+        },
+        {
+          "law_id": "LAW-507916256795c1be",
+          "family": "generic_library_recurrence",
+          "statement": "F(input_0,input_1+1)=LIB(F(input_0,input_1),input_0)",
+          "passed": false,
+          "evidence": {
+            "library_program_id": "UMUT-c1d7294c5a8fde93",
+            "comparisons": 1
+          }
+        }
+      ],
+      "WORLD-b184": [
+        {
+          "law_id": "LAW-5f3ba5f0e89e0a46",
+          "family": "generic_degree_two_invariant",
+          "statement": "1*v0 -1*v3 -1*v1*v2 = 0",
+          "passed": true,
+          "evidence": {
+            "degree_limit": 2,
+            "row_count": 126,
+            "coefficients": [
+              0,
+              1,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              -1,
+              0,
+              0,
+              0,
+              0
+            ]
+          }
+        }
+      ],
+      "WORLD-43de": [
+        {
+          "law_id": "LAW-7527c7c44293a293",
+          "family": "generic_binary_law",
+          "statement": "commutative",
+          "passed": false,
+          "evidence": {
+            "limit": 5
+          }
+        },
+        {
+          "law_id": "LAW-3b73ac35cbd36bd5",
+          "family": "generic_binary_law",
+          "statement": "identity_search",
+          "passed": false,
+          "evidence": {
+            "values": []
+          }
+        },
+        {
+          "law_id": "LAW-6f5d41dee56388c0",
+          "family": "generic_binary_law",
+          "statement": "annihilator_search",
+          "passed": false,
+          "evidence": {
+            "values": []
+          }
+        },
+        {
+          "law_id": "LAW-4fbb24f78b2f5e64",
+          "family": "generic_binary_law",
+          "statement": "associative",
+          "passed": false,
+          "evidence": {
+            "cube": 4
+          }
+        },
+        {
+          "law_id": "LAW-6a7264663f94f79a",
+          "family": "generic_binary_law",
+          "statement": "distributive_over_observed_combine",
+          "passed": false,
+          "evidence": {
+            "cube": 4
+          }
+        },
+        {
+          "law_id": "LAW-59c2d995061d7ada",
+          "family": "generic_library_recurrence",
+          "statement": "F(input_0,input_1+1)=LIB(F(input_0,input_1),input_0)",
+          "passed": true,
+          "evidence": {
+            "library_program_id": "UVM-073dc68cd0ff5e1a",
+            "comparisons": 36
+          }
+        },
+        {
+          "law_id": "LAW-efd1fa9bd8731621",
+          "family": "generic_library_recurrence",
+          "statement": "F(input_0,input_1+1)=LIB(F(input_0,input_1),input_0)",
+          "passed": false,
+          "evidence": {
+            "library_program_id": "UVM-00319e1fc748c50e",
+            "comparisons": 0
+          }
+        },
+        {
+          "law_id": "LAW-b229a8ba81726489",
+          "family": "generic_library_recurrence",
+          "statement": "F(input_0,input_1+1)=LIB(F(input_0,input_1),input_0)",
+          "passed": false,
+          "evidence": {
+            "library_program_id": "UMUT-c1d7294c5a8fde93",
+            "comparisons": 1
+          }
+        }
+      ]
+    },
+    "register_renaming": [
+      {
+        "task_id": "WORLD-7f3a",
+        "passed": true,
+        "permutation": [
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "task_id": "WORLD-b184",
+        "passed": true,
+        "permutation": [
+          5,
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      },
+      {
+        "task_id": "WORLD-43de",
+        "passed": true,
+        "permutation": [
+          4,
+          3,
+          2,
+          1,
+          0
+        ]
+      }
+    ],
+    "leakage_audit": {
+      "passed": true,
+      "forbidden_terms": [
+        "multiply",
+        "multiplication",
+        "divide",
+        "division",
+        "quotient",
+        "remainder",
+        "power",
+        "exponent",
+        "modulo"
+      ],
+      "registered_opcodes": [
+        "u_dec",
+        "u_emit",
+        "u_halt",
+        "u_inc",
+        "u_jump",
+        "u_jz",
+        "u_unit",
+        "u_zero"
+      ],
+      "findings": []
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "one_vm_for_all_tasks",
+        "passed": true
+      },
+      {
+        "obligation_id": "primitive_opcode_boundary",
+        "passed": true
+      },
+      {
+        "obligation_id": "three_reconstructions_converged",
+        "passed": true
+      },
+      {
+        "obligation_id": "aggregate_search_reduction_at_least_80_percent",
+        "passed": true
+      },
+      {
+        "obligation_id": "register_renaming_invariance",
+        "passed": true
+      },
+      {
+        "obligation_id": "cross_task_macro_support",
+        "passed": true
+      },
+      {
+        "obligation_id": "macro_saves_expanded_tokens",
+        "passed": true
+      },
+      {
+        "obligation_id": "generic_law_mining_produced_evidence",
+        "passed": true
+      },
+      {
+        "obligation_id": "cold_start_claim_withheld",
+        "passed": true
+      }
+    ],
+    "limitations": [
+      "The three seed programs are migrated audited memories, so this is not a cold-start rediscovery result.",
+      "The structured compiler and mutation operators remain host code.",
+      "Macros are mined and scored but are expanded before execution; runtime opcode self-installation remains future work.",
+      "Generic law mining is bounded to binary laws, library recurrences, and degree-two polynomial invariants."
+    ]
+  },
+  "capability_change": {
+    "before": "three task-specific strict search substrates plus later closure modules",
+    "after": "one primitive counter VM, one recurrent proposal policy, one CEGIS controller, one macro miner, and one generic law miner",
+    "specialized_runtime_searchers_required": false,
+    "cold_start_autonomy_proven": false
+  },
+  "claim": {
+    "achieved": "audited strict memories run and reconstruct inside one shared self-improving substrate",
+    "not_claimed": "cold-start invention of all three algorithms or unrestricted runtime opcode invention"
+  },
+  "content_digest": "8c08f36eac6565977a469e5155f4707e9dbae809e0da9398bc4de968982532f3",
+  "storage": {
+    "success_report": "artifacts/foundation/v15/success/self_extending_substrate_latest.json",
+    "mistake_room": "artifacts/foundation/v15/mistakes/unified_vm_mutations.jsonl",
+    "mistakes_recorded": 59
+  }
+}

@@ -1,0 +1,2813 @@
+{
+  "report_version": "repeat-macro-operator-v0.1",
+  "run_id": "RUN-repeat-macro-20260819T192613413918Z",
+  "created_at": "2026-08-19T19:26:13.413918Z",
+  "verdict": "generic_repeated_operation_compressed_into_one_verified_macro",
+  "invented_operator": {
+    "semantic_id": "SEM-ea6d06e2e7226d79",
+    "opcode": 131,
+    "occurrences": [
+      {
+        "source_record_id": "UF-acf6631ac2ca1895",
+        "start_instruction": 5,
+        "counter_cell": 34,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-3695ac026118889d",
+        "start_instruction": 7,
+        "counter_cell": 52,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 10
+      },
+      {
+        "source_record_id": "UF-9b4ce698e56789c8",
+        "start_instruction": 9,
+        "counter_cell": 66,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 15
+      },
+      {
+        "source_record_id": "UF-737e219163274b6c",
+        "start_instruction": 5,
+        "counter_cell": 40,
+        "body_opcode_shape": [
+          2,
+          9,
+          3,
+          2,
+          9,
+          3
+        ],
+        "body_instruction_count": 6
+      },
+      {
+        "source_record_id": "UF-6850cf70391b2036",
+        "start_instruction": 11,
+        "counter_cell": 80,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 20
+      },
+      {
+        "source_record_id": "UF-e2f688c2054e2421",
+        "start_instruction": 9,
+        "counter_cell": 68,
+        "body_opcode_shape": [
+          2,
+          9,
+          3,
+          2,
+          9,
+          3,
+          2,
+          7,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 16
+      },
+      {
+        "source_record_id": "UF-585f8194a03eefe9",
+        "start_instruction": 5,
+        "counter_cell": 36,
+        "body_opcode_shape": [
+          2,
+          7,
+          7,
+          3
+        ],
+        "body_instruction_count": 4
+      },
+      {
+        "source_record_id": "UF-f3855c6ef98d48d4",
+        "start_instruction": 5,
+        "counter_cell": 36,
+        "body_opcode_shape": [
+          2,
+          7,
+          9,
+          3
+        ],
+        "body_instruction_count": 4
+      },
+      {
+        "source_record_id": "UF-c46cbd71d59a17c6",
+        "start_instruction": 9,
+        "counter_cell": 54,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3
+        ],
+        "body_instruction_count": 9
+      },
+      {
+        "source_record_id": "UF-b33dac80fa74362f",
+        "start_instruction": 11,
+        "counter_cell": 62,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          9,
+          3
+        ],
+        "body_instruction_count": 11
+      },
+      {
+        "source_record_id": "UF-f1a8e695f786018d",
+        "start_instruction": 13,
+        "counter_cell": 94,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 25
+      },
+      {
+        "source_record_id": "UF-91dbdc8461d5c1a7",
+        "start_instruction": 7,
+        "counter_cell": 46,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 7
+      },
+      {
+        "source_record_id": "UF-9ab5491987e98b2a",
+        "start_instruction": 7,
+        "counter_cell": 48,
+        "body_opcode_shape": [
+          2,
+          7,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 8
+      },
+      {
+        "source_record_id": "UF-055e30a6dc246def",
+        "start_instruction": 9,
+        "counter_cell": 54,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 9
+      },
+      {
+        "source_record_id": "UF-8de36f5279e82b24",
+        "start_instruction": 11,
+        "counter_cell": 66,
+        "body_opcode_shape": [
+          2,
+          7,
+          7,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 13
+      },
+      {
+        "source_record_id": "UF-92ee397983d8bc44",
+        "start_instruction": 9,
+        "counter_cell": 52,
+        "body_opcode_shape": [
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 8
+      },
+      {
+        "source_record_id": "UF-059b87aeaf465fb1",
+        "start_instruction": 12,
+        "counter_cell": 64,
+        "body_opcode_shape": [
+          2,
+          5,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-79ebb37eba04ba34",
+        "start_instruction": 5,
+        "counter_cell": 34,
+        "body_opcode_shape": [
+          2,
+          5,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-f542ba0662aa2a0c",
+        "start_instruction": 16,
+        "counter_cell": 83,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-454a347759091822",
+        "start_instruction": 18,
+        "counter_cell": 118,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-4f41ff4c3de1c33f",
+        "start_instruction": 5,
+        "counter_cell": 34,
+        "body_opcode_shape": [
+          2,
+          5,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-46fc2ae8810e6e64",
+        "start_instruction": 7,
+        "counter_cell": 44,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          5,
+          3
+        ],
+        "body_instruction_count": 6
+      },
+      {
+        "source_record_id": "UF-88d0332eb98a401a",
+        "start_instruction": 13,
+        "counter_cell": 71,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-0f11a7a26b777dfe",
+        "start_instruction": 7,
+        "counter_cell": 46,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 7
+      },
+      {
+        "source_record_id": "UF-2146e26c80e29ec9",
+        "start_instruction": 13,
+        "counter_cell": 71,
+        "body_opcode_shape": [
+          2,
+          5,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-9bf08d62d878ac6a",
+        "start_instruction": 7,
+        "counter_cell": 44,
+        "body_opcode_shape": [
+          2,
+          7,
+          3,
+          2,
+          5,
+          3
+        ],
+        "body_instruction_count": 6
+      },
+      {
+        "source_record_id": "UF-5346bc472a30e531",
+        "start_instruction": 13,
+        "counter_cell": 101,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-5346bc472a30e531",
+        "start_instruction": 26,
+        "counter_cell": 101,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-a2d651ea9bae624b",
+        "start_instruction": 15,
+        "counter_cell": 122,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-a2d651ea9bae624b",
+        "start_instruction": 26,
+        "counter_cell": 122,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-a2d651ea9bae624b",
+        "start_instruction": 37,
+        "counter_cell": 122,
+        "body_opcode_shape": [
+          2,
+          7,
+          3
+        ],
+        "body_instruction_count": 3
+      },
+      {
+        "source_record_id": "UF-0f66f2b49b8d5983",
+        "start_instruction": 11,
+        "counter_cell": 68,
+        "body_opcode_shape": [
+          4,
+          3,
+          16,
+          16,
+          16,
+          16,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        "body_instruction_count": 14
+      },
+      {
+        "source_record_id": "UF-2cca602555ac2af1",
+        "start_instruction": 7,
+        "counter_cell": 56,
+        "body_opcode_shape": [
+          4,
+          3,
+          16,
+          16,
+          2,
+          5,
+          3,
+          2,
+          3,
+          2,
+          9,
+          3
+        ],
+        "body_instruction_count": 12
+      }
+    ],
+    "observed_body_shapes": [
+      [
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        5,
+        3
+      ],
+      [
+        2,
+        7,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        5,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        3,
+        2,
+        9,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        9,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        9,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        9,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        7,
+        3,
+        2,
+        9,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        3,
+        2,
+        9,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        7,
+        3
+      ],
+      [
+        2,
+        7,
+        7,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        7,
+        7,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        2,
+        7,
+        9,
+        3
+      ],
+      [
+        2,
+        9,
+        3,
+        2,
+        9,
+        3
+      ],
+      [
+        2,
+        9,
+        3,
+        2,
+        9,
+        3,
+        2,
+        7,
+        7,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ],
+      [
+        4,
+        3,
+        16,
+        16,
+        2,
+        5,
+        3,
+        2,
+        3,
+        2,
+        9,
+        3
+      ],
+      [
+        4,
+        3,
+        16,
+        16,
+        16,
+        16,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3,
+        2,
+        3
+      ]
+    ],
+    "counter_update_shape": [
+      2,
+      10,
+      3,
+      11
+    ],
+    "source_record_ids": [
+      "UF-055e30a6dc246def",
+      "UF-059b87aeaf465fb1",
+      "UF-0f11a7a26b777dfe",
+      "UF-0f66f2b49b8d5983",
+      "UF-2146e26c80e29ec9",
+      "UF-2cca602555ac2af1",
+      "UF-3695ac026118889d",
+      "UF-454a347759091822",
+      "UF-46fc2ae8810e6e64",
+      "UF-4f41ff4c3de1c33f",
+      "UF-5346bc472a30e531",
+      "UF-585f8194a03eefe9",
+      "UF-6850cf70391b2036",
+      "UF-737e219163274b6c",
+      "UF-79ebb37eba04ba34",
+      "UF-88d0332eb98a401a",
+      "UF-8de36f5279e82b24",
+      "UF-91dbdc8461d5c1a7",
+      "UF-92ee397983d8bc44",
+      "UF-9ab5491987e98b2a",
+      "UF-9b4ce698e56789c8",
+      "UF-9bf08d62d878ac6a",
+      "UF-a2d651ea9bae624b",
+      "UF-acf6631ac2ca1895",
+      "UF-b33dac80fa74362f",
+      "UF-c46cbd71d59a17c6",
+      "UF-e2f688c2054e2421",
+      "UF-f1a8e695f786018d",
+      "UF-f3855c6ef98d48d4",
+      "UF-f542ba0662aa2a0c"
+    ],
+    "supporting_occurrence_count": 33
+  },
+  "posthoc_interpretation": {
+    "name": "REPEAT",
+    "contract": "for every deterministic state transition B, state s, and n in N, REPEAT(B,s,n)=B^n(s)",
+    "provided_to_learner": false
+  },
+  "compression": {
+    "macro_instruction_count": 1,
+    "demonstration_body_instruction_count": 3,
+    "demonstration_repeat_count": 20,
+    "expanded_body_instruction_count": 60,
+    "saved_body_dispatches": 59,
+    "semantic_body_is_a_parameter": true
+  },
+  "demonstrations": {
+    "repeat_anonymous_increment": {
+      "final_state": [
+        62
+      ],
+      "iteration_count": 20,
+      "remaining_count": 0
+    },
+    "repeat_anonymous_pair_transition": {
+      "final_state": [
+        89,
+        144
+      ],
+      "iteration_count": 10,
+      "remaining_count": 0
+    }
+  },
+  "verification": {
+    "verifier_version": "independent-repeat-macro-verifier-v0.1",
+    "passed": true,
+    "semantic_id": "SEM-ea6d06e2e7226d79",
+    "universal_statement": "for every deterministic state transition B, state s, and n in N, REPEAT(B,s,n)=B^n(s)",
+    "obligations": [
+      {
+        "obligation_id": "next_fresh_opcode",
+        "passed": true,
+        "evidence": 131
+      },
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "SEM-ea6d06e2e7226d79"
+      },
+      {
+        "obligation_id": "multi_source_counter_loop_evidence",
+        "passed": true,
+        "evidence": {
+          "sources": 30,
+          "occurrences": 33
+        }
+      },
+      {
+        "obligation_id": "body_is_a_parameter_not_a_fixed_operation",
+        "passed": true,
+        "evidence": [
+          [
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            7,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            5,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            9,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            7,
+            3
+          ],
+          [
+            2,
+            7,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            7,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            2,
+            7,
+            9,
+            3
+          ],
+          [
+            2,
+            9,
+            3,
+            2,
+            9,
+            3
+          ],
+          [
+            2,
+            9,
+            3,
+            2,
+            9,
+            3,
+            2,
+            7,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          [
+            4,
+            3,
+            16,
+            16,
+            2,
+            5,
+            3,
+            2,
+            3,
+            2,
+            9,
+            3
+          ],
+          [
+            4,
+            3,
+            16,
+            16,
+            16,
+            16,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ]
+        ]
+      },
+      {
+        "obligation_id": "natural_counter_termination",
+        "passed": true,
+        "evidence": "remaining count starts at n in N and decreases exactly once after each body application"
+      },
+      {
+        "obligation_id": "base_case_zero_repetitions",
+        "passed": true,
+        "evidence": "B^0(s)=s and the macro returns the initial state without calling B"
+      },
+      {
+        "obligation_id": "induction_step_for_arbitrary_deterministic_body",
+        "passed": true,
+        "evidence": "if macro(n,s)=B^n(s), one further body call gives macro(n+1,s)=B(B^n(s))"
+      },
+      {
+        "obligation_id": "independent_expansion_equivalence",
+        "passed": true,
+        "evidence": "20/20 cases"
+      }
+    ],
+    "case_results": [
+      {
+        "transition_id": "increment",
+        "repeat_count": 0,
+        "macro_state": [
+          2
+        ],
+        "expanded_state": [
+          2
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "increment",
+        "repeat_count": 1,
+        "macro_state": [
+          5
+        ],
+        "expanded_state": [
+          5
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "increment",
+        "repeat_count": 2,
+        "macro_state": [
+          8
+        ],
+        "expanded_state": [
+          8
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "increment",
+        "repeat_count": 5,
+        "macro_state": [
+          17
+        ],
+        "expanded_state": [
+          17
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "increment",
+        "repeat_count": 11,
+        "macro_state": [
+          35
+        ],
+        "expanded_state": [
+          35
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "pair-shift",
+        "repeat_count": 0,
+        "macro_state": [
+          1,
+          1
+        ],
+        "expanded_state": [
+          1,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "pair-shift",
+        "repeat_count": 1,
+        "macro_state": [
+          1,
+          2
+        ],
+        "expanded_state": [
+          1,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "pair-shift",
+        "repeat_count": 2,
+        "macro_state": [
+          2,
+          3
+        ],
+        "expanded_state": [
+          2,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "pair-shift",
+        "repeat_count": 5,
+        "macro_state": [
+          8,
+          13
+        ],
+        "expanded_state": [
+          8,
+          13
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "pair-shift",
+        "repeat_count": 11,
+        "macro_state": [
+          144,
+          233
+        ],
+        "expanded_state": [
+          144,
+          233
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "rotate",
+        "repeat_count": 0,
+        "macro_state": [
+          1,
+          2,
+          3
+        ],
+        "expanded_state": [
+          1,
+          2,
+          3
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "rotate",
+        "repeat_count": 1,
+        "macro_state": [
+          2,
+          3,
+          1
+        ],
+        "expanded_state": [
+          2,
+          3,
+          1
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "rotate",
+        "repeat_count": 2,
+        "macro_state": [
+          3,
+          1,
+          2
+        ],
+        "expanded_state": [
+          3,
+          1,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "rotate",
+        "repeat_count": 5,
+        "macro_state": [
+          3,
+          1,
+          2
+        ],
+        "expanded_state": [
+          3,
+          1,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "rotate",
+        "repeat_count": 11,
+        "macro_state": [
+          3,
+          1,
+          2
+        ],
+        "expanded_state": [
+          3,
+          1,
+          2
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "signed-map",
+        "repeat_count": 0,
+        "macro_state": [
+          -2,
+          5
+        ],
+        "expanded_state": [
+          -2,
+          5
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "signed-map",
+        "repeat_count": 1,
+        "macro_state": [
+          -7,
+          -1
+        ],
+        "expanded_state": [
+          -7,
+          -1
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "signed-map",
+        "repeat_count": 2,
+        "macro_state": [
+          -6,
+          -6
+        ],
+        "expanded_state": [
+          -6,
+          -6
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "signed-map",
+        "repeat_count": 5,
+        "macro_state": [
+          4,
+          6
+        ],
+        "expanded_state": [
+          4,
+          6
+        ],
+        "passed": true
+      },
+      {
+        "transition_id": "signed-map",
+        "repeat_count": 11,
+        "macro_state": [
+          4,
+          6
+        ],
+        "expanded_state": [
+          4,
+          6
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "control_semantic_room": {
+    "schema_version": "verified-control-semantic-event-v0.1",
+    "event_index": 1,
+    "semantic": {
+      "semantic_id": "SEM-ea6d06e2e7226d79",
+      "opcode": 131,
+      "occurrences": [
+        {
+          "source_record_id": "UF-acf6631ac2ca1895",
+          "start_instruction": 5,
+          "counter_cell": 34,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-3695ac026118889d",
+          "start_instruction": 7,
+          "counter_cell": 52,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 10
+        },
+        {
+          "source_record_id": "UF-9b4ce698e56789c8",
+          "start_instruction": 9,
+          "counter_cell": 66,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 15
+        },
+        {
+          "source_record_id": "UF-737e219163274b6c",
+          "start_instruction": 5,
+          "counter_cell": 40,
+          "body_opcode_shape": [
+            2,
+            9,
+            3,
+            2,
+            9,
+            3
+          ],
+          "body_instruction_count": 6
+        },
+        {
+          "source_record_id": "UF-6850cf70391b2036",
+          "start_instruction": 11,
+          "counter_cell": 80,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 20
+        },
+        {
+          "source_record_id": "UF-e2f688c2054e2421",
+          "start_instruction": 9,
+          "counter_cell": 68,
+          "body_opcode_shape": [
+            2,
+            9,
+            3,
+            2,
+            9,
+            3,
+            2,
+            7,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 16
+        },
+        {
+          "source_record_id": "UF-585f8194a03eefe9",
+          "start_instruction": 5,
+          "counter_cell": 36,
+          "body_opcode_shape": [
+            2,
+            7,
+            7,
+            3
+          ],
+          "body_instruction_count": 4
+        },
+        {
+          "source_record_id": "UF-f3855c6ef98d48d4",
+          "start_instruction": 5,
+          "counter_cell": 36,
+          "body_opcode_shape": [
+            2,
+            7,
+            9,
+            3
+          ],
+          "body_instruction_count": 4
+        },
+        {
+          "source_record_id": "UF-c46cbd71d59a17c6",
+          "start_instruction": 9,
+          "counter_cell": 54,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3
+          ],
+          "body_instruction_count": 9
+        },
+        {
+          "source_record_id": "UF-b33dac80fa74362f",
+          "start_instruction": 11,
+          "counter_cell": 62,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            9,
+            3
+          ],
+          "body_instruction_count": 11
+        },
+        {
+          "source_record_id": "UF-f1a8e695f786018d",
+          "start_instruction": 13,
+          "counter_cell": 94,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            7,
+            3,
+            2,
+            9,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 25
+        },
+        {
+          "source_record_id": "UF-91dbdc8461d5c1a7",
+          "start_instruction": 7,
+          "counter_cell": 46,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 7
+        },
+        {
+          "source_record_id": "UF-9ab5491987e98b2a",
+          "start_instruction": 7,
+          "counter_cell": 48,
+          "body_opcode_shape": [
+            2,
+            7,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 8
+        },
+        {
+          "source_record_id": "UF-055e30a6dc246def",
+          "start_instruction": 9,
+          "counter_cell": 54,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 9
+        },
+        {
+          "source_record_id": "UF-8de36f5279e82b24",
+          "start_instruction": 11,
+          "counter_cell": 66,
+          "body_opcode_shape": [
+            2,
+            7,
+            7,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 13
+        },
+        {
+          "source_record_id": "UF-92ee397983d8bc44",
+          "start_instruction": 9,
+          "counter_cell": 52,
+          "body_opcode_shape": [
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 8
+        },
+        {
+          "source_record_id": "UF-059b87aeaf465fb1",
+          "start_instruction": 12,
+          "counter_cell": 64,
+          "body_opcode_shape": [
+            2,
+            5,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-79ebb37eba04ba34",
+          "start_instruction": 5,
+          "counter_cell": 34,
+          "body_opcode_shape": [
+            2,
+            5,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-f542ba0662aa2a0c",
+          "start_instruction": 16,
+          "counter_cell": 83,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-454a347759091822",
+          "start_instruction": 18,
+          "counter_cell": 118,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-4f41ff4c3de1c33f",
+          "start_instruction": 5,
+          "counter_cell": 34,
+          "body_opcode_shape": [
+            2,
+            5,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-46fc2ae8810e6e64",
+          "start_instruction": 7,
+          "counter_cell": 44,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            5,
+            3
+          ],
+          "body_instruction_count": 6
+        },
+        {
+          "source_record_id": "UF-88d0332eb98a401a",
+          "start_instruction": 13,
+          "counter_cell": 71,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-0f11a7a26b777dfe",
+          "start_instruction": 7,
+          "counter_cell": 46,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 7
+        },
+        {
+          "source_record_id": "UF-2146e26c80e29ec9",
+          "start_instruction": 13,
+          "counter_cell": 71,
+          "body_opcode_shape": [
+            2,
+            5,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-9bf08d62d878ac6a",
+          "start_instruction": 7,
+          "counter_cell": 44,
+          "body_opcode_shape": [
+            2,
+            7,
+            3,
+            2,
+            5,
+            3
+          ],
+          "body_instruction_count": 6
+        },
+        {
+          "source_record_id": "UF-5346bc472a30e531",
+          "start_instruction": 13,
+          "counter_cell": 101,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-5346bc472a30e531",
+          "start_instruction": 26,
+          "counter_cell": 101,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-a2d651ea9bae624b",
+          "start_instruction": 15,
+          "counter_cell": 122,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-a2d651ea9bae624b",
+          "start_instruction": 26,
+          "counter_cell": 122,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-a2d651ea9bae624b",
+          "start_instruction": 37,
+          "counter_cell": 122,
+          "body_opcode_shape": [
+            2,
+            7,
+            3
+          ],
+          "body_instruction_count": 3
+        },
+        {
+          "source_record_id": "UF-0f66f2b49b8d5983",
+          "start_instruction": 11,
+          "counter_cell": 68,
+          "body_opcode_shape": [
+            4,
+            3,
+            16,
+            16,
+            16,
+            16,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3,
+            2,
+            3
+          ],
+          "body_instruction_count": 14
+        },
+        {
+          "source_record_id": "UF-2cca602555ac2af1",
+          "start_instruction": 7,
+          "counter_cell": 56,
+          "body_opcode_shape": [
+            4,
+            3,
+            16,
+            16,
+            2,
+            5,
+            3,
+            2,
+            3,
+            2,
+            9,
+            3
+          ],
+          "body_instruction_count": 12
+        }
+      ],
+      "observed_body_shapes": [
+        [
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          5,
+          3
+        ],
+        [
+          2,
+          7,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          5,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          3,
+          2,
+          9,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          3,
+          2,
+          9,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          7,
+          3
+        ],
+        [
+          2,
+          7,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          7,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          2,
+          7,
+          9,
+          3
+        ],
+        [
+          2,
+          9,
+          3,
+          2,
+          9,
+          3
+        ],
+        [
+          2,
+          9,
+          3,
+          2,
+          9,
+          3,
+          2,
+          7,
+          7,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ],
+        [
+          4,
+          3,
+          16,
+          16,
+          2,
+          5,
+          3,
+          2,
+          3,
+          2,
+          9,
+          3
+        ],
+        [
+          4,
+          3,
+          16,
+          16,
+          16,
+          16,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3,
+          2,
+          3
+        ]
+      ],
+      "counter_update_shape": [
+        2,
+        10,
+        3,
+        11
+      ],
+      "source_record_ids": [
+        "UF-055e30a6dc246def",
+        "UF-059b87aeaf465fb1",
+        "UF-0f11a7a26b777dfe",
+        "UF-0f66f2b49b8d5983",
+        "UF-2146e26c80e29ec9",
+        "UF-2cca602555ac2af1",
+        "UF-3695ac026118889d",
+        "UF-454a347759091822",
+        "UF-46fc2ae8810e6e64",
+        "UF-4f41ff4c3de1c33f",
+        "UF-5346bc472a30e531",
+        "UF-585f8194a03eefe9",
+        "UF-6850cf70391b2036",
+        "UF-737e219163274b6c",
+        "UF-79ebb37eba04ba34",
+        "UF-88d0332eb98a401a",
+        "UF-8de36f5279e82b24",
+        "UF-91dbdc8461d5c1a7",
+        "UF-92ee397983d8bc44",
+        "UF-9ab5491987e98b2a",
+        "UF-9b4ce698e56789c8",
+        "UF-9bf08d62d878ac6a",
+        "UF-a2d651ea9bae624b",
+        "UF-acf6631ac2ca1895",
+        "UF-b33dac80fa74362f",
+        "UF-c46cbd71d59a17c6",
+        "UF-e2f688c2054e2421",
+        "UF-f1a8e695f786018d",
+        "UF-f3855c6ef98d48d4",
+        "UF-f542ba0662aa2a0c"
+      ],
+      "supporting_occurrence_count": 33
+    },
+    "verification": {
+      "verifier_version": "independent-repeat-macro-verifier-v0.1",
+      "passed": true,
+      "semantic_id": "SEM-ea6d06e2e7226d79",
+      "universal_statement": "for every deterministic state transition B, state s, and n in N, REPEAT(B,s,n)=B^n(s)",
+      "obligations": [
+        {
+          "obligation_id": "next_fresh_opcode",
+          "passed": true,
+          "evidence": 131
+        },
+        {
+          "obligation_id": "semantic_id_binding",
+          "passed": true,
+          "evidence": "SEM-ea6d06e2e7226d79"
+        },
+        {
+          "obligation_id": "multi_source_counter_loop_evidence",
+          "passed": true,
+          "evidence": {
+            "sources": 30,
+            "occurrences": 33
+          }
+        },
+        {
+          "obligation_id": "body_is_a_parameter_not_a_fixed_operation",
+          "passed": true,
+          "evidence": [
+            [
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              5,
+              3
+            ],
+            [
+              2,
+              7,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              5,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              3,
+              2,
+              9,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              9,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              9,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              9,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              7,
+              3,
+              2,
+              9,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              3,
+              2,
+              9,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              7,
+              3
+            ],
+            [
+              2,
+              7,
+              7,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              7,
+              7,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              2,
+              7,
+              9,
+              3
+            ],
+            [
+              2,
+              9,
+              3,
+              2,
+              9,
+              3
+            ],
+            [
+              2,
+              9,
+              3,
+              2,
+              9,
+              3,
+              2,
+              7,
+              7,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ],
+            [
+              4,
+              3,
+              16,
+              16,
+              2,
+              5,
+              3,
+              2,
+              3,
+              2,
+              9,
+              3
+            ],
+            [
+              4,
+              3,
+              16,
+              16,
+              16,
+              16,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "obligation_id": "natural_counter_termination",
+          "passed": true,
+          "evidence": "remaining count starts at n in N and decreases exactly once after each body application"
+        },
+        {
+          "obligation_id": "base_case_zero_repetitions",
+          "passed": true,
+          "evidence": "B^0(s)=s and the macro returns the initial state without calling B"
+        },
+        {
+          "obligation_id": "induction_step_for_arbitrary_deterministic_body",
+          "passed": true,
+          "evidence": "if macro(n,s)=B^n(s), one further body call gives macro(n+1,s)=B(B^n(s))"
+        },
+        {
+          "obligation_id": "independent_expansion_equivalence",
+          "passed": true,
+          "evidence": "20/20 cases"
+        }
+      ],
+      "case_results": [
+        {
+          "transition_id": "increment",
+          "repeat_count": 0,
+          "macro_state": [
+            2
+          ],
+          "expanded_state": [
+            2
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "increment",
+          "repeat_count": 1,
+          "macro_state": [
+            5
+          ],
+          "expanded_state": [
+            5
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "increment",
+          "repeat_count": 2,
+          "macro_state": [
+            8
+          ],
+          "expanded_state": [
+            8
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "increment",
+          "repeat_count": 5,
+          "macro_state": [
+            17
+          ],
+          "expanded_state": [
+            17
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "increment",
+          "repeat_count": 11,
+          "macro_state": [
+            35
+          ],
+          "expanded_state": [
+            35
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "pair-shift",
+          "repeat_count": 0,
+          "macro_state": [
+            1,
+            1
+          ],
+          "expanded_state": [
+            1,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "pair-shift",
+          "repeat_count": 1,
+          "macro_state": [
+            1,
+            2
+          ],
+          "expanded_state": [
+            1,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "pair-shift",
+          "repeat_count": 2,
+          "macro_state": [
+            2,
+            3
+          ],
+          "expanded_state": [
+            2,
+            3
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "pair-shift",
+          "repeat_count": 5,
+          "macro_state": [
+            8,
+            13
+          ],
+          "expanded_state": [
+            8,
+            13
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "pair-shift",
+          "repeat_count": 11,
+          "macro_state": [
+            144,
+            233
+          ],
+          "expanded_state": [
+            144,
+            233
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "rotate",
+          "repeat_count": 0,
+          "macro_state": [
+            1,
+            2,
+            3
+          ],
+          "expanded_state": [
+            1,
+            2,
+            3
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "rotate",
+          "repeat_count": 1,
+          "macro_state": [
+            2,
+            3,
+            1
+          ],
+          "expanded_state": [
+            2,
+            3,
+            1
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "rotate",
+          "repeat_count": 2,
+          "macro_state": [
+            3,
+            1,
+            2
+          ],
+          "expanded_state": [
+            3,
+            1,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "rotate",
+          "repeat_count": 5,
+          "macro_state": [
+            3,
+            1,
+            2
+          ],
+          "expanded_state": [
+            3,
+            1,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "rotate",
+          "repeat_count": 11,
+          "macro_state": [
+            3,
+            1,
+            2
+          ],
+          "expanded_state": [
+            3,
+            1,
+            2
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "signed-map",
+          "repeat_count": 0,
+          "macro_state": [
+            -2,
+            5
+          ],
+          "expanded_state": [
+            -2,
+            5
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "signed-map",
+          "repeat_count": 1,
+          "macro_state": [
+            -7,
+            -1
+          ],
+          "expanded_state": [
+            -7,
+            -1
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "signed-map",
+          "repeat_count": 2,
+          "macro_state": [
+            -6,
+            -6
+          ],
+          "expanded_state": [
+            -6,
+            -6
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "signed-map",
+          "repeat_count": 5,
+          "macro_state": [
+            4,
+            6
+          ],
+          "expanded_state": [
+            4,
+            6
+          ],
+          "passed": true
+        },
+        {
+          "transition_id": "signed-map",
+          "repeat_count": 11,
+          "macro_state": [
+            4,
+            6
+          ],
+          "expanded_state": [
+            4,
+            6
+          ],
+          "passed": true
+        }
+      ]
+    },
+    "previous_event_hash": "6eb8c4b8aa0a6c59a6014f34aee8627ac820163b2b3ed069cfb40302c5cb13a7",
+    "event_hash": "ccd0bd07d8fdbf3be3365b064717a5c25c0b253fd767996453502162b0e74795"
+  },
+  "gates": [
+    {
+      "gate_id": "next_fresh_opcode_after_continuous_frontier",
+      "passed": true,
+      "actual": 131,
+      "required": 131
+    },
+    {
+      "gate_id": "repeat_skeleton_has_many_proven_sources",
+      "passed": true,
+      "actual": 30,
+      "required": 5
+    },
+    {
+      "gate_id": "body_parameter_is_not_fixed",
+      "passed": true,
+      "actual": 20,
+      "required": 2
+    },
+    {
+      "gate_id": "universal_repeat_induction_proof",
+      "passed": true,
+      "actual": 8,
+      "required": 8
+    },
+    {
+      "gate_id": "macro_matches_expanded_execution",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "verified_control_room_persisted",
+      "passed": true,
+      "actual": "SEM-ea6d06e2e7226d79",
+      "required": "SEM-ea6d06e2e7226d79"
+    }
+  ],
+  "learner_received": {
+    "repeat_name": false,
+    "target_macro_definition": false,
+    "fixed_body_operation": false,
+    "proven_anonymous_word_code": true,
+    "counter_loop_structure": true
+  },
+  "limitations": [
+    "OP131 compresses finite natural-number repetition; it does not express unbounded recursion or arbitrary while conditions.",
+    "The runtime body must be a registered deterministic transition; arbitrary external code is not accepted as a learned semantic.",
+    "The anti-unification scanner, higher-order executor, and induction proof rule are host implementations.",
+    "One macro invocation hides repeated dispatch, but the underlying work still takes n body applications unless a body-specific closed form is separately discovered."
+  ]
+}

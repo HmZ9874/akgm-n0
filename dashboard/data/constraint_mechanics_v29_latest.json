@@ -1,0 +1,669 @@
+{
+  "report_version": "constraint-mechanics-v29.0",
+  "run_id": "RUN-constraint-v29-20260821T081205476690Z",
+  "created_at": "2026-08-21T08:12:05.476690+00:00",
+  "verdict": "constraint_and_generalized_coordinate_discovered",
+  "acceptance": {
+    "benchmark_version": "constraint-mechanics-v29.0",
+    "passed": true,
+    "classification": "verified_anonymous_planar_constraint_projection_and_one_coordinate_reconstruction",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "rows": [
+        {
+          "experiment_id": "TC-0",
+          "anonymous_position": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        },
+        {
+          "experiment_id": "TC-1",
+          "anonymous_position": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        },
+        {
+          "experiment_id": "TC-2",
+          "anonymous_position": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        },
+        {
+          "experiment_id": "TC-3",
+          "anonymous_position": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 14,
+              "negative": 0,
+              "denominator": 5
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        },
+        {
+          "experiment_id": "TC-4",
+          "anonymous_position": [
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        }
+      ],
+      "formulas_supplied": false
+    },
+    "discovery": {
+      "metric_candidates_generated": 81,
+      "selected_metric": {
+        "program_id": "MET-1fd633ab48617140",
+        "opaque_program": "MET<KEEP,ZERO,ZERO,KEEP>",
+        "policy": {
+          "substrate": "symmetric_four_atom_router_v29",
+          "atom_routes": [
+            "KEEP",
+            "ZERO",
+            "ZERO",
+            "KEEP"
+          ],
+          "human_operation_name": null
+        }
+      },
+      "tangent_candidates_generated": 16,
+      "selected_tangent": {
+        "program_id": "TAN-a381783d6ab0db4b",
+        "opaque_program": "TANGENT<TURN<q1>,KEEP<q0>>",
+        "policy": {
+          "sources": [
+            1,
+            0
+          ],
+          "turns": [
+            true,
+            false
+          ],
+          "human_operation_name": null
+        }
+      },
+      "projection_candidates_generated": 4,
+      "selected_projection": {
+        "program_id": "PRJ-a4ad17a0fffc42ef",
+        "opaque_program": "PROJECT<TURN;DEN:MET<R,R>>",
+        "policy": {
+          "turn_correction": true,
+          "denominator_route": "MET<R,R>",
+          "human_operation_name": null
+        }
+      },
+      "training_cases": 5,
+      "generalized_coordinate_count": 1,
+      "ambient_state_coordinate_count": 2
+    },
+    "proofs": {
+      "constraint": {
+        "proof_id": "V29-PROOF-CONSTRAINT-AND-GENERALIZED-COORDINATE",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_metric",
+            "passed": true,
+            "evidence": "one of 81 routers matches orthonormal basis laws"
+          },
+          {
+            "obligation_id": "unique_oriented_tangent",
+            "passed": true,
+            "evidence": "one of 16 signed permutations is orthogonal, norm-preserving, and positively oriented"
+          },
+          {
+            "obligation_id": "unique_projection",
+            "passed": true,
+            "evidence": "one of four correction programs matches all rows"
+          },
+          {
+            "obligation_id": "constraint_derivative_zero",
+            "passed": true,
+            "evidence": "MET<r,v>=ZERO"
+          },
+          {
+            "obligation_id": "one_coordinate_reconstruction",
+            "passed": true,
+            "evidence": "one scalar coefficient reconstructs every tangent state"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "experiment_id": "SC-0",
+            "projection_passed": true,
+            "tangent_passed": true,
+            "reconstruction_passed": true,
+            "generalized_scalar": {
+              "positive": 0,
+              "negative": 7,
+              "denominator": 5
+            }
+          },
+          {
+            "experiment_id": "SC-1",
+            "projection_passed": true,
+            "tangent_passed": true,
+            "reconstruction_passed": true,
+            "generalized_scalar": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 5
+            }
+          },
+          {
+            "experiment_id": "SC-2",
+            "projection_passed": true,
+            "tangent_passed": true,
+            "reconstruction_passed": true,
+            "generalized_scalar": {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "add_radial_component",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "anonymous_position": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 14,
+              "negative": 0,
+              "denominator": 5
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        }
+      },
+      {
+        "mutation": "omit_norm_denominator",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "anonymous_position": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 14,
+              "negative": 0,
+              "denominator": 5
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        }
+      },
+      {
+        "mutation": "claim_proposed_state_is_already_tangent",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SC-0",
+          "anonymous_position": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_proposed_state": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_observed_state": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 14,
+              "negative": 0,
+              "denominator": 5
+            }
+          ],
+          "human_constraint_name": null,
+          "human_projection_formula": null,
+          "human_coordinate_name": null
+        }
+      },
+      {
+        "mutation": "replace_metric_with_all_pair_products",
+        "rejected": true,
+        "counterexample": {
+          "basis_test": "MET<e0,e1> must be ZERO"
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v28_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_rows",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "constraint_programs_proved",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_reconstruction",
+        "passed": true
+      },
+      {
+        "obligation_id": "dimension_reduced_two_to_one",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "negative_fractional_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "m09_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_still_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_gap_m10",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_formula_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 9,
+      "total_domains": 15,
+      "completion_ratio": 0.6,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M10:oscillation_and_stability",
+      "selection_reason": "continuous constrained dynamics enables equilibrium, perturbation, and stability experiments"
+    },
+    "posthoc_translation": {
+      "metric": "dot product",
+      "constraint": "x^2+y^2=R^2",
+      "tangent": "(-y,x)",
+      "projection": "u-r*(r dot u)/(r dot r)",
+      "generalized_state": "one tangent scalar"
+    },
+    "limitations": [
+      "V29 covers one planar holonomic circle constraint, not arbitrary constraint manifolds.",
+      "The coordinate chart excludes the zero-radius singularity.",
+      "Constraint observations are exact synthetic data.",
+      "The completion gate remains open at 9/15."
+    ]
+  },
+  "claim": {
+    "achieved": "planar constraint projection and reversible one-scalar tangent representation",
+    "not_claimed": "arbitrary nonlinear manifolds or multi-body constraint solvers"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v29/success/constraint_latest.json",
+    "mistake_room": "artifacts/physics/v29/mistakes/rejected_constraint_mutations.jsonl"
+  },
+  "content_digest": "7d0a8c6b68197cb91a636ecc3d89e4f0929efda5fc550a1a750c40f292f591e0"
+}

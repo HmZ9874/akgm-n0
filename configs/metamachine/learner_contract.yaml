@@ -1,0 +1,24 @@
+{
+  "contract_id": "learner-contract-metamachine-gen1-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "metamachine-gen1-v0.1",
+  "input_interface": {
+    "observation_type": "anonymous_symbol_traces",
+    "fields": [
+      "opaque_session_id",
+      "symbol_traces",
+      "output_values",
+      "validity_mask",
+      "action_receipt"
+    ],
+    "symbol_names_visible": false,
+    "identifiers": "randomized_per_run"
+  },
+  "feedback_interface": {
+    "development_feedback": ["numeric_fit_error", "program_cost"],
+    "blind_feedback_during_search": []
+  },
+  "network_access": false,
+  "natural_language_input": false,
+  "pretrained_model_access": false
+}

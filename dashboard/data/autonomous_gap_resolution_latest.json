@@ -1,0 +1,461 @@
+{
+  "report_version": "autonomous-gap-resolution-v0.1",
+  "run_id": "RUN-autonomous-gap-resolution-20260820T020116744016Z",
+  "created_at": "2026-08-20T02:01:16.744016Z",
+  "verdict": "previously_blocked_world_resolved_by_an_induced_full_record_exclusion_memory",
+  "resumed_from": {
+    "run_id": "RUN-self-directed-frontier-20260820T012842538545Z",
+    "blocked_world": {
+      "world": {
+        "world_id": "WORLD-distinct-route-31",
+        "structural_signature": "distinct_choice_expansion",
+        "dependency_signatures": [
+          "object_exclusion_memory"
+        ],
+        "novelty_weight": 10,
+        "compression_gain": 14,
+        "estimated_experiment_cost": 8
+      },
+      "status": "dependency_blocked",
+      "score": null,
+      "reasons": [
+        "missing:object_exclusion_memory"
+      ]
+    },
+    "missing_dependency": "object_exclusion_memory",
+    "user_supplied_math_target": false
+  },
+  "capability_invention": {
+    "candidate_memory_modes": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "mode_names_visible_to_search": false,
+    "selected_mode": 3,
+    "proof_interpretation": "scan the complete current record and reject a candidate on any equality match",
+    "new_dependency_signature": "object_exclusion_memory",
+    "honest_comparison_token_accounting": true
+  },
+  "search": {
+    "candidate_count": 48,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "DXP-5ac73258431679f4",
+      "controller_slot": 1,
+      "base_slot": 0,
+      "seed_mode": 0,
+      "update_mode": 1,
+      "filter_mode": 3
+    },
+    "selected_token_cost": 2555,
+    "selected_reward": 997445
+  },
+  "discovery": {
+    "foundation_level": 8,
+    "semantic": {
+      "semantic_id": "XSEM-e27ac00be31ef317",
+      "opcode": 8,
+      "program": {
+        "program_id": "DXP-5ac73258431679f4",
+        "controller_slot": 1,
+        "base_slot": 0,
+        "seed_mode": 0,
+        "update_mode": 1,
+        "filter_mode": 3
+      },
+      "dependency_semantic_ids": [
+        "ASEM-4b7c892702eaa68a"
+      ],
+      "source_task_ids": [
+        "WORLD-distinct-route-31"
+      ],
+      "structural_signature": "distinct_choice_expansion",
+      "invented_dependency_signature": "object_exclusion_memory"
+    },
+    "structural_origin": "for each controller object, extend every current record by every base object not already stored in that record",
+    "posthoc_name": "falling factorial / arrangements without repetition",
+    "posthoc_formula": "for b,n in N, output count is product_{i=0}^{n-1}(b-i) when n<=b and 0 when n>b; the n=b case is b!",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "verification": {
+    "verifier_version": "independent-distinct-frontier-verifier-v0.1",
+    "semantic_id": "XSEM-e27ac00be31ef317",
+    "passed": true,
+    "invented_mechanism": "scan the complete current record and reject a candidate on any equality match",
+    "structural_statement": "for each controller object, extend every current record by every base object not already stored in that record",
+    "posthoc_mathematical_name": "falling factorial / arrangements without repetition",
+    "posthoc_cardinality_statement": "for b,n in N, output count is product_{i=0}^{n-1}(b-i) when n<=b and 0 when n>b; the n=b case is b!",
+    "declared_domain": "finite base and controller collections / natural-number cardinalities",
+    "not_claimed": "combinations, binomial coefficients, probability laws, infinite permutations, or Gamma-function extension",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "full-record exclusion invariant and structural induction over controller visits",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "XSEM-e27ac00be31ef317"
+      },
+      {
+        "obligation_id": "exact_distinct_program_binding",
+        "passed": true,
+        "evidence": "DXP-5ac73258431679f4"
+      },
+      {
+        "obligation_id": "blocked_world_signature_binding",
+        "passed": true,
+        "evidence": "distinct_choice_expansion"
+      },
+      {
+        "obligation_id": "missing_dependency_is_now_instantiated",
+        "passed": true,
+        "evidence": "object_exclusion_memory"
+      },
+      {
+        "obligation_id": "unit_expand_full_record_scan_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "DXP-5ac73258431679f4",
+          "controller_slot": 1,
+          "base_slot": 0,
+          "seed_mode": 0,
+          "update_mode": 1,
+          "filter_mode": 3
+        }
+      },
+      {
+        "obligation_id": "depends_on_prior_recursive_expansion",
+        "passed": true,
+        "evidence": [
+          "ASEM-4b7c892702eaa68a"
+        ]
+      },
+      {
+        "obligation_id": "empty_controller_unit_state",
+        "passed": true,
+        "evidence": "before any controller visit there is exactly one empty record"
+      },
+      {
+        "obligation_id": "candidate_compared_against_record_memory",
+        "passed": true,
+        "evidence": "a candidate is accepted iff no stored record object is equal to it"
+      },
+      {
+        "obligation_id": "no_object_repeats_within_a_record",
+        "passed": true,
+        "evidence": "full-record exclusion invariant"
+      },
+      {
+        "obligation_id": "all_legal_extensions_are_emitted",
+        "passed": true,
+        "evidence": "every base object not present in the prefix is appended exactly once"
+      },
+      {
+        "obligation_id": "record_length_invariant",
+        "passed": true,
+        "evidence": "after k controller visits every surviving record has length k"
+      },
+      {
+        "obligation_id": "distinct_word_completeness",
+        "passed": true,
+        "evidence": "13/13 hidden structural replays"
+      },
+      {
+        "obligation_id": "falling_cardinality_recurrence",
+        "passed": true,
+        "evidence": "D(0)=1 and D(k+1)=D(k)*(|B|-k) while k<|B|; no records survive afterward"
+      },
+      {
+        "obligation_id": "universal_natural_cardinality_result",
+        "passed": true,
+        "evidence": "structural induction yields the falling product for every finite base and controller"
+      },
+      {
+        "obligation_id": "factorial_special_case",
+        "passed": true,
+        "evidence": "when controller and base cardinalities agree, every full ordering appears once"
+      },
+      {
+        "obligation_id": "honest_memory_scan_token_accounting",
+        "passed": true,
+        "evidence": "each equality comparison is charged as a primitive execution token"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "finite controller, base, state, and prefix scans terminate; state becomes empty when requested length exceeds base size"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_learner",
+        "passed": true,
+        "evidence": "the learner saw integer seed/update/filter modes and opaque records, not factorial, permutation, or falling-product names"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "DISTINCT-HIDDEN-00",
+        "source_lengths": [
+          0,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 3,
+        "equality_comparison_tokens": 0
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-01",
+        "source_lengths": [
+          0,
+          1
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "primitive_execution_tokens": 4,
+        "equality_comparison_tokens": 0
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-02",
+        "source_lengths": [
+          1,
+          0
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 3,
+        "equality_comparison_tokens": 0
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-03",
+        "source_lengths": [
+          1,
+          1
+        ],
+        "passed": true,
+        "output_count": 1,
+        "posthoc_expected_cardinality": 1,
+        "primitive_execution_tokens": 7,
+        "equality_comparison_tokens": 0
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-04",
+        "source_lengths": [
+          1,
+          2
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "primitive_execution_tokens": 11,
+        "equality_comparison_tokens": 1
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-05",
+        "source_lengths": [
+          2,
+          1
+        ],
+        "passed": true,
+        "output_count": 2,
+        "posthoc_expected_cardinality": 2,
+        "primitive_execution_tokens": 10,
+        "equality_comparison_tokens": 0
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-06",
+        "source_lengths": [
+          2,
+          2
+        ],
+        "passed": true,
+        "output_count": 2,
+        "posthoc_expected_cardinality": 2,
+        "primitive_execution_tokens": 25,
+        "equality_comparison_tokens": 4
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-07",
+        "source_lengths": [
+          2,
+          3
+        ],
+        "passed": true,
+        "output_count": 0,
+        "posthoc_expected_cardinality": 0,
+        "primitive_execution_tokens": 40,
+        "equality_comparison_tokens": 10
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-08",
+        "source_lengths": [
+          3,
+          2
+        ],
+        "passed": true,
+        "output_count": 6,
+        "posthoc_expected_cardinality": 6,
+        "primitive_execution_tokens": 47,
+        "equality_comparison_tokens": 9
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-09",
+        "source_lengths": [
+          3,
+          3
+        ],
+        "passed": true,
+        "output_count": 6,
+        "posthoc_expected_cardinality": 6,
+        "primitive_execution_tokens": 120,
+        "equality_comparison_tokens": 39
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-10",
+        "source_lengths": [
+          4,
+          3
+        ],
+        "passed": true,
+        "output_count": 24,
+        "posthoc_expected_cardinality": 24,
+        "primitive_execution_tokens": 282,
+        "equality_comparison_tokens": 100
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-11",
+        "source_lengths": [
+          5,
+          4
+        ],
+        "passed": true,
+        "output_count": 120,
+        "posthoc_expected_cardinality": 120,
+        "primitive_execution_tokens": 1997,
+        "equality_comparison_tokens": 925
+      },
+      {
+        "case_id": "DISTINCT-HIDDEN-12",
+        "source_lengths": [
+          6,
+          6
+        ],
+        "passed": true,
+        "output_count": 720,
+        "posthoc_expected_cardinality": 720,
+        "primitive_execution_tokens": 39855,
+        "equality_comparison_tokens": 23046
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 8,
+    "verified_path": [
+      "计数",
+      "加法",
+      "自然数截断差",
+      "有符号自然数差",
+      "自然数乘法",
+      "带余数的自然数除法",
+      "自然数幂",
+      "下降乘积/阶乘"
+    ]
+  },
+  "next_frontier": {
+    "world_id": "WORLD-unordered-subselection-44",
+    "structural_signature": "unordered_distinct_subselection",
+    "status": "dependency_blocked",
+    "missing_dependency": "order_canonicalization",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/distinct_frontier_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/distinct_frontier_programs.jsonl",
+    "success_count": 1,
+    "mistake_count": 47,
+    "event_hash": "a11b357ac18aa4a7488b2c35dad9fe44d219ce222d00c696e2a3c013d7eaa15e"
+  },
+  "gates": [
+    {
+      "gate_id": "gap_taken_from_previous_autonomous_stop",
+      "passed": true,
+      "actual": {
+        "world": "WORLD-distinct-route-31",
+        "missing": [
+          "object_exclusion_memory"
+        ]
+      },
+      "required": "previous dependency-blocked frontier"
+    },
+    {
+      "gate_id": "multiple_anonymous_memory_mechanisms_compete",
+      "passed": true,
+      "actual": 48,
+      "required": 48
+    },
+    {
+      "gate_id": "full_record_exclusion_is_induced_not_named",
+      "passed": true,
+      "actual": 3,
+      "required": "one anonymous integer mode selected by fit and reward"
+    },
+    {
+      "gate_id": "blocked_world_now_exactly_compressed",
+      "passed": true,
+      "actual": 12,
+      "required": 12
+    },
+    {
+      "gate_id": "token_reward_selects_best_exact_memory_program",
+      "passed": true,
+      "actual": 997445,
+      "required": 997445
+    },
+    {
+      "gate_id": "invented_dependency_and_composite_semantic_universally_proved",
+      "passed": true,
+      "actual": 18,
+      "required": 18
+    },
+    {
+      "gate_id": "all_hidden_distinct_cases_pass",
+      "passed": true,
+      "actual": 13,
+      "required": 13
+    },
+    {
+      "gate_id": "memory_scan_tokens_are_not_hidden",
+      "passed": true,
+      "actual": true,
+      "required": true
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 1,
+        "mistakes": 47
+      },
+      "required": {
+        "success": 1,
+        "mistakes": 47
+      }
+    },
+    {
+      "gate_id": "user_did_not_specify_posthoc_formula",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "The invented memory scans finite records linearly and is expensive for large structures.",
+    "The verified result is a natural-cardinality falling product and its factorial special case; combinations and probability remain undiscovered.",
+    "The host exposed anonymous equality, record storage, candidate filters, and structural observations, but not the selected filter meaning or mathematical formula.",
+    "The next generated world is blocked on order canonicalization; the loop must invent that dependency before promotion."
+  ]
+}

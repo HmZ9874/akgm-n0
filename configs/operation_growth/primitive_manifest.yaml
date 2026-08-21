@@ -1,0 +1,25 @@
+{
+  "manifest_id": "primitive-manifest-operation-growth-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "operation-growth-v0.1",
+  "numeric_representation": {
+    "observation_dtype": "integer_encoded_float64",
+    "maximum_control_steps": 64
+  },
+  "primitives": [
+    {"id": "p_input", "signature": "column_index->scalar"},
+    {"id": "p_accumulator", "signature": "state->scalar"},
+    {"id": "p_add", "signature": "scalar,scalar->scalar"},
+    {"id": "p_subtract", "signature": "scalar,scalar->scalar"},
+    {
+      "id": "p_iterate",
+      "signature": "count_source,initial_program,update_program->scalar",
+      "constraints": {"count_source": "non_negative_integer_input", "bounded": true}
+    }
+  ],
+  "search_prior": {
+    "maximum_expression_nodes": 3,
+    "deterministic_tie_breaking": true
+  }
+}
+

@@ -1,0 +1,98 @@
+{
+  "report_version": "deep-frontier-adversarial-audit-v0.1",
+  "run_id": "RUN-deep-adversarial-audit-20260820T031921359384Z",
+  "created_at": "2026-08-20T03:19:21.359384Z",
+  "verdict": "bounded_exhaustive_domains_passed",
+  "passed": true,
+  "source_runs": [
+    "RUN-autonomous-canonicalization-20260820T023613046892Z",
+    "RUN-autonomous-ratio-20260820T024007776553Z",
+    "RUN-autonomous-finite-mass-20260820T024320796010Z",
+    "RUN-autonomous-joint-20260820T024629791655Z",
+    "RUN-autonomous-weighted-20260820T024918812264Z",
+    "RUN-autonomous-rational-20260820T025227563659Z",
+    "RUN-autonomous-paired-20260820T025651207194Z",
+    "RUN-autonomous-exact-root-20260820T031851256832Z",
+    "RUN-autonomous-interval-memory-20260820T031910506925Z"
+  ],
+  "case_count": 215194,
+  "passed_case_count": 215194,
+  "failed_case_count": 0,
+  "stages": [
+    {
+      "stage": "order_canonicalization",
+      "case_count": 169,
+      "passed_count": 169,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "exact_rational_square_boundary",
+      "case_count": 22320,
+      "passed_count": 22320,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "ordered_rational_interval_memory",
+      "case_count": 19890,
+      "passed_count": 19890,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "normalized_ratio_representation",
+      "case_count": 62750,
+      "passed_count": 62750,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "finite_uniform_mass",
+      "case_count": 80600,
+      "passed_count": 80600,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "joint_event_intersection",
+      "case_count": 16384,
+      "passed_count": 16384,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "weighted_sum_accumulator",
+      "case_count": 585,
+      "passed_count": 585,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "signed_rational_difference_and_square",
+      "case_count": 8184,
+      "passed_count": 8184,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    },
+    {
+      "stage": "paired_weighted_product_accumulator",
+      "case_count": 4312,
+      "passed_count": 4312,
+      "counterexamples": [],
+      "failed_count": 0,
+      "passed": true
+    }
+  ],
+  "proof_scope": "bounded exhaustive and deterministic adversarial replay; supplements but does not replace symbolic obligations",
+  "universal_claim": false,
+  "audit_hash": "f7f21967a9136ca218d29882a48d83c9f449a968f55e5808e214b020a02b0470"
+}

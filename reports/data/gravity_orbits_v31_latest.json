@@ -1,0 +1,884 @@
+{
+  "report_version": "gravity-orbits-v31.0",
+  "run_id": "RUN-gravity-v31-20260821T082948734503Z",
+  "created_at": "2026-08-21T08:29:48.734503+00:00",
+  "verdict": "central_gravity_and_orbits_verified",
+  "acceptance": {
+    "benchmark_version": "gravity-orbits-v31.0",
+    "passed": true,
+    "classification": "verified_anonymous_central_inverse_square_field_and_orbital_invariants",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "field_rows": [
+        {
+          "experiment_id": "TF-0",
+          "anonymous_inputs": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 0,
+              "negative": 6,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-1",
+          "anonymous_inputs": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 0,
+              "negative": 9,
+              "denominator": 20
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-2",
+          "anonymous_inputs": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 9
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        },
+        {
+          "experiment_id": "TF-3",
+          "anonymous_inputs": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      ],
+      "orbit_rows": [
+        {
+          "experiment_id": "TO-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 13
+            },
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 13
+            },
+            {
+              "positive": 10,
+              "negative": 0,
+              "denominator": 13
+            },
+            {
+              "positive": 0,
+              "negative": 4,
+              "denominator": 5
+            },
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 10
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TO-1",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 3
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 6
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            },
+            {
+              "positive": 28,
+              "negative": 0,
+              "denominator": 15
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TO-2",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 4
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 24,
+              "negative": 0,
+              "denominator": 13
+            },
+            {
+              "positive": 32,
+              "negative": 0,
+              "denominator": 13
+            },
+            {
+              "positive": 40,
+              "negative": 0,
+              "denominator": 13
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 5
+            },
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 20
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      ],
+      "formulas_supplied": false
+    },
+    "discovery": {
+      "field_candidates_generated": 20,
+      "selected_field": {
+        "program_id": "FLD-208b59739234f1a8",
+        "opaque_program": "FIELD<TURN;SEM<Q0,R>;Q3^3>",
+        "policy": {
+          "turn": true,
+          "use_q0": true,
+          "radius_power": 3,
+          "human_operation_name": null
+        }
+      },
+      "energy_candidates_generated": 15,
+      "selected_energy": {
+        "program_id": "ENE-ef44b6825fd7c5ca",
+        "opaque_program": "ENERGY<MET<V,V>,TURN_DOUBLE<Q0/Q3^1>>",
+        "policy": {
+          "potential_route": "TURN_DOUBLE",
+          "radius_power": 1,
+          "human_quantity_name": null
+        }
+      },
+      "angular_invariant": "ORB<R,V>",
+      "training_field_cases": 4,
+      "training_orbit_pairs": 3,
+      "executable_step": "V28_SECOND_STENCIL_WITH_SELECTED_FIELD"
+    },
+    "proofs": {
+      "gravity_orbits": {
+        "proof_id": "V31-PROOF-CENTRAL-FIELD-AND-ORBITS",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_radial_field",
+            "passed": true,
+            "evidence": "one of 20 vector policies"
+          },
+          {
+            "obligation_id": "inverse_square_magnitude",
+            "passed": true,
+            "evidence": "vector r/r^3 has magnitude 1/r^2"
+          },
+          {
+            "obligation_id": "centrality",
+            "passed": true,
+            "evidence": "ORB<r,a>=ZERO"
+          },
+          {
+            "obligation_id": "angular_invariant",
+            "passed": true,
+            "evidence": "central action preserves ORB<r,v>"
+          },
+          {
+            "obligation_id": "unique_orbital_energy",
+            "passed": true,
+            "evidence": "one of 15 scalar policies"
+          },
+          {
+            "obligation_id": "continuous_energy_identity",
+            "passed": true,
+            "evidence": "D(v^2-2mu/r)=0 under selected field"
+          }
+        ],
+        "field_hidden": [
+          {
+            "experiment_id": "SF-0",
+            "passed": true,
+            "central": true
+          },
+          {
+            "experiment_id": "SF-1",
+            "passed": true,
+            "central": true
+          },
+          {
+            "experiment_id": "SF-2",
+            "passed": true,
+            "central": true
+          }
+        ],
+        "orbit_hidden": [
+          {
+            "experiment_id": "SO-0",
+            "energy_passed": true,
+            "angular_passed": true
+          },
+          {
+            "experiment_id": "SO-1",
+            "energy_passed": true,
+            "angular_passed": true
+          }
+        ]
+      },
+      "orbit_classification": {
+        "passed": true,
+        "cases": [
+          {
+            "expected": "bound",
+            "found": "bound",
+            "value": "-1",
+            "passed": true
+          },
+          {
+            "expected": "critical",
+            "found": "critical",
+            "value": "0",
+            "passed": true
+          },
+          {
+            "expected": "escape",
+            "found": "escape",
+            "value": "2",
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "wrong_direction",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF-0",
+          "anonymous_inputs": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 12,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "wrong_radius_power",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF-1",
+          "anonymous_inputs": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 6,
+              "denominator": 5
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 5
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 20
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "omit_coupling",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF-0",
+          "anonymous_inputs": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 5
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_target": [
+            {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 0,
+              "negative": 12,
+              "denominator": 5
+            }
+          ],
+          "human_names": null,
+          "human_formula": null
+        }
+      },
+      {
+        "mutation": "wrong_potential_factor",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SO-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 3
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 6
+            },
+            {
+              "positive": 0,
+              "negative": 4,
+              "denominator": 5
+            },
+            {
+              "positive": 14,
+              "negative": 0,
+              "denominator": 15
+            }
+          ],
+          "human_names": null,
+          "human_formulas": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v30_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_rows",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "field_orbit_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "orbit_classification",
+        "passed": true
+      },
+      {
+        "obligation_id": "executable_field",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m11_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_m12",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_formula_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30"
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "verified",
+          "evidence_version": "V31"
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 11,
+      "total_domains": 15,
+      "completion_ratio": 0.7333333333333333,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M12:lagrangian_mechanics",
+      "selection_reason": "constraints, continuous operators, and conserved energies now enable variational equation discovery"
+    },
+    "posthoc_translation": {
+      "field": "a=-mu r/r^3",
+      "magnitude": "mu/r^2",
+      "angular": "r cross v",
+      "energy": "v^2-2mu/r",
+      "classification": "negative bound, zero critical, positive escape"
+    },
+    "limitations": [
+      "Two-dimensional point-particle central field only.",
+      "Exact conic states are hidden oracle data.",
+      "No N-body gravity, precession, perturbation theory, or relativistic correction.",
+      "Completion remains 11/15."
+    ]
+  },
+  "claim": {
+    "achieved": "central inverse-square field, orbital invariants, and bound/critical/escape classification",
+    "not_claimed": "N-body or relativistic gravity"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v31/success/gravity_latest.json",
+    "mistake_room": "artifacts/physics/v31/mistakes/rejected_gravity_mutations.jsonl"
+  },
+  "content_digest": "2e29a30c8791dac4cebd497bb0595a6239e6f5e12592a71bcb73410acbece282"
+}

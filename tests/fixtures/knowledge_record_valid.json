@@ -1,0 +1,37 @@
+{
+  "schema_version": "knowledge-record-v0.1",
+  "knowledge_id": "K-000001",
+  "status": "proposed",
+  "program_ast": {
+    "op": "p_subtract",
+    "args": [
+      {"op": "p_read_offset", "offset": 1},
+      {"op": "p_read_offset", "offset": 0}
+    ]
+  },
+  "parent_ids": ["p_subtract", "p_read_offset"],
+  "evidence": {
+    "development_error": 0.0,
+    "holdout_error": 0.0,
+    "out_of_range_error": 0.0,
+    "stability_pass_rate": 0.0,
+    "counterexample_count": 0,
+    "reuse_task_count": 0,
+    "description_gain": 0.0,
+    "search_cost_reduction": 0.0
+  },
+  "valid_domain": {
+    "machine_readable_constraints": [],
+    "notes": "Fixture only; not an admitted discovery."
+  },
+  "counterexample_artifact_ids": [],
+  "provenance": {
+    "run_id": "RUN-contract-smoke-001",
+    "code_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "data_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "config_hash": "0000000000000000000000000000000000000000000000000000000000000000",
+    "verifier_hash": "0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "human_interpretation": null
+}
+

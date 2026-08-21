@@ -1,0 +1,12 @@
+{
+  "policy_version": "formula-discovery-stop-policy-v0.2",
+  "minimum_new_successful_formulas_per_batch": 20,
+  "require_distinct_executable_behavior": true,
+  "require_distinct_logic_signature": true,
+  "require_hidden_and_adversarial_exactness": true,
+  "require_explicit_domain": true,
+  "require_termination_proof": true,
+  "require_correctness_invariant": true,
+  "require_independent_proof_replay": true,
+  "allow_parameter_only_variants_to_count_as_new": false
+}

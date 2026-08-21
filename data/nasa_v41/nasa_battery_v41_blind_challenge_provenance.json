@@ -1,0 +1,28 @@
+{
+  "provider": "NASA Ames Prognostics Center of Excellence",
+  "parent_archive_sha256": "18bf47337577e07872919327a6ee994adc59e33fd2901d69c5911c26102837b8",
+  "source_files": {
+    "RW5": {
+      "sha256": "b6c63d59cccf30b397ab1e4ccf00edf68d46026765c748b9a82b123209148ded",
+      "bytes": 25989386
+    },
+    "RW6": {
+      "sha256": "81b5a55896ad7dffa8f4124fc3b27c83b185f238d53fb95f78acd7da70887b92",
+      "bytes": 16318426
+    }
+  },
+  "snapshot_sha256": "99ce193c6aca27540ba8e3d6fea0b2518112f9031b8a4d06af7daf0e1d114834",
+  "trace_count": 120,
+  "cell_counts": {
+    "RW5": 60,
+    "RW6": 60
+  },
+  "stage_counts": {
+    "early": 40,
+    "middle": 40,
+    "late": 40
+  },
+  "frozen_program_precedes_challenge": true,
+  "program_id": "DYN-bb87df43ec46ed50",
+  "program_refit_allowed": false
+}

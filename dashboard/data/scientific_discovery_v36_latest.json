@@ -1,0 +1,703 @@
+{
+  "report_version": "scientific-discovery-machine-v36.0",
+  "run_id": "RUN-scientific-discovery-v36-20260821T151311902846Z",
+  "created_at": "2026-08-21T15:13:11.902846+00:00",
+  "verdict": "scientific_discovery_workflow_verified_human_novelty_claim_blocked",
+  "acceptance": {
+    "benchmark_version": "scientific-discovery-machine-v36.0",
+    "passed": true,
+    "classification": "verified_scientific_discovery_workflow_on_blind_synthetic_oracles_not_a_human_novel_discovery",
+    "calibration_world": {
+      "discovery": {
+        "initial_candidate_count": 5385,
+        "initial_observations": [
+          {
+            "experiment_id": "SEED-0",
+            "anonymous_inputs": [
+              0,
+              0
+            ],
+            "anonymous_output": 0,
+            "human_variable_names": null,
+            "human_formula": null
+          }
+        ],
+        "active_experiments": [
+          {
+            "round_index": 0,
+            "anonymous_query": [
+              -3,
+              -2
+            ],
+            "candidate_count_before": 2101,
+            "predicted_output_classes": 85,
+            "largest_prediction_class": 51,
+            "observed_output": -5,
+            "candidate_count_after": 49
+          },
+          {
+            "round_index": 1,
+            "anonymous_query": [
+              2,
+              -3
+            ],
+            "candidate_count_before": 49,
+            "predicted_output_classes": 45,
+            "largest_prediction_class": 2,
+            "observed_output": -1,
+            "candidate_count_after": 1
+          }
+        ],
+        "selected_program": {
+          "program_id": "SCI-32c5e363ad4a4f22",
+          "opaque_program": "MERGE<Q0,Q1>",
+          "coefficients": [
+            0,
+            1,
+            1,
+            0,
+            0,
+            0
+          ],
+          "complexity": 2,
+          "token_cost": 4,
+          "human_formula_name": null
+        },
+        "final_candidate_count": 1
+      },
+      "preregistration": {
+        "commitment": "9793ac76a635caf448ad523184000fa1be608f0719cff10add27f9e7d891686b",
+        "anonymous_points": [
+          [
+            4,
+            -3
+          ],
+          [
+            -4,
+            2
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "predictions_committed_before_reveal": [
+          1,
+          -2,
+          7
+        ],
+        "revealed_outputs": [
+          1,
+          -2,
+          7
+        ],
+        "passed": true
+      },
+      "novelty": {
+        "catalog_version": "local-knowledge-catalog-v36.0",
+        "entry_count": 8,
+        "exact_matches": [
+          "KNOWN-ADD"
+        ],
+        "locally_unmatched": false,
+        "global_literature_checked": false,
+        "human_novelty_established": false
+      }
+    },
+    "frontier_world": {
+      "discovery": {
+        "initial_candidate_count": 5385,
+        "initial_observations": [
+          {
+            "experiment_id": "SEED-0",
+            "anonymous_inputs": [
+              0,
+              0
+            ],
+            "anonymous_output": 2,
+            "human_variable_names": null,
+            "human_formula": null
+          }
+        ],
+        "active_experiments": [
+          {
+            "round_index": 0,
+            "anonymous_query": [
+              -3,
+              -2
+            ],
+            "candidate_count_before": 821,
+            "predicted_output_classes": 71,
+            "largest_prediction_class": 24,
+            "observed_output": 7,
+            "candidate_count_after": 19
+          },
+          {
+            "round_index": 1,
+            "anonymous_query": [
+              -1,
+              3
+            ],
+            "candidate_count_before": 19,
+            "predicted_output_classes": 19,
+            "largest_prediction_class": 1,
+            "observed_output": -5,
+            "candidate_count_after": 1
+          }
+        ],
+        "selected_program": {
+          "program_id": "SCI-9d226ebd0e1c9402",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>,SEM<Q0,Q1>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "complexity": 4,
+          "token_cost": 9,
+          "human_formula_name": null
+        },
+        "final_candidate_count": 1
+      },
+      "preregistration": {
+        "commitment": "71e1f2266d48104ba91631133242275abd01d6897b84db8b535a371cba99c49d",
+        "anonymous_points": [
+          [
+            4,
+            -3
+          ],
+          [
+            -4,
+            2
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            -2,
+            -4
+          ]
+        ],
+        "predictions_committed_before_reveal": [
+          -3,
+          -12,
+          13,
+          12
+        ],
+        "revealed_outputs": [
+          -3,
+          -12,
+          13,
+          12
+        ],
+        "passed": true
+      },
+      "novelty": {
+        "catalog_version": "local-knowledge-catalog-v36.0",
+        "entry_count": 8,
+        "exact_matches": [],
+        "locally_unmatched": true,
+        "global_literature_checked": false,
+        "human_novelty_established": false
+      },
+      "oracle_query_count": 3
+    },
+    "independent_replication": {
+      "replicator_id": "independent-broker-v36",
+      "points_disjoint_from_training_domain": true,
+      "passed": true,
+      "cases": [
+        {
+          "anonymous_inputs": [
+            -5,
+            -2
+          ],
+          "predicted": 9,
+          "observed": 9,
+          "passed": true
+        },
+        {
+          "anonymous_inputs": [
+            -4,
+            3
+          ],
+          "predicted": -17,
+          "observed": -17,
+          "passed": true
+        },
+        {
+          "anonymous_inputs": [
+            2,
+            -5
+          ],
+          "predicted": -1,
+          "observed": -1,
+          "passed": true
+        },
+        {
+          "anonymous_inputs": [
+            4,
+            4
+          ],
+          "predicted": 18,
+          "observed": 18,
+          "passed": true
+        },
+        {
+          "anonymous_inputs": [
+            6,
+            -1
+          ],
+          "predicted": 3,
+          "observed": 3,
+          "passed": true
+        },
+        {
+          "anonymous_inputs": [
+            -3,
+            6
+          ],
+          "predicted": -25,
+          "observed": -25,
+          "passed": true
+        }
+      ]
+    },
+    "mutation_audits": [
+      {
+        "mutation": "coefficient_0_-1",
+        "program": {
+          "program_id": "SCI-72bb0a163b163433",
+          "opaque_program": "MERGE<ONE,Q0,TURN<Q1>,SEM<Q0,Q1>>",
+          "coefficients": [
+            1,
+            1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "complexity": 4,
+          "token_cost": 8,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 17,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_0_+1",
+        "program": {
+          "program_id": "SCI-7373b0308b435cb8",
+          "opaque_program": "MERGE<ONE,Q0,TURN<Q1>,SEM<Q0,Q1>>",
+          "coefficients": [
+            3,
+            1,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "complexity": 4,
+          "token_cost": 10,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 19,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_1_-1",
+        "program": {
+          "program_id": "SCI-b8f5e9c502cd48cb",
+          "opaque_program": "MERGE<DOUBLE<ONE>,TURN<Q1>,SEM<Q0,Q1>>",
+          "coefficients": [
+            2,
+            0,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "complexity": 3,
+          "token_cost": 7,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 22,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_1_+1",
+        "program": {
+          "program_id": "SCI-2b8eb40a245f7831",
+          "opaque_program": "MERGE<DOUBLE<ONE>,DOUBLE<Q0>,TURN<Q1>,SEM<Q0,Q1>>",
+          "coefficients": [
+            2,
+            2,
+            -1,
+            1,
+            0,
+            0
+          ],
+          "complexity": 4,
+          "token_cost": 10,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 14,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_2_-1",
+        "program": {
+          "program_id": "SCI-09265f69c8828036",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<DOUBLE<Q1>>,SEM<Q0,Q1>>",
+          "coefficients": [
+            2,
+            1,
+            -2,
+            1,
+            0,
+            0
+          ],
+          "complexity": 4,
+          "token_cost": 10,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 22,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_2_+1",
+        "program": {
+          "program_id": "SCI-698e3849ca870ae5",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,SEM<Q0,Q1>>",
+          "coefficients": [
+            2,
+            1,
+            0,
+            1,
+            0,
+            0
+          ],
+          "complexity": 3,
+          "token_cost": 7,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 14,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_3_-1",
+        "program": {
+          "program_id": "SCI-efa2a99dd154c9a6",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            0,
+            0,
+            0
+          ],
+          "complexity": 3,
+          "token_cost": 7,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 2,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_3_+1",
+        "program": {
+          "program_id": "SCI-e3377f6e9f8330f5",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>,DOUBLE<SEM<Q0,Q1>>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            2,
+            0,
+            0
+          ],
+          "complexity": 4,
+          "token_cost": 10,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 34,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_4_-1",
+        "program": {
+          "program_id": "SCI-23f4d6201a6461ce",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>,SEM<Q0,Q1>,TURN<SEM<Q0,Q0>>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            1,
+            -1,
+            0
+          ],
+          "complexity": 5,
+          "token_cost": 11,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 2,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_4_+1",
+        "program": {
+          "program_id": "SCI-01498d408ee418e4",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>,SEM<Q0,Q1>,SEM<Q0,Q0>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            1,
+            1,
+            0
+          ],
+          "complexity": 5,
+          "token_cost": 11,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 34,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_5_-1",
+        "program": {
+          "program_id": "SCI-b1e3099b32dcf936",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>,SEM<Q0,Q1>,TURN<SEM<Q1,Q1>>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            1,
+            0,
+            -1
+          ],
+          "complexity": 5,
+          "token_cost": 11,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 2,
+          "observed": 18
+        }
+      },
+      {
+        "mutation": "coefficient_5_+1",
+        "program": {
+          "program_id": "SCI-c64e6fd73e83a6eb",
+          "opaque_program": "MERGE<DOUBLE<ONE>,Q0,TURN<Q1>,SEM<Q0,Q1>,SEM<Q1,Q1>>",
+          "coefficients": [
+            2,
+            1,
+            -1,
+            1,
+            0,
+            1
+          ],
+          "complexity": 5,
+          "token_cost": 11,
+          "human_formula_name": null
+        },
+        "rejected": true,
+        "counterexample": {
+          "anonymous_inputs": [
+            -4,
+            -4
+          ],
+          "mutated": 34,
+          "observed": 18
+        }
+      }
+    ],
+    "blindness_audit": {
+      "passed": true,
+      "forbidden_target_tokens": [
+        "FRONTIER",
+        "KNOWN-ADD",
+        "human_novelty",
+        "literature"
+      ],
+      "oracle_implementation_available_to_researcher": false,
+      "isolation_strength": "logical API isolation, not an operating-system security boundary"
+    },
+    "discovery_gates": {
+      "blind_data_interface": true,
+      "active_model_discrimination": true,
+      "unique_executable_hypothesis": true,
+      "prospective_prediction": true,
+      "commit_before_reveal": true,
+      "independent_replication": true,
+      "counterexample_audit": true,
+      "local_catalog_unmatched": true,
+      "global_literature_novelty": false,
+      "real_world_observation": false,
+      "external_lab_replication": false
+    },
+    "claim_state": {
+      "workflow_capability_verified": true,
+      "local_novel_candidate": true,
+      "human_unknown_claim_allowed": false,
+      "current_label": "LOCAL_NOVEL_CANDIDATE_ON_SYNTHETIC_ORACLE"
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "anonymous_blind_oracle_surface",
+        "passed": true
+      },
+      {
+        "obligation_id": "at_least_five_thousand_competing_models",
+        "passed": true
+      },
+      {
+        "obligation_id": "experiments_selected_by_disagreement",
+        "passed": true
+      },
+      {
+        "obligation_id": "frontier_model_unique",
+        "passed": true
+      },
+      {
+        "obligation_id": "prediction_preregistered_before_reveal",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_future_predictions_pass",
+        "passed": true
+      },
+      {
+        "obligation_id": "independent_replication_passes",
+        "passed": true
+      },
+      {
+        "obligation_id": "nearby_models_receive_counterexamples",
+        "passed": true
+      },
+      {
+        "obligation_id": "known_calibration_is_not_called_novel",
+        "passed": true
+      },
+      {
+        "obligation_id": "frontier_is_only_local_novel_candidate",
+        "passed": true
+      },
+      {
+        "obligation_id": "synthetic_world_is_not_called_real_science",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_unknown_claim_remains_blocked",
+        "passed": true
+      }
+    ],
+    "posthoc_translation": {
+      "calibration_program": "q0+q1",
+      "frontier_program": "2+q0-q1+q0*q1"
+    },
+    "limitations": [
+      "The frontier result is generated by a synthetic hidden oracle and is not a discovery about nature.",
+      "The six-term sparse polynomial grammar is a supplied inductive bias, not a self-created universal language.",
+      "The local knowledge catalog has only eight entries and cannot establish novelty relative to human literature.",
+      "Oracle separation is enforced by the learner API and audit, not by an operating-system process boundary.",
+      "No noisy measurements, causal interventions, units, uncertainty model, literature review, or external laboratory replication are present yet."
+    ]
+  },
+  "dependency": {
+    "v35_run_id": "RUN-relativistic-boundary-v35-20260821T091317282574Z",
+    "v35_passed": true,
+    "mechanics_domains": "15/15"
+  },
+  "claim": {
+    "achieved": "blind active hypothesis discrimination, preregistered prediction, sealed reveal, local novelty triage, falsification, and independent synthetic replication",
+    "not_achieved": "a discovery new to humanity or a validated law of nature"
+  },
+  "storage": {
+    "candidate_room": "artifacts/science/v36/candidates/local_novel_candidate_latest.json",
+    "mistake_room": "artifacts/science/v36/mistakes/rejected_hypotheses.jsonl",
+    "human_discovery_room": null
+  },
+  "content_digest": "240380eb32b478be9ceb32aa7bc6e53a692e6980b2dd2dd8f4dd47a2d9695758"
+}

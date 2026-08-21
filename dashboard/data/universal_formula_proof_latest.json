@@ -1,0 +1,4765 @@
+{
+  "report_version": "universal-formula-proof-report-v0.4",
+  "run_id": "RUN-composition-universal-proof-20260818T184015881047Z",
+  "created_at": "2026-08-18T18:40:15.882046Z",
+  "title": "五十个程序的全定义域证明审查",
+  "verdict": "twenty_new_compositions_and_fifty_total_proven",
+  "declared_domain": "本轮 20 条均为自然数一元组合；历史条目按各自证书声明",
+  "scope_warning": "通用性指抽象无限精度整数转移语义；部署执行器仍受资源限制。",
+  "audit_before_run": {
+    "bounded_active_formula_count": 68,
+    "universally_compliant_count": 30,
+    "reason": "本轮开始前已有三十条可重算证明。"
+  },
+  "proof_method": {
+    "search_side": "anonymous graph composition over previously proven operation IDs",
+    "proof_side": "exact graph binding plus prior theorem substitution and total-function composition",
+    "finite_sampling_used_as_proof": false,
+    "proof_recomputed_on_room_admission": true,
+    "semantic_model": "abstract unbounded integer transition semantics"
+  },
+  "formulas": [
+    {
+      "mechanism": "重复倍增",
+      "display_formula": "2^n",
+      "source_bounded_record_id": "SF-6e5151b34c144dea",
+      "source_operation_id": "G2NEW-4f6b5de649cfa951",
+      "universal_room_record_id": "UF-acf6631ac2ca1895",
+      "program_digest": "4f6b5de649cfa9513a8e550c5171ef29bc361db7ddb00079d884b64dbd63ea1b",
+      "instruction_count": 17,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = 2^n",
+      "invariants": [
+        "counter=n-t",
+        "state=2^t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_power_two",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = 2^n",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_power_two"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=4f6b5de649cfa9513a8e550c5171ef29bc361db7ddb00079d884b64dbd63ea1b"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = 2^n"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'state=2^t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded loop: counter=n; state=1; state=state+state; counter=counter-1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: state=1=2^0 and counter=n"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "state'=state+state=2^t+2^t=2^(t+1); counter'=n-(t+1)"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter is a natural-valued ranking function, starting at n and decreasing by 1"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "counter=0 implies t=n, hence emitted state=2^n"
+          }
+        ],
+        "certificate_digest": "e6869e7e9490ae14f7167f922607a2867b2fa854f02c99329503b2ce5aa47d2a"
+      }
+    },
+    {
+      "mechanism": "双状态多项式递推",
+      "display_formula": "n^2+n+1",
+      "source_bounded_record_id": "SF-2146c70e3a21cbe4",
+      "source_operation_id": "G2NEW-52f45f3d817a0bbd",
+      "universal_room_record_id": "UF-3695ac026118889d",
+      "program_digest": "52f45f3d817a0bbd252f54183c08dcceb565c30459a6444ac028fdef64183e7e",
+      "instruction_count": 26,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = n^2 + n + 1",
+      "invariants": [
+        "counter=n-t",
+        "A=t^2+t+1",
+        "B=2t+2",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_quadratic_plus_linear",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = n^2 + n + 1",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_quadratic_plus_linear"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=52f45f3d817a0bbd252f54183c08dcceb565c30459a6444ac028fdef64183e7e"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = n^2 + n + 1"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=t^2+t+1', 'B=2t+2', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded simultaneous recurrence A'=A+B, B'=B+2"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "A(0)=1 and B(0)=2"
+          },
+          {
+            "obligation_id": "induction_step_A",
+            "passed": true,
+            "evidence": "exact polynomial identity A(t+1)=A(t)+B(t)"
+          },
+          {
+            "obligation_id": "induction_step_B",
+            "passed": true,
+            "evidence": "exact polynomial identity B(t+1)=B(t)+2"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=n^2+n+1"
+          }
+        ],
+        "certificate_digest": "69c05e9499d6949900a9d57c33190dba79a2591191b6973f808559c606fd31ba"
+      }
+    },
+    {
+      "mechanism": "三级累积级联",
+      "display_formula": "C(n,3)",
+      "source_bounded_record_id": "SF-5ec3065eebeaea17",
+      "source_operation_id": "G2CTRL-aa1ab30803291692",
+      "universal_room_record_id": "UF-9b4ce698e56789c8",
+      "program_digest": "aa1ab308032916920a699fcd90552181ef4856836ab0398c0edf93271cc70cc9",
+      "instruction_count": 33,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = C(n, 3)",
+      "invariants": [
+        "counter=n-t",
+        "A=C(t,3)",
+        "B=C(t,2)",
+        "C=t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_third_binomial",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = C(n, 3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_third_binomial"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=aa1ab308032916920a699fcd90552181ef4856836ab0398c0edf93271cc70cc9"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = C(n, 3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=C(t,3)', 'B=C(t,2)', 'C=t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded cascade A'=A+B, B'=B+C, C'=C+1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "A(0)=B(0)=C(0)=0"
+          },
+          {
+            "obligation_id": "induction_step_A",
+            "passed": true,
+            "evidence": "exact polynomial identity C(t+1,3)=C(t,3)+C(t,2)"
+          },
+          {
+            "obligation_id": "induction_step_B",
+            "passed": true,
+            "evidence": "exact polynomial identity C(t+1,2)=C(t,2)+t"
+          },
+          {
+            "obligation_id": "induction_step_C",
+            "passed": true,
+            "evidence": "exact polynomial identity (t+1)=t+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=n(n-1)(n-2)/6=C(n,3)"
+          }
+        ],
+        "certificate_digest": "34f5524317d307014a3b6d09e25b4a6a0f26ebfaa240e6dd885ea45fce01655c"
+      }
+    },
+    {
+      "mechanism": "有限状态阈值回绕",
+      "display_formula": "n mod 4",
+      "source_bounded_record_id": "SF-941858d5d23048fc",
+      "source_operation_id": "G2CTRL-f5ffb2c49416a134",
+      "universal_room_record_id": "UF-7ad3015c61d1b47b",
+      "program_digest": "f5ffb2c49416a134925e1e41b57d3f0e55dcfe81524de4b1c101adde07f9ca9d",
+      "instruction_count": 24,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = n mod 4",
+      "invariants": [
+        "counter=n-t",
+        "state=t mod 4",
+        "0<=state<4",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_modulo_four",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = n mod 4",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_modulo_four"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=f5ffb2c49416a134925e1e41b57d3f0e55dcfe81524de4b1c101adde07f9ca9d"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = n mod 4"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'state=t mod 4', '0<=state<4', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded transition s'=s+1 if s+1<4 else s'=s+1-4"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: state=0 and 0<=state<4"
+          },
+          {
+            "obligation_id": "complete_state_transition",
+            "passed": true,
+            "evidence": "exhaustive symbolic state domain {0,1,2,3}: transition=(s+1) mod 4"
+          },
+          {
+            "obligation_id": "invariant_preservation",
+            "passed": true,
+            "evidence": "0<=state<4 is preserved and state after t steps equals t mod 4"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted state=n mod 4"
+          }
+        ],
+        "certificate_digest": "9079fe8407452b282713dad10d76ce07cb61177d5fe514268e272efb3f4abd40"
+      }
+    },
+    {
+      "mechanism": "数据驱动停止",
+      "display_formula": "floor(sqrt(n))",
+      "source_bounded_record_id": "SF-c5876d5779920c09",
+      "source_operation_id": "G2CTRL-de057ef1810f4943",
+      "universal_room_record_id": "UF-0d6434bf2099e980",
+      "program_digest": "de057ef1810f49432a1203ebbfd6aae476b23098bff3883580db6c3626dcec8c",
+      "instruction_count": 21,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = floor(sqrt(n))",
+      "invariants": [
+        "remainder=n-c^2",
+        "step=2c+1",
+        "count=c",
+        "remainder>=0"
+      ],
+      "termination_measure": "successful iterations c satisfy c^2<=n and c strictly increases",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_floor_sqrt",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = floor(sqrt(n))",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_floor_sqrt"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=de057ef1810f49432a1203ebbfd6aae476b23098bff3883580db6c3626dcec8c"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = floor(sqrt(n))"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=n-c^2', 'step=2c+1', 'count=c', 'remainder>=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: successful iterations c satisfy c^2<=n and c strictly increases"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded r'=r-d, d'=d+2, c'=c+1 while r-d>=0"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at c=0: remainder=n, odd step=1, count=0"
+          },
+          {
+            "obligation_id": "induction_step_remainder",
+            "passed": true,
+            "evidence": "exact polynomial identity n-(c+1)^2 = n-c^2-(2c+1)"
+          },
+          {
+            "obligation_id": "induction_step_odd",
+            "passed": true,
+            "evidence": "exact polynomial identity 2(c+1)+1=(2c+1)+2"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a successful iteration requires (c+1)^2<=n; therefore at most n iterations on N"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "exit gives c^2<=n<(c+1)^2, the defining property of floor(sqrt(n))"
+          }
+        ],
+        "certificate_digest": "deb5f3a95ff63e2f80ad8de20adc8d45d41c42b70e4f44cca4fb769e355d31a9"
+      }
+    },
+    {
+      "mechanism": "自修改指令操作数",
+      "display_formula": "n^2",
+      "source_bounded_record_id": "SF-48fbc785c0f13cdd",
+      "source_operation_id": "G3NEW-2d402424e2bb97f1",
+      "universal_room_record_id": "UF-737e219163274b6c",
+      "program_digest": "2d402424e2bb97f1d6dee6ed8e6ad8c0b5956ecac8d5a2cee933cc960eebc991",
+      "instruction_count": 20,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = n^2",
+      "invariants": [
+        "counter=n-t",
+        "result=t^2",
+        "mutable_operand=2t+1",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_square_self_modifying",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = n^2",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_square_self_modifying"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=2d402424e2bb97f1d6dee6ed8e6ad8c0b5956ecac8d5a2cee933cc960eebc991"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = n^2"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'result=t^2', 'mutable_operand=2t+1', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded write to code word 17: result+=operand; operand+=2; counter-=1"
+          },
+          {
+            "obligation_id": "mutable_cell_is_operand_not_opcode",
+            "passed": true,
+            "evidence": "word 17 is the operand of instruction 8; opcode word 16 remains ADD_IMMEDIATE"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: result=0^2, mutable operand=1, counter=n"
+          },
+          {
+            "obligation_id": "induction_step_result",
+            "passed": true,
+            "evidence": "t^2+(2t+1)=(t+1)^2"
+          },
+          {
+            "obligation_id": "induction_step_code",
+            "passed": true,
+            "evidence": "mutable operand 2t+1 is rewritten to 2t+3=2(t+1)+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "counter=0 implies t=n and emitted result=n^2"
+          }
+        ],
+        "certificate_digest": "dd716ce00551bb58921563c6bd515cc34240ba02d6e585e045906ba39caf2b43"
+      }
+    },
+    {
+      "mechanism": "四级同步累积",
+      "display_formula": "C(n,4)",
+      "source_bounded_record_id": "SF-80b3eb3c75fb6348",
+      "source_operation_id": "G3NEW-98a7cc88ec88ae78",
+      "universal_room_record_id": "UF-6850cf70391b2036",
+      "program_digest": "98a7cc88ec88ae78d3cfec213a2fe557b1ffa9e6d64b553f0cff11409b9bd1ff",
+      "instruction_count": 40,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = C(n, 4)",
+      "invariants": [
+        "counter=n-t",
+        "A=C(t,4)",
+        "B=C(t,3)",
+        "C=C(t,2)",
+        "D=t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_fourth_binomial",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = C(n, 4)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_fourth_binomial"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=98a7cc88ec88ae78d3cfec213a2fe557b1ffa9e6d64b553f0cff11409b9bd1ff"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = C(n, 4)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=C(t,4)', 'B=C(t,3)', 'C=C(t,2)', 'D=t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded cascade A'=A+B, B'=B+C, C'=C+D, D'=D+1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "A(0)=B(0)=C(0)=D(0)=0"
+          },
+          {
+            "obligation_id": "induction_step_A",
+            "passed": true,
+            "evidence": "exact identity C(t+1,4)=C(t,4)+C(t,3)"
+          },
+          {
+            "obligation_id": "induction_step_B",
+            "passed": true,
+            "evidence": "exact identity C(t+1,3)=C(t,3)+C(t,2)"
+          },
+          {
+            "obligation_id": "induction_step_C",
+            "passed": true,
+            "evidence": "exact identity C(t+1,2)=C(t,2)+t"
+          },
+          {
+            "obligation_id": "induction_step_D",
+            "passed": true,
+            "evidence": "exact identity t+1=t+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=n(n-1)(n-2)(n-3)/24=C(n,4)"
+          }
+        ],
+        "certificate_digest": "b2fc1478ddc0030c952cb999b0b7144defe9c0e1a9d5c552ad48fe7f7ddf7ad5"
+      }
+    },
+    {
+      "mechanism": "三状态移位反馈",
+      "display_formula": "T_n (Tribonacci)",
+      "source_bounded_record_id": "SF-29f6d49e09e062c1",
+      "source_operation_id": "G3NEW-600694e4b7fde733",
+      "universal_room_record_id": "UF-e2f688c2054e2421",
+      "program_digest": "600694e4b7fde733d0d0f0056a32e6cdff60125ef9f46961ef2c0b255a600760",
+      "instruction_count": 34,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n) = T_n where T_0=0, T_1=0, T_2=1 and T_(n+3)=T_n+T_(n+1)+T_(n+2)",
+      "invariants": [
+        "counter=n-t",
+        "A=T_t",
+        "B=T_(t+1)",
+        "C=T_(t+2)",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_tribonacci",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n) = T_n where T_0=0, T_1=0, T_2=1 and T_(n+3)=T_n+T_(n+1)+T_(n+2)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_tribonacci"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=600694e4b7fde733d0d0f0056a32e6cdff60125ef9f46961ef2c0b255a600760"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n) = T_n where T_0=0, T_1=0, T_2=1 and T_(n+3)=T_n+T_(n+1)+T_(n+2)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=T_t', 'B=T_(t+1)', 'C=T_(t+2)', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded shift A'=B, B'=C, C'=A+B+C"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at t=0: (A,B,C)=(T_0,T_1,T_2)=(0,0,1)"
+          },
+          {
+            "obligation_id": "induction_step_shift",
+            "passed": true,
+            "evidence": "A'=T_(t+1), B'=T_(t+2), C'=T_t+T_(t+1)+T_(t+2)=T_(t+3)"
+          },
+          {
+            "obligation_id": "recurrence_definition_total",
+            "passed": true,
+            "evidence": "three bases and one deterministic recurrence define exactly one integer T_n for every n in N"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "natural counter n-t decreases by 1 until zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "at t=n, emitted A=T_n"
+          }
+        ],
+        "certificate_digest": "285db6ed3b60cab9232de7dfd97528becc0e9220ddd591f0cb9618bab28ddd7e"
+      }
+    },
+    {
+      "mechanism": "指数增长阈值",
+      "display_formula": "bit_length(n)",
+      "source_bounded_record_id": "SF-b30f3e5d2d2ed251",
+      "source_operation_id": "G3NEW-5682429236b9b26a",
+      "universal_room_record_id": "UF-0ba151968dafcca3",
+      "program_digest": "5682429236b9b26a69f172c7768b6f84b38773b60394bdfb791b88a535451d8a",
+      "instruction_count": 18,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(0)=0; for n>0 output(n) is the unique c with 2^(c-1)<=n<2^c",
+      "invariants": [
+        "threshold=2^count",
+        "count=c",
+        "every completed comparison had threshold<=n"
+      ],
+      "termination_measure": "positive threshold doubles until threshold>n",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_bit_length",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(0)=0; for n>0 output(n) is the unique c with 2^(c-1)<=n<2^c",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_bit_length"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=5682429236b9b26a69f172c7768b6f84b38773b60394bdfb791b88a535451d8a"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(0)=0; for n>0 output(n) is the unique c with 2^(c-1)<=n<2^c"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['threshold=2^count', 'count=c', 'every completed comparison had threshold<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: positive threshold doubles until threshold>n"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded threshold=1,count=0; while threshold<=n: threshold+=threshold,count+=1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at count=0, threshold=1=2^0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "threshold'=2*2^c=2^(c+1) and count'=c+1"
+          },
+          {
+            "obligation_id": "zero_case",
+            "passed": true,
+            "evidence": "n=0 fails the first comparison and emits 0"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "2^c>=c+1; choosing c=n+1 guarantees threshold>n, so the loop terminates"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "for n>0 the last success gives 2^(c-1)<=n and exit gives n<2^c; c is unique"
+          }
+        ],
+        "certificate_digest": "2fb5316518cfbc533b9ecbd3b859b2794bb9104813684f6b83677ebc01136061"
+      }
+    },
+    {
+      "mechanism": "变量除数重复减法",
+      "display_formula": "floor(a/d)",
+      "source_bounded_record_id": "SF-c432c82175c92edb",
+      "source_operation_id": "G3NEW-3a697393414ca3e6",
+      "universal_room_record_id": "UF-7eb738379af6d614",
+      "program_digest": "3a697393414ca3e6789b733e6a42476df53a35a7fe25c8d886cd8cebf0751dca",
+      "instruction_count": 16,
+      "domain": {
+        "kind": "natural_dividend_positive_divisor",
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1
+      },
+      "theorem_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+      "invariants": [
+        "remainder=a-count*d",
+        "count=c",
+        "remainder>=0",
+        "d>=1"
+      ],
+      "termination_measure": "remainder in N decreases by d>=1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "natural_integer_quotient",
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d) = floor(a/d)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "natural_integer_quotient"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=3a697393414ca3e6789b733e6a42476df53a35a7fe25c8d886cd8cebf0751dca"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d) = floor(a/d)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=a-count*d', 'count=c', 'remainder>=0', 'd>=1']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: remainder in N decreases by d>=1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "decoded remainder=a,count=0; subtract d while nonnegative and count successes"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "at c=0: remainder=a=a-0*d and remainder>=0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "a-cd>=d implies new remainder=a-(c+1)d>=0 and new count=c+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "d>=1, so each success decreases natural remainder by at least 1; at most a successes"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "exit gives a=cd+r with 0<=r<d, hence c=floor(a/d)"
+          }
+        ],
+        "certificate_digest": "102c2debd076255519d47d90a114eed57f154193b72335c626fdc07c05aae94f"
+      }
+    },
+    {
+      "mechanism": "triple_self_feedback",
+      "display_formula": "3^n",
+      "source_bounded_record_id": "SF-9e5b78eda04c9b43",
+      "source_operation_id": "G4NEW-1914cf632033656b",
+      "universal_room_record_id": "UF-585f8194a03eefe9",
+      "program_digest": "1914cf632033656b6d886dba67032c9d1d23352177ed670c06d7ba57e4f67641",
+      "instruction_count": 18,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=3^n",
+      "invariants": [
+        "counter=n-t",
+        "x=3^t",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t00",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=3^n",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t00"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=1914cf632033656b6d886dba67032c9d1d23352177ed670c06d7ba57e4f67641"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=3^n"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'x=3^t', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=1914cf632033656b6d886dba67032c9d1d23352177ed670c06d7ba57e4f67641"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "x(0)=1=3^0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "x'=x+x+x=3*3^t=3^(t+1)"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter n-t decreases to zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "t=n at exit, so emitted x=3^n"
+          }
+        ],
+        "certificate_digest": "91dd2a877525ea9a857698bade525a891296eb65ce1b74ef987315868b3da6c0"
+      }
+    },
+    {
+      "mechanism": "affine_double_then_increment",
+      "display_formula": "2^n-1",
+      "source_bounded_record_id": "SF-a54cf540bd7351af",
+      "source_operation_id": "G4NEW-32ffce8f297225cb",
+      "universal_room_record_id": "UF-f3855c6ef98d48d4",
+      "program_digest": "32ffce8f297225cb2e57048272d493c5f50e760128dda9a4813d8c62dea6f792",
+      "instruction_count": 18,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=2^n-1",
+      "invariants": [
+        "counter=n-t",
+        "x=2^t-1",
+        "0<=t<=n"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t01",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=2^n-1",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t01"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=32ffce8f297225cb2e57048272d493c5f50e760128dda9a4813d8c62dea6f792"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=2^n-1"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'x=2^t-1', '0<=t<=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=32ffce8f297225cb2e57048272d493c5f50e760128dda9a4813d8c62dea6f792"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "x(0)=0=2^0-1"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "x'=2x+1=2(2^t-1)+1=2^(t+1)-1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter n-t decreases to zero"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "t=n at exit"
+          }
+        ],
+        "certificate_digest": "040a06dfb4bb572150954481a8f0ea2d4b49f2a28866168e41fc8762eb2d86f6"
+      }
+    },
+    {
+      "mechanism": "third_difference_accumulator",
+      "display_formula": "n^3",
+      "source_bounded_record_id": "SF-c5cad01c1d9552db",
+      "source_operation_id": "G4NEW-56569b1d93a9c4c9",
+      "universal_room_record_id": "UF-c46cbd71d59a17c6",
+      "program_digest": "56569b1d93a9c4c976da5b452b538566d7b62484de3fbb7fb1c9caa81f985cdb",
+      "instruction_count": 27,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=n^3",
+      "invariants": [
+        "counter=n-t",
+        "x=t^3",
+        "delta=3t^2+3t+1",
+        "second=6t+6"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t02",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=n^3",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t02"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=56569b1d93a9c4c976da5b452b538566d7b62484de3fbb7fb1c9caa81f985cdb"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=n^3"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'x=t^3', 'delta=3t^2+3t+1', 'second=6t+6']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=56569b1d93a9c4c976da5b452b538566d7b62484de3fbb7fb1c9caa81f985cdb"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "(x,delta,second)=(0,1,6) at t=0"
+          },
+          {
+            "obligation_id": "induction_step_x",
+            "passed": true,
+            "evidence": "(t+1)^3=t^3+(3t^2+3t+1)"
+          },
+          {
+            "obligation_id": "induction_step_delta",
+            "passed": true,
+            "evidence": "delta(t+1)=delta(t)+6t+6"
+          },
+          {
+            "obligation_id": "induction_step_second",
+            "passed": true,
+            "evidence": "second(t+1)=second(t)+6"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "emitted x=n^3"
+          }
+        ],
+        "certificate_digest": "3890c1e70840d50c9164a91b0d2620c04b1c3ace3cee27ca958a9a7e02d709f6"
+      }
+    },
+    {
+      "mechanism": "next_square_then_sum",
+      "display_formula": "sum(k^2,k=1..n)",
+      "source_bounded_record_id": "SF-36da9e8f908181d6",
+      "source_operation_id": "G4NEW-be9f1e21eb24f2dd",
+      "universal_room_record_id": "UF-b33dac80fa74362f",
+      "program_digest": "be9f1e21eb24f2ddb8d7064ec1748e86d2b8be49eb9b5e55937e6f196e598dbd",
+      "instruction_count": 31,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=sum(k^2 for k=1..n)=n(n+1)(2n+1)/6",
+      "invariants": [
+        "counter=n-t",
+        "sum=t(t+1)(2t+1)/6",
+        "square=t^2",
+        "odd=2t+1"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t03",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=sum(k^2 for k=1..n)=n(n+1)(2n+1)/6",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t03"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=be9f1e21eb24f2ddb8d7064ec1748e86d2b8be49eb9b5e55937e6f196e598dbd"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=sum(k^2 for k=1..n)=n(n+1)(2n+1)/6"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'sum=t(t+1)(2t+1)/6', 'square=t^2', 'odd=2t+1']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=be9f1e21eb24f2ddb8d7064ec1748e86d2b8be49eb9b5e55937e6f196e598dbd"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "base states exact"
+          },
+          {
+            "obligation_id": "next_square_identity",
+            "passed": true,
+            "evidence": "t^2+(2t+1)=(t+1)^2"
+          },
+          {
+            "obligation_id": "sum_identity",
+            "passed": true,
+            "evidence": "S(t+1)=S(t)+(t+1)^2"
+          },
+          {
+            "obligation_id": "odd_identity",
+            "passed": true,
+            "evidence": "odd step increases by 2"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "emitted S(n)=n(n+1)(2n+1)/6"
+          }
+        ],
+        "certificate_digest": "7577d70e6176eaf45f0790cbdbc637659138ca88cd0e33c5ccd45d6eba412db7"
+      }
+    },
+    {
+      "mechanism": "five_state_binomial_cascade",
+      "display_formula": "C(n,5)",
+      "source_bounded_record_id": "SF-ba43237f21a13377",
+      "source_operation_id": "G4NEW-6197e8bd097a8d4b",
+      "universal_room_record_id": "UF-f1a8e695f786018d",
+      "program_digest": "6197e8bd097a8d4bc0c2aaa7b195bc06cd8adbc38356015bc94d00344f3eb0e9",
+      "instruction_count": 47,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=C(n,5)",
+      "invariants": [
+        "counter=n-t",
+        "A=C(t,5)",
+        "B=C(t,4)",
+        "C=C(t,3)",
+        "D=C(t,2)",
+        "E=t"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t04",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=C(n,5)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t04"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=6197e8bd097a8d4bc0c2aaa7b195bc06cd8adbc38356015bc94d00344f3eb0e9"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=C(n,5)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=C(t,5)', 'B=C(t,4)', 'C=C(t,3)', 'D=C(t,2)', 'E=t']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=6197e8bd097a8d4bc0c2aaa7b195bc06cd8adbc38356015bc94d00344f3eb0e9"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "all five cascade states start at zero"
+          },
+          {
+            "obligation_id": "pascal_step_1",
+            "passed": true,
+            "evidence": "Pascal identity for orders 5 and 4"
+          },
+          {
+            "obligation_id": "pascal_step_2",
+            "passed": true,
+            "evidence": "Pascal identity for orders 4 and 3"
+          },
+          {
+            "obligation_id": "pascal_step_3",
+            "passed": true,
+            "evidence": "Pascal identity for orders 3 and 2"
+          },
+          {
+            "obligation_id": "pascal_step_4",
+            "passed": true,
+            "evidence": "Pascal identity for orders 2 and 1"
+          },
+          {
+            "obligation_id": "unit_source_step",
+            "passed": true,
+            "evidence": "t advances by one"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "first state is C(n,5)"
+          }
+        ],
+        "certificate_digest": "0931518b609b1b0986c691ecd56933e434ae4c21c2ea06d30ace193f9445182a"
+      }
+    },
+    {
+      "mechanism": "seeded_two_state_shift_sum",
+      "display_formula": "Lucas(n)",
+      "source_bounded_record_id": "SF-abb492d332136e2d",
+      "source_operation_id": "G4NEW-ef90b6600a88b16c",
+      "universal_room_record_id": "UF-91dbdc8461d5c1a7",
+      "program_digest": "ef90b6600a88b16ce2e342675f938d73b4111f12d87744859a20126e51e78fee",
+      "instruction_count": 23,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=L_n where L_0=2,L_1=1,L_(n+2)=L_(n+1)+L_n",
+      "invariants": [
+        "counter=n-t",
+        "A=L_t",
+        "B=L_(t+1)"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t05",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=L_n where L_0=2,L_1=1,L_(n+2)=L_(n+1)+L_n",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t05"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=ef90b6600a88b16ce2e342675f938d73b4111f12d87744859a20126e51e78fee"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=L_n where L_0=2,L_1=1,L_(n+2)=L_(n+1)+L_n"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=L_t', 'B=L_(t+1)']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=ef90b6600a88b16ce2e342675f938d73b4111f12d87744859a20126e51e78fee"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "(A,B)=(L_0,L_1)=(2,1)"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "(A',B')=(B,A+B)"
+          },
+          {
+            "obligation_id": "recurrence_totality",
+            "passed": true,
+            "evidence": "the bases and deterministic Lucas recurrence define one integer at every n in N"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the first state at t=n is emitted"
+          }
+        ],
+        "certificate_digest": "ca2b6d07696dddfd963c07627597d4ec3cf3f15e4d06961137f1452497600388"
+      }
+    },
+    {
+      "mechanism": "weighted_two_state_shift",
+      "display_formula": "Pell(n)",
+      "source_bounded_record_id": "SF-4b3386bd038cedfa",
+      "source_operation_id": "G4NEW-66ebcc2821dd2814",
+      "universal_room_record_id": "UF-9ab5491987e98b2a",
+      "program_digest": "66ebcc2821dd2814b851351bc488122c2d9e0af5b926727f25359a9b5b53aa47",
+      "instruction_count": 24,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=P_n where P_0=0,P_1=1,P_(n+2)=2P_(n+1)+P_n",
+      "invariants": [
+        "counter=n-t",
+        "A=P_t",
+        "B=P_(t+1)"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t06",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=P_n where P_0=0,P_1=1,P_(n+2)=2P_(n+1)+P_n",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t06"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=66ebcc2821dd2814b851351bc488122c2d9e0af5b926727f25359a9b5b53aa47"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=P_n where P_0=0,P_1=1,P_(n+2)=2P_(n+1)+P_n"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', 'A=P_t', 'B=P_(t+1)']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=66ebcc2821dd2814b851351bc488122c2d9e0af5b926727f25359a9b5b53aa47"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "(A,B)=(P_0,P_1)=(0,1)"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "(A',B')=(B,A+2B)"
+          },
+          {
+            "obligation_id": "recurrence_totality",
+            "passed": true,
+            "evidence": "the bases and deterministic Pell recurrence define one integer at every n in N"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the first state at t=n is emitted"
+          }
+        ],
+        "certificate_digest": "cd55913a83ab4950c605d7d705f7d5c372c551ce1f004e74c55763abd21e3db4"
+      }
+    },
+    {
+      "mechanism": "delayed_three_state_feedback",
+      "display_formula": "Padovan(n)",
+      "source_bounded_record_id": "SF-58ad33a5a43c1eba",
+      "source_operation_id": "G4NEW-53a41b94d395a563",
+      "universal_room_record_id": "UF-055e30a6dc246def",
+      "program_digest": "53a41b94d395a5631e381b1773c2c7d58bcdd308c44c1530720c5f11c7819d98",
+      "instruction_count": 27,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=Q_n where Q_0=Q_1=Q_2=1,Q_(n+3)=Q_(n+1)+Q_n",
+      "invariants": [
+        "counter=n-t",
+        "(A,B,C)=(Q_t,Q_(t+1),Q_(t+2))"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t07",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=Q_n where Q_0=Q_1=Q_2=1,Q_(n+3)=Q_(n+1)+Q_n",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t07"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=53a41b94d395a5631e381b1773c2c7d58bcdd308c44c1530720c5f11c7819d98"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=Q_n where Q_0=Q_1=Q_2=1,Q_(n+3)=Q_(n+1)+Q_n"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', '(A,B,C)=(Q_t,Q_(t+1),Q_(t+2))']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=53a41b94d395a5631e381b1773c2c7d58bcdd308c44c1530720c5f11c7819d98"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "(A,B,C)=(1,1,1)"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "(A',B',C')=(B,C,A+B)"
+          },
+          {
+            "obligation_id": "recurrence_totality",
+            "passed": true,
+            "evidence": "the bases and deterministic Padovan recurrence define one integer at every n in N"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the first state at t=n is emitted"
+          }
+        ],
+        "certificate_digest": "b63622ff1f5ff89dcf6653a4c7d8b6b14b02563dccf723acab450cb80de656b9"
+      }
+    },
+    {
+      "mechanism": "four_state_full_feedback",
+      "display_formula": "Tetranacci(n)",
+      "source_bounded_record_id": "SF-3f2298ace3aedc27",
+      "source_operation_id": "G4NEW-55b3141b6561f96d",
+      "universal_room_record_id": "UF-8de36f5279e82b24",
+      "program_digest": "55b3141b6561f96dd47114a5d6b2691fb7ebbb8bc9176fcb71f3183cfba41b6f",
+      "instruction_count": 33,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=R_n where (R_0,R_1,R_2,R_3)=(0,0,0,1) and R_(n+4)=sum(R_n..R_(n+3))",
+      "invariants": [
+        "counter=n-t",
+        "(A,B,C,D)=(R_t,R_(t+1),R_(t+2),R_(t+3))"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t08",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=R_n where (R_0,R_1,R_2,R_3)=(0,0,0,1) and R_(n+4)=sum(R_n..R_(n+3))",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t08"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=55b3141b6561f96dd47114a5d6b2691fb7ebbb8bc9176fcb71f3183cfba41b6f"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=R_n where (R_0,R_1,R_2,R_3)=(0,0,0,1) and R_(n+4)=sum(R_n..R_(n+3))"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', '(A,B,C,D)=(R_t,R_(t+1),R_(t+2),R_(t+3))']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=55b3141b6561f96dd47114a5d6b2691fb7ebbb8bc9176fcb71f3183cfba41b6f"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "(A,B,C,D)=(0,0,0,1)"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "shift and set D'=A+B+C+D"
+          },
+          {
+            "obligation_id": "recurrence_totality",
+            "passed": true,
+            "evidence": "the bases and deterministic Tetranacci recurrence define one integer at every n in N"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "the first state at t=n is emitted"
+          }
+        ],
+        "certificate_digest": "41a43d96bf81c5140e8c4a76101f74fb7bc4c3e461036d86c2b0064dd49d2711"
+      }
+    },
+    {
+      "mechanism": "three_cell_rotation",
+      "display_formula": "n mod 3",
+      "source_bounded_record_id": "SF-d92b3044e542697d",
+      "source_operation_id": "G4NEW-b074e6fff182dcc2",
+      "universal_room_record_id": "UF-92ee397983d8bc44",
+      "program_digest": "b074e6fff182dcc278683e02f93335cb6c3c06ff191cfec03907f2a5b1e465c9",
+      "instruction_count": 26,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=n mod 3",
+      "invariants": [
+        "counter=n-t",
+        "(A,B,C) is the t-step rotation of (0,1,2)"
+      ],
+      "termination_measure": "counter in N decreases by 1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t09",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=n mod 3",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t09"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=b074e6fff182dcc278683e02f93335cb6c3c06ff191cfec03907f2a5b1e465c9"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=n mod 3"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['counter=n-t', '(A,B,C) is the t-step rotation of (0,1,2)']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: counter in N decreases by 1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=b074e6fff182dcc278683e02f93335cb6c3c06ff191cfec03907f2a5b1e465c9"
+          },
+          {
+            "obligation_id": "complete_state_cycle",
+            "passed": true,
+            "evidence": "exhaustive three-state rotation outputs 0,1,2 then repeats"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "rotation advances t mod 3 by one"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "counter decreases"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "state A at t=n is n mod 3"
+          }
+        ],
+        "certificate_digest": "7b31b17956cb2d85c1d049897ecf0572734d22f8ca0190a30e2eda5d0a75f308"
+      }
+    },
+    {
+      "mechanism": "fixed_step_guarded_counter",
+      "display_formula": "floor(n/3)",
+      "source_bounded_record_id": "SF-b51e4cd3943c102e",
+      "source_operation_id": "G4NEW-9d4c8b094b2250a5",
+      "universal_room_record_id": "UF-6d84b3180f40997e",
+      "program_digest": "9d4c8b094b2250a5f42b1b8a6d4537fe102b8dbc0f320225854b864821750cea",
+      "instruction_count": 16,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=floor(n/3)",
+      "invariants": [
+        "remainder=n-3count",
+        "remainder>=0"
+      ],
+      "termination_measure": "remainder in N decreases by 3",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t10",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=floor(n/3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t10"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=9d4c8b094b2250a5f42b1b8a6d4537fe102b8dbc0f320225854b864821750cea"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=floor(n/3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=n-3count', 'remainder>=0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: remainder in N decreases by 3"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=9d4c8b094b2250a5f42b1b8a6d4537fe102b8dbc0f320225854b864821750cea"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "remainder=n,count=0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "successful step maps (n-3c,c) to (n-3(c+1),c+1)"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "each success lowers natural remainder by 3"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "0<=remainder<3 gives count=floor(n/3)"
+          }
+        ],
+        "certificate_digest": "c76bfbd6ed2d2716e7229eacde399a1919c90dd803780deb1e3a9af0d3d56098"
+      }
+    },
+    {
+      "mechanism": "triple_threshold_crossing",
+      "display_formula": "ternary_length(n)",
+      "source_bounded_record_id": "SF-82178de04d7bcec9",
+      "source_operation_id": "G4NEW-ba41949ee04c20cb",
+      "universal_room_record_id": "UF-2f7e9315f68afa51",
+      "program_digest": "ba41949ee04c20cb8d72bdcdf1158b1e45b88e41ccb8f4163f8779138175b4b1",
+      "instruction_count": 19,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(0)=0 and for n>0 output(n) is the unique c with 3^(c-1)<=n<3^c",
+      "invariants": [
+        "threshold=3^count",
+        "all completed thresholds were <=n"
+      ],
+      "termination_measure": "positive threshold triples until threshold>n",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t11",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(0)=0 and for n>0 output(n) is the unique c with 3^(c-1)<=n<3^c",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t11"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=ba41949ee04c20cb8d72bdcdf1158b1e45b88e41ccb8f4163f8779138175b4b1"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(0)=0 and for n>0 output(n) is the unique c with 3^(c-1)<=n<3^c"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['threshold=3^count', 'all completed thresholds were <=n']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: positive threshold triples until threshold>n"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=ba41949ee04c20cb8d72bdcdf1158b1e45b88e41ccb8f4163f8779138175b4b1"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "threshold=1=3^0,count=0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "threshold'=threshold*3=3^(c+1),count'=c+1"
+          },
+          {
+            "obligation_id": "zero_case",
+            "passed": true,
+            "evidence": "n=0 exits immediately with 0"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "3^c>=c+1, so c=n+1 forces threshold>n"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "last success and exit give 3^(c-1)<=n<3^c"
+          }
+        ],
+        "certificate_digest": "67bc34e1a7fe60e97f5d38ce0188c7f72297ae87bc13b4f6dde86caa1bfa24b7"
+      }
+    },
+    {
+      "mechanism": "negative_branch_select_first",
+      "display_formula": "min(a,b)",
+      "source_bounded_record_id": "SF-fe628c51b2b434bc",
+      "source_operation_id": "G4NEW-6d032c98e59a7ab9",
+      "universal_room_record_id": "UF-1762e95bba47a616",
+      "program_digest": "6d032c98e59a7ab98984677a4b23f8aae002983fc57a3fcfe5dd43344a57e2ed",
+      "instruction_count": 9,
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every a,b in N, output(a,b)=min(a,b)",
+      "invariants": [
+        "branch condition is a-b<0"
+      ],
+      "termination_measure": "acyclic branch",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t12",
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=min(a,b)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t12"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=6d032c98e59a7ab98984677a4b23f8aae002983fc57a3fcfe5dd43344a57e2ed"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a,b in N, output(a,b)=min(a,b)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['branch condition is a-b<0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=6d032c98e59a7ab98984677a4b23f8aae002983fc57a3fcfe5dd43344a57e2ed"
+          },
+          {
+            "obligation_id": "negative_case",
+            "passed": true,
+            "evidence": "a-b<0 iff a<b, branch emits a"
+          },
+          {
+            "obligation_id": "nonnegative_case",
+            "passed": true,
+            "evidence": "a-b>=0 iff a>=b, branch emits b"
+          },
+          {
+            "obligation_id": "case_exhaustiveness",
+            "passed": true,
+            "evidence": "the two ordered cases partition N^2"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic"
+          }
+        ],
+        "certificate_digest": "40c341d4fde20603d421b7bf1c4b7b7ba882526ec6669f7a6294e1db87c1e2a0"
+      }
+    },
+    {
+      "mechanism": "signed_difference_branch",
+      "display_formula": "abs(a-b)",
+      "source_bounded_record_id": "SF-0df1f1f08dea8c41",
+      "source_operation_id": "G4NEW-687cca22ba6069f5",
+      "universal_room_record_id": "UF-62d45798c2efe627",
+      "program_digest": "687cca22ba6069f5a4df2a7d69b977fa43987315645d2bc026e15370b87f5ef8",
+      "instruction_count": 9,
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every a,b in N, output(a,b)=abs(a-b)",
+      "invariants": [
+        "accumulator is a-b before branch"
+      ],
+      "termination_measure": "acyclic branch",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t13",
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=abs(a-b)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t13"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=687cca22ba6069f5a4df2a7d69b977fa43987315645d2bc026e15370b87f5ef8"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a,b in N, output(a,b)=abs(a-b)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['accumulator is a-b before branch']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=687cca22ba6069f5a4df2a7d69b977fa43987315645d2bc026e15370b87f5ef8"
+          },
+          {
+            "obligation_id": "nonnegative_case",
+            "passed": true,
+            "evidence": "a>=b emits a-b"
+          },
+          {
+            "obligation_id": "negative_case",
+            "passed": true,
+            "evidence": "a<b recomputes and emits b-a"
+          },
+          {
+            "obligation_id": "case_exhaustiveness",
+            "passed": true,
+            "evidence": "both order cases covered"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic"
+          }
+        ],
+        "certificate_digest": "ac84d7809add9eb7b3dccd90848d77a0241abd58a23ee9b10449025a98d3825a"
+      }
+    },
+    {
+      "mechanism": "variable_subtraction_residue",
+      "display_formula": "a mod d",
+      "source_bounded_record_id": "SF-c991a2802cd4a524",
+      "source_operation_id": "G4NEW-8940ecfed72a1131",
+      "universal_room_record_id": "UF-106a375b828e5603",
+      "program_digest": "8940ecfed72a113146bbbe12729d84fdd57f7127fdfb7c3036932718a112bf10",
+      "instruction_count": 11,
+      "domain": {
+        "kind": "natural_dividend_positive_divisor",
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1
+      },
+      "theorem_statement": "for every a in N and d>=1, output(a,d)=a mod d",
+      "invariants": [
+        "remainder=a-qd",
+        "remainder>=0",
+        "d>=1"
+      ],
+      "termination_measure": "remainder in N decreases by d>=1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t14",
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d)=a mod d",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t14"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=8940ecfed72a113146bbbe12729d84fdd57f7127fdfb7c3036932718a112bf10"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d)=a mod d"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=a-qd', 'remainder>=0', 'd>=1']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: remainder in N decreases by d>=1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=8940ecfed72a113146bbbe12729d84fdd57f7127fdfb7c3036932718a112bf10"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "r=a>=0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "when r>=d, r'=r-d preserves a=qd+r"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "d>=1 strictly lowers r"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "0<=r<d uniquely defines a mod d"
+          }
+        ],
+        "certificate_digest": "5fc6cc54ddbb28a6b49e80c91c112604a059eb7b5a5c65b81febddba38729644"
+      }
+    },
+    {
+      "mechanism": "zero_or_negative_ceil_counter",
+      "display_formula": "ceil(a/d)",
+      "source_bounded_record_id": "SF-f95e1e899ae4e35e",
+      "source_operation_id": "G4NEW-8758c920cf983196",
+      "universal_room_record_id": "UF-23b24731b391ec23",
+      "program_digest": "8758c920cf9831962240eb9e63064b77a2fa4f99a27f2345a2f414531e665b48",
+      "instruction_count": 18,
+      "domain": {
+        "kind": "natural_dividend_positive_divisor",
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1
+      },
+      "theorem_statement": "for every a in N and d>=1, output(a,d)=ceil(a/d)",
+      "invariants": [
+        "remainder=a-cd",
+        "count=c",
+        "loop continues exactly while remainder>0"
+      ],
+      "termination_measure": "remainder decreases by d>=1 until nonpositive",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t15",
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d)=ceil(a/d)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t15"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=8758c920cf9831962240eb9e63064b77a2fa4f99a27f2345a2f414531e665b48"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d)=ceil(a/d)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=a-cd', 'count=c', 'loop continues exactly while remainder>0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: remainder decreases by d>=1 until nonpositive"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=8758c920cf9831962240eb9e63064b77a2fa4f99a27f2345a2f414531e665b48"
+          },
+          {
+            "obligation_id": "zero_case",
+            "passed": true,
+            "evidence": "a=0 exits with count 0"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "each nonzero remainder performs r'=r-d,count'=count+1"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "d>=1 reaches r<=0 after at most a steps"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "for a>0, (c-1)d<a<=cd, hence c=ceil(a/d)"
+          }
+        ],
+        "certificate_digest": "82a7f7d43bd30dc9f3cb2050d41a01fe95c909d5731c4895fbe49757d2ff351b"
+      }
+    },
+    {
+      "mechanism": "residue_zero_acceptor",
+      "display_formula": "1[d divides a]",
+      "source_bounded_record_id": "SF-fa3e617cf6db2f86",
+      "source_operation_id": "G4NEW-eb9f87487d18be3d",
+      "universal_room_record_id": "UF-1b3a63c1827a85ba",
+      "program_digest": "eb9f87487d18be3d0e203129d7cb7b08b7cae567f04fec1f45cbfe9900701fc7",
+      "instruction_count": 15,
+      "domain": {
+        "kind": "natural_dividend_positive_divisor",
+        "arity": 2,
+        "dividend_includes_zero": true,
+        "divisor_minimum": 1
+      },
+      "theorem_statement": "for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0",
+      "invariants": [
+        "remainder=a-qd",
+        "remainder>=0",
+        "d>=1"
+      ],
+      "termination_measure": "remainder in N decreases by d>=1",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t16",
+        "passed": true,
+        "recomputed_statement": "for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t16"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=eb9f87487d18be3d0e203129d7cb7b08b7cae567f04fec1f45cbfe9900701fc7"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "a in N = {0, 1, 2, ...}; d is an integer with d>=1"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a in N and d>=1, output(a,d)=1 iff d divides a, else 0"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['remainder=a-qd', 'remainder>=0', 'd>=1']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: remainder in N decreases by d>=1"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=eb9f87487d18be3d0e203129d7cb7b08b7cae567f04fec1f45cbfe9900701fc7"
+          },
+          {
+            "obligation_id": "induction_base",
+            "passed": true,
+            "evidence": "r=a"
+          },
+          {
+            "obligation_id": "induction_step",
+            "passed": true,
+            "evidence": "every stored r equals a-qd and remains nonnegative"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "d>=1 lowers r"
+          },
+          {
+            "obligation_id": "accept_correctness",
+            "passed": true,
+            "evidence": "zero branch occurs exactly when a=qd"
+          },
+          {
+            "obligation_id": "reject_correctness",
+            "passed": true,
+            "evidence": "negative attempted subtraction means 0<r<d"
+          }
+        ],
+        "certificate_digest": "d8f20ca3f201b18f4a7682a9eaee5362f0938b8cba6fe78d49062c0e5116995a"
+      }
+    },
+    {
+      "mechanism": "zero_branch_equality",
+      "display_formula": "1[a=b]",
+      "source_bounded_record_id": "SF-f3c6a17f313601d0",
+      "source_operation_id": "G4NEW-4f8ce015861a67a4",
+      "universal_room_record_id": "UF-475877d3720a62bc",
+      "program_digest": "4f8ce015861a67a43a80fcbea29fec5a17377a6cace0d5cff2e8d3ac33325fef",
+      "instruction_count": 9,
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every a,b in N, output(a,b)=1 iff a=b, else 0",
+      "invariants": [
+        "accumulator=a-b"
+      ],
+      "termination_measure": "acyclic branch",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t17",
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=1 iff a=b, else 0",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t17"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=4f8ce015861a67a43a80fcbea29fec5a17377a6cace0d5cff2e8d3ac33325fef"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a,b in N, output(a,b)=1 iff a=b, else 0"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['accumulator=a-b']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=4f8ce015861a67a43a80fcbea29fec5a17377a6cace0d5cff2e8d3ac33325fef"
+          },
+          {
+            "obligation_id": "zero_case",
+            "passed": true,
+            "evidence": "a-b=0 iff a=b; emits 1"
+          },
+          {
+            "obligation_id": "nonzero_case",
+            "passed": true,
+            "evidence": "a-b!=0 iff a!=b; emits 0"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic"
+          }
+        ],
+        "certificate_digest": "0f9313cf5cb3d1713251a1def7375e781b5e38c83fc191012a6b6a69b06c7a78"
+      }
+    },
+    {
+      "mechanism": "negative_branch_order",
+      "display_formula": "1[a<b]",
+      "source_bounded_record_id": "SF-086f108614466d68",
+      "source_operation_id": "G4NEW-f9e488fd9f8130c6",
+      "universal_room_record_id": "UF-31960da7507a5f34",
+      "program_digest": "f9e488fd9f8130c6eeb6af8df51fd16a2110a23f101735769629518b7ab47759",
+      "instruction_count": 9,
+      "domain": {
+        "kind": "natural_number_pairs",
+        "arity": 2,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every a,b in N, output(a,b)=1 iff a<b, else 0",
+      "invariants": [
+        "accumulator=a-b"
+      ],
+      "termination_measure": "acyclic branch",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t18",
+        "passed": true,
+        "recomputed_statement": "for every a,b in N, output(a,b)=1 iff a<b, else 0",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t18"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=f9e488fd9f8130c6eeb6af8df51fd16a2110a23f101735769629518b7ab47759"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 2, \"includes_zero\": true, \"kind\": \"natural_number_pairs\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every a,b in N, output(a,b)=1 iff a<b, else 0"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['accumulator=a-b']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=f9e488fd9f8130c6eeb6af8df51fd16a2110a23f101735769629518b7ab47759"
+          },
+          {
+            "obligation_id": "negative_case",
+            "passed": true,
+            "evidence": "a-b<0 iff a<b; emits 1"
+          },
+          {
+            "obligation_id": "nonnegative_case",
+            "passed": true,
+            "evidence": "a>=b; emits 0"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic"
+          }
+        ],
+        "certificate_digest": "c73b35259c43ba107dddf81546292105260dbf861548867e99fffb63a4066d33"
+      }
+    },
+    {
+      "mechanism": "three_way_signed_branch",
+      "display_formula": "sign(z)",
+      "source_bounded_record_id": "SF-292fac498b7a70a1",
+      "source_operation_id": "G4NEW-a671e30898942b6c",
+      "universal_room_record_id": "UF-5dfab59e5699181e",
+      "program_digest": "a671e30898942b6c61e24efcd770f2c81ccea5de99889cc3a705c3f74670aa46",
+      "instruction_count": 12,
+      "domain": {
+        "kind": "integers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0",
+      "invariants": [
+        "three branches partition Z into z<0,z=0,z>0"
+      ],
+      "termination_measure": "acyclic three-way branch",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "batch20_t19",
+        "passed": true,
+        "recomputed_statement": "for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "batch20_t19"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a671e30898942b6c61e24efcd770f2c81ccea5de99889cc3a705c3f74670aa46"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "canonical domain: {\"arity\": 1, \"includes_zero\": true, \"kind\": \"integers\"}"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every z in Z, output(z)=-1 if z<0, 0 if z=0, and 1 if z>0"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['three branches partition Z into z<0,z=0,z>0']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: acyclic three-way branch"
+          },
+          {
+            "obligation_id": "exact_program_structure",
+            "passed": true,
+            "evidence": "exact independent program sha256=a671e30898942b6c61e24efcd770f2c81ccea5de99889cc3a705c3f74670aa46"
+          },
+          {
+            "obligation_id": "negative_case",
+            "passed": true,
+            "evidence": "z<0 emits -1"
+          },
+          {
+            "obligation_id": "zero_case",
+            "passed": true,
+            "evidence": "z=0 emits 0"
+          },
+          {
+            "obligation_id": "positive_case",
+            "passed": true,
+            "evidence": "z>0 emits 1"
+          },
+          {
+            "obligation_id": "case_exhaustiveness",
+            "passed": true,
+            "evidence": "trichotomy partitions every integer"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "acyclic"
+          }
+        ],
+        "certificate_digest": "607b9a2a0f95b1aeac4f402f06029bec93cb26c5849d57e45f5fa3a2be75db11"
+      }
+    },
+    {
+      "mechanism": "square_after_power3",
+      "display_formula": "(3^n)^2",
+      "source_bounded_record_id": "SF-d7edafa5b0195dcc",
+      "source_operation_id": "CGNEW-63a3c7a592321402",
+      "universal_room_record_id": "UF-01ebd062a9ccf8b7",
+      "program_digest": "63a3c7a592321402bed14497c0c00685c989d5640e2a87f1d4d589b9c9d3eb7f",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=(3^n)^2",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c00",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=(3^n)^2",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c00"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=63a3c7a592321402bed14497c0c00685c989d5640e2a87f1d4d589b9c9d3eb7f"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=(3^n)^2"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=63a3c7a592321402bed14497c0c00685c989d5640e2a87f1d4d589b9c9d3eb7f"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields (3^n)^2"
+          }
+        ],
+        "certificate_digest": "b60893e14832bee6f8e4b59854352b9fcb68dbb890428871d91dc830185d8bcc"
+      }
+    },
+    {
+      "mechanism": "cube_after_power2",
+      "display_formula": "(2^n)^3",
+      "source_bounded_record_id": "SF-cff92ec58f8651bf",
+      "source_operation_id": "CGNEW-ab1941e8c5f4e746",
+      "universal_room_record_id": "UF-ba48bb8f0cc490fb",
+      "program_digest": "ab1941e8c5f4e746513206a9ae2ce027dab35152a610f8aeb3a517094c7ebce5",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=(2^n)^3",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c01",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=(2^n)^3",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c01"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=ab1941e8c5f4e746513206a9ae2ce027dab35152a610f8aeb3a517094c7ebce5"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=(2^n)^3"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=ab1941e8c5f4e746513206a9ae2ce027dab35152a610f8aeb3a517094c7ebce5"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields (2^n)^3"
+          }
+        ],
+        "certificate_digest": "d37baf10e624cbe62b5a8ee2bed5a66665ceb41b03958df489910c9125d0f72e"
+      }
+    },
+    {
+      "mechanism": "bit_length_after_cube",
+      "display_formula": "bit_length(n^3)",
+      "source_bounded_record_id": "SF-1372d64f867a11e8",
+      "source_operation_id": "CGNEW-740448f0bdf6f08b",
+      "universal_room_record_id": "UF-43d57c4d87975bb3",
+      "program_digest": "740448f0bdf6f08be14122a84b1b62390e160a2879430d305c0fb7c79a4e8860",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=bit_length(n^3)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c02",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=bit_length(n^3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c02"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=740448f0bdf6f08be14122a84b1b62390e160a2879430d305c0fb7c79a4e8860"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=bit_length(n^3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=740448f0bdf6f08be14122a84b1b62390e160a2879430d305c0fb7c79a4e8860"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields bit_length(n^3)"
+          }
+        ],
+        "certificate_digest": "a615b9804771d30675c296ff9c7073dc3eb9036d5d4f06f414266922398315e2"
+      }
+    },
+    {
+      "mechanism": "square_after_bit_length",
+      "display_formula": "bit_length(n)^2",
+      "source_bounded_record_id": "SF-866198e7f386a7af",
+      "source_operation_id": "CGNEW-d71fd2cd55f653dd",
+      "universal_room_record_id": "UF-c0b273f32bc56b43",
+      "program_digest": "d71fd2cd55f653dd65e25df22d63d38ef95d9e033dcb2c4ebda332a5110e0b45",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=bit_length(n)^2",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c03",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=bit_length(n)^2",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c03"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=d71fd2cd55f653dd65e25df22d63d38ef95d9e033dcb2c4ebda332a5110e0b45"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=bit_length(n)^2"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=d71fd2cd55f653dd65e25df22d63d38ef95d9e033dcb2c4ebda332a5110e0b45"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields bit_length(n)^2"
+          }
+        ],
+        "certificate_digest": "b5c63a9b42a5114be1d259538cb7d90f1da93bc1b3b6801889a694cc462dd723"
+      }
+    },
+    {
+      "mechanism": "sqrt_after_cube",
+      "display_formula": "floor(sqrt(n^3))",
+      "source_bounded_record_id": "SF-ed1fd598f243de2c",
+      "source_operation_id": "CGNEW-5ae2212fb006b803",
+      "universal_room_record_id": "UF-96da765d42e2ddc0",
+      "program_digest": "5ae2212fb006b803c72ae67677b7a1b1858560884732ef587f8d4ddcf1dcb6c7",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=floor(sqrt(n^3))",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c04",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=floor(sqrt(n^3))",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c04"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=5ae2212fb006b803c72ae67677b7a1b1858560884732ef587f8d4ddcf1dcb6c7"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=floor(sqrt(n^3))"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=5ae2212fb006b803c72ae67677b7a1b1858560884732ef587f8d4ddcf1dcb6c7"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields floor(sqrt(n^3))"
+          }
+        ],
+        "certificate_digest": "356da251a74f320f1f9ede47b7b14dcf48160ad3ddfb3f441b25115c54d66605"
+      }
+    },
+    {
+      "mechanism": "cube_after_sqrt",
+      "display_formula": "floor(sqrt(n))^3",
+      "source_bounded_record_id": "SF-17b690870e61b7a7",
+      "source_operation_id": "CGNEW-1a19c3bdee337e03",
+      "universal_room_record_id": "UF-1b1465b00727d93e",
+      "program_digest": "1a19c3bdee337e03f541f005a6897892a4901d18aa501ba48b807b4b004e04c4",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=floor(sqrt(n))^3",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c05",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=floor(sqrt(n))^3",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c05"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=1a19c3bdee337e03f541f005a6897892a4901d18aa501ba48b807b4b004e04c4"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=floor(sqrt(n))^3"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=1a19c3bdee337e03f541f005a6897892a4901d18aa501ba48b807b4b004e04c4"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields floor(sqrt(n))^3"
+          }
+        ],
+        "certificate_digest": "d743335ad05fb30b623798ba86ceb8ec8cbf3c071b2bce475d6947f9a2052943"
+      }
+    },
+    {
+      "mechanism": "choose3_after_square",
+      "display_formula": "C(n^2,3)",
+      "source_bounded_record_id": "SF-40a4a7eb866e6a72",
+      "source_operation_id": "CGNEW-1ca92b0baabe0b55",
+      "universal_room_record_id": "UF-6a203a57b0658815",
+      "program_digest": "1ca92b0baabe0b55a8be644c6b728680d7a44e3dcc9fc94f9cb42fd1545633db",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=C(n^2,3)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c06",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=C(n^2,3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c06"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=1ca92b0baabe0b55a8be644c6b728680d7a44e3dcc9fc94f9cb42fd1545633db"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=C(n^2,3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=1ca92b0baabe0b55a8be644c6b728680d7a44e3dcc9fc94f9cb42fd1545633db"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields C(n^2,3)"
+          }
+        ],
+        "certificate_digest": "89e83b79cb61a8ebb0e22fb3cc600586a11c2d7d3a8e44b0adb3a0ec95297a18"
+      }
+    },
+    {
+      "mechanism": "square_after_choose3",
+      "display_formula": "C(n,3)^2",
+      "source_bounded_record_id": "SF-db3808c4bac7d886",
+      "source_operation_id": "CGNEW-c3512dd01363349e",
+      "universal_room_record_id": "UF-214aa33246cea431",
+      "program_digest": "c3512dd01363349e5e77eea6e3bf898c084201e5a2b783fa78fb23d19dbef60d",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=C(n,3)^2",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c07",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=C(n,3)^2",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c07"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=c3512dd01363349e5e77eea6e3bf898c084201e5a2b783fa78fb23d19dbef60d"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=C(n,3)^2"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=c3512dd01363349e5e77eea6e3bf898c084201e5a2b783fa78fb23d19dbef60d"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields C(n,3)^2"
+          }
+        ],
+        "certificate_digest": "3708432def9a68bb1c5d16fb51910f878bd164201778a408c8c23477c9f18f03"
+      }
+    },
+    {
+      "mechanism": "choose4_after_bit_length",
+      "display_formula": "C(bit_length(n),4)",
+      "source_bounded_record_id": "SF-fa3a6b769da01a2f",
+      "source_operation_id": "CGNEW-e243f65d84f6db1d",
+      "universal_room_record_id": "UF-c72233bb4647d25b",
+      "program_digest": "e243f65d84f6db1dc998ae68848e0c9e4f9c8f8e1d2f04ef1001e660cf11a7b5",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=C(bit_length(n),4)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c08",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=C(bit_length(n),4)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c08"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=e243f65d84f6db1dc998ae68848e0c9e4f9c8f8e1d2f04ef1001e660cf11a7b5"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=C(bit_length(n),4)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=e243f65d84f6db1dc998ae68848e0c9e4f9c8f8e1d2f04ef1001e660cf11a7b5"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields C(bit_length(n),4)"
+          }
+        ],
+        "certificate_digest": "7a7b783f0de81c98293b97b2088c03eccb522f83098b20255b9d4ace3d42db13"
+      }
+    },
+    {
+      "mechanism": "mod4_after_cube",
+      "display_formula": "n^3 mod 4",
+      "source_bounded_record_id": "SF-42e3f1b799fcfc1c",
+      "source_operation_id": "CGNEW-ca17e1ccfe534736",
+      "universal_room_record_id": "UF-ceacc2093c0876e4",
+      "program_digest": "ca17e1ccfe534736a8539d2ffb4352176df11b0b00fe23d98ebcd7bc27be3f3e",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=n^3 mod 4",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c09",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=n^3 mod 4",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c09"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=ca17e1ccfe534736a8539d2ffb4352176df11b0b00fe23d98ebcd7bc27be3f3e"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=n^3 mod 4"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=ca17e1ccfe534736a8539d2ffb4352176df11b0b00fe23d98ebcd7bc27be3f3e"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields n^3 mod 4"
+          }
+        ],
+        "certificate_digest": "a50432f57d9cac6d0ea39b9c6178c555536160cdac7ea877b6ba7f5d29ba1386"
+      }
+    },
+    {
+      "mechanism": "mod3_after_choose4",
+      "display_formula": "C(n,4) mod 3",
+      "source_bounded_record_id": "SF-f67ad91282ccb687",
+      "source_operation_id": "CGNEW-63437f7bcb3e0738",
+      "universal_room_record_id": "UF-24529bad9dc6fa75",
+      "program_digest": "63437f7bcb3e0738fb3152ca31e5b4266e1f1134211ad06eda0f831ebd4105a6",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=C(n,4) mod 3",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c10",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=C(n,4) mod 3",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c10"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=63437f7bcb3e0738fb3152ca31e5b4266e1f1134211ad06eda0f831ebd4105a6"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=C(n,4) mod 3"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=63437f7bcb3e0738fb3152ca31e5b4266e1f1134211ad06eda0f831ebd4105a6"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields C(n,4) mod 3"
+          }
+        ],
+        "certificate_digest": "a3be0e8a7539b65b6ebfcad4e07967c5c8ada19d46cc2bbe23863f674fc92748"
+      }
+    },
+    {
+      "mechanism": "floor3_after_square",
+      "display_formula": "floor(n^2/3)",
+      "source_bounded_record_id": "SF-c196b81f2a662ed5",
+      "source_operation_id": "CGNEW-d2d6dae50a8a2702",
+      "universal_room_record_id": "UF-08f62991174b3cd5",
+      "program_digest": "d2d6dae50a8a2702aebb3af7e2dff5bed4f90deeed4d1a5383425c120fa71dce",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=floor(n^2/3)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c11",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=floor(n^2/3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c11"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=d2d6dae50a8a2702aebb3af7e2dff5bed4f90deeed4d1a5383425c120fa71dce"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=floor(n^2/3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=d2d6dae50a8a2702aebb3af7e2dff5bed4f90deeed4d1a5383425c120fa71dce"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields floor(n^2/3)"
+          }
+        ],
+        "certificate_digest": "84477fccad82af5d36632bdf6a5a304724a08c1e60c1879e4e26715a63b06a1a"
+      }
+    },
+    {
+      "mechanism": "ternary_length_after_square",
+      "display_formula": "ternary_length(n^2)",
+      "source_bounded_record_id": "SF-0ec51550a00878bb",
+      "source_operation_id": "CGNEW-e600e470260f546b",
+      "universal_room_record_id": "UF-951751f6ceaab0e8",
+      "program_digest": "e600e470260f546bec8cf6b9305fef399fd428e0fa734ebdd714afeeed7191a0",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=ternary_length(n^2)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c12",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=ternary_length(n^2)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c12"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=e600e470260f546bec8cf6b9305fef399fd428e0fa734ebdd714afeeed7191a0"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=ternary_length(n^2)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=e600e470260f546bec8cf6b9305fef399fd428e0fa734ebdd714afeeed7191a0"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields ternary_length(n^2)"
+          }
+        ],
+        "certificate_digest": "5d4c531ccf629964847abeff1d620826407ac7780e8fcfc06018a092248dfeb3"
+      }
+    },
+    {
+      "mechanism": "power2_after_mod3",
+      "display_formula": "2^(n mod 3)",
+      "source_bounded_record_id": "SF-f02bc9c5b6859759",
+      "source_operation_id": "CGNEW-0ce304a70ceb3732",
+      "universal_room_record_id": "UF-d532a2e4cf041999",
+      "program_digest": "0ce304a70ceb3732fa652200a1a816db6f605acb81d929f06b50fdbba31a9781",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=2^(n mod 3)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c13",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=2^(n mod 3)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c13"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=0ce304a70ceb3732fa652200a1a816db6f605acb81d929f06b50fdbba31a9781"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=2^(n mod 3)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=0ce304a70ceb3732fa652200a1a816db6f605acb81d929f06b50fdbba31a9781"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields 2^(n mod 3)"
+          }
+        ],
+        "certificate_digest": "9c8338dbd7a98961a046f22aadc7ff32232a19072b5639d0fd1baee03f6cc3e5"
+      }
+    },
+    {
+      "mechanism": "power3_after_mod4",
+      "display_formula": "3^(n mod 4)",
+      "source_bounded_record_id": "SF-6ab1f083c4370ad0",
+      "source_operation_id": "CGNEW-95bacec65fd495fe",
+      "universal_room_record_id": "UF-c96d5445dd48c067",
+      "program_digest": "95bacec65fd495fec688129b7739e53fe852fc28312313234362813f85018690",
+      "instruction_count": 2,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=3^(n mod 4)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c14",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=3^(n mod 4)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c14"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=95bacec65fd495fec688129b7739e53fe852fc28312313234362813f85018690"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=3^(n mod 4)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=95bacec65fd495fec688129b7739e53fe852fc28312313234362813f85018690"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields 3^(n mod 4)"
+          }
+        ],
+        "certificate_digest": "6e4928e920d0b3611acf9c3f71b5e1fe684eb32a2fc9dce281ebe15cde8c4b66"
+      }
+    },
+    {
+      "mechanism": "parallel_power_difference",
+      "display_formula": "abs(3^n-2^n)",
+      "source_bounded_record_id": "SF-51e37541bd31921b",
+      "source_operation_id": "CGNEW-a75a68b6b1adaa43",
+      "universal_room_record_id": "UF-73a075c4d034838d",
+      "program_digest": "a75a68b6b1adaa4307875bd533ed44c87ec5054be28de0046e5e568a5d7bec40",
+      "instruction_count": 3,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=abs(3^n-2^n)",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c15",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=abs(3^n-2^n)",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c15"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a75a68b6b1adaa4307875bd533ed44c87ec5054be28de0046e5e568a5d7bec40"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=abs(3^n-2^n)"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=a75a68b6b1adaa4307875bd533ed44c87ec5054be28de0046e5e568a5d7bec40"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields abs(3^n-2^n)"
+          }
+        ],
+        "certificate_digest": "f7145887663e8ca9938d33bb7975e71a83f6d0dc717570572f28eb41204778c8"
+      }
+    },
+    {
+      "mechanism": "parallel_residue_equality",
+      "display_formula": "1[n mod 3 = n mod 4]",
+      "source_bounded_record_id": "SF-7b3ade8b358cd481",
+      "source_operation_id": "CGNEW-6576eebf679d0b93",
+      "universal_room_record_id": "UF-00a839009904e439",
+      "program_digest": "6576eebf679d0b931856328e9eff0faac6d1d192e7ff7360e7d4e8d3415651ab",
+      "instruction_count": 3,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=1[n mod 3 = n mod 4]",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c16",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=1[n mod 3 = n mod 4]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c16"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=6576eebf679d0b931856328e9eff0faac6d1d192e7ff7360e7d4e8d3415651ab"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=1[n mod 3 = n mod 4]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=6576eebf679d0b931856328e9eff0faac6d1d192e7ff7360e7d4e8d3415651ab"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields 1[n mod 3 = n mod 4]"
+          }
+        ],
+        "certificate_digest": "9c359614da2e0e46f1fff06af0e997b8311b53350c66a4af42a81f0575994d63"
+      }
+    },
+    {
+      "mechanism": "parallel_residue_order",
+      "display_formula": "1[n mod 4 < n mod 3]",
+      "source_bounded_record_id": "SF-e0f684a1ddcb08a9",
+      "source_operation_id": "CGNEW-11f5abd396436aaa",
+      "universal_room_record_id": "UF-89f1c13a15fd98c7",
+      "program_digest": "11f5abd396436aaa504ee7023dd1f0281021786a22869e865fd3c8451ac7c909",
+      "instruction_count": 3,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=1[n mod 4 < n mod 3]",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c17",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=1[n mod 4 < n mod 3]",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c17"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=11f5abd396436aaa504ee7023dd1f0281021786a22869e865fd3c8451ac7c909"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=1[n mod 4 < n mod 3]"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=11f5abd396436aaa504ee7023dd1f0281021786a22869e865fd3c8451ac7c909"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields 1[n mod 4 < n mod 3]"
+          }
+        ],
+        "certificate_digest": "e9b051596f03bc722699d56ef467e787a05c594e916b0558cd652fe60ce7930c"
+      }
+    },
+    {
+      "mechanism": "parallel_binomial_difference",
+      "display_formula": "abs(C(n,5)-C(n,4))",
+      "source_bounded_record_id": "SF-dce78a90cfb1695a",
+      "source_operation_id": "CGNEW-a8fb1cc3e53aed5f",
+      "universal_room_record_id": "UF-48997208e0b39a22",
+      "program_digest": "a8fb1cc3e53aed5fe3c050eb5b3310b2cc03dc10cb3c42bbd6238d1b61fa9f00",
+      "instruction_count": 3,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=abs(C(n,5)-C(n,4))",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c18",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=abs(C(n,5)-C(n,4))",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c18"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=a8fb1cc3e53aed5fe3c050eb5b3310b2cc03dc10cb3c42bbd6238d1b61fa9f00"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=abs(C(n,5)-C(n,4))"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=a8fb1cc3e53aed5fe3c050eb5b3310b2cc03dc10cb3c42bbd6238d1b61fa9f00"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields abs(C(n,5)-C(n,4))"
+          }
+        ],
+        "certificate_digest": "2df62baf3f83295e1f9b73afdc74db3e83a876e9f6c2d1fa4344f7936bcd60cc"
+      }
+    },
+    {
+      "mechanism": "parallel_binomial_minimum",
+      "display_formula": "min(C(n,3),C(n,4))",
+      "source_bounded_record_id": "SF-39eb835ff81c7065",
+      "source_operation_id": "CGNEW-82d127038bfcec8b",
+      "universal_room_record_id": "UF-96cd51db1a960aa9",
+      "program_digest": "82d127038bfcec8be59a0366f09ec692cc1a278217bafad1719358207237e126",
+      "instruction_count": 3,
+      "domain": {
+        "kind": "natural_numbers",
+        "arity": 1,
+        "includes_zero": true
+      },
+      "theorem_statement": "for every n in N, output(n)=min(C(n,3),C(n,4))",
+      "invariants": [
+        "every node equals its previously proven component applied to its declared arguments",
+        "node references form a forward acyclic graph"
+      ],
+      "termination_measure": "finite acyclic composition of total previously proven operations",
+      "verification": {
+        "verifier_version": "independent-universal-verifier-v0.1",
+        "theorem_kind": "composition20_c19",
+        "passed": true,
+        "recomputed_statement": "for every n in N, output(n)=min(C(n,3),C(n,4))",
+        "obligations": [
+          {
+            "obligation_id": "certificate_version",
+            "passed": true,
+            "evidence": "universal-formula-certificate-v0.1"
+          },
+          {
+            "obligation_id": "registered_theorem_rule",
+            "passed": true,
+            "evidence": "composition20_c19"
+          },
+          {
+            "obligation_id": "program_digest_binding",
+            "passed": true,
+            "evidence": "recomputed sha256=82d127038bfcec8be59a0366f09ec692cc1a278217bafad1719358207237e126"
+          },
+          {
+            "obligation_id": "explicit_domain",
+            "passed": true,
+            "evidence": "N = {0, 1, 2, ...}; one input; zero included"
+          },
+          {
+            "obligation_id": "statement_binding",
+            "passed": true,
+            "evidence": "recomputed: for every n in N, output(n)=min(C(n,3),C(n,4))"
+          },
+          {
+            "obligation_id": "invariant_binding",
+            "passed": true,
+            "evidence": "recomputed: ['every node equals its previously proven component applied to its declared arguments', 'node references form a forward acyclic graph']"
+          },
+          {
+            "obligation_id": "termination_measure_binding",
+            "passed": true,
+            "evidence": "recomputed: finite acyclic composition of total previously proven operations"
+          },
+          {
+            "obligation_id": "exact_composition_graph",
+            "passed": true,
+            "evidence": "graph sha256=82d127038bfcec8be59a0366f09ec692cc1a278217bafad1719358207237e126"
+          },
+          {
+            "obligation_id": "acyclic_reference_check",
+            "passed": true,
+            "evidence": "every node reference points to an earlier node"
+          },
+          {
+            "obligation_id": "proven_component_substitution",
+            "passed": true,
+            "evidence": "substitute each component's prior universal theorem into the graph"
+          },
+          {
+            "obligation_id": "domain_closure",
+            "passed": true,
+            "evidence": "each intermediate value remains in the declared natural-number component domain"
+          },
+          {
+            "obligation_id": "termination",
+            "passed": true,
+            "evidence": "a finite DAG of total component calls is total"
+          },
+          {
+            "obligation_id": "exit_correctness",
+            "passed": true,
+            "evidence": "symbolic substitution yields min(C(n,3),C(n,4))"
+          }
+        ],
+        "certificate_digest": "ea2942f278f88645081f6b53e36452293041a773ff21d69535bddeb1c42844c7"
+      }
+    }
+  ],
+  "new_formula_count": 20,
+  "total_proven_formula_count": 50,
+  "gates": [
+    {
+      "gate_id": "twenty_composition_proofs",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    },
+    {
+      "gate_id": "twenty_distinct_graphs",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    },
+    {
+      "gate_id": "all_components_previously_proven",
+      "passed": true,
+      "actual": 20,
+      "threshold": 20
+    }
+  ],
+  "universal_room_active_count": 50,
+  "proof_obligation_count": 645,
+  "proof_obligation_passed_count": 645,
+  "limitations": [
+    "本轮组合图由搜索器枚举，但串联/并联图语法仍由宿主提供。",
+    "组件语义来自此前已证明程序，本轮没有重新发明它们。",
+    "实际执行资源限制不等于抽象整数语义的通用证明。",
+    "其余 18 个活动候选仍为 bounded。"
+  ]
+}

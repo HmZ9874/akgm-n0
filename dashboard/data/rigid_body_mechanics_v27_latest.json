@@ -1,0 +1,1468 @@
+{
+  "report_version": "rigid-body-mechanics-v27.0",
+  "run_id": "RUN-rigid-body-v27-20260821T075230077814Z",
+  "created_at": "2026-08-21T07:52:30.077814Z",
+  "verdict": "fixed_axis_rigid_body_mechanics_discovered_but_complete_mechanics_not_yet_achieved",
+  "acceptance": {
+    "benchmark_version": "rigid-body-mechanics-v27.0",
+    "passed": true,
+    "classification": "verified_fixed_axis_point_rigid_body_mechanics_with_explicit_incomplete_scope_control",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "body_rows": [
+        {
+          "experiment_id": "TB-0",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "action": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        },
+        {
+          "experiment_id": "TB-1",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 2
+          },
+          "action": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        },
+        {
+          "experiment_id": "TB-2",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 3,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 1
+          },
+          "action": {
+            "positive": 7,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        },
+        {
+          "experiment_id": "TB-3",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "action": {
+            "positive": 0,
+            "negative": 3,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 2
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        },
+        {
+          "experiment_id": "TB-4",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 0,
+            "negative": 1,
+            "denominator": 2
+          },
+          "action": {
+            "positive": 6,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 0,
+            "negative": 0,
+            "denominator": 1
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        }
+      ],
+      "angular_collision_rows": [
+        {
+          "experiment_id": "TAC-0",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TAC-1",
+          "before": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TAC-2",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TAC-3",
+          "before": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 2
+            }
+          ],
+          "after": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 9,
+              "denominator": 10
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 10
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TAC-4",
+          "before": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "after": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 5
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 5
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        },
+        {
+          "experiment_id": "TAC-5",
+          "before": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 2
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 2
+            }
+          ],
+          "after": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 10
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 17,
+              "negative": 0,
+              "denominator": 10
+            }
+          ],
+          "human_channel_names": null,
+          "human_collision_formula": null,
+          "human_conservation_names": null
+        }
+      ],
+      "formulas_supplied": false,
+      "physics_names_supplied": false
+    },
+    "discovery": {
+      "aggregate_candidates_generated": 12,
+      "selected_aggregate": {
+        "program_id": "INA-11241b2c016b09c1",
+        "policy": {
+          "substrate": "point_aggregate_router_v27",
+          "q0_route": "Q0",
+          "q12_route": "MERGE<SEM<Q1,Q1>,SEM<Q2,Q2>>",
+          "human_quantity_name": null
+        },
+        "opaque_program": "AGG<Q0,MERGE<SEM<Q1,Q1>,SEM<Q2,Q2>>>"
+      },
+      "angular_weight_candidates_generated": 3,
+      "selected_angular_quantity": {
+        "program_id": "ANQ-6d01c5c03ab4bd63",
+        "weight_route": "AGG",
+        "aggregate_program_id": "INA-11241b2c016b09c1",
+        "opaque_program": "ANQ<AGG,AGG<Q0,MERGE<SEM<Q1,Q1>,SEM<Q2,Q2>>>>",
+        "human_quantity_name": null
+      },
+      "angular_collision": {
+        "candidates_per_output": 1280,
+        "selected_programs": [
+          {
+            "output_channel": 1,
+            "program_id": "COL-3ae3b045aabe2724",
+            "policy": {
+              "substrate": "four_weighted_atoms_plus_denominator_router_v25",
+              "atom_routes": [
+                "KEEP",
+                "TURN",
+                "ZERO",
+                "DOUBLE"
+              ],
+              "denominator_route": "MERGE<Q0,Q2>",
+              "human_operation_name": null
+            },
+            "opaque_program": "COL<KEEP,TURN,ZERO,DOUBLE;DEN:MERGE<Q0,Q2>>",
+            "training_cases": 6,
+            "human_collision_law": null
+          },
+          {
+            "output_channel": 3,
+            "program_id": "COL-763b1ba539c45bfd",
+            "policy": {
+              "substrate": "four_weighted_atoms_plus_denominator_router_v25",
+              "atom_routes": [
+                "DOUBLE",
+                "ZERO",
+                "TURN",
+                "KEEP"
+              ],
+              "denominator_route": "MERGE<Q0,Q2>",
+              "human_operation_name": null
+            },
+            "opaque_program": "COL<DOUBLE,ZERO,TURN,KEEP;DEN:MERGE<Q0,Q2>>",
+            "training_cases": 6,
+            "human_collision_law": null
+          }
+        ],
+        "quadratic_invariant_candidates": 6,
+        "selected_quadratic_invariant": {
+          "invariant_id": "PHX-10ce2586bbc39554",
+          "invariant_family": "QF1",
+          "expression": {
+            "op": "combine",
+            "args": [
+              {
+                "op": "interact",
+                "args": [
+                  {
+                    "op": "read",
+                    "channel": 0
+                  },
+                  {
+                    "op": "interact",
+                    "args": [
+                      {
+                        "op": "read",
+                        "channel": 1
+                      },
+                      {
+                        "op": "read",
+                        "channel": 1
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "op": "interact",
+                "args": [
+                  {
+                    "op": "read",
+                    "channel": 2
+                  },
+                  {
+                    "op": "interact",
+                    "args": [
+                      {
+                        "op": "read",
+                        "channel": 3
+                      },
+                      {
+                        "op": "read",
+                        "channel": 3
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "opaque_program": "MERGE<SEM<q0,SEM<q1,q1>>,SEM<q2,SEM<q3,q3>>>",
+          "training_cases": 6,
+          "human_quantity_name": null
+        },
+        "inherited_linear_invariant": {
+          "invariant_id": "PHX-69cb5d81c98f391b",
+          "invariant_family": "LF0",
+          "expression": {
+            "op": "combine",
+            "args": [
+              {
+                "op": "interact",
+                "args": [
+                  {
+                    "op": "read",
+                    "channel": 0
+                  },
+                  {
+                    "op": "read",
+                    "channel": 1
+                  }
+                ]
+              },
+              {
+                "op": "interact",
+                "args": [
+                  {
+                    "op": "read",
+                    "channel": 2
+                  },
+                  {
+                    "op": "read",
+                    "channel": 3
+                  }
+                ]
+              }
+            ]
+          },
+          "opaque_program": "MERGE<SEM<q0,q1>,SEM<q2,q3>>",
+          "training_cases": 6,
+          "human_quantity_name": null
+        },
+        "collision_training_cases": 6
+      },
+      "body_training_cases": 5,
+      "angular_collision_training_cases": 6
+    },
+    "proofs": {
+      "rigid_response": {
+        "proof_id": "V27-PROOF-RIGID-AGGREGATE-AND-ANGULAR-RESPONSE",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_point_aggregate",
+            "passed": true,
+            "evidence": "only AGG<Q0,MERGE<SEM<Q1,Q1>,SEM<Q2,Q2>>> fits every response"
+          },
+          {
+            "obligation_id": "universal_positive_aggregate",
+            "passed": true,
+            "evidence": "positive point weights times sums of coordinate squares produce a nonnegative aggregate"
+          },
+          {
+            "obligation_id": "unique_angular_quantity_weight",
+            "passed": true,
+            "evidence": "only aggregate-times-state changes exactly by the supplied action"
+          },
+          {
+            "obligation_id": "universal_angular_response_identity",
+            "passed": true,
+            "evidence": "AGG*DELTA(state)=action for every positive nonzero aggregate"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "experiment_id": "SB-0",
+            "aggregate": {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 1
+            },
+            "predicted": {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            "observed": {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 3
+            },
+            "quantity_change": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            "action": {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SB-1",
+            "aggregate": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            "predicted": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "quantity_change": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            "action": {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SB-2",
+            "aggregate": {
+              "positive": 9,
+              "negative": 0,
+              "denominator": 1
+            },
+            "predicted": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 6
+            },
+            "observed": {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 6
+            },
+            "quantity_change": {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            },
+            "action": {
+              "positive": 0,
+              "negative": 3,
+              "denominator": 1
+            },
+            "passed": true
+          }
+        ]
+      },
+      "parallel_axis": {
+        "proof_id": "V27-PROOF-PARALLEL-AXIS-DECOMPOSITION",
+        "passed": true,
+        "universal_statement": "the selected sum of weighted squared distances decomposes into center-relative aggregate plus total weight times squared center offset",
+        "derivation": "expand (r_cm+d)^2 and cancel the center-relative first moment",
+        "hidden_replay": [
+          {
+            "case_id": "PA-0",
+            "origin": "3",
+            "centered": "4/3",
+            "offset": "5/3",
+            "passed": true
+          },
+          {
+            "case_id": "PA-1",
+            "origin": "4",
+            "centered": "10/3",
+            "offset": "2/3",
+            "passed": true
+          },
+          {
+            "case_id": "PA-2",
+            "origin": "9",
+            "centered": "6",
+            "offset": "3",
+            "passed": true
+          },
+          {
+            "case_id": "PA-3",
+            "origin": "9",
+            "centered": "35/4",
+            "offset": "1/4",
+            "passed": true
+          }
+        ],
+        "learner_was_given_theorem_name": false
+      },
+      "angular_collision": {
+        "proof_id": "V27-PROOF-ANGULAR-COLLISION-DUAL-CONSERVATION",
+        "passed": true,
+        "universal_statement": "the V25 collision constructor transfers from translational weights to discovered rigid aggregates",
+        "hidden_replay": [
+          {
+            "experiment_id": "SAC-0",
+            "programs_passed": true,
+            "linear_passed": true,
+            "quadratic_passed": true
+          },
+          {
+            "experiment_id": "SAC-1",
+            "programs_passed": true,
+            "linear_passed": true,
+            "quadratic_passed": true
+          },
+          {
+            "experiment_id": "SAC-2",
+            "programs_passed": true,
+            "linear_passed": true,
+            "quadratic_passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "omit_point_weight",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-0",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 3
+          },
+          "action": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 3
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        }
+      },
+      {
+        "mutation": "omit_second_coordinate",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-0",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 3
+          },
+          "action": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 3
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        }
+      },
+      {
+        "mutation": "square_point_weight",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-0",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 3
+          },
+          "action": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 3
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        }
+      },
+      {
+        "mutation": "omit_aggregate_from_angular_quantity",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SB-0",
+          "points": [
+            {
+              "channels": [
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            },
+            {
+              "channels": [
+                {
+                  "positive": 2,
+                  "negative": 0,
+                  "denominator": 1
+                },
+                {
+                  "positive": 0,
+                  "negative": 1,
+                  "denominator": 1
+                },
+                {
+                  "positive": 1,
+                  "negative": 0,
+                  "denominator": 1
+                }
+              ],
+              "human_channel_names": null
+            }
+          ],
+          "before_state": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 3
+          },
+          "action": {
+            "positive": 3,
+            "negative": 0,
+            "denominator": 1
+          },
+          "after_state": {
+            "positive": 2,
+            "negative": 0,
+            "denominator": 3
+          },
+          "human_formula": null,
+          "human_quantity_names": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v26_planar_rotation_dependency_reverified",
+        "passed": true
+      },
+      {
+        "obligation_id": "rigid_body_rows_are_anonymous",
+        "passed": true
+      },
+      {
+        "obligation_id": "aggregate_search_is_nontrivial",
+        "passed": true
+      },
+      {
+        "obligation_id": "unique_rigid_aggregate_and_angular_response",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_unseen_bodies_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "parallel_axis_decomposition_is_proved",
+        "passed": true
+      },
+      {
+        "obligation_id": "angular_collision_programs_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "rotational_linear_and_quadratic_totals_conserve",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_rigid_body_mutations_are_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "mechanics_scope_graph_forbids_false_completion",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_gap_is_selected_by_prerequisite_value",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_transformer_regression_or_inertia_formula_is_learner_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_dynamics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 7,
+      "total_domains": 15,
+      "completion_ratio": 0.4666666666666667,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M08:continuous_time_dynamics",
+      "selection_reason": "continuous limits are prerequisite for differential equations, oscillations, orbital laws, and variational mechanics"
+    },
+    "research_registry": {
+      "naming_stage": "post_proof_only",
+      "supplied_to_learner": false,
+      "relations": [
+        {
+          "symbol": "I_R",
+          "name": "点集转动惯量",
+          "translation": "sum_i m_i*(x_i^2+y_i^2)",
+          "program_id": "INA-11241b2c016b09c1"
+        },
+        {
+          "symbol": "L_B",
+          "name": "刚体角动量",
+          "translation": "I_R*omega",
+          "program_id": "ANQ-6d01c5c03ab4bd63"
+        },
+        {
+          "symbol": "E_B2",
+          "name": "二倍转动动能",
+          "translation": "I_R*omega^2",
+          "program_id": "PHX-10ce2586bbc39554"
+        }
+      ]
+    },
+    "posthoc_translation": {
+      "aggregate": "I=sum_i m_i*r_i^2, fixed-axis moment of inertia",
+      "response": "Delta omega=angular impulse/I",
+      "angular_quantity": "L=I*omega",
+      "quadratic_quantity": "I*omega^2, twice rotational kinetic energy",
+      "parallel_axis": "I_O=I_CM+M*d^2"
+    },
+    "limitations": [
+      "V27 represents planar point-mass rigid bodies about a fixed axis, not general three-dimensional rigid bodies.",
+      "Body experiments and angular collisions are exact synthetic oracle data, not sensor measurements.",
+      "Rigidity is assumed in the observation generator rather than autonomously derived from inter-particle constraints.",
+      "Continuous time, differential equations, constraints, oscillations, gravity, variational mechanics, continua, and relativistic limits remain missing.",
+      "Accordingly the capability controller explicitly refuses the claim that complete mechanics has been discovered."
+    ]
+  },
+  "capability_change": {
+    "before": "V26 had planar point rotation but no composite-body inertia",
+    "after": "V27 discovers point-set rotational inertia, angular response, angular collision invariants, and a strict mechanics completion controller",
+    "inertia_formula_supplied_to_learner": false
+  },
+  "claim": {
+    "achieved": "verified fixed-axis point-rigid-body mechanics and explicit selection of continuous-time dynamics as the next prerequisite gap",
+    "not_claimed": "complete mechanics; eight declared mechanics domains remain unverified"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v27/success/rigid_body_latest.json",
+    "mistake_room": "artifacts/physics/v27/mistakes/rejected_rigid_mutations.jsonl",
+    "accepted_programs": 5,
+    "rejected_mutations": 4
+  },
+  "content_digest": "b3ad112cda167477c83b92f963e16a9212d88ae7c34f38670744dc5ba643917c"
+}

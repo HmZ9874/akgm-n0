@@ -1,0 +1,1830 @@
+{
+  "report_version": "autonomous-math-discovery-v19.0",
+  "run_id": "RUN-autonomous-math-v19-20260821T015210423011Z",
+  "created_at": "2026-08-21T01:52:10.423011Z",
+  "verdict": "anonymous_math_discovery_with_universal_proofs_passed",
+  "acceptance": {
+    "benchmark_version": "autonomous-math-discovery-v19.0",
+    "passed": true,
+    "classification": "anonymous_operation_to_conjecture_falsification_universal_proof_and_concept_induction",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "discovery": {
+      "programs_generated": 4608,
+      "behavior_classes": 55,
+      "expressions_enumerated": 280,
+      "operation_program": {
+        "substrate": "anonymous_counter_transfer_v10",
+        "initial_registers": [
+          "input_0",
+          "input_1",
+          0,
+          0
+        ],
+        "program": {
+          "while_nonempty": 0,
+          "body": [
+            {
+              "op": "decrement_one",
+              "register": 0
+            },
+            {
+              "while_nonempty": 3,
+              "body": [
+                {
+                  "op": "decrement_one",
+                  "register": 3
+                },
+                {
+                  "op": "increment_one",
+                  "register": 1
+                }
+              ]
+            },
+            {
+              "while_nonempty": 1,
+              "body": [
+                {
+                  "op": "decrement_one",
+                  "register": 1
+                },
+                {
+                  "op": "increment_one",
+                  "register": 2
+                },
+                {
+                  "op": "increment_one",
+                  "register": 3
+                }
+              ]
+            }
+          ]
+        },
+        "output_register": 2
+      },
+      "human_operation_name_given_during_search": false,
+      "conjectures_generated": 80,
+      "falsification_candidates_generated": 33
+    },
+    "operation_proof": {
+      "verifier_version": "strict-counter-invariant-verifier-v10.1",
+      "passed": true,
+      "semantic_id": "STRICT-FSEM-82df58ba4ce6f41c",
+      "posthoc_name": "自然数乘法（证明后命名）",
+      "universal_statement": "for every x,y in N, the selected counter program halts and returns x*y",
+      "derived_normal_form": "x*y",
+      "obligations": [
+        {
+          "obligation_id": "output_uses_zero_initialized_accumulator",
+          "passed": true,
+          "evidence": "R2 starts at zero"
+        },
+        {
+          "obligation_id": "one_scratch_register_available",
+          "passed": true,
+          "evidence": "scratch=3"
+        },
+        {
+          "obligation_id": "zero_input_base_case",
+          "passed": true,
+          "evidence": "when x=0 the zero-initialized output is returned"
+        },
+        {
+          "obligation_id": "first_phase_control",
+          "passed": true,
+          "evidence": "the first step leaves x-1 control marks"
+        },
+        {
+          "obligation_id": "first_phase_accumulation",
+          "passed": true,
+          "evidence": "the first step moves one complete y quantity into the accumulator"
+        },
+        {
+          "obligation_id": "inductive_control_decrease",
+          "passed": true,
+          "evidence": "for t>=1, control changes from x-t to x-(t+1)"
+        },
+        {
+          "obligation_id": "inductive_carrier_phase",
+          "passed": true,
+          "evidence": "the discovered carrier layout repeats after every later step"
+        },
+        {
+          "obligation_id": "inductive_accumulation",
+          "passed": true,
+          "evidence": "accumulator changes from t*y to (t+1)*y"
+        },
+        {
+          "obligation_id": "phase_base_case",
+          "passed": true,
+          "evidence": "at t=1 the inferred steady phase has accumulator=y"
+        },
+        {
+          "obligation_id": "natural_termination",
+          "passed": true,
+          "evidence": "control is a natural counter and decreases exactly once per outer iteration"
+        },
+        {
+          "obligation_id": "terminal_normal_form",
+          "passed": true,
+          "evidence": "at t=x the accumulator is x*y"
+        },
+        {
+          "obligation_id": "independent_law_replay",
+          "passed": true,
+          "evidence": "{\"annihilator\": 0, \"associative\": true, \"commutative\": true, \"depends_on_both_inputs\": true, \"has_cross_input_interaction\": true, \"identity\": 1, \"law_count\": 9, \"left_distributive_over_previously_verified_combine\": true, \"monotone\": true, \"promotable\": true, \"right_distributive_over_previously_verified_combine\": true}"
+        },
+        {
+          "obligation_id": "sealed_numeric_replay",
+          "passed": true,
+          "evidence": "six cases outside the search probe grid"
+        }
+      ],
+      "hidden_replay": [
+        {
+          "inputs": [
+            0,
+            17
+          ],
+          "output": 0,
+          "oracle_free_expected_from_proven_normal_form": 0,
+          "passed": true
+        },
+        {
+          "inputs": [
+            1,
+            29
+          ],
+          "output": 29,
+          "oracle_free_expected_from_proven_normal_form": 29,
+          "passed": true
+        },
+        {
+          "inputs": [
+            7,
+            11
+          ],
+          "output": 77,
+          "oracle_free_expected_from_proven_normal_form": 77,
+          "passed": true
+        },
+        {
+          "inputs": [
+            13,
+            5
+          ],
+          "output": 65,
+          "oracle_free_expected_from_proven_normal_form": 65,
+          "passed": true
+        },
+        {
+          "inputs": [
+            21,
+            21
+          ],
+          "output": 441,
+          "oracle_free_expected_from_proven_normal_form": 441,
+          "passed": true
+        },
+        {
+          "inputs": [
+            37,
+            9
+          ],
+          "output": 333,
+          "oracle_free_expected_from_proven_normal_form": 333,
+          "passed": true
+        }
+      ]
+    },
+    "theorem_proofs": [
+      {
+        "theorem_id": "MC-114501ded8727fa7",
+        "passed": true,
+        "opaque_statement": "SEM<v0,0> = SEM<0,SEM<v1,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-5395d462d324e0f9",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v1>,v2> = SEM<v0,SEM<v1,v2>>",
+        "left_normal_form": "v0*v1*v2",
+        "right_normal_form": "v0*v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-23aa599740902601",
+        "passed": true,
+        "opaque_statement": "SEM<v0,0> = SEM<SEM<0,v1>,v2>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-9bafd78e5ae15093",
+        "passed": true,
+        "opaque_statement": "SEM<v0,SEM<v1,v2>> = SEM<v0,SEM<v2,v1>>",
+        "left_normal_form": "v0*v1*v2",
+        "right_normal_form": "v0*v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4743a1c89637bde2",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<SEM<v1,v2>,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-e85389640fb756fb",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v1>,v2> = SEM<SEM<v0,v2>,v1>",
+        "left_normal_form": "v0*v1*v2",
+        "right_normal_form": "v0*v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-8e5f98eee499d2c2",
+        "passed": true,
+        "opaque_statement": "SEM<v0,0> = SEM<v1,SEM<v2,0>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-be52def8fe260f18",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<SEM<0,v1>,v2>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-bfef38fc5cf55b9a",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<0,SEM<v1,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-cac7793247e1fa52",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<SEM<v1,0>,v2>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-cbf1506f33abe89b",
+        "passed": true,
+        "opaque_statement": "SEM<v0,0> = SEM<v1,SEM<0,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-d75c05075c9f9378",
+        "passed": true,
+        "opaque_statement": "SEM<v0,0> = SEM<SEM<v1,0>,v2>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-e363810458058243",
+        "passed": true,
+        "opaque_statement": "SEM<v0,0> = SEM<SEM<v1,v2>,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-eca3d1cbce99c066",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<v1,SEM<0,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-ed43a28a9b9388e5",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<v1,SEM<v2,0>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-049c2956bf6c1441",
+        "passed": true,
+        "opaque_statement": "SEM<0,SEM<v0,0>> = SEM<v1,SEM<0,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-0d91d8c18bababf0",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,0>,0> = SEM<SEM<v1,v2>,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-0edbea9578c3b764",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<0,v0>,v1> = SEM<SEM<0,v2>,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-101377fe35e00691",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v0>,0> = SEM<SEM<v1,v2>,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-1402141b5a8b5ea9",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<0,v0>,v0> = SEM<v1,SEM<0,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-c0525c2300330d0f",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v2> = SEM<v2,v1>",
+        "left_normal_form": "v1*v2",
+        "right_normal_form": "v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-c7bdc6b628a72fe1",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v1> = SEM<v1,v0>",
+        "left_normal_form": "v0*v1",
+        "right_normal_form": "v0*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-fe0b182c0478ba9e",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v2> = SEM<v2,v0>",
+        "left_normal_form": "v0*v2",
+        "right_normal_form": "v0*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-14865f42bb07545e",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<v2,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-10b64b55d7317990",
+        "passed": true,
+        "opaque_statement": "SEM<v0,SEM<v0,v1>> = SEM<v0,SEM<v1,v0>>",
+        "left_normal_form": "v0^2*v1",
+        "right_normal_form": "v0^2*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-3de79e97988782d8",
+        "passed": true,
+        "opaque_statement": "SEM<v1,SEM<v1,v2>> = SEM<v1,SEM<v2,v1>>",
+        "left_normal_form": "v1^2*v2",
+        "right_normal_form": "v1^2*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4e0251d1ac8cfde0",
+        "passed": true,
+        "opaque_statement": "SEM<v0,SEM<v0,v2>> = SEM<v0,SEM<v2,v0>>",
+        "left_normal_form": "v0^2*v2",
+        "right_normal_form": "v0^2*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-0aee297a2107e7cd",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v2> = SEM<v1,SEM<1,v2>>",
+        "left_normal_form": "v1*v2",
+        "right_normal_form": "v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-134a48afe213741f",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v1> = SEM<v0,SEM<v1,1>>",
+        "left_normal_form": "v0*v1",
+        "right_normal_form": "v0*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-1eff839ba8e4b069",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v2> = SEM<SEM<v0,1>,v2>",
+        "left_normal_form": "v0*v2",
+        "right_normal_form": "v0*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-19819525ddb3eb31",
+        "passed": true,
+        "opaque_statement": "0 = SEM<SEM<v0,0>,v2>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-1c842e753cec40d8",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v0>,v1> = SEM<SEM<v0,v1>,v0>",
+        "left_normal_form": "v0^2*v1",
+        "right_normal_form": "v0^2*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-684a4fa255177d97",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v1,v1>,v2> = SEM<v1,SEM<v1,v2>>",
+        "left_normal_form": "v1^2*v2",
+        "right_normal_form": "v1^2*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-cf2e843d523743ed",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v0>,v2> = SEM<SEM<v0,v2>,v0>",
+        "left_normal_form": "v0^2*v2",
+        "right_normal_form": "v0^2*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2857845839910107",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v2> = SEM<SEM<v1,1>,v2>",
+        "left_normal_form": "v1*v2",
+        "right_normal_form": "v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-3456795b3aeead30",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v1> = SEM<1,SEM<v0,v1>>",
+        "left_normal_form": "v0*v1",
+        "right_normal_form": "v0*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-20327b48ff6c609e",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v2> = SEM<SEM<v0,v2>,1>",
+        "left_normal_form": "v0*v2",
+        "right_normal_form": "v0*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-21c2e5c2fe1265b9",
+        "passed": true,
+        "opaque_statement": "SEM<0,v0> = SEM<v1,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-aafe23851b4f61e1",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v0>,v1> = SEM<v0,SEM<v0,v1>>",
+        "left_normal_form": "v0^2*v1",
+        "right_normal_form": "v0^2*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-81ebe178ca695ce2",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v1,v1>,v2> = SEM<SEM<v1,v2>,v1>",
+        "left_normal_form": "v1^2*v2",
+        "right_normal_form": "v1^2*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-dc0ccc22d12a9b1f",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v0>,v2> = SEM<v0,SEM<v0,v2>>",
+        "left_normal_form": "v0^2*v2",
+        "right_normal_form": "v0^2*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-37557752f1a0a146",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v2> = SEM<v1,SEM<v2,1>>",
+        "left_normal_form": "v1*v2",
+        "right_normal_form": "v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-383494a14a9ffb9e",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v1> = SEM<SEM<1,v0>,v1>",
+        "left_normal_form": "v0*v1",
+        "right_normal_form": "v0*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-9fd113b5ffe4d7b6",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v2> = SEM<SEM<1,v0>,v2>",
+        "left_normal_form": "v0*v2",
+        "right_normal_form": "v0*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2595a5d3dcee97d0",
+        "passed": true,
+        "opaque_statement": "0 = SEM<v0,SEM<0,v2>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-5fd4159eb06dac5d",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v2> = SEM<SEM<1,v1>,v2>",
+        "left_normal_form": "v1*v2",
+        "right_normal_form": "v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-449d6c4079efa9c4",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v1> = SEM<v0,SEM<1,v1>>",
+        "left_normal_form": "v0*v1",
+        "right_normal_form": "v0*v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-ad61ac2b3d9b7b64",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v2> = SEM<v0,SEM<v2,1>>",
+        "left_normal_form": "v0*v2",
+        "right_normal_form": "v0*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2966397f9c0c8f9b",
+        "passed": true,
+        "opaque_statement": "0 = SEM<v1,SEM<v2,0>>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-940b0859493dd6bd",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v2> = SEM<SEM<v1,v2>,1>",
+        "left_normal_form": "v1*v2",
+        "right_normal_form": "v1*v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2544ef16ed20b61a",
+        "passed": true,
+        "opaque_statement": "v0 = SEM<v0,1>",
+        "left_normal_form": "v0",
+        "right_normal_form": "v0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-994a2011dc2893ba",
+        "passed": true,
+        "opaque_statement": "v2 = SEM<1,v2>",
+        "left_normal_form": "v2",
+        "right_normal_form": "v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-a13a006254ac6704",
+        "passed": true,
+        "opaque_statement": "v1 = SEM<v1,1>",
+        "left_normal_form": "v1",
+        "right_normal_form": "v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-28f4391c0fa31c37",
+        "passed": true,
+        "opaque_statement": "0 = SEM<v1,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-077772706da5b25d",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v0> = SEM<v0,SEM<v0,1>>",
+        "left_normal_form": "v0^2",
+        "right_normal_form": "v0^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-10c43d10077aca27",
+        "passed": true,
+        "opaque_statement": "SEM<v2,v2> = SEM<SEM<v2,1>,v2>",
+        "left_normal_form": "v2^2",
+        "right_normal_form": "v2^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2393bd8074fcda5b",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v1> = SEM<v1,SEM<v1,1>>",
+        "left_normal_form": "v1^2",
+        "right_normal_form": "v1^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2256939f43d2a087",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v1,v1>,v1> = SEM<v1,SEM<v1,v1>>",
+        "left_normal_form": "v1^3",
+        "right_normal_form": "v1^3",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-a9287b4d406e0e5d",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v2,v2>,v2> = SEM<v2,SEM<v2,v2>>",
+        "left_normal_form": "v2^3",
+        "right_normal_form": "v2^3",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-dd3cf9459791825a",
+        "passed": true,
+        "opaque_statement": "SEM<SEM<v0,v0>,v0> = SEM<v0,SEM<v0,v0>>",
+        "left_normal_form": "v0^3",
+        "right_normal_form": "v0^3",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-e496a98056101327",
+        "passed": true,
+        "opaque_statement": "v0 = SEM<1,v0>",
+        "left_normal_form": "v0",
+        "right_normal_form": "v0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-ad208cc3567525c1",
+        "passed": true,
+        "opaque_statement": "v2 = SEM<v2,1>",
+        "left_normal_form": "v2",
+        "right_normal_form": "v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-bffdaa26eb942496",
+        "passed": true,
+        "opaque_statement": "v1 = SEM<1,v1>",
+        "left_normal_form": "v1",
+        "right_normal_form": "v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2948388bc15946db",
+        "passed": true,
+        "opaque_statement": "0 = SEM<v0,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-278bed3c69e64886",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v0> = SEM<v0,SEM<1,v0>>",
+        "left_normal_form": "v0^2",
+        "right_normal_form": "v0^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-10ece463a83e04aa",
+        "passed": true,
+        "opaque_statement": "SEM<v2,v2> = SEM<SEM<v2,v2>,1>",
+        "left_normal_form": "v2^2",
+        "right_normal_form": "v2^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2caf672101e61852",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v1> = SEM<SEM<v1,v1>,1>",
+        "left_normal_form": "v1^2",
+        "right_normal_form": "v1^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-5c6b0e37c4e0170c",
+        "passed": true,
+        "opaque_statement": "v0 = SEM<SEM<1,v0>,1>",
+        "left_normal_form": "v0",
+        "right_normal_form": "v0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2dc25e1f839c971e",
+        "passed": true,
+        "opaque_statement": "v2 = SEM<1,SEM<1,v2>>",
+        "left_normal_form": "v2",
+        "right_normal_form": "v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-2cb02f0530dc255b",
+        "passed": true,
+        "opaque_statement": "v1 = SEM<SEM<1,v1>,1>",
+        "left_normal_form": "v1",
+        "right_normal_form": "v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-330e20986714b413",
+        "passed": true,
+        "opaque_statement": "0 = SEM<0,v2>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-3d8ec83b47fbd902",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v0> = SEM<SEM<v0,1>,v0>",
+        "left_normal_form": "v0^2",
+        "right_normal_form": "v0^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4a3e60534ab42684",
+        "passed": true,
+        "opaque_statement": "SEM<v2,v2> = SEM<v2,SEM<1,v2>>",
+        "left_normal_form": "v2^2",
+        "right_normal_form": "v2^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4fe96c354d8da475",
+        "passed": true,
+        "opaque_statement": "SEM<v1,v1> = SEM<SEM<v1,1>,v1>",
+        "left_normal_form": "v1^2",
+        "right_normal_form": "v1^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-711a76c6c23683ec",
+        "passed": true,
+        "opaque_statement": "v0 = SEM<v0,SEM<1,1>>",
+        "left_normal_form": "v0",
+        "right_normal_form": "v0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4945a4fd372bc6d4",
+        "passed": true,
+        "opaque_statement": "v2 = SEM<v2,SEM<1,1>>",
+        "left_normal_form": "v2",
+        "right_normal_form": "v2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4ae3e7046ce13c32",
+        "passed": true,
+        "opaque_statement": "v1 = SEM<v1,SEM<1,1>>",
+        "left_normal_form": "v1",
+        "right_normal_form": "v1",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-43b336d9742baf03",
+        "passed": true,
+        "opaque_statement": "0 = SEM<v2,0>",
+        "left_normal_form": "0",
+        "right_normal_form": "0",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-4a793c63e278bbd1",
+        "passed": true,
+        "opaque_statement": "SEM<v0,v0> = SEM<SEM<1,v0>,v0>",
+        "left_normal_form": "v0^2",
+        "right_normal_form": "v0^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      },
+      {
+        "theorem_id": "MC-78b17fa52d7202a3",
+        "passed": true,
+        "opaque_statement": "SEM<v2,v2> = SEM<1,SEM<v2,v2>>",
+        "left_normal_form": "v2^2",
+        "right_normal_form": "v2^2",
+        "proof_method": "exact_symbolic_normalization_after_independent_semantic_proof",
+        "finite_probe_is_proof": false
+      }
+    ],
+    "posthoc_law_coverage": {
+      "posthoc_identity": true,
+      "posthoc_annihilator": true,
+      "posthoc_commutativity": true,
+      "posthoc_associativity": true
+    },
+    "rejected_conjectures": [
+      {
+        "conjecture_id": "MF-4a5a106b6c9f66e5",
+        "opaque_statement": "v0 = SEM<v0,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 2,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 2,
+          "right": 4
+        }
+      },
+      {
+        "conjecture_id": "MF-796f63838d0ecd52",
+        "opaque_statement": "v0 = SEM<v0,0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-7cc0f4df45ea1de8",
+        "opaque_statement": "v0 = SEM<0,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-cfb652d94ad2adbe",
+        "opaque_statement": "v1 = SEM<v1,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 2,
+            "v2": 0
+          },
+          "left": 2,
+          "right": 4
+        }
+      },
+      {
+        "conjecture_id": "MF-9a418b7a7bfdc796",
+        "opaque_statement": "v1 = SEM<v1,0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-86a0e9f5dbf96d80",
+        "opaque_statement": "v1 = SEM<0,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-2c82ecc958669fb6",
+        "opaque_statement": "v2 = SEM<v2,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 2
+          },
+          "left": 2,
+          "right": 4
+        }
+      },
+      {
+        "conjecture_id": "MF-b59c83b8db878968",
+        "opaque_statement": "v2 = SEM<v2,0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-6a53ee210b51475d",
+        "opaque_statement": "v2 = SEM<0,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-bb8e25f5b2bd489b",
+        "opaque_statement": "SEM<v0,v0> = SEM<v0,0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-9271cb3cf2c8ec2e",
+        "opaque_statement": "SEM<v0,v0> = SEM<v0,1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 2,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 4,
+          "right": 2
+        }
+      },
+      {
+        "conjecture_id": "MF-dffad1fd0bcd3226",
+        "opaque_statement": "SEM<v0,v0> = SEM<0,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-7d4103b322732bc5",
+        "opaque_statement": "SEM<v0,v0> = SEM<1,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 2,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 4,
+          "right": 2
+        }
+      },
+      {
+        "conjecture_id": "MF-34831ab97c1cc0f3",
+        "opaque_statement": "SEM<v0,0> = SEM<v0,1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-ffedc1229eee7d32",
+        "opaque_statement": "SEM<v0,0> = SEM<1,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-bb92b5adb2e03114",
+        "opaque_statement": "SEM<v0,1> = SEM<0,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-4b0d1b3d85df7aa2",
+        "opaque_statement": "SEM<v1,v1> = SEM<v1,0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-a98a08a86873442e",
+        "opaque_statement": "SEM<v1,v1> = SEM<v1,1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 2,
+            "v2": 0
+          },
+          "left": 4,
+          "right": 2
+        }
+      },
+      {
+        "conjecture_id": "MF-1256191013aa634e",
+        "opaque_statement": "SEM<v1,v1> = SEM<0,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-722595af5535684b",
+        "opaque_statement": "SEM<v1,v1> = SEM<1,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 2,
+            "v2": 0
+          },
+          "left": 4,
+          "right": 2
+        }
+      },
+      {
+        "conjecture_id": "MF-126949d6c92d1a0f",
+        "opaque_statement": "SEM<v1,0> = SEM<v1,1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-79ad058f7b386564",
+        "opaque_statement": "SEM<v1,0> = SEM<1,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-4debfcd0ddcf0be7",
+        "opaque_statement": "SEM<v1,1> = SEM<0,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-3b8daf6a22ecb672",
+        "opaque_statement": "SEM<v2,v2> = SEM<v2,0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-19aa09bb2d47a24b",
+        "opaque_statement": "SEM<v2,v2> = SEM<v2,1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 2
+          },
+          "left": 4,
+          "right": 2
+        }
+      },
+      {
+        "conjecture_id": "MF-e3c857ddfbe6b6b8",
+        "opaque_statement": "SEM<v2,v2> = SEM<0,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-9f91587d93a622d1",
+        "opaque_statement": "SEM<v2,v2> = SEM<1,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 2
+          },
+          "left": 4,
+          "right": 2
+        }
+      },
+      {
+        "conjecture_id": "MF-9def7a255a6b58f7",
+        "opaque_statement": "SEM<v2,0> = SEM<v2,1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-bb11369cddc7163b",
+        "opaque_statement": "SEM<v2,0> = SEM<1,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-9ce521dec0c75d2a",
+        "opaque_statement": "SEM<v2,1> = SEM<0,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 1,
+          "right": 0
+        }
+      },
+      {
+        "conjecture_id": "MF-8fb9885c9d315855",
+        "opaque_statement": "SEM<0,v0> = SEM<1,v0>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 1,
+            "v1": 0,
+            "v2": 0
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-9bdec52b17899462",
+        "opaque_statement": "SEM<0,v1> = SEM<1,v1>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 1,
+            "v2": 0
+          },
+          "left": 0,
+          "right": 1
+        }
+      },
+      {
+        "conjecture_id": "MF-125eb41704024777",
+        "opaque_statement": "SEM<0,v2> = SEM<1,v2>",
+        "rejected": true,
+        "counterexample": {
+          "environment": {
+            "v0": 0,
+            "v1": 0,
+            "v2": 1
+          },
+          "left": 0,
+          "right": 1
+        }
+      }
+    ],
+    "induced_concept": {
+      "anonymous_definition": "n>1 has_internal_witness iff there exist 1<a<n and 1<b<n with SEM<a,b>=n",
+      "source_values": [
+        {
+          "value": 1,
+          "classification": "boundary",
+          "witness": null
+        },
+        {
+          "value": 3,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 5,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 7,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 11,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 13,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 17,
+          "classification": "no_internal_witness",
+          "witness": null
+        }
+      ],
+      "generated_values": [
+        {
+          "value": 1,
+          "classification": "boundary",
+          "witness": null
+        },
+        {
+          "value": 2,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 3,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 4,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            2
+          ]
+        },
+        {
+          "value": 5,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 6,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            3
+          ]
+        },
+        {
+          "value": 7,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 8,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            4
+          ]
+        },
+        {
+          "value": 9,
+          "classification": "has_internal_witness",
+          "witness": [
+            3,
+            3
+          ]
+        },
+        {
+          "value": 10,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            5
+          ]
+        },
+        {
+          "value": 11,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 12,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            6
+          ]
+        },
+        {
+          "value": 13,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 14,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            7
+          ]
+        },
+        {
+          "value": 15,
+          "classification": "has_internal_witness",
+          "witness": [
+            3,
+            5
+          ]
+        },
+        {
+          "value": 16,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            8
+          ]
+        },
+        {
+          "value": 17,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 18,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            9
+          ]
+        },
+        {
+          "value": 19,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 20,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            10
+          ]
+        },
+        {
+          "value": 21,
+          "classification": "has_internal_witness",
+          "witness": [
+            3,
+            7
+          ]
+        },
+        {
+          "value": 22,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            11
+          ]
+        },
+        {
+          "value": 23,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 24,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            12
+          ]
+        },
+        {
+          "value": 25,
+          "classification": "has_internal_witness",
+          "witness": [
+            5,
+            5
+          ]
+        },
+        {
+          "value": 26,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            13
+          ]
+        },
+        {
+          "value": 27,
+          "classification": "has_internal_witness",
+          "witness": [
+            3,
+            9
+          ]
+        },
+        {
+          "value": 28,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            14
+          ]
+        },
+        {
+          "value": 29,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 30,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            15
+          ]
+        },
+        {
+          "value": 31,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 32,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            16
+          ]
+        },
+        {
+          "value": 33,
+          "classification": "has_internal_witness",
+          "witness": [
+            3,
+            11
+          ]
+        },
+        {
+          "value": 34,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            17
+          ]
+        },
+        {
+          "value": 35,
+          "classification": "has_internal_witness",
+          "witness": [
+            5,
+            7
+          ]
+        },
+        {
+          "value": 36,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            18
+          ]
+        },
+        {
+          "value": 37,
+          "classification": "no_internal_witness",
+          "witness": null
+        },
+        {
+          "value": 38,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            19
+          ]
+        },
+        {
+          "value": 39,
+          "classification": "has_internal_witness",
+          "witness": [
+            3,
+            13
+          ]
+        },
+        {
+          "value": 40,
+          "classification": "has_internal_witness",
+          "witness": [
+            2,
+            20
+          ]
+        }
+      ],
+      "source_partition": {
+        "boundary": [
+          1
+        ],
+        "has_internal_witness": [],
+        "no_internal_witness": [
+          3,
+          5,
+          7,
+          11,
+          13,
+          17
+        ]
+      },
+      "generated_no_internal_witness": [
+        2,
+        3,
+        5,
+        7,
+        11,
+        13,
+        17,
+        19,
+        23,
+        29,
+        31,
+        37
+      ],
+      "posthoc_human_interpretation": {
+        "has_internal_witness": "合数",
+        "no_internal_witness": "素数",
+        "boundary": "定义边界（1 既不是素数也不是合数）"
+      },
+      "constructive_closure_theorem": "for all a,b>1, SEM<a,b> has the internal witness (a,b), because the proved semantic normal form is a*b"
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "operation_search_is_target_free",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_operation_has_universal_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "broad_law_coverage_and_at_least_twenty_conjectures",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_admitted_laws_are_universally_proven",
+        "passed": true
+      },
+      {
+        "obligation_id": "nearby_false_laws_receive_counterexamples",
+        "passed": true
+      },
+      {
+        "obligation_id": "source_sequence_is_conceptually_partitioned",
+        "passed": true
+      },
+      {
+        "obligation_id": "concept_transfers_to_unseen_values",
+        "passed": true
+      },
+      {
+        "obligation_id": "composite_witnesses_are_constructive",
+        "passed": true
+      },
+      {
+        "obligation_id": "one_is_kept_outside_both_factor_classes",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_names_are_posthoc_only",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_next_term_claim_is_made",
+        "passed": true
+      },
+      {
+        "obligation_id": "finite_probes_are_not_misreported_as_proofs",
+        "passed": true
+      }
+    ],
+    "limitations": [
+      "The universal theorem results are confined to natural numbers and expressions built from one discovered binary operation, 0, and 1.",
+      "The discovered operation and factor concept are human-known mathematics; this run does not claim mathematics new to humanity.",
+      "Expression generation is bounded to five syntax nodes, although accepted identities are proved for all natural inputs.",
+      "The supplied sequence is classified structurally; the system does not assert a uniquely determined next term."
+    ]
+  },
+  "capability_change": {
+    "before": "V18 planned executable programs for externally supplied bounded goals",
+    "after": "V19 autonomously discovers an anonymous operation, generates equations, falsifies wrong equations, universally proves surviving identities, and induces a reusable factor concept",
+    "next_term_prediction_used": false,
+    "human_math_name_supplied_to_learner": false
+  },
+  "claim": {
+    "achieved": "verified autonomous conjecture-falsification-proof-concept loop over a discovered natural-number operation",
+    "not_claimed": "mathematics new to humanity, unrestricted theorem proving, or modern-mathematics mastery"
+  },
+  "storage": {
+    "success_room": "artifacts/foundation/v19/success/autonomous_math_latest.json",
+    "mistake_room": "artifacts/foundation/v19/mistakes/rejected_conjectures.jsonl",
+    "proven_formula_records": 80,
+    "rejected_formula_records": 33
+  },
+  "content_digest": "8c149c3eb782666587bd7baaf43be1caacc0f78821843ed2c288240dc8d07cf6"
+}

@@ -1,0 +1,102 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://akgm.local/schemas/knowledge_record.schema.json",
+  "title": "AKGM-N0 knowledge ledger record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "knowledge_id",
+    "status",
+    "program_ast",
+    "parent_ids",
+    "evidence",
+    "valid_domain",
+    "provenance",
+    "human_interpretation"
+  ],
+  "properties": {
+    "schema_version": {"const": "knowledge-record-v0.1"},
+    "knowledge_id": {"type": "string", "pattern": "^K-[0-9]{6}$"},
+    "status": {
+      "enum": ["proposed", "fit_passed", "verified", "admitted", "bounded", "rejected"]
+    },
+    "program_ast": {"$ref": "#/$defs/program_node"},
+    "parent_ids": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "minLength": 1}
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "development_error",
+        "holdout_error",
+        "out_of_range_error",
+        "stability_pass_rate",
+        "counterexample_count",
+        "reuse_task_count",
+        "description_gain"
+      ],
+      "properties": {
+        "development_error": {"type": "number", "minimum": 0},
+        "holdout_error": {"type": "number", "minimum": 0},
+        "out_of_range_error": {"type": "number", "minimum": 0},
+        "stability_pass_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "counterexample_count": {"type": "integer", "minimum": 0},
+        "reuse_task_count": {"type": "integer", "minimum": 0},
+        "description_gain": {"type": "number"},
+        "search_cost_reduction": {"type": "number", "minimum": 0, "maximum": 1}
+      }
+    },
+    "valid_domain": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["machine_readable_constraints"],
+      "properties": {
+        "machine_readable_constraints": {"type": "array", "items": {"type": "object"}},
+        "notes": {"type": "string"}
+      }
+    },
+    "counterexample_artifact_ids": {
+      "type": "array",
+      "items": {"type": "string", "minLength": 1}
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["run_id", "code_hash", "data_hash", "config_hash", "verifier_hash"],
+      "properties": {
+        "run_id": {"type": "string", "pattern": "^RUN-[A-Za-z0-9._-]+$"},
+        "code_hash": {"$ref": "#/$defs/sha256"},
+        "data_hash": {"$ref": "#/$defs/sha256"},
+        "config_hash": {"$ref": "#/$defs/sha256"},
+        "verifier_hash": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "human_interpretation": {
+      "type": ["string", "null"],
+      "description": "Evaluator-side optional annotation; never used for admission."
+    }
+  },
+  "$defs": {
+    "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "program_node": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["op"],
+      "properties": {
+        "op": {"type": "string", "minLength": 1},
+        "args": {
+          "type": "array",
+          "items": {"$ref": "#/$defs/program_node"}
+        },
+        "value": {"type": "number"},
+        "offset": {"type": "integer"},
+        "parameter_slot": {"type": "integer", "minimum": 0}
+      }
+    }
+  }
+}
+

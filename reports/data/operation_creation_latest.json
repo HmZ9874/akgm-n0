@@ -1,0 +1,203 @@
+{
+  "report_version": "operation-creation-report-v0.1",
+  "run_id": "RUN-operation-creation-20260818T000203594670Z",
+  "created_at": "2026-08-18T00:02:03.608685Z",
+  "title": "可执行新计算操作创造实验",
+  "verdict": "conditionally_passed",
+  "claim_scope": "operation_creation_and_composition_only",
+  "architecture": "executable_program_synthesis_not_concept_completion",
+  "learner_received": {
+    "unordered_numeric_values": [
+      2.0,
+      8.0,
+      16.0,
+      64.0,
+      4.0
+    ],
+    "input_order_semantics": false,
+    "target_outputs": false,
+    "target_operation": false,
+    "natural_language_labels": false,
+    "base_operations": [
+      "r_value",
+      "r_add",
+      "r_subtract",
+      "r_compose"
+    ]
+  },
+  "creation_result": {
+    "operation_a": {
+      "operation_id": "ROP-aae84dafc26b265a",
+      "definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_value"
+          },
+          {
+            "op": "r_value"
+          }
+        ]
+      },
+      "human_interpretation": null,
+      "knowledge_id": "K-000001",
+      "knowledge_status": "bounded",
+      "observed_edges": [
+        {
+          "source": 2.0,
+          "target": 4.0
+        },
+        {
+          "source": 4.0,
+          "target": 8.0
+        },
+        {
+          "source": 8.0,
+          "target": 16.0
+        }
+      ]
+    },
+    "operation_b": {
+      "operation_id": "ROP-84b28990fa6f8e56",
+      "definition": {
+        "op": "r_add",
+        "args": [
+          {
+            "op": "r_add",
+            "args": [
+              {
+                "op": "r_value"
+              },
+              {
+                "op": "r_value"
+              }
+            ]
+          },
+          {
+            "op": "r_add",
+            "args": [
+              {
+                "op": "r_value"
+              },
+              {
+                "op": "r_value"
+              }
+            ]
+          }
+        ]
+      },
+      "human_interpretation": null,
+      "knowledge_id": "K-000002",
+      "knowledge_status": "bounded",
+      "created_from_operation_ids": [
+        "ROP-aae84dafc26b265a",
+        "ROP-aae84dafc26b265a"
+      ],
+      "observed_edges": [
+        {
+          "source": 2.0,
+          "target": 8.0
+        },
+        {
+          "source": 4.0,
+          "target": 16.0
+        },
+        {
+          "source": 16.0,
+          "target": 64.0
+        }
+      ]
+    },
+    "heldout_execution_replay": [
+      {
+        "input_value": -7.0,
+        "operation_a_output": -14.0,
+        "operation_b_output": -28.0,
+        "operation_a_matches_definition": true,
+        "operation_b_matches_definition": true,
+        "operations_have_distinct_behavior": true
+      },
+      {
+        "input_value": 0.0,
+        "operation_a_output": 0.0,
+        "operation_b_output": 0.0,
+        "operation_a_matches_definition": true,
+        "operation_b_matches_definition": true,
+        "operations_have_distinct_behavior": false
+      },
+      {
+        "input_value": 3.0,
+        "operation_a_output": 6.0,
+        "operation_b_output": 12.0,
+        "operation_a_matches_definition": true,
+        "operation_b_matches_definition": true,
+        "operations_have_distinct_behavior": true
+      },
+      {
+        "input_value": 11.0,
+        "operation_a_output": 22.0,
+        "operation_b_output": 44.0,
+        "operation_a_matches_definition": true,
+        "operation_b_matches_definition": true,
+        "operations_have_distinct_behavior": true
+      }
+    ]
+  },
+  "search": {
+    "programs_generated": 34,
+    "selected_candidate_id": "REL-aae84dafc26b265a",
+    "order_ablation_selected_same_candidate": true
+  },
+  "generated_concepts": [],
+  "generated_missing_values": [],
+  "post_hoc_evaluator_interpretation": {
+    "assigned_after_creation": true,
+    "operation_a": "add the input value to itself",
+    "operation_b": "apply operation A to the result of operation A"
+  },
+  "gates": [
+    {
+      "gate_id": "order_independent_creation",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "operation_a_has_observed_coverage",
+      "passed": true,
+      "actual": 3,
+      "threshold": 3
+    },
+    {
+      "gate_id": "operation_a_callable_by_opaque_id",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "operation_b_created_from_operation_a",
+      "passed": true,
+      "actual": "ROP-84b28990fa6f8e56",
+      "threshold": true
+    },
+    {
+      "gate_id": "operation_b_callable_and_behaviorally_distinct",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "independent_task_utility",
+      "passed": null,
+      "actual": null,
+      "threshold": true
+    }
+  ],
+  "ledger_event_count": 8,
+  "limitations": [
+    "Both new operations are derived from the supplied value, addition, subtraction, and composition substrate.",
+    "Behavioral replay proves executable identity, not usefulness on an independent task.",
+    "No missing value or concept is generated or admitted by this experiment.",
+    "This is internal operation creation, not a claim of previously unknown human mathematics."
+  ]
+}

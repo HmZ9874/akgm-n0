@@ -1,0 +1,28 @@
+{
+  "provider": "NASA Ames Prognostics Center of Excellence",
+  "dataset": "Randomized Battery Usage 2: Room Temperature Random Walk",
+  "landing_page": "https://data.nasa.gov/dataset/randomized-battery-usage-2-room-temperature-random-walk",
+  "official_resource_url": "https://data.nasa.gov/docs/legacy/ames/2.Battery_Uniform_Distribution_Discharge_Room_Temp_DataSet_2Post.zip",
+  "access_level": "public",
+  "downloaded_at_utc": "2026-08-21T19:16:09.495079+00:00",
+  "archive_sha256": "18bf47337577e07872919327a6ee994adc59e33fd2901d69c5911c26102837b8",
+  "archive_bytes": 120125009,
+  "rw3_sha256": "f396291daf142d0cf9b59c6fa1344adb4156e4259a6e1129a8486fda2cfa60a4",
+  "rw4_sha256": "8505a7734995c89487be9769403011d5643f0b025631b2cd707fa11f32177437",
+  "snapshot_sha256": "bf5adc7d3d3b6bd9ec40cdc2acd0f1822c385ef667eaa28698738f6826ddbdd3",
+  "trace_count": 100,
+  "partition_counts": {
+    "training": 40,
+    "validation": 20,
+    "future_holdout": 20,
+    "cross_cell_replication": 20
+  },
+  "official_experiment_summary": "Four 18650 Li-ion cells were repeatedly charged and discharged using randomized current sequences at room temperature, with reference cycles after fixed intervals.",
+  "posthoc_channel_translation": {
+    "Q0": "absolute measured current",
+    "Q1": "terminal voltage",
+    "Q2": "battery temperature",
+    "Q3": "elapsed pulse time"
+  },
+  "learner_received_translation": false
+}

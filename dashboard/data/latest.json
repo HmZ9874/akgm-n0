@@ -1,0 +1,410 @@
+{
+  "report_version": "concept-experiment-report-v0.1",
+  "run_id": "RUN-concept-20260817T184208060143Z",
+  "created_at": "2026-08-17T18:42:08.068156Z",
+  "title": "Gen 0 匿名概念形成与迁移对照",
+  "verdict": "conditionally_passed",
+  "claim_scope": "registered_noiseless_numeric_curriculum_only",
+  "architecture": "enumerative_program_search_not_transformer",
+  "learner_inputs": {
+    "natural_language": false,
+    "target_concept_name": false,
+    "target_formula": false,
+    "readable_offsets": [
+      -1,
+      0
+    ],
+    "base_operations": [
+      "p_read_offset",
+      "p_add",
+      "p_subtract",
+      "p_scalar_parameter"
+    ]
+  },
+  "development": {
+    "task_count": 4,
+    "all_tasks_exactly_solved": true,
+    "tasks": [
+      {
+        "task_id": "DEV-001",
+        "private_evaluator_parameters": [
+          1.0,
+          0.0,
+          1.0
+        ],
+        "programs_generated": 1305,
+        "selected_candidate": {
+          "candidate_id": "CAND-0135ca114e950cdc",
+          "program_ast": {
+            "op": "p_subtract",
+            "args": [
+              {
+                "op": "p_read_offset",
+                "offset": 0
+              },
+              {
+                "op": "p_add",
+                "args": [
+                  {
+                    "op": "p_subtract",
+                    "args": [
+                      {
+                        "op": "p_read_offset",
+                        "offset": -1
+                      },
+                      {
+                        "op": "p_read_offset",
+                        "offset": 0
+                      }
+                    ]
+                  },
+                  {
+                    "op": "p_scalar_parameter",
+                    "parameter_slot": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "parameters": {
+            "0": -2.0
+          },
+          "train_mse": 0.0,
+          "validation_mse": 0.0,
+          "normalized_validation_mse": 0.0,
+          "program_nodes": 7,
+          "program_depth": 4,
+          "objective_score": 7e-06
+        }
+      },
+      {
+        "task_id": "DEV-002",
+        "private_evaluator_parameters": [
+          2.0,
+          3.0,
+          -4.0
+        ],
+        "programs_generated": 1305,
+        "selected_candidate": {
+          "candidate_id": "CAND-0135ca114e950cdc",
+          "program_ast": {
+            "op": "p_subtract",
+            "args": [
+              {
+                "op": "p_read_offset",
+                "offset": 0
+              },
+              {
+                "op": "p_add",
+                "args": [
+                  {
+                    "op": "p_subtract",
+                    "args": [
+                      {
+                        "op": "p_read_offset",
+                        "offset": -1
+                      },
+                      {
+                        "op": "p_read_offset",
+                        "offset": 0
+                      }
+                    ]
+                  },
+                  {
+                    "op": "p_scalar_parameter",
+                    "parameter_slot": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "parameters": {
+            "0": -4.0
+          },
+          "train_mse": 0.0,
+          "validation_mse": 0.0,
+          "normalized_validation_mse": 0.0,
+          "program_nodes": 7,
+          "program_depth": 4,
+          "objective_score": 7e-06
+        }
+      },
+      {
+        "task_id": "DEV-003",
+        "private_evaluator_parameters": [
+          -1.0,
+          5.0,
+          8.0
+        ],
+        "programs_generated": 1305,
+        "selected_candidate": {
+          "candidate_id": "CAND-0135ca114e950cdc",
+          "program_ast": {
+            "op": "p_subtract",
+            "args": [
+              {
+                "op": "p_read_offset",
+                "offset": 0
+              },
+              {
+                "op": "p_add",
+                "args": [
+                  {
+                    "op": "p_subtract",
+                    "args": [
+                      {
+                        "op": "p_read_offset",
+                        "offset": -1
+                      },
+                      {
+                        "op": "p_read_offset",
+                        "offset": 0
+                      }
+                    ]
+                  },
+                  {
+                    "op": "p_scalar_parameter",
+                    "parameter_slot": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "parameters": {
+            "0": 2.0
+          },
+          "train_mse": 0.0,
+          "validation_mse": 0.0,
+          "normalized_validation_mse": 0.0,
+          "program_nodes": 7,
+          "program_depth": 4,
+          "objective_score": 7e-06
+        }
+      },
+      {
+        "task_id": "DEV-004",
+        "private_evaluator_parameters": [
+          3.0,
+          -2.0,
+          6.0
+        ],
+        "programs_generated": 1305,
+        "selected_candidate": {
+          "candidate_id": "CAND-0135ca114e950cdc",
+          "program_ast": {
+            "op": "p_subtract",
+            "args": [
+              {
+                "op": "p_read_offset",
+                "offset": 0
+              },
+              {
+                "op": "p_add",
+                "args": [
+                  {
+                    "op": "p_subtract",
+                    "args": [
+                      {
+                        "op": "p_read_offset",
+                        "offset": -1
+                      },
+                      {
+                        "op": "p_read_offset",
+                        "offset": 0
+                      }
+                    ]
+                  },
+                  {
+                    "op": "p_scalar_parameter",
+                    "parameter_slot": 0
+                  }
+                ]
+              }
+            ]
+          },
+          "parameters": {
+            "0": -6.0
+          },
+          "train_mse": 0.0,
+          "validation_mse": 0.0,
+          "normalized_validation_mse": 0.0,
+          "program_nodes": 7,
+          "program_depth": 4,
+          "objective_score": 7e-06
+        }
+      }
+    ]
+  },
+  "concept": {
+    "concept_id": "C-a50bfb846129",
+    "definition_ast": {
+      "op": "p_subtract",
+      "args": [
+        {
+          "op": "p_read_offset",
+          "offset": -1
+        },
+        {
+          "op": "p_read_offset",
+          "offset": 0
+        }
+      ]
+    },
+    "support_task_ids": [
+      "DEV-001",
+      "DEV-002",
+      "DEV-003",
+      "DEV-004"
+    ],
+    "support_task_count": 4,
+    "occurrence_count": 4,
+    "definition_nodes": 3,
+    "description_gain": 4,
+    "human_interpretation": null,
+    "knowledge_id": "K-000001",
+    "ledger_status": "bounded"
+  },
+  "transfer": {
+    "private_evaluator_parameters": [
+      4.0,
+      7.0,
+      -10.0
+    ],
+    "without_library_deep": {
+      "maximum_nodes": 7,
+      "programs_generated": 1305,
+      "exact_candidate": {
+        "candidate_id": "CAND-0135ca114e950cdc",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_read_offset",
+              "offset": 0
+            },
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_subtract",
+                  "args": [
+                    {
+                      "op": "p_read_offset",
+                      "offset": -1
+                    },
+                    {
+                      "op": "p_read_offset",
+                      "offset": 0
+                    }
+                  ]
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            }
+          ]
+        },
+        "parameters": {
+          "0": -8.0
+        },
+        "train_mse": 0.0,
+        "validation_mse": 0.0,
+        "normalized_validation_mse": 0.0,
+        "program_nodes": 7,
+        "program_depth": 4,
+        "objective_score": 7e-06
+      }
+    },
+    "without_library_shallow": {
+      "maximum_nodes": 5,
+      "programs_generated": 123,
+      "exact_candidate_found": false
+    },
+    "with_library_shallow": {
+      "maximum_nodes": 5,
+      "programs_generated": 290,
+      "exact_candidate": {
+        "candidate_id": "CAND-0fc09cf2389eddf1",
+        "program_ast": {
+          "op": "p_subtract",
+          "args": [
+            {
+              "op": "p_add",
+              "args": [
+                {
+                  "op": "p_read_offset",
+                  "offset": 0
+                },
+                {
+                  "op": "p_scalar_parameter",
+                  "parameter_slot": 0
+                }
+              ]
+            },
+            {
+              "op": "C-a50bfb846129"
+            }
+          ]
+        },
+        "parameters": {
+          "0": 8.0
+        },
+        "train_mse": 0.0,
+        "validation_mse": 0.0,
+        "normalized_validation_mse": 0.0,
+        "program_nodes": 5,
+        "program_depth": 3,
+        "objective_score": 4.9999999999999996e-06
+      }
+    },
+    "search_cost_reduction": 0.7777777777777778,
+    "program_size_reduction": 0.2857142857142857
+  },
+  "gates": [
+    {
+      "gate_id": "cross_task_support",
+      "threshold": 3,
+      "actual": 4,
+      "passed": true
+    },
+    {
+      "gate_id": "positive_description_gain",
+      "threshold": 1,
+      "actual": 4,
+      "passed": true
+    },
+    {
+      "gate_id": "minimum_search_cost_reduction",
+      "threshold": 0.3,
+      "actual": 0.7777777777777778,
+      "passed": true
+    },
+    {
+      "gate_id": "held_out_exact_recovery_with_library",
+      "threshold": true,
+      "actual": true,
+      "passed": true
+    },
+    {
+      "gate_id": "noise_stability",
+      "threshold": true,
+      "actual": null,
+      "passed": null
+    },
+    {
+      "gate_id": "blind_registered_benchmark",
+      "threshold": true,
+      "actual": null,
+      "passed": null
+    }
+  ],
+  "ledger_event_count": 4,
+  "limitations": [
+    "概念只在四个开发任务和一个持出任务中验证。",
+    "当前任务均为无噪声、完整可观测的合成数字序列。",
+    "尚未运行预注册盲评集、随机片段基线和噪声稳定性测试。",
+    "匿名原语的人类解释保持为空，当前结果不构成人类新知识。"
+  ]
+}

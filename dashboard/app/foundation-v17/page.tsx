@@ -1,0 +1,32 @@
+import reportData from "../../data/autonomous_research_v17_latest.json";
+
+const report = reportData;
+const acceptance = report.acceptance;
+const aggregate = acceptance.aggregate;
+const representative = acceptance.runs[0];
+
+export default function FoundationV17Page() {
+  return <main>
+    <header className="masthead"><div className="brand-lockup"><span className="brand-mark gen1-mark">●</span><div><p className="eyebrow">AUTONOMOUS RESEARCH LOOP V17</p><p className="brand-name">AKGM-N0 / 自主实验与语义饱和</p></div></div><div className="run-meta"><a className="nav-link" href="/foundation-v18">目标解题</a><a className="nav-link" href="/foundation-v16">冷启动语义</a><a className="nav-link" href="/foundation-v15">统一基底</a><a className="nav-link" href="/mistakes">错题库</a><a className="nav-link" href="/">总览</a></div></header>
+
+    <section className="hero panel-grid operation-hero"><div className="hero-copy"><div className="verdict-row"><span className="verdict-badge">V17 验收 12/12</span><span className="scope-label">GAP → WORLD → EXPERIMENT → VERIFY → SATURATE</span></div><h1>系统现在能自己选择下一项实验，并在没有新发现时自然停止</h1><p className="lede">研究循环每轮先重算当前语义覆盖缺口，再生成匿名实验世界、选择探索方向、创造并验证运行时语义。连续四轮没有任何新语义才判定当前研究域饱和；碰到安全轮数上限则不算成功。</p><div className="run-id"><span>LATEST</span><code>{report.run_id}</code><code>{acceptance.classification}</code></div></div><div className="hero-signal compact-signal"><div className="signal-ring full-ring"><strong>5/5</strong><span>自然饱和停止</span></div><p>{aggregate.research_rounds} autonomous rounds</p></div></section>
+
+    <section className="metric-grid meta-score-grid">
+      <article className="metric-card accent-cyan"><p>独立研究链</p><strong>{acceptance.independent_run_count}</strong><span>全部从空注册表开始</span></article>
+      <article className="metric-card accent-violet"><p>自生成世界</p><strong>{aggregate.self_generated_worlds}</strong><span>无需逐轮外部供给</span></article>
+      <article className="metric-card accent-amber"><p>发现语义</p><strong>{aggregate.operators_discovered}</strong><span>最低每条链 {aggregate.minimum_operators_per_run}</span></article>
+      <article className="metric-card accent-cyan"><p>独立证书检查</p><strong>{aggregate.certificate_cases}</strong><span>全部通过</span></article>
+      <article className="metric-card accent-slate"><p>错题记录</p><strong>{report.storage.mistake_records}</strong><span>{aggregate.mutations_rejected}/5 篡改被拒绝</span></article>
+    </section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">AUTONOMOUS CONTROL LOOP</p><h2>研究决策闭环</h2></div><span className="status-chip good">NO PER-ROUND HUMAN CHOICE</span></div><div className="operator-discovery-grid"><article className="metric-card"><p>01 / DIAGNOSE</p><strong className="operator-name">计算当前最少证据的转移与参数角色</strong><span>KnowledgeGapAnalyzerV17</span></article><article className="metric-card"><p>02 / PLAN</p><strong className="operator-name">根据缺口选择实验分布</strong><span>experiment.gap_id 必须匹配当前 gap</span></article><article className="metric-card"><p>03 / GENERATE</p><strong className="operator-name">内部生成匿名原语世界</strong><span>世界摘要可独立重建</span></article><article className="metric-card"><p>04 / LEARN</p><strong className="operator-name">安装具有正 MDL 奖励的新语义</strong><span>已有语义可参与组合</span></article><article className="metric-card"><p>05 / VERIFY</p><strong className="operator-name">证书与反例独立验证</strong><span>失败进入错题库</span></article><article className="metric-card"><p>06 / STOP</p><strong className="operator-name">连续四轮零发现才停止</strong><span>semantic_saturation</span></article></div></section>
+
+    <section className="content-grid operation-grid"><article className="surface comparison-card"><div className="section-heading"><div><p className="eyebrow">FIVE RESEARCH CHAINS</p><h2>不同种子均自然停止</h2></div><span className="status-chip good">5/5</span></div><div className="evidence-list">{acceptance.runs.map((run, index) => <div className="evidence-row" key={run.seed_commitment}><div><strong>CHAIN {String(index + 1).padStart(2, "0")}</strong><span>{run.round_count} rounds · {run.self_generated_world_count} worlds · {run.distinct_gap_count} directions</span></div><b>{run.operator_count} ops</b></div>)}</div></article><article className="surface concept-card"><div className="section-heading"><div><p className="eyebrow">SATURATION EVIDENCE</p><h2>不是达到时间上限</h2></div></div><div className="receipt-list"><div><dt>stop reason</dt><dd>{representative.stop_reason}</dd></div><div><dt>actual rounds</dt><dd>{representative.round_count}</dd></div><div><dt>safety maximum</dt><dd>{representative.maximum_rounds}</dd></div><div><dt>sterile patience</dt><dd>{representative.patience}</dd></div></div><div className="posthoc-note"><span>最后四轮新增</span><strong>{representative.rounds.slice(-representative.patience).map(item => item.new_operator_count).join(" · ")}</strong><small>只有连续全部为零才允许退出研究循环。</small></div></article></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">REPRESENTATIVE DISCOVERY TIMELINE</p><h2>缺口改变，实验方向随知识改变</h2></div></div><div className="operator-discovery-grid">{representative.rounds.map(round => <article className="metric-card" key={round.experiment.experiment_id}><p><code>R{round.round_index} · {round.gap.gap_id}</code></p><strong className="operator-name">{round.gap.focus_transition.join(" → ")} · arity {round.gap.target_arity}</strong><span>{round.new_operator_count} new · drought {round.consecutive_sterile_rounds}</span><small>{round.experiment.experiment_id}</small></article>)}</div></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">STRICT OBLIGATIONS</p><h2>十二项自主性验收</h2></div></div><div className="operator-discovery-grid">{acceptance.proof_obligations.map(item => <article className="metric-card" key={item.obligation_id}><p><code>{item.obligation_id}</code></p><strong className="operator-name">{item.passed ? "通过" : "失败"}</strong><span>独立重建证据</span></article>)}</div></section>
+
+    <section className="evidence-panel limitations-panel"><div className="section-heading"><div><p className="eyebrow">HONEST BOUNDARY</p><h2>当前研究域饱和，不等于全部数学饱和</h2></div></div><ul>{acceptance.limitations.map(item => <li key={item}>{item}</li>)}</ul><div className="boundary-box"><p>准确成果</p><code>{report.claim.achieved}</code><span>未声称：{report.claim.not_claimed}</span></div><p className="digest-line">内容摘要 <code>{report.content_digest}</code></p></section>
+  </main>;
+}

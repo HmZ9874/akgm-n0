@@ -1,0 +1,272 @@
+{
+  "report_version": "strict-counter-foundation-v10.1",
+  "run_id": "RUN-strict-counter-v10-20260820T174802542682Z",
+  "created_at": "2026-08-20T17:48:02.542682Z",
+  "verdict": "one_target_free_counter_foundation_universally_proven",
+  "discovery": {
+    "information_boundary": {
+      "numeric_target_rows": false,
+      "named_formula_targets": false,
+      "multiplication_or_division_opcode": false,
+      "available_primitives": [
+        "natural input counters",
+        "unit increment",
+        "unit decrement",
+        "empty test",
+        "bounded nested loop",
+        "four registers"
+      ],
+      "host_supplied": [
+        "the counter/register substrate",
+        "the bounded two-level enumeration grammar",
+        "the generic algebraic-law detector",
+        "the invariant proof checker"
+      ]
+    },
+    "programs_generated": 4608,
+    "programs_executed": 4448,
+    "behavior_classes": 55,
+    "promotable_behavior_classes": 1,
+    "selected": {
+      "candidate_id": "CT-82df58ba4ce6f41c",
+      "program": {
+        "substrate": "anonymous_counter_transfer_v10",
+        "initial_registers": [
+          "input_0",
+          "input_1",
+          0,
+          0
+        ],
+        "program": {
+          "while_nonempty": 0,
+          "body": [
+            {
+              "op": "decrement_one",
+              "register": 0
+            },
+            {
+              "while_nonempty": 3,
+              "body": [
+                {
+                  "op": "decrement_one",
+                  "register": 3
+                },
+                {
+                  "op": "increment_one",
+                  "register": 1
+                }
+              ]
+            },
+            {
+              "while_nonempty": 1,
+              "body": [
+                {
+                  "op": "decrement_one",
+                  "register": 1
+                },
+                {
+                  "op": "increment_one",
+                  "register": 2
+                },
+                {
+                  "op": "increment_one",
+                  "register": 3
+                }
+              ]
+            }
+          ]
+        },
+        "output_register": 2
+      },
+      "behavior_signature": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        2,
+        3,
+        4,
+        0,
+        2,
+        4,
+        6,
+        8,
+        0,
+        3,
+        6,
+        9,
+        12,
+        0,
+        4,
+        8,
+        12,
+        16
+      ],
+      "algebraic_profile": {
+        "depends_on_both_inputs": true,
+        "has_cross_input_interaction": true,
+        "commutative": true,
+        "associative": true,
+        "identity": 1,
+        "annihilator": 0,
+        "left_distributive_over_previously_verified_combine": true,
+        "right_distributive_over_previously_verified_combine": true,
+        "monotone": true,
+        "law_count": 9,
+        "promotable": true
+      },
+      "primitive_node_count": 7,
+      "probe_step_cost": 470
+    },
+    "selection_rule": "maximize generic law count, then minimize primitive nodes, execution steps, and candidate id"
+  },
+  "proof": {
+    "verifier_version": "strict-counter-invariant-verifier-v10.1",
+    "passed": true,
+    "semantic_id": "STRICT-FSEM-82df58ba4ce6f41c",
+    "posthoc_name": "自然数乘法（证明后命名）",
+    "universal_statement": "for every x,y in N, the selected counter program halts and returns x*y",
+    "derived_normal_form": "x*y",
+    "obligations": [
+      {
+        "obligation_id": "output_uses_zero_initialized_accumulator",
+        "passed": true,
+        "evidence": "R2 starts at zero"
+      },
+      {
+        "obligation_id": "one_scratch_register_available",
+        "passed": true,
+        "evidence": "scratch=3"
+      },
+      {
+        "obligation_id": "zero_input_base_case",
+        "passed": true,
+        "evidence": "when x=0 the zero-initialized output is returned"
+      },
+      {
+        "obligation_id": "first_phase_control",
+        "passed": true,
+        "evidence": "the first step leaves x-1 control marks"
+      },
+      {
+        "obligation_id": "first_phase_accumulation",
+        "passed": true,
+        "evidence": "the first step moves one complete y quantity into the accumulator"
+      },
+      {
+        "obligation_id": "inductive_control_decrease",
+        "passed": true,
+        "evidence": "for t>=1, control changes from x-t to x-(t+1)"
+      },
+      {
+        "obligation_id": "inductive_carrier_phase",
+        "passed": true,
+        "evidence": "the discovered carrier layout repeats after every later step"
+      },
+      {
+        "obligation_id": "inductive_accumulation",
+        "passed": true,
+        "evidence": "accumulator changes from t*y to (t+1)*y"
+      },
+      {
+        "obligation_id": "phase_base_case",
+        "passed": true,
+        "evidence": "at t=1 the inferred steady phase has accumulator=y"
+      },
+      {
+        "obligation_id": "natural_termination",
+        "passed": true,
+        "evidence": "control is a natural counter and decreases exactly once per outer iteration"
+      },
+      {
+        "obligation_id": "terminal_normal_form",
+        "passed": true,
+        "evidence": "at t=x the accumulator is x*y"
+      },
+      {
+        "obligation_id": "independent_law_replay",
+        "passed": true,
+        "evidence": "{\"annihilator\": 0, \"associative\": true, \"commutative\": true, \"depends_on_both_inputs\": true, \"has_cross_input_interaction\": true, \"identity\": 1, \"law_count\": 9, \"left_distributive_over_previously_verified_combine\": true, \"monotone\": true, \"promotable\": true, \"right_distributive_over_previously_verified_combine\": true}"
+      },
+      {
+        "obligation_id": "sealed_numeric_replay",
+        "passed": true,
+        "evidence": "six cases outside the search probe grid"
+      }
+    ],
+    "hidden_replay": [
+      {
+        "inputs": [
+          0,
+          17
+        ],
+        "output": 0,
+        "oracle_free_expected_from_proven_normal_form": 0,
+        "passed": true
+      },
+      {
+        "inputs": [
+          1,
+          29
+        ],
+        "output": 29,
+        "oracle_free_expected_from_proven_normal_form": 29,
+        "passed": true
+      },
+      {
+        "inputs": [
+          7,
+          11
+        ],
+        "output": 77,
+        "oracle_free_expected_from_proven_normal_form": 77,
+        "passed": true
+      },
+      {
+        "inputs": [
+          13,
+          5
+        ],
+        "output": 65,
+        "oracle_free_expected_from_proven_normal_form": 65,
+        "passed": true
+      },
+      {
+        "inputs": [
+          21,
+          21
+        ],
+        "output": 441,
+        "oracle_free_expected_from_proven_normal_form": 441,
+        "passed": true
+      },
+      {
+        "inputs": [
+          37,
+          9
+        ],
+        "output": 333,
+        "oracle_free_expected_from_proven_normal_form": 333,
+        "passed": true
+      }
+    ]
+  },
+  "promotion": {
+    "admitted": true,
+    "strict_new_foundation_count": 1,
+    "room_record_hash": "cdb6dbaafd1270b50d176bc3493f2ba4579f1cc9c92f3f1f5f948c8a0933a647",
+    "success_room": "artifacts/foundation/v10/success/strict_counter_foundations.jsonl",
+    "mistake_room": "artifacts/foundation/v10/mistakes/nonpromoted_behavior_leaders.jsonl"
+  },
+  "classification": {
+    "label": "target_free_bounded_structural_discovery",
+    "autonomous_within_registered_grammar": true,
+    "unrestricted_computational_semantics_invention": false,
+    "human_novel_mathematics_claim": false,
+    "explanation": "The learner was not given multiplication examples or a multiplication opcode. It selected one behavior from a host-bounded generic nested-counter grammar; the mathematical name was attached only after a universal loop invariant succeeded."
+  },
+  "content_digest": "1183bdfb04ea3a4df4242d24f4d4c8b2526ceedeacb1dbaee0ebed9032c280c4"
+}

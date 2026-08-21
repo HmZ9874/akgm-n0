@@ -1,0 +1,572 @@
+{
+  "report_version": "autonomous-interval-memory-v0.1",
+  "run_id": "RUN-autonomous-interval-memory-20260820T031910506925Z",
+  "created_at": "2026-08-20T03:19:10.506925Z",
+  "verdict": "ordered_rational_nested_interval_memory_invented",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-exact-root-20260820T031851256832Z",
+    "frontier": {
+      "world_id": "WORLD-nonsquare-refinement-111",
+      "structural_signature": "monotone_nested_interval_refinement",
+      "status": "dependency_blocked",
+      "missing_dependency": "ordered_rational_approximation_memory",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "search": {
+    "candidate_count": 54,
+    "exact_candidate_count": 1,
+    "selected_program": {
+      "program_id": "IAP-69bf6796637deaf8",
+      "init_mode": 0,
+      "probe_mode": 0,
+      "test_mode": 0,
+      "update_mode": 0
+    },
+    "selected_token_cost": 1205,
+    "selected_reward": 998795
+  },
+  "discovery": {
+    "foundation_level": 16,
+    "semantic": {
+      "semantic_id": "ISEM-0ca406080fcca1af",
+      "opcode": 17,
+      "program": {
+        "program_id": "IAP-69bf6796637deaf8",
+        "init_mode": 0,
+        "probe_mode": 0,
+        "test_mode": 0,
+        "update_mode": 0
+      },
+      "dependency_semantic_ids": [
+        "RSEM-a80a8102b32768d6",
+        "ZSEM-90254f138d3cc064"
+      ],
+      "source_task_ids": [
+        "WORLD-nonsquare-refinement-111"
+      ],
+      "invented_dependency_signature": "ordered_rational_approximation_memory"
+    },
+    "structural_origin": "a nested rational enclosure whose width is halved at each finite control step while preserving lower^2<=x<=upper^2",
+    "posthoc_name": "certified rational bisection enclosure for a nonnegative square root",
+    "posthoc_formula": "L_n^2<=x<=U_n^2 and U_n-L_n=max(1,x)/2^n",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "derived_results": [
+    "arbitrarily narrow certified rational enclosures for non-square roots",
+    "monotone lower and upper approximation sequences",
+    "finite error certificate controlled by the requested round count"
+  ],
+  "verification": {
+    "verifier_version": "independent-rational-interval-memory-verifier-v0.1",
+    "semantic_id": "ISEM-0ca406080fcca1af",
+    "passed": true,
+    "invented_mechanism": "retain ordered rational lower and upper memories; probe their center; move exactly one endpoint according to a self-product comparison",
+    "structural_statement": "a nested rational enclosure whose width is halved at each finite control step while preserving lower^2<=x<=upper^2",
+    "posthoc_mathematical_name": "certified rational bisection enclosure for a nonnegative square root",
+    "posthoc_formula": "L_n^2<=x<=U_n^2 and U_n-L_n=max(1,x)/2^n",
+    "derived_results": [
+      "arbitrarily narrow certified rational enclosures for non-square roots",
+      "monotone lower and upper approximation sequences",
+      "finite error certificate controlled by the requested round count"
+    ],
+    "declared_domain": "nonnegative rational inputs and finite natural refinement counts",
+    "not_claimed": "a completed real number, convergence inside the rationals, decimal semantics, transcendental functions, or arbitrary equation solving",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "ordered-rational endpoint invariant and induction on exact interval-width halving",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "ISEM-0ca406080fcca1af"
+      },
+      {
+        "obligation_id": "exact_program_binding",
+        "passed": true,
+        "evidence": "IAP-69bf6796637deaf8"
+      },
+      {
+        "obligation_id": "recorded_gap_is_addressed",
+        "passed": true,
+        "evidence": "ordered_rational_approximation_memory"
+      },
+      {
+        "obligation_id": "selected_anonymous_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "IAP-69bf6796637deaf8",
+          "init_mode": 0,
+          "probe_mode": 0,
+          "test_mode": 0,
+          "update_mode": 0
+        }
+      },
+      {
+        "obligation_id": "depends_on_exact_boundary_and_rational_semantics",
+        "passed": true,
+        "evidence": [
+          "RSEM-a80a8102b32768d6",
+          "ZSEM-90254f138d3cc064"
+        ]
+      },
+      {
+        "obligation_id": "initial_lower_invariant",
+        "passed": true,
+        "evidence": "0*0<=x for every nonnegative rational x"
+      },
+      {
+        "obligation_id": "initial_upper_invariant",
+        "passed": true,
+        "evidence": "u=max(1,x) gives x<=u*u"
+      },
+      {
+        "obligation_id": "middle_probe_is_internal",
+        "passed": true,
+        "evidence": "for l<=u, l<=(l+u)/2<=u"
+      },
+      {
+        "obligation_id": "lower_update_preserves_invariant",
+        "passed": true,
+        "evidence": "update l=m only under m*m<=x"
+      },
+      {
+        "obligation_id": "upper_update_preserves_invariant",
+        "passed": true,
+        "evidence": "update u=m only under x<m*m"
+      },
+      {
+        "obligation_id": "one_step_nesting",
+        "passed": true,
+        "evidence": "exactly one endpoint moves to the internal midpoint"
+      },
+      {
+        "obligation_id": "one_step_width_halving",
+        "passed": true,
+        "evidence": "new width=(u-l)/2 in either branch"
+      },
+      {
+        "obligation_id": "n_step_width_law",
+        "passed": true,
+        "evidence": "induction gives width_n=width_0/2^n"
+      },
+      {
+        "obligation_id": "lower_sequence_monotone",
+        "passed": true,
+        "evidence": "lower endpoints never decrease"
+      },
+      {
+        "obligation_id": "upper_sequence_monotone",
+        "passed": true,
+        "evidence": "upper endpoints never increase"
+      },
+      {
+        "obligation_id": "nested_hidden_intervals",
+        "passed": true,
+        "evidence": [
+          {
+            "input": [
+              2,
+              1
+            ],
+            "rounds_checked": 12,
+            "passed": true
+          },
+          {
+            "input": [
+              3,
+              1
+            ],
+            "rounds_checked": 12,
+            "passed": true
+          },
+          {
+            "input": [
+              1,
+              2
+            ],
+            "rounds_checked": 12,
+            "passed": true
+          },
+          {
+            "input": [
+              17,
+              42
+            ],
+            "rounds_checked": 12,
+            "passed": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "hidden_certificates_pass",
+        "passed": true,
+        "evidence": "10/10"
+      },
+      {
+        "obligation_id": "finite_termination_per_request",
+        "passed": true,
+        "evidence": "the loop executes exactly the supplied natural round count"
+      },
+      {
+        "obligation_id": "no_real_completion_claim",
+        "passed": true,
+        "evidence": "finite nested rational intervals are produced; no limit object is identified"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_search",
+        "passed": true,
+        "evidence": "search saw numeric probe/test/update modes and target interval observations, not bisection, roots, or formulas"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "INTERVAL-HIDDEN-00",
+        "input": [
+          0,
+          1
+        ],
+        "rounds": 0,
+        "lower": [
+          0,
+          1
+        ],
+        "upper": [
+          1,
+          1
+        ],
+        "width": [
+          1,
+          1
+        ],
+        "passed": true,
+        "tokens": 5
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-01",
+        "input": [
+          0,
+          1
+        ],
+        "rounds": 8,
+        "lower": [
+          0,
+          1
+        ],
+        "upper": [
+          1,
+          256
+        ],
+        "width": [
+          1,
+          256
+        ],
+        "passed": true,
+        "tokens": 587
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-02",
+        "input": [
+          1,
+          1
+        ],
+        "rounds": 6,
+        "lower": [
+          63,
+          64
+        ],
+        "upper": [
+          1,
+          1
+        ],
+        "width": [
+          1,
+          64
+        ],
+        "passed": true,
+        "tokens": 300
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-03",
+        "input": [
+          2,
+          1
+        ],
+        "rounds": 12,
+        "lower": [
+          181,
+          128
+        ],
+        "upper": [
+          2897,
+          2048
+        ],
+        "width": [
+          1,
+          2048
+        ],
+        "passed": true,
+        "tokens": 9992
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-04",
+        "input": [
+          3,
+          1
+        ],
+        "rounds": 10,
+        "lower": [
+          1773,
+          1024
+        ],
+        "upper": [
+          111,
+          64
+        ],
+        "width": [
+          3,
+          1024
+        ],
+        "passed": true,
+        "tokens": 5674
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-05",
+        "input": [
+          5,
+          2
+        ],
+        "rounds": 9,
+        "lower": [
+          1615,
+          1024
+        ],
+        "upper": [
+          405,
+          256
+        ],
+        "width": [
+          5,
+          1024
+        ],
+        "passed": true,
+        "tokens": 5362
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-06",
+        "input": [
+          1,
+          3
+        ],
+        "rounds": 11,
+        "lower": [
+          591,
+          1024
+        ],
+        "upper": [
+          1183,
+          2048
+        ],
+        "width": [
+          1,
+          2048
+        ],
+        "passed": true,
+        "tokens": 6553
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-07",
+        "input": [
+          17,
+          42
+        ],
+        "rounds": 13,
+        "lower": [
+          5211,
+          8192
+        ],
+        "upper": [
+          1303,
+          2048
+        ],
+        "width": [
+          1,
+          8192
+        ],
+        "passed": true,
+        "tokens": 26970
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-08",
+        "input": [
+          49,
+          16
+        ],
+        "rounds": 7,
+        "lower": [
+          3577,
+          2048
+        ],
+        "upper": [
+          1813,
+          1024
+        ],
+        "width": [
+          49,
+          2048
+        ],
+        "passed": true,
+        "tokens": 11392
+      },
+      {
+        "case_id": "INTERVAL-HIDDEN-09",
+        "input": [
+          99,
+          100
+        ],
+        "rounds": 10,
+        "lower": [
+          509,
+          512
+        ],
+        "upper": [
+          1019,
+          1024
+        ],
+        "width": [
+          1,
+          1024
+        ],
+        "passed": true,
+        "tokens": 4359
+      }
+    ],
+    "nested_cases": [
+      {
+        "input": [
+          2,
+          1
+        ],
+        "rounds_checked": 12,
+        "passed": true
+      },
+      {
+        "input": [
+          3,
+          1
+        ],
+        "rounds_checked": 12,
+        "passed": true
+      },
+      {
+        "input": [
+          1,
+          2
+        ],
+        "rounds_checked": 12,
+        "passed": true
+      },
+      {
+        "input": [
+          17,
+          42
+        ],
+        "rounds_checked": 12,
+        "passed": true
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 16,
+    "new_foundation": "有序有理嵌套区间记忆",
+    "verified_derived_results_added": 3
+  },
+  "next_frontier": {
+    "world_id": "WORLD-completion-equivalence-121",
+    "structural_signature": "equivalent_cauchy_enclosure_object",
+    "status": "dependency_blocked",
+    "missing_dependency": "completion_equivalence_limit_object",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/approximation_memory_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/approximation_memory_programs.jsonl",
+    "success_count": 2,
+    "mistake_count": 53,
+    "event_hash": "6d3796ab2b2eae8f2ed55f65a82531a95ad52e1e1498423d6223b454d51a71ae"
+  },
+  "gates": [
+    {
+      "gate_id": "approximation_gap_taken_from_prior_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-nonsquare-refinement-111",
+        "structural_signature": "monotone_nested_interval_refinement",
+        "status": "dependency_blocked",
+        "missing_dependency": "ordered_rational_approximation_memory",
+        "posthoc_math_name": null
+      },
+      "required": "recorded gap"
+    },
+    {
+      "gate_id": "anonymous_interval_search_completed",
+      "passed": true,
+      "actual": 54,
+      "required": 54
+    },
+    {
+      "gate_id": "unique_exact_interval_program",
+      "passed": true,
+      "actual": 1,
+      "required": 1
+    },
+    {
+      "gate_id": "token_reward_selected_exact_program",
+      "passed": true,
+      "actual": {
+        "program_id": "IAP-69bf6796637deaf8",
+        "init_mode": 0,
+        "probe_mode": 0,
+        "test_mode": 0,
+        "update_mode": 0
+      },
+      "required": "highest reward exact candidate"
+    },
+    {
+      "gate_id": "interval_semantic_symbolically_proved",
+      "passed": true,
+      "actual": 20,
+      "required": 20
+    },
+    {
+      "gate_id": "all_hidden_certificates_pass",
+      "passed": true,
+      "actual": 10,
+      "required": 10
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 2,
+        "mistakes": 53
+      },
+      "required": {
+        "success_minimum": 1,
+        "mistakes_minimum": 53
+      }
+    },
+    {
+      "gate_id": "learner_was_not_given_bisection_or_root_name",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "The mechanism returns finite rational certificates, not a completed irrational number object.",
+    "It proves nested enclosure and width control, not convergence inside the rationals.",
+    "No decimal notation, transcendental functions, calculus, or general equation solver is claimed."
+  ]
+}

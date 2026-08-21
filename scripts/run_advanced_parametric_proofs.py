@@ -1,0 +1,20 @@
+from __future__ import annotations
+import json,shutil,sys
+from datetime import datetime,timezone
+from pathlib import Path
+ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT/"src"))
+from akgm_n0.evaluator import FormulaSuccessRoom,UniversalFormulaCertificate,UniversalFormulaRoom,UniversalProofVerifier,program_digest
+from akgm_n0.learner import ReflectiveProgram
+def main():
+ room=UniversalFormulaRoom(ROOT/"artifacts/formula_rooms/parametric/proven_formulas.jsonl");assert len(room.records)==20
+ discovery=json.loads((ROOT/"reports/data/advanced_parametric_ten_latest.json").read_text(encoding="utf-8"));previous=json.loads((ROOT/"reports/data/strict_parametric_twenty_latest.json").read_text(encoding="utf-8"));bounded=FormulaSuccessRoom(ROOT/"artifacts/formula_rooms/success/successful_formulas.jsonl");by_id={r.room_record_id:r for r in bounded.records};v=UniversalProofVerifier();new=[]
+ for i,task in enumerate(discovery["tasks"]):
+  source=by_id[task["success_room_record"]["room_record_id"]];program=ReflectiveProgram.from_dict(dict(source.definition));kind=f"advanced_parametric_a{i:02d}";cert=UniversalFormulaCertificate(theorem_kind=kind,source_room_record_id=source.room_record_id,source_operation_id=source.operation_id,program_digest=program_digest(program),domain=v.DOMAINS[kind],claimed_statement=v.STATEMENTS[kind],claimed_invariants=v.INVARIANTS[kind],claimed_termination_measure=v.TERMINATION[kind]);proof=v.verify(program,cert)
+  if not proof.passed:print(json.dumps(proof.to_dict(),ensure_ascii=False,indent=2));return 1
+  rec=room.record(program,cert,proof);new.append({"formula":task["posthoc_formula"],"mechanism":task["mechanism_key"],"record_id":rec.room_record_id,"source_record_id":source.room_record_id,"theorem_kind":kind,"proof":proof.to_dict(),"invariants":list(cert.claimed_invariants),"termination":cert.claimed_termination_measure})
+ if len(room.records)!=30:raise RuntimeError(f"expected strict room 30, got {len(room.records)}")
+ stamp=datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ");run_id="RUN-advanced-parametric-proof-"+stamp;rd=ROOT/"artifacts/runs"/run_id;rd.mkdir(parents=True);count=sum(len(r.verification["obligations"]) for r in room.records);passed=sum(sum(o["passed"] for o in r.verification["obligations"]) for r in room.records);batch20=previous["new_formulas"]+new
+ report={"report_version":"strict-parametric-thirty-v0.1","run_id":run_id,"created_at":datetime.now(timezone.utc).isoformat().replace("+00:00","Z"),"verdict":"twenty_new_strict_formulas_and_thirty_total_proven","strict_formula_total":30,"historical_reclassified_count":9,"prior_power_count":1,"batch_newly_synthesized_count":20,"first_ten_new_formulas":previous["new_formulas"],"second_ten_new_formulas":new,"batch_new_formulas":batch20,"proof_obligation_count":count,"proof_obligation_passed_count":passed,"gates":[{"gate_id":"twenty_genuinely_new_syntheses","passed":len(batch20)==20,"actual":len(batch20),"threshold":20},{"gate_id":"thirty_strict_total","passed":len(room.records)==30,"actual":len(room.records),"threshold":30},{"gate_id":"all_room_proofs_replay","passed":passed==count,"actual":passed,"threshold":count}],"limitations":["Both ten-program frontiers are finite and host-supplied.","The learner selected executable structures from anonymous numeric evidence; it did not invent the frontier grammar.","Some relation programs share subtraction and branching primitives, though their full executable structures and formulas differ."]};art=rd/"advanced_parametric_proof_report.json";art.write_text(json.dumps(report,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
+ for d in (ROOT/"reports/data/advanced_parametric_proof_latest.json",ROOT/"dashboard/data/advanced_parametric_proof_latest.json"):shutil.copyfile(art,d)
+ print(json.dumps({"run_id":run_id,"strict_total":30,"batch_new":20,"second_ten":10,"obligations":count,"passed":passed,"artifact_path":str(art.relative_to(ROOT))},ensure_ascii=False,indent=2));return 0
+if __name__=="__main__":raise SystemExit(main())

@@ -1,0 +1,17 @@
+{
+  "manifest_id": "primitive-manifest-relation-growth-v0.1",
+  "visibility": "learner_visible",
+  "protocol_version": "relation-growth-v0.1",
+  "primitives": [
+    {"id": "r_value", "signature": "collection_member->scalar"},
+    {"id": "r_add", "signature": "scalar,scalar->scalar"},
+    {"id": "r_subtract", "signature": "scalar,scalar->scalar"},
+    {"id": "r_compose", "signature": "program,program->program"}
+  ],
+  "search_prior": {
+    "maximum_program_nodes": 7,
+    "maximum_composition_steps": 6,
+    "ignore_input_order": true,
+    "deterministic_tie_breaking": true
+  }
+}

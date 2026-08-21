@@ -1,0 +1,586 @@
+{
+  "report_version": "autonomous-exact-root-v0.1",
+  "run_id": "RUN-autonomous-exact-root-20260820T031851256832Z",
+  "created_at": "2026-08-20T03:18:51.256832Z",
+  "verdict": "exact_rational_boundary_scanner_invented_with_explicit_nonsquare_rejection",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-paired-20260820T025651207194Z",
+    "frontier": {
+      "world_id": "WORLD-rational-root-boundary-101",
+      "structural_signature": "normalized_inverse_square_boundary",
+      "status": "dependency_blocked",
+      "missing_dependency": "rational_square_root_normalizer",
+      "posthoc_math_name": null
+    },
+    "user_supplied_math_target": false
+  },
+  "search": {
+    "candidate_count": 200,
+    "exact_candidate_count": 4,
+    "selected_program": {
+      "program_id": "RBP-c37fc47094a438cd",
+      "numerator_mode": 3,
+      "denominator_mode": 3,
+      "negative_mode": 0,
+      "require_exact": true,
+      "preprocess_reduce": true,
+      "token_accounting_version": 1
+    },
+    "selected_token_cost": 351,
+    "selected_reward": 999649
+  },
+  "discovery": {
+    "foundation_level": 15,
+    "semantic": {
+      "semantic_id": "RSEM-a80a8102b32768d6",
+      "opcode": 16,
+      "program": {
+        "program_id": "RBP-c37fc47094a438cd",
+        "numerator_mode": 3,
+        "denominator_mode": 3,
+        "negative_mode": 0,
+        "require_exact": true,
+        "preprocess_reduce": true,
+        "token_accounting_version": 1
+      },
+      "dependency_semantic_ids": [
+        "ZSEM-90254f138d3cc064",
+        "NSEM-52a33255cdea401f"
+      ],
+      "source_task_ids": [
+        "WORLD-rational-root-boundary-101"
+      ],
+      "invented_dependency_signature": "rational_square_root_normalizer"
+    },
+    "structural_origin": "partial inverse of repeated self-accumulation on reduced nonnegative rational pairs",
+    "posthoc_name": "exact rational square-root extractor",
+    "posthoc_formula": "for reduced p/q, return a/b exactly when a*a=p and b*b=q; otherwise reject",
+    "name_given_to_search": false,
+    "counts_as_new_foundation": true
+  },
+  "derived_results": [
+    "exact roots for nonnegative rational perfect squares",
+    "scale-invariant rejection/acceptance on equivalent rational encodings",
+    "exact rational standard deviation when a finite rational variance is a perfect square"
+  ],
+  "verification": {
+    "verifier_version": "independent-exact-root-boundary-verifier-v0.1",
+    "semantic_id": "RSEM-a80a8102b32768d6",
+    "passed": true,
+    "invented_mechanism": "scan a natural counter; build each candidate boundary by repeating that counter through addition; accept a reduced rational pair only when both components meet equality exactly",
+    "structural_statement": "partial inverse of repeated self-accumulation on reduced nonnegative rational pairs",
+    "posthoc_mathematical_name": "exact rational square-root extractor",
+    "posthoc_formula": "for reduced p/q, return a/b exactly when a*a=p and b*b=q; otherwise reject",
+    "derived_results": [
+      "exact roots for nonnegative rational perfect squares",
+      "scale-invariant rejection/acceptance on equivalent rational encodings",
+      "exact rational standard deviation when a finite rational variance is a perfect square"
+    ],
+    "declared_domain": "nonnegative rational pairs with positive denominator; exact perfect-square results only",
+    "not_claimed": "irrational roots, real-number completeness, approximate roots, arbitrary radical simplification, or complex roots",
+    "finite_sampling_used_as_proof": false,
+    "proof_method": "counter-square loop invariant, monotone boundary gaps, gcd canonicalization, and coprime prime-parity criterion",
+    "obligations": [
+      {
+        "obligation_id": "semantic_id_binding",
+        "passed": true,
+        "evidence": "RSEM-a80a8102b32768d6"
+      },
+      {
+        "obligation_id": "exact_program_binding",
+        "passed": true,
+        "evidence": "RBP-c37fc47094a438cd"
+      },
+      {
+        "obligation_id": "recorded_gap_is_addressed",
+        "passed": true,
+        "evidence": "rational_square_root_normalizer"
+      },
+      {
+        "obligation_id": "selected_anonymous_shape",
+        "passed": true,
+        "evidence": {
+          "program_id": "RBP-c37fc47094a438cd",
+          "numerator_mode": 3,
+          "denominator_mode": 3,
+          "negative_mode": 0,
+          "require_exact": true,
+          "preprocess_reduce": true,
+          "token_accounting_version": 1
+        }
+      },
+      {
+        "obligation_id": "depends_on_prior_rational_and_multiplicative_semantics",
+        "passed": true,
+        "evidence": [
+          "ZSEM-90254f138d3cc064",
+          "NSEM-52a33255cdea401f"
+        ]
+      },
+      {
+        "obligation_id": "repeated_pair_accumulation_invariant",
+        "passed": true,
+        "evidence": "after k inner additions of k, accumulated=k*k; induction uses addition only"
+      },
+      {
+        "obligation_id": "scan_monotonicity",
+        "passed": true,
+        "evidence": "for natural k, (k+1)^2=k^2+2k+1>k^2"
+      },
+      {
+        "obligation_id": "exact_integer_acceptance",
+        "passed": true,
+        "evidence": "the first scan value >=n is accepted exactly when k*k=n"
+      },
+      {
+        "obligation_id": "integer_nonsquare_rejection",
+        "passed": true,
+        "evidence": "strict gaps between consecutive square boundaries cannot pass equality"
+      },
+      {
+        "obligation_id": "canonical_pair_preprocessing",
+        "passed": true,
+        "evidence": "gcd reduction before component scanning"
+      },
+      {
+        "obligation_id": "reduced_rational_square_criterion",
+        "passed": true,
+        "evidence": "if coprime p/q=(a/b)^2, prime-exponent parity forces both p and q to be integer squares"
+      },
+      {
+        "obligation_id": "zero_boundary_is_total",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "negative_input_rejected",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "nonpositive_denominator_rejected",
+        "passed": true,
+        "evidence": true
+      },
+      {
+        "obligation_id": "scale_invariance",
+        "passed": true,
+        "evidence": [
+          {
+            "base": [
+              4,
+              9
+            ],
+            "scaled": [
+              28,
+              63
+            ],
+            "passed": true
+          },
+          {
+            "base": [
+              9,
+              16
+            ],
+            "scaled": [
+              99,
+              176
+            ],
+            "passed": true
+          },
+          {
+            "base": [
+              25,
+              49
+            ],
+            "scaled": [
+              325,
+              637
+            ],
+            "passed": true
+          },
+          {
+            "base": [
+              2,
+              3
+            ],
+            "scaled": [
+              34,
+              51
+            ],
+            "passed": true
+          }
+        ]
+      },
+      {
+        "obligation_id": "hidden_replay",
+        "passed": true,
+        "evidence": "11/11"
+      },
+      {
+        "obligation_id": "finite_termination",
+        "passed": true,
+        "evidence": "both scans stop no later than the reduced component value plus one"
+      },
+      {
+        "obligation_id": "partiality_is_explicit",
+        "passed": true,
+        "evidence": "non-square rationals halt as rejection rather than returning a rounded value"
+      },
+      {
+        "obligation_id": "not_real_completion",
+        "passed": true,
+        "evidence": "no irrational object or convergence claim is introduced"
+      },
+      {
+        "obligation_id": "not_preinstalled_or_named_for_search",
+        "passed": true,
+        "evidence": "search saw numeric mode IDs and accept/reject observations, not root names or formulas"
+      },
+      {
+        "obligation_id": "exact_scan_token_accounting",
+        "passed": true,
+        "evidence": "every outer candidate comparison and every repeated inner addition is charged once"
+      }
+    ],
+    "case_results": [
+      {
+        "case_id": "ROOT-HIDDEN-00",
+        "input": [
+          0,
+          7
+        ],
+        "expected_halted": true,
+        "expected_output": [
+          0,
+          1
+        ],
+        "actual_halted": true,
+        "actual_output": [
+          0,
+          1
+        ],
+        "passed": true,
+        "tokens": 20
+      },
+      {
+        "case_id": "ROOT-HIDDEN-01",
+        "input": [
+          49,
+          64
+        ],
+        "expected_halted": true,
+        "expected_output": [
+          7,
+          8
+        ],
+        "actual_halted": true,
+        "actual_output": [
+          7,
+          8
+        ],
+        "passed": true,
+        "tokens": 91
+      },
+      {
+        "case_id": "ROOT-HIDDEN-02",
+        "input": [
+          81,
+          121
+        ],
+        "expected_halted": true,
+        "expected_output": [
+          9,
+          11
+        ],
+        "actual_halted": true,
+        "actual_output": [
+          9,
+          11
+        ],
+        "passed": true,
+        "tokens": 143
+      },
+      {
+        "case_id": "ROOT-HIDDEN-03",
+        "input": [
+          196,
+          441
+        ],
+        "expected_halted": true,
+        "expected_output": [
+          2,
+          3
+        ],
+        "actual_halted": true,
+        "actual_output": [
+          2,
+          3
+        ],
+        "passed": true,
+        "tokens": 74
+      },
+      {
+        "case_id": "ROOT-HIDDEN-04",
+        "input": [
+          200,
+          450
+        ],
+        "expected_halted": true,
+        "expected_output": [
+          2,
+          3
+        ],
+        "actual_halted": true,
+        "actual_output": [
+          2,
+          3
+        ],
+        "passed": true,
+        "tokens": 75
+      },
+      {
+        "case_id": "ROOT-HIDDEN-05",
+        "input": [
+          2,
+          3
+        ],
+        "expected_halted": false,
+        "expected_output": null,
+        "actual_halted": false,
+        "actual_output": [
+          0,
+          0
+        ],
+        "passed": true,
+        "tokens": 20
+      },
+      {
+        "case_id": "ROOT-HIDDEN-06",
+        "input": [
+          15,
+          25
+        ],
+        "expected_halted": false,
+        "expected_output": null,
+        "actual_halted": false,
+        "actual_output": [
+          0,
+          0
+        ],
+        "passed": true,
+        "tokens": 28
+      },
+      {
+        "case_id": "ROOT-HIDDEN-07",
+        "input": [
+          26,
+          49
+        ],
+        "expected_halted": false,
+        "expected_output": null,
+        "actual_halted": false,
+        "actual_output": [
+          0,
+          0
+        ],
+        "passed": true,
+        "tokens": 72
+      },
+      {
+        "case_id": "ROOT-HIDDEN-08",
+        "input": [
+          99,
+          100
+        ],
+        "expected_halted": false,
+        "expected_output": null,
+        "actual_halted": false,
+        "actual_output": [
+          0,
+          0
+        ],
+        "passed": true,
+        "tokens": 140
+      },
+      {
+        "case_id": "ROOT-HIDDEN-09",
+        "input": [
+          -1,
+          4
+        ],
+        "expected_halted": false,
+        "expected_output": null,
+        "actual_halted": false,
+        "actual_output": [
+          0,
+          0
+        ],
+        "passed": true,
+        "tokens": 1
+      },
+      {
+        "case_id": "ROOT-HIDDEN-10",
+        "input": [
+          4,
+          0
+        ],
+        "expected_halted": false,
+        "expected_output": null,
+        "actual_halted": false,
+        "actual_output": [
+          0,
+          0
+        ],
+        "passed": true,
+        "tokens": 1
+      }
+    ],
+    "scale_cases": [
+      {
+        "base": [
+          4,
+          9
+        ],
+        "scaled": [
+          28,
+          63
+        ],
+        "passed": true
+      },
+      {
+        "base": [
+          9,
+          16
+        ],
+        "scaled": [
+          99,
+          176
+        ],
+        "passed": true
+      },
+      {
+        "base": [
+          25,
+          49
+        ],
+        "scaled": [
+          325,
+          637
+        ],
+        "passed": true
+      },
+      {
+        "base": [
+          2,
+          3
+        ],
+        "scaled": [
+          34,
+          51
+        ],
+        "passed": true
+      }
+    ]
+  },
+  "capability_graph": {
+    "verified_foundation_count": 15,
+    "new_foundation": "精确有理平方边界提取",
+    "verified_derived_results_added": 3
+  },
+  "next_frontier": {
+    "world_id": "WORLD-nonsquare-refinement-111",
+    "structural_signature": "monotone_nested_interval_refinement",
+    "status": "dependency_blocked",
+    "missing_dependency": "ordered_rational_approximation_memory",
+    "posthoc_math_name": null
+  },
+  "rooms": {
+    "success": "artifacts/foundation/success/exact_root_semantics.jsonl",
+    "mistakes": "artifacts/foundation/mistakes/exact_root_programs.jsonl",
+    "success_count": 2,
+    "mistake_count": 398,
+    "event_hash": "431254141d7f8b6498fc5835b568b3c56573acbea0bca86f3d9a7381e8a4ab3c"
+  },
+  "gates": [
+    {
+      "gate_id": "root_gap_taken_from_prior_frontier",
+      "passed": true,
+      "actual": {
+        "world_id": "WORLD-rational-root-boundary-101",
+        "structural_signature": "normalized_inverse_square_boundary",
+        "status": "dependency_blocked",
+        "missing_dependency": "rational_square_root_normalizer",
+        "posthoc_math_name": null
+      },
+      "required": "recorded gap"
+    },
+    {
+      "gate_id": "anonymous_boundary_search_completed",
+      "passed": true,
+      "actual": 200,
+      "required": 200
+    },
+    {
+      "gate_id": "exact_candidate_exists",
+      "passed": true,
+      "actual": 4,
+      "required": 1
+    },
+    {
+      "gate_id": "token_reward_selected_exact_program",
+      "passed": true,
+      "actual": {
+        "program_id": "RBP-c37fc47094a438cd",
+        "numerator_mode": 3,
+        "denominator_mode": 3,
+        "negative_mode": 0,
+        "require_exact": true,
+        "preprocess_reduce": true,
+        "token_accounting_version": 1
+      },
+      "required": "highest reward exact candidate"
+    },
+    {
+      "gate_id": "selected_program_rejects_nonsquares",
+      "passed": true,
+      "actual": true,
+      "required": true
+    },
+    {
+      "gate_id": "root_semantic_universally_proved_on_declared_partial_domain",
+      "passed": true,
+      "actual": 21,
+      "required": 21
+    },
+    {
+      "gate_id": "all_hidden_cases_pass",
+      "passed": true,
+      "actual": 11,
+      "required": 11
+    },
+    {
+      "gate_id": "success_and_mistake_feedback_persist",
+      "passed": true,
+      "actual": {
+        "success": 2,
+        "mistakes": 398
+      },
+      "required": {
+        "success_minimum": 1,
+        "mistakes_minimum": 199
+      }
+    },
+    {
+      "gate_id": "learner_was_not_given_root_name_or_formula",
+      "passed": true,
+      "actual": false,
+      "required": false
+    }
+  ],
+  "limitations": [
+    "The extractor is intentionally partial and rejects non-square rationals.",
+    "No irrational number object, decimal approximation, or completeness axiom has been invented.",
+    "The result is not a general radical simplifier and does not cover negative or complex roots."
+  ]
+}

@@ -1,0 +1,2497 @@
+{
+  "report_version": "strict-parametric-ten-v0.1",
+  "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+  "created_at": "2026-08-18T22:05:06.701675Z",
+  "verdict": "ten_bounded_free_variable_programs_awaiting_proof",
+  "tasks": [
+    {
+      "opaque_task": "s00",
+      "mechanism_key": "mul",
+      "posthoc_formula": "M(a,b)=a*b",
+      "candidate": {
+        "candidate_id": "SP-9332f6b2f2533639",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            14,
+            2,
+            1,
+            0,
+            3,
+            34,
+            4,
+            0,
+            3,
+            35,
+            2,
+            34,
+            12,
+            14,
+            2,
+            35,
+            5,
+            1,
+            3,
+            35,
+            2,
+            34,
+            10,
+            1,
+            3,
+            34,
+            11,
+            5,
+            2,
+            35,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          2.0,
+          6.0
+        ],
+        "behavior_signature": [
+          0.0,
+          2.0,
+          6.0
+        ],
+        "instruction_count": 17,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-9332f6b2f2533639",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                14,
+                2,
+                1,
+                0,
+                3,
+                34,
+                4,
+                0,
+                3,
+                35,
+                2,
+                34,
+                12,
+                14,
+                2,
+                35,
+                5,
+                1,
+                3,
+                35,
+                2,
+                34,
+                10,
+                1,
+                3,
+                34,
+                11,
+                5,
+                2,
+                35,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              2.0,
+              6.0
+            ],
+            "behavior_signature": [
+              0.0,
+              2.0,
+              6.0
+            ],
+            "instruction_count": 17,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            7,
+            6
+          ],
+          "predicted": 42.0,
+          "observed": 42,
+          "passed": true
+        },
+        {
+          "inputs": [
+            9,
+            3
+          ],
+          "predicted": 27.0,
+          "observed": 27,
+          "passed": true
+        },
+        {
+          "inputs": [
+            4,
+            0
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-3cee56bfa0429d65",
+        "operation_id": "STRICT-9332f6b2f2533639",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            14,
+            2,
+            1,
+            0,
+            3,
+            34,
+            4,
+            0,
+            3,
+            35,
+            2,
+            34,
+            12,
+            14,
+            2,
+            35,
+            5,
+            1,
+            3,
+            35,
+            2,
+            34,
+            10,
+            1,
+            3,
+            34,
+            11,
+            5,
+            2,
+            35,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s00",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "M(a,b)=a*b",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-ee1af75b8ac58739",
+        "AM-ee1af75b8ac58739",
+        "AM-5103590f0b9b0cc8"
+      ]
+    },
+    {
+      "opaque_task": "s01",
+      "mechanism_key": "max",
+      "posthoc_formula": "MAX(a,b)=max(a,b)",
+      "candidate": {
+        "candidate_id": "SP-92615f5768accb5a",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            6,
+            1,
+            0,
+            15,
+            0,
+            0,
+            0,
+            1,
+            1,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          2.0,
+          4.0
+        ],
+        "behavior_signature": [
+          0.0,
+          2.0,
+          4.0
+        ],
+        "instruction_count": 9,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-92615f5768accb5a",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                0,
+                6,
+                1,
+                13,
+                6,
+                1,
+                0,
+                15,
+                0,
+                0,
+                0,
+                1,
+                1,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              2.0,
+              4.0
+            ],
+            "behavior_signature": [
+              0.0,
+              2.0,
+              4.0
+            ],
+            "instruction_count": 9,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            11,
+            9
+          ],
+          "predicted": 11.0,
+          "observed": 11,
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            12
+          ],
+          "predicted": 12.0,
+          "observed": 12,
+          "passed": true
+        },
+        {
+          "inputs": [
+            6,
+            6
+          ],
+          "predicted": 6.0,
+          "observed": 6,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-68723b60b475c19c",
+        "operation_id": "STRICT-92615f5768accb5a",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            6,
+            1,
+            0,
+            15,
+            0,
+            0,
+            0,
+            1,
+            1,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s01",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "MAX(a,b)=max(a,b)",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-8dd48d0d4652d3bd",
+        "AM-8dd48d0d4652d3bd",
+        "AM-ca3a02100ba4306a"
+      ]
+    },
+    {
+      "opaque_task": "s02",
+      "mechanism_key": "trunc_sub",
+      "posthoc_formula": "D(a,b)=max(a-b,0)",
+      "candidate": {
+        "candidate_id": "SP-89ee442f3b02e329",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            5,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          1.0
+        ],
+        "instruction_count": 8,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-89ee442f3b02e329",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                0,
+                6,
+                1,
+                13,
+                5,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 8,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            11,
+            9
+          ],
+          "predicted": 2.0,
+          "observed": 2,
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            12
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "inputs": [
+            6,
+            6
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-bb491142f1c6d314",
+        "operation_id": "STRICT-89ee442f3b02e329",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            5,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s02",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "D(a,b)=max(a-b,0)",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-24a1f8d46f761783",
+        "AM-24a1f8d46f761783",
+        "AM-b9a3d98a5f57d473"
+      ]
+    },
+    {
+      "opaque_task": "s03",
+      "mechanism_key": "not_equal",
+      "posthoc_formula": "NE(a,b)=1[a!=b]",
+      "candidate": {
+        "candidate_id": "SP-75f73608ecad46ee",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            1,
+            6,
+            0,
+            12,
+            6,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "behavior_signature": [
+          0.0,
+          1.0,
+          0.0,
+          1.0
+        ],
+        "instruction_count": 9,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-3e4128c26418ba49",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                1,
+                6,
+                0,
+                13,
+                5,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              0.0
+            ],
+            "instruction_count": 8,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 36,
+          "programs_executed": 36
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "SP-75f73608ecad46ee",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                1,
+                6,
+                0,
+                12,
+                6,
+                4,
+                1,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              1.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              1.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 9,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            11,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            2
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "inputs": [
+            6,
+            7
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-7c408d139ca607a1",
+        "operation_id": "STRICT-75f73608ecad46ee",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            1,
+            6,
+            0,
+            12,
+            6,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s03",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "NE(a,b)=1[a!=b]",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-b7cfe9912a8c0f64",
+        "AM-b7cfe9912a8c0f64",
+        "AM-1db66be25e15bd20"
+      ]
+    },
+    {
+      "opaque_task": "s04",
+      "mechanism_key": "less_equal",
+      "posthoc_formula": "LE(a,b)=1[a<=b]",
+      "candidate": {
+        "candidate_id": "SP-1fefa3480b7de758",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            1,
+            6,
+            0,
+            13,
+            6,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "behavior_signature": [
+          1.0,
+          1.0,
+          1.0
+        ],
+        "instruction_count": 9,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-1fefa3480b7de758",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                1,
+                6,
+                0,
+                13,
+                6,
+                4,
+                1,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "instruction_count": 9,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            11,
+            9
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            2
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "inputs": [
+            6,
+            7
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-f36e4d7703f78dbd",
+        "operation_id": "STRICT-1fefa3480b7de758",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            1,
+            6,
+            0,
+            13,
+            6,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s04",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "LE(a,b)=1[a<=b]",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-cdb4e10651473633",
+        "AM-cdb4e10651473633",
+        "AM-ca009b029fd41e3a"
+      ]
+    },
+    {
+      "opaque_task": "s05",
+      "mechanism_key": "greater",
+      "posthoc_formula": "GT(a,b)=1[a>b]",
+      "candidate": {
+        "candidate_id": "SP-af356acddebfec0a",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            7,
+            12,
+            7,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "behavior_signature": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "instruction_count": 10,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-89ee442f3b02e329",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                0,
+                6,
+                1,
+                13,
+                5,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0
+            ],
+            "instruction_count": 8,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 36,
+          "programs_executed": 36
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "SP-af356acddebfec0a",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                0,
+                6,
+                1,
+                13,
+                7,
+                12,
+                7,
+                4,
+                1,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              0.0,
+              0.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 10,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            11,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            2
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        },
+        {
+          "inputs": [
+            6,
+            7
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-29ffc54d4342d6e0",
+        "operation_id": "STRICT-af356acddebfec0a",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            7,
+            12,
+            7,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s05",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "GT(a,b)=1[a>b]",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-22fe1024d2977c61",
+        "AM-22fe1024d2977c61",
+        "AM-ffcb89c58288c9f6"
+      ]
+    },
+    {
+      "opaque_task": "s06",
+      "mechanism_key": "greater_equal",
+      "posthoc_formula": "GE(a,b)=1[a>=b]",
+      "candidate": {
+        "candidate_id": "SP-979eedadd1afa9a8",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            6,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          0.0,
+          1.0
+        ],
+        "behavior_signature": [
+          1.0,
+          0.0,
+          1.0
+        ],
+        "instruction_count": 9,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-979eedadd1afa9a8",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                0,
+                6,
+                1,
+                13,
+                6,
+                4,
+                1,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "behavior_signature": [
+              1.0,
+              0.0,
+              1.0
+            ],
+            "instruction_count": 9,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            11,
+            9
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "inputs": [
+            2,
+            2
+          ],
+          "predicted": 1.0,
+          "observed": 1,
+          "passed": true
+        },
+        {
+          "inputs": [
+            6,
+            7
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-4504518a6a074387",
+        "operation_id": "STRICT-979eedadd1afa9a8",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            6,
+            1,
+            13,
+            6,
+            4,
+            1,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s06",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "GE(a,b)=1[a>=b]",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-a2f9f7f952afef8b",
+        "AM-a2f9f7f952afef8b",
+        "AM-e8d84635c8c0bcf4"
+      ]
+    },
+    {
+      "opaque_task": "s07",
+      "mechanism_key": "absolute",
+      "posthoc_formula": "ABS(z)=|z|",
+      "candidate": {
+        "candidate_id": "SP-a8fc8752c33afb2a",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            13,
+            4,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            6,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          3.0,
+          1.0,
+          0.0
+        ],
+        "behavior_signature": [
+          3.0,
+          1.0,
+          0.0
+        ],
+        "instruction_count": 8,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-a8fc8752c33afb2a",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                1,
+                0,
+                13,
+                4,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                6,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              3.0,
+              1.0,
+              0.0
+            ],
+            "behavior_signature": [
+              3.0,
+              1.0,
+              0.0
+            ],
+            "instruction_count": 8,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 2,
+          "programs_executed": 1
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            -11
+          ],
+          "predicted": 11.0,
+          "observed": 11,
+          "passed": true
+        },
+        {
+          "inputs": [
+            7
+          ],
+          "predicted": 7.0,
+          "observed": 7,
+          "passed": true
+        },
+        {
+          "inputs": [
+            -8
+          ],
+          "predicted": 8.0,
+          "observed": 8,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-28d449fae6e7de4b",
+        "operation_id": "STRICT-a8fc8752c33afb2a",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            1,
+            0,
+            13,
+            4,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            6,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s07",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "ABS(z)=|z|",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": []
+    },
+    {
+      "opaque_task": "s08",
+      "mechanism_key": "falling",
+      "posthoc_formula": "P(n,k)=0 if k>n else n!/(n-k)!",
+      "candidate": {
+        "candidate_id": "SP-a29e25d6ec8f6c6c",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            14,
+            5,
+            1,
+            1,
+            3,
+            80,
+            1,
+            0,
+            6,
+            1,
+            13,
+            37,
+            1,
+            0,
+            3,
+            82,
+            4,
+            1,
+            3,
+            81,
+            2,
+            80,
+            12,
+            34,
+            2,
+            81,
+            3,
+            83,
+            4,
+            0,
+            3,
+            84,
+            2,
+            83,
+            12,
+            25,
+            2,
+            84,
+            7,
+            82,
+            3,
+            84,
+            2,
+            83,
+            10,
+            1,
+            3,
+            83,
+            11,
+            16,
+            2,
+            84,
+            3,
+            81,
+            2,
+            82,
+            10,
+            1,
+            3,
+            82,
+            2,
+            80,
+            10,
+            1,
+            3,
+            80,
+            11,
+            10,
+            2,
+            81,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          1.0,
+          3.0
+        ],
+        "behavior_signature": [
+          1.0,
+          1.0,
+          3.0
+        ],
+        "instruction_count": 40,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-a29e25d6ec8f6c6c",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                14,
+                5,
+                1,
+                1,
+                3,
+                80,
+                1,
+                0,
+                6,
+                1,
+                13,
+                37,
+                1,
+                0,
+                3,
+                82,
+                4,
+                1,
+                3,
+                81,
+                2,
+                80,
+                12,
+                34,
+                2,
+                81,
+                3,
+                83,
+                4,
+                0,
+                3,
+                84,
+                2,
+                83,
+                12,
+                25,
+                2,
+                84,
+                7,
+                82,
+                3,
+                84,
+                2,
+                83,
+                10,
+                1,
+                3,
+                83,
+                11,
+                16,
+                2,
+                84,
+                3,
+                81,
+                2,
+                82,
+                10,
+                1,
+                3,
+                82,
+                2,
+                80,
+                10,
+                1,
+                3,
+                80,
+                11,
+                10,
+                2,
+                81,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              3.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              3.0
+            ],
+            "instruction_count": 40,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            6,
+            4
+          ],
+          "predicted": 360.0,
+          "observed": 360,
+          "passed": true
+        },
+        {
+          "inputs": [
+            8,
+            2
+          ],
+          "predicted": 56.0,
+          "observed": 56,
+          "passed": true
+        },
+        {
+          "inputs": [
+            4,
+            5
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-7cdb267ed8af145c",
+        "operation_id": "STRICT-a29e25d6ec8f6c6c",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            14,
+            5,
+            1,
+            1,
+            3,
+            80,
+            1,
+            0,
+            6,
+            1,
+            13,
+            37,
+            1,
+            0,
+            3,
+            82,
+            4,
+            1,
+            3,
+            81,
+            2,
+            80,
+            12,
+            34,
+            2,
+            81,
+            3,
+            83,
+            4,
+            0,
+            3,
+            84,
+            2,
+            83,
+            12,
+            25,
+            2,
+            84,
+            7,
+            82,
+            3,
+            84,
+            2,
+            83,
+            10,
+            1,
+            3,
+            83,
+            11,
+            16,
+            2,
+            84,
+            3,
+            81,
+            2,
+            82,
+            10,
+            1,
+            3,
+            82,
+            2,
+            80,
+            10,
+            1,
+            3,
+            80,
+            11,
+            10,
+            2,
+            81,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s08",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "P(n,k)=0 if k>n else n!/(n-k)!",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-9f03efd362cdb4bb",
+        "AM-9f03efd362cdb4bb",
+        "AM-f33f103205e31c45"
+      ]
+    },
+    {
+      "opaque_task": "s09",
+      "mechanism_key": "choose",
+      "posthoc_formula": "C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+      "candidate": {
+        "candidate_id": "SP-72ca63a9651d3a03",
+        "program": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            14,
+            8,
+            1,
+            1,
+            3,
+            114,
+            1,
+            0,
+            6,
+            1,
+            13,
+            54,
+            9,
+            1,
+            3,
+            116,
+            4,
+            1,
+            3,
+            117,
+            4,
+            1,
+            3,
+            115,
+            2,
+            114,
+            12,
+            51,
+            2,
+            115,
+            3,
+            118,
+            4,
+            0,
+            3,
+            119,
+            2,
+            118,
+            12,
+            27,
+            2,
+            119,
+            7,
+            116,
+            3,
+            119,
+            2,
+            118,
+            10,
+            1,
+            3,
+            118,
+            11,
+            18,
+            2,
+            119,
+            3,
+            120,
+            4,
+            0,
+            3,
+            121,
+            2,
+            120,
+            8,
+            117,
+            13,
+            39,
+            3,
+            120,
+            2,
+            121,
+            9,
+            1,
+            3,
+            121,
+            11,
+            31,
+            2,
+            121,
+            3,
+            115,
+            2,
+            116,
+            9,
+            1,
+            3,
+            116,
+            2,
+            117,
+            9,
+            1,
+            3,
+            117,
+            2,
+            114,
+            10,
+            1,
+            3,
+            114,
+            11,
+            12,
+            2,
+            115,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "fit_error": 0.0,
+        "maximum_absolute_error": 0.0,
+        "outputs": [
+          1.0,
+          1.0,
+          3.0,
+          3.0
+        ],
+        "behavior_signature": [
+          1.0,
+          1.0,
+          3.0,
+          3.0
+        ],
+        "instruction_count": 57,
+        "exact": true
+      },
+      "cegis_rounds": [
+        {
+          "round_index": 0,
+          "active_case_indices": [
+            0,
+            1,
+            2
+          ],
+          "candidate": {
+            "candidate_id": "SP-a29e25d6ec8f6c6c",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                14,
+                5,
+                1,
+                1,
+                3,
+                80,
+                1,
+                0,
+                6,
+                1,
+                13,
+                37,
+                1,
+                0,
+                3,
+                82,
+                4,
+                1,
+                3,
+                81,
+                2,
+                80,
+                12,
+                34,
+                2,
+                81,
+                3,
+                83,
+                4,
+                0,
+                3,
+                84,
+                2,
+                83,
+                12,
+                25,
+                2,
+                84,
+                7,
+                82,
+                3,
+                84,
+                2,
+                83,
+                10,
+                1,
+                3,
+                83,
+                11,
+                16,
+                2,
+                84,
+                3,
+                81,
+                2,
+                82,
+                10,
+                1,
+                3,
+                82,
+                2,
+                80,
+                10,
+                1,
+                3,
+                80,
+                11,
+                10,
+                2,
+                81,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              3.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              3.0
+            ],
+            "instruction_count": 40,
+            "exact": true
+          },
+          "added_counterexample_index": 3,
+          "programs_generated": 36,
+          "programs_executed": 36
+        },
+        {
+          "round_index": 1,
+          "active_case_indices": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "candidate": {
+            "candidate_id": "SP-72ca63a9651d3a03",
+            "program": {
+              "substrate": "anonymous_unified_word_machine_v0.1",
+              "word_width": 2,
+              "words": [
+                14,
+                8,
+                1,
+                1,
+                3,
+                114,
+                1,
+                0,
+                6,
+                1,
+                13,
+                54,
+                9,
+                1,
+                3,
+                116,
+                4,
+                1,
+                3,
+                117,
+                4,
+                1,
+                3,
+                115,
+                2,
+                114,
+                12,
+                51,
+                2,
+                115,
+                3,
+                118,
+                4,
+                0,
+                3,
+                119,
+                2,
+                118,
+                12,
+                27,
+                2,
+                119,
+                7,
+                116,
+                3,
+                119,
+                2,
+                118,
+                10,
+                1,
+                3,
+                118,
+                11,
+                18,
+                2,
+                119,
+                3,
+                120,
+                4,
+                0,
+                3,
+                121,
+                2,
+                120,
+                8,
+                117,
+                13,
+                39,
+                3,
+                120,
+                2,
+                121,
+                9,
+                1,
+                3,
+                121,
+                11,
+                31,
+                2,
+                121,
+                3,
+                115,
+                2,
+                116,
+                9,
+                1,
+                3,
+                116,
+                2,
+                117,
+                9,
+                1,
+                3,
+                117,
+                2,
+                114,
+                10,
+                1,
+                3,
+                114,
+                11,
+                12,
+                2,
+                115,
+                15,
+                0,
+                0,
+                0,
+                4,
+                0,
+                15,
+                0,
+                0,
+                0
+              ]
+            },
+            "fit_error": 0.0,
+            "maximum_absolute_error": 0.0,
+            "outputs": [
+              1.0,
+              1.0,
+              3.0,
+              3.0
+            ],
+            "behavior_signature": [
+              1.0,
+              1.0,
+              3.0,
+              3.0
+            ],
+            "instruction_count": 57,
+            "exact": true
+          },
+          "added_counterexample_index": null,
+          "programs_generated": 36,
+          "programs_executed": 36
+        }
+      ],
+      "hidden_results": [
+        {
+          "inputs": [
+            6,
+            4
+          ],
+          "predicted": 15.0,
+          "observed": 15,
+          "passed": true
+        },
+        {
+          "inputs": [
+            8,
+            2
+          ],
+          "predicted": 28.0,
+          "observed": 28,
+          "passed": true
+        },
+        {
+          "inputs": [
+            4,
+            5
+          ],
+          "predicted": 0.0,
+          "observed": 0,
+          "passed": true
+        }
+      ],
+      "success_room_record": {
+        "room_record_id": "SF-7477170fbecf2c3f",
+        "operation_id": "STRICT-72ca63a9651d3a03",
+        "definition": {
+          "substrate": "anonymous_unified_word_machine_v0.1",
+          "word_width": 2,
+          "words": [
+            14,
+            8,
+            1,
+            1,
+            3,
+            114,
+            1,
+            0,
+            6,
+            1,
+            13,
+            54,
+            9,
+            1,
+            3,
+            116,
+            4,
+            1,
+            3,
+            117,
+            4,
+            1,
+            3,
+            115,
+            2,
+            114,
+            12,
+            51,
+            2,
+            115,
+            3,
+            118,
+            4,
+            0,
+            3,
+            119,
+            2,
+            118,
+            12,
+            27,
+            2,
+            119,
+            7,
+            116,
+            3,
+            119,
+            2,
+            118,
+            10,
+            1,
+            3,
+            118,
+            11,
+            18,
+            2,
+            119,
+            3,
+            120,
+            4,
+            0,
+            3,
+            121,
+            2,
+            120,
+            8,
+            117,
+            13,
+            39,
+            3,
+            120,
+            2,
+            121,
+            9,
+            1,
+            3,
+            121,
+            11,
+            31,
+            2,
+            121,
+            3,
+            115,
+            2,
+            116,
+            9,
+            1,
+            3,
+            116,
+            2,
+            117,
+            9,
+            1,
+            3,
+            117,
+            2,
+            114,
+            10,
+            1,
+            3,
+            114,
+            11,
+            12,
+            2,
+            115,
+            15,
+            0,
+            0,
+            0,
+            4,
+            0,
+            15,
+            0,
+            0,
+            0
+          ]
+        },
+        "parent_operation_ids": [
+          "strict_parametric_frontier_v0.1"
+        ],
+        "validation_scope": "opaque_strict_s09",
+        "knowledge_status": "bounded",
+        "evidence": {
+          "run_id": "RUN-strict-parametric-ten-20260818T220506210547Z",
+          "formula_assigned_posthoc": "C(n,k)=0 if k>n else n!/(k!(n-k)!)",
+          "awaiting_universal_proof": true
+        }
+      },
+      "mistake_ids": [
+        "AM-f177f8a6b6d2e831",
+        "AM-f177f8a6b6d2e831",
+        "AM-9b6107bf256e3ca2"
+      ]
+    }
+  ],
+  "gates": [
+    {
+      "gate_id": "ten_cross_parameter_exact",
+      "passed": true,
+      "actual": 10,
+      "threshold": 10
+    },
+    {
+      "gate_id": "ten_distinct_programs",
+      "passed": true,
+      "actual": 10,
+      "threshold": 10
+    },
+    {
+      "gate_id": "all_formula_arguments_runtime_free",
+      "passed": true,
+      "actual": 10,
+      "threshold": 10
+    }
+  ],
+  "learner_received": {
+    "formula_names": false,
+    "task_names": false,
+    "anonymous_numeric_rows": true,
+    "multiply_or_divide_opcode": false,
+    "generic_free_variable_frontier": true
+  },
+  "limitations": [
+    "The candidate frontier is host-supplied and finite.",
+    "Hidden transfer is not the universal proof."
+  ]
+}

@@ -1,0 +1,958 @@
+{
+  "report_version": "completion-boundary-probe-v0.1",
+  "run_id": "RUN-completion-boundary-probe-20260820T032056305791Z",
+  "created_at": "2026-08-20T03:20:56.305791Z",
+  "verdict": "no_new_completion_semantic_promoted",
+  "resumed_from": {
+    "run_id": "RUN-autonomous-interval-memory-20260820T031910506925Z",
+    "frontier": {
+      "world_id": "WORLD-completion-equivalence-121",
+      "structural_signature": "equivalent_cauchy_enclosure_object",
+      "status": "dependency_blocked",
+      "missing_dependency": "completion_equivalence_limit_object",
+      "posthoc_math_name": null
+    }
+  },
+  "candidate_count": 6,
+  "promotable_candidate_count": 0,
+  "results": [
+    {
+      "candidate_id": "CEQ-5feceb66ffc86f38",
+      "anonymous_mode": 0,
+      "case_count": 352,
+      "passed_case_count": 215,
+      "failed_case_count": 137,
+      "observationally_exact": false,
+      "structurally_novel": true,
+      "promotable": false,
+      "counterexamples": [
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            513,
+            1024
+          ],
+          "family": "close_distinct_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            342,
+            1024
+          ],
+          "family": "close_distinct_third_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            2049,
+            4096
+          ],
+          "family": "close_distinct_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            1366,
+            4096
+          ],
+          "family": "close_distinct_third_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            8193,
+            16384
+          ],
+          "family": "close_distinct_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            5462,
+            16384
+          ],
+          "family": "close_distinct_third_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            32769,
+            65536
+          ],
+          "family": "close_distinct_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            21846,
+            65536
+          ],
+          "family": "close_distinct_third_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            131073,
+            262144
+          ],
+          "family": "close_distinct_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            87382,
+            262144
+          ],
+          "family": "close_distinct_third_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            524289,
+            1048576
+          ],
+          "family": "close_distinct_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            349526,
+            1048576
+          ],
+          "family": "close_distinct_third_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        }
+      ],
+      "posthoc_interpretation": "finite-prefix overlap/equality rule"
+    },
+    {
+      "candidate_id": "CEQ-6b86b273ff34fce1",
+      "anonymous_mode": 1,
+      "case_count": 352,
+      "passed_case_count": 222,
+      "failed_case_count": 130,
+      "observationally_exact": false,
+      "structurally_novel": true,
+      "promotable": false,
+      "counterexamples": [
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            513,
+            1024
+          ],
+          "family": "close_distinct_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            342,
+            1024
+          ],
+          "family": "close_distinct_third_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            2049,
+            4096
+          ],
+          "family": "close_distinct_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            1366,
+            4096
+          ],
+          "family": "close_distinct_third_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            8193,
+            16384
+          ],
+          "family": "close_distinct_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            5462,
+            16384
+          ],
+          "family": "close_distinct_third_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            32769,
+            65536
+          ],
+          "family": "close_distinct_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            21846,
+            65536
+          ],
+          "family": "close_distinct_third_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            131073,
+            262144
+          ],
+          "family": "close_distinct_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            87382,
+            262144
+          ],
+          "family": "close_distinct_third_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            524289,
+            1048576
+          ],
+          "family": "close_distinct_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            349526,
+            1048576
+          ],
+          "family": "close_distinct_third_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        }
+      ],
+      "posthoc_interpretation": "finite-prefix overlap/equality rule"
+    },
+    {
+      "candidate_id": "CEQ-d4735e3a265e16ee",
+      "anonymous_mode": 2,
+      "case_count": 352,
+      "passed_case_count": 222,
+      "failed_case_count": 130,
+      "observationally_exact": false,
+      "structurally_novel": true,
+      "promotable": false,
+      "counterexamples": [
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            513,
+            1024
+          ],
+          "family": "close_distinct_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            342,
+            1024
+          ],
+          "family": "close_distinct_third_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            2049,
+            4096
+          ],
+          "family": "close_distinct_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            1366,
+            4096
+          ],
+          "family": "close_distinct_third_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            8193,
+            16384
+          ],
+          "family": "close_distinct_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            5462,
+            16384
+          ],
+          "family": "close_distinct_third_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            32769,
+            65536
+          ],
+          "family": "close_distinct_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            21846,
+            65536
+          ],
+          "family": "close_distinct_third_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            131073,
+            262144
+          ],
+          "family": "close_distinct_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            87382,
+            262144
+          ],
+          "family": "close_distinct_third_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            524289,
+            1048576
+          ],
+          "family": "close_distinct_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            349526,
+            1048576
+          ],
+          "family": "close_distinct_third_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        }
+      ],
+      "posthoc_interpretation": "finite-prefix overlap/equality rule"
+    },
+    {
+      "candidate_id": "CEQ-4e07408562bedb8b",
+      "anonymous_mode": 3,
+      "case_count": 352,
+      "passed_case_count": 222,
+      "failed_case_count": 130,
+      "observationally_exact": false,
+      "structurally_novel": true,
+      "promotable": false,
+      "counterexamples": [
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            513,
+            1024
+          ],
+          "family": "close_distinct_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            342,
+            1024
+          ],
+          "family": "close_distinct_third_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            2049,
+            4096
+          ],
+          "family": "close_distinct_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            1366,
+            4096
+          ],
+          "family": "close_distinct_third_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            8193,
+            16384
+          ],
+          "family": "close_distinct_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            5462,
+            16384
+          ],
+          "family": "close_distinct_third_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            32769,
+            65536
+          ],
+          "family": "close_distinct_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            21846,
+            65536
+          ],
+          "family": "close_distinct_third_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            131073,
+            262144
+          ],
+          "family": "close_distinct_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            87382,
+            262144
+          ],
+          "family": "close_distinct_third_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            524289,
+            1048576
+          ],
+          "family": "close_distinct_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            349526,
+            1048576
+          ],
+          "family": "close_distinct_third_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        }
+      ],
+      "posthoc_interpretation": "finite-prefix overlap/equality rule"
+    },
+    {
+      "candidate_id": "CEQ-4b227777d4dd1fc6",
+      "anonymous_mode": 4,
+      "case_count": 352,
+      "passed_case_count": 222,
+      "failed_case_count": 130,
+      "observationally_exact": false,
+      "structurally_novel": true,
+      "promotable": false,
+      "counterexamples": [
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            513,
+            1024
+          ],
+          "family": "close_distinct_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            342,
+            1024
+          ],
+          "family": "close_distinct_third_depth_1",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            2049,
+            4096
+          ],
+          "family": "close_distinct_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            1366,
+            4096
+          ],
+          "family": "close_distinct_third_depth_2",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            8193,
+            16384
+          ],
+          "family": "close_distinct_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            5462,
+            16384
+          ],
+          "family": "close_distinct_third_depth_3",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            32769,
+            65536
+          ],
+          "family": "close_distinct_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            21846,
+            65536
+          ],
+          "family": "close_distinct_third_depth_4",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            131073,
+            262144
+          ],
+          "family": "close_distinct_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            87382,
+            262144
+          ],
+          "family": "close_distinct_third_depth_5",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            2
+          ],
+          "right": [
+            524289,
+            1048576
+          ],
+          "family": "close_distinct_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        },
+        {
+          "depth": 1,
+          "left": [
+            1,
+            3
+          ],
+          "right": [
+            349526,
+            1048576
+          ],
+          "family": "close_distinct_third_depth_6",
+          "expected_equivalent": false,
+          "actual_equivalent": true
+        }
+      ],
+      "posthoc_interpretation": "finite-prefix overlap/equality rule"
+    },
+    {
+      "candidate_id": "CEQ-ef2d127de37b942b",
+      "anonymous_mode": 5,
+      "case_count": 352,
+      "passed_case_count": 352,
+      "failed_case_count": 0,
+      "observationally_exact": true,
+      "structurally_novel": false,
+      "promotable": false,
+      "counterexamples": [],
+      "posthoc_interpretation": "canonical rational target equality"
+    }
+  ],
+  "foundation_count_before": 16,
+  "foundation_count_after": 16,
+  "mistake_room": "artifacts/foundation/mistakes/completion_equivalence_candidates.jsonl",
+  "mistake_count": 6,
+  "finding": "Every rule based only on a fixed finite interval prefix confuses sufficiently close distinct radicands. The only exact candidate compares the already-normalized rational inputs, so it reuses an old equality semantic and does not construct a quotient or limit object.",
+  "required_new_mechanisms": [
+    "a first-class infinite generator or universally quantified stream certificate",
+    "an equivalence relation proved independent of finite prefix depth",
+    "a quotient/object constructor whose identity is not the stored rational radicand"
+  ],
+  "next_frontier": {
+    "world_id": "WORLD-completion-equivalence-121",
+    "status": "dependency_blocked",
+    "missing_dependency": "quotient_type_and_universal_stream_equivalence",
+    "posthoc_math_name": null
+  },
+  "limitations": [
+    "Failure of these six candidates is not proof that no completion construction exists.",
+    "The probe deliberately refuses to identify an infinite object from any fixed finite prefix.",
+    "No new foundation is counted and no success-room event is written."
+  ]
+}

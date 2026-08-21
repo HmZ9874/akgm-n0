@@ -1,0 +1,819 @@
+{
+  "report_version": "continuous-dynamics-v28.0",
+  "run_id": "RUN-continuous-v28-20260821T080246358044Z",
+  "created_at": "2026-08-21T08:02:46.358044Z",
+  "verdict": "continuous_time_polynomial_dynamics_verified",
+  "acceptance": {
+    "benchmark_version": "continuous-dynamics-v28.0",
+    "passed": true,
+    "classification": "verified_anonymous_discovery_of_refinement_stable_time_operators_on_polynomial_dynamics",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "stencil_rows": [
+        {
+          "experiment_id": "TS-0",
+          "anonymous_samples": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 1
+          },
+          "anonymous_targets": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TS-1",
+          "anonymous_samples": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 2
+          },
+          "anonymous_targets": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TS-2",
+          "anonymous_samples": [
+            {
+              "positive": 0,
+              "negative": 19,
+              "denominator": 4
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 4
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 2
+          },
+          "anonymous_targets": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TS-3",
+          "anonymous_samples": [
+            {
+              "positive": 5,
+              "negative": 0,
+              "denominator": 3
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 3
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 3
+          },
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 2,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TS-4",
+          "anonymous_samples": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 3
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 3
+          },
+          "anonymous_targets": [
+            {
+              "positive": 0,
+              "negative": 5,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        },
+        {
+          "experiment_id": "TS-5",
+          "anonymous_samples": [
+            {
+              "positive": 17,
+              "negative": 0,
+              "denominator": 4
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 33,
+              "negative": 0,
+              "denominator": 4
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 2
+          },
+          "anonymous_targets": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        }
+      ],
+      "refinement_rows": [
+        {
+          "experiment_id": "TR-0",
+          "coarse_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 4
+          },
+          "refined_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 16
+          },
+          "refinement_factor": 2,
+          "human_convergence_order": null
+        },
+        {
+          "experiment_id": "TR-1",
+          "coarse_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 4
+          },
+          "refined_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 16
+          },
+          "refinement_factor": 2,
+          "human_convergence_order": null
+        },
+        {
+          "experiment_id": "TR-2",
+          "coarse_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 16
+          },
+          "refined_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 64
+          },
+          "refinement_factor": 2,
+          "human_convergence_order": null
+        }
+      ],
+      "operator_formulas_supplied": false
+    },
+    "discovery": {
+      "candidates_per_target": 750,
+      "selected_target_0": {
+        "program_id": "STN-b448d24559d7f833",
+        "opaque_program": "STENCIL<TURN,ZERO,KEEP;H^1;S2>",
+        "policy": {
+          "substrate": "three_sample_interval_router_v28",
+          "sample_routes": [
+            "TURN",
+            "ZERO",
+            "KEEP"
+          ],
+          "interval_power": 1,
+          "divisor_scale": 2,
+          "human_operator_name": null
+        }
+      },
+      "selected_target_1": {
+        "program_id": "STN-a79a03a7615d04a5",
+        "opaque_program": "STENCIL<KEEP,TURN_DOUBLE,KEEP;H^2;S1>",
+        "policy": {
+          "substrate": "three_sample_interval_router_v28",
+          "sample_routes": [
+            "KEEP",
+            "TURN_DOUBLE",
+            "KEEP"
+          ],
+          "interval_power": 2,
+          "divisor_scale": 1,
+          "human_operator_name": null
+        }
+      },
+      "refinement_orders_tested": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "selected_refinement_order": 2,
+      "training_cases": 6,
+      "refinement_cases": 3
+    },
+    "proofs": {
+      "continuous_operators": {
+        "proof_id": "V28-PROOF-CONTINUOUS-STENCIL-LIMIT",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_first_stencil",
+            "passed": true,
+            "evidence": "one of 750 routers fits every first target"
+          },
+          {
+            "obligation_id": "unique_second_stencil",
+            "passed": true,
+            "evidence": "one of 750 routers fits every second target"
+          },
+          {
+            "obligation_id": "polynomial_exactness",
+            "passed": true,
+            "evidence": "symbolic expansion is exact for every quadratic trajectory and positive interval"
+          },
+          {
+            "obligation_id": "second_order_refinement",
+            "passed": true,
+            "evidence": "halving the interval quarters the cubic first-stencil error"
+          },
+          {
+            "obligation_id": "limit_certificate",
+            "passed": true,
+            "evidence": "error C*h^2 tends to zero under unbounded dyadic refinement"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "experiment_id": "SS-0",
+            "target_0_passed": true,
+            "target_1_passed": true
+          },
+          {
+            "experiment_id": "SS-1",
+            "target_0_passed": true,
+            "target_1_passed": true
+          },
+          {
+            "experiment_id": "SS-2",
+            "target_0_passed": true,
+            "target_1_passed": true
+          },
+          {
+            "experiment_id": "SS-3",
+            "target_0_passed": true,
+            "target_1_passed": true
+          }
+        ],
+        "refinement_hidden_replay": [
+          {
+            "experiment_id": "SR-0",
+            "passed": true
+          },
+          {
+            "experiment_id": "SR-1",
+            "passed": true
+          }
+        ]
+      },
+      "continuous_inertial_relation": {
+        "proof_id": "V28-PROOF-CONTINUOUS-INERTIAL-RELATION",
+        "passed": true,
+        "universal_statement": "the V24 inertial relation transfers when the response channel is produced by the V28 second time operator",
+        "hidden_replay": [
+          {
+            "experiment_id": "SS-0",
+            "passed": true,
+            "reconstructed": {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 1
+            }
+          },
+          {
+            "experiment_id": "SS-1",
+            "passed": true,
+            "reconstructed": {
+              "positive": 0,
+              "negative": 12,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 0,
+              "negative": 12,
+              "denominator": 1
+            }
+          },
+          {
+            "experiment_id": "SS-2",
+            "passed": true,
+            "reconstructed": {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 8,
+              "negative": 0,
+              "denominator": 1
+            }
+          },
+          {
+            "experiment_id": "SS-3",
+            "passed": true,
+            "reconstructed": {
+              "positive": 30,
+              "negative": 0,
+              "denominator": 1
+            },
+            "observed": {
+              "positive": 30,
+              "negative": 0,
+              "denominator": 1
+            }
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "forward_difference_claimed_central",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SS-0",
+          "anonymous_samples": [
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 8
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 39,
+              "negative": 0,
+              "denominator": 8
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 4
+          },
+          "anonymous_targets": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        }
+      },
+      {
+        "mutation": "omit_interval_first_operator",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SS-0",
+          "anonymous_samples": [
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 8
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 39,
+              "negative": 0,
+              "denominator": 8
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 4
+          },
+          "anonymous_targets": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        }
+      },
+      {
+        "mutation": "omit_interval_square_second_operator",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SS-0",
+          "anonymous_samples": [
+            {
+              "positive": 11,
+              "negative": 0,
+              "denominator": 8
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 39,
+              "negative": 0,
+              "denominator": 8
+            }
+          ],
+          "anonymous_interval": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 4
+          },
+          "anonymous_targets": [
+            {
+              "positive": 7,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "human_operator_names": null,
+          "human_formulas": null
+        }
+      },
+      {
+        "mutation": "claim_first_order_refinement",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SR-0",
+          "coarse_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 4
+          },
+          "refined_error": {
+            "positive": 1,
+            "negative": 0,
+            "denominator": 16
+          },
+          "refinement_factor": 2,
+          "human_convergence_order": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v27_rigid_body_dependency_reverified",
+        "passed": true
+      },
+      {
+        "obligation_id": "stencil_rows_are_anonymous",
+        "passed": true
+      },
+      {
+        "obligation_id": "stencil_search_is_nontrivial",
+        "passed": true
+      },
+      {
+        "obligation_id": "first_and_second_operators_are_unique",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_polynomial_trajectories_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "refinement_limit_is_certified",
+        "passed": true
+      },
+      {
+        "obligation_id": "continuous_inertial_relation_transfers",
+        "passed": true
+      },
+      {
+        "obligation_id": "fractional_intervals_and_negative_states_transfer",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_continuous_mutations_are_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m08_capability_is_promoted_with_evidence",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_gap_is_constraint_mechanics",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_transformer_regression_or_derivative_formula_is_learner_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 8,
+      "total_domains": 15,
+      "completion_ratio": 0.5333333333333333,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M09:constraints_and_generalized_coordinates",
+      "selection_reason": "constraint projection is the next prerequisite for pendula, linked bodies, and variational mechanics"
+    },
+    "research_registry": {
+      "naming_stage": "post_proof_only",
+      "supplied_to_learner": false,
+      "relations": [
+        {
+          "symbol": "D_T",
+          "name": "一阶时间算子",
+          "translation": "central first derivative",
+          "program_id": "STN-b448d24559d7f833"
+        },
+        {
+          "symbol": "D_T2",
+          "name": "二阶时间算子",
+          "translation": "central second derivative",
+          "program_id": "STN-a79a03a7615d04a5"
+        }
+      ]
+    },
+    "posthoc_translation": {
+      "target_0": "dx/dt",
+      "target_1": "d^2x/dt^2",
+      "refinement_order": "second-order convergence",
+      "mechanics_relation": "F=m*d^2x/dt^2"
+    },
+    "limitations": [
+      "V28 proves exactness on quadratic trajectories and a second-order limit certificate on cubic trajectories, not arbitrary differentiable functions.",
+      "Continuous time is represented through rational refinement families; real-number completeness is not implemented.",
+      "The observations are generated by hidden polynomial oracles, not sensors.",
+      "Partial derivatives, nonlinear differential-equation solvers, and weak or nonsmooth dynamics remain absent.",
+      "The mechanics completion gate remains open at 8/15."
+    ]
+  },
+  "claim": {
+    "achieved": "refinement-stable first and second time operators with continuous inertial relation",
+    "not_claimed": "general real analysis or arbitrary differential equations"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v28/success/continuous_dynamics_latest.json",
+    "mistake_room": "artifacts/physics/v28/mistakes/rejected_continuous_mutations.jsonl",
+    "accepted_programs": 3,
+    "rejected_mutations": 4
+  },
+  "content_digest": "4a507a0aec2d89e93f893c740a50e9fb0c1cd4baac1958173be5e7ad786175ee"
+}

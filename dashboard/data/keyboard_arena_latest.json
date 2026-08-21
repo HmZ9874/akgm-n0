@@ -1,0 +1,912 @@
+{
+  "report_version": "keyboard-symbol-arena-report-v0.1",
+  "run_id": "RUN-keyboard-arena-20260818T021827130906Z",
+  "created_at": "2026-08-18T02:18:27.149386Z",
+  "title": "全键盘标点符号语义竞技场",
+  "verdict": "conditionally_passed",
+  "knowledge_status": "bounded",
+  "architecture": "unbound_glyph_arena_plus_verified_mdl_reward",
+  "symbol_arena": {
+    "glyph_count": 32,
+    "glyphs": [
+      "!",
+      "\"",
+      "#",
+      "$",
+      "%",
+      "&",
+      "'",
+      "(",
+      ")",
+      "*",
+      "+",
+      ",",
+      "-",
+      ".",
+      "/",
+      ":",
+      ";",
+      "<",
+      "=",
+      ">",
+      "?",
+      "@",
+      "[",
+      "\\",
+      "]",
+      "^",
+      "_",
+      "`",
+      "{",
+      "|",
+      "}",
+      "~"
+    ],
+    "all_initially_unbound": true,
+    "conventional_glyphs_unbound": true,
+    "chosen_glyph": "_",
+    "remaining_unbound_count": 31,
+    "binding": {
+      "operation_id": "SEM-33bf3587fc82db18",
+      "definition": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          },
+          {
+            "op": "m_input",
+            "index": 1
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_constant",
+                "constant": -1.0
+              }
+            ]
+          }
+        ],
+        "output_register": 0
+      },
+      "verification_status": "bounded",
+      "human_interpretation": null
+    }
+  },
+  "learner_received": {
+    "glyph_meanings": false,
+    "natural_language": false,
+    "target_formula": false,
+    "reward_rule": {
+      "eligibility": "all_registered_cases_exact",
+      "description_cost": "reduced_nodes + 0.5*unique_nodes + 0.75*constant_leaves + 0.02*mean_steps + 0.1*original_nodes",
+      "verified_reward_floor": 1000000.0,
+      "selection": "highest_reward_among_verified_candidates"
+    }
+  },
+  "search": {
+    "programs_generated": 145200,
+    "programs_filtered_by_mistake_memory": 4,
+    "verified_candidate_count": 4,
+    "scored_candidate_count": 200
+  },
+  "reward_ranking": [
+    {
+      "rank": 1,
+      "candidate_id": "MC-33bf3587fc82db18",
+      "development_fit_error": 0.0,
+      "verified": true,
+      "case_count": 19,
+      "passed_case_count": 19,
+      "original_node_count": 11,
+      "reduced_node_count": 11,
+      "reduction_gain": 0,
+      "unique_node_count": 8,
+      "constant_leaf_count": 3,
+      "mean_execution_steps": 7.368421052631579,
+      "description_cost": 18.497368421052634,
+      "reward": 999981.502631579,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          },
+          {
+            "op": "m_input",
+            "index": 1
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_constant",
+                "constant": -1.0
+              }
+            ]
+          }
+        ],
+        "output_register": 0
+      }
+    },
+    {
+      "rank": 2,
+      "candidate_id": "MC-61260f2e399822f8",
+      "development_fit_error": 0.0,
+      "verified": true,
+      "case_count": 19,
+      "passed_case_count": 19,
+      "original_node_count": 11,
+      "reduced_node_count": 11,
+      "reduction_gain": 0,
+      "unique_node_count": 8,
+      "constant_leaf_count": 3,
+      "mean_execution_steps": 7.368421052631579,
+      "description_cost": 18.497368421052634,
+      "reward": 999981.502631579,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          },
+          {
+            "op": "m_input",
+            "index": 1
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_subtract",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_constant",
+                "constant": 1.0
+              }
+            ]
+          }
+        ],
+        "output_register": 0
+      }
+    },
+    {
+      "rank": 3,
+      "candidate_id": "MC-8163fb80d3467c93",
+      "development_fit_error": 0.0,
+      "verified": true,
+      "case_count": 19,
+      "passed_case_count": 19,
+      "original_node_count": 11,
+      "reduced_node_count": 11,
+      "reduction_gain": 0,
+      "unique_node_count": 8,
+      "constant_leaf_count": 3,
+      "mean_execution_steps": 7.368421052631579,
+      "description_cost": 18.497368421052634,
+      "reward": 999981.502631579,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_input",
+            "index": 1
+          },
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 0
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_subtract",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_constant",
+                "constant": 1.0
+              }
+            ]
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "output_register": 1
+      }
+    },
+    {
+      "rank": 4,
+      "candidate_id": "MC-ef852b3c7da9368b",
+      "development_fit_error": 0.0,
+      "verified": true,
+      "case_count": 19,
+      "passed_case_count": 19,
+      "original_node_count": 11,
+      "reduced_node_count": 11,
+      "reduction_gain": 0,
+      "unique_node_count": 8,
+      "constant_leaf_count": 3,
+      "mean_execution_steps": 7.368421052631579,
+      "description_cost": 18.497368421052634,
+      "reward": 999981.502631579,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_input",
+            "index": 1
+          },
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 0
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_constant",
+                "constant": -1.0
+              }
+            ]
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "output_register": 1
+      }
+    },
+    {
+      "rank": 5,
+      "candidate_id": "MC-23ba424d3a8c2b80",
+      "development_fit_error": 48.0,
+      "verified": false,
+      "case_count": 19,
+      "passed_case_count": 5,
+      "original_node_count": 9,
+      "reduced_node_count": 9,
+      "reduction_gain": 0,
+      "unique_node_count": 5,
+      "constant_leaf_count": 2,
+      "mean_execution_steps": 0.9473684210526315,
+      "description_cost": 13.918947368421053,
+      "reward": -13.918947368421053,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_input",
+            "index": 0
+          },
+          {
+            "op": "m_constant",
+            "constant": 1.0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 0
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 1.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_register",
+            "index": 1
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "output_register": 1
+      }
+    },
+    {
+      "rank": 6,
+      "candidate_id": "MC-90de9128b32bbb00",
+      "development_fit_error": 48.0,
+      "verified": false,
+      "case_count": 19,
+      "passed_case_count": 5,
+      "original_node_count": 9,
+      "reduced_node_count": 9,
+      "reduction_gain": 0,
+      "unique_node_count": 5,
+      "constant_leaf_count": 2,
+      "mean_execution_steps": 0.9473684210526315,
+      "description_cost": 13.918947368421053,
+      "reward": -13.918947368421053,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 1.0
+          },
+          {
+            "op": "m_input",
+            "index": 0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 1.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_register",
+            "index": 0
+          }
+        ],
+        "output_register": 0
+      }
+    },
+    {
+      "rank": 7,
+      "candidate_id": "MC-91b20d5d2e688fc5",
+      "development_fit_error": 48.0,
+      "verified": false,
+      "case_count": 19,
+      "passed_case_count": 5,
+      "original_node_count": 9,
+      "reduced_node_count": 9,
+      "reduction_gain": 0,
+      "unique_node_count": 5,
+      "constant_leaf_count": 2,
+      "mean_execution_steps": 0.9473684210526315,
+      "description_cost": 13.918947368421053,
+      "reward": -13.918947368421053,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_input",
+            "index": 0
+          },
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 0
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_register",
+            "index": 1
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "output_register": 1
+      }
+    },
+    {
+      "rank": 8,
+      "candidate_id": "MC-b90e74ce7cd9586b",
+      "development_fit_error": 48.0,
+      "verified": false,
+      "case_count": 19,
+      "passed_case_count": 5,
+      "original_node_count": 9,
+      "reduced_node_count": 9,
+      "reduction_gain": 0,
+      "unique_node_count": 5,
+      "constant_leaf_count": 2,
+      "mean_execution_steps": 0.9473684210526315,
+      "description_cost": 13.918947368421053,
+      "reward": -13.918947368421053,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          },
+          {
+            "op": "m_input",
+            "index": 0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_register",
+            "index": 0
+          }
+        ],
+        "output_register": 0
+      }
+    },
+    {
+      "rank": 9,
+      "candidate_id": "MC-0dbadde6e97fef25",
+      "development_fit_error": 48.0,
+      "verified": false,
+      "case_count": 19,
+      "passed_case_count": 5,
+      "original_node_count": 9,
+      "reduced_node_count": 9,
+      "reduction_gain": 0,
+      "unique_node_count": 5,
+      "constant_leaf_count": 2,
+      "mean_execution_steps": 1.0,
+      "description_cost": 13.92,
+      "reward": -13.92,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_input",
+            "index": 0
+          },
+          {
+            "op": "m_constant",
+            "constant": -1.0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 0
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": -1.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_register",
+            "index": 1
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          }
+        ],
+        "output_register": 1
+      }
+    },
+    {
+      "rank": 10,
+      "candidate_id": "MC-13f2426b4433af83",
+      "development_fit_error": 48.0,
+      "verified": false,
+      "case_count": 19,
+      "passed_case_count": 5,
+      "original_node_count": 9,
+      "reduced_node_count": 9,
+      "reduction_gain": 0,
+      "unique_node_count": 5,
+      "constant_leaf_count": 2,
+      "mean_execution_steps": 1.0,
+      "description_cost": 13.92,
+      "reward": -13.92,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": -1.0
+          },
+          {
+            "op": "m_input",
+            "index": 0
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": -1.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_register",
+            "index": 0
+          }
+        ],
+        "output_register": 0
+      }
+    }
+  ],
+  "winner": {
+    "source_candidate_id": "MC-33bf3587fc82db18",
+    "score": {
+      "verified": true,
+      "case_count": 19,
+      "passed_case_count": 19,
+      "original_node_count": 11,
+      "reduced_node_count": 11,
+      "reduction_gain": 0,
+      "unique_node_count": 8,
+      "constant_leaf_count": 3,
+      "mean_execution_steps": 7.368421052631579,
+      "description_cost": 18.497368421052634,
+      "reward": 999981.502631579,
+      "reduced_program": {
+        "substrate": "anonymous_microstate_v0.1",
+        "initial_registers": [
+          {
+            "op": "m_constant",
+            "constant": 0.0
+          },
+          {
+            "op": "m_input",
+            "index": 1
+          }
+        ],
+        "halt_condition": {
+          "op": "m_equal",
+          "left": {
+            "op": "m_register",
+            "index": 1
+          },
+          "right": {
+            "op": "m_constant",
+            "constant": 0.0
+          }
+        },
+        "simultaneous_updates": [
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 0
+              },
+              {
+                "op": "m_input",
+                "index": 0
+              }
+            ]
+          },
+          {
+            "op": "m_add",
+            "args": [
+              {
+                "op": "m_register",
+                "index": 1
+              },
+              {
+                "op": "m_constant",
+                "constant": -1.0
+              }
+            ]
+          }
+        ],
+        "output_register": 0
+      }
+    },
+    "chosen_glyph": "_",
+    "operation_id": "SEM-33bf3587fc82db18",
+    "probe": {
+      "input": [
+        7,
+        5
+      ],
+      "output": 35.0
+    }
+  },
+  "glyph_order_ablation": {
+    "normal_order_glyph": "_",
+    "reversed_order_glyph": "&",
+    "same_operation_id": true,
+    "same_output": true
+  },
+  "gates": [
+    {
+      "gate_id": "all_keyboard_punctuation_slots_open",
+      "passed": true,
+      "actual": 32,
+      "threshold": 32
+    },
+    {
+      "gate_id": "conventional_math_glyphs_have_no_intrinsic_semantics",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "mistake_memory_filters_prior_blind_failures",
+      "passed": true,
+      "actual": 4,
+      "threshold": 4
+    },
+    {
+      "gate_id": "verified_candidate_available",
+      "passed": true,
+      "actual": 4,
+      "threshold": 1
+    },
+    {
+      "gate_id": "correctness_dominates_short_incorrect_programs",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "reduction_reward_is_monotonic",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "glyph_order_does_not_change_semantics",
+      "passed": true,
+      "actual": true,
+      "threshold": true
+    },
+    {
+      "gate_id": "winner_executes_after_binding",
+      "passed": true,
+      "actual": 35.0,
+      "threshold": 35.0
+    },
+    {
+      "gate_id": "multi_operation_library_growth",
+      "passed": null,
+      "actual": 1,
+      "threshold": 5
+    }
+  ],
+  "knowledge_id": "K-000001",
+  "ledger_event_count": 4,
+  "limitations": [
+    "All 32 printable ASCII punctuation glyphs are open, not every Unicode or physical keyboard-layout key.",
+    "Glyphs are identifiers only; the micro-program and evidence define semantics.",
+    "Correctness is a hard eligibility gate, so compression cannot reward a short false program into the library.",
+    "Only one verified semantic family is currently bound; library-wide competition across multiple operations remains pending.",
+    "The host still supplies the registered microstate substrate and bounded scheduler."
+  ]
+}

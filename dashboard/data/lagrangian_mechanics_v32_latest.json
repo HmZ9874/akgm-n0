@@ -1,0 +1,838 @@
+{
+  "report_version": "lagrangian-mechanics-v32.0",
+  "run_id": "RUN-lagrangian-v32-20260821T084107501220Z",
+  "created_at": "2026-08-21T08:41:07.501220+00:00",
+  "verdict": "discrete_variational_mechanics_verified",
+  "acceptance": {
+    "benchmark_version": "lagrangian-mechanics-v32.0",
+    "passed": true,
+    "classification": "verified_anonymous_discrete_action_stationarity_and_euler_equation",
+    "observed_values": [
+      1,
+      3,
+      5,
+      7,
+      11,
+      13,
+      17
+    ],
+    "training": {
+      "path_rows": [
+        {
+          "experiment_id": "TF0-0",
+          "anonymous_channels": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF0-1",
+          "anonymous_channels": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF0-2",
+          "anonymous_channels": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF0-3",
+          "anonymous_channels": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF0-4",
+          "anonymous_channels": [
+            {
+              "positive": 4,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF1-0",
+          "anonymous_channels": [
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F1",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF1-1",
+          "anonymous_channels": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F1",
+          "human_names": null,
+          "human_action_formula": null
+        },
+        {
+          "experiment_id": "TF1-2",
+          "anonymous_channels": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F1",
+          "human_names": null,
+          "human_action_formula": null
+        }
+      ],
+      "formulas_supplied": false
+    },
+    "discovery": {
+      "candidates_generated": 108,
+      "selected_action": {
+        "program_id": "ACT-ea56e0717cbec398",
+        "opaque_program": "ACTION<KW:M;PW:K;P:TURN;H^2>",
+        "policy": {
+          "kinetic_weight": "M",
+          "potential_weight": "K",
+          "potential_route": "TURN",
+          "interval_power": 2,
+          "human_operation_name": null
+        }
+      },
+      "stationary_training_cases": 5,
+      "challenge_training_cases": 3,
+      "derived_equation": "MERGE<SEM<M,D_T2<X>>,SEM<K,X>>=ZERO",
+      "normalization_note": "overall nonzero action scale is unidentifiable; kinetic coefficient is fixed to one"
+    },
+    "proofs": {
+      "variational": {
+        "proof_id": "V32-PROOF-DISCRETE-VARIATIONAL-MECHANICS",
+        "passed": true,
+        "obligations": [
+          {
+            "obligation_id": "unique_normalized_action",
+            "passed": true,
+            "evidence": "one normalized member from 108 action programs"
+          },
+          {
+            "obligation_id": "fixed_endpoint_stationarity",
+            "passed": true,
+            "evidence": "symmetric finite variation vanishes"
+          },
+          {
+            "obligation_id": "euler_equation",
+            "passed": true,
+            "evidence": "expansion gives m D_T2 x+kx=0"
+          },
+          {
+            "obligation_id": "v30_equivalence",
+            "passed": true,
+            "evidence": "solving gives a=-(k/m)x"
+          },
+          {
+            "obligation_id": "time_translation_invariant",
+            "passed": true,
+            "evidence": "action has no absolute step index"
+          },
+          {
+            "obligation_id": "energy_correspondence",
+            "passed": true,
+            "evidence": "associated invariant is mv^2+kx^2"
+          }
+        ],
+        "hidden_replay": [
+          {
+            "experiment_id": "SF0-0",
+            "stationary_expected": true,
+            "variation": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF0-1",
+            "stationary_expected": true,
+            "variation": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF0-2",
+            "stationary_expected": true,
+            "variation": {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF1-0",
+            "stationary_expected": false,
+            "variation": {
+              "positive": 0,
+              "negative": 8,
+              "denominator": 1
+            },
+            "passed": true
+          },
+          {
+            "experiment_id": "SF1-1",
+            "stationary_expected": false,
+            "variation": {
+              "positive": 0,
+              "negative": 4,
+              "denominator": 1
+            },
+            "passed": true
+          }
+        ]
+      }
+    },
+    "mutation_audits": [
+      {
+        "mutation": "wrong_potential_sign",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF0-0",
+          "anonymous_channels": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        }
+      },
+      {
+        "mutation": "swap_weights",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF0-0",
+          "anonymous_channels": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        }
+      },
+      {
+        "mutation": "omit_interval_square",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF0-1",
+          "anonymous_channels": [
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 2,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        }
+      },
+      {
+        "mutation": "wrong_relative_potential_factor",
+        "rejected": true,
+        "counterexample": {
+          "experiment_id": "SF0-0",
+          "anonymous_channels": [
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 0,
+              "negative": 1,
+              "denominator": 1
+            },
+            {
+              "positive": 3,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 6,
+              "negative": 0,
+              "denominator": 1
+            },
+            {
+              "positive": 1,
+              "negative": 0,
+              "denominator": 1
+            }
+          ],
+          "anonymous_family": "F0",
+          "human_names": null,
+          "human_action_formula": null
+        }
+      }
+    ],
+    "proof_obligations": [
+      {
+        "obligation_id": "v31_dependency",
+        "passed": true
+      },
+      {
+        "obligation_id": "anonymous_paths",
+        "passed": true
+      },
+      {
+        "obligation_id": "nontrivial_action_search",
+        "passed": true
+      },
+      {
+        "obligation_id": "variational_proof",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_paths",
+        "passed": true
+      },
+      {
+        "obligation_id": "motion_equation_recovered",
+        "passed": true
+      },
+      {
+        "obligation_id": "energy_correspondence",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutations_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "m12_promoted",
+        "passed": true
+      },
+      {
+        "obligation_id": "completion_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_m13",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_formula_input",
+        "passed": true
+      }
+    ],
+    "mechanics_capability_graph": {
+      "scope": "declared_classical_mechanics_research_program",
+      "domains": [
+        {
+          "capability_id": "M01",
+          "capability": "directed_rational_substrate",
+          "status": "verified",
+          "evidence_version": "V21"
+        },
+        {
+          "capability_id": "M02",
+          "capability": "discrete_point_kinematics",
+          "status": "verified",
+          "evidence_version": "V22"
+        },
+        {
+          "capability_id": "M03",
+          "capability": "multi_entity_internal_exchange",
+          "status": "verified",
+          "evidence_version": "V23"
+        },
+        {
+          "capability_id": "M04",
+          "capability": "inertial_response",
+          "status": "verified",
+          "evidence_version": "V24"
+        },
+        {
+          "capability_id": "M05",
+          "capability": "one_dimensional_elastic_collision",
+          "status": "verified",
+          "evidence_version": "V25"
+        },
+        {
+          "capability_id": "M06",
+          "capability": "planar_angular_action",
+          "status": "verified",
+          "evidence_version": "V26"
+        },
+        {
+          "capability_id": "M07",
+          "capability": "fixed_axis_point_rigid_body",
+          "status": "verified",
+          "evidence_version": "V27"
+        },
+        {
+          "capability_id": "M08",
+          "capability": "continuous_time_polynomial_dynamics",
+          "status": "verified",
+          "evidence_version": "V28"
+        },
+        {
+          "capability_id": "M09",
+          "capability": "constraints_and_generalized_coordinates",
+          "status": "verified",
+          "evidence_version": "V29"
+        },
+        {
+          "capability_id": "M10",
+          "capability": "oscillation_and_stability",
+          "status": "verified",
+          "evidence_version": "V30"
+        },
+        {
+          "capability_id": "M11",
+          "capability": "gravity_and_orbits",
+          "status": "verified",
+          "evidence_version": "V31"
+        },
+        {
+          "capability_id": "M12",
+          "capability": "lagrangian_mechanics",
+          "status": "verified",
+          "evidence_version": "V32"
+        },
+        {
+          "capability_id": "M13",
+          "capability": "hamiltonian_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M14",
+          "capability": "continuum_mechanics",
+          "status": "missing",
+          "evidence_version": null
+        },
+        {
+          "capability_id": "M15",
+          "capability": "relativistic_validity_boundary",
+          "status": "missing",
+          "evidence_version": null
+        }
+      ],
+      "verified_domains": 12,
+      "total_domains": 15,
+      "completion_ratio": 0.8,
+      "full_mechanics_claim_allowed": false,
+      "next_selected_gap": "M13:hamiltonian_mechanics",
+      "selection_reason": "the discovered action and energy enable canonical state splitting and symplectic-flow tests"
+    },
+    "posthoc_translation": {
+      "action": "sum m(Delta x/h)^2-kx^2 (twice conventional L)",
+      "stationarity": "delta S=0",
+      "equation": "m x''+kx=0"
+    },
+    "limitations": [
+      "One-coordinate quadratic actions only.",
+      "Overall action scale is unidentifiable.",
+      "No gauge fields, nonholonomic variational principles, or field actions.",
+      "Completion remains 12/15."
+    ]
+  },
+  "claim": {
+    "achieved": "normalized discrete action, stationary path test, and Euler equation",
+    "not_claimed": "general field or gauge actions"
+  },
+  "storage": {
+    "success_room": "artifacts/physics/v32/success/lagrangian_latest.json",
+    "mistake_room": "artifacts/physics/v32/mistakes/rejected_action_mutations.jsonl"
+  },
+  "content_digest": "d9e3fb33f3d6f0475d993ed6826e1d083e98fa6ec82cfd3e6d4bc00d0983942f"
+}
