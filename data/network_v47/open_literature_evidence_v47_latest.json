@@ -1,0 +1,947 @@
+{
+  "snapshot_version": "open-literature-evidence-v47.0",
+  "created_at": "2026-08-22T09:43:34.049357+00:00",
+  "provider": "Europe PMC REST API",
+  "policy": {
+    "allowlisted_root": "https://www.ebi.ac.uk/europepmc/webservices/rest/",
+    "arbitrary_queries_allowed": false,
+    "arbitrary_urls_allowed": false,
+    "full_text_retained": false
+  },
+  "frozen_discovery": {
+    "semantic_id": "OPX-c9c8b1a02aa5734c",
+    "expansion_features": [
+      "ONE",
+      "COUPLE(0,1,2)",
+      "GUARD(0,1,0)"
+    ],
+    "expansion_coefficients": [
+      -3.2932860830723665e-14,
+      1.0000000000000002,
+      1.000000000000003
+    ],
+    "source_report_digest": "bce9abcef60e48cfb55a00a7a728c252e6544be8ebe42c6aea41ce20f9e2150f"
+  },
+  "preregistration": {
+    "discovery_commitment": "43531088d6044a49b278d344706046939569e00229817986f003d787a5072bd8",
+    "commit_event_index": 0,
+    "first_search_event_index": 1,
+    "first_full_text_event_index": 5
+  },
+  "autonomous_query_plan": {
+    "selected_queries": [
+      {
+        "query_id": "Q-STRUCTURE-SEARCH",
+        "query": "TITLE_ABS:\"symbolic regression\" AND OPEN_ACCESS:Y sort_cited:y",
+        "audit_dimension": "data_driven_structure_search"
+      },
+      {
+        "query_id": "Q-REUSABLE-SEMANTIC",
+        "query": "\"automatically defined functions\" AND OPEN_ACCESS:Y sort_cited:y",
+        "audit_dimension": "reusable_composite_semantics"
+      },
+      {
+        "query_id": "Q-GUARDED-FORM",
+        "query": "(\"piecewise function\" AND \"symbolic regression\") AND OPEN_ACCESS:Y sort_cited:y",
+        "audit_dimension": "guarded_or_piecewise_expression"
+      },
+      {
+        "query_id": "Q-PARSIMONY",
+        "query": "(\"parsimony\" AND \"symbolic regression\") AND OPEN_ACCESS:Y sort_cited:y",
+        "audit_dimension": "accuracy_complexity_tradeoff"
+      }
+    ],
+    "query_count": 4,
+    "selection_basis": {
+      "data_driven_structure_search": true,
+      "reusable_composite_semantics": true,
+      "guarded_or_piecewise_expression": true,
+      "accuracy_complexity_tradeoff": true
+    },
+    "host_selected_paper_ids": false,
+    "literature_available_during_discovery": false,
+    "discovery_commitment": "43531088d6044a49b278d344706046939569e00229817986f003d787a5072bd8"
+  },
+  "metadata_searches": [
+    {
+      "ok": true,
+      "event_index": 1,
+      "query_id": "Q-STRUCTURE-SEARCH",
+      "query": "TITLE_ABS:\"symbolic regression\" AND OPEN_ACCESS:Y sort_cited:y",
+      "hit_count": 165,
+      "records": [
+        {
+          "pmcid": "PMC7159912",
+          "doi": "10.1126/sciadv.aay2631",
+          "title": "AI Feynman: A physics-inspired method for symbolic regression.",
+          "journal": null,
+          "publication_year": "2020",
+          "cited_by_count": 158,
+          "is_open_access": true,
+          "author_string": "Udrescu SM, Tegmark M."
+        },
+        {
+          "pmcid": "PMC7360597",
+          "doi": "10.1038/s41467-020-17263-9",
+          "title": "Simple descriptor derived from symbolic regression accelerating the discovery of new perovskite catalysts.",
+          "journal": null,
+          "publication_year": "2020",
+          "cited_by_count": 99,
+          "is_open_access": true,
+          "author_string": "Weng B, Song Z, Zhu R, Yan Q, Sun Q, Grice CG, Yan Y, Yin WJ."
+        },
+        {
+          "pmcid": "PMC10766509",
+          "doi": "10.1038/s43588-023-00428-z",
+          "title": "Machine-guided path sampling to discover mechanisms of molecular self-organization.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 97,
+          "is_open_access": true,
+          "author_string": "Jung H, Covino R, Arjun A, Leitold C, Dellago C, Bolhuis PG, Hummer G."
+        },
+        {
+          "pmcid": "PMC7988173",
+          "doi": "10.1038/s41467-021-22048-9",
+          "title": "Single-atom alloy catalysts designed by first-principles calculations and artificial intelligence.",
+          "journal": null,
+          "publication_year": "2021",
+          "cited_by_count": 84,
+          "is_open_access": true,
+          "author_string": "Han ZK, Sarker D, Ouyang R, Mazheika A, Gao Y, Levchenko SV."
+        },
+        {
+          "pmcid": "PMC3534695",
+          "doi": "10.1371/journal.pone.0052766",
+          "title": "Bystander responses to a violent incident in an immersive virtual environment.",
+          "journal": null,
+          "publication_year": "2013",
+          "cited_by_count": 42,
+          "is_open_access": true,
+          "author_string": "Slater M, Rovira A, Southern R, Swapp D, Zhang JJ, Campbell C, Levine M."
+        },
+        {
+          "pmcid": "PMC3965471",
+          "doi": "10.1371/journal.pone.0092709",
+          "title": "NIMEFI: gene regulatory network inference using multiple ensemble feature importance algorithms.",
+          "journal": null,
+          "publication_year": "2014",
+          "cited_by_count": 41,
+          "is_open_access": true,
+          "author_string": "Ruyssinck J, Huynh-Thu VA, Geurts P, Dhaene T, Demeester P, Saeys Y."
+        },
+        {
+          "pmcid": "PMC8163752",
+          "doi": "10.1038/s41467-021-23479-0",
+          "title": "Robust learning from noisy, incomplete, high-dimensional experimental data via physically constrained symbolic regression.",
+          "journal": null,
+          "publication_year": "2021",
+          "cited_by_count": 30,
+          "is_open_access": true,
+          "author_string": "Reinbold PAK, Kageorge LM, Schatz MF, Grigoriev RO."
+        },
+        {
+          "pmcid": "PMC10113133",
+          "doi": "10.1007/s11831-023-09922-z",
+          "title": "Artificial Intelligence in Physical Sciences: Symbolic Regression Trends and Perspectives.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 26,
+          "is_open_access": true,
+          "author_string": "Angelis D, Sofos F, Karakasidis TE."
+        },
+        {
+          "pmcid": "PMC9344843",
+          "doi": "10.1093/bioinformatics/btac405",
+          "title": "Identifying interactions in omics data for clinical biomarker discovery using symbolic regression.",
+          "journal": null,
+          "publication_year": "2022",
+          "cited_by_count": 26,
+          "is_open_access": true,
+          "author_string": "Christensen NJ, Demharter S, Machado M, Pedersen L, Salvatore M, Stentoft-Hansen V, Iglesias MT."
+        },
+        {
+          "pmcid": "PMC10193941",
+          "doi": "10.1073/pnas.2220789120",
+          "title": "Machine learning of spectra-property relationship for imperfect and small chemistry data.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 25,
+          "is_open_access": true,
+          "author_string": "Chong Y, Huo Y, Jiang S, Wang X, Zhang B, Liu T, Chen X, Han T, Smith PES, Wang S, Jiang J."
+        },
+        {
+          "pmcid": "PMC8825435",
+          "doi": "10.1557/s43577-021-00165-6",
+          "title": "Materials genes of heterogeneous catalysis from clean experiments and artificial intelligence.",
+          "journal": null,
+          "publication_year": "2021",
+          "cited_by_count": 24,
+          "is_open_access": true,
+          "author_string": "Foppa L, Ghiringhelli LM, Girgsdies F, Hashagen M, Kube P, Hävecker M, Carey SJ, Tarasov A, Kraus P, Rosowski F, Schlögl R, Trunschke A, Scheffler M."
+        },
+        {
+          "pmcid": "PMC10097814",
+          "doi": "10.1038/s41467-023-37236-y",
+          "title": "Combining data and theory for derivable scientific discovery with AI-Descartes.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 21,
+          "is_open_access": true,
+          "author_string": "Cornelio C, Dash S, Austel V, Josephson TR, Goncalves J, Clarkson KL, Megiddo N, El Khadir B, Horesh L."
+        },
+        {
+          "pmcid": "PMC10931529",
+          "doi": "10.1371/journal.pcbi.1011916",
+          "title": "AI-Aristotle: A physics-informed framework for systems biology gray-box identification.",
+          "journal": null,
+          "publication_year": "2024",
+          "cited_by_count": 20,
+          "is_open_access": true,
+          "author_string": "Ahmadi Daryakenari N, De Florio M, Shukla K, Karniadakis GE."
+        },
+        {
+          "pmcid": "PMC10719374",
+          "doi": "10.1038/s41526-023-00337-5",
+          "title": "Explainable machine learning identifies multi-omics signatures of muscle response to spaceflight in mice.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 19,
+          "is_open_access": true,
+          "author_string": "Li K, Desai R, Scott RT, Steele JR, Machado M, Demharter S, Hoarfrost A, Braun JL, Fajardo VA, Sanders LM, Costes SV."
+        },
+        {
+          "pmcid": "PMC9870915",
+          "doi": "10.1038/s41598-023-28328-2",
+          "title": "A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 19,
+          "is_open_access": true,
+          "author_string": "Keren LS, Liberzon A, Lazebnik T."
+        }
+      ],
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=TITLE_ABS%3A%22symbolic+regression%22+AND+OPEN_ACCESS%3AY+sort_cited%3Ay&format=json&pageSize=15&resultType=core",
+        "status": 200,
+        "content_type": "application/json;charset=UTF-8",
+        "bytes": 93853,
+        "sha256": "722f36302bf80332eeb68376eb5625d6fae2e808ae53329a399359fd6986af96",
+        "started_at_unix_ns": 1787391802563257200,
+        "ended_at_unix_ns": 1787391803909629500
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 2,
+      "query_id": "Q-REUSABLE-SEMANTIC",
+      "query": "\"automatically defined functions\" AND OPEN_ACCESS:Y sort_cited:y",
+      "hit_count": 3,
+      "records": [
+        {
+          "pmcid": "PMC10192180",
+          "doi": "10.1007/s42979-023-01840-y",
+          "title": "Dynamic Grammar Pruning for Program Size Reduction in Symbolic Regression.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 1,
+          "is_open_access": true,
+          "author_string": "Ali MS, Kshirsagar M, Naredo E, Ryan C."
+        },
+        {
+          "pmcid": "PMC9009083",
+          "doi": "10.1021/acs.jctc.2c00035",
+          "title": "Program Synthesis of Sparse Algorithms for Wave Function and Energy Prediction in Grid-Based Quantum Simulations.",
+          "journal": null,
+          "publication_year": "2022",
+          "cited_by_count": 1,
+          "is_open_access": true,
+          "author_string": "Habershon S."
+        },
+        {
+          "pmcid": "PMC3161195",
+          "doi": "10.1007/s12065-011-0057-0",
+          "title": "Evolving scalable and modular adaptive networks with Developmental Symbolic Encoding.",
+          "journal": null,
+          "publication_year": "2011",
+          "cited_by_count": 1,
+          "is_open_access": true,
+          "author_string": "Suchorzewski M."
+        }
+      ],
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%22automatically+defined+functions%22+AND+OPEN_ACCESS%3AY+sort_cited%3Ay&format=json&pageSize=15&resultType=core",
+        "status": 200,
+        "content_type": "application/json;charset=UTF-8",
+        "bytes": 14052,
+        "sha256": "99e9cfa5f2fb7a0f6e677d8488dccaf18a7f427ffdf8cf0769029aeccd964c6d",
+        "started_at_unix_ns": 1787391803910621500,
+        "ended_at_unix_ns": 1787391804690138900
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 3,
+      "query_id": "Q-GUARDED-FORM",
+      "query": "(\"piecewise function\" AND \"symbolic regression\") AND OPEN_ACCESS:Y sort_cited:y",
+      "hit_count": 2,
+      "records": [
+        {
+          "pmcid": "PMC11945921",
+          "doi": "10.3390/s25061868",
+          "title": "A Deep Sparse Capsule Network for Non-Invasive Blood Glucose Level Estimation Using a PPG Sensor.",
+          "journal": null,
+          "publication_year": "2025",
+          "cited_by_count": 1,
+          "is_open_access": true,
+          "author_string": "Chellamani N, Albelwi SA, Shanmuganathan M, Amirthalingam P, Alharbi EM, Alatawi HQS, Prabahar K, Aljabri JB, Paul A."
+        },
+        {
+          "pmcid": "PMC4706865",
+          "doi": "10.1155/2016/1021378",
+          "title": "Using Genetic Programming with Prior Formula Knowledge to Solve Symbolic Regression Problem.",
+          "journal": null,
+          "publication_year": "2016",
+          "cited_by_count": 1,
+          "is_open_access": true,
+          "author_string": "Lu Q, Ren J, Wang Z."
+        }
+      ],
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22piecewise+function%22+AND+%22symbolic+regression%22%29+AND+OPEN_ACCESS%3AY+sort_cited%3Ay&format=json&pageSize=15&resultType=core",
+        "status": 200,
+        "content_type": "application/json;charset=UTF-8",
+        "bytes": 13629,
+        "sha256": "dc1ef4b75edd540a4dfd0e29a2871d335c8940b273fd21129d378bf7defee305",
+        "started_at_unix_ns": 1787391804691146900,
+        "ended_at_unix_ns": 1787391805383366400
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 4,
+      "query_id": "Q-PARSIMONY",
+      "query": "(\"parsimony\" AND \"symbolic regression\") AND OPEN_ACCESS:Y sort_cited:y",
+      "hit_count": 61,
+      "records": [
+        {
+          "pmcid": "PMC6842598",
+          "doi": "10.1073/pnas.1906995116",
+          "title": "Data-driven discovery of coordinates and governing equations.",
+          "journal": null,
+          "publication_year": "2019",
+          "cited_by_count": 173,
+          "is_open_access": true,
+          "author_string": "Champion K, Lusch B, Kutz JN, Brunton SL."
+        },
+        {
+          "pmcid": "PMC7360597",
+          "doi": "10.1038/s41467-020-17263-9",
+          "title": "Simple descriptor derived from symbolic regression accelerating the discovery of new perovskite catalysts.",
+          "journal": null,
+          "publication_year": "2020",
+          "cited_by_count": 99,
+          "is_open_access": true,
+          "author_string": "Weng B, Song Z, Zhu R, Yan Q, Sun Q, Grice CG, Yan Y, Yin WJ."
+        },
+        {
+          "pmcid": "PMC8531004",
+          "doi": "10.1038/s41467-021-26434-1",
+          "title": "Physics-informed learning of governing equations from scarce data.",
+          "journal": null,
+          "publication_year": "2021",
+          "cited_by_count": 77,
+          "is_open_access": true,
+          "author_string": "Chen Z, Liu Y, Sun H."
+        },
+        {
+          "pmcid": "PMC11332022",
+          "doi": "10.1038/s44185-023-00022-6",
+          "title": "Understanding and applying biological resilience, from genes to ecosystems.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 43,
+          "is_open_access": true,
+          "author_string": "Thorogood R, Mustonen V, Aleixo A, Aphalo PJ, Asiegbu FO, Cabeza M, Cairns J, Candolin U, Cardoso P, Eronen JT, Hällfors M, Hovatta I, Juslén A, Kovalchuk A, Kulmuni J, Kuula L, Mäkipää R, Ovaskainen O, Pesonen AK, Primmer CR, Saastamoinen M, Schulman AH, Schulman L, Strona G, Vanhatalo J."
+        },
+        {
+          "pmcid": "PMC11408493",
+          "doi": "10.1038/s41467-024-52519-8",
+          "title": "Machine learning-assisted dual-atom sites design with interpretable descriptors unifying electrocatalytic reactions.",
+          "journal": null,
+          "publication_year": "2024",
+          "cited_by_count": 38,
+          "is_open_access": true,
+          "author_string": "Lin X, Du X, Wu S, Zhen S, Liu W, Pei C, Zhang P, Zhao ZJ, Gong J."
+        },
+        {
+          "pmcid": "PMC12341957",
+          "doi": "10.3389/fsysb.2024.1407994",
+          "title": "The rise of scientific machine learning: a perspective on combining mechanistic modelling with machine learning for systems biology.",
+          "journal": null,
+          "publication_year": "2024",
+          "cited_by_count": 24,
+          "is_open_access": true,
+          "author_string": "Noordijk B, Garcia Gomez ML, Ten Tusscher KHWJ, de Ridder D, van Dijk ADJ, Smith RW."
+        },
+        {
+          "pmcid": "PMC7861345",
+          "doi": "10.3389/frai.2020.00025",
+          "title": "Discovery of Physics From Data: Universal Laws and Discrepancies.",
+          "journal": null,
+          "publication_year": "2020",
+          "cited_by_count": 21,
+          "is_open_access": true,
+          "author_string": "de Silva BM, Higdon DM, Brunton SL, Kutz JN."
+        },
+        {
+          "pmcid": "PMC10146176",
+          "doi": "10.3390/ma16083134",
+          "title": "Feature Selection in Machine Learning for Perovskite Materials Design and Discovery.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 20,
+          "is_open_access": true,
+          "author_string": "Wang J, Xu P, Ji X, Li M, Lu W."
+        },
+        {
+          "pmcid": "PMC9870915",
+          "doi": "10.1038/s41598-023-28328-2",
+          "title": "A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 19,
+          "is_open_access": true,
+          "author_string": "Keren LS, Liberzon A, Lazebnik T."
+        },
+        {
+          "pmcid": "PMC7184751",
+          "doi": "10.1038/s41598-020-63877-w",
+          "title": "Algorithmic discovery of dynamic models from infectious disease data.",
+          "journal": null,
+          "publication_year": "2020",
+          "cited_by_count": 18,
+          "is_open_access": true,
+          "author_string": "Horrocks J, Bauch CT."
+        },
+        {
+          "pmcid": "PMC9276674",
+          "doi": "10.1038/s41598-022-13644-w",
+          "title": "Data-driven discovery of the governing equations of dynamical systems via moving horizon optimization.",
+          "journal": null,
+          "publication_year": "2022",
+          "cited_by_count": 14,
+          "is_open_access": true,
+          "author_string": "Lejarza F, Baldea M."
+        },
+        {
+          "pmcid": "PMC6447188",
+          "doi": "10.1371/journal.pone.0213918",
+          "title": "Flavor-cyber-agriculture: Optimization of plant metabolites in an open-source control environment through surrogate modeling.",
+          "journal": null,
+          "publication_year": "2019",
+          "cited_by_count": 14,
+          "is_open_access": true,
+          "author_string": "Johnson AJ, Meyerson E, de la Parra J, Savas TL, Miikkulainen R, Harper CB."
+        },
+        {
+          "pmcid": "PMC11804648",
+          "doi": "10.1073/pnas.2401238121",
+          "title": "Automating the practice of science: Opportunities, challenges, and implications.",
+          "journal": null,
+          "publication_year": "2025",
+          "cited_by_count": 12,
+          "is_open_access": true,
+          "author_string": "Musslick S, Bartlett LK, Chandramouli SH, Dubova M, Gobet F, Griffiths TL, Hullman J, King RD, Kutz JN, Lucas CG, Mahesh S, Pestilli F, Sloman SJ, Holmes WR."
+        },
+        {
+          "pmcid": "PMC10241925",
+          "doi": "10.1038/s41746-023-00833-8",
+          "title": "A flexible symbolic regression method for constructing interpretable clinical prediction models.",
+          "journal": null,
+          "publication_year": "2023",
+          "cited_by_count": 11,
+          "is_open_access": true,
+          "author_string": "La Cava WG, Lee PC, Ajmal I, Ding X, Solanki P, Cohen JB, Moore JH, Herman DS."
+        },
+        {
+          "pmcid": "PMC5467843",
+          "doi": "10.1371/journal.pone.0178360",
+          "title": "Dynamic changes in diffusion measures improve sensitivity in identifying patients with mild traumatic brain injury.",
+          "journal": null,
+          "publication_year": "2017",
+          "cited_by_count": 11,
+          "is_open_access": true,
+          "author_string": "Thomas AW, Watts R, Filippi CG, Nickerson JP, Andrews T, Lieberman G, Naylor MR, Eppstein MJ, Freeman K."
+        }
+      ],
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%28%22parsimony%22+AND+%22symbolic+regression%22%29+AND+OPEN_ACCESS%3AY+sort_cited%3Ay&format=json&pageSize=15&resultType=core",
+        "status": 200,
+        "content_type": "application/json;charset=UTF-8",
+        "bytes": 111654,
+        "sha256": "ed8c72ee81fa5dfb29479975e220e305dc28769e0356839421ec6862fb9eb688",
+        "started_at_unix_ns": 1787391805383366400,
+        "ended_at_unix_ns": 1787391806496885100
+      }
+    }
+  ],
+  "autonomous_document_selection": {
+    "selected": [
+      {
+        "pmcid": "PMC7360597",
+        "doi": "10.1038/s41467-020-17263-9",
+        "title": "Simple descriptor derived from symbolic regression accelerating the discovery of new perovskite catalysts.",
+        "journal": null,
+        "publication_year": "2020",
+        "cited_by_count": 99,
+        "is_open_access": true,
+        "author_string": "Weng B, Song Z, Zhu R, Yan Q, Sun Q, Grice CG, Yan Y, Yin WJ.",
+        "query_ids": [
+          "Q-STRUCTURE-SEARCH",
+          "Q-PARSIMONY"
+        ],
+        "best_metadata_score": 2.0789306334778566,
+        "best_query_rank": 1
+      },
+      {
+        "pmcid": "PMC10192180",
+        "doi": "10.1007/s42979-023-01840-y",
+        "title": "Dynamic Grammar Pruning for Program Size Reduction in Symbolic Regression.",
+        "journal": null,
+        "publication_year": "2023",
+        "cited_by_count": 1,
+        "is_open_access": true,
+        "author_string": "Ali MS, Kshirsagar M, Naredo E, Ryan C.",
+        "query_ids": [
+          "Q-REUSABLE-SEMANTIC"
+        ],
+        "best_metadata_score": 2.37476649250079,
+        "best_query_rank": 0
+      },
+      {
+        "pmcid": "PMC4706865",
+        "doi": "10.1155/2016/1021378",
+        "title": "Using Genetic Programming with Prior Formula Knowledge to Solve Symbolic Regression Problem.",
+        "journal": null,
+        "publication_year": "2016",
+        "cited_by_count": 1,
+        "is_open_access": true,
+        "author_string": "Lu Q, Ren J, Wang Z.",
+        "query_ids": [
+          "Q-GUARDED-FORM"
+        ],
+        "best_metadata_score": 1.37476649250079,
+        "best_query_rank": 1
+      },
+      {
+        "pmcid": "PMC9870915",
+        "doi": "10.1038/s41598-023-28328-2",
+        "title": "A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge.",
+        "journal": null,
+        "publication_year": "2023",
+        "cited_by_count": 19,
+        "is_open_access": true,
+        "author_string": "Keren LS, Liberzon A, Lazebnik T.",
+        "query_ids": [
+          "Q-STRUCTURE-SEARCH",
+          "Q-PARSIMONY"
+        ],
+        "best_metadata_score": 1.1503429203508295,
+        "best_query_rank": 8
+      },
+      {
+        "pmcid": "PMC7159912",
+        "doi": "10.1126/sciadv.aay2631",
+        "title": "AI Feynman: A physics-inspired method for symbolic regression.",
+        "journal": null,
+        "publication_year": "2020",
+        "cited_by_count": 158,
+        "is_open_access": true,
+        "author_string": "Udrescu SM, Tegmark M.",
+        "query_ids": [
+          "Q-STRUCTURE-SEARCH"
+        ],
+        "best_metadata_score": 2.4124027563996417,
+        "best_query_rank": 0
+      },
+      {
+        "pmcid": "PMC6842598",
+        "doi": "10.1073/pnas.1906995116",
+        "title": "Data-driven discovery of coordinates and governing equations.",
+        "journal": null,
+        "publication_year": "2019",
+        "cited_by_count": 173,
+        "is_open_access": true,
+        "author_string": "Champion K, Lusch B, Kutz JN, Brunton SL.",
+        "query_ids": [
+          "Q-PARSIMONY"
+        ],
+        "best_metadata_score": 2.178629953858615,
+        "best_query_rank": 0
+      }
+    ],
+    "selection_host_selected": false,
+    "selection_rule": "one highest metadata score per audit dimension, then global score",
+    "covered_query_ids": [
+      "Q-GUARDED-FORM",
+      "Q-PARSIMONY",
+      "Q-REUSABLE-SEMANTIC",
+      "Q-STRUCTURE-SEARCH"
+    ]
+  },
+  "full_text_documents": [
+    {
+      "ok": true,
+      "event_index": 5,
+      "pmcid": "PMC7360597",
+      "title": "Simple descriptor derived from symbolic regression accelerating the discovery of new perovskite catalysts",
+      "full_text_retrieved": true,
+      "open_licence_detected": true,
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "body_word_count": 4354,
+      "section_headings": [
+        "Introduction",
+        "Results",
+        "Discussion",
+        "Methods",
+        "Supplementary information"
+      ],
+      "signature_counts": {
+        "structure_search": 8,
+        "reusable_semantic": 0,
+        "guarded_form": 0,
+        "interaction_product": 0,
+        "parsimony": 9,
+        "verification": 0
+      },
+      "matched_phrases": {
+        "structure_search": [
+          "symbolic regression",
+          "genetic programming"
+        ],
+        "reusable_semantic": [],
+        "guarded_form": [],
+        "interaction_product": [],
+        "parsimony": [
+          "parsimony",
+          "complexity"
+        ],
+        "verification": []
+      },
+      "full_text_stored_in_repository": false,
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7360597/fullTextXML",
+        "status": 200,
+        "content_type": "application/xml",
+        "bytes": 126811,
+        "sha256": "f8c3ea3c981b88d9e4f93cfd014c71efdebb74fa48b47419d7c3f7ae2a22c355",
+        "started_at_unix_ns": 1787391806498893900,
+        "ended_at_unix_ns": 1787391807662281100
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 6,
+      "pmcid": "PMC10192180",
+      "title": "Dynamic Grammar Pruning for Program Size Reduction in Symbolic Regression",
+      "full_text_retrieved": true,
+      "open_licence_detected": true,
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "body_word_count": 8441,
+      "section_headings": [
+        "Introduction",
+        "Background",
+        "Related Work",
+        "Methodology",
+        "Experimental Setup",
+        "Results and Discussion",
+        "Further Analysis",
+        "Conclusion"
+      ],
+      "signature_counts": {
+        "structure_search": 16,
+        "reusable_semantic": 4,
+        "guarded_form": 0,
+        "interaction_product": 0,
+        "parsimony": 15,
+        "verification": 20
+      },
+      "matched_phrases": {
+        "structure_search": [
+          "symbolic regression",
+          "genetic programming",
+          "program synthesis"
+        ],
+        "reusable_semantic": [
+          "automatically defined function",
+          "modular",
+          "module"
+        ],
+        "guarded_form": [],
+        "interaction_product": [],
+        "parsimony": [
+          "complexity",
+          "program size"
+        ],
+        "verification": [
+          "cross-validation",
+          "benchmark",
+          "generalization"
+        ]
+      },
+      "full_text_stored_in_repository": false,
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10192180/fullTextXML",
+        "status": 200,
+        "content_type": "application/xml",
+        "bytes": 244949,
+        "sha256": "7a3cb894ca0f72f6a855cbe18794e117ae0b644ee3854ab8dd4bc8df5bc0de56",
+        "started_at_unix_ns": 1787391807666290700,
+        "ended_at_unix_ns": 1787391808984829500
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 7,
+      "pmcid": "PMC4706865",
+      "title": "Using Genetic Programming with Prior Formula Knowledge to Solve Symbolic Regression Problem",
+      "full_text_retrieved": true,
+      "open_licence_detected": true,
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "body_word_count": 5634,
+      "section_headings": [
+        "1. Introduction",
+        "2. Background",
+        "3. Genetic Programming with Prior Formula Knowledge Base",
+        "4. Experiments",
+        "5. Related Work",
+        "6. Conclusion"
+      ],
+      "signature_counts": {
+        "structure_search": 15,
+        "reusable_semantic": 0,
+        "guarded_form": 2,
+        "interaction_product": 0,
+        "parsimony": 5,
+        "verification": 3
+      },
+      "matched_phrases": {
+        "structure_search": [
+          "symbolic regression",
+          "genetic programming",
+          "search space"
+        ],
+        "reusable_semantic": [],
+        "guarded_form": [
+          "piecewise function"
+        ],
+        "interaction_product": [],
+        "parsimony": [
+          "parsimony",
+          "complexity"
+        ],
+        "verification": [
+          "benchmark",
+          "generalization"
+        ]
+      },
+      "full_text_stored_in_repository": false,
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4706865/fullTextXML",
+        "status": 200,
+        "content_type": "application/xml",
+        "bytes": 171855,
+        "sha256": "7991a5441a6b2d4e4fbc83303508a18b8321b7bbe407bffa0837d3f6afa47a5d",
+        "started_at_unix_ns": 1787391808990330500,
+        "ended_at_unix_ns": 1787391810230549100
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 8,
+      "pmcid": "PMC9870915",
+      "title": "A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge",
+      "full_text_retrieved": true,
+      "open_licence_detected": true,
+      "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+      "body_word_count": 12164,
+      "section_headings": [
+        "Introduction",
+        "Related work",
+        "Scientist-Machine Equation Detector",
+        "Results",
+        "Discussion",
+        "Methods",
+        "Supplementary Information",
+        "Author contributions",
+        "Funding",
+        "Data availibility",
+        "Competing interests",
+        "Footnotes",
+        "References",
+        "Associated Data"
+      ],
+      "signature_counts": {
+        "structure_search": 91,
+        "reusable_semantic": 1,
+        "guarded_form": 0,
+        "interaction_product": 2,
+        "parsimony": 6,
+        "verification": 9
+      },
+      "matched_phrases": {
+        "structure_search": [
+          "symbolic regression",
+          "genetic programming",
+          "expression tree",
+          "search space"
+        ],
+        "reusable_semantic": [
+          "modular"
+        ],
+        "guarded_form": [],
+        "interaction_product": [
+          "multiplication",
+          "multivariate"
+        ],
+        "parsimony": [
+          "parsimony",
+          "complexity"
+        ],
+        "verification": [
+          "cross-validation",
+          "cross validation",
+          "benchmark"
+        ]
+      },
+      "full_text_stored_in_repository": false,
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9870915/fullTextXML",
+        "status": 200,
+        "content_type": "application/xml",
+        "bytes": 226419,
+        "sha256": "b2c3929950d10d4453fd7a518876c32352e2512c6715bf32918a45c70a7ffac4",
+        "started_at_unix_ns": 1787391810235574200,
+        "ended_at_unix_ns": 1787391811523473100
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 9,
+      "pmcid": "PMC7159912",
+      "title": "AI Feynman: A physics-inspired method for symbolic regression",
+      "full_text_retrieved": true,
+      "open_licence_detected": true,
+      "licence_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+      "body_word_count": 8269,
+      "section_headings": [
+        "INTRODUCTION",
+        "RESULTS",
+        "DISCUSSION",
+        "MATERIALS AND METHODS",
+        "Acknowledgments",
+        "REFERENCES AND NOTES"
+      ],
+      "signature_counts": {
+        "structure_search": 26,
+        "reusable_semantic": 15,
+        "guarded_form": 0,
+        "interaction_product": 2,
+        "parsimony": 6,
+        "verification": 2
+      },
+      "matched_phrases": {
+        "structure_search": [
+          "symbolic regression",
+          "genetic programming",
+          "program synthesis",
+          "search space"
+        ],
+        "reusable_semantic": [
+          "module"
+        ],
+        "guarded_form": [],
+        "interaction_product": [
+          "interaction term",
+          "multiplication"
+        ],
+        "parsimony": [
+          "complexity",
+          "description length",
+          "simplification"
+        ],
+        "verification": [
+          "benchmark",
+          "generalization"
+        ]
+      },
+      "full_text_stored_in_repository": false,
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7159912/fullTextXML",
+        "status": 200,
+        "content_type": "application/xml",
+        "bytes": 274012,
+        "sha256": "2d6c484e4ecef6cbd1057c71c0fd2283a0b5469312d84f8b1c3b59119d0c6774",
+        "started_at_unix_ns": 1787391811530482100,
+        "ended_at_unix_ns": 1787391812848075500
+      }
+    },
+    {
+      "ok": true,
+      "event_index": 10,
+      "pmcid": "PMC6842598",
+      "title": "Data-driven discovery of coordinates and governing equations",
+      "full_text_retrieved": true,
+      "open_licence_detected": true,
+      "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+      "body_word_count": 5744,
+      "section_headings": [
+        "Background",
+        "SINDy Autoencoders",
+        "Results",
+        "Discussion",
+        "Supplementary Material",
+        "Acknowledgments",
+        "Footnotes",
+        "References",
+        "Associated Data"
+      ],
+      "signature_counts": {
+        "structure_search": 1,
+        "reusable_semantic": 0,
+        "guarded_form": 0,
+        "interaction_product": 0,
+        "parsimony": 1,
+        "verification": 2
+      },
+      "matched_phrases": {
+        "structure_search": [
+          "symbolic regression"
+        ],
+        "reusable_semantic": [],
+        "guarded_form": [],
+        "interaction_product": [],
+        "parsimony": [
+          "parsimony"
+        ],
+        "verification": [
+          "generalization"
+        ]
+      },
+      "full_text_stored_in_repository": false,
+      "receipt": {
+        "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6842598/fullTextXML",
+        "status": 200,
+        "content_type": "application/xml",
+        "bytes": 131713,
+        "sha256": "abfa2d9350f5a9678d86860cbdadef3e0e561e0103ff1c93c9441a48a12f7c68",
+        "started_at_unix_ns": 1787391812854586300,
+        "ended_at_unix_ns": 1787391814034826400
+      }
+    }
+  ],
+  "request_count": 10,
+  "metadata_record_count": 35,
+  "content_digest": "d5403dcec52737171e92a10a7e9d722d1ac203be1ed53dcaf9a51d2f14ffe40a"
+}

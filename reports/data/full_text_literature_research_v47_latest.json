@@ -1,0 +1,794 @@
+{
+  "report_version": "full-text-literature-research-v47.0",
+  "run_id": "RUN-full-text-literature-research-v47-20260822T094548270867Z",
+  "created_at": "2026-08-22T09:45:48.270867+00:00",
+  "verdict": "autonomous_open_full_text_prior_art_audit_verified",
+  "acceptance": {
+    "acceptance_version": "full-text-literature-research-v47.0",
+    "passed": true,
+    "final_status": "verified",
+    "frozen_discovery": {
+      "semantic_id": "OPX-c9c8b1a02aa5734c",
+      "expansion_features": [
+        "ONE",
+        "COUPLE(0,1,2)",
+        "GUARD(0,1,0)"
+      ],
+      "expansion_coefficients": [
+        -3.2932860830723665e-14,
+        1.0000000000000002,
+        1.000000000000003
+      ],
+      "source_report_digest": "bce9abcef60e48cfb55a00a7a728c252e6544be8ebe42c6aea41ce20f9e2150f",
+      "commitment": "43531088d6044a49b278d344706046939569e00229817986f003d787a5072bd8",
+      "human_translation_post_hoc": "a three-input product-like interaction plus a predicate-gated asymmetric term"
+    },
+    "autonomous_research_action": {
+      "selected_task": "full_text_literature_review",
+      "selection_inherited_from_v46": true,
+      "provider": "Europe PMC REST API",
+      "search_count": 4,
+      "metadata_record_count": 35,
+      "full_text_document_count": 6,
+      "network_request_count": 10,
+      "paper_selection_host_selected": false
+    },
+    "open_full_text_evidence": {
+      "documents": [
+        {
+          "ok": true,
+          "event_index": 5,
+          "pmcid": "PMC7360597",
+          "title": "Simple descriptor derived from symbolic regression accelerating the discovery of new perovskite catalysts",
+          "full_text_retrieved": true,
+          "open_licence_detected": true,
+          "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+          "body_word_count": 4354,
+          "section_headings": [
+            "Introduction",
+            "Results",
+            "Discussion",
+            "Methods",
+            "Supplementary information"
+          ],
+          "signature_counts": {
+            "structure_search": 8,
+            "reusable_semantic": 0,
+            "guarded_form": 0,
+            "interaction_product": 0,
+            "parsimony": 9,
+            "verification": 0
+          },
+          "matched_phrases": {
+            "structure_search": [
+              "symbolic regression",
+              "genetic programming"
+            ],
+            "reusable_semantic": [],
+            "guarded_form": [],
+            "interaction_product": [],
+            "parsimony": [
+              "parsimony",
+              "complexity"
+            ],
+            "verification": []
+          },
+          "full_text_stored_in_repository": false,
+          "receipt": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7360597/fullTextXML",
+            "status": 200,
+            "content_type": "application/xml",
+            "bytes": 126811,
+            "sha256": "f8c3ea3c981b88d9e4f93cfd014c71efdebb74fa48b47419d7c3f7ae2a22c355",
+            "started_at_unix_ns": 1787391806498893900,
+            "ended_at_unix_ns": 1787391807662281100
+          }
+        },
+        {
+          "ok": true,
+          "event_index": 6,
+          "pmcid": "PMC10192180",
+          "title": "Dynamic Grammar Pruning for Program Size Reduction in Symbolic Regression",
+          "full_text_retrieved": true,
+          "open_licence_detected": true,
+          "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+          "body_word_count": 8441,
+          "section_headings": [
+            "Introduction",
+            "Background",
+            "Related Work",
+            "Methodology",
+            "Experimental Setup",
+            "Results and Discussion",
+            "Further Analysis",
+            "Conclusion"
+          ],
+          "signature_counts": {
+            "structure_search": 16,
+            "reusable_semantic": 4,
+            "guarded_form": 0,
+            "interaction_product": 0,
+            "parsimony": 15,
+            "verification": 20
+          },
+          "matched_phrases": {
+            "structure_search": [
+              "symbolic regression",
+              "genetic programming",
+              "program synthesis"
+            ],
+            "reusable_semantic": [
+              "automatically defined function",
+              "modular",
+              "module"
+            ],
+            "guarded_form": [],
+            "interaction_product": [],
+            "parsimony": [
+              "complexity",
+              "program size"
+            ],
+            "verification": [
+              "cross-validation",
+              "benchmark",
+              "generalization"
+            ]
+          },
+          "full_text_stored_in_repository": false,
+          "receipt": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC10192180/fullTextXML",
+            "status": 200,
+            "content_type": "application/xml",
+            "bytes": 244949,
+            "sha256": "7a3cb894ca0f72f6a855cbe18794e117ae0b644ee3854ab8dd4bc8df5bc0de56",
+            "started_at_unix_ns": 1787391807666290700,
+            "ended_at_unix_ns": 1787391808984829500
+          }
+        },
+        {
+          "ok": true,
+          "event_index": 7,
+          "pmcid": "PMC4706865",
+          "title": "Using Genetic Programming with Prior Formula Knowledge to Solve Symbolic Regression Problem",
+          "full_text_retrieved": true,
+          "open_licence_detected": true,
+          "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+          "body_word_count": 5634,
+          "section_headings": [
+            "1. Introduction",
+            "2. Background",
+            "3. Genetic Programming with Prior Formula Knowledge Base",
+            "4. Experiments",
+            "5. Related Work",
+            "6. Conclusion"
+          ],
+          "signature_counts": {
+            "structure_search": 15,
+            "reusable_semantic": 0,
+            "guarded_form": 2,
+            "interaction_product": 0,
+            "parsimony": 5,
+            "verification": 3
+          },
+          "matched_phrases": {
+            "structure_search": [
+              "symbolic regression",
+              "genetic programming",
+              "search space"
+            ],
+            "reusable_semantic": [],
+            "guarded_form": [
+              "piecewise function"
+            ],
+            "interaction_product": [],
+            "parsimony": [
+              "parsimony",
+              "complexity"
+            ],
+            "verification": [
+              "benchmark",
+              "generalization"
+            ]
+          },
+          "full_text_stored_in_repository": false,
+          "receipt": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC4706865/fullTextXML",
+            "status": 200,
+            "content_type": "application/xml",
+            "bytes": 171855,
+            "sha256": "7991a5441a6b2d4e4fbc83303508a18b8321b7bbe407bffa0837d3f6afa47a5d",
+            "started_at_unix_ns": 1787391808990330500,
+            "ended_at_unix_ns": 1787391810230549100
+          }
+        },
+        {
+          "ok": true,
+          "event_index": 8,
+          "pmcid": "PMC9870915",
+          "title": "A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge",
+          "full_text_retrieved": true,
+          "open_licence_detected": true,
+          "licence_url": "https://creativecommons.org/licenses/by/4.0/",
+          "body_word_count": 12164,
+          "section_headings": [
+            "Introduction",
+            "Related work",
+            "Scientist-Machine Equation Detector",
+            "Results",
+            "Discussion",
+            "Methods",
+            "Supplementary Information",
+            "Author contributions",
+            "Funding",
+            "Data availibility",
+            "Competing interests",
+            "Footnotes",
+            "References",
+            "Associated Data"
+          ],
+          "signature_counts": {
+            "structure_search": 91,
+            "reusable_semantic": 1,
+            "guarded_form": 0,
+            "interaction_product": 2,
+            "parsimony": 6,
+            "verification": 9
+          },
+          "matched_phrases": {
+            "structure_search": [
+              "symbolic regression",
+              "genetic programming",
+              "expression tree",
+              "search space"
+            ],
+            "reusable_semantic": [
+              "modular"
+            ],
+            "guarded_form": [],
+            "interaction_product": [
+              "multiplication",
+              "multivariate"
+            ],
+            "parsimony": [
+              "parsimony",
+              "complexity"
+            ],
+            "verification": [
+              "cross-validation",
+              "cross validation",
+              "benchmark"
+            ]
+          },
+          "full_text_stored_in_repository": false,
+          "receipt": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC9870915/fullTextXML",
+            "status": 200,
+            "content_type": "application/xml",
+            "bytes": 226419,
+            "sha256": "b2c3929950d10d4453fd7a518876c32352e2512c6715bf32918a45c70a7ffac4",
+            "started_at_unix_ns": 1787391810235574200,
+            "ended_at_unix_ns": 1787391811523473100
+          }
+        },
+        {
+          "ok": true,
+          "event_index": 9,
+          "pmcid": "PMC7159912",
+          "title": "AI Feynman: A physics-inspired method for symbolic regression",
+          "full_text_retrieved": true,
+          "open_licence_detected": true,
+          "licence_url": "http://creativecommons.org/licenses/by-nc/4.0/",
+          "body_word_count": 8269,
+          "section_headings": [
+            "INTRODUCTION",
+            "RESULTS",
+            "DISCUSSION",
+            "MATERIALS AND METHODS",
+            "Acknowledgments",
+            "REFERENCES AND NOTES"
+          ],
+          "signature_counts": {
+            "structure_search": 26,
+            "reusable_semantic": 15,
+            "guarded_form": 0,
+            "interaction_product": 2,
+            "parsimony": 6,
+            "verification": 2
+          },
+          "matched_phrases": {
+            "structure_search": [
+              "symbolic regression",
+              "genetic programming",
+              "program synthesis",
+              "search space"
+            ],
+            "reusable_semantic": [
+              "module"
+            ],
+            "guarded_form": [],
+            "interaction_product": [
+              "interaction term",
+              "multiplication"
+            ],
+            "parsimony": [
+              "complexity",
+              "description length",
+              "simplification"
+            ],
+            "verification": [
+              "benchmark",
+              "generalization"
+            ]
+          },
+          "full_text_stored_in_repository": false,
+          "receipt": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC7159912/fullTextXML",
+            "status": 200,
+            "content_type": "application/xml",
+            "bytes": 274012,
+            "sha256": "2d6c484e4ecef6cbd1057c71c0fd2283a0b5469312d84f8b1c3b59119d0c6774",
+            "started_at_unix_ns": 1787391811530482100,
+            "ended_at_unix_ns": 1787391812848075500
+          }
+        },
+        {
+          "ok": true,
+          "event_index": 10,
+          "pmcid": "PMC6842598",
+          "title": "Data-driven discovery of coordinates and governing equations",
+          "full_text_retrieved": true,
+          "open_licence_detected": true,
+          "licence_url": "http://creativecommons.org/licenses/by/4.0/",
+          "body_word_count": 5744,
+          "section_headings": [
+            "Background",
+            "SINDy Autoencoders",
+            "Results",
+            "Discussion",
+            "Supplementary Material",
+            "Acknowledgments",
+            "Footnotes",
+            "References",
+            "Associated Data"
+          ],
+          "signature_counts": {
+            "structure_search": 1,
+            "reusable_semantic": 0,
+            "guarded_form": 0,
+            "interaction_product": 0,
+            "parsimony": 1,
+            "verification": 2
+          },
+          "matched_phrases": {
+            "structure_search": [
+              "symbolic regression"
+            ],
+            "reusable_semantic": [],
+            "guarded_form": [],
+            "interaction_product": [],
+            "parsimony": [
+              "parsimony"
+            ],
+            "verification": [
+              "generalization"
+            ]
+          },
+          "full_text_stored_in_repository": false,
+          "receipt": {
+            "url": "https://www.ebi.ac.uk/europepmc/webservices/rest/PMC6842598/fullTextXML",
+            "status": 200,
+            "content_type": "application/xml",
+            "bytes": 131713,
+            "sha256": "abfa2d9350f5a9678d86860cbdadef3e0e561e0103ff1c93c9441a48a12f7c68",
+            "started_at_unix_ns": 1787391812854586300,
+            "ended_at_unix_ns": 1787391814034826400
+          }
+        }
+      ],
+      "selection": {
+        "selected": [
+          {
+            "pmcid": "PMC7360597",
+            "doi": "10.1038/s41467-020-17263-9",
+            "title": "Simple descriptor derived from symbolic regression accelerating the discovery of new perovskite catalysts.",
+            "journal": null,
+            "publication_year": "2020",
+            "cited_by_count": 99,
+            "is_open_access": true,
+            "author_string": "Weng B, Song Z, Zhu R, Yan Q, Sun Q, Grice CG, Yan Y, Yin WJ.",
+            "query_ids": [
+              "Q-STRUCTURE-SEARCH",
+              "Q-PARSIMONY"
+            ],
+            "best_metadata_score": 2.0789306334778566,
+            "best_query_rank": 1
+          },
+          {
+            "pmcid": "PMC10192180",
+            "doi": "10.1007/s42979-023-01840-y",
+            "title": "Dynamic Grammar Pruning for Program Size Reduction in Symbolic Regression.",
+            "journal": null,
+            "publication_year": "2023",
+            "cited_by_count": 1,
+            "is_open_access": true,
+            "author_string": "Ali MS, Kshirsagar M, Naredo E, Ryan C.",
+            "query_ids": [
+              "Q-REUSABLE-SEMANTIC"
+            ],
+            "best_metadata_score": 2.37476649250079,
+            "best_query_rank": 0
+          },
+          {
+            "pmcid": "PMC4706865",
+            "doi": "10.1155/2016/1021378",
+            "title": "Using Genetic Programming with Prior Formula Knowledge to Solve Symbolic Regression Problem.",
+            "journal": null,
+            "publication_year": "2016",
+            "cited_by_count": 1,
+            "is_open_access": true,
+            "author_string": "Lu Q, Ren J, Wang Z.",
+            "query_ids": [
+              "Q-GUARDED-FORM"
+            ],
+            "best_metadata_score": 1.37476649250079,
+            "best_query_rank": 1
+          },
+          {
+            "pmcid": "PMC9870915",
+            "doi": "10.1038/s41598-023-28328-2",
+            "title": "A computational framework for physics-informed symbolic regression with straightforward integration of domain knowledge.",
+            "journal": null,
+            "publication_year": "2023",
+            "cited_by_count": 19,
+            "is_open_access": true,
+            "author_string": "Keren LS, Liberzon A, Lazebnik T.",
+            "query_ids": [
+              "Q-STRUCTURE-SEARCH",
+              "Q-PARSIMONY"
+            ],
+            "best_metadata_score": 1.1503429203508295,
+            "best_query_rank": 8
+          },
+          {
+            "pmcid": "PMC7159912",
+            "doi": "10.1126/sciadv.aay2631",
+            "title": "AI Feynman: A physics-inspired method for symbolic regression.",
+            "journal": null,
+            "publication_year": "2020",
+            "cited_by_count": 158,
+            "is_open_access": true,
+            "author_string": "Udrescu SM, Tegmark M.",
+            "query_ids": [
+              "Q-STRUCTURE-SEARCH"
+            ],
+            "best_metadata_score": 2.4124027563996417,
+            "best_query_rank": 0
+          },
+          {
+            "pmcid": "PMC6842598",
+            "doi": "10.1073/pnas.1906995116",
+            "title": "Data-driven discovery of coordinates and governing equations.",
+            "journal": null,
+            "publication_year": "2019",
+            "cited_by_count": 173,
+            "is_open_access": true,
+            "author_string": "Champion K, Lusch B, Kutz JN, Brunton SL.",
+            "query_ids": [
+              "Q-PARSIMONY"
+            ],
+            "best_metadata_score": 2.178629953858615,
+            "best_query_rank": 0
+          }
+        ],
+        "selection_host_selected": false,
+        "selection_rule": "one highest metadata score per audit dimension, then global score",
+        "covered_query_ids": [
+          "Q-GUARDED-FORM",
+          "Q-PARSIMONY",
+          "Q-REUSABLE-SEMANTIC",
+          "Q-STRUCTURE-SEARCH"
+        ]
+      },
+      "full_text_retained": false,
+      "source_snapshot_digest": "d5403dcec52737171e92a10a7e9d722d1ac203be1ed53dcaf9a51d2f14ffe40a"
+    },
+    "prior_art_audit": {
+      "audit_status": "known_method_family_and_known_components_exact_composite_not_established",
+      "full_text_reviewed": true,
+      "full_text_document_count": 6,
+      "dimension_coverage": {
+        "structure_search": {
+          "document_count": 6,
+          "pmcids": [
+            "PMC10192180",
+            "PMC4706865",
+            "PMC6842598",
+            "PMC7159912",
+            "PMC7360597",
+            "PMC9870915"
+          ],
+          "detected": true
+        },
+        "reusable_semantic": {
+          "document_count": 3,
+          "pmcids": [
+            "PMC10192180",
+            "PMC7159912",
+            "PMC9870915"
+          ],
+          "detected": true
+        },
+        "guarded_form": {
+          "document_count": 1,
+          "pmcids": [
+            "PMC4706865"
+          ],
+          "detected": true
+        },
+        "interaction_product": {
+          "document_count": 2,
+          "pmcids": [
+            "PMC7159912",
+            "PMC9870915"
+          ],
+          "detected": true
+        },
+        "parsimony": {
+          "document_count": 6,
+          "pmcids": [
+            "PMC10192180",
+            "PMC4706865",
+            "PMC6842598",
+            "PMC7159912",
+            "PMC7360597",
+            "PMC9870915"
+          ],
+          "detected": true
+        },
+        "verification": {
+          "document_count": 5,
+          "pmcids": [
+            "PMC10192180",
+            "PMC4706865",
+            "PMC6842598",
+            "PMC7159912",
+            "PMC9870915"
+          ],
+          "detected": true
+        }
+      },
+      "foundational_prior_art_detected": true,
+      "known_components_detected": true,
+      "single_document_close_structural_match_detected": false,
+      "exact_formula_identity_established": false,
+      "human_unknown_claim_allowed": false,
+      "novelty_verdict": "unresolved; open-full-text evidence establishes related prior art but cannot prove global novelty or identity",
+      "discovery_was_modified_by_literature": false
+    },
+    "long_horizon_research": {
+      "previous_campaign_cycle": 1,
+      "campaign": {
+        "campaign_id": "CAMPAIGN-AKGM-N0-AUTONOMOUS-SCIENCE",
+        "cycle_index": 2,
+        "resumed_from_prior_state": true,
+        "completed_task": "full_text_literature_review",
+        "budgets": {
+          "compute_units_remaining": 85.0,
+          "network_requests_remaining": 8.0,
+          "physical_energy_authorized": 0.0,
+          "fabrication_spend_authorized": 0.0
+        },
+        "tasks": [
+          {
+            "task_id": "network_gap_acquisition",
+            "status": "completed",
+            "information_gain": 0.8,
+            "cost": 1.0,
+            "risk": 0.1
+          },
+          {
+            "task_id": "semantic_language_forge",
+            "status": "completed",
+            "information_gain": 0.7,
+            "cost": 2.0,
+            "risk": 0.2
+          },
+          {
+            "task_id": "causal_mechanism_audit",
+            "status": "completed",
+            "information_gain": 0.9,
+            "cost": 2.0,
+            "risk": 0.2
+          },
+          {
+            "task_id": "physical_instrument_fabrication",
+            "status": "approval_required",
+            "information_gain": 1.0,
+            "cost": 20.0,
+            "risk": 0.9
+          },
+          {
+            "task_id": "independent_laboratory_replication",
+            "status": "external_coordination_required",
+            "information_gain": 1.0,
+            "cost": 30.0,
+            "risk": 0.4
+          },
+          {
+            "task_id": "full_text_literature_review",
+            "status": "completed",
+            "information_gain": 0.6,
+            "cost": 5.0,
+            "risk": 0.1
+          },
+          {
+            "task_id": "semantic_transfer_counterexample_campaign",
+            "status": "queued",
+            "information_gain": 0.9,
+            "cost": 6.0,
+            "risk": 0.15
+          },
+          {
+            "task_id": "independent_expert_novelty_review",
+            "status": "external_coordination_required",
+            "information_gain": 1.0,
+            "cost": 15.0,
+            "risk": 0.2
+          }
+        ],
+        "next_selected_task": "semantic_transfer_counterexample_campaign",
+        "next_selection_host_selected": false,
+        "checkpoint_digest": "bfc2d02d2ee34d5093270b466861c48c9f5470e7218a579f3267b8eef393c4bf"
+      }
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "v46_dependency_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "evidence_content_digest_valid",
+        "passed": true
+      },
+      {
+        "obligation_id": "discovery_source_digest_frozen",
+        "passed": true
+      },
+      {
+        "obligation_id": "discovery_commitment_replays",
+        "passed": true
+      },
+      {
+        "obligation_id": "commit_precedes_search_and_full_text",
+        "passed": true
+      },
+      {
+        "obligation_id": "literature_unavailable_during_discovery",
+        "passed": true
+      },
+      {
+        "obligation_id": "queries_structurally_selected",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_queries_allowlisted",
+        "passed": true
+      },
+      {
+        "obligation_id": "paper_ids_not_host_selected",
+        "passed": true
+      },
+      {
+        "obligation_id": "official_provider_and_fixed_host",
+        "passed": true
+      },
+      {
+        "obligation_id": "arbitrary_network_access_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "request_budget_respected",
+        "passed": true
+      },
+      {
+        "obligation_id": "metadata_breadth_sufficient",
+        "passed": true
+      },
+      {
+        "obligation_id": "open_full_text_depth_sufficient",
+        "passed": true
+      },
+      {
+        "obligation_id": "explicit_open_licences_detected",
+        "passed": true
+      },
+      {
+        "obligation_id": "full_text_not_copied_into_repository",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_network_receipts_valid",
+        "passed": true
+      },
+      {
+        "obligation_id": "known_prior_art_detected",
+        "passed": true
+      },
+      {
+        "obligation_id": "exact_identity_not_overclaimed",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_unknown_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "literature_cannot_modify_discovery",
+        "passed": true
+      },
+      {
+        "obligation_id": "campaign_resumed_and_task_completed",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_task_selected_without_host",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "autonomous_full_text_audit_allowed": true,
+      "known_method_family_detected": true,
+      "exact_composite_known_claim_allowed": false,
+      "human_unknown_law_allowed": false,
+      "exhaustive_global_novelty_review_allowed": false,
+      "fully_autonomous_scientist_allowed": false,
+      "current_label": "V47_AUTONOMOUS_OPEN_FULL_TEXT_AUDIT_VERIFIED_GLOBAL_NOVELTY_AND_PHYSICAL_SCIENCE_EXTERNAL"
+    },
+    "limitations": [
+      "Europe PMC is a large open literature corpus, not all human publications, books, patents, or unpublished knowledge.",
+      "Phrase-count fingerprints support reproducible triage but are not equivalent to expert semantic identity review.",
+      "The exact OPX composite was not proved new and was not proved identical to a published formula.",
+      "No physical experiment, instrument fabrication, or independent laboratory replication occurred in V47."
+    ]
+  },
+  "independent_verification": {
+    "verifier_version": "independent-full-text-literature-verifier-v47.0",
+    "passed": true,
+    "obligations": [
+      {
+        "obligation_id": "reported_acceptance_passed",
+        "passed": true
+      },
+      {
+        "obligation_id": "frozen_commitment_matches",
+        "passed": true
+      },
+      {
+        "obligation_id": "source_snapshot_digest_matches",
+        "passed": true
+      },
+      {
+        "obligation_id": "document_receipts_match",
+        "passed": true
+      },
+      {
+        "obligation_id": "dimension_coverage_matches",
+        "passed": true
+      },
+      {
+        "obligation_id": "campaign_checkpoint_matches",
+        "passed": true
+      },
+      {
+        "obligation_id": "claims_remain_conservative",
+        "passed": true
+      }
+    ]
+  },
+  "research_result": {
+    "discovered_this_cycle": "the internal semantic belongs to established symbolic-regression/program-search territory; reusable semantics, guarded forms, interaction terms, and parsimony all have related open prior art",
+    "not_discovered": "no human-unknown operation or law was established, and exact identity of the complete OPX composite was not established",
+    "next_autonomous_task": "semantic_transfer_counterexample_campaign"
+  },
+  "content_digest": "22237cdfe2036410888712b3e6cdb18d797668b58ad84e85356096e5049b9d4c"
+}

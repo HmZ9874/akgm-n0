@@ -574,7 +574,30 @@ independent laboratory replication    pending
 ```
 
 Current claim label: `V46_UNIFIED_BOUNDED_AUTONOMOUS_SCIENCE_PHYSICAL_FABRICATION_AND_INDEPENDENT_LAB_REQUIRED`. V46 is a substantially more autonomous research operating system, but it is not a fully autonomous scientist.
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), and [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json).
+
+### V47 autonomous open-full-text prior-art research
+
+V47 executes the task selected by the V46 campaign rather than accepting a new host-selected paper list. Before any literature request, it freezes `OPX-c9c8b1a02aa5734c`, its expansion, coefficients, and the V46 report digest into a SHA-256 commitment. An isolated broker then permits only four structure-derived query families against the [Europe PMC REST API](https://europepmc.org/developers). Arbitrary queries, arbitrary URLs, and full-text retention are disabled.
+
+The verified run used ten of the eighteen remaining network requests: four searches screened 35 metadata records and a deterministic coverage-and-score rule selected six documents with Europe PMC identifiers. All six structured full texts returned HTTP 200, explicit Creative Commons licence links, body word counts, and source-byte SHA-256 receipts. The repository stores only metadata, receipts, section labels, phrase-presence fingerprints, and counts—not article bodies.
+
+The result is deliberately conservative:
+
+```text
+established symbolic-regression/program-search family detected   yes
+related reusable or modular semantic machinery detected          yes
+related guarded/piecewise forms detected                         yes
+related multivariate/product interactions detected               yes
+related parsimony/program-size objectives detected                yes
+single-paper identity with the complete OPX semantic              not established
+global novelty or human-unknown law                               not established
+```
+
+The correct classification is `known_method_family_and_known_components_exact_composite_not_established`. Literature did not flow back into discovery and did not change the frozen program. The next autonomously selected campaign task is `semantic_transfer_counterexample_campaign`; eight network requests and 85 compute units remain. Phrase fingerprints are reproducible triage evidence, not expert semantic-equivalence adjudication, and Europe PMC does not cover all books, patents, closed publications, or unpublished knowledge.
+
+Current claim label: `V47_AUTONOMOUS_OPEN_FULL_TEXT_AUDIT_VERIFIED_GLOBAL_NOVELTY_AND_PHYSICAL_SCIENCE_EXTERNAL`.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), and [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -604,6 +627,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V44 | autonomous anonymous-world ranking, cross-source risk selection, preregistration, official archive transfer, and mandatory failure replay | finite host-curated registry; observational data only; no causal apparatus, unrestricted language, independent lab, or literature novelty verdict |
 | V45 | autonomous multi-control experiment design, committed safe execution, causal feature growth, saturation stopping, and sealed counterfactual transfer | local computational apparatus; finite action space and supplied feature constructors; no unknown natural system or independent laboratory |
 | V46 | allowlisted network collection, sandboxed opcode registration, causal ablation, instrument architecture, persistent budgets, and Crossref audit | physical fabrication, new natural-system intervention, full-text novelty review, and independent laboratory remain external |
+| V47 | frozen post-discovery commitment, structure-derived open-literature queries, deterministic paper selection, licensed full-text fingerprints, prior-art classification, and persistent task/budget continuation | corpus is not exhaustive; phrase fingerprints are not expert identity proof; physical science and independent review remain external |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
