@@ -341,6 +341,7 @@ Detailed reports are in <code>reports/data/*_latest.json</code> for V22 through 
 | V40 <code>PHYS-SEM-97df0a28f607243e: LOCAL_MEMORY&lt;...&gt;::NEAREST_DELTA_BLEND</code> | local interpolation from scanner brightness control to normalized image luminance | **Verified live external device calibration** on one HP scanner; no universal optical law claimed. |
 | V41 <code>DYN-bb87df43ec46ed50: STATE_FOLD</code> | recurrent battery terminal-voltage trajectory model using current, temperature, and elapsed time | **Bounded**: verified on the registered RW3/RW4 protocol, generalized to RW5/RW6 early and middle life, failed late-life extrapolation. |
 | V42 <code>XFER-a7588b2a1ab1b64d: INTERACTION_FOLD</code> | recurrent terminal-voltage program with initial-trajectory context and anonymous pairwise interaction features | **Verified on a reused archive with a programmatic seal**: selected on anonymous object A, frozen before object B was revealed to the learner, and remained below RMSE 0.10 in all three object-B stages. Developers had prior archive access, so this is not a fresh human-blind result or a universal battery law. |
+| V43 <code>AUTOSEM-ca24f07411b0f22d: AUTONOMOUS_UPDATE</code> | second-order recurrent update with two anonymously selected exogenous inputs | **Verified bounded research-language growth on the reused archive**: the learner started with one visible input and zero state slots, autonomously grew another input and two state slots, froze the resulting program, and beat V42 transfer RMSE. This is not a fresh external replication or a fully autonomous scientist. |
 
 The frozen V41 recurrence is:
 
@@ -403,7 +404,62 @@ Post-hoc real-world interpretation: the program predicts the next terminal volta
 
 The V41 frozen program's late-stage RMSE was 0.1757585774. V42 passes the reused-archive threshold, but the earlier universal claim remains revoked. Developers had prior access to RW6 while building the software, so the repository permits only the claim **programmatically sealed reused-archive transfer**. Fresh data from another campaign or laboratory is still required.
 
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), and [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json).
+### V43 autonomous research-language growth
+
+V43 removes the V42 menu of named candidate families. The learner receives a minimal structural genome with one visible anonymous input and no recurrent state. It can mutate generic resources only:
+
+- expose one additional anonymous input channel;
+- add a recurrent state slot, up to the current two-slot safety ceiling;
+- add initial-context reads;
+- add delta features;
+- add pairwise interaction features;
+- add one guarded path.
+
+Each mutation compiles to an executable feature program. Coefficients are fitted on the development partition, and mutations are ranked by validation RMSE plus `10^-5` per executable node. A mutation is admitted only when information gain exceeds `10^-5`. Search stops after three consecutive sterile rounds.
+
+The autonomous mutation path was:
+
+```text
+minimal genome
+→ grow_state_slot
+→ grow_input_channel
+→ grow_state_slot
+→ three sterile rounds
+→ semantic_saturation
+```
+
+The selected internal program contains only:
+
+```text
+[ONE, X0, X1, LAG1, LAG2]
+```
+
+Its frozen recurrence is:
+
+```text
+s_t =
+  0.160896295734
+  - 0.00809372713701 X0_t
+  - 0.000576917593253 X1_t
+  + 1.23312212809 s_(t-1)
+  - 0.270134119977 s_(t-2)
+```
+
+Post-hoc human translation: this is a second-order autoregressive model with anonymous exogenous inputs. After discovery, `X0` maps to absolute current, `X1` maps to temperature, and state `s` maps to terminal voltage. None of these names or this formula were learner-visible.
+
+| Audit | RMSE |
+| --- | ---: |
+| Frozen transfer, overall | 0.0760343257 |
+| Early stage | 0.0705449960 |
+| Middle stage | 0.0795722680 |
+| Late stage | 0.0776872819 |
+| V42 overall reference | 0.0831146940 |
+
+The program is shorter and more accurate on this reused transfer object than the V42 selected program. The independent replay verifier reconstructs the program, recomputes its hash commitment and transfer metric, and rejects coefficient tampering.
+
+This result establishes **bounded autonomous research-language growth**, not a fully autonomous scientist. Floating-point arithmetic, linear least-squares fitting, structural mutation types, a two-state ceiling, data access, and the independent verifier remain supplied. Developers had prior access to RW6, so a genuinely fresh external world remains mandatory.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), and [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -429,6 +485,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V36-V40 | scientific workflow, intervention, live apparatus interfaces | limited apparatus and known or engineered phenomena |
 | V41 | anonymous dynamic-state discovery on NASA battery trajectories | late-life extrapolation failed and the claim is bounded |
 | V42 | counterexample-guided semantic competition and frozen cross-object transfer | reused archive; not a fresh human-blind or independent-laboratory replication |
+| V43 | autonomous generic research-language mutation and saturation-controlled search | bounded genome, supplied regression substrate, reused archive, and no fresh external world |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
@@ -464,7 +521,7 @@ npm install
 npm run dev
 ~~~
 
-Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>.
+Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>.
 
 ## NASA V41 reproduction
 
@@ -490,6 +547,7 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 .\.venv\Scripts\python.exe scripts/build_nasa_battery_v41_challenge.py
 .\.venv\Scripts\python.exe scripts/run_nasa_blind_challenge_v41.py
 .\.venv\Scripts\python.exe scripts/run_counterexample_transfer_v42.py
+.\.venv\Scripts\python.exe scripts/run_autonomous_scientist_v43.py
 ~~~
 
 Manually confirm that the archive hash matches before running the builders. Do not commit the raw archive or extracted source files.
@@ -503,7 +561,7 @@ Priority collaboration areas:
 3. Improve behavioral equivalence and nontriviality checks for generated operators.
 4. Scale synthesis with e-graphs, constraint solving, inductive synthesis, or stronger MDL methods.
 5. Design low-cost blinded apparatus and cross-laboratory replication protocols.
-6. Supply a genuinely fresh, sealed battery campaign or independent-laboratory dataset for V42 replication.
+6. Supply a genuinely fresh, sealed scientific world for V43 and help extend the bounded genome beyond two state slots and fixed least-squares fitting.
 7. Add adversarial worlds, negative results, and benchmarks that defeat current candidates.
 8. Improve dashboard review of ASTs, proof obligations, and failure boundaries.
 9. Audit halting, memory, numeric range, and sandbox limits for generated programs.
