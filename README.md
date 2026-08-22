@@ -340,6 +340,7 @@ Detailed reports are in <code>reports/data/*_latest.json</code> for V22 through 
 | V39 <code>LIVE-36da1f0fe8d71daf: LIVE_POWER&lt;SCALE&lt;51.4051&gt;;Q0^2&gt;</code> | elapsed runtime scales approximately with nested-loop side length squared | **Verified live computational apparatus**, not natural science. |
 | V40 <code>PHYS-SEM-97df0a28f607243e: LOCAL_MEMORY&lt;...&gt;::NEAREST_DELTA_BLEND</code> | local interpolation from scanner brightness control to normalized image luminance | **Verified live external device calibration** on one HP scanner; no universal optical law claimed. |
 | V41 <code>DYN-bb87df43ec46ed50: STATE_FOLD</code> | recurrent battery terminal-voltage trajectory model using current, temperature, and elapsed time | **Bounded**: verified on the registered RW3/RW4 protocol, generalized to RW5/RW6 early and middle life, failed late-life extrapolation. |
+| V42 <code>XFER-a7588b2a1ab1b64d: INTERACTION_FOLD</code> | recurrent terminal-voltage program with initial-trajectory context and anonymous pairwise interaction features | **Verified on a reused archive with a programmatic seal**: selected on anonymous object A, frozen before object B was revealed to the learner, and remained below RMSE 0.10 in all three object-B stages. Developers had prior archive access, so this is not a fresh human-blind result or a universal battery law. |
 
 The frozen V41 recurrence is:
 
@@ -354,7 +355,55 @@ Post-hoc channel mapping:
 
 The RW5/RW6 late-life RMSE was 0.1757585774, above the 0.10 gate. The stored action is to restrict STATE_FOLD to early and middle life until an explicit aging state is created. Its final status is <code>bounded</code>, and the all-life universal formula was removed.
 
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), and [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json).
+### V42 counterexample-guided transfer
+
+V42 consumes the stored V41 late-life counterexample and searches three domain-blind recurrent program families on anonymous object A: `STATE_FOLD`, `CONTEXT_FOLD`, and `INTERACTION_FOLD`. The selection score is validation RMSE plus `10^-5` per program node. Object identity, life stage, and human channel meanings are absent from learner inputs.
+
+The selected internal recurrence is:
+
+```text
+s_t =
+  W0
+  + W1 s_(t-1)
+  + W2 Q0_t
+  + W3 Q2_t
+  + W4 ΔQ3_t
+  + W5 Q3_t
+  + W6 Q1_0
+  + W7 Q0_0
+  + W8 Q2_0
+  + W9 (Q0_t Q3_t)
+  + W10 Q0_t²
+  + W11 (Q2_t Q3_t)
+  + W12 (s_(t-1) Q0_t)
+  + W13 (s_(t-1) Q2_t)
+```
+
+Frozen coefficients:
+
+```text
+W0=0.208500205696       W1=0.946309297718
+W2=0.963260862397       W3=-0.00660226307528
+W4=0.000361421879496    W5=0.00024258452456
+W6=-0.000147882028285   W7=-0.93476875709
+W8=0.00269371444817     W9=0.0000688909745147
+W10=0.00195916688848    W11=-0.0000116416189427
+W12=-0.014602537751     W13=0.0011750697087
+```
+
+Post-hoc real-world interpretation: the program predicts the next terminal voltage from previous voltage, anonymous current and temperature observations, elapsed pulse time, initial trajectory context, and automatically composed interaction features. The learner received none of those physical names.
+
+| Audit | RMSE |
+| --- | ---: |
+| Object-A validation | 0.0837894949 |
+| Frozen object-B transfer, overall | 0.0831146940 |
+| Object-B early stage | 0.0910280532 |
+| Object-B middle stage | 0.0796053564 |
+| Object-B late stage | 0.0781091406 |
+
+The V41 frozen program's late-stage RMSE was 0.1757585774. V42 passes the reused-archive threshold, but the earlier universal claim remains revoked. Developers had prior access to RW6 while building the software, so the repository permits only the claim **programmatically sealed reused-archive transfer**. Fresh data from another campaign or laboratory is still required.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), and [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -379,6 +428,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V22-V35 | anonymous mechanics reconstruction | mostly exact synthetic worlds, not independent natural-law discovery |
 | V36-V40 | scientific workflow, intervention, live apparatus interfaces | limited apparatus and known or engineered phenomena |
 | V41 | anonymous dynamic-state discovery on NASA battery trajectories | late-life extrapolation failed and the claim is bounded |
+| V42 | counterexample-guided semantic competition and frozen cross-object transfer | reused archive; not a fresh human-blind or independent-laboratory replication |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
@@ -414,7 +464,7 @@ npm install
 npm run dev
 ~~~
 
-Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location.
+Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>.
 
 ## NASA V41 reproduction
 
@@ -439,6 +489,7 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 .\.venv\Scripts\python.exe scripts/run_official_dynamic_science_v41.py
 .\.venv\Scripts\python.exe scripts/build_nasa_battery_v41_challenge.py
 .\.venv\Scripts\python.exe scripts/run_nasa_blind_challenge_v41.py
+.\.venv\Scripts\python.exe scripts/run_counterexample_transfer_v42.py
 ~~~
 
 Manually confirm that the archive hash matches before running the builders. Do not commit the raw archive or extracted source files.
@@ -452,7 +503,7 @@ Priority collaboration areas:
 3. Improve behavioral equivalence and nontriviality checks for generated operators.
 4. Scale synthesis with e-graphs, constraint solving, inductive synthesis, or stronger MDL methods.
 5. Design low-cost blinded apparatus and cross-laboratory replication protocols.
-6. Create and preregister an anonymous aging-state extension for the V41 late-life counterexample.
+6. Supply a genuinely fresh, sealed battery campaign or independent-laboratory dataset for V42 replication.
 7. Add adversarial worlds, negative results, and benchmarks that defeat current candidates.
 8. Improve dashboard review of ASTs, proof obligations, and failure boundaries.
 9. Audit halting, memory, numeric range, and sandbox limits for generated programs.
