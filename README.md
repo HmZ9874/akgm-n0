@@ -807,3 +807,43 @@ This repository is public for review and collaboration, but it does not yet incl
 - Code contributions: [Pull Requests](https://github.com/HmZ9874/akgm-n0/pulls)
 
 The project needs stricter blind tests, stronger proofs, better failure records, and independent external experiments more than it needs a larger raw formula count.
+
+## V51 breakthrough evidence standard
+
+V51 replaces subjective capability ratings with three independent ten-gate evidence contracts. A score is the number of satisfied gates, not a claim about general intelligence. A `10/10` label is impossible unless every required artifact is present and independently replayable.
+
+The mechanism engine now enumerates 407 anonymous structural programs, computes behavior signatures on 196 counterfactual probes, ranks behavior classes with leave-one-out error and complexity cost, performs sealed ablations, and proposes the next safe intervention by maximum disagreement among competing mechanisms. The frozen winner is:
+
+```text
+MECH51-9b917b561d8392bf
+ONE + COUPLE(0,1,2) + GUARD(0,1,0)
+```
+
+The representation forge compresses the nonzero learned behavior into a sandboxed executable opcode:
+
+```text
+REP51-d406a116a0d18618
+expansion = COUPLE(0,1,2) + GUARD(0,1,0)
+primitive token cost = 5
+macro token cost = 1
+```
+
+The expansion and macro agree across the registered 196-point intervention domain and on 25 sealed counterfactual cases. This is verified composite representation creation, not a new irreducible mathematical primitive.
+
+Current evidence-gate scores are:
+
+| Axis | Score | Blocking evidence |
+| --- | ---: | --- |
+| autonomous representation creation | 9/10 | transfer to an independent natural domain |
+| causal mechanism reasoning | 9/10 | intervention on a real natural system outside the engineered apparatus |
+| human-unknown scientific law | 3/10 | independent source replication, causal evidence, prospective prediction, pre-claim prior-art coverage, expert review, and independent laboratory replication |
+
+Therefore V51 does **not** claim a scientific breakthrough or a human-unknown law. The novelty gate cannot be self-awarded by the learner, the evaluator, or the repository owner. The next research cycle must select and preregister a frontier question before model fitting, use independent public data where possible, and retain failed predictions.
+
+Run the audit with:
+
+```powershell
+python scripts/run_breakthrough_research_v51.py
+```
+
+Report: [V51 breakthrough evidence standard](reports/data/breakthrough_research_v51_latest.json). Dashboard: <http://localhost:5173/science-v51>.

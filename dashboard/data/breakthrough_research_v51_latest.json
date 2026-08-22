@@ -1,0 +1,505 @@
+{
+  "report_version": "breakthrough-research-v51.0",
+  "run_id": "RUN-breakthrough-research-v51-20260822T214635854935Z",
+  "created_at": "2026-08-22T21:46:35.854935+00:00",
+  "verdict": "architecture_upgraded_breakthrough_not_established",
+  "acceptance": {
+    "acceptance_version": "breakthrough-research-v51.0",
+    "passed": true,
+    "final_status": "architecture_upgraded_claims_evidence_gated",
+    "mechanism_tournament": {
+      "selected": {
+        "mechanism_id": "MECH51-9b917b561d8392bf",
+        "features": [
+          "ONE",
+          "COUPLE(0,1,2)",
+          "GUARD(0,1,0)"
+        ],
+        "coefficients": [
+          -3.2932860830723665e-14,
+          1.0000000000000002,
+          1.000000000000003
+        ],
+        "loo_rmse": 3.304299986431916e-14,
+        "score": 0.00030000000000048765,
+        "behavior_signature_digest": "f1cfe62eaac9da5cf9cc869a0f3f62961cfeb1cb465ef931bd866697adb387bf",
+        "human_formula_name": null
+      },
+      "runner_up": {
+        "mechanism_id": "MECH51-7b1452f1875c7374",
+        "features": [
+          "ONE",
+          "COUPLE(0,1,2)",
+          "GUARD(0,1,1)"
+        ],
+        "coefficients": [
+          1.3139746541622543,
+          0.9900200050517007,
+          1.3350159282525866
+        ],
+        "loo_rmse": 2.0075665312942497,
+        "score": 0.029925644069682674,
+        "behavior_signature_digest": "a5fdbf6011156c82287e9a1979e7bf6007c4f01f7ae9ad558be51991d2961fa7",
+        "human_formula_name": null
+      },
+      "programs_generated": 407,
+      "behavior_classes": 407,
+      "probe_count": 196,
+      "selected_score_gap": 0.029625644069682187,
+      "sealed_audit": {
+        "case_count": 25,
+        "rmse": 1.7710197512051476e-14,
+        "maximum_absolute_error": 3.019806626980426e-14
+      },
+      "ablations": [
+        {
+          "removed_feature": "COUPLE(0,1,2)",
+          "sealed_rmse": 59.82794546399083
+        },
+        {
+          "removed_feature": "GUARD(0,1,0)",
+          "sealed_rmse": 3.335428291463619
+        }
+      ],
+      "next_discriminating_intervention": {
+        "action": [
+          8.0,
+          8.0,
+          4.0
+        ],
+        "prediction_disagreement": 3.511776812356945,
+        "contender_predictions": [
+          256.0,
+          254.75909594739764,
+          261.0422790483839,
+          265.25827573341115,
+          260.45463515378384,
+          265.17565681699165,
+          266.02174021933337,
+          256.8888468021255,
+          260.4176872998174,
+          260.26576637199975,
+          262.51370092456943,
+          262.7045570365047
+        ],
+        "contender_ids": [
+          "MECH51-9b917b561d8392bf",
+          "MECH51-7b1452f1875c7374",
+          "MECH51-4e41f41d482bf5ed",
+          "MECH51-5838fa61e1d28446",
+          "MECH51-a63829982236ea34",
+          "MECH51-03cce097257604b6",
+          "MECH51-c5d5e9d1bbf5c7ed",
+          "MECH51-b7c6976bb3408ef9",
+          "MECH51-220a5a73b8f08adf",
+          "MECH51-6b24affac00247f0",
+          "MECH51-2a660d59ac635fbf",
+          "MECH51-873eba87a4419040"
+        ],
+        "selected_by": "maximum_competing_mechanism_disagreement",
+        "host_selected": false
+      }
+    },
+    "representation_forge": {
+      "representation_id": "REP51-d406a116a0d18618",
+      "kind": "learned_behavioral_opcode",
+      "arity": 3,
+      "expansion": {
+        "terms": [
+          {
+            "feature": "COUPLE(0,1,2)",
+            "coefficient": 1.0000000000000002
+          },
+          {
+            "feature": "GUARD(0,1,0)",
+            "coefficient": 1.000000000000003
+          }
+        ]
+      },
+      "source_mechanism_id": "MECH51-9b917b561d8392bf",
+      "dependency_slots": [
+        0,
+        1,
+        2
+      ],
+      "probe_count": 196,
+      "maximum_expansion_error": 5.684341886080802e-14,
+      "behaviorally_equivalent_on_registered_domain": true,
+      "primitive_token_cost": 5,
+      "macro_token_cost": 1,
+      "token_savings_per_call": 4,
+      "human_name_supplied": false,
+      "native_code_generated": false,
+      "sandboxed_expansion_only": true,
+      "sealed_macro_rmse": 3.4968521729764125e-14
+    },
+    "ten_gate_standard": {
+      "standard_version": "breakthrough-evidence-standard-v51.0",
+      "axes": [
+        {
+          "axis_id": "autonomous_representation_creation",
+          "score": 9,
+          "target": 10,
+          "score_kind": "evidence_gates_passed_not_subjective_intelligence",
+          "gates": [
+            {
+              "gate_id": "anonymous_inputs",
+              "passed": true,
+              "evidence": "V45 Q slots remained anonymous during search",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "autonomous_candidate_generation",
+              "passed": true,
+              "evidence": 407,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "behavioral_deduplication",
+              "passed": true,
+              "evidence": 407,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "executable_new_opcode",
+              "passed": true,
+              "evidence": "REP51-d406a116a0d18618",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "counterfactual_dependency",
+              "passed": true,
+              "evidence": [
+                0,
+                1,
+                2
+              ],
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "expansion_equivalence",
+              "passed": true,
+              "evidence": 5.684341886080802e-14,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "description_compression",
+              "passed": true,
+              "evidence": 4,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "sealed_reuse_without_refit",
+              "passed": true,
+              "evidence": 3.4968521729764125e-14,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "cross_process_replay",
+              "passed": true,
+              "evidence": "V45 independent broker process",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "independent_natural_domain_transfer",
+              "passed": false,
+              "evidence": "No unrelated natural-domain success exists",
+              "required_to_reach_ten": true
+            }
+          ],
+          "reached_ten": false,
+          "claim_allowed": false,
+          "blocking_gates": [
+            "independent_natural_domain_transfer"
+          ]
+        },
+        {
+          "axis_id": "causal_mechanism_reasoning",
+          "score": 9,
+          "target": 10,
+          "score_kind": "evidence_gates_passed_not_subjective_intelligence",
+          "gates": [
+            {
+              "gate_id": "assigned_interventions",
+              "passed": true,
+              "evidence": "V45 assigned controls",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "randomized_execution",
+              "passed": true,
+              "evidence": "V45 randomized batches",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "competing_hypotheses",
+              "passed": true,
+              "evidence": 407,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "behavioral_equivalence_control",
+              "passed": true,
+              "evidence": 407,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "autonomous_discriminating_intervention",
+              "passed": true,
+              "evidence": {
+                "action": [
+                  8.0,
+                  8.0,
+                  4.0
+                ],
+                "prediction_disagreement": 3.511776812356945,
+                "contender_predictions": [
+                  256.0,
+                  254.75909594739764,
+                  261.0422790483839,
+                  265.25827573341115,
+                  260.45463515378384,
+                  265.17565681699165,
+                  266.02174021933337,
+                  256.8888468021255,
+                  260.4176872998174,
+                  260.26576637199975,
+                  262.51370092456943,
+                  262.7045570365047
+                ],
+                "contender_ids": [
+                  "MECH51-9b917b561d8392bf",
+                  "MECH51-7b1452f1875c7374",
+                  "MECH51-4e41f41d482bf5ed",
+                  "MECH51-5838fa61e1d28446",
+                  "MECH51-a63829982236ea34",
+                  "MECH51-03cce097257604b6",
+                  "MECH51-c5d5e9d1bbf5c7ed",
+                  "MECH51-b7c6976bb3408ef9",
+                  "MECH51-220a5a73b8f08adf",
+                  "MECH51-6b24affac00247f0",
+                  "MECH51-2a660d59ac635fbf",
+                  "MECH51-873eba87a4419040"
+                ],
+                "selected_by": "maximum_competing_mechanism_disagreement",
+                "host_selected": false
+              },
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "essential_component_ablation",
+              "passed": true,
+              "evidence": [
+                {
+                  "removed_feature": "COUPLE(0,1,2)",
+                  "sealed_rmse": 59.82794546399083
+                },
+                {
+                  "removed_feature": "GUARD(0,1,0)",
+                  "sealed_rmse": 3.335428291463619
+                }
+              ],
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "sealed_counterfactual_prediction",
+              "passed": true,
+              "evidence": {
+                "case_count": 25,
+                "rmse": 1.7710197512051476e-14,
+                "maximum_absolute_error": 3.019806626980426e-14
+              },
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "selected_mechanism_separated",
+              "passed": true,
+              "evidence": 0.029625644069682187,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "fresh_process_replication",
+              "passed": true,
+              "evidence": "same-machine fresh apparatus process",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "natural_system_external_intervention",
+              "passed": false,
+              "evidence": "Current apparatus is computational, not a natural system",
+              "required_to_reach_ten": true
+            }
+          ],
+          "reached_ten": false,
+          "claim_allowed": false,
+          "blocking_gates": [
+            "natural_system_external_intervention"
+          ]
+        },
+        {
+          "axis_id": "human_unknown_scientific_law",
+          "score": 3,
+          "target": 10,
+          "score_kind": "evidence_gates_passed_not_subjective_intelligence",
+          "gates": [
+            {
+              "gate_id": "presealed_commitment",
+              "passed": true,
+              "evidence": "54a60f0401d61a681345d745965c10bf338f72b0c3298a569f4095138a66a6d0",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "strong_quantitative_baseline",
+              "passed": true,
+              "evidence": 0.15570902876907713,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "sealed_holdout",
+              "passed": true,
+              "evidence": 0.15549381965822717,
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "independent_source_replication",
+              "passed": false,
+              "evidence": "V50 groups came from one archive",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "causal_mechanism_evidence",
+              "passed": false,
+              "evidence": "V50 is distributional regularity only",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "prospective_novel_prediction",
+              "passed": false,
+              "evidence": "No future-data prediction was frozen and observed",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "preclaim_open_literature_audit",
+              "passed": false,
+              "evidence": "V47 audit concerns OPX; V50 mapping was post-hoc",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "broad_prior_art_coverage",
+              "passed": false,
+              "evidence": "known_method_family_and_known_components_exact_composite_not_established",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "independent_expert_novelty_review",
+              "passed": false,
+              "evidence": "No external expert verdict",
+              "required_to_reach_ten": true
+            },
+            {
+              "gate_id": "independent_laboratory_replication",
+              "passed": false,
+              "evidence": "No external laboratory replication",
+              "required_to_reach_ten": true
+            }
+          ],
+          "reached_ten": false,
+          "claim_allowed": false,
+          "blocking_gates": [
+            "independent_source_replication",
+            "causal_mechanism_evidence",
+            "prospective_novel_prediction",
+            "preclaim_open_literature_audit",
+            "broad_prior_art_coverage",
+            "independent_expert_novelty_review",
+            "independent_laboratory_replication"
+          ]
+        }
+      ],
+      "hard_block": true,
+      "next_tasks": [
+        {
+          "priority": 1,
+          "task_id": "independent_natural_domain_representation_challenge",
+          "closes": [
+            "autonomous_representation_creation.independent_natural_domain_transfer"
+          ],
+          "status": "ready_for_public_data_selection"
+        },
+        {
+          "priority": 2,
+          "task_id": "real_natural_system_quasi_intervention",
+          "closes": [
+            "causal_mechanism_reasoning.natural_system_external_intervention"
+          ],
+          "status": "requires_valid_public_intervention_dataset"
+        },
+        {
+          "priority": 3,
+          "task_id": "frontier_question_preregistration",
+          "closes": [
+            "independent_source_replication",
+            "causal_mechanism_evidence",
+            "prospective_novel_prediction",
+            "preclaim_open_literature_audit",
+            "broad_prior_art_coverage",
+            "independent_expert_novelty_review",
+            "independent_laboratory_replication"
+          ],
+          "status": "must_precede_model_fitting"
+        }
+      ]
+    },
+    "standard_commitment": "920d55dd35b41f8ec77076845b5ddfff04a8795ec98c803551e8ce83c612bdcf",
+    "claim_state": {
+      "representation_10_of_10_allowed": false,
+      "mechanism_10_of_10_allowed": false,
+      "unknown_law_10_of_10_allowed": false,
+      "human_unknown_law_discovered": false,
+      "breakthrough_claim_allowed": false,
+      "current_label": "V51_BREAKTHROUGH_STANDARD_ACTIVE_NO_BREAKTHROUGH_CLAIM"
+    },
+    "limitations": [
+      "A ten-gate score measures supplied evidence, not general intelligence.",
+      "The representation opcode is a verified composite, not a new irreducible mathematical primitive.",
+      "The mechanism tournament uses an engineered computational apparatus and a supplied structural feature substrate.",
+      "No existing result is a human-unknown scientific law.",
+      "External expert review and independent laboratory replication cannot be self-awarded by this repository."
+    ]
+  },
+  "independent_verification": {
+    "verifier_version": "independent-breakthrough-standard-verifier-v51.0",
+    "passed": true,
+    "obligations": [
+      {
+        "obligation_id": "reported_run_passed",
+        "passed": true
+      },
+      {
+        "obligation_id": "tournament_replays",
+        "passed": true
+      },
+      {
+        "obligation_id": "representation_replays",
+        "passed": true
+      },
+      {
+        "obligation_id": "standard_commitment_replays",
+        "passed": true
+      },
+      {
+        "obligation_id": "scores_replay",
+        "passed": true
+      },
+      {
+        "obligation_id": "breakthrough_remains_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "unknown_law_remains_unclaimed",
+        "passed": true
+      }
+    ]
+  },
+  "content_digest": "58619fd21dd1cc9098ed330d448aae636b31daaa7bb37879846b66d163d39999"
+}
