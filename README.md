@@ -616,7 +616,19 @@ The new result is a computation-control semantic, not a new mathematical law. It
 
 Current claim label: `V48_COUNTEREXAMPLE_INDUCED_SCOPE_SEMANTIC_VERIFIED_UNIVERSAL_FORMULA_NOT_ESTABLISHED`.
 
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json), and [V48 semantic-transfer counterexamples](reports/data/semantic_transfer_counterexample_v48_latest.json).
+### V49 anonymous event-world local search
+
+V49 follows V48's autonomously selected `new_world_semantic_search` task and targets the only world that rejected the bounded temporal candidate. The program sees an anonymous four-channel event sequence, two previous outputs, and generic language-growth resources. Physical labels remain sealed. Training-only normalization is followed by validation-driven resource selection, a program commitment, sealed transfer, and only then metadata reveal.
+
+The search evaluated 73 programs spanning memory, visible reads, input deltas, self-couplings, pair interactions, and guarded paths. None improved the validation objective. The selected program therefore remained `EVENTSEM-8ae1afe77e34c37e = -0.00200870328334 * ONE`. Its validation error was `1.00000658` times the standardized zero baseline and its sealed error was `1.00008693` times baseline. The local formula gate failed, so no expression entered the success room.
+
+After the sealed audit, the world was revealed as the USGS global earthquake event catalog, with elapsed event time, latitude, longitude, and depth as inputs and catalog magnitude as output. V49 does **not** conclude that earthquake magnitudes are universally unpredictable. It establishes only that these registered observables and this finite search language did not support a stable predictor. Ten largest residuals entered `V49-EVENT-LOCAL-COUNTEREXAMPLES-0001` for mandatory replay.
+
+The negative result is registered as `GAPSEM-45b65daa4f570cfb`, a verified evidence-gap state that blocks formula promotion and requests new observables or language resources. The next autonomously selected task is `event_world_feature_invention`.
+
+Current claim label: `V49_ANONYMOUS_EVENT_WORLD_LOCAL_SEARCH_VERIFIED_UNIVERSAL_AND_CAUSAL_CLAIMS_BLOCKED`.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json), [V48 semantic-transfer counterexamples](reports/data/semantic_transfer_counterexample_v48_latest.json), and [V49 event-world local search](reports/data/event_world_semantic_search_v49_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -648,6 +660,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V46 | allowlisted network collection, sandboxed opcode registration, causal ablation, instrument architecture, persistent budgets, and Crossref audit | physical fabrication, new natural-system intervention, full-text novelty review, and independent laboratory remain external |
 | V47 | frozen post-discovery commitment, structure-derived open-literature queries, deterministic paper selection, licensed full-text fingerprints, prior-art classification, and persistent task/budget continuation | corpus is not exhaustive; phrase fingerprints are not expert identity proof; physical science and independent review remain external |
 | V48 | frozen cross-domain semantic transfer, training-only canonical adapters, mandatory counterexample replay, bounded replacement search, and learned execute-or-abstain scope control | replacement passed two of three worlds; no universal formula, causal natural law, or independent replication |
+| V49 | anonymous failed-world selection, finite local language growth, preregistered sealed transfer, negative-result acceptance, and evidence-gap registration | no event predictor beat baseline; finite language and archived observational catalog do not establish impossibility or causation |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
