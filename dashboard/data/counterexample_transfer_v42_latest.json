@@ -1,0 +1,1761 @@
+{
+  "report_version": "counterexample-transfer-v42.0",
+  "run_id": "RUN-counterexample-transfer-v42-20260822T014728222148Z",
+  "created_at": "2026-08-22T01:47:28.222148+00:00",
+  "verdict": "reused_archive_cross_object_transfer_verified_external_replication_required",
+  "acceptance": {
+    "benchmark_version": "counterexample-transfer-v42.0",
+    "passed": true,
+    "final_status": "verified",
+    "classification": "programmatically_sealed_reused_archive_cross_object_transfer",
+    "protocol": {
+      "discovery_object": "anonymous_object_A",
+      "transfer_object": "anonymous_object_B",
+      "discovery_training_trace_count": 30,
+      "discovery_validation_trace_count": 30,
+      "transfer_trace_count": 60,
+      "human_quantity_names_exposed_to_learner": false,
+      "source_identity_exposed_to_learner": false,
+      "life_stage_exposed_to_learner": false,
+      "developer_had_prior_access_to_archive": true,
+      "fresh_human_blind_replication": false
+    },
+    "discovery": {
+      "selected": {
+        "program_id": "XFER-a7588b2a1ab1b64d",
+        "kind": "interaction_fold",
+        "opaque_program": "INTERACTION_FOLD<S0=Q1;FEATURES=ONE;STATE;Q0;Q2;DELTA_Q3;Q3;INITIAL_Q1;INITIAL_Q0;INITIAL_Q2;Q0@Q3;Q0@Q0;Q2@Q3;STATE@Q0;STATE@Q2;STEP=W0=0.208500206;W1=0.946309298;W2=0.963260862;W3=-0.00660226308;W4=0.000361421879;W5=0.000242584525;W6=-0.000147882028;W7=-0.934768757;W8=0.00269371445;W9=6.88909745e-05;W10=0.00195916689;W11=-1.16416189e-05;W12=-0.0146025378;W13=0.00117506971>",
+        "feature_names": [
+          "ONE",
+          "STATE",
+          "Q0",
+          "Q2",
+          "DELTA_Q3",
+          "Q3",
+          "INITIAL_Q1",
+          "INITIAL_Q0",
+          "INITIAL_Q2",
+          "Q0@Q3",
+          "Q0@Q0",
+          "Q2@Q3",
+          "STATE@Q0",
+          "STATE@Q2"
+        ],
+        "coefficients": [
+          0.20850020569604805,
+          0.9463092977181465,
+          0.963260862397288,
+          -0.006602263075275719,
+          0.0003614218794957308,
+          0.00024258452455963586,
+          -0.00014788202828459147,
+          -0.9347687570903461,
+          0.002693714448173363,
+          6.889097451469317e-05,
+          0.0019591668884826625,
+          -1.1641618942737075e-05,
+          -0.014602537750959904,
+          0.0011750697087003076
+        ],
+        "validation_rmse": 0.08378949489793364,
+        "validation_mape": 0.012451651876376826,
+        "node_count": 27,
+        "created_operator": "INTERACTION_FOLD",
+        "human_law_name": null,
+        "domain_formula_supplied": false
+      },
+      "candidates": [
+        {
+          "program_id": "XFER-d47c2befdea04e95",
+          "kind": "state_fold",
+          "opaque_program": "STATE_FOLD<S0=Q1;FEATURES=ONE;STATE;Q0;Q2;DELTA_Q3;Q3;STEP=W0=0.156040155;W1=0.959462198;W2=-0.00896925337;W3=-0.000464880729;W4=0.000602028987;W5=5.20075807e-05>",
+          "feature_names": [
+            "ONE",
+            "STATE",
+            "Q0",
+            "Q2",
+            "DELTA_Q3",
+            "Q3"
+          ],
+          "coefficients": [
+            0.15604015549953523,
+            0.9594621975777292,
+            -0.008969253371792,
+            -0.00046488072879710685,
+            0.0006020289865711903,
+            5.2007580662594144e-05
+          ],
+          "validation_rmse": 0.0976521043673264,
+          "validation_mape": 0.016227268881661462,
+          "node_count": 11,
+          "created_operator": "STATE_FOLD",
+          "human_law_name": null,
+          "domain_formula_supplied": false
+        },
+        {
+          "program_id": "XFER-40c826b6708fdcdc",
+          "kind": "context_fold",
+          "opaque_program": "CONTEXT_FOLD<S0=Q1;FEATURES=ONE;STATE;Q0;Q2;DELTA_Q3;Q3;INITIAL_Q1;INITIAL_Q0;INITIAL_Q2;STEP=W0=0.166528692;W1=0.972124053;W2=0.570356254;W3=0.00316084544;W4=5.76154658e-05;W5=3.0506638e-05;W6=-0.0117868142;W7=-0.58213877;W8=-0.003552109>",
+          "feature_names": [
+            "ONE",
+            "STATE",
+            "Q0",
+            "Q2",
+            "DELTA_Q3",
+            "Q3",
+            "INITIAL_Q1",
+            "INITIAL_Q0",
+            "INITIAL_Q2"
+          ],
+          "coefficients": [
+            0.166528691780062,
+            0.9721240533639521,
+            0.5703562543740284,
+            0.0031608454366217065,
+            5.761546584917565e-05,
+            3.0506637984983875e-05,
+            -0.011786814188043029,
+            -0.5821387695414102,
+            -0.0035521089952574025
+          ],
+          "validation_rmse": 0.10146804292849831,
+          "validation_mape": 0.015718555880421092,
+          "node_count": 17,
+          "created_operator": "CONTEXT_FOLD",
+          "human_law_name": null,
+          "domain_formula_supplied": false
+        },
+        {
+          "program_id": "XFER-a7588b2a1ab1b64d",
+          "kind": "interaction_fold",
+          "opaque_program": "INTERACTION_FOLD<S0=Q1;FEATURES=ONE;STATE;Q0;Q2;DELTA_Q3;Q3;INITIAL_Q1;INITIAL_Q0;INITIAL_Q2;Q0@Q3;Q0@Q0;Q2@Q3;STATE@Q0;STATE@Q2;STEP=W0=0.208500206;W1=0.946309298;W2=0.963260862;W3=-0.00660226308;W4=0.000361421879;W5=0.000242584525;W6=-0.000147882028;W7=-0.934768757;W8=0.00269371445;W9=6.88909745e-05;W10=0.00195916689;W11=-1.16416189e-05;W12=-0.0146025378;W13=0.00117506971>",
+          "feature_names": [
+            "ONE",
+            "STATE",
+            "Q0",
+            "Q2",
+            "DELTA_Q3",
+            "Q3",
+            "INITIAL_Q1",
+            "INITIAL_Q0",
+            "INITIAL_Q2",
+            "Q0@Q3",
+            "Q0@Q0",
+            "Q2@Q3",
+            "STATE@Q0",
+            "STATE@Q2"
+          ],
+          "coefficients": [
+            0.20850020569604805,
+            0.9463092977181465,
+            0.963260862397288,
+            -0.006602263075275719,
+            0.0003614218794957308,
+            0.00024258452455963586,
+            -0.00014788202828459147,
+            -0.9347687570903461,
+            0.002693714448173363,
+            6.889097451469317e-05,
+            0.0019591668884826625,
+            -1.1641618942737075e-05,
+            -0.014602537750959904,
+            0.0011750697087003076
+          ],
+          "validation_rmse": 0.08378949489793364,
+          "validation_mape": 0.012451651876376826,
+          "node_count": 27,
+          "created_operator": "INTERACTION_FOLD",
+          "human_law_name": null,
+          "domain_formula_supplied": false
+        }
+      ],
+      "candidate_validation": {
+        "state_fold": {
+          "validation_rmse": 0.0976521043673264,
+          "validation_mape": 0.016227268881661462,
+          "node_count": 11
+        },
+        "context_fold": {
+          "validation_rmse": 0.10146804292849831,
+          "validation_mape": 0.015718555880421092,
+          "node_count": 17
+        },
+        "interaction_fold": {
+          "validation_rmse": 0.08378949489793364,
+          "validation_mape": 0.012451651876376826,
+          "node_count": 27
+        }
+      },
+      "selection_score": 0.08405949489793364,
+      "complexity_penalty_per_node": 1e-05
+    },
+    "preregistration": {
+      "program_commitment": "5b31fcdf205f91d8a0df68cd5aa143940a6f7ed267657fc26df00e3d2a2194c5",
+      "discovery_event_index": 1,
+      "commit_event_index": 2,
+      "transfer_reveal_event_index": 3,
+      "commitment_precedes_programmatic_reveal": true
+    },
+    "transfer_audit": {
+      "overall": {
+        "trace_count": 60,
+        "point_count": 1440,
+        "rmse": 0.08311469400160419,
+        "median_absolute_percentage_error": 0.014613342845690396,
+        "cases": [
+          {
+            "trace_id": "CHALLENGE-46e7ec3a42bfe3eb",
+            "point_count": 24,
+            "trajectory_rmse": 0.12289958181669691,
+            "final_predicted": 3.527079587792883,
+            "final_observed": 3.678
+          },
+          {
+            "trace_id": "CHALLENGE-0495cfed465bdb18",
+            "point_count": 24,
+            "trajectory_rmse": 0.02520027641680524,
+            "final_predicted": 3.7451214309250145,
+            "final_observed": 3.793
+          },
+          {
+            "trace_id": "CHALLENGE-803e2fcd7a5baf7a",
+            "point_count": 24,
+            "trajectory_rmse": 0.03615577078455834,
+            "final_predicted": 3.2135930485823154,
+            "final_observed": 3.273
+          },
+          {
+            "trace_id": "CHALLENGE-8e1f2c1a4adf15bb",
+            "point_count": 24,
+            "trajectory_rmse": 0.1308388258483614,
+            "final_predicted": 3.3489074751265293,
+            "final_observed": 3.516
+          },
+          {
+            "trace_id": "CHALLENGE-bfdcb689459a062c",
+            "point_count": 24,
+            "trajectory_rmse": 0.03611771864337761,
+            "final_predicted": 3.4362951934556625,
+            "final_observed": 3.473
+          },
+          {
+            "trace_id": "CHALLENGE-5677f4f69e25c829",
+            "point_count": 24,
+            "trajectory_rmse": 0.03679757482767712,
+            "final_predicted": 3.286633253621314,
+            "final_observed": 3.333
+          },
+          {
+            "trace_id": "CHALLENGE-cc25f1434b322405",
+            "point_count": 24,
+            "trajectory_rmse": 0.13858787255428004,
+            "final_predicted": 3.257246634579152,
+            "final_observed": 3.446
+          },
+          {
+            "trace_id": "CHALLENGE-a86c52472620e52d",
+            "point_count": 24,
+            "trajectory_rmse": 0.0065944386169019,
+            "final_predicted": 3.701520357143753,
+            "final_observed": 3.694
+          },
+          {
+            "trace_id": "CHALLENGE-49c8cee6f3de520a",
+            "point_count": 24,
+            "trajectory_rmse": 0.06978917732331151,
+            "final_predicted": 3.8443984624633574,
+            "final_observed": 3.913
+          },
+          {
+            "trace_id": "CHALLENGE-e4c877a0ef48f26b",
+            "point_count": 24,
+            "trajectory_rmse": 0.09482786505856765,
+            "final_predicted": 3.4310212412005034,
+            "final_observed": 3.562
+          },
+          {
+            "trace_id": "CHALLENGE-99edcc6cd0a3543b",
+            "point_count": 24,
+            "trajectory_rmse": 0.009721345069013855,
+            "final_predicted": 3.6144849157884424,
+            "final_observed": 3.608
+          },
+          {
+            "trace_id": "CHALLENGE-a685ef59364ba192",
+            "point_count": 24,
+            "trajectory_rmse": 0.07272937032829295,
+            "final_predicted": 3.880298733260407,
+            "final_observed": 3.956
+          },
+          {
+            "trace_id": "CHALLENGE-02a9b7d33947c253",
+            "point_count": 24,
+            "trajectory_rmse": 0.14370171577757393,
+            "final_predicted": 2.9951087093523365,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-5b7b8b7959dae932",
+            "point_count": 24,
+            "trajectory_rmse": 0.11828374562681165,
+            "final_predicted": 3.4851975201765533,
+            "final_observed": 3.625
+          },
+          {
+            "trace_id": "CHALLENGE-90f75b096ab2167f",
+            "point_count": 24,
+            "trajectory_rmse": 0.061885485618403194,
+            "final_predicted": 3.2033391694295754,
+            "final_observed": 3.29
+          },
+          {
+            "trace_id": "CHALLENGE-acf36ac0820c10de",
+            "point_count": 24,
+            "trajectory_rmse": 0.03330570246585688,
+            "final_predicted": 3.1362255695905765,
+            "final_observed": 3.202
+          },
+          {
+            "trace_id": "CHALLENGE-d0367706c28a275b",
+            "point_count": 24,
+            "trajectory_rmse": 0.09546954839041136,
+            "final_predicted": 3.756072995111272,
+            "final_observed": 3.855
+          },
+          {
+            "trace_id": "CHALLENGE-221a46c77884a276",
+            "point_count": 24,
+            "trajectory_rmse": 0.09998795727937523,
+            "final_predicted": 3.42037439462327,
+            "final_observed": 3.582
+          },
+          {
+            "trace_id": "CHALLENGE-9b8d35fad763624f",
+            "point_count": 24,
+            "trajectory_rmse": 0.07320322199797702,
+            "final_predicted": 3.726690713498753,
+            "final_observed": 3.611
+          },
+          {
+            "trace_id": "CHALLENGE-5d440dce9cccc64e",
+            "point_count": 24,
+            "trajectory_rmse": 0.16232721896351274,
+            "final_predicted": 3.489533266147584,
+            "final_observed": 3.691
+          },
+          {
+            "trace_id": "CHALLENGE-4cea8f2ad0d51e37",
+            "point_count": 24,
+            "trajectory_rmse": 0.08509577081736812,
+            "final_predicted": 3.8874137949354943,
+            "final_observed": 3.949
+          },
+          {
+            "trace_id": "CHALLENGE-55f047d48daf0f54",
+            "point_count": 24,
+            "trajectory_rmse": 0.049041787502020394,
+            "final_predicted": 3.1318174960150498,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-4e64687a6cf46dd5",
+            "point_count": 24,
+            "trajectory_rmse": 0.11755183682281793,
+            "final_predicted": 3.2348839628639148,
+            "final_observed": 3.39
+          },
+          {
+            "trace_id": "CHALLENGE-a824047966a3cf5a",
+            "point_count": 24,
+            "trajectory_rmse": 0.03846163912655576,
+            "final_predicted": 3.728939389967516,
+            "final_observed": 3.689
+          },
+          {
+            "trace_id": "CHALLENGE-b042e76e943f01e7",
+            "point_count": 24,
+            "trajectory_rmse": 0.18730800035261325,
+            "final_predicted": 3.4316754770058693,
+            "final_observed": 3.642
+          },
+          {
+            "trace_id": "CHALLENGE-3a969911d84ddfc4",
+            "point_count": 24,
+            "trajectory_rmse": 0.08387921395530726,
+            "final_predicted": 3.118336090361862,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-dff4a00f58a28650",
+            "point_count": 24,
+            "trajectory_rmse": 0.04576404956171809,
+            "final_predicted": 3.8385327783817673,
+            "final_observed": 3.853
+          },
+          {
+            "trace_id": "CHALLENGE-a7941d092d1edc2d",
+            "point_count": 24,
+            "trajectory_rmse": 0.03348958152760239,
+            "final_predicted": 3.9371691030602554,
+            "final_observed": 3.885
+          },
+          {
+            "trace_id": "CHALLENGE-1552cb93a9e9089a",
+            "point_count": 24,
+            "trajectory_rmse": 0.10644066720348913,
+            "final_predicted": 3.1062981049248832,
+            "final_observed": 3.249
+          },
+          {
+            "trace_id": "CHALLENGE-375c03f715c00d11",
+            "point_count": 24,
+            "trajectory_rmse": 0.045194756047272064,
+            "final_predicted": 3.8380032176464565,
+            "final_observed": 3.852
+          },
+          {
+            "trace_id": "CHALLENGE-f1af051595694b40",
+            "point_count": 24,
+            "trajectory_rmse": 0.01600671974916488,
+            "final_predicted": 3.8545933457540564,
+            "final_observed": 3.832
+          },
+          {
+            "trace_id": "CHALLENGE-f1c7629d9ca0b73f",
+            "point_count": 24,
+            "trajectory_rmse": 0.06602395963491813,
+            "final_predicted": 3.7169899015965435,
+            "final_observed": 3.78
+          },
+          {
+            "trace_id": "CHALLENGE-46efe8f124648c1a",
+            "point_count": 24,
+            "trajectory_rmse": 0.011797407944306736,
+            "final_predicted": 3.2545695795684333,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-0abe02a69c3c4917",
+            "point_count": 24,
+            "trajectory_rmse": 0.10415186737803542,
+            "final_predicted": 3.3745196597597364,
+            "final_observed": 3.474
+          },
+          {
+            "trace_id": "CHALLENGE-5a21e162754fec44",
+            "point_count": 24,
+            "trajectory_rmse": 0.04208873820850714,
+            "final_predicted": 3.2507683498672546,
+            "final_observed": 3.314
+          },
+          {
+            "trace_id": "CHALLENGE-77712b546f619986",
+            "point_count": 24,
+            "trajectory_rmse": 0.06906722741262376,
+            "final_predicted": 3.472524937202402,
+            "final_observed": 3.557
+          },
+          {
+            "trace_id": "CHALLENGE-fa986950c22a02fa",
+            "point_count": 24,
+            "trajectory_rmse": 0.10749713202764159,
+            "final_predicted": 3.2753928801050036,
+            "final_observed": 3.427
+          },
+          {
+            "trace_id": "CHALLENGE-48e361f4ebfd398d",
+            "point_count": 24,
+            "trajectory_rmse": 0.021340608394525104,
+            "final_predicted": 3.1674860658406128,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-c3622c89f114c6d9",
+            "point_count": 24,
+            "trajectory_rmse": 0.03744119503784991,
+            "final_predicted": 3.38691584450509,
+            "final_observed": 3.411
+          },
+          {
+            "trace_id": "CHALLENGE-50e685ff171abcd1",
+            "point_count": 24,
+            "trajectory_rmse": 0.08678268370271267,
+            "final_predicted": 3.5061397138609,
+            "final_observed": 3.616
+          },
+          {
+            "trace_id": "CHALLENGE-7f3c0dfdf24b056e",
+            "point_count": 24,
+            "trajectory_rmse": 0.060479555717392545,
+            "final_predicted": 3.094265686505604,
+            "final_observed": 3.22
+          },
+          {
+            "trace_id": "CHALLENGE-da001b0a9f9e4c38",
+            "point_count": 24,
+            "trajectory_rmse": 0.09887429242091587,
+            "final_predicted": 3.263206555500792,
+            "final_observed": 3.283
+          },
+          {
+            "trace_id": "CHALLENGE-f262d2f1f179cfa0",
+            "point_count": 24,
+            "trajectory_rmse": 0.10906292859871076,
+            "final_predicted": 3.4271557290417634,
+            "final_observed": 3.621
+          },
+          {
+            "trace_id": "CHALLENGE-02ee7d2043f0d98e",
+            "point_count": 24,
+            "trajectory_rmse": 0.08663613631024798,
+            "final_predicted": 3.2185603673174965,
+            "final_observed": 3.274
+          },
+          {
+            "trace_id": "CHALLENGE-9825fe7853cdcfd0",
+            "point_count": 24,
+            "trajectory_rmse": 0.07839476405419939,
+            "final_predicted": 3.107663015017433,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-2c80d583872c0b5f",
+            "point_count": 24,
+            "trajectory_rmse": 0.030483988315263836,
+            "final_predicted": 3.840617728167436,
+            "final_observed": 3.909
+          },
+          {
+            "trace_id": "CHALLENGE-9c8dc0a4ca988d68",
+            "point_count": 24,
+            "trajectory_rmse": 0.06272295017816638,
+            "final_predicted": 3.1640889566395773,
+            "final_observed": 3.297
+          },
+          {
+            "trace_id": "CHALLENGE-69f2448e23a56592",
+            "point_count": 24,
+            "trajectory_rmse": 0.03731059968601327,
+            "final_predicted": 3.6402273519099513,
+            "final_observed": 3.649
+          },
+          {
+            "trace_id": "CHALLENGE-3f83f74e24e930dc",
+            "point_count": 24,
+            "trajectory_rmse": 0.07052640199080391,
+            "final_predicted": 3.4654664335121836,
+            "final_observed": 3.572
+          },
+          {
+            "trace_id": "CHALLENGE-1f5dc2a2610cc209",
+            "point_count": 24,
+            "trajectory_rmse": 0.04708877974729771,
+            "final_predicted": 3.2944494335562435,
+            "final_observed": 3.393
+          },
+          {
+            "trace_id": "CHALLENGE-34ca612bad77ebcb",
+            "point_count": 24,
+            "trajectory_rmse": 0.03560599661739306,
+            "final_predicted": 3.215905758453929,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-ecd6dc38490df70a",
+            "point_count": 24,
+            "trajectory_rmse": 0.03789785120807784,
+            "final_predicted": 3.202505568984683,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-02b8e10228ae2dec",
+            "point_count": 24,
+            "trajectory_rmse": 0.04484473971401782,
+            "final_predicted": 3.220950953721121,
+            "final_observed": 3.301
+          },
+          {
+            "trace_id": "CHALLENGE-c147a226afeb6cc0",
+            "point_count": 24,
+            "trajectory_rmse": 0.11295699031820823,
+            "final_predicted": 3.092681804889701,
+            "final_observed": 3.314
+          },
+          {
+            "trace_id": "CHALLENGE-532ce5e73edf4703",
+            "point_count": 24,
+            "trajectory_rmse": 0.03451199511673724,
+            "final_predicted": 3.9802820707510307,
+            "final_observed": 4.057
+          },
+          {
+            "trace_id": "CHALLENGE-5ea56c05138de7ed",
+            "point_count": 24,
+            "trajectory_rmse": 0.04864095320437688,
+            "final_predicted": 3.1651039432641563,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-071449753167c1ba",
+            "point_count": 24,
+            "trajectory_rmse": 0.0236015817190077,
+            "final_predicted": 3.781999019859812,
+            "final_observed": 3.82
+          },
+          {
+            "trace_id": "CHALLENGE-a5dcc11fbbb32ad1",
+            "point_count": 24,
+            "trajectory_rmse": 0.155551077691766,
+            "final_predicted": 3.42799061479711,
+            "final_observed": 3.642
+          },
+          {
+            "trace_id": "CHALLENGE-0077cfd9031a9b23",
+            "point_count": 24,
+            "trajectory_rmse": 0.05346089395314346,
+            "final_predicted": 3.5508343945880125,
+            "final_observed": 3.643
+          },
+          {
+            "trace_id": "CHALLENGE-fc6e5aef72f17768",
+            "point_count": 24,
+            "trajectory_rmse": 0.14474493936079605,
+            "final_predicted": 3.5687828017233336,
+            "final_observed": 3.781
+          }
+        ]
+      },
+      "by_life_stage": {
+        "early": {
+          "trace_count": 20,
+          "point_count": 480,
+          "rmse": 0.09102805316739244,
+          "median_absolute_percentage_error": 0.016580388174219654,
+          "cases": [
+            {
+              "trace_id": "CHALLENGE-46e7ec3a42bfe3eb",
+              "point_count": 24,
+              "trajectory_rmse": 0.12289958181669691,
+              "final_predicted": 3.527079587792883,
+              "final_observed": 3.678
+            },
+            {
+              "trace_id": "CHALLENGE-0495cfed465bdb18",
+              "point_count": 24,
+              "trajectory_rmse": 0.02520027641680524,
+              "final_predicted": 3.7451214309250145,
+              "final_observed": 3.793
+            },
+            {
+              "trace_id": "CHALLENGE-803e2fcd7a5baf7a",
+              "point_count": 24,
+              "trajectory_rmse": 0.03615577078455834,
+              "final_predicted": 3.2135930485823154,
+              "final_observed": 3.273
+            },
+            {
+              "trace_id": "CHALLENGE-8e1f2c1a4adf15bb",
+              "point_count": 24,
+              "trajectory_rmse": 0.1308388258483614,
+              "final_predicted": 3.3489074751265293,
+              "final_observed": 3.516
+            },
+            {
+              "trace_id": "CHALLENGE-bfdcb689459a062c",
+              "point_count": 24,
+              "trajectory_rmse": 0.03611771864337761,
+              "final_predicted": 3.4362951934556625,
+              "final_observed": 3.473
+            },
+            {
+              "trace_id": "CHALLENGE-5677f4f69e25c829",
+              "point_count": 24,
+              "trajectory_rmse": 0.03679757482767712,
+              "final_predicted": 3.286633253621314,
+              "final_observed": 3.333
+            },
+            {
+              "trace_id": "CHALLENGE-cc25f1434b322405",
+              "point_count": 24,
+              "trajectory_rmse": 0.13858787255428004,
+              "final_predicted": 3.257246634579152,
+              "final_observed": 3.446
+            },
+            {
+              "trace_id": "CHALLENGE-a86c52472620e52d",
+              "point_count": 24,
+              "trajectory_rmse": 0.0065944386169019,
+              "final_predicted": 3.701520357143753,
+              "final_observed": 3.694
+            },
+            {
+              "trace_id": "CHALLENGE-49c8cee6f3de520a",
+              "point_count": 24,
+              "trajectory_rmse": 0.06978917732331151,
+              "final_predicted": 3.8443984624633574,
+              "final_observed": 3.913
+            },
+            {
+              "trace_id": "CHALLENGE-e4c877a0ef48f26b",
+              "point_count": 24,
+              "trajectory_rmse": 0.09482786505856765,
+              "final_predicted": 3.4310212412005034,
+              "final_observed": 3.562
+            },
+            {
+              "trace_id": "CHALLENGE-99edcc6cd0a3543b",
+              "point_count": 24,
+              "trajectory_rmse": 0.009721345069013855,
+              "final_predicted": 3.6144849157884424,
+              "final_observed": 3.608
+            },
+            {
+              "trace_id": "CHALLENGE-a685ef59364ba192",
+              "point_count": 24,
+              "trajectory_rmse": 0.07272937032829295,
+              "final_predicted": 3.880298733260407,
+              "final_observed": 3.956
+            },
+            {
+              "trace_id": "CHALLENGE-02a9b7d33947c253",
+              "point_count": 24,
+              "trajectory_rmse": 0.14370171577757393,
+              "final_predicted": 2.9951087093523365,
+              "final_observed": 3.2
+            },
+            {
+              "trace_id": "CHALLENGE-5b7b8b7959dae932",
+              "point_count": 24,
+              "trajectory_rmse": 0.11828374562681165,
+              "final_predicted": 3.4851975201765533,
+              "final_observed": 3.625
+            },
+            {
+              "trace_id": "CHALLENGE-90f75b096ab2167f",
+              "point_count": 24,
+              "trajectory_rmse": 0.061885485618403194,
+              "final_predicted": 3.2033391694295754,
+              "final_observed": 3.29
+            },
+            {
+              "trace_id": "CHALLENGE-acf36ac0820c10de",
+              "point_count": 24,
+              "trajectory_rmse": 0.03330570246585688,
+              "final_predicted": 3.1362255695905765,
+              "final_observed": 3.202
+            },
+            {
+              "trace_id": "CHALLENGE-d0367706c28a275b",
+              "point_count": 24,
+              "trajectory_rmse": 0.09546954839041136,
+              "final_predicted": 3.756072995111272,
+              "final_observed": 3.855
+            },
+            {
+              "trace_id": "CHALLENGE-221a46c77884a276",
+              "point_count": 24,
+              "trajectory_rmse": 0.09998795727937523,
+              "final_predicted": 3.42037439462327,
+              "final_observed": 3.582
+            },
+            {
+              "trace_id": "CHALLENGE-9b8d35fad763624f",
+              "point_count": 24,
+              "trajectory_rmse": 0.07320322199797702,
+              "final_predicted": 3.726690713498753,
+              "final_observed": 3.611
+            },
+            {
+              "trace_id": "CHALLENGE-5d440dce9cccc64e",
+              "point_count": 24,
+              "trajectory_rmse": 0.16232721896351274,
+              "final_predicted": 3.489533266147584,
+              "final_observed": 3.691
+            }
+          ]
+        },
+        "middle": {
+          "trace_count": 20,
+          "point_count": 480,
+          "rmse": 0.07960535637077473,
+          "median_absolute_percentage_error": 0.015497174368109358,
+          "cases": [
+            {
+              "trace_id": "CHALLENGE-4cea8f2ad0d51e37",
+              "point_count": 24,
+              "trajectory_rmse": 0.08509577081736812,
+              "final_predicted": 3.8874137949354943,
+              "final_observed": 3.949
+            },
+            {
+              "trace_id": "CHALLENGE-55f047d48daf0f54",
+              "point_count": 24,
+              "trajectory_rmse": 0.049041787502020394,
+              "final_predicted": 3.1318174960150498,
+              "final_observed": 3.2
+            },
+            {
+              "trace_id": "CHALLENGE-4e64687a6cf46dd5",
+              "point_count": 24,
+              "trajectory_rmse": 0.11755183682281793,
+              "final_predicted": 3.2348839628639148,
+              "final_observed": 3.39
+            },
+            {
+              "trace_id": "CHALLENGE-a824047966a3cf5a",
+              "point_count": 24,
+              "trajectory_rmse": 0.03846163912655576,
+              "final_predicted": 3.728939389967516,
+              "final_observed": 3.689
+            },
+            {
+              "trace_id": "CHALLENGE-b042e76e943f01e7",
+              "point_count": 24,
+              "trajectory_rmse": 0.18730800035261325,
+              "final_predicted": 3.4316754770058693,
+              "final_observed": 3.642
+            },
+            {
+              "trace_id": "CHALLENGE-3a969911d84ddfc4",
+              "point_count": 24,
+              "trajectory_rmse": 0.08387921395530726,
+              "final_predicted": 3.118336090361862,
+              "final_observed": 3.245
+            },
+            {
+              "trace_id": "CHALLENGE-dff4a00f58a28650",
+              "point_count": 24,
+              "trajectory_rmse": 0.04576404956171809,
+              "final_predicted": 3.8385327783817673,
+              "final_observed": 3.853
+            },
+            {
+              "trace_id": "CHALLENGE-a7941d092d1edc2d",
+              "point_count": 24,
+              "trajectory_rmse": 0.03348958152760239,
+              "final_predicted": 3.9371691030602554,
+              "final_observed": 3.885
+            },
+            {
+              "trace_id": "CHALLENGE-1552cb93a9e9089a",
+              "point_count": 24,
+              "trajectory_rmse": 0.10644066720348913,
+              "final_predicted": 3.1062981049248832,
+              "final_observed": 3.249
+            },
+            {
+              "trace_id": "CHALLENGE-375c03f715c00d11",
+              "point_count": 24,
+              "trajectory_rmse": 0.045194756047272064,
+              "final_predicted": 3.8380032176464565,
+              "final_observed": 3.852
+            },
+            {
+              "trace_id": "CHALLENGE-f1af051595694b40",
+              "point_count": 24,
+              "trajectory_rmse": 0.01600671974916488,
+              "final_predicted": 3.8545933457540564,
+              "final_observed": 3.832
+            },
+            {
+              "trace_id": "CHALLENGE-f1c7629d9ca0b73f",
+              "point_count": 24,
+              "trajectory_rmse": 0.06602395963491813,
+              "final_predicted": 3.7169899015965435,
+              "final_observed": 3.78
+            },
+            {
+              "trace_id": "CHALLENGE-46efe8f124648c1a",
+              "point_count": 24,
+              "trajectory_rmse": 0.011797407944306736,
+              "final_predicted": 3.2545695795684333,
+              "final_observed": 3.245
+            },
+            {
+              "trace_id": "CHALLENGE-0abe02a69c3c4917",
+              "point_count": 24,
+              "trajectory_rmse": 0.10415186737803542,
+              "final_predicted": 3.3745196597597364,
+              "final_observed": 3.474
+            },
+            {
+              "trace_id": "CHALLENGE-5a21e162754fec44",
+              "point_count": 24,
+              "trajectory_rmse": 0.04208873820850714,
+              "final_predicted": 3.2507683498672546,
+              "final_observed": 3.314
+            },
+            {
+              "trace_id": "CHALLENGE-77712b546f619986",
+              "point_count": 24,
+              "trajectory_rmse": 0.06906722741262376,
+              "final_predicted": 3.472524937202402,
+              "final_observed": 3.557
+            },
+            {
+              "trace_id": "CHALLENGE-fa986950c22a02fa",
+              "point_count": 24,
+              "trajectory_rmse": 0.10749713202764159,
+              "final_predicted": 3.2753928801050036,
+              "final_observed": 3.427
+            },
+            {
+              "trace_id": "CHALLENGE-48e361f4ebfd398d",
+              "point_count": 24,
+              "trajectory_rmse": 0.021340608394525104,
+              "final_predicted": 3.1674860658406128,
+              "final_observed": 3.2
+            },
+            {
+              "trace_id": "CHALLENGE-c3622c89f114c6d9",
+              "point_count": 24,
+              "trajectory_rmse": 0.03744119503784991,
+              "final_predicted": 3.38691584450509,
+              "final_observed": 3.411
+            },
+            {
+              "trace_id": "CHALLENGE-50e685ff171abcd1",
+              "point_count": 24,
+              "trajectory_rmse": 0.08678268370271267,
+              "final_predicted": 3.5061397138609,
+              "final_observed": 3.616
+            }
+          ]
+        },
+        "late": {
+          "trace_count": 20,
+          "point_count": 480,
+          "rmse": 0.07810914063396952,
+          "median_absolute_percentage_error": 0.01318845577145425,
+          "cases": [
+            {
+              "trace_id": "CHALLENGE-7f3c0dfdf24b056e",
+              "point_count": 24,
+              "trajectory_rmse": 0.060479555717392545,
+              "final_predicted": 3.094265686505604,
+              "final_observed": 3.22
+            },
+            {
+              "trace_id": "CHALLENGE-da001b0a9f9e4c38",
+              "point_count": 24,
+              "trajectory_rmse": 0.09887429242091587,
+              "final_predicted": 3.263206555500792,
+              "final_observed": 3.283
+            },
+            {
+              "trace_id": "CHALLENGE-f262d2f1f179cfa0",
+              "point_count": 24,
+              "trajectory_rmse": 0.10906292859871076,
+              "final_predicted": 3.4271557290417634,
+              "final_observed": 3.621
+            },
+            {
+              "trace_id": "CHALLENGE-02ee7d2043f0d98e",
+              "point_count": 24,
+              "trajectory_rmse": 0.08663613631024798,
+              "final_predicted": 3.2185603673174965,
+              "final_observed": 3.274
+            },
+            {
+              "trace_id": "CHALLENGE-9825fe7853cdcfd0",
+              "point_count": 24,
+              "trajectory_rmse": 0.07839476405419939,
+              "final_predicted": 3.107663015017433,
+              "final_observed": 3.2
+            },
+            {
+              "trace_id": "CHALLENGE-2c80d583872c0b5f",
+              "point_count": 24,
+              "trajectory_rmse": 0.030483988315263836,
+              "final_predicted": 3.840617728167436,
+              "final_observed": 3.909
+            },
+            {
+              "trace_id": "CHALLENGE-9c8dc0a4ca988d68",
+              "point_count": 24,
+              "trajectory_rmse": 0.06272295017816638,
+              "final_predicted": 3.1640889566395773,
+              "final_observed": 3.297
+            },
+            {
+              "trace_id": "CHALLENGE-69f2448e23a56592",
+              "point_count": 24,
+              "trajectory_rmse": 0.03731059968601327,
+              "final_predicted": 3.6402273519099513,
+              "final_observed": 3.649
+            },
+            {
+              "trace_id": "CHALLENGE-3f83f74e24e930dc",
+              "point_count": 24,
+              "trajectory_rmse": 0.07052640199080391,
+              "final_predicted": 3.4654664335121836,
+              "final_observed": 3.572
+            },
+            {
+              "trace_id": "CHALLENGE-1f5dc2a2610cc209",
+              "point_count": 24,
+              "trajectory_rmse": 0.04708877974729771,
+              "final_predicted": 3.2944494335562435,
+              "final_observed": 3.393
+            },
+            {
+              "trace_id": "CHALLENGE-34ca612bad77ebcb",
+              "point_count": 24,
+              "trajectory_rmse": 0.03560599661739306,
+              "final_predicted": 3.215905758453929,
+              "final_observed": 3.2
+            },
+            {
+              "trace_id": "CHALLENGE-ecd6dc38490df70a",
+              "point_count": 24,
+              "trajectory_rmse": 0.03789785120807784,
+              "final_predicted": 3.202505568984683,
+              "final_observed": 3.2
+            },
+            {
+              "trace_id": "CHALLENGE-02b8e10228ae2dec",
+              "point_count": 24,
+              "trajectory_rmse": 0.04484473971401782,
+              "final_predicted": 3.220950953721121,
+              "final_observed": 3.301
+            },
+            {
+              "trace_id": "CHALLENGE-c147a226afeb6cc0",
+              "point_count": 24,
+              "trajectory_rmse": 0.11295699031820823,
+              "final_predicted": 3.092681804889701,
+              "final_observed": 3.314
+            },
+            {
+              "trace_id": "CHALLENGE-532ce5e73edf4703",
+              "point_count": 24,
+              "trajectory_rmse": 0.03451199511673724,
+              "final_predicted": 3.9802820707510307,
+              "final_observed": 4.057
+            },
+            {
+              "trace_id": "CHALLENGE-5ea56c05138de7ed",
+              "point_count": 24,
+              "trajectory_rmse": 0.04864095320437688,
+              "final_predicted": 3.1651039432641563,
+              "final_observed": 3.245
+            },
+            {
+              "trace_id": "CHALLENGE-071449753167c1ba",
+              "point_count": 24,
+              "trajectory_rmse": 0.0236015817190077,
+              "final_predicted": 3.781999019859812,
+              "final_observed": 3.82
+            },
+            {
+              "trace_id": "CHALLENGE-a5dcc11fbbb32ad1",
+              "point_count": 24,
+              "trajectory_rmse": 0.155551077691766,
+              "final_predicted": 3.42799061479711,
+              "final_observed": 3.642
+            },
+            {
+              "trace_id": "CHALLENGE-0077cfd9031a9b23",
+              "point_count": 24,
+              "trajectory_rmse": 0.05346089395314346,
+              "final_predicted": 3.5508343945880125,
+              "final_observed": 3.643
+            },
+            {
+              "trace_id": "CHALLENGE-fc6e5aef72f17768",
+              "point_count": 24,
+              "trajectory_rmse": 0.14474493936079605,
+              "final_predicted": 3.5687828017233336,
+              "final_observed": 3.781
+            }
+          ]
+        }
+      },
+      "stage_passes": {
+        "early": true,
+        "middle": true,
+        "late": true
+      },
+      "threshold_rmse": 0.1,
+      "frozen_v41_overall": {
+        "trace_count": 60,
+        "point_count": 1440,
+        "rmse": 0.10457684728500961,
+        "median_absolute_percentage_error": 0.015037268245310173,
+        "cases": [
+          {
+            "trace_id": "CHALLENGE-46e7ec3a42bfe3eb",
+            "point_count": 24,
+            "trajectory_rmse": 0.08124839923308154,
+            "final_predicted": 3.7483997915797027,
+            "final_observed": 3.678
+          },
+          {
+            "trace_id": "CHALLENGE-0495cfed465bdb18",
+            "point_count": 24,
+            "trajectory_rmse": 0.030501629585744146,
+            "final_predicted": 3.8340568087395694,
+            "final_observed": 3.793
+          },
+          {
+            "trace_id": "CHALLENGE-803e2fcd7a5baf7a",
+            "point_count": 24,
+            "trajectory_rmse": 0.10147878112608942,
+            "final_predicted": 3.4675270574291375,
+            "final_observed": 3.273
+          },
+          {
+            "trace_id": "CHALLENGE-8e1f2c1a4adf15bb",
+            "point_count": 24,
+            "trajectory_rmse": 0.0394821817589786,
+            "final_predicted": 3.5905971704396,
+            "final_observed": 3.516
+          },
+          {
+            "trace_id": "CHALLENGE-bfdcb689459a062c",
+            "point_count": 24,
+            "trajectory_rmse": 0.03616022706762956,
+            "final_predicted": 3.5322765191072483,
+            "final_observed": 3.473
+          },
+          {
+            "trace_id": "CHALLENGE-5677f4f69e25c829",
+            "point_count": 24,
+            "trajectory_rmse": 0.00355410038620269,
+            "final_predicted": 3.3423859777225107,
+            "final_observed": 3.333
+          },
+          {
+            "trace_id": "CHALLENGE-cc25f1434b322405",
+            "point_count": 24,
+            "trajectory_rmse": 0.04780740803153974,
+            "final_predicted": 3.4896021142541573,
+            "final_observed": 3.446
+          },
+          {
+            "trace_id": "CHALLENGE-a86c52472620e52d",
+            "point_count": 24,
+            "trajectory_rmse": 0.017116472670032346,
+            "final_predicted": 3.7316933894770696,
+            "final_observed": 3.694
+          },
+          {
+            "trace_id": "CHALLENGE-49c8cee6f3de520a",
+            "point_count": 24,
+            "trajectory_rmse": 0.0377208269482263,
+            "final_predicted": 3.864852878694385,
+            "final_observed": 3.913
+          },
+          {
+            "trace_id": "CHALLENGE-e4c877a0ef48f26b",
+            "point_count": 24,
+            "trajectory_rmse": 0.07202870409496767,
+            "final_predicted": 3.671732749603484,
+            "final_observed": 3.562
+          },
+          {
+            "trace_id": "CHALLENGE-99edcc6cd0a3543b",
+            "point_count": 24,
+            "trajectory_rmse": 0.03900263936569536,
+            "final_predicted": 3.6803683986848643,
+            "final_observed": 3.608
+          },
+          {
+            "trace_id": "CHALLENGE-a685ef59364ba192",
+            "point_count": 24,
+            "trajectory_rmse": 0.017311620170991183,
+            "final_predicted": 3.9251509656921835,
+            "final_observed": 3.956
+          },
+          {
+            "trace_id": "CHALLENGE-02a9b7d33947c253",
+            "point_count": 24,
+            "trajectory_rmse": 0.08640414371746755,
+            "final_predicted": 3.362901163521318,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-5b7b8b7959dae932",
+            "point_count": 24,
+            "trajectory_rmse": 0.010673140686516142,
+            "final_predicted": 3.6468996146681727,
+            "final_observed": 3.625
+          },
+          {
+            "trace_id": "CHALLENGE-90f75b096ab2167f",
+            "point_count": 24,
+            "trajectory_rmse": 0.06498599661867391,
+            "final_predicted": 3.3698181224013117,
+            "final_observed": 3.29
+          },
+          {
+            "trace_id": "CHALLENGE-acf36ac0820c10de",
+            "point_count": 24,
+            "trajectory_rmse": 0.1079981206153279,
+            "final_predicted": 3.385890254073152,
+            "final_observed": 3.202
+          },
+          {
+            "trace_id": "CHALLENGE-d0367706c28a275b",
+            "point_count": 24,
+            "trajectory_rmse": 0.013635145752071129,
+            "final_predicted": 3.85135502112455,
+            "final_observed": 3.855
+          },
+          {
+            "trace_id": "CHALLENGE-221a46c77884a276",
+            "point_count": 24,
+            "trajectory_rmse": 0.07099493226168023,
+            "final_predicted": 3.723021387222506,
+            "final_observed": 3.582
+          },
+          {
+            "trace_id": "CHALLENGE-9b8d35fad763624f",
+            "point_count": 24,
+            "trajectory_rmse": 0.043416136886483984,
+            "final_predicted": 3.6783859215675943,
+            "final_observed": 3.611
+          },
+          {
+            "trace_id": "CHALLENGE-5d440dce9cccc64e",
+            "point_count": 24,
+            "trajectory_rmse": 0.08145354891446117,
+            "final_predicted": 3.7672370934936357,
+            "final_observed": 3.691
+          },
+          {
+            "trace_id": "CHALLENGE-4cea8f2ad0d51e37",
+            "point_count": 24,
+            "trajectory_rmse": 0.13106619501958108,
+            "final_predicted": 3.805726163769235,
+            "final_observed": 3.949
+          },
+          {
+            "trace_id": "CHALLENGE-55f047d48daf0f54",
+            "point_count": 24,
+            "trajectory_rmse": 0.029160856957261692,
+            "final_predicted": 3.186124775635576,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-4e64687a6cf46dd5",
+            "point_count": 24,
+            "trajectory_rmse": 0.060633228096584925,
+            "final_predicted": 3.5081877880585473,
+            "final_observed": 3.39
+          },
+          {
+            "trace_id": "CHALLENGE-a824047966a3cf5a",
+            "point_count": 24,
+            "trajectory_rmse": 0.03257246068519221,
+            "final_predicted": 3.756690164823505,
+            "final_observed": 3.689
+          },
+          {
+            "trace_id": "CHALLENGE-b042e76e943f01e7",
+            "point_count": 24,
+            "trajectory_rmse": 0.07400543008157448,
+            "final_predicted": 3.6064653054976405,
+            "final_observed": 3.642
+          },
+          {
+            "trace_id": "CHALLENGE-3a969911d84ddfc4",
+            "point_count": 24,
+            "trajectory_rmse": 0.04716879896780138,
+            "final_predicted": 3.3458990260831776,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-dff4a00f58a28650",
+            "point_count": 24,
+            "trajectory_rmse": 0.04295821405135632,
+            "final_predicted": 3.8767334559371593,
+            "final_observed": 3.853
+          },
+          {
+            "trace_id": "CHALLENGE-a7941d092d1edc2d",
+            "point_count": 24,
+            "trajectory_rmse": 0.11583360697380261,
+            "final_predicted": 3.7477113575288223,
+            "final_observed": 3.885
+          },
+          {
+            "trace_id": "CHALLENGE-1552cb93a9e9089a",
+            "point_count": 24,
+            "trajectory_rmse": 0.01755611306287513,
+            "final_predicted": 3.2908919334074804,
+            "final_observed": 3.249
+          },
+          {
+            "trace_id": "CHALLENGE-375c03f715c00d11",
+            "point_count": 24,
+            "trajectory_rmse": 0.04286623235373193,
+            "final_predicted": 3.8745085647268427,
+            "final_observed": 3.852
+          },
+          {
+            "trace_id": "CHALLENGE-f1af051595694b40",
+            "point_count": 24,
+            "trajectory_rmse": 0.012030803057396738,
+            "final_predicted": 3.8106640924360833,
+            "final_observed": 3.832
+          },
+          {
+            "trace_id": "CHALLENGE-f1c7629d9ca0b73f",
+            "point_count": 24,
+            "trajectory_rmse": 0.09821204251871422,
+            "final_predicted": 3.710418197814793,
+            "final_observed": 3.78
+          },
+          {
+            "trace_id": "CHALLENGE-46efe8f124648c1a",
+            "point_count": 24,
+            "trajectory_rmse": 0.057321257954118195,
+            "final_predicted": 3.3342440146224064,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-0abe02a69c3c4917",
+            "point_count": 24,
+            "trajectory_rmse": 0.00520460980136112,
+            "final_predicted": 3.486076652572675,
+            "final_observed": 3.474
+          },
+          {
+            "trace_id": "CHALLENGE-5a21e162754fec44",
+            "point_count": 24,
+            "trajectory_rmse": 0.06315060315148385,
+            "final_predicted": 3.4125591370985844,
+            "final_observed": 3.314
+          },
+          {
+            "trace_id": "CHALLENGE-77712b546f619986",
+            "point_count": 24,
+            "trajectory_rmse": 0.14903253934973526,
+            "final_predicted": 3.7082078967949283,
+            "final_observed": 3.557
+          },
+          {
+            "trace_id": "CHALLENGE-fa986950c22a02fa",
+            "point_count": 24,
+            "trajectory_rmse": 0.049075041589375784,
+            "final_predicted": 3.5239434382422545,
+            "final_observed": 3.427
+          },
+          {
+            "trace_id": "CHALLENGE-48e361f4ebfd398d",
+            "point_count": 24,
+            "trajectory_rmse": 0.08422387375735864,
+            "final_predicted": 3.3319584408579,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-c3622c89f114c6d9",
+            "point_count": 24,
+            "trajectory_rmse": 0.04881654276867599,
+            "final_predicted": 3.4636469344413836,
+            "final_observed": 3.411
+          },
+          {
+            "trace_id": "CHALLENGE-50e685ff171abcd1",
+            "point_count": 24,
+            "trajectory_rmse": 0.04339251172895678,
+            "final_predicted": 3.614575595811089,
+            "final_observed": 3.616
+          },
+          {
+            "trace_id": "CHALLENGE-7f3c0dfdf24b056e",
+            "point_count": 24,
+            "trajectory_rmse": 0.11734270830130471,
+            "final_predicted": 3.388187559970355,
+            "final_observed": 3.22
+          },
+          {
+            "trace_id": "CHALLENGE-da001b0a9f9e4c38",
+            "point_count": 24,
+            "trajectory_rmse": 0.356788758850774,
+            "final_predicted": 3.6806797793918014,
+            "final_observed": 3.283
+          },
+          {
+            "trace_id": "CHALLENGE-f262d2f1f179cfa0",
+            "point_count": 24,
+            "trajectory_rmse": 0.050270961953879194,
+            "final_predicted": 3.726353011457329,
+            "final_observed": 3.621
+          },
+          {
+            "trace_id": "CHALLENGE-02ee7d2043f0d98e",
+            "point_count": 24,
+            "trajectory_rmse": 0.32254285475592903,
+            "final_predicted": 3.6397910959218436,
+            "final_observed": 3.274
+          },
+          {
+            "trace_id": "CHALLENGE-9825fe7853cdcfd0",
+            "point_count": 24,
+            "trajectory_rmse": 0.07392750706185053,
+            "final_predicted": 3.2878826717079814,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-2c80d583872c0b5f",
+            "point_count": 24,
+            "trajectory_rmse": 0.015098946039809364,
+            "final_predicted": 3.942812032081949,
+            "final_observed": 3.909
+          },
+          {
+            "trace_id": "CHALLENGE-9c8dc0a4ca988d68",
+            "point_count": 24,
+            "trajectory_rmse": 0.11536237628332707,
+            "final_predicted": 3.465823562187284,
+            "final_observed": 3.297
+          },
+          {
+            "trace_id": "CHALLENGE-69f2448e23a56592",
+            "point_count": 24,
+            "trajectory_rmse": 0.05934881560176718,
+            "final_predicted": 3.761912093519004,
+            "final_observed": 3.649
+          },
+          {
+            "trace_id": "CHALLENGE-3f83f74e24e930dc",
+            "point_count": 24,
+            "trajectory_rmse": 0.09393781340218073,
+            "final_predicted": 3.7029491527082548,
+            "final_observed": 3.572
+          },
+          {
+            "trace_id": "CHALLENGE-1f5dc2a2610cc209",
+            "point_count": 24,
+            "trajectory_rmse": 0.10874409718491497,
+            "final_predicted": 3.558336433670131,
+            "final_observed": 3.393
+          },
+          {
+            "trace_id": "CHALLENGE-34ca612bad77ebcb",
+            "point_count": 24,
+            "trajectory_rmse": 0.13548347373204683,
+            "final_predicted": 3.4071089976809352,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-ecd6dc38490df70a",
+            "point_count": 24,
+            "trajectory_rmse": 0.18315763988785153,
+            "final_predicted": 3.3931141203153996,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-02b8e10228ae2dec",
+            "point_count": 24,
+            "trajectory_rmse": 0.1627819081545452,
+            "final_predicted": 3.5096488913319495,
+            "final_observed": 3.301
+          },
+          {
+            "trace_id": "CHALLENGE-c147a226afeb6cc0",
+            "point_count": 24,
+            "trajectory_rmse": 0.17124696188176747,
+            "final_predicted": 3.604283994500194,
+            "final_observed": 3.314
+          },
+          {
+            "trace_id": "CHALLENGE-532ce5e73edf4703",
+            "point_count": 24,
+            "trajectory_rmse": 0.06089827945187285,
+            "final_predicted": 4.146740931827149,
+            "final_observed": 4.057
+          },
+          {
+            "trace_id": "CHALLENGE-5ea56c05138de7ed",
+            "point_count": 24,
+            "trajectory_rmse": 0.19761800015890998,
+            "final_predicted": 3.506128009197519,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-071449753167c1ba",
+            "point_count": 24,
+            "trajectory_rmse": 0.03484494870895092,
+            "final_predicted": 3.87748994555897,
+            "final_observed": 3.82
+          },
+          {
+            "trace_id": "CHALLENGE-a5dcc11fbbb32ad1",
+            "point_count": 24,
+            "trajectory_rmse": 0.04148338258179361,
+            "final_predicted": 3.6687240076099403,
+            "final_observed": 3.642
+          },
+          {
+            "trace_id": "CHALLENGE-0077cfd9031a9b23",
+            "point_count": 24,
+            "trajectory_rmse": 0.1993159551642431,
+            "final_predicted": 3.896934945076835,
+            "final_observed": 3.643
+          },
+          {
+            "trace_id": "CHALLENGE-fc6e5aef72f17768",
+            "point_count": 24,
+            "trajectory_rmse": 0.048477606276037595,
+            "final_predicted": 3.7864053340577257,
+            "final_observed": 3.781
+          }
+        ]
+      },
+      "frozen_v41_late": {
+        "trace_count": 20,
+        "point_count": 480,
+        "rmse": 0.15593293535862654,
+        "median_absolute_percentage_error": 0.027206418835678377,
+        "cases": [
+          {
+            "trace_id": "CHALLENGE-7f3c0dfdf24b056e",
+            "point_count": 24,
+            "trajectory_rmse": 0.11734270830130471,
+            "final_predicted": 3.388187559970355,
+            "final_observed": 3.22
+          },
+          {
+            "trace_id": "CHALLENGE-da001b0a9f9e4c38",
+            "point_count": 24,
+            "trajectory_rmse": 0.356788758850774,
+            "final_predicted": 3.6806797793918014,
+            "final_observed": 3.283
+          },
+          {
+            "trace_id": "CHALLENGE-f262d2f1f179cfa0",
+            "point_count": 24,
+            "trajectory_rmse": 0.050270961953879194,
+            "final_predicted": 3.726353011457329,
+            "final_observed": 3.621
+          },
+          {
+            "trace_id": "CHALLENGE-02ee7d2043f0d98e",
+            "point_count": 24,
+            "trajectory_rmse": 0.32254285475592903,
+            "final_predicted": 3.6397910959218436,
+            "final_observed": 3.274
+          },
+          {
+            "trace_id": "CHALLENGE-9825fe7853cdcfd0",
+            "point_count": 24,
+            "trajectory_rmse": 0.07392750706185053,
+            "final_predicted": 3.2878826717079814,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-2c80d583872c0b5f",
+            "point_count": 24,
+            "trajectory_rmse": 0.015098946039809364,
+            "final_predicted": 3.942812032081949,
+            "final_observed": 3.909
+          },
+          {
+            "trace_id": "CHALLENGE-9c8dc0a4ca988d68",
+            "point_count": 24,
+            "trajectory_rmse": 0.11536237628332707,
+            "final_predicted": 3.465823562187284,
+            "final_observed": 3.297
+          },
+          {
+            "trace_id": "CHALLENGE-69f2448e23a56592",
+            "point_count": 24,
+            "trajectory_rmse": 0.05934881560176718,
+            "final_predicted": 3.761912093519004,
+            "final_observed": 3.649
+          },
+          {
+            "trace_id": "CHALLENGE-3f83f74e24e930dc",
+            "point_count": 24,
+            "trajectory_rmse": 0.09393781340218073,
+            "final_predicted": 3.7029491527082548,
+            "final_observed": 3.572
+          },
+          {
+            "trace_id": "CHALLENGE-1f5dc2a2610cc209",
+            "point_count": 24,
+            "trajectory_rmse": 0.10874409718491497,
+            "final_predicted": 3.558336433670131,
+            "final_observed": 3.393
+          },
+          {
+            "trace_id": "CHALLENGE-34ca612bad77ebcb",
+            "point_count": 24,
+            "trajectory_rmse": 0.13548347373204683,
+            "final_predicted": 3.4071089976809352,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-ecd6dc38490df70a",
+            "point_count": 24,
+            "trajectory_rmse": 0.18315763988785153,
+            "final_predicted": 3.3931141203153996,
+            "final_observed": 3.2
+          },
+          {
+            "trace_id": "CHALLENGE-02b8e10228ae2dec",
+            "point_count": 24,
+            "trajectory_rmse": 0.1627819081545452,
+            "final_predicted": 3.5096488913319495,
+            "final_observed": 3.301
+          },
+          {
+            "trace_id": "CHALLENGE-c147a226afeb6cc0",
+            "point_count": 24,
+            "trajectory_rmse": 0.17124696188176747,
+            "final_predicted": 3.604283994500194,
+            "final_observed": 3.314
+          },
+          {
+            "trace_id": "CHALLENGE-532ce5e73edf4703",
+            "point_count": 24,
+            "trajectory_rmse": 0.06089827945187285,
+            "final_predicted": 4.146740931827149,
+            "final_observed": 4.057
+          },
+          {
+            "trace_id": "CHALLENGE-5ea56c05138de7ed",
+            "point_count": 24,
+            "trajectory_rmse": 0.19761800015890998,
+            "final_predicted": 3.506128009197519,
+            "final_observed": 3.245
+          },
+          {
+            "trace_id": "CHALLENGE-071449753167c1ba",
+            "point_count": 24,
+            "trajectory_rmse": 0.03484494870895092,
+            "final_predicted": 3.87748994555897,
+            "final_observed": 3.82
+          },
+          {
+            "trace_id": "CHALLENGE-a5dcc11fbbb32ad1",
+            "point_count": 24,
+            "trajectory_rmse": 0.04148338258179361,
+            "final_predicted": 3.6687240076099403,
+            "final_observed": 3.642
+          },
+          {
+            "trace_id": "CHALLENGE-0077cfd9031a9b23",
+            "point_count": 24,
+            "trajectory_rmse": 0.1993159551642431,
+            "final_predicted": 3.896934945076835,
+            "final_observed": 3.643
+          },
+          {
+            "trace_id": "CHALLENGE-fc6e5aef72f17768",
+            "point_count": 24,
+            "trajectory_rmse": 0.048477606276037595,
+            "final_predicted": 3.7864053340577257,
+            "final_observed": 3.781
+          }
+        ]
+      }
+    },
+    "counterexample_feedback": {
+      "consumed_failure_id": "V41-CHALLENGE-LATE-LIFE-EXTRAPOLATION",
+      "previous_observed_rmse": 0.17575857735891007,
+      "previous_threshold": 0.1,
+      "previous_scope_restriction_preserved": true,
+      "created_response": "interaction_fold",
+      "new_transfer_late_rmse": 0.07810914063396952,
+      "late_rmse_ratio_to_v41": 0.5009149635664084,
+      "resolved_on_reused_archive": true,
+      "fresh_external_replication_still_required": true
+    },
+    "discovery_gates": {
+      "v41_counterexample_consumed": true,
+      "source_and_stage_labels_hidden_during_discovery": true,
+      "candidate_selected_before_transfer_reveal": true,
+      "program_frozen_without_transfer_refit": true,
+      "interaction_semantic_created": true,
+      "created_semantic_beats_parent_on_validation": true,
+      "transfer_object_has_sixty_trajectories": true,
+      "early_transfer_below_threshold": true,
+      "middle_transfer_below_threshold": true,
+      "late_transfer_below_threshold": true,
+      "late_transfer_improves_frozen_v41": true,
+      "fresh_human_blind_claim_blocked": true,
+      "human_unknown_law_claim_blocked": true
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "v41_counterexample_consumed",
+        "passed": true
+      },
+      {
+        "obligation_id": "source_and_stage_labels_hidden_during_discovery",
+        "passed": true
+      },
+      {
+        "obligation_id": "candidate_selected_before_transfer_reveal",
+        "passed": true
+      },
+      {
+        "obligation_id": "program_frozen_without_transfer_refit",
+        "passed": true
+      },
+      {
+        "obligation_id": "interaction_semantic_created",
+        "passed": true
+      },
+      {
+        "obligation_id": "created_semantic_beats_parent_on_validation",
+        "passed": true
+      },
+      {
+        "obligation_id": "transfer_object_has_sixty_trajectories",
+        "passed": true
+      },
+      {
+        "obligation_id": "early_transfer_below_threshold",
+        "passed": true
+      },
+      {
+        "obligation_id": "middle_transfer_below_threshold",
+        "passed": true
+      },
+      {
+        "obligation_id": "late_transfer_below_threshold",
+        "passed": true
+      },
+      {
+        "obligation_id": "late_transfer_improves_frozen_v41",
+        "passed": true
+      },
+      {
+        "obligation_id": "fresh_human_blind_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "human_unknown_law_claim_blocked",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "reused_archive_cross_object_transfer_allowed": true,
+      "fresh_external_replication_claim_allowed": false,
+      "universal_all_life_model_allowed": false,
+      "human_unknown_claim_allowed": false,
+      "current_label": "V42_REUSED_ARCHIVE_TRANSFER_VERIFIED_EXTERNAL_REPLICATION_REQUIRED"
+    },
+    "limitations": [
+      "RW6 was sealed from the learner until program commitment, but developers had prior access to this reused archive.",
+      "The result is a reproducible engineering transfer test, not a fresh human-blind preregistration.",
+      "INTERACTION_FOLD is a system-composed reusable computation, not a human-unknown electrochemical law.",
+      "Passing one additional object does not establish a universal all-life battery model.",
+      "Independent data from a different campaign or laboratory is required next."
+    ]
+  },
+  "claim": {
+    "achieved": "counterexample consumption, anonymous semantic competition, programmatic freeze, and cross-object transfer below the registered threshold",
+    "not_achieved": "fresh human-blind replication, independent-laboratory replication, a universal battery model, or a human-unknown law"
+  },
+  "storage": {
+    "verified_semantic_room": "artifacts/science/v42/semantics/interaction_fold_latest.json",
+    "counterexample_retest_room": "artifacts/science/v42/mistakes/v41_counterexample_retest.json"
+  },
+  "content_digest": "f6e410fa617c66758b391251f7fcbc94f8cb17ad53373937a07a891b9bcf581a"
+}
