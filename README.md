@@ -342,6 +342,7 @@ Detailed reports are in <code>reports/data/*_latest.json</code> for V22 through 
 | V41 <code>DYN-bb87df43ec46ed50: STATE_FOLD</code> | recurrent battery terminal-voltage trajectory model using current, temperature, and elapsed time | **Bounded**: verified on the registered RW3/RW4 protocol, generalized to RW5/RW6 early and middle life, failed late-life extrapolation. |
 | V42 <code>XFER-a7588b2a1ab1b64d: INTERACTION_FOLD</code> | recurrent terminal-voltage program with initial-trajectory context and anonymous pairwise interaction features | **Verified on a reused archive with a programmatic seal**: selected on anonymous object A, frozen before object B was revealed to the learner, and remained below RMSE 0.10 in all three object-B stages. Developers had prior archive access, so this is not a fresh human-blind result or a universal battery law. |
 | V43 <code>AUTOSEM-ca24f07411b0f22d: AUTONOMOUS_UPDATE</code> | second-order recurrent update with two anonymously selected exogenous inputs | **Verified bounded research-language growth on the reused archive**: the learner started with one visible input and zero state slots, autonomously grew another input and two state slots, froze the resulting program, and beat V42 transfer RMSE. This is not a fresh external replication or a fully autonomous scientist. |
+| V44 <code>AUTOSEM-24d817b8706b9172: AUTONOMOUS_UPDATE</code> | guarded second-order recurrent update over one autonomously retained anonymous observation channel | **Verified bounded official-world selection**: the system ranked three anonymous NASA/NOAA/USGS worlds, committed before transfer and domain reveal, and passed two unseen source groups at normalized RMSE 0.2530. The first blind choice failed and is retained in the mandatory mistake replay room. This is observational archive research, not causal or fully autonomous science. |
 
 The frozen V41 recurrence is:
 
@@ -459,7 +460,50 @@ The program is shorter and more accurate on this reused transfer object than the
 
 This result establishes **bounded autonomous research-language growth**, not a fully autonomous scientist. Floating-point arithmetic, linear least-squares fitting, structural mutation types, a two-state ceiling, data access, and the independent verifier remain supplied. Developers had prior access to RW6, so a genuinely fresh external world remains mandatory.
 
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), and [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json).
+### V44 autonomous official-world selection
+
+V44 supplies a finite, provenance-checked registry built from three official APIs: [NASA POWER Daily](https://power.larc.nasa.gov/docs/services/api/temporal/daily/), [NOAA CO-OPS](https://api.tidesandcurrents.noaa.gov/api/prod/), and the [USGS Earthquake Catalog](https://earthquake.usgs.gov/fdsnws/event/1/). The learner sees only anonymous world identifiers, numeric development traces, channel counts, and source-group boundaries. Institution names, physical variable names, transfer outputs, and human task descriptions remain sealed.
+
+For every anonymous world, the system starts a V43 language-growth search, then computes:
+
+```text
+evidence_value = 0.45 information_gain
+               + 0.30 predictability
+               + 0.15 structural_novelty
+               + 0.10 verification_readiness
+               - 0.002 executable_nodes
+
+research_priority = evidence_value / (1 + worst_development_group_error)
+```
+
+The first blind run selected `WORLD-692abdb0cf477f47` because it had the largest within-development information gain. It then failed sealed cross-source transfer at normalized RMSE `2.2891651360`. That negative result is stored as `V44-BLIND-FAILURE-0001`; no transfer measurement was used to refit the program. The repair added a development-only anonymous source-group stability term to the selection rule.
+
+The next preregistered run ranked the worlds without domain labels:
+
+| Rank | Anonymous world | Research priority | Cross-group stability | Development information gain |
+| --- | --- | ---: | ---: | ---: |
+| 1 | `WORLD-90f60bd59102a427` | 0.450002 | 0.813815 | 0.152649 |
+| 2 | `WORLD-692abdb0cf477f47` | 0.197495 | 0.257174 | 1.299454 |
+| 3 | `WORLD-a83610976b378d8f` | 0.091907 | 0.250000 | 0.000421 |
+
+After the world and program commitments were recorded, transfer measurements from two disjoint source groups were revealed. The frozen program achieved normalized transfer RMSE `0.2530277052`. Only after that audit did the evaluator reveal that the selected world was NASA POWER meteorology and surface solar energy data.
+
+The internal executable formula is:
+
+```text
+s_t = -0.488947789848
+    + 0.108142225947 X0_t
+    + 1.10085525762 s_(t-1)
+    - 0.288777988538 s_(t-2)
+    + 0.141280713917 s_0
+    - 0.0329576695536 X0_0
+    - 0.0159327637227 I[X0_t >= X0_0] s_(t-1)
+```
+
+Post-hoc human mapping: `X0` is all-sky surface shortwave irradiance, `s` is temperature at two metres, `s_0` and `X0_0` are trace-initial context, and `I[...]` is the autonomously selected guarded path. This is a compact multivariate/autoregressive weather-response program, not a universal meteorological law.
+
+V44 implements anonymous multi-world ranking, knowledge-gap selection, preregistration, disjoint-source transfer, a persistent failure room, and an autonomous next-world queue. It does **not** implement unrestricted language invention, causal intervention, live apparatus control, literature-level novelty adjudication, or independent-laboratory replication. A fully autonomous scientist is therefore still not claimed.
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), and [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), and [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -486,6 +530,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V41 | anonymous dynamic-state discovery on NASA battery trajectories | late-life extrapolation failed and the claim is bounded |
 | V42 | counterexample-guided semantic competition and frozen cross-object transfer | reused archive; not a fresh human-blind or independent-laboratory replication |
 | V43 | autonomous generic research-language mutation and saturation-controlled search | bounded genome, supplied regression substrate, reused archive, and no fresh external world |
+| V44 | autonomous anonymous-world ranking, cross-source risk selection, preregistration, official archive transfer, and mandatory failure replay | finite host-curated registry; observational data only; no causal apparatus, unrestricted language, independent lab, or literature novelty verdict |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
@@ -521,7 +566,7 @@ npm install
 npm run dev
 ~~~
 
-Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>.
+Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>. The V44 autonomous-world report is available at <http://localhost:5173/science-v44>.
 
 ## NASA V41 reproduction
 
@@ -548,6 +593,8 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 .\.venv\Scripts\python.exe scripts/run_nasa_blind_challenge_v41.py
 .\.venv\Scripts\python.exe scripts/run_counterexample_transfer_v42.py
 .\.venv\Scripts\python.exe scripts/run_autonomous_scientist_v43.py
+.\.venv\Scripts\python.exe scripts/build_official_worlds_v44.py
+.\.venv\Scripts\python.exe scripts/run_autonomous_world_research_v44.py
 ~~~
 
 Manually confirm that the archive hash matches before running the builders. Do not commit the raw archive or extracted source files.
@@ -561,7 +608,7 @@ Priority collaboration areas:
 3. Improve behavioral equivalence and nontriviality checks for generated operators.
 4. Scale synthesis with e-graphs, constraint solving, inductive synthesis, or stronger MDL methods.
 5. Design low-cost blinded apparatus and cross-laboratory replication protocols.
-6. Supply a genuinely fresh, sealed scientific world for V43 and help extend the bounded genome beyond two state slots and fixed least-squares fitting.
+6. Independently replicate V44 in a laboratory, add blinded intervention-capable worlds, and extend the bounded genome beyond two state slots and fixed least-squares fitting.
 7. Add adversarial worlds, negative results, and benchmarks that defeat current candidates.
 8. Improve dashboard review of ASTs, proof obligations, and failure boundaries.
 9. Audit halting, memory, numeric range, and sandbox limits for generated programs.

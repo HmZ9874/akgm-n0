@@ -1,0 +1,18 @@
+{
+  "history_version": "v44-counterexample-history-v0.1",
+  "events": [
+    {
+      "event_id": "V44-BLIND-FAILURE-0001",
+      "world_id": "WORLD-692abdb0cf477f47",
+      "program_id": "AUTOSEM-edd74cfa326cd324",
+      "selection_priority_before_repair": 0.7679456410501062,
+      "development_normalized_rmse": 0.6090480759449703,
+      "sealed_transfer_normalized_rmse": 2.2891651360265826,
+      "failed_obligation": "sealed_transfer_beats_scale_baseline",
+      "diagnosis": "development information gain did not measure cross-source-group stability",
+      "repair": "multiply research priority by a development-only anonymous source-group stability score",
+      "transfer_measurements_used_for_refit": false,
+      "status": "stored_for_mandatory_replay"
+    }
+  ]
+}

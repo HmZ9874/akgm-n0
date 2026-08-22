@@ -1,0 +1,1162 @@
+{
+  "report_version": "autonomous-world-research-v44.0",
+  "run_id": "RUN-autonomous-world-research-v44-20260822T074152903908Z",
+  "created_at": "2026-08-22T07:41:52.903908+00:00",
+  "verdict": "bounded_autonomous_official_world_selection_verified",
+  "acceptance": {
+    "benchmark_version": "autonomous-world-research-v44.0",
+    "passed": true,
+    "final_status": "verified",
+    "classification": "bounded_autonomous_external_world_selection",
+    "official_registry": {
+      "snapshot_version": "official-world-registry-v44.0",
+      "snapshot_sha256": "c71a5e7ca49ee5cd83eaefb3d362a3c1e1f957355d5126ce09b8ad92b2c03edd",
+      "snapshot_created_at": "2026-08-22T07:27:58.721196+00:00",
+      "world_count": 3,
+      "anonymous_worlds": [
+        {
+          "world_id": "WORLD-90f60bd59102a427",
+          "descriptor": {
+            "channel_count": 3,
+            "temporal": true,
+            "measurement_kind": "continuous"
+          },
+          "training_trace_count": 24,
+          "validation_trace_count": 8,
+          "sealed_transfer_trace_count": 16
+        },
+        {
+          "world_id": "WORLD-692abdb0cf477f47",
+          "descriptor": {
+            "channel_count": 1,
+            "temporal": true,
+            "measurement_kind": "continuous"
+          },
+          "training_trace_count": 93,
+          "validation_trace_count": 31,
+          "sealed_transfer_trace_count": 62
+        },
+        {
+          "world_id": "WORLD-a83610976b378d8f",
+          "descriptor": {
+            "channel_count": 4,
+            "temporal": true,
+            "measurement_kind": "event_sequence"
+          },
+          "training_trace_count": 59,
+          "validation_trace_count": 20,
+          "sealed_transfer_trace_count": 20
+        }
+      ]
+    },
+    "autonomous_agenda": {
+      "ranking": [
+        {
+          "world_id": "WORLD-90f60bd59102a427",
+          "program_id": "AUTOSEM-24d817b8706b9172",
+          "output_scale": 14.934000000000001,
+          "initial_normalized_error": 0.3610522542015637,
+          "final_normalized_error": 0.20840310820309293,
+          "normalized_information_gain": 0.1526491459984708,
+          "structural_novelty": 1.0,
+          "verification_readiness": 1.0,
+          "worst_development_group_error": 0.22877991678962958,
+          "cross_group_stability": 0.8138153841353859,
+          "research_priority": 0.4500021805537633,
+          "selected_mutations": [
+            "grow_state_slot",
+            "grow_initial_context",
+            "grow_guarded_path",
+            "grow_state_slot"
+          ],
+          "candidate_programs_evaluated": 22,
+          "stop_reason": "semantic_saturation",
+          "host_selected": false,
+          "domain_label_received": false,
+          "transfer_outputs_received": false
+        },
+        {
+          "world_id": "WORLD-692abdb0cf477f47",
+          "program_id": "AUTOSEM-edd74cfa326cd324",
+          "output_scale": 0.482,
+          "initial_normalized_error": 1.908502142130534,
+          "final_normalized_error": 0.6090480759449703,
+          "normalized_information_gain": 1.2994540661855636,
+          "structural_novelty": 0.25,
+          "verification_readiness": 1.0,
+          "worst_development_group_error": 2.888421857287448,
+          "cross_group_stability": 0.25717374212519145,
+          "research_priority": 0.19749545425758486,
+          "selected_mutations": [
+            "grow_state_slot"
+          ],
+          "candidate_programs_evaluated": 17,
+          "stop_reason": "semantic_saturation",
+          "host_selected": false,
+          "domain_label_received": false,
+          "transfer_outputs_received": false
+        },
+        {
+          "world_id": "WORLD-a83610976b378d8f",
+          "program_id": "AUTOSEM-7cc9e7e597ea6d61",
+          "output_scale": 0.7000000000000002,
+          "initial_normalized_error": 0.499619987511106,
+          "final_normalized_error": 0.49919938718036655,
+          "normalized_information_gain": 0.00042060033073942904,
+          "structural_novelty": 1.0,
+          "verification_readiness": 0.3333333333333333,
+          "worst_development_group_error": 0.508076671262115,
+          "cross_group_stability": 0.25,
+          "research_priority": 0.09190735221615569,
+          "selected_mutations": [
+            "grow_initial_context",
+            "grow_state_slot",
+            "grow_state_slot",
+            "grow_input_channel"
+          ],
+          "candidate_programs_evaluated": 24,
+          "stop_reason": "semantic_saturation",
+          "host_selected": false,
+          "domain_label_received": false,
+          "transfer_outputs_received": false
+        }
+      ],
+      "selected_world_id": "WORLD-90f60bd59102a427",
+      "selection_rule": "information gain + predictability + structural novelty + verification readiness - program cost",
+      "next_research_queue": [
+        {
+          "rank": 2,
+          "world_id": "WORLD-692abdb0cf477f47",
+          "knowledge_gap": 0.6090480759449703,
+          "expected_information_gain": 1.2994540661855636,
+          "status": "sealed_and_queued"
+        },
+        {
+          "rank": 3,
+          "world_id": "WORLD-a83610976b378d8f",
+          "knowledge_gap": 0.49919938718036655,
+          "expected_information_gain": 0.00042060033073942904,
+          "status": "sealed_and_queued"
+        }
+      ],
+      "host_selected": false
+    },
+    "discovery": {
+      "selected_program": {
+        "program_id": "AUTOSEM-24d817b8706b9172",
+        "opaque_program": "AUTONOMOUS_UPDATE<SLOTS=2;W0*ONE;W1*X0;W2*LAG1;W3*LAG2;W4*INITIAL_Y;W5*INITIAL_X0;W6*GUARD_X0_INITIAL_X0_LAG1>",
+        "genome": {
+          "visible_inputs": 1,
+          "state_slots": 2,
+          "initial_context": 1,
+          "delta_features": 0,
+          "pair_interactions": 0,
+          "branch_slots": 1
+        },
+        "features": [
+          "ONE",
+          "X0",
+          "LAG1",
+          "LAG2",
+          "INITIAL_Y",
+          "INITIAL_X0",
+          "GUARD_X0_INITIAL_X0_LAG1"
+        ],
+        "coefficients": [
+          -0.4889477898479203,
+          0.10814222594663292,
+          1.1008552576163773,
+          -0.2887779885381915,
+          0.14128071391730435,
+          -0.03295766955363494,
+          -0.01593276372273353
+        ],
+        "validation_rmse": 3.11229201790499,
+        "validation_mape": 0.19426556002267253,
+        "node_count": 7,
+        "human_law_name": null,
+        "named_candidate_family_supplied": false
+      },
+      "selected_mutations": [
+        "grow_state_slot",
+        "grow_initial_context",
+        "grow_guarded_path",
+        "grow_state_slot"
+      ],
+      "initial_normalized_error": 0.3610522542015637,
+      "validation_normalized_error": 0.20840310820309293,
+      "normalized_information_gain": 0.1526491459984708,
+      "research_priority": 0.4500021805537633,
+      "rounds": [
+        {
+          "round_index": 1,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 0,
+            "initial_context": 0,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 0
+          },
+          "selected_mutation": "grow_state_slot",
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 1,
+            "initial_context": 0,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 0
+          },
+          "score_before": 5.391954364246153,
+          "score_after": 3.4619613119005854,
+          "information_gain": 1.929993052345568,
+          "sterile_round_count": 0,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 0,
+                "initial_context": 0,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 5.391801237924319,
+              "validation_rmse": 5.39177123792432,
+              "feature_count": 3
+            },
+            {
+              "mutation": "grow_state_slot",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 1,
+                "initial_context": 0,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.4619613119005854,
+              "validation_rmse": 3.4619313119005852,
+              "feature_count": 3
+            },
+            {
+              "mutation": "grow_initial_context",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 0,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.565244580757055,
+              "validation_rmse": 3.5652045807570554,
+              "feature_count": 4
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 0,
+                "initial_context": 0,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 0
+              },
+              "score": 5.5796853065384155,
+              "validation_rmse": 5.579645306538415,
+              "feature_count": 3
+            }
+          ]
+        },
+        {
+          "round_index": 2,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 1,
+            "initial_context": 0,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 0
+          },
+          "selected_mutation": "grow_initial_context",
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 1,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 0
+          },
+          "score_before": 3.4619613119005854,
+          "score_after": 3.3164672015781487,
+          "information_gain": 0.14549411032243675,
+          "sterile_round_count": 0,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 1,
+                "initial_context": 0,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.4688048120273285,
+              "validation_rmse": 3.4687648120273287,
+              "feature_count": 4
+            },
+            {
+              "mutation": "grow_state_slot",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 2,
+                "initial_context": 0,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.63514129514118,
+              "validation_rmse": 3.63510129514118,
+              "feature_count": 4
+            },
+            {
+              "mutation": "grow_initial_context",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 1,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.3164672015781487,
+              "validation_rmse": 3.316417201578149,
+              "feature_count": 5
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 1,
+                "initial_context": 0,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 0
+              },
+              "score": 4.167309052880977,
+              "validation_rmse": 4.167219052880977,
+              "feature_count": 6
+            }
+          ]
+        },
+        {
+          "round_index": 3,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 1,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 0
+          },
+          "selected_mutation": "grow_guarded_path",
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 1,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "score_before": 3.3164672015781487,
+          "score_after": 3.1783610428059568,
+          "information_gain": 0.1381061587721919,
+          "sterile_round_count": 0,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 1,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.340115871331251,
+              "validation_rmse": 3.340045871331251,
+              "feature_count": 7
+            },
+            {
+              "mutation": "grow_state_slot",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 0
+              },
+              "score": 3.243628509370847,
+              "validation_rmse": 3.243568509370847,
+              "feature_count": 6
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 1,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 0
+              },
+              "score": 3.889884300382525,
+              "validation_rmse": 3.889634300382525,
+              "feature_count": 15
+            },
+            {
+              "mutation": "grow_guarded_path",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 1,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 1
+              },
+              "score": 3.1783610428059568,
+              "validation_rmse": 3.178301042805957,
+              "feature_count": 6
+            }
+          ]
+        },
+        {
+          "round_index": 4,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 1,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "selected_mutation": "grow_state_slot",
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "score_before": 3.1783610428059568,
+          "score_after": 3.11236201790499,
+          "information_gain": 0.06599902490096676,
+          "sterile_round_count": 0,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 1,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 1
+              },
+              "score": 3.2084557895001447,
+              "validation_rmse": 3.2083757895001446,
+              "feature_count": 8
+            },
+            {
+              "mutation": "grow_state_slot",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 1
+              },
+              "score": 3.11236201790499,
+              "validation_rmse": 3.11229201790499,
+              "feature_count": 7
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 1,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 1
+              },
+              "score": 4.191356214381634,
+              "validation_rmse": 4.190996214381634,
+              "feature_count": 21
+            }
+          ]
+        },
+        {
+          "round_index": 5,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "selected_mutation": null,
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "score_before": 3.11236201790499,
+          "score_after": 3.11236201790499,
+          "information_gain": 0.0,
+          "sterile_round_count": 1,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 1
+              },
+              "score": 3.1143193572627097,
+              "validation_rmse": 3.1142293572627096,
+              "feature_count": 9
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 1
+              },
+              "score": 3.923772010000807,
+              "validation_rmse": 3.923282010000807,
+              "feature_count": 28
+            }
+          ]
+        },
+        {
+          "round_index": 6,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "selected_mutation": null,
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "score_before": 3.11236201790499,
+          "score_after": 3.11236201790499,
+          "information_gain": 0.0,
+          "sterile_round_count": 2,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 1
+              },
+              "score": 3.1143193572627097,
+              "validation_rmse": 3.1142293572627096,
+              "feature_count": 9
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 1
+              },
+              "score": 3.923772010000807,
+              "validation_rmse": 3.923282010000807,
+              "feature_count": 28
+            }
+          ]
+        },
+        {
+          "round_index": 7,
+          "genome_before": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "selected_mutation": null,
+          "genome_after": {
+            "visible_inputs": 1,
+            "state_slots": 2,
+            "initial_context": 1,
+            "delta_features": 0,
+            "pair_interactions": 0,
+            "branch_slots": 1
+          },
+          "score_before": 3.11236201790499,
+          "score_after": 3.11236201790499,
+          "information_gain": 0.0,
+          "sterile_round_count": 3,
+          "host_selected": false,
+          "trials": [
+            {
+              "mutation": "grow_input_channel",
+              "genome": {
+                "visible_inputs": 2,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 0,
+                "branch_slots": 1
+              },
+              "score": 3.1143193572627097,
+              "validation_rmse": 3.1142293572627096,
+              "feature_count": 9
+            },
+            {
+              "mutation": "grow_pair_interactions",
+              "genome": {
+                "visible_inputs": 1,
+                "state_slots": 2,
+                "initial_context": 1,
+                "delta_features": 0,
+                "pair_interactions": 1,
+                "branch_slots": 1
+              },
+              "score": 3.923772010000807,
+              "validation_rmse": 3.923282010000807,
+              "feature_count": 28
+            }
+          ]
+        }
+      ],
+      "candidate_programs_evaluated": 22,
+      "stop_reason": "semantic_saturation"
+    },
+    "preregistration": {
+      "program_commitment": "19b94c5b80fd76093b938ec88eb1caa54ddf1988f4eb7dc3e5ea0870493bf590",
+      "agenda_commitment": "9c5373a20f6f200c761e9915eb963fb9e1c7839a963a12338d0964aa92ac080b",
+      "development_event_index": 1,
+      "commit_event_index": 2,
+      "transfer_reveal_event_index": 3,
+      "metadata_reveal_event_index": 4
+    },
+    "sealed_transfer_audit": {
+      "trace_count": 16,
+      "point_count": 704,
+      "rmse": 3.7787157494878034,
+      "median_absolute_percentage_error": 0.12169268379796302,
+      "worst_trace_rmse": 7.041444276495804,
+      "counterexamples": [
+        {
+          "trace_id": "P4-007",
+          "rmse": 7.041444276495804,
+          "final_predicted": 11.134064199024523,
+          "final_observed": 1.39
+        },
+        {
+          "trace_id": "P5-000",
+          "rmse": 6.3445109182016575,
+          "final_predicted": 17.72705395424177,
+          "final_observed": 21.43
+        },
+        {
+          "trace_id": "P4-001",
+          "rmse": 4.235898736185712,
+          "final_predicted": 3.432212735506987,
+          "final_observed": 6.24
+        },
+        {
+          "trace_id": "P4-004",
+          "rmse": 4.092813599808365,
+          "final_predicted": 19.562934539229236,
+          "final_observed": 22.7
+        },
+        {
+          "trace_id": "P5-001",
+          "rmse": 3.5799487229781484,
+          "final_predicted": 21.21586674570598,
+          "final_observed": 22.85
+        }
+      ],
+      "output_scale_from_development_only": 14.934000000000001,
+      "normalized_rmse": 0.253027705202076,
+      "training_groups": [
+        "P0",
+        "P1",
+        "P2"
+      ],
+      "validation_groups": [
+        "P3"
+      ],
+      "transfer_groups": [
+        "P4",
+        "P5"
+      ]
+    },
+    "posthoc_translation": {
+      "institution": "NASA Langley Research Center",
+      "source": "NASA POWER Daily API",
+      "domain": "meteorology and surface solar energy",
+      "input_channels": [
+        "all-sky surface shortwave irradiance",
+        "corrected precipitation",
+        "surface pressure"
+      ],
+      "output_channel": "temperature at two metres",
+      "human_equivalent_task": "multivariate autoregressive weather response modelling",
+      "documentation": "https://power.larc.nasa.gov/docs/services/api/temporal/daily/",
+      "query_window": "2024-01-01/2024-12-31 UTC",
+      "internal_program": "AUTONOMOUS_UPDATE<SLOTS=2;W0*ONE;W1*X0;W2*LAG1;W3*LAG2;W4*INITIAL_Y;W5*INITIAL_X0;W6*GUARD_X0_INITIAL_X0_LAG1>",
+      "internal_formula": "(-0.488947789848)*ONE + (0.108142225947)*X0 + (1.10085525762)*LAG1 + (-0.288777988538)*LAG2 + (0.141280713917)*INITIAL_Y + (-0.0329576695536)*INITIAL_X0 + (-0.0159327637227)*GUARD_X0_INITIAL_X0_LAG1",
+      "labels_revealed_after_audit": true
+    },
+    "mistake_room": {
+      "mandatory_replay_history": [
+        {
+          "event_id": "V44-BLIND-FAILURE-0001",
+          "world_id": "WORLD-692abdb0cf477f47",
+          "program_id": "AUTOSEM-edd74cfa326cd324",
+          "selection_priority_before_repair": 0.7679456410501062,
+          "development_normalized_rmse": 0.6090480759449703,
+          "sealed_transfer_normalized_rmse": 2.2891651360265826,
+          "failed_obligation": "sealed_transfer_beats_scale_baseline",
+          "diagnosis": "development information gain did not measure cross-source-group stability",
+          "repair": "multiply research priority by a development-only anonymous source-group stability score",
+          "transfer_measurements_used_for_refit": false,
+          "status": "stored_for_mandatory_replay"
+        }
+      ],
+      "nonselected_worlds": [
+        {
+          "world_id": "WORLD-692abdb0cf477f47",
+          "program_id": "AUTOSEM-edd74cfa326cd324",
+          "output_scale": 0.482,
+          "initial_normalized_error": 1.908502142130534,
+          "final_normalized_error": 0.6090480759449703,
+          "normalized_information_gain": 1.2994540661855636,
+          "structural_novelty": 0.25,
+          "verification_readiness": 1.0,
+          "worst_development_group_error": 2.888421857287448,
+          "cross_group_stability": 0.25717374212519145,
+          "research_priority": 0.19749545425758486,
+          "selected_mutations": [
+            "grow_state_slot"
+          ],
+          "candidate_programs_evaluated": 17,
+          "stop_reason": "semantic_saturation",
+          "host_selected": false,
+          "domain_label_received": false,
+          "transfer_outputs_received": false,
+          "reason": "lower_autonomous_research_priority"
+        },
+        {
+          "world_id": "WORLD-a83610976b378d8f",
+          "program_id": "AUTOSEM-7cc9e7e597ea6d61",
+          "output_scale": 0.7000000000000002,
+          "initial_normalized_error": 0.499619987511106,
+          "final_normalized_error": 0.49919938718036655,
+          "normalized_information_gain": 0.00042060033073942904,
+          "structural_novelty": 1.0,
+          "verification_readiness": 0.3333333333333333,
+          "worst_development_group_error": 0.508076671262115,
+          "cross_group_stability": 0.25,
+          "research_priority": 0.09190735221615569,
+          "selected_mutations": [
+            "grow_initial_context",
+            "grow_state_slot",
+            "grow_state_slot",
+            "grow_input_channel"
+          ],
+          "candidate_programs_evaluated": 24,
+          "stop_reason": "semantic_saturation",
+          "host_selected": false,
+          "domain_label_received": false,
+          "transfer_outputs_received": false,
+          "reason": "lower_autonomous_research_priority"
+        }
+      ],
+      "rejected_language_mutations": [
+        {
+          "round_index": 1,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 5.39177123792432,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "mutation": "grow_initial_context",
+          "validation_rmse": 3.5652045807570554,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 5.579645306538415,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 3.4687648120273287,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "mutation": "grow_state_slot",
+          "validation_rmse": 3.63510129514118,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 4.167219052880977,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 3.340045871331251,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "mutation": "grow_state_slot",
+          "validation_rmse": 3.243568509370847,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 3.889634300382525,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 3.2083757895001446,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 4.190996214381634,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 3.1142293572627096,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 3.923282010000807,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 6,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 3.1142293572627096,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 6,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 3.923282010000807,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 7,
+          "mutation": "grow_input_channel",
+          "validation_rmse": 3.1142293572627096,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        },
+        {
+          "round_index": 7,
+          "mutation": "grow_pair_interactions",
+          "validation_rmse": 3.923282010000807,
+          "reason": "did_not_maximize_information_gain_after_complexity_cost"
+        }
+      ],
+      "sealed_transfer_counterexamples": [
+        {
+          "trace_id": "P4-007",
+          "rmse": 7.041444276495804,
+          "final_predicted": 11.134064199024523,
+          "final_observed": 1.39
+        },
+        {
+          "trace_id": "P5-000",
+          "rmse": 6.3445109182016575,
+          "final_predicted": 17.72705395424177,
+          "final_observed": 21.43
+        },
+        {
+          "trace_id": "P4-001",
+          "rmse": 4.235898736185712,
+          "final_predicted": 3.432212735506987,
+          "final_observed": 6.24
+        },
+        {
+          "trace_id": "P4-004",
+          "rmse": 4.092813599808365,
+          "final_predicted": 19.562934539229236,
+          "final_observed": 22.7
+        },
+        {
+          "trace_id": "P5-001",
+          "rmse": 3.5799487229781484,
+          "final_predicted": 21.21586674570598,
+          "final_observed": 22.85
+        }
+      ],
+      "replay_policy": "reconsider only when new measurements or language resources change the evidence"
+    },
+    "next_experiment": {
+      "generated_by_system": true,
+      "target": {
+        "trace_id": "P4-007",
+        "rmse": 7.041444276495804,
+        "final_predicted": 11.134064199024523,
+        "final_observed": 1.39
+      },
+      "proposal": "Acquire a new independent source group at the largest residual regime, hold it sealed, and test whether a new state or interaction resource produces preregistered information gain.",
+      "execution_status": "not_executed_no_independent_apparatus_or_laboratory"
+    },
+    "discovery_gates": {
+      "three_official_worlds_available": true,
+      "official_snapshot_digest_valid": true,
+      "world_and_domain_labels_hidden_during_selection": true,
+      "world_selected_by_research_priority": true,
+      "host_did_not_select_world": true,
+      "positive_development_information_gain": true,
+      "program_committed_before_transfer_reveal": true,
+      "metadata_revealed_only_after_transfer_audit": true,
+      "frozen_program_without_transfer_refit": true,
+      "source_group_partitions_are_disjoint": true,
+      "sealed_transfer_beats_scale_baseline": true,
+      "mistake_room_records_failures": true,
+      "independent_lab_claim_blocked": true,
+      "causal_discovery_claim_blocked": true,
+      "fully_autonomous_scientist_claim_blocked": true
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "three_official_worlds_available",
+        "passed": true
+      },
+      {
+        "obligation_id": "official_snapshot_digest_valid",
+        "passed": true
+      },
+      {
+        "obligation_id": "world_and_domain_labels_hidden_during_selection",
+        "passed": true
+      },
+      {
+        "obligation_id": "world_selected_by_research_priority",
+        "passed": true
+      },
+      {
+        "obligation_id": "host_did_not_select_world",
+        "passed": true
+      },
+      {
+        "obligation_id": "positive_development_information_gain",
+        "passed": true
+      },
+      {
+        "obligation_id": "program_committed_before_transfer_reveal",
+        "passed": true
+      },
+      {
+        "obligation_id": "metadata_revealed_only_after_transfer_audit",
+        "passed": true
+      },
+      {
+        "obligation_id": "frozen_program_without_transfer_refit",
+        "passed": true
+      },
+      {
+        "obligation_id": "source_group_partitions_are_disjoint",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_transfer_beats_scale_baseline",
+        "passed": true
+      },
+      {
+        "obligation_id": "mistake_room_records_failures",
+        "passed": true
+      },
+      {
+        "obligation_id": "independent_lab_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "causal_discovery_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "fully_autonomous_scientist_claim_blocked",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "autonomous_official_world_selection_allowed": true,
+      "fresh_official_snapshot_allowed": true,
+      "independent_laboratory_replication_allowed": false,
+      "causal_law_claim_allowed": false,
+      "human_unknown_law_claim_allowed": false,
+      "fully_autonomous_scientist_claim_allowed": false,
+      "current_label": "V44_BOUNDED_AUTONOMOUS_WORLD_SELECTION_CAUSAL_APPARATUS_REQUIRED"
+    },
+    "capability_progress": {
+      "autonomous_world_selection": "implemented_and_verified",
+      "knowledge_gap_ranking": "implemented_and_verified",
+      "anonymous_variable_and_memory_growth": "implemented_via_v43_kernel",
+      "question_generation": "implemented_as_ranked_research_agenda",
+      "experiment_preregistration": "implemented_and_verified",
+      "failure_memory": "implemented_and_replayable",
+      "official_external_data_loop": "implemented_for_archival_observations",
+      "causal_intervention": "protocol_generated_but_not_executed",
+      "live_apparatus_control": "not_available",
+      "unrestricted_language_invention": "not_achieved",
+      "literature_novelty_adjudication": "not_achieved",
+      "independent_lab_replication": "not_achieved"
+    },
+    "limitations": [
+      "The host still curated a finite registry of three official worlds and supplied resource/safety limits.",
+      "The research language still inherits floating-point arithmetic, least squares, and bounded V43 mutations.",
+      "Official historical data are external evidence but not a new independent laboratory replication.",
+      "Observational transfer cannot establish causation without intervention.",
+      "The system proposed but did not execute a physical experiment.",
+      "No claim of a human-unknown law or fully autonomous scientist is allowed."
+    ]
+  },
+  "independent_verification": {
+    "verifier_version": "autonomous-world-research-v44-independent-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "obligation_id": "snapshot_digest_replay",
+        "passed": true,
+        "actual": "c71a5e7ca49ee5cd83eaefb3d362a3c1e1f957355d5126ce09b8ad92b2c03edd"
+      },
+      {
+        "obligation_id": "mistake_history_replay",
+        "passed": true,
+        "actual": 1
+      },
+      {
+        "obligation_id": "program_id_replay",
+        "passed": true,
+        "actual": "AUTOSEM-24d817b8706b9172"
+      },
+      {
+        "obligation_id": "program_commitment_replay",
+        "passed": true,
+        "actual": "19b94c5b80fd76093b938ec88eb1caa54ddf1988f4eb7dc3e5ea0870493bf590"
+      },
+      {
+        "obligation_id": "agenda_commitment_replay",
+        "passed": true,
+        "actual": "9c5373a20f6f200c761e9915eb963fb9e1c7839a963a12338d0964aa92ac080b"
+      },
+      {
+        "obligation_id": "agenda_ranking_replay",
+        "passed": true,
+        "actual": "WORLD-90f60bd59102a427"
+      },
+      {
+        "obligation_id": "sealed_transfer_metric_replay",
+        "passed": true,
+        "actual": 3.7787157494878034
+      },
+      {
+        "obligation_id": "commit_before_reveal_replay",
+        "passed": true,
+        "actual": {
+          "program_commitment": "19b94c5b80fd76093b938ec88eb1caa54ddf1988f4eb7dc3e5ea0870493bf590",
+          "agenda_commitment": "9c5373a20f6f200c761e9915eb963fb9e1c7839a963a12338d0964aa92ac080b",
+          "development_event_index": 1,
+          "commit_event_index": 2,
+          "transfer_reveal_event_index": 3,
+          "metadata_reveal_event_index": 4
+        }
+      },
+      {
+        "obligation_id": "overclaim_blocks_replay",
+        "passed": true,
+        "actual": {
+          "autonomous_official_world_selection_allowed": true,
+          "fresh_official_snapshot_allowed": true,
+          "independent_laboratory_replication_allowed": false,
+          "causal_law_claim_allowed": false,
+          "human_unknown_law_claim_allowed": false,
+          "fully_autonomous_scientist_claim_allowed": false,
+          "current_label": "V44_BOUNDED_AUTONOMOUS_WORLD_SELECTION_CAUSAL_APPARATUS_REQUIRED"
+        }
+      },
+      {
+        "obligation_id": "proof_gate_replay",
+        "passed": true,
+        "actual": 15
+      }
+    ]
+  },
+  "claim": {
+    "achieved": "anonymous multi-world ranking, autonomous agenda selection, preregistration, source-group-isolated transfer, failure memory, and independent replay",
+    "not_achieved": "unrestricted language invention, causal intervention, live apparatus control, independent-laboratory replication, a human-unknown law, or a fully autonomous scientist"
+  },
+  "storage": {
+    "semantic_room": "artifacts/science/v44/semantics/selected_world_program_latest.json",
+    "research_ledger": "artifacts/science/v44/ledger/autonomous_agenda_latest.json",
+    "mistake_room": "artifacts/science/v44/mistakes/mistake_room_latest.json"
+  },
+  "content_digest": "ba5214b4bc231a271a4843bb7bb4727cfe07a0c2d838871fc55094ab22877768"
+}
