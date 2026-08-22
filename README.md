@@ -597,7 +597,26 @@ The correct classification is `known_method_family_and_known_components_exact_co
 
 Current claim label: `V47_AUTONOMOUS_OPEN_FULL_TEXT_AUDIT_VERIFIED_GLOBAL_NOVELTY_AND_PHYSICAL_SCIENCE_EXTERNAL`.
 
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), and [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json).
+### V48 semantic-transfer counterexample campaign
+
+V48 executes `semantic_transfer_counterexample_campaign`, the next task selected by V47. It freezes `OPX-c9c8b1a02aa5734c` and applies one identical, training-only normalized adapter to three anonymous official temporal worlds. The adapter exposes the current first anonymous input and two previous outputs; OPX is not refitted. On sealed partitions, OPX produced error ratios of `2.19189`, `2.40909`, and `1.52814` relative to a zero standardized baseline. It therefore passed zero of three worlds and its universal-transfer claim was removed.
+
+The counterexample-driven search evaluated seven finite feature combinations without host selection. Its best candidate was:
+
+```text
+XFERSEM-a23ca9838ba8a053
+0.927335736393 * PREV - 0.446960122953 * DELTA
+```
+
+After post-hoc translation, this is `z(t) = 0.927335736393 z(t-1) - 0.446960122953 [z(t-1)-z(t-2)]`. It achieved sealed error ratios of `0.20614` on NASA weather and `0.08508` on NOAA water level, but `1.20532` on the USGS earthquake-event world. It passed two worlds, failed one, and was therefore **not** registered as a universal formula.
+
+All three OPX failures and fifteen top sealed counterexamples entered mistake event `V48-OPX-CROSS-DOMAIN-0001`. From this failure the language created `SCOPESEM-9e281ead939d0d63`, an executable `SCOPED_EXECUTE_OR_ABSTAIN` control semantic. It executes OPX only when the registered mechanism signature matches independently assigned controls and a post-intervention response; otherwise it abstains and opens a local search. The verified source apparatus is accepted, all three observational worlds are rejected before unsafe semantic reuse, and the false cross-domain acceptance count is zero.
+
+The new result is a computation-control semantic, not a new mathematical law. Its key finding is that matching arity does not establish matching mechanism. The next autonomously selected task is `new_world_semantic_search`, focused on the failed event world rather than forcing the two-world temporal candidate onto it.
+
+Current claim label: `V48_COUNTEREXAMPLE_INDUCED_SCOPE_SEMANTIC_VERIFIED_UNIVERSAL_FORMULA_NOT_ESTABLISHED`.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json), and [V48 semantic-transfer counterexamples](reports/data/semantic_transfer_counterexample_v48_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -628,6 +647,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V45 | autonomous multi-control experiment design, committed safe execution, causal feature growth, saturation stopping, and sealed counterfactual transfer | local computational apparatus; finite action space and supplied feature constructors; no unknown natural system or independent laboratory |
 | V46 | allowlisted network collection, sandboxed opcode registration, causal ablation, instrument architecture, persistent budgets, and Crossref audit | physical fabrication, new natural-system intervention, full-text novelty review, and independent laboratory remain external |
 | V47 | frozen post-discovery commitment, structure-derived open-literature queries, deterministic paper selection, licensed full-text fingerprints, prior-art classification, and persistent task/budget continuation | corpus is not exhaustive; phrase fingerprints are not expert identity proof; physical science and independent review remain external |
+| V48 | frozen cross-domain semantic transfer, training-only canonical adapters, mandatory counterexample replay, bounded replacement search, and learned execute-or-abstain scope control | replacement passed two of three worlds; no universal formula, causal natural law, or independent replication |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
