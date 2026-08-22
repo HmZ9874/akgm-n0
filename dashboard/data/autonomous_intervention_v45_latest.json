@@ -1,0 +1,4155 @@
+{
+  "report_version": "autonomous-intervention-v45.0",
+  "run_id": "RUN-autonomous-intervention-v45-20260822T080009740906Z",
+  "created_at": "2026-08-22T08:00:09.740906+00:00",
+  "verdict": "bounded_autonomous_live_computational_intervention_verified",
+  "acceptance": {
+    "benchmark_version": "autonomous-intervention-v45.0",
+    "passed": true,
+    "final_status": "verified",
+    "classification": "bounded_autonomous_live_computational_causal_intervention",
+    "apparatus_boundary": {
+      "primary_pid": 44420,
+      "replica_pid": 24788,
+      "learner_pid": 42496,
+      "separate_process": true,
+      "natural_physical_system": false,
+      "external_laboratory": false,
+      "safe_ranges": [
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          1,
+          4
+        ]
+      ],
+      "development_action_count": 171,
+      "sealed_transfer_action_count": 25,
+      "experiment_budget": 20
+    },
+    "autonomous_experiment_design": {
+      "plans": [
+        {
+          "round_index": 0,
+          "kind": "geometry_without_prior_response",
+          "selected_actions": [
+            {
+              "action_id": "ACT-0e94bae6e1f66f80",
+              "values": [
+                2.0,
+                2.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-bd9d5c74648a22ad",
+              "values": [
+                8.0,
+                7.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-2d76735dbc5218fa",
+              "values": [
+                5.0,
+                8.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-fdc3f33d64670437",
+              "values": [
+                4.0,
+                2.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-7aa35c2134bd8923",
+              "values": [
+                8.0,
+                2.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-f37101e94148b5e3",
+              "values": [
+                2.0,
+                7.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-589b92b6714e13c4",
+              "values": [
+                2.0,
+                6.0,
+                2.0
+              ]
+            },
+            {
+              "action_id": "ACT-cf503461015cc690",
+              "values": [
+                8.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "action_id": "ACT-6c72b4f549bb20d5",
+              "values": [
+                5.0,
+                8.0,
+                3.0
+              ]
+            },
+            {
+              "action_id": "ACT-59971dfe7dcca067",
+              "values": [
+                8.0,
+                7.0,
+                2.0
+              ]
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 1,
+          "kind": "model_disagreement_and_leverage",
+          "selected": {
+            "action": {
+              "action_id": "ACT-feacc84855ac72fe",
+              "values": [
+                5.0,
+                4.0,
+                1.0
+              ]
+            },
+            "utility": 0.07125511194478415,
+            "normalized_disagreement": 0.0037594335834505977,
+            "normalized_leverage": 0.032527560633394195,
+            "geometric_novelty": 0.3469443332443555,
+            "normalized_cost": 0.27777777777777773,
+            "competing_program_ids": [
+              "CAUSEM-78e1befda9d8d6b3",
+              "CAUSEM-eeee78c263053a85",
+              "CAUSEM-4390d16c0dfe482c",
+              "CAUSEM-16f3398e2fc197bf",
+              "CAUSEM-66f258c14fae8251",
+              "CAUSEM-b337f85d28686e53",
+              "CAUSEM-b8c8d41f81c6cf37",
+              "CAUSEM-b60b8c2d030a632c",
+              "CAUSEM-80fe2245bf498597",
+              "CAUSEM-9fc8b20ba802d0a9",
+              "CAUSEM-9b917b561d8392bf",
+              "CAUSEM-eba637155a76e850",
+              "CAUSEM-ffb300290d820cad",
+              "CAUSEM-0b54cf44947baa74",
+              "CAUSEM-6cd332d7aa6469f4",
+              "CAUSEM-293aefdadaa51ec1",
+              "CAUSEM-ea74d5f46fdf7a31",
+              "CAUSEM-bcbf7cbdcf6d2b38",
+              "CAUSEM-cbf24c433be9987a",
+              "CAUSEM-f47f6fd4a253242b",
+              "CAUSEM-0aa210bd0eb9f018",
+              "CAUSEM-1c8c71d3452b5870",
+              "CAUSEM-a43709c23e7ab108",
+              "CAUSEM-66ff28be745683c0",
+              "CAUSEM-709137c4e72dd499",
+              "CAUSEM-44cab123c183ab89",
+              "CAUSEM-78325e6e7f790589",
+              "CAUSEM-80f063420709edc9"
+            ],
+            "host_selected": false
+          },
+          "top_ranked": [
+            {
+              "action": {
+                "action_id": "ACT-feacc84855ac72fe",
+                "values": [
+                  5.0,
+                  4.0,
+                  1.0
+                ]
+              },
+              "utility": 0.07125511194478415,
+              "normalized_disagreement": 0.0037594335834505977,
+              "normalized_leverage": 0.032527560633394195,
+              "geometric_novelty": 0.3469443332443555,
+              "normalized_cost": 0.27777777777777773,
+              "competing_program_ids": [
+                "CAUSEM-78e1befda9d8d6b3",
+                "CAUSEM-eeee78c263053a85",
+                "CAUSEM-4390d16c0dfe482c",
+                "CAUSEM-16f3398e2fc197bf",
+                "CAUSEM-66f258c14fae8251",
+                "CAUSEM-b337f85d28686e53",
+                "CAUSEM-b8c8d41f81c6cf37",
+                "CAUSEM-b60b8c2d030a632c",
+                "CAUSEM-80fe2245bf498597",
+                "CAUSEM-9fc8b20ba802d0a9",
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-eba637155a76e850",
+                "CAUSEM-ffb300290d820cad",
+                "CAUSEM-0b54cf44947baa74",
+                "CAUSEM-6cd332d7aa6469f4",
+                "CAUSEM-293aefdadaa51ec1",
+                "CAUSEM-ea74d5f46fdf7a31",
+                "CAUSEM-bcbf7cbdcf6d2b38",
+                "CAUSEM-cbf24c433be9987a",
+                "CAUSEM-f47f6fd4a253242b",
+                "CAUSEM-0aa210bd0eb9f018",
+                "CAUSEM-1c8c71d3452b5870",
+                "CAUSEM-a43709c23e7ab108",
+                "CAUSEM-66ff28be745683c0",
+                "CAUSEM-709137c4e72dd499",
+                "CAUSEM-44cab123c183ab89",
+                "CAUSEM-78325e6e7f790589",
+                "CAUSEM-80f063420709edc9"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-f53b063c7da06e86",
+                "values": [
+                  5.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.07103898901251135,
+              "normalized_disagreement": 0.003366482797500061,
+              "normalized_leverage": 0.032527560633394195,
+              "geometric_novelty": 0.3469443332443555,
+              "normalized_cost": 0.27777777777777773,
+              "competing_program_ids": [
+                "CAUSEM-78e1befda9d8d6b3",
+                "CAUSEM-eeee78c263053a85",
+                "CAUSEM-4390d16c0dfe482c",
+                "CAUSEM-16f3398e2fc197bf",
+                "CAUSEM-66f258c14fae8251",
+                "CAUSEM-b337f85d28686e53",
+                "CAUSEM-b8c8d41f81c6cf37",
+                "CAUSEM-b60b8c2d030a632c",
+                "CAUSEM-80fe2245bf498597",
+                "CAUSEM-9fc8b20ba802d0a9",
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-eba637155a76e850",
+                "CAUSEM-ffb300290d820cad",
+                "CAUSEM-0b54cf44947baa74",
+                "CAUSEM-6cd332d7aa6469f4",
+                "CAUSEM-293aefdadaa51ec1",
+                "CAUSEM-ea74d5f46fdf7a31",
+                "CAUSEM-bcbf7cbdcf6d2b38",
+                "CAUSEM-cbf24c433be9987a",
+                "CAUSEM-f47f6fd4a253242b",
+                "CAUSEM-0aa210bd0eb9f018",
+                "CAUSEM-1c8c71d3452b5870",
+                "CAUSEM-a43709c23e7ab108",
+                "CAUSEM-66ff28be745683c0",
+                "CAUSEM-709137c4e72dd499",
+                "CAUSEM-44cab123c183ab89",
+                "CAUSEM-78325e6e7f790589",
+                "CAUSEM-80f063420709edc9"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-cfd9523d1294a1d9",
+                "values": [
+                  5.0,
+                  3.0,
+                  2.0
+                ]
+              },
+              "utility": 0.06813679244005556,
+              "normalized_disagreement": 0.0031700292542570056,
+              "normalized_leverage": 0.02801763880537238,
+              "geometric_novelty": 0.3469443332443555,
+              "normalized_cost": 0.3333333333333333,
+              "competing_program_ids": [
+                "CAUSEM-78e1befda9d8d6b3",
+                "CAUSEM-eeee78c263053a85",
+                "CAUSEM-4390d16c0dfe482c",
+                "CAUSEM-16f3398e2fc197bf",
+                "CAUSEM-66f258c14fae8251",
+                "CAUSEM-b337f85d28686e53",
+                "CAUSEM-b8c8d41f81c6cf37",
+                "CAUSEM-b60b8c2d030a632c",
+                "CAUSEM-80fe2245bf498597",
+                "CAUSEM-9fc8b20ba802d0a9",
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-eba637155a76e850",
+                "CAUSEM-ffb300290d820cad",
+                "CAUSEM-0b54cf44947baa74",
+                "CAUSEM-6cd332d7aa6469f4",
+                "CAUSEM-293aefdadaa51ec1",
+                "CAUSEM-ea74d5f46fdf7a31",
+                "CAUSEM-bcbf7cbdcf6d2b38",
+                "CAUSEM-cbf24c433be9987a",
+                "CAUSEM-f47f6fd4a253242b",
+                "CAUSEM-0aa210bd0eb9f018",
+                "CAUSEM-1c8c71d3452b5870",
+                "CAUSEM-a43709c23e7ab108",
+                "CAUSEM-66ff28be745683c0",
+                "CAUSEM-709137c4e72dd499",
+                "CAUSEM-44cab123c183ab89",
+                "CAUSEM-78325e6e7f790589",
+                "CAUSEM-80f063420709edc9"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-81a4de58dcbf3a09",
+                "values": [
+                  5.0,
+                  4.0,
+                  2.0
+                ]
+              },
+              "utility": 0.06568935674935877,
+              "normalized_disagreement": 0.003344866018452388,
+              "normalized_leverage": 0.024509921828022065,
+              "geometric_novelty": 0.3469443332443555,
+              "normalized_cost": 0.38888888888888884,
+              "competing_program_ids": [
+                "CAUSEM-78e1befda9d8d6b3",
+                "CAUSEM-eeee78c263053a85",
+                "CAUSEM-4390d16c0dfe482c",
+                "CAUSEM-16f3398e2fc197bf",
+                "CAUSEM-66f258c14fae8251",
+                "CAUSEM-b337f85d28686e53",
+                "CAUSEM-b8c8d41f81c6cf37",
+                "CAUSEM-b60b8c2d030a632c",
+                "CAUSEM-80fe2245bf498597",
+                "CAUSEM-9fc8b20ba802d0a9",
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-eba637155a76e850",
+                "CAUSEM-ffb300290d820cad",
+                "CAUSEM-0b54cf44947baa74",
+                "CAUSEM-6cd332d7aa6469f4",
+                "CAUSEM-293aefdadaa51ec1",
+                "CAUSEM-ea74d5f46fdf7a31",
+                "CAUSEM-bcbf7cbdcf6d2b38",
+                "CAUSEM-cbf24c433be9987a",
+                "CAUSEM-f47f6fd4a253242b",
+                "CAUSEM-0aa210bd0eb9f018",
+                "CAUSEM-1c8c71d3452b5870",
+                "CAUSEM-a43709c23e7ab108",
+                "CAUSEM-66ff28be745683c0",
+                "CAUSEM-709137c4e72dd499",
+                "CAUSEM-44cab123c183ab89",
+                "CAUSEM-78325e6e7f790589",
+                "CAUSEM-80f063420709edc9"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-0d278020a43906f9",
+                "values": [
+                  5.0,
+                  3.0,
+                  1.0
+                ]
+              },
+              "utility": 0.06475547113333902,
+              "normalized_disagreement": 0.0032263432061554282,
+              "normalized_leverage": 0.03515834836640691,
+              "geometric_novelty": 0.3042903097250923,
+              "normalized_cost": 0.2222222222222222,
+              "competing_program_ids": [
+                "CAUSEM-78e1befda9d8d6b3",
+                "CAUSEM-eeee78c263053a85",
+                "CAUSEM-4390d16c0dfe482c",
+                "CAUSEM-16f3398e2fc197bf",
+                "CAUSEM-66f258c14fae8251",
+                "CAUSEM-b337f85d28686e53",
+                "CAUSEM-b8c8d41f81c6cf37",
+                "CAUSEM-b60b8c2d030a632c",
+                "CAUSEM-80fe2245bf498597",
+                "CAUSEM-9fc8b20ba802d0a9",
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-eba637155a76e850",
+                "CAUSEM-ffb300290d820cad",
+                "CAUSEM-0b54cf44947baa74",
+                "CAUSEM-6cd332d7aa6469f4",
+                "CAUSEM-293aefdadaa51ec1",
+                "CAUSEM-ea74d5f46fdf7a31",
+                "CAUSEM-bcbf7cbdcf6d2b38",
+                "CAUSEM-cbf24c433be9987a",
+                "CAUSEM-f47f6fd4a253242b",
+                "CAUSEM-0aa210bd0eb9f018",
+                "CAUSEM-1c8c71d3452b5870",
+                "CAUSEM-a43709c23e7ab108",
+                "CAUSEM-66ff28be745683c0",
+                "CAUSEM-709137c4e72dd499",
+                "CAUSEM-44cab123c183ab89",
+                "CAUSEM-78325e6e7f790589",
+                "CAUSEM-80f063420709edc9"
+              ],
+              "host_selected": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 2,
+          "kind": "model_disagreement_and_leverage",
+          "selected": {
+            "action": {
+              "action_id": "ACT-a3f9ac5f8f60f070",
+              "values": [
+                2.0,
+                3.0,
+                3.0
+              ]
+            },
+            "utility": 0.059513395152952744,
+            "normalized_disagreement": 6.596161738146886e-17,
+            "normalized_leverage": 0.0404468062692938,
+            "geometric_novelty": 0.2886751345948129,
+            "normalized_cost": 0.27777777777777773,
+            "competing_program_ids": [
+              "CAUSEM-9b917b561d8392bf",
+              "CAUSEM-371a3cb04ede96d0",
+              "CAUSEM-87b679f74108830a",
+              "CAUSEM-8115793fe5db08ed",
+              "CAUSEM-dfa7891df811e4f1",
+              "CAUSEM-cf1eab593ab57fb4",
+              "CAUSEM-cb6b4d7e0481c606",
+              "CAUSEM-91e5fbce77ef2cfb",
+              "CAUSEM-07c566cd425688ce",
+              "CAUSEM-b48005a4aec187fa",
+              "CAUSEM-f2191f05245fd7a2",
+              "CAUSEM-1892624069071841",
+              "CAUSEM-108acd829bce95d4",
+              "CAUSEM-e89e242fc4ef3ad1",
+              "CAUSEM-6abb1ccd6f8ed838",
+              "CAUSEM-3e0fec8d1193e783",
+              "CAUSEM-521ae4b4806c1541",
+              "CAUSEM-80a74b2cf4bcb64a",
+              "CAUSEM-882fe91efe520cc6",
+              "CAUSEM-41ff53c544c248c6",
+              "CAUSEM-dd7004bdf2ae2e2a",
+              "CAUSEM-c74476858a2fbd18",
+              "CAUSEM-4f60556c0cd12923",
+              "CAUSEM-4ecbb1d1541ebf91",
+              "CAUSEM-84a12fdcc8205ddb",
+              "CAUSEM-8d77f6ca1d1706fc",
+              "CAUSEM-ad648bc9d53912c3"
+            ],
+            "host_selected": false
+          },
+          "top_ranked": [
+            {
+              "action": {
+                "action_id": "ACT-a3f9ac5f8f60f070",
+                "values": [
+                  2.0,
+                  3.0,
+                  3.0
+                ]
+              },
+              "utility": 0.059513395152952744,
+              "normalized_disagreement": 6.596161738146886e-17,
+              "normalized_leverage": 0.0404468062692938,
+              "geometric_novelty": 0.2886751345948129,
+              "normalized_cost": 0.27777777777777773,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-87b679f74108830a",
+                "CAUSEM-8115793fe5db08ed",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-cb6b4d7e0481c606",
+                "CAUSEM-91e5fbce77ef2cfb",
+                "CAUSEM-07c566cd425688ce",
+                "CAUSEM-b48005a4aec187fa",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-108acd829bce95d4",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-521ae4b4806c1541",
+                "CAUSEM-80a74b2cf4bcb64a",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-4ecbb1d1541ebf91",
+                "CAUSEM-84a12fdcc8205ddb",
+                "CAUSEM-8d77f6ca1d1706fc",
+                "CAUSEM-ad648bc9d53912c3"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-79817593b5333d18",
+                "values": [
+                  2.0,
+                  2.0,
+                  3.0
+                ]
+              },
+              "utility": 0.05831435775224897,
+              "normalized_disagreement": 7.091663378798796e-17,
+              "normalized_leverage": 0.04219167609493547,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.2222222222222222,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-87b679f74108830a",
+                "CAUSEM-8115793fe5db08ed",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-cb6b4d7e0481c606",
+                "CAUSEM-91e5fbce77ef2cfb",
+                "CAUSEM-07c566cd425688ce",
+                "CAUSEM-b48005a4aec187fa",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-108acd829bce95d4",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-521ae4b4806c1541",
+                "CAUSEM-80a74b2cf4bcb64a",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-4ecbb1d1541ebf91",
+                "CAUSEM-84a12fdcc8205ddb",
+                "CAUSEM-8d77f6ca1d1706fc",
+                "CAUSEM-ad648bc9d53912c3"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-f4e26a80c8984782",
+                "values": [
+                  6.0,
+                  8.0,
+                  4.0
+                ]
+              },
+              "utility": 0.05720296011983437,
+              "normalized_disagreement": 3.4080643084549654e-16,
+              "normalized_leverage": 0.16334591398122927,
+              "geometric_novelty": 0.21516574145596762,
+              "normalized_cost": 0.8888888888888888,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-87b679f74108830a",
+                "CAUSEM-8115793fe5db08ed",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-cb6b4d7e0481c606",
+                "CAUSEM-91e5fbce77ef2cfb",
+                "CAUSEM-07c566cd425688ce",
+                "CAUSEM-b48005a4aec187fa",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-108acd829bce95d4",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-521ae4b4806c1541",
+                "CAUSEM-80a74b2cf4bcb64a",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-4ecbb1d1541ebf91",
+                "CAUSEM-84a12fdcc8205ddb",
+                "CAUSEM-8d77f6ca1d1706fc",
+                "CAUSEM-ad648bc9d53912c3"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-9d0748b01c86f8ea",
+                "values": [
+                  8.0,
+                  8.0,
+                  3.0
+                ]
+              },
+              "utility": 0.05720296011983434,
+              "normalized_disagreement": 3.13970955353455e-16,
+              "normalized_leverage": 0.16334591398122927,
+              "geometric_novelty": 0.2151657414559676,
+              "normalized_cost": 0.8888888888888888,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-87b679f74108830a",
+                "CAUSEM-8115793fe5db08ed",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-cb6b4d7e0481c606",
+                "CAUSEM-91e5fbce77ef2cfb",
+                "CAUSEM-07c566cd425688ce",
+                "CAUSEM-b48005a4aec187fa",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-108acd829bce95d4",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-521ae4b4806c1541",
+                "CAUSEM-80a74b2cf4bcb64a",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-4ecbb1d1541ebf91",
+                "CAUSEM-84a12fdcc8205ddb",
+                "CAUSEM-8d77f6ca1d1706fc",
+                "CAUSEM-ad648bc9d53912c3"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-beaed7697cddb090",
+                "values": [
+                  4.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.05597176976758253,
+              "normalized_disagreement": 7.485119427540919e-17,
+              "normalized_leverage": 0.03282132415626966,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.2222222222222222,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-87b679f74108830a",
+                "CAUSEM-8115793fe5db08ed",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-cb6b4d7e0481c606",
+                "CAUSEM-91e5fbce77ef2cfb",
+                "CAUSEM-07c566cd425688ce",
+                "CAUSEM-b48005a4aec187fa",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-108acd829bce95d4",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-521ae4b4806c1541",
+                "CAUSEM-80a74b2cf4bcb64a",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-4ecbb1d1541ebf91",
+                "CAUSEM-84a12fdcc8205ddb",
+                "CAUSEM-8d77f6ca1d1706fc",
+                "CAUSEM-ad648bc9d53912c3"
+              ],
+              "host_selected": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 3,
+          "kind": "model_disagreement_and_leverage",
+          "selected": {
+            "action": {
+              "action_id": "ACT-f4e26a80c8984782",
+              "values": [
+                6.0,
+                8.0,
+                4.0
+              ]
+            },
+            "utility": 0.05686466844611055,
+            "normalized_disagreement": 3.9213233505441543e-16,
+            "normalized_leverage": 0.1619927472863339,
+            "geometric_novelty": 0.21516574145596762,
+            "normalized_cost": 0.8888888888888888,
+            "competing_program_ids": [
+              "CAUSEM-7ad707f1ae5d51cb",
+              "CAUSEM-257d2a929fbb4c9f",
+              "CAUSEM-92086864b559b96d",
+              "CAUSEM-d29f43b46d609c3b",
+              "CAUSEM-dfa7891df811e4f1",
+              "CAUSEM-0e2b9c7b40e99d09",
+              "CAUSEM-0c62f065a33a4895",
+              "CAUSEM-cc3c3aaccc7e0068",
+              "CAUSEM-34aa82d2bb2a10b0",
+              "CAUSEM-4a9b621c40eb1af1",
+              "CAUSEM-610e37c44b5d05a9",
+              "CAUSEM-f3ced4008caeb3f5",
+              "CAUSEM-e7b06a76ebdf9c59",
+              "CAUSEM-e89e242fc4ef3ad1",
+              "CAUSEM-6abb1ccd6f8ed838",
+              "CAUSEM-3e0fec8d1193e783",
+              "CAUSEM-747ab9153f88988a",
+              "CAUSEM-f9faac8cd4c199e1",
+              "CAUSEM-882fe91efe520cc6",
+              "CAUSEM-c4ca960d70ed784a",
+              "CAUSEM-d2463d1688039ee3",
+              "CAUSEM-c74476858a2fbd18",
+              "CAUSEM-a688535d289abc40",
+              "CAUSEM-2f9da3943cd27ee1",
+              "CAUSEM-67e11f9e4db7393b",
+              "CAUSEM-7ac7067484316eef",
+              "CAUSEM-1f9c56c68f068a4c"
+            ],
+            "host_selected": false
+          },
+          "top_ranked": [
+            {
+              "action": {
+                "action_id": "ACT-9d0748b01c86f8ea",
+                "values": [
+                  8.0,
+                  8.0,
+                  3.0
+                ]
+              },
+              "utility": 0.05686466844611055,
+              "normalized_disagreement": 3.8539484546894e-16,
+              "normalized_leverage": 0.1619927472863339,
+              "geometric_novelty": 0.2151657414559676,
+              "normalized_cost": 0.8888888888888888,
+              "competing_program_ids": [
+                "CAUSEM-7ad707f1ae5d51cb",
+                "CAUSEM-257d2a929fbb4c9f",
+                "CAUSEM-92086864b559b96d",
+                "CAUSEM-d29f43b46d609c3b",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-0e2b9c7b40e99d09",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-cc3c3aaccc7e0068",
+                "CAUSEM-34aa82d2bb2a10b0",
+                "CAUSEM-4a9b621c40eb1af1",
+                "CAUSEM-610e37c44b5d05a9",
+                "CAUSEM-f3ced4008caeb3f5",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-747ab9153f88988a",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-c4ca960d70ed784a",
+                "CAUSEM-d2463d1688039ee3",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-a688535d289abc40",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-67e11f9e4db7393b",
+                "CAUSEM-7ac7067484316eef",
+                "CAUSEM-1f9c56c68f068a4c"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-f4e26a80c8984782",
+                "values": [
+                  6.0,
+                  8.0,
+                  4.0
+                ]
+              },
+              "utility": 0.05686466844611055,
+              "normalized_disagreement": 3.9213233505441543e-16,
+              "normalized_leverage": 0.1619927472863339,
+              "geometric_novelty": 0.21516574145596762,
+              "normalized_cost": 0.8888888888888888,
+              "competing_program_ids": [
+                "CAUSEM-7ad707f1ae5d51cb",
+                "CAUSEM-257d2a929fbb4c9f",
+                "CAUSEM-92086864b559b96d",
+                "CAUSEM-d29f43b46d609c3b",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-0e2b9c7b40e99d09",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-cc3c3aaccc7e0068",
+                "CAUSEM-34aa82d2bb2a10b0",
+                "CAUSEM-4a9b621c40eb1af1",
+                "CAUSEM-610e37c44b5d05a9",
+                "CAUSEM-f3ced4008caeb3f5",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-747ab9153f88988a",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-c4ca960d70ed784a",
+                "CAUSEM-d2463d1688039ee3",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-a688535d289abc40",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-67e11f9e4db7393b",
+                "CAUSEM-7ac7067484316eef",
+                "CAUSEM-1f9c56c68f068a4c"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-beaed7697cddb090",
+                "values": [
+                  4.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.05540396399709266,
+              "normalized_disagreement": 6.907632480519764e-17,
+              "normalized_leverage": 0.0305501010743102,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.2222222222222222,
+              "competing_program_ids": [
+                "CAUSEM-7ad707f1ae5d51cb",
+                "CAUSEM-257d2a929fbb4c9f",
+                "CAUSEM-92086864b559b96d",
+                "CAUSEM-d29f43b46d609c3b",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-0e2b9c7b40e99d09",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-cc3c3aaccc7e0068",
+                "CAUSEM-34aa82d2bb2a10b0",
+                "CAUSEM-4a9b621c40eb1af1",
+                "CAUSEM-610e37c44b5d05a9",
+                "CAUSEM-f3ced4008caeb3f5",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-747ab9153f88988a",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-c4ca960d70ed784a",
+                "CAUSEM-d2463d1688039ee3",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-a688535d289abc40",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-67e11f9e4db7393b",
+                "CAUSEM-7ac7067484316eef",
+                "CAUSEM-1f9c56c68f068a4c"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-9793fe594da8ea47",
+                "values": [
+                  6.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.05495184409005355,
+              "normalized_disagreement": 7.822853027445952e-17,
+              "normalized_leverage": 0.04207495477948707,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.3333333333333333,
+              "competing_program_ids": [
+                "CAUSEM-7ad707f1ae5d51cb",
+                "CAUSEM-257d2a929fbb4c9f",
+                "CAUSEM-92086864b559b96d",
+                "CAUSEM-d29f43b46d609c3b",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-0e2b9c7b40e99d09",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-cc3c3aaccc7e0068",
+                "CAUSEM-34aa82d2bb2a10b0",
+                "CAUSEM-4a9b621c40eb1af1",
+                "CAUSEM-610e37c44b5d05a9",
+                "CAUSEM-f3ced4008caeb3f5",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-747ab9153f88988a",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-c4ca960d70ed784a",
+                "CAUSEM-d2463d1688039ee3",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-a688535d289abc40",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-67e11f9e4db7393b",
+                "CAUSEM-7ac7067484316eef",
+                "CAUSEM-1f9c56c68f068a4c"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-f53b063c7da06e86",
+                "values": [
+                  5.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.054846950319279664,
+              "normalized_disagreement": 7.418489919627062e-17,
+              "normalized_leverage": 0.03498871302972484,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.27777777777777773,
+              "competing_program_ids": [
+                "CAUSEM-7ad707f1ae5d51cb",
+                "CAUSEM-257d2a929fbb4c9f",
+                "CAUSEM-92086864b559b96d",
+                "CAUSEM-d29f43b46d609c3b",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-0e2b9c7b40e99d09",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-cc3c3aaccc7e0068",
+                "CAUSEM-34aa82d2bb2a10b0",
+                "CAUSEM-4a9b621c40eb1af1",
+                "CAUSEM-610e37c44b5d05a9",
+                "CAUSEM-f3ced4008caeb3f5",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-e89e242fc4ef3ad1",
+                "CAUSEM-6abb1ccd6f8ed838",
+                "CAUSEM-3e0fec8d1193e783",
+                "CAUSEM-747ab9153f88988a",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-c4ca960d70ed784a",
+                "CAUSEM-d2463d1688039ee3",
+                "CAUSEM-c74476858a2fbd18",
+                "CAUSEM-a688535d289abc40",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-67e11f9e4db7393b",
+                "CAUSEM-7ac7067484316eef",
+                "CAUSEM-1f9c56c68f068a4c"
+              ],
+              "host_selected": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 4,
+          "kind": "model_disagreement_and_leverage",
+          "selected": {
+            "action": {
+              "action_id": "ACT-beaed7697cddb090",
+              "values": [
+                4.0,
+                2.0,
+                2.0
+              ]
+            },
+            "utility": 0.054871753631479454,
+            "normalized_disagreement": 8.415373991834422e-17,
+            "normalized_leverage": 0.028421259611857354,
+            "geometric_novelty": 0.2721655269759087,
+            "normalized_cost": 0.2222222222222222,
+            "competing_program_ids": [
+              "CAUSEM-9b917b561d8392bf",
+              "CAUSEM-371a3cb04ede96d0",
+              "CAUSEM-658f50482fb1838b",
+              "CAUSEM-57827fd735609b6e",
+              "CAUSEM-dfa7891df811e4f1",
+              "CAUSEM-cf1eab593ab57fb4",
+              "CAUSEM-0c62f065a33a4895",
+              "CAUSEM-a451ec05aa982e46",
+              "CAUSEM-77ea182d78b1538d",
+              "CAUSEM-b32d06c2b65539ab",
+              "CAUSEM-f2191f05245fd7a2",
+              "CAUSEM-1892624069071841",
+              "CAUSEM-e7b06a76ebdf9c59",
+              "CAUSEM-dcd62ffbaa2b099b",
+              "CAUSEM-064f928f0ec04c16",
+              "CAUSEM-c3c2e74077ea3daa",
+              "CAUSEM-3481d548695b1ec8",
+              "CAUSEM-f9faac8cd4c199e1",
+              "CAUSEM-882fe91efe520cc6",
+              "CAUSEM-41ff53c544c248c6",
+              "CAUSEM-dd7004bdf2ae2e2a",
+              "CAUSEM-443ba49617b1973e",
+              "CAUSEM-4f60556c0cd12923",
+              "CAUSEM-2f9da3943cd27ee1",
+              "CAUSEM-800a2a7299158549",
+              "CAUSEM-512c52c3c6d32ec8",
+              "CAUSEM-c4907879a9aec2eb"
+            ],
+            "host_selected": false
+          },
+          "top_ranked": [
+            {
+              "action": {
+                "action_id": "ACT-beaed7697cddb090",
+                "values": [
+                  4.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.054871753631479454,
+              "normalized_disagreement": 8.415373991834422e-17,
+              "normalized_leverage": 0.028421259611857354,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.2222222222222222,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-658f50482fb1838b",
+                "CAUSEM-57827fd735609b6e",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-a451ec05aa982e46",
+                "CAUSEM-77ea182d78b1538d",
+                "CAUSEM-b32d06c2b65539ab",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-dcd62ffbaa2b099b",
+                "CAUSEM-064f928f0ec04c16",
+                "CAUSEM-c3c2e74077ea3daa",
+                "CAUSEM-3481d548695b1ec8",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-443ba49617b1973e",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-800a2a7299158549",
+                "CAUSEM-512c52c3c6d32ec8",
+                "CAUSEM-c4907879a9aec2eb"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-f53b063c7da06e86",
+                "values": [
+                  5.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.054017792073293075,
+              "normalized_disagreement": 8.555096446369077e-17,
+              "normalized_leverage": 0.03167208004577848,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.27777777777777773,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-658f50482fb1838b",
+                "CAUSEM-57827fd735609b6e",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-a451ec05aa982e46",
+                "CAUSEM-77ea182d78b1538d",
+                "CAUSEM-b32d06c2b65539ab",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-dcd62ffbaa2b099b",
+                "CAUSEM-064f928f0ec04c16",
+                "CAUSEM-c3c2e74077ea3daa",
+                "CAUSEM-3481d548695b1ec8",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-443ba49617b1973e",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-800a2a7299158549",
+                "CAUSEM-512c52c3c6d32ec8",
+                "CAUSEM-c4907879a9aec2eb"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-9793fe594da8ea47",
+                "values": [
+                  6.0,
+                  2.0,
+                  2.0
+                ]
+              },
+              "utility": 0.053760177025945086,
+              "normalized_disagreement": 8.912559608318211e-17,
+              "normalized_leverage": 0.0373082865230532,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.3333333333333333,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-658f50482fb1838b",
+                "CAUSEM-57827fd735609b6e",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-a451ec05aa982e46",
+                "CAUSEM-77ea182d78b1538d",
+                "CAUSEM-b32d06c2b65539ab",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-dcd62ffbaa2b099b",
+                "CAUSEM-064f928f0ec04c16",
+                "CAUSEM-c3c2e74077ea3daa",
+                "CAUSEM-3481d548695b1ec8",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-443ba49617b1973e",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-800a2a7299158549",
+                "CAUSEM-512c52c3c6d32ec8",
+                "CAUSEM-c4907879a9aec2eb"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-9763cf817a8a4486",
+                "values": [
+                  2.0,
+                  8.0,
+                  1.0
+                ]
+              },
+              "utility": 0.05283403574196692,
+              "normalized_disagreement": 9.02382632572727e-17,
+              "normalized_leverage": 0.0336037213871405,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.3333333333333333,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-658f50482fb1838b",
+                "CAUSEM-57827fd735609b6e",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-a451ec05aa982e46",
+                "CAUSEM-77ea182d78b1538d",
+                "CAUSEM-b32d06c2b65539ab",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-dcd62ffbaa2b099b",
+                "CAUSEM-064f928f0ec04c16",
+                "CAUSEM-c3c2e74077ea3daa",
+                "CAUSEM-3481d548695b1ec8",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-443ba49617b1973e",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-800a2a7299158549",
+                "CAUSEM-512c52c3c6d32ec8",
+                "CAUSEM-c4907879a9aec2eb"
+              ],
+              "host_selected": false
+            },
+            {
+              "action": {
+                "action_id": "ACT-fed61afc1343da2d",
+                "values": [
+                  8.0,
+                  5.0,
+                  1.0
+                ]
+              },
+              "utility": 0.05259203080933132,
+              "normalized_disagreement": 9.91584219920592e-17,
+              "normalized_leverage": 0.05263570165659812,
+              "geometric_novelty": 0.2721655269759087,
+              "normalized_cost": 0.5,
+              "competing_program_ids": [
+                "CAUSEM-9b917b561d8392bf",
+                "CAUSEM-371a3cb04ede96d0",
+                "CAUSEM-658f50482fb1838b",
+                "CAUSEM-57827fd735609b6e",
+                "CAUSEM-dfa7891df811e4f1",
+                "CAUSEM-cf1eab593ab57fb4",
+                "CAUSEM-0c62f065a33a4895",
+                "CAUSEM-a451ec05aa982e46",
+                "CAUSEM-77ea182d78b1538d",
+                "CAUSEM-b32d06c2b65539ab",
+                "CAUSEM-f2191f05245fd7a2",
+                "CAUSEM-1892624069071841",
+                "CAUSEM-e7b06a76ebdf9c59",
+                "CAUSEM-dcd62ffbaa2b099b",
+                "CAUSEM-064f928f0ec04c16",
+                "CAUSEM-c3c2e74077ea3daa",
+                "CAUSEM-3481d548695b1ec8",
+                "CAUSEM-f9faac8cd4c199e1",
+                "CAUSEM-882fe91efe520cc6",
+                "CAUSEM-41ff53c544c248c6",
+                "CAUSEM-dd7004bdf2ae2e2a",
+                "CAUSEM-443ba49617b1973e",
+                "CAUSEM-4f60556c0cd12923",
+                "CAUSEM-2f9da3943cd27ee1",
+                "CAUSEM-800a2a7299158549",
+                "CAUSEM-512c52c3c6d32ec8",
+                "CAUSEM-c4907879a9aec2eb"
+              ],
+              "host_selected": false
+            }
+          ],
+          "host_selected": false
+        }
+      ],
+      "batch_audits": [
+        {
+          "batch_id": "V45-AUTONOMOUS-SEED",
+          "model_selected_actions": [
+            {
+              "action_id": "ACT-0e94bae6e1f66f80",
+              "values": [
+                2.0,
+                2.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-bd9d5c74648a22ad",
+              "values": [
+                8.0,
+                7.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-2d76735dbc5218fa",
+              "values": [
+                5.0,
+                8.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-fdc3f33d64670437",
+              "values": [
+                4.0,
+                2.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-7aa35c2134bd8923",
+              "values": [
+                8.0,
+                2.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-f37101e94148b5e3",
+              "values": [
+                2.0,
+                7.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-589b92b6714e13c4",
+              "values": [
+                2.0,
+                6.0,
+                2.0
+              ]
+            },
+            {
+              "action_id": "ACT-cf503461015cc690",
+              "values": [
+                8.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "action_id": "ACT-6c72b4f549bb20d5",
+              "values": [
+                5.0,
+                8.0,
+                3.0
+              ]
+            },
+            {
+              "action_id": "ACT-59971dfe7dcca067",
+              "values": [
+                8.0,
+                7.0,
+                2.0
+              ]
+            }
+          ],
+          "randomized_execution_order": [
+            {
+              "action_id": "ACT-2d76735dbc5218fa",
+              "values": [
+                5.0,
+                8.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-6c72b4f549bb20d5",
+              "values": [
+                5.0,
+                8.0,
+                3.0
+              ]
+            },
+            {
+              "action_id": "ACT-7aa35c2134bd8923",
+              "values": [
+                8.0,
+                2.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-f37101e94148b5e3",
+              "values": [
+                2.0,
+                7.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-59971dfe7dcca067",
+              "values": [
+                8.0,
+                7.0,
+                2.0
+              ]
+            },
+            {
+              "action_id": "ACT-589b92b6714e13c4",
+              "values": [
+                2.0,
+                6.0,
+                2.0
+              ]
+            },
+            {
+              "action_id": "ACT-cf503461015cc690",
+              "values": [
+                8.0,
+                3.0,
+                3.0
+              ]
+            },
+            {
+              "action_id": "ACT-0e94bae6e1f66f80",
+              "values": [
+                2.0,
+                2.0,
+                1.0
+              ]
+            },
+            {
+              "action_id": "ACT-fdc3f33d64670437",
+              "values": [
+                4.0,
+                2.0,
+                4.0
+              ]
+            },
+            {
+              "action_id": "ACT-bd9d5c74648a22ad",
+              "values": [
+                8.0,
+                7.0,
+                4.0
+              ]
+            }
+          ],
+          "randomization_commitment": "8cbb5f3fa9f20889e524232ba766a74a675d29751ddb4603391e23e7917dbe7c",
+          "batch_commitment": "1e15459e5c9c9e8b66d67e24c5e8ae5b9a634582cfee11b5c24df38e4a431a04",
+          "commit_event_index": 0,
+          "measurement_event_index": 1,
+          "commit_precedes_measurement": true,
+          "started_at_unix_ns": 1787385609820525200,
+          "ended_at_unix_ns": 1787385609820525200,
+          "host_selected": false
+        },
+        {
+          "batch_id": "V45-AUTONOMOUS-ACTIVE-1",
+          "model_selected_actions": [
+            {
+              "action_id": "ACT-feacc84855ac72fe",
+              "values": [
+                5.0,
+                4.0,
+                1.0
+              ]
+            }
+          ],
+          "randomized_execution_order": [
+            {
+              "action_id": "ACT-feacc84855ac72fe",
+              "values": [
+                5.0,
+                4.0,
+                1.0
+              ]
+            }
+          ],
+          "randomization_commitment": "82873752e07e8a1d3e057c197fe7fce371c1d0afb303ca21013d81fb90ebd116",
+          "batch_commitment": "32322b692e52f855625e3efb1b4354350bce82ddcf8edaf764a2dc95173e8c51",
+          "commit_event_index": 2,
+          "measurement_event_index": 3,
+          "commit_precedes_measurement": true,
+          "started_at_unix_ns": 1787385609867064100,
+          "ended_at_unix_ns": 1787385609867064100,
+          "host_selected": false
+        },
+        {
+          "batch_id": "V45-AUTONOMOUS-ACTIVE-2",
+          "model_selected_actions": [
+            {
+              "action_id": "ACT-a3f9ac5f8f60f070",
+              "values": [
+                2.0,
+                3.0,
+                3.0
+              ]
+            }
+          ],
+          "randomized_execution_order": [
+            {
+              "action_id": "ACT-a3f9ac5f8f60f070",
+              "values": [
+                2.0,
+                3.0,
+                3.0
+              ]
+            }
+          ],
+          "randomization_commitment": "2fcba909462912f191eb06c9a68b1d957807d1f632e9ec6d15876baab8d44cc5",
+          "batch_commitment": "5fa723dfead069a4ad7154ca44527814f129c25337d71324cec05285310fefbd",
+          "commit_event_index": 4,
+          "measurement_event_index": 5,
+          "commit_precedes_measurement": true,
+          "started_at_unix_ns": 1787385609915334400,
+          "ended_at_unix_ns": 1787385609915334400,
+          "host_selected": false
+        },
+        {
+          "batch_id": "V45-AUTONOMOUS-ACTIVE-3",
+          "model_selected_actions": [
+            {
+              "action_id": "ACT-f4e26a80c8984782",
+              "values": [
+                6.0,
+                8.0,
+                4.0
+              ]
+            }
+          ],
+          "randomized_execution_order": [
+            {
+              "action_id": "ACT-f4e26a80c8984782",
+              "values": [
+                6.0,
+                8.0,
+                4.0
+              ]
+            }
+          ],
+          "randomization_commitment": "b6518bd30ec8b5fa87249fc461917f88721a36f254f09b56c60493858ef32158",
+          "batch_commitment": "6ae5139cd14e14e24ab578ebfa6cd67210eb4692875a3db6ea0ddd3ec672b78f",
+          "commit_event_index": 6,
+          "measurement_event_index": 7,
+          "commit_precedes_measurement": true,
+          "started_at_unix_ns": 1787385609965388700,
+          "ended_at_unix_ns": 1787385609965388700,
+          "host_selected": false
+        },
+        {
+          "batch_id": "V45-AUTONOMOUS-ACTIVE-4",
+          "model_selected_actions": [
+            {
+              "action_id": "ACT-beaed7697cddb090",
+              "values": [
+                4.0,
+                2.0,
+                2.0
+              ]
+            }
+          ],
+          "randomized_execution_order": [
+            {
+              "action_id": "ACT-beaed7697cddb090",
+              "values": [
+                4.0,
+                2.0,
+                2.0
+              ]
+            }
+          ],
+          "randomization_commitment": "3a3b42f9d3d5457d17655d3c361b1db4c0530c72445a75d235370241c953e6c8",
+          "batch_commitment": "1cc02aa0ac1a27eab96019069ad154ee8a112e519a664494585e6eb195783a7b",
+          "commit_event_index": 8,
+          "measurement_event_index": 9,
+          "commit_precedes_measurement": true,
+          "started_at_unix_ns": 1787385610019147000,
+          "ended_at_unix_ns": 1787385610019147000,
+          "host_selected": false
+        }
+      ],
+      "development_measurements": [
+        {
+          "measurement_id": "MEAS-1dd1e53453f50508",
+          "action": {
+            "action_id": "ACT-2d76735dbc5218fa",
+            "values": [
+              5.0,
+              8.0,
+              1.0
+            ]
+          },
+          "response": 40.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-e238504ee3da916c",
+          "action": {
+            "action_id": "ACT-6c72b4f549bb20d5",
+            "values": [
+              5.0,
+              8.0,
+              3.0
+            ]
+          },
+          "response": 120.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-c4c0c916ad002669",
+          "action": {
+            "action_id": "ACT-7aa35c2134bd8923",
+            "values": [
+              8.0,
+              2.0,
+              1.0
+            ]
+          },
+          "response": 24.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-03609700b3eb6b1d",
+          "action": {
+            "action_id": "ACT-f37101e94148b5e3",
+            "values": [
+              2.0,
+              7.0,
+              4.0
+            ]
+          },
+          "response": 56.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-0faa2dae42273259",
+          "action": {
+            "action_id": "ACT-59971dfe7dcca067",
+            "values": [
+              8.0,
+              7.0,
+              2.0
+            ]
+          },
+          "response": 120.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-d3c2737ecb8c1bc2",
+          "action": {
+            "action_id": "ACT-589b92b6714e13c4",
+            "values": [
+              2.0,
+              6.0,
+              2.0
+            ]
+          },
+          "response": 24.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-89f3d0ea4017311a",
+          "action": {
+            "action_id": "ACT-cf503461015cc690",
+            "values": [
+              8.0,
+              3.0,
+              3.0
+            ]
+          },
+          "response": 80.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-da74908e5f6b40f2",
+          "action": {
+            "action_id": "ACT-0e94bae6e1f66f80",
+            "values": [
+              2.0,
+              2.0,
+              1.0
+            ]
+          },
+          "response": 4.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-9807d90a87a92108",
+          "action": {
+            "action_id": "ACT-fdc3f33d64670437",
+            "values": [
+              4.0,
+              2.0,
+              4.0
+            ]
+          },
+          "response": 36.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-8f416e06628c27b3",
+          "action": {
+            "action_id": "ACT-bd9d5c74648a22ad",
+            "values": [
+              8.0,
+              7.0,
+              4.0
+            ]
+          },
+          "response": 232.0,
+          "round_index": 0
+        },
+        {
+          "measurement_id": "MEAS-a9555b8677270ea1",
+          "action": {
+            "action_id": "ACT-feacc84855ac72fe",
+            "values": [
+              5.0,
+              4.0,
+              1.0
+            ]
+          },
+          "response": 25.0,
+          "round_index": 1
+        },
+        {
+          "measurement_id": "MEAS-0300faa161176e78",
+          "action": {
+            "action_id": "ACT-a3f9ac5f8f60f070",
+            "values": [
+              2.0,
+              3.0,
+              3.0
+            ]
+          },
+          "response": 18.0,
+          "round_index": 2
+        },
+        {
+          "measurement_id": "MEAS-c6414f85cdefa841",
+          "action": {
+            "action_id": "ACT-f4e26a80c8984782",
+            "values": [
+              6.0,
+              8.0,
+              4.0
+            ]
+          },
+          "response": 192.0,
+          "round_index": 3
+        },
+        {
+          "measurement_id": "MEAS-9ea79d3242930752",
+          "action": {
+            "action_id": "ACT-beaed7697cddb090",
+            "values": [
+              4.0,
+              2.0,
+              2.0
+            ]
+          },
+          "response": 20.0,
+          "round_index": 4
+        }
+      ],
+      "experiment_count": 14,
+      "host_selected": false,
+      "stop_reason": "semantic_saturation"
+    },
+    "language_growth": {
+      "initial_features": [
+        "ONE"
+      ],
+      "selected_mutations": [
+        "admit_structural_feature:COUPLE(0,1,2)",
+        "admit_structural_feature:GUARD(0,1,0)"
+      ],
+      "rounds": [
+        {
+          "round_index": 1,
+          "selected_mutation": "admit_structural_feature:COUPLE(0,1,2)",
+          "information_gain": 1.0484951210477418,
+          "program_after": {
+            "program_id": "CAUSEM-78e1befda9d8d6b3",
+            "features": [
+              "ONE",
+              "COUPLE(0,1,2)"
+            ],
+            "coefficients": [
+              1.8461415113249333,
+              1.025055121266787
+            ],
+            "cross_validated_rmse": 4.054122190039166,
+            "score": 0.0627159900633696,
+            "opaque_program": "INTERVENTION_UPDATE<W0*ONE;W1*COUPLE(0,1,2)>",
+            "human_formula_name": null,
+            "named_mechanism_family_supplied": false
+          },
+          "sterile_round_count": 0,
+          "trials": [
+            {
+              "feature": "X0",
+              "program_id": "CAUSEM-f0a0b708ac88c42b",
+              "score": 1.0426961193612712,
+              "accepted": false
+            },
+            {
+              "feature": "X1",
+              "program_id": "CAUSEM-0cc3ca7b0a633d1b",
+              "score": 1.032252114776915,
+              "accepted": false
+            },
+            {
+              "feature": "X2",
+              "program_id": "CAUSEM-e4f2c0aabdac87fc",
+              "score": 1.1076345257100761,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,1)",
+              "program_id": "CAUSEM-174537b793288c2d",
+              "score": 0.7733484348446198,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,2)",
+              "program_id": "CAUSEM-cc319bfad7115cf2",
+              "score": 0.7313544209590284,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(1,2)",
+              "program_id": "CAUSEM-d2ef6e563d31c8dc",
+              "score": 0.9969945377234564,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,1,2)",
+              "program_id": "CAUSEM-78e1befda9d8d6b3",
+              "score": 0.0627159900633696,
+              "accepted": true
+            },
+            {
+              "feature": "SELF(0)",
+              "program_id": "CAUSEM-43d42ba202545412",
+              "score": 1.063545486642654,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(1)",
+              "program_id": "CAUSEM-188df077db780c0f",
+              "score": 1.0531858491214843,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(2)",
+              "program_id": "CAUSEM-e88016e1433c218e",
+              "score": 1.1675534347505832,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,0)",
+              "program_id": "CAUSEM-e2c335bb0578d675",
+              "score": 1.1342627795875724,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,1)",
+              "program_id": "CAUSEM-479e86ad74220b91",
+              "score": 0.9512799251760408,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,2)",
+              "program_id": "CAUSEM-bc20405d8d6c3bf3",
+              "score": 1.2226336373785711,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,0)",
+              "program_id": "CAUSEM-8f480dc145f945a8",
+              "score": 1.0431639001359498,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,1)",
+              "program_id": "CAUSEM-c6959141e07955b5",
+              "score": 1.000988635345049,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,2)",
+              "program_id": "CAUSEM-4db7dce9363560f8",
+              "score": 0.7765711674826818,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,0)",
+              "program_id": "CAUSEM-bd9ec0cc8e7f0634",
+              "score": 1.2348955136958675,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,1)",
+              "program_id": "CAUSEM-af696e4f3168ad25",
+              "score": 1.2115700158342506,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,2)",
+              "program_id": "CAUSEM-8fcfac49f476c8f5",
+              "score": 1.1927911054471858,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,0)",
+              "program_id": "CAUSEM-55878f0eb3d1d799",
+              "score": 1.1346227468338506,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,1)",
+              "program_id": "CAUSEM-8c937c6e81a980c0",
+              "score": 1.0943442991286596,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,2)",
+              "program_id": "CAUSEM-c46ef4d6fd47062c",
+              "score": 1.1242886974868795,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,0)",
+              "program_id": "CAUSEM-c145034130ee3968",
+              "score": 1.1246378335635965,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,1)",
+              "program_id": "CAUSEM-9f47660622964529",
+              "score": 1.1246378335635965,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,2)",
+              "program_id": "CAUSEM-612e8d864b721917",
+              "score": 1.1246378335635965,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,0)",
+              "program_id": "CAUSEM-08e86aaa652f0599",
+              "score": 1.1226319545189112,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,1)",
+              "program_id": "CAUSEM-3d755b691ed45fc8",
+              "score": 1.1226319545189114,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,2)",
+              "program_id": "CAUSEM-777fcfcd9280573c",
+              "score": 1.1226319545189112,
+              "accepted": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 2,
+          "selected_mutation": "admit_structural_feature:GUARD(0,1,0)",
+          "information_gain": 0.06189583324964296,
+          "program_after": {
+            "program_id": "CAUSEM-9b917b561d8392bf",
+            "features": [
+              "ONE",
+              "COUPLE(0,1,2)",
+              "GUARD(0,1,0)"
+            ],
+            "coefficients": [
+              -1.5344386102792063e-15,
+              0.9999999999999996,
+              1.0
+            ],
+            "cross_validated_rmse": 4.816232588329297e-14,
+            "score": 0.0003000000000007598,
+            "opaque_program": "INTERVENTION_UPDATE<W0*ONE;W1*COUPLE(0,1,2);W2*GUARD(0,1,0)>",
+            "human_formula_name": null,
+            "named_mechanism_family_supplied": false
+          },
+          "sterile_round_count": 0,
+          "trials": [
+            {
+              "feature": "X0",
+              "program_id": "CAUSEM-4f1d1b4e5d093fae",
+              "score": 0.03666132993220512,
+              "accepted": false
+            },
+            {
+              "feature": "X1",
+              "program_id": "CAUSEM-66fee52afedbd831",
+              "score": 0.05305536022555723,
+              "accepted": false
+            },
+            {
+              "feature": "X2",
+              "program_id": "CAUSEM-9b21a054fb664605",
+              "score": 0.06730588638576361,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,1)",
+              "program_id": "CAUSEM-12d73438413f6e63",
+              "score": 0.07200872641464014,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,2)",
+              "program_id": "CAUSEM-71e5445a69850ed2",
+              "score": 0.05194070698311842,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(1,2)",
+              "program_id": "CAUSEM-e8f2d759aa66d4ad",
+              "score": 0.06681737703451458,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(0)",
+              "program_id": "CAUSEM-cbe96c0f40445704",
+              "score": 0.03231008270683566,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(1)",
+              "program_id": "CAUSEM-4c145f2d22cdcd29",
+              "score": 0.05216828468084422,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(2)",
+              "program_id": "CAUSEM-655f9ff01d3d999b",
+              "score": 0.06767405363348732,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,0)",
+              "program_id": "CAUSEM-9b917b561d8392bf",
+              "score": 0.0003000000000007598,
+              "accepted": true
+            },
+            {
+              "feature": "GUARD(0,1,1)",
+              "program_id": "CAUSEM-b67c8c2080cf49cf",
+              "score": 0.036644056252563485,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,2)",
+              "program_id": "CAUSEM-4c32ad922d9f94f8",
+              "score": 0.06197893352615934,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,0)",
+              "program_id": "CAUSEM-93ef05b9a50d0b52",
+              "score": 0.05003310457768382,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,1)",
+              "program_id": "CAUSEM-3d8995c04ee0c6d6",
+              "score": 0.06889700150479962,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,2)",
+              "program_id": "CAUSEM-f07e2e22fa94165d",
+              "score": 0.06539173401645136,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,0)",
+              "program_id": "CAUSEM-b75c02a5661dac26",
+              "score": 0.04837507172351445,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,1)",
+              "program_id": "CAUSEM-7ba2b86f9676d942",
+              "score": 0.042809512158183155,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,2)",
+              "program_id": "CAUSEM-cdc6241621c84cd6",
+              "score": 0.05040023088616107,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,0)",
+              "program_id": "CAUSEM-d058d5a3530255ec",
+              "score": 0.07119887921431274,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,1)",
+              "program_id": "CAUSEM-4b4a8511d195d37c",
+              "score": 0.0503626958402723,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,2)",
+              "program_id": "CAUSEM-42f2ec7ea35d3208",
+              "score": 0.05325612752918936,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,0)",
+              "program_id": "CAUSEM-7f9fde8eeb60b70e",
+              "score": 0.06224275836594542,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,1)",
+              "program_id": "CAUSEM-62c11810b0450ae6",
+              "score": 0.06224275836594517,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,2)",
+              "program_id": "CAUSEM-ad44c1c9ce430301",
+              "score": 0.0622427583659455,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,0)",
+              "program_id": "CAUSEM-e94c85edbb8c0fa0",
+              "score": 0.06300202256116633,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,1)",
+              "program_id": "CAUSEM-780b0ff7a77404d2",
+              "score": 0.06300202256116604,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,2)",
+              "program_id": "CAUSEM-07c693cad79ceaa6",
+              "score": 0.06300202256116633,
+              "accepted": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 3,
+          "selected_mutation": null,
+          "information_gain": 0.0,
+          "program_after": {
+            "program_id": "CAUSEM-7ad707f1ae5d51cb",
+            "features": [
+              "ONE",
+              "COUPLE(0,1,2)",
+              "GUARD(0,1,0)"
+            ],
+            "coefficients": [
+              6.152357267841455e-15,
+              1.0000000000000002,
+              0.9999999999999962
+            ],
+            "cross_validated_rmse": 6.054954575896374e-14,
+            "score": 0.00030000000000097164,
+            "opaque_program": "INTERVENTION_UPDATE<W0*ONE;W1*COUPLE(0,1,2);W2*GUARD(0,1,0)>",
+            "human_formula_name": null,
+            "named_mechanism_family_supplied": false
+          },
+          "sterile_round_count": 1,
+          "trials": [
+            {
+              "feature": "X0",
+              "program_id": "CAUSEM-257d2a929fbb4c9f",
+              "score": 0.0004000000000011012,
+              "accepted": false
+            },
+            {
+              "feature": "X1",
+              "program_id": "CAUSEM-92086864b559b96d",
+              "score": 0.00040000000000092696,
+              "accepted": false
+            },
+            {
+              "feature": "X2",
+              "program_id": "CAUSEM-d29f43b46d609c3b",
+              "score": 0.0004000000000010957,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,1)",
+              "program_id": "CAUSEM-dfa7891df811e4f1",
+              "score": 0.00040000000000110027,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,2)",
+              "program_id": "CAUSEM-0e2b9c7b40e99d09",
+              "score": 0.00040000000000106574,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(1,2)",
+              "program_id": "CAUSEM-0c62f065a33a4895",
+              "score": 0.00040000000000084087,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(0)",
+              "program_id": "CAUSEM-cc3c3aaccc7e0068",
+              "score": 0.00040000000000127206,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(1)",
+              "program_id": "CAUSEM-34aa82d2bb2a10b0",
+              "score": 0.00040000000000095385,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(2)",
+              "program_id": "CAUSEM-4a9b621c40eb1af1",
+              "score": 0.00040000000000067466,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,1)",
+              "program_id": "CAUSEM-610e37c44b5d05a9",
+              "score": 0.0004000000000008521,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,2)",
+              "program_id": "CAUSEM-f3ced4008caeb3f5",
+              "score": 0.00040000000000087627,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,0)",
+              "program_id": "CAUSEM-e7b06a76ebdf9c59",
+              "score": 0.00040000000000079805,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,1)",
+              "program_id": "CAUSEM-e89e242fc4ef3ad1",
+              "score": 0.0004000000000007928,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,2)",
+              "program_id": "CAUSEM-6abb1ccd6f8ed838",
+              "score": 0.0004000000000010525,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,0)",
+              "program_id": "CAUSEM-3e0fec8d1193e783",
+              "score": 0.0004000000000006534,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,1)",
+              "program_id": "CAUSEM-747ab9153f88988a",
+              "score": 0.00040000000000053486,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,2)",
+              "program_id": "CAUSEM-f9faac8cd4c199e1",
+              "score": 0.0004000000000012772,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,0)",
+              "program_id": "CAUSEM-882fe91efe520cc6",
+              "score": 0.00040000000000145133,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,1)",
+              "program_id": "CAUSEM-c4ca960d70ed784a",
+              "score": 0.00040000000000062896,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,2)",
+              "program_id": "CAUSEM-d2463d1688039ee3",
+              "score": 0.00040000000000057497,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,0)",
+              "program_id": "CAUSEM-c74476858a2fbd18",
+              "score": 0.0004000000000012554,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,1)",
+              "program_id": "CAUSEM-a688535d289abc40",
+              "score": 0.0004000000000005957,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,2)",
+              "program_id": "CAUSEM-2f9da3943cd27ee1",
+              "score": 0.000400000000000325,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,0)",
+              "program_id": "CAUSEM-67e11f9e4db7393b",
+              "score": 0.0004000000000007311,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,1)",
+              "program_id": "CAUSEM-7ac7067484316eef",
+              "score": 0.0004000000000007415,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,2)",
+              "program_id": "CAUSEM-1f9c56c68f068a4c",
+              "score": 0.0004000000000007311,
+              "accepted": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 4,
+          "selected_mutation": null,
+          "information_gain": 0.0,
+          "program_after": {
+            "program_id": "CAUSEM-9b917b561d8392bf",
+            "features": [
+              "ONE",
+              "COUPLE(0,1,2)",
+              "GUARD(0,1,0)"
+            ],
+            "coefficients": [
+              -7.968858018630728e-14,
+              1.0000000000000004,
+              1.0000000000000007
+            ],
+            "cross_validated_rmse": 3.7229405185596475e-14,
+            "score": 0.00030000000000054126,
+            "opaque_program": "INTERVENTION_UPDATE<W0*ONE;W1*COUPLE(0,1,2);W2*GUARD(0,1,0)>",
+            "human_formula_name": null,
+            "named_mechanism_family_supplied": false
+          },
+          "sterile_round_count": 2,
+          "trials": [
+            {
+              "feature": "X0",
+              "program_id": "CAUSEM-371a3cb04ede96d0",
+              "score": 0.00040000000000095563,
+              "accepted": false
+            },
+            {
+              "feature": "X1",
+              "program_id": "CAUSEM-658f50482fb1838b",
+              "score": 0.00040000000000097596,
+              "accepted": false
+            },
+            {
+              "feature": "X2",
+              "program_id": "CAUSEM-57827fd735609b6e",
+              "score": 0.0004000000000008111,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,1)",
+              "program_id": "CAUSEM-dfa7891df811e4f1",
+              "score": 0.00040000000000065764,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,2)",
+              "program_id": "CAUSEM-cf1eab593ab57fb4",
+              "score": 0.00040000000000132784,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(1,2)",
+              "program_id": "CAUSEM-0c62f065a33a4895",
+              "score": 0.0004000000000007262,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(0)",
+              "program_id": "CAUSEM-a451ec05aa982e46",
+              "score": 0.00040000000000083616,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(1)",
+              "program_id": "CAUSEM-77ea182d78b1538d",
+              "score": 0.00040000000000108726,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(2)",
+              "program_id": "CAUSEM-b32d06c2b65539ab",
+              "score": 0.00040000000000134915,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,1)",
+              "program_id": "CAUSEM-f2191f05245fd7a2",
+              "score": 0.0004000000000006548,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,2)",
+              "program_id": "CAUSEM-1892624069071841",
+              "score": 0.00040000000000073733,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,0)",
+              "program_id": "CAUSEM-e7b06a76ebdf9c59",
+              "score": 0.0004000000000015539,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,1)",
+              "program_id": "CAUSEM-dcd62ffbaa2b099b",
+              "score": 0.00040000000000061574,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,2)",
+              "program_id": "CAUSEM-064f928f0ec04c16",
+              "score": 0.00040000000000060815,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,0)",
+              "program_id": "CAUSEM-c3c2e74077ea3daa",
+              "score": 0.00040000000000103787,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,1)",
+              "program_id": "CAUSEM-3481d548695b1ec8",
+              "score": 0.0004000000000009705,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,2)",
+              "program_id": "CAUSEM-f9faac8cd4c199e1",
+              "score": 0.00040000000000069857,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,0)",
+              "program_id": "CAUSEM-882fe91efe520cc6",
+              "score": 0.00040000000000048243,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,1)",
+              "program_id": "CAUSEM-41ff53c544c248c6",
+              "score": 0.00040000000000126566,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,2)",
+              "program_id": "CAUSEM-dd7004bdf2ae2e2a",
+              "score": 0.0004000000000006106,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,0)",
+              "program_id": "CAUSEM-443ba49617b1973e",
+              "score": 0.0004000000000012312,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,1)",
+              "program_id": "CAUSEM-4f60556c0cd12923",
+              "score": 0.00040000000000114467,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,2)",
+              "program_id": "CAUSEM-2f9da3943cd27ee1",
+              "score": 0.0004000000000008022,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,0)",
+              "program_id": "CAUSEM-800a2a7299158549",
+              "score": 0.00040000000000067315,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,1)",
+              "program_id": "CAUSEM-512c52c3c6d32ec8",
+              "score": 0.00040000000000076926,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,2)",
+              "program_id": "CAUSEM-c4907879a9aec2eb",
+              "score": 0.00040000000000067315,
+              "accepted": false
+            }
+          ],
+          "host_selected": false
+        },
+        {
+          "round_index": 5,
+          "selected_mutation": null,
+          "information_gain": 0.0,
+          "program_after": {
+            "program_id": "CAUSEM-9b917b561d8392bf",
+            "features": [
+              "ONE",
+              "COUPLE(0,1,2)",
+              "GUARD(0,1,0)"
+            ],
+            "coefficients": [
+              -3.2932860830723665e-14,
+              1.0000000000000002,
+              1.000000000000003
+            ],
+            "cross_validated_rmse": 3.3083901009314997e-14,
+            "score": 0.00030000000000048824,
+            "opaque_program": "INTERVENTION_UPDATE<W0*ONE;W1*COUPLE(0,1,2);W2*GUARD(0,1,0)>",
+            "human_formula_name": null,
+            "named_mechanism_family_supplied": false
+          },
+          "sterile_round_count": 3,
+          "trials": [
+            {
+              "feature": "X0",
+              "program_id": "CAUSEM-371a3cb04ede96d0",
+              "score": 0.00040000000000088034,
+              "accepted": false
+            },
+            {
+              "feature": "X1",
+              "program_id": "CAUSEM-658f50482fb1838b",
+              "score": 0.00040000000000061357,
+              "accepted": false
+            },
+            {
+              "feature": "X2",
+              "program_id": "CAUSEM-8115793fe5db08ed",
+              "score": 0.0004000000000005845,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,1)",
+              "program_id": "CAUSEM-cf5ae2baa76cfd52",
+              "score": 0.0004000000000005932,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(0,2)",
+              "program_id": "CAUSEM-cf1eab593ab57fb4",
+              "score": 0.0004000000000008665,
+              "accepted": false
+            },
+            {
+              "feature": "COUPLE(1,2)",
+              "program_id": "CAUSEM-cb6b4d7e0481c606",
+              "score": 0.000400000000000868,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(0)",
+              "program_id": "CAUSEM-91e5fbce77ef2cfb",
+              "score": 0.00040000000000079675,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(1)",
+              "program_id": "CAUSEM-07c566cd425688ce",
+              "score": 0.00040000000000069266,
+              "accepted": false
+            },
+            {
+              "feature": "SELF(2)",
+              "program_id": "CAUSEM-b5e836612d31fd30",
+              "score": 0.0004000000000005607,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,1)",
+              "program_id": "CAUSEM-f2191f05245fd7a2",
+              "score": 0.0004000000000005523,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,1,2)",
+              "program_id": "CAUSEM-79b88057c491bc4a",
+              "score": 0.000400000000001162,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,0)",
+              "program_id": "CAUSEM-108acd829bce95d4",
+              "score": 0.00040000000000055426,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,1)",
+              "program_id": "CAUSEM-e89e242fc4ef3ad1",
+              "score": 0.00040000000000079864,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(0,2,2)",
+              "program_id": "CAUSEM-064f928f0ec04c16",
+              "score": 0.0004000000000008417,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,0)",
+              "program_id": "CAUSEM-989e4a88f5f7ad0d",
+              "score": 0.00040000000000056706,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,1)",
+              "program_id": "CAUSEM-521ae4b4806c1541",
+              "score": 0.0004000000000009084,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,0,2)",
+              "program_id": "CAUSEM-80a74b2cf4bcb64a",
+              "score": 0.0004000000000010354,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,0)",
+              "program_id": "CAUSEM-9ea2ab8a3fc1562f",
+              "score": 0.0004000000000008626,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,1)",
+              "program_id": "CAUSEM-41ff53c544c248c6",
+              "score": 0.00040000000000067103,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(1,2,2)",
+              "program_id": "CAUSEM-d0cfdf4dbfb0b91d",
+              "score": 0.00040000000000088354,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,0)",
+              "program_id": "CAUSEM-1087b3b6f82d1696",
+              "score": 0.00040000000000087405,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,1)",
+              "program_id": "CAUSEM-4f60556c0cd12923",
+              "score": 0.00040000000000060685,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,0,2)",
+              "program_id": "CAUSEM-f1c70e1e16adb7f5",
+              "score": 0.00040000000000058294,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,0)",
+              "program_id": "CAUSEM-84a12fdcc8205ddb",
+              "score": 0.0004000000000005944,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,1)",
+              "program_id": "CAUSEM-512c52c3c6d32ec8",
+              "score": 0.0004000000000009289,
+              "accepted": false
+            },
+            {
+              "feature": "GUARD(2,1,2)",
+              "program_id": "CAUSEM-ad648bc9d53912c3",
+              "score": 0.0004000000000005944,
+              "accepted": false
+            }
+          ],
+          "host_selected": false
+        }
+      ],
+      "selected_program": {
+        "program_id": "CAUSEM-9b917b561d8392bf",
+        "features": [
+          "ONE",
+          "COUPLE(0,1,2)",
+          "GUARD(0,1,0)"
+        ],
+        "coefficients": [
+          -3.2932860830723665e-14,
+          1.0000000000000002,
+          1.000000000000003
+        ],
+        "cross_validated_rmse": 3.3083901009314997e-14,
+        "score": 0.00030000000000048824,
+        "opaque_program": "INTERVENTION_UPDATE<W0*ONE;W1*COUPLE(0,1,2);W2*GUARD(0,1,0)>",
+        "human_formula_name": null,
+        "named_mechanism_family_supplied": false
+      }
+    },
+    "preregistration": {
+      "program_commitment": "97c4b8619ecdf1179d33357daf97413daddddba8e32b3895513fa5754e87c0a3",
+      "commit_event_index": 0,
+      "transfer_event_index": 1,
+      "commitment_precedes_transfer": true
+    },
+    "sealed_counterfactual_audit": {
+      "case_count": 25,
+      "rmse": 1.7710197512051476e-14,
+      "maximum_absolute_error": 3.019806626980426e-14,
+      "cases": [
+        {
+          "action": {
+            "action_id": "ACT-7196798bd2a047c4",
+            "values": [
+              2.0,
+              8.0,
+              4.0
+            ]
+          },
+          "predicted": 63.99999999999998,
+          "observed": 64.0,
+          "absolute_error": 2.1316282072803006e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-155b49508eeae84a",
+            "values": [
+              3.0,
+              4.0,
+              3.0
+            ]
+          },
+          "predicted": 35.99999999999997,
+          "observed": 36.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-7e89c844fb8bf60d",
+            "values": [
+              3.0,
+              5.0,
+              1.0
+            ]
+          },
+          "predicted": 14.99999999999997,
+          "observed": 15.0,
+          "absolute_error": 3.019806626980426e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-47dda3a2212965cb",
+            "values": [
+              3.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 20.99999999999997,
+          "observed": 21.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-20ddb0f6f3af2164",
+            "values": [
+              4.0,
+              3.0,
+              4.0
+            ]
+          },
+          "predicted": 51.99999999999999,
+          "observed": 52.0,
+          "absolute_error": 7.105427357601002e-15
+        },
+        {
+          "action": {
+            "action_id": "ACT-f13233e4fc4dabca",
+            "values": [
+              4.0,
+              6.0,
+              1.0
+            ]
+          },
+          "predicted": 23.999999999999975,
+          "observed": 24.0,
+          "absolute_error": 2.4868995751603507e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-a949bbb058e18ffa",
+            "values": [
+              5.0,
+              4.0,
+              3.0
+            ]
+          },
+          "predicted": 65.0,
+          "observed": 65.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-af73d8c7fb3792b5",
+            "values": [
+              5.0,
+              4.0,
+              4.0
+            ]
+          },
+          "predicted": 85.0,
+          "observed": 85.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-42330932e3178c61",
+            "values": [
+              5.0,
+              5.0,
+              4.0
+            ]
+          },
+          "predicted": 100.0,
+          "observed": 100.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-aaa541e640288d00",
+            "values": [
+              6.0,
+              2.0,
+              4.0
+            ]
+          },
+          "predicted": 54.0,
+          "observed": 54.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-3ce68975c032e0d8",
+            "values": [
+              6.0,
+              4.0,
+              2.0
+            ]
+          },
+          "predicted": 54.0,
+          "observed": 54.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-0875ed94e9bb1402",
+            "values": [
+              6.0,
+              5.0,
+              1.0
+            ]
+          },
+          "predicted": 35.99999999999999,
+          "observed": 36.0,
+          "absolute_error": 7.105427357601002e-15
+        },
+        {
+          "action": {
+            "action_id": "ACT-141b6d34c1e6f5c1",
+            "values": [
+              6.0,
+              5.0,
+              3.0
+            ]
+          },
+          "predicted": 96.0,
+          "observed": 96.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-4f328684d492b341",
+            "values": [
+              6.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 41.99999999999997,
+          "observed": 42.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-95ecd0df97a5f486",
+            "values": [
+              7.0,
+              2.0,
+              2.0
+            ]
+          },
+          "predicted": 34.99999999999999,
+          "observed": 35.0,
+          "absolute_error": 7.105427357601002e-15
+        },
+        {
+          "action": {
+            "action_id": "ACT-692ee0a41502551e",
+            "values": [
+              7.0,
+              3.0,
+              3.0
+            ]
+          },
+          "predicted": 70.0,
+          "observed": 70.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-ca3a76eff1cb7e90",
+            "values": [
+              7.0,
+              4.0,
+              4.0
+            ]
+          },
+          "predicted": 119.00000000000001,
+          "observed": 119.0,
+          "absolute_error": 1.4210854715202004e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-d85074cce314eb51",
+            "values": [
+              7.0,
+              5.0,
+              4.0
+            ]
+          },
+          "predicted": 147.00000000000003,
+          "observed": 147.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-66ad1e05246be6ea",
+            "values": [
+              7.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 48.99999999999998,
+          "observed": 49.0,
+          "absolute_error": 2.1316282072803006e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-1233744a9ae89214",
+            "values": [
+              7.0,
+              7.0,
+              4.0
+            ]
+          },
+          "predicted": 196.00000000000003,
+          "observed": 196.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-0e36f19f056f586a",
+            "values": [
+              7.0,
+              8.0,
+              2.0
+            ]
+          },
+          "predicted": 112.0,
+          "observed": 112.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-05c51ac1e77b174a",
+            "values": [
+              8.0,
+              4.0,
+              4.0
+            ]
+          },
+          "predicted": 136.00000000000003,
+          "observed": 136.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-339e59ee2f4b0cc6",
+            "values": [
+              8.0,
+              6.0,
+              2.0
+            ]
+          },
+          "predicted": 104.00000000000001,
+          "observed": 104.0,
+          "absolute_error": 1.4210854715202004e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-3d5b66fcbe7d47f0",
+            "values": [
+              8.0,
+              8.0,
+              2.0
+            ]
+          },
+          "predicted": 128.0,
+          "observed": 128.0,
+          "absolute_error": 0.0
+        },
+        {
+          "action": {
+            "action_id": "ACT-124baef33c581bf2",
+            "values": [
+              8.0,
+              8.0,
+              4.0
+            ]
+          },
+          "predicted": 256.0,
+          "observed": 256.0,
+          "absolute_error": 0.0
+        }
+      ],
+      "counterexamples": [
+        {
+          "action": {
+            "action_id": "ACT-7e89c844fb8bf60d",
+            "values": [
+              3.0,
+              5.0,
+              1.0
+            ]
+          },
+          "predicted": 14.99999999999997,
+          "observed": 15.0,
+          "absolute_error": 3.019806626980426e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-155b49508eeae84a",
+            "values": [
+              3.0,
+              4.0,
+              3.0
+            ]
+          },
+          "predicted": 35.99999999999997,
+          "observed": 36.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-47dda3a2212965cb",
+            "values": [
+              3.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 20.99999999999997,
+          "observed": 21.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-4f328684d492b341",
+            "values": [
+              6.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 41.99999999999997,
+          "observed": 42.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-d85074cce314eb51",
+            "values": [
+              7.0,
+              5.0,
+              4.0
+            ]
+          },
+          "predicted": 147.00000000000003,
+          "observed": 147.0,
+          "absolute_error": 2.842170943040401e-14
+        }
+      ]
+    },
+    "causal_effect_audit": {
+      "direction": "assigned Q slots -> observed response",
+      "observational_direction_claimed": false,
+      "essential_controls": [
+        {
+          "control_slot": "Q0",
+          "matched_pair_count": 11,
+          "nonzero_effect_count": 11,
+          "essential_effect_observed": true
+        },
+        {
+          "control_slot": "Q1",
+          "matched_pair_count": 9,
+          "nonzero_effect_count": 9,
+          "essential_effect_observed": true
+        },
+        {
+          "control_slot": "Q2",
+          "matched_pair_count": 4,
+          "nonzero_effect_count": 4,
+          "essential_effect_observed": true
+        }
+      ]
+    },
+    "mistake_room": {
+      "rejected_structural_features": [
+        {
+          "round_index": 1,
+          "feature": "X0",
+          "score": 1.0426961193612712,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "X1",
+          "score": 1.032252114776915,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "X2",
+          "score": 1.1076345257100761,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "COUPLE(0,1)",
+          "score": 0.7733484348446198,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "COUPLE(0,2)",
+          "score": 0.7313544209590284,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "COUPLE(1,2)",
+          "score": 0.9969945377234564,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "SELF(0)",
+          "score": 1.063545486642654,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "SELF(1)",
+          "score": 1.0531858491214843,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "SELF(2)",
+          "score": 1.1675534347505832,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(0,1,0)",
+          "score": 1.1342627795875724,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(0,1,1)",
+          "score": 0.9512799251760408,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(0,1,2)",
+          "score": 1.2226336373785711,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(0,2,0)",
+          "score": 1.0431639001359498,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(0,2,1)",
+          "score": 1.000988635345049,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(0,2,2)",
+          "score": 0.7765711674826818,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(1,0,0)",
+          "score": 1.2348955136958675,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(1,0,1)",
+          "score": 1.2115700158342506,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(1,0,2)",
+          "score": 1.1927911054471858,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(1,2,0)",
+          "score": 1.1346227468338506,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(1,2,1)",
+          "score": 1.0943442991286596,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(1,2,2)",
+          "score": 1.1242886974868795,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(2,0,0)",
+          "score": 1.1246378335635965,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(2,0,1)",
+          "score": 1.1246378335635965,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(2,0,2)",
+          "score": 1.1246378335635965,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(2,1,0)",
+          "score": 1.1226319545189112,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(2,1,1)",
+          "score": 1.1226319545189114,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 1,
+          "feature": "GUARD(2,1,2)",
+          "score": 1.1226319545189112,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "X0",
+          "score": 0.03666132993220512,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "X1",
+          "score": 0.05305536022555723,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "X2",
+          "score": 0.06730588638576361,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "COUPLE(0,1)",
+          "score": 0.07200872641464014,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "COUPLE(0,2)",
+          "score": 0.05194070698311842,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "COUPLE(1,2)",
+          "score": 0.06681737703451458,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "SELF(0)",
+          "score": 0.03231008270683566,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "SELF(1)",
+          "score": 0.05216828468084422,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "SELF(2)",
+          "score": 0.06767405363348732,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(0,1,1)",
+          "score": 0.036644056252563485,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(0,1,2)",
+          "score": 0.06197893352615934,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(0,2,0)",
+          "score": 0.05003310457768382,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(0,2,1)",
+          "score": 0.06889700150479962,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(0,2,2)",
+          "score": 0.06539173401645136,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(1,0,0)",
+          "score": 0.04837507172351445,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(1,0,1)",
+          "score": 0.042809512158183155,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(1,0,2)",
+          "score": 0.05040023088616107,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(1,2,0)",
+          "score": 0.07119887921431274,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(1,2,1)",
+          "score": 0.0503626958402723,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(1,2,2)",
+          "score": 0.05325612752918936,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(2,0,0)",
+          "score": 0.06224275836594542,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(2,0,1)",
+          "score": 0.06224275836594517,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(2,0,2)",
+          "score": 0.0622427583659455,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(2,1,0)",
+          "score": 0.06300202256116633,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(2,1,1)",
+          "score": 0.06300202256116604,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 2,
+          "feature": "GUARD(2,1,2)",
+          "score": 0.06300202256116633,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "X0",
+          "score": 0.0004000000000011012,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "X1",
+          "score": 0.00040000000000092696,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "X2",
+          "score": 0.0004000000000010957,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "COUPLE(0,1)",
+          "score": 0.00040000000000110027,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "COUPLE(0,2)",
+          "score": 0.00040000000000106574,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "COUPLE(1,2)",
+          "score": 0.00040000000000084087,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "SELF(0)",
+          "score": 0.00040000000000127206,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "SELF(1)",
+          "score": 0.00040000000000095385,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "SELF(2)",
+          "score": 0.00040000000000067466,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(0,1,1)",
+          "score": 0.0004000000000008521,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(0,1,2)",
+          "score": 0.00040000000000087627,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(0,2,0)",
+          "score": 0.00040000000000079805,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(0,2,1)",
+          "score": 0.0004000000000007928,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(0,2,2)",
+          "score": 0.0004000000000010525,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(1,0,0)",
+          "score": 0.0004000000000006534,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(1,0,1)",
+          "score": 0.00040000000000053486,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(1,0,2)",
+          "score": 0.0004000000000012772,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(1,2,0)",
+          "score": 0.00040000000000145133,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(1,2,1)",
+          "score": 0.00040000000000062896,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(1,2,2)",
+          "score": 0.00040000000000057497,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(2,0,0)",
+          "score": 0.0004000000000012554,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(2,0,1)",
+          "score": 0.0004000000000005957,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(2,0,2)",
+          "score": 0.000400000000000325,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(2,1,0)",
+          "score": 0.0004000000000007311,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(2,1,1)",
+          "score": 0.0004000000000007415,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 3,
+          "feature": "GUARD(2,1,2)",
+          "score": 0.0004000000000007311,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "X0",
+          "score": 0.00040000000000095563,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "X1",
+          "score": 0.00040000000000097596,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "X2",
+          "score": 0.0004000000000008111,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "COUPLE(0,1)",
+          "score": 0.00040000000000065764,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "COUPLE(0,2)",
+          "score": 0.00040000000000132784,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "COUPLE(1,2)",
+          "score": 0.0004000000000007262,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "SELF(0)",
+          "score": 0.00040000000000083616,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "SELF(1)",
+          "score": 0.00040000000000108726,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "SELF(2)",
+          "score": 0.00040000000000134915,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(0,1,1)",
+          "score": 0.0004000000000006548,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(0,1,2)",
+          "score": 0.00040000000000073733,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(0,2,0)",
+          "score": 0.0004000000000015539,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(0,2,1)",
+          "score": 0.00040000000000061574,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(0,2,2)",
+          "score": 0.00040000000000060815,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(1,0,0)",
+          "score": 0.00040000000000103787,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(1,0,1)",
+          "score": 0.0004000000000009705,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(1,0,2)",
+          "score": 0.00040000000000069857,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(1,2,0)",
+          "score": 0.00040000000000048243,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(1,2,1)",
+          "score": 0.00040000000000126566,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(1,2,2)",
+          "score": 0.0004000000000006106,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(2,0,0)",
+          "score": 0.0004000000000012312,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(2,0,1)",
+          "score": 0.00040000000000114467,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(2,0,2)",
+          "score": 0.0004000000000008022,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(2,1,0)",
+          "score": 0.00040000000000067315,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(2,1,1)",
+          "score": 0.00040000000000076926,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 4,
+          "feature": "GUARD(2,1,2)",
+          "score": 0.00040000000000067315,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "X0",
+          "score": 0.00040000000000088034,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "X1",
+          "score": 0.00040000000000061357,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "X2",
+          "score": 0.0004000000000005845,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "COUPLE(0,1)",
+          "score": 0.0004000000000005932,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "COUPLE(0,2)",
+          "score": 0.0004000000000008665,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "COUPLE(1,2)",
+          "score": 0.000400000000000868,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "SELF(0)",
+          "score": 0.00040000000000079675,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "SELF(1)",
+          "score": 0.00040000000000069266,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "SELF(2)",
+          "score": 0.0004000000000005607,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(0,1,1)",
+          "score": 0.0004000000000005523,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(0,1,2)",
+          "score": 0.000400000000001162,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(0,2,0)",
+          "score": 0.00040000000000055426,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(0,2,1)",
+          "score": 0.00040000000000079864,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(0,2,2)",
+          "score": 0.0004000000000008417,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(1,0,0)",
+          "score": 0.00040000000000056706,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(1,0,1)",
+          "score": 0.0004000000000009084,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(1,0,2)",
+          "score": 0.0004000000000010354,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(1,2,0)",
+          "score": 0.0004000000000008626,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(1,2,1)",
+          "score": 0.00040000000000067103,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(1,2,2)",
+          "score": 0.00040000000000088354,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(2,0,0)",
+          "score": 0.00040000000000087405,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(2,0,1)",
+          "score": 0.00040000000000060685,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(2,0,2)",
+          "score": 0.00040000000000058294,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(2,1,0)",
+          "score": 0.0004000000000005944,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(2,1,1)",
+          "score": 0.0004000000000009289,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        },
+        {
+          "round_index": 5,
+          "feature": "GUARD(2,1,2)",
+          "score": 0.0004000000000005944,
+          "reason": "did_not_improve_cross_validated_score_after_complexity_cost"
+        }
+      ],
+      "transfer_counterexamples": [
+        {
+          "action": {
+            "action_id": "ACT-7e89c844fb8bf60d",
+            "values": [
+              3.0,
+              5.0,
+              1.0
+            ]
+          },
+          "predicted": 14.99999999999997,
+          "observed": 15.0,
+          "absolute_error": 3.019806626980426e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-155b49508eeae84a",
+            "values": [
+              3.0,
+              4.0,
+              3.0
+            ]
+          },
+          "predicted": 35.99999999999997,
+          "observed": 36.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-47dda3a2212965cb",
+            "values": [
+              3.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 20.99999999999997,
+          "observed": 21.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-4f328684d492b341",
+            "values": [
+              6.0,
+              7.0,
+              1.0
+            ]
+          },
+          "predicted": 41.99999999999997,
+          "observed": 42.0,
+          "absolute_error": 2.842170943040401e-14
+        },
+        {
+          "action": {
+            "action_id": "ACT-d85074cce314eb51",
+            "values": [
+              7.0,
+              5.0,
+              4.0
+            ]
+          },
+          "predicted": 147.00000000000003,
+          "observed": 147.0,
+          "absolute_error": 2.842170943040401e-14
+        }
+      ],
+      "replay_policy": "retest rejected structures only after new intervention evidence changes cross-validated score"
+    },
+    "posthoc_translation": {
+      "internal_formula": "(-3.29328608307e-14)*ONE + (1)*COUPLE(0,1,2) + (1)*GUARD(0,1,0)",
+      "Q0": "outer executable loop bound",
+      "Q1": "middle executable loop bound",
+      "Q2": "inner executable loop bound",
+      "response": "executed operation count",
+      "human_equivalent": "three-control interaction plus a guarded asymmetric branch",
+      "labels_revealed_after_discovery": true
+    },
+    "discovery_gates": {
+      "three_anonymous_controls_available": true,
+      "mechanism_and_control_names_hidden": true,
+      "initial_interventions_selected_without_responses": true,
+      "adaptive_interventions_selected_by_model": true,
+      "safe_action_broker_rejects_invalid_intervention": true,
+      "all_batches_committed_before_execution": true,
+      "multi_action_order_randomized": true,
+      "live_experiments_executed": true,
+      "research_language_grew": true,
+      "autonomous_semantic_saturation_stop": true,
+      "transfer_sealed_until_program_commitment": true,
+      "frozen_program_predicts_sealed_interventions": true,
+      "every_assigned_control_has_matched_pair_effect": true,
+      "new_process_replication": true,
+      "mistake_room_contains_rejected_mechanisms": true,
+      "natural_system_claim_blocked": true,
+      "external_laboratory_claim_blocked": true,
+      "fully_autonomous_scientist_claim_blocked": true
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "three_anonymous_controls_available",
+        "passed": true
+      },
+      {
+        "obligation_id": "mechanism_and_control_names_hidden",
+        "passed": true
+      },
+      {
+        "obligation_id": "initial_interventions_selected_without_responses",
+        "passed": true
+      },
+      {
+        "obligation_id": "adaptive_interventions_selected_by_model",
+        "passed": true
+      },
+      {
+        "obligation_id": "safe_action_broker_rejects_invalid_intervention",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_batches_committed_before_execution",
+        "passed": true
+      },
+      {
+        "obligation_id": "multi_action_order_randomized",
+        "passed": true
+      },
+      {
+        "obligation_id": "live_experiments_executed",
+        "passed": true
+      },
+      {
+        "obligation_id": "research_language_grew",
+        "passed": true
+      },
+      {
+        "obligation_id": "autonomous_semantic_saturation_stop",
+        "passed": true
+      },
+      {
+        "obligation_id": "transfer_sealed_until_program_commitment",
+        "passed": true
+      },
+      {
+        "obligation_id": "frozen_program_predicts_sealed_interventions",
+        "passed": true
+      },
+      {
+        "obligation_id": "every_assigned_control_has_matched_pair_effect",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_process_replication",
+        "passed": true
+      },
+      {
+        "obligation_id": "mistake_room_contains_rejected_mechanisms",
+        "passed": true
+      },
+      {
+        "obligation_id": "natural_system_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "external_laboratory_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "fully_autonomous_scientist_claim_blocked",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "autonomous_intervention_design_allowed": true,
+      "autonomous_safe_execution_allowed": true,
+      "computational_causal_mechanism_allowed": true,
+      "natural_physical_causal_law_allowed": false,
+      "external_laboratory_replication_allowed": false,
+      "human_unknown_law_allowed": false,
+      "fully_autonomous_scientist_allowed": false,
+      "current_label": "V45_BOUNDED_AUTONOMOUS_INTERVENTION_PHYSICAL_APPARATUS_REQUIRED"
+    },
+    "limitations": [
+      "The interventions execute in a local computational apparatus, not an unknown natural physical system.",
+      "The host supplies safe ranges, a finite action space, arithmetic, least squares, and structural feature constructors.",
+      "The evaluator knows the apparatus implementation; the learner process does not receive it.",
+      "New-process replay is on the same machine and is not independent-laboratory replication.",
+      "No human-unknown law or fully autonomous scientist claim is allowed."
+    ]
+  },
+  "independent_verification": {
+    "verifier_version": "autonomous-intervention-v45-independent-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "obligation_id": "program_id_replay",
+        "passed": true,
+        "actual": "CAUSEM-9b917b561d8392bf"
+      },
+      {
+        "obligation_id": "program_commitment_replay",
+        "passed": true,
+        "actual": "97c4b8619ecdf1179d33357daf97413daddddba8e32b3895513fa5754e87c0a3"
+      },
+      {
+        "obligation_id": "fresh_process_transfer_replay",
+        "passed": true,
+        "actual": 1.7710197512051476e-14
+      },
+      {
+        "obligation_id": "commit_before_transfer_replay",
+        "passed": true,
+        "actual": [
+          0,
+          1
+        ]
+      },
+      {
+        "obligation_id": "proof_gate_replay",
+        "passed": true,
+        "actual": 18
+      },
+      {
+        "obligation_id": "overclaim_blocks_replay",
+        "passed": true,
+        "actual": {
+          "autonomous_intervention_design_allowed": true,
+          "autonomous_safe_execution_allowed": true,
+          "computational_causal_mechanism_allowed": true,
+          "natural_physical_causal_law_allowed": false,
+          "external_laboratory_replication_allowed": false,
+          "human_unknown_law_allowed": false,
+          "fully_autonomous_scientist_allowed": false,
+          "current_label": "V45_BOUNDED_AUTONOMOUS_INTERVENTION_PHYSICAL_APPARATUS_REQUIRED"
+        }
+      }
+    ]
+  },
+  "claim": {
+    "achieved": "autonomous multi-control intervention design, safe live execution, language growth, causal effect audit, preregistered sealed counterfactual transfer, and fresh-process replay",
+    "not_achieved": "intervention on an unknown natural physical system, independent-laboratory replication, a human-unknown law, or a fully autonomous scientist"
+  },
+  "storage": {
+    "semantic_room": "artifacts/science/v45/semantics/causal_program_latest.json",
+    "research_ledger": "artifacts/science/v45/ledger/experiment_agenda_latest.json",
+    "mistake_room": "artifacts/science/v45/mistakes/rejected_mechanisms_latest.json"
+  },
+  "content_digest": "848b71278bf5f43fe82353e663b0bf6b39d779233fc6d4d9dc595b35fa462d5d"
+}

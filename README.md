@@ -343,6 +343,7 @@ Detailed reports are in <code>reports/data/*_latest.json</code> for V22 through 
 | V42 <code>XFER-a7588b2a1ab1b64d: INTERACTION_FOLD</code> | recurrent terminal-voltage program with initial-trajectory context and anonymous pairwise interaction features | **Verified on a reused archive with a programmatic seal**: selected on anonymous object A, frozen before object B was revealed to the learner, and remained below RMSE 0.10 in all three object-B stages. Developers had prior archive access, so this is not a fresh human-blind result or a universal battery law. |
 | V43 <code>AUTOSEM-ca24f07411b0f22d: AUTONOMOUS_UPDATE</code> | second-order recurrent update with two anonymously selected exogenous inputs | **Verified bounded research-language growth on the reused archive**: the learner started with one visible input and zero state slots, autonomously grew another input and two state slots, froze the resulting program, and beat V42 transfer RMSE. This is not a fresh external replication or a fully autonomous scientist. |
 | V44 <code>AUTOSEM-24d817b8706b9172: AUTONOMOUS_UPDATE</code> | guarded second-order recurrent update over one autonomously retained anonymous observation channel | **Verified bounded official-world selection**: the system ranked three anonymous NASA/NOAA/USGS worlds, committed before transfer and domain reveal, and passed two unseen source groups at normalized RMSE 0.2530. The first blind choice failed and is retained in the mandatory mistake replay room. This is observational archive research, not causal or fully autonomous science. |
+| V45 <code>CAUSEM-9b917b561d8392bf: INTERVENTION_UPDATE</code> | three-control structural coupling plus an autonomously admitted guarded branch | **Verified bounded autonomous computational intervention**: the system selected and executed 14 safe experiments, grew two causal features, stopped after three sterile rounds, committed its program, and achieved RMSE 1.77e-14 on 25 sealed actions in a new process. The apparatus is computational, not an unknown natural system. |
 
 The frozen V41 recurrence is:
 
@@ -503,7 +504,48 @@ s_t = -0.488947789848
 Post-hoc human mapping: `X0` is all-sky surface shortwave irradiance, `s` is temperature at two metres, `s_0` and `X0_0` are trace-initial context, and `I[...]` is the autonomously selected guarded path. This is a compact multivariate/autoregressive weather-response program, not a universal meteorological law.
 
 V44 implements anonymous multi-world ranking, knowledge-gap selection, preregistration, disjoint-source transfer, a persistent failure room, and an autonomous next-world queue. It does **not** implement unrestricted language invention, causal intervention, live apparatus control, literature-level novelty adjudication, or independent-laboratory replication. A fully autonomous scientist is therefore still not claimed.
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), and [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), and [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json).
+### V45 autonomous intervention design and execution
+
+V45 closes the software-side intervention loop that remained open in V44. A separate apparatus process exposes only three anonymous control slots, safe ranges, 171 development actions, a 20-experiment budget, and a response interface. The learner cannot import or inspect the apparatus implementation and receives no target formula, named causal mechanism, control names, or transfer responses.
+
+Before any response exists, the system chooses a ten-action seed batch by normalized geometric coverage and cost. Later rounds rank every unmeasured safe action with:
+
+```text
+utility = 0.55 normalized_program_disagreement
+        + 0.25 normalized_design_leverage
+        + 0.20 geometric_novelty
+        - 0.03 normalized_action_cost
+```
+
+Every selected batch is committed before execution, multi-action order is randomized, and an external broker rejects out-of-range or over-budget requests. The response is produced only after the committed action is executed.
+
+The research language started with `ONE`. Cross-validated structural growth selected:
+
+```text
+Round 1: admit_structural_feature:COUPLE(0,1,2)   gain 1.0484951210
+Round 2: admit_structural_feature:GUARD(0,1,0)    gain 0.0618958332
+Rounds 3-5: no admissible information gain
+Stop: semantic_saturation after three sterile rounds
+```
+
+The frozen internal program is:
+
+```text
+response = -3.29328608307e-14 * ONE
+         + 1.00000000000 * COUPLE(0,1,2)
+         + 1.00000000000 * GUARD(0,1,0)
+```
+
+Only after discovery, the evaluator maps this to the human-readable equivalent:
+
+```text
+y = Q0 * Q1 * Q2 + I[Q0 > Q1] * Q0
+```
+
+`Q0`, `Q1`, and `Q2` are executable loop bounds; `y` is the executed operation count. Matched intervention pairs independently confirmed nonzero effects for all three controls. After 14 development experiments, the program was committed before a fresh apparatus process executed 25 sealed actions. Transfer RMSE was `1.7710197512e-14`, with maximum absolute error `3.0198066270e-14`.
+
+This verifies autonomous experiment design, safe action execution, mechanism revision, causal effects from assigned interventions, autonomous saturation stopping, and counterfactual transfer **inside a bounded computational apparatus**. It does not establish a natural physical law, external-laboratory replication, unrestricted language invention, human novelty, or a fully autonomous scientist.
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), and [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -531,6 +573,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V42 | counterexample-guided semantic competition and frozen cross-object transfer | reused archive; not a fresh human-blind or independent-laboratory replication |
 | V43 | autonomous generic research-language mutation and saturation-controlled search | bounded genome, supplied regression substrate, reused archive, and no fresh external world |
 | V44 | autonomous anonymous-world ranking, cross-source risk selection, preregistration, official archive transfer, and mandatory failure replay | finite host-curated registry; observational data only; no causal apparatus, unrestricted language, independent lab, or literature novelty verdict |
+| V45 | autonomous multi-control experiment design, committed safe execution, causal feature growth, saturation stopping, and sealed counterfactual transfer | local computational apparatus; finite action space and supplied feature constructors; no unknown natural system or independent laboratory |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
@@ -566,7 +609,7 @@ npm install
 npm run dev
 ~~~
 
-Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>. The V44 autonomous-world report is available at <http://localhost:5173/science-v44>.
+Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>. The V44 autonomous-world report is available at <http://localhost:5173/science-v44>. The V45 autonomous-intervention report is available at <http://localhost:5173/science-v45>.
 
 ## NASA V41 reproduction
 
@@ -595,6 +638,7 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 .\.venv\Scripts\python.exe scripts/run_autonomous_scientist_v43.py
 .\.venv\Scripts\python.exe scripts/build_official_worlds_v44.py
 .\.venv\Scripts\python.exe scripts/run_autonomous_world_research_v44.py
+.\.venv\Scripts\python.exe scripts/run_autonomous_intervention_v45.py
 ~~~
 
 Manually confirm that the archive hash matches before running the builders. Do not commit the raw archive or extracted source files.
@@ -607,7 +651,7 @@ Priority collaboration areas:
 2. Move specialized Python proof obligations into machine-checkable formal systems.
 3. Improve behavioral equivalence and nontriviality checks for generated operators.
 4. Scale synthesis with e-graphs, constraint solving, inductive synthesis, or stronger MDL methods.
-5. Design low-cost blinded apparatus and cross-laboratory replication protocols.
+5. Connect the V45 intervention protocol to a low-cost blinded physical apparatus and organize cross-laboratory replication.
 6. Independently replicate V44 in a laboratory, add blinded intervention-capable worlds, and extend the bounded genome beyond two state slots and fixed least-squares fitting.
 7. Add adversarial worlds, negative results, and benchmarks that defeat current candidates.
 8. Improve dashboard review of ASTs, proof obligations, and failure boundaries.
