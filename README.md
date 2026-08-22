@@ -628,7 +628,32 @@ The negative result is registered as `GAPSEM-45b65daa4f570cfb`, a verified evide
 
 Current claim label: `V49_ANONYMOUS_EVENT_WORLD_LOCAL_SEARCH_VERIFIED_UNIVERSAL_AND_CAUSAL_CLAIMS_BLOCKED`.
 
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json), [V48 semantic-transfer counterexamples](reports/data/semantic_transfer_counterexample_v48_latest.json), and [V49 event-world local search](reports/data/event_world_semantic_search_v49_latest.json).
+### V50 open set-representation synthesis
+
+V50 responds to the V49 evidence gap by changing the research question instead of adding another next-event regressor. While physical labels remain sealed, it derives ordered threshold sets from training values, counts set membership, and synthesizes non-trivial ASTs over adjacent survival levels using only generic addition, subtraction, multiplication, and safe division. Candidates must depend on both levels, change under counterfactual edits, reject tautologies, reconstruct the next count, and remain stable across anonymous groups.
+
+Eight valid ASTs were evaluated. The selected semantic was:
+
+```text
+SETSEM-ff85dcac6477b343
+SAFE_DIV(B, A) ~= 0.750589011403
+```
+
+Here `A` and `B` are the empirical fractions above adjacent thresholds, whose spacing `delta = 0.1` was inferred from training values. The frozen constant reduced validation next-level error to `0.155709` of the identity baseline and sealed error to `0.155494`; sealed constant drift was `0.013449`, with no sealed refit. The relation entered the bounded verified success room, while the largest residuals entered the mandatory mistake room.
+
+Only after sealed verification were the values revealed as USGS earthquake magnitudes. The human equivalent is:
+
+```text
+N(M >= m + 0.1) / N(M >= m) ~= 0.750589
+N(M >= m + n*delta) ~= N(M >= m) * K^n
+log10 N(M >= m) = a - b*M, with estimated b ~= 1.245978
+```
+
+This is a meaningful autonomous rediscovery of the known Gutenberg-Richter frequency-magnitude relation, not a human-unknown law. The post-hoc audit points to the [USGS description](https://www.usgs.gov/publications/calculating-california-seismicity-rates) and the historical [Gutenberg-Richter record](https://pubmed.ncbi.nlm.nih.gov/17770563/). The substrate still supplies ordering, comparison, counting, arithmetic, and a finite AST budget. The next autonomously selected task is `independent_distribution_law_replication` on a genuinely separate event catalog.
+
+Current claim label: `V50_OPEN_SET_REPRESENTATION_REDISCOVERY_VERIFIED_INDEPENDENT_REPLICATION_REQUIRED`.
+
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json), [V47 open-full-text research](reports/data/full_text_literature_research_v47_latest.json), [V48 semantic-transfer counterexamples](reports/data/semantic_transfer_counterexample_v48_latest.json), [V49 event-world local search](reports/data/event_world_semantic_search_v49_latest.json), and [V50 open set representation](reports/data/open_set_representation_v50_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -661,6 +686,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V47 | frozen post-discovery commitment, structure-derived open-literature queries, deterministic paper selection, licensed full-text fingerprints, prior-art classification, and persistent task/budget continuation | corpus is not exhaustive; phrase fingerprints are not expert identity proof; physical science and independent review remain external |
 | V48 | frozen cross-domain semantic transfer, training-only canonical adapters, mandatory counterexample replay, bounded replacement search, and learned execute-or-abstain scope control | replacement passed two of three worlds; no universal formula, causal natural law, or independent replication |
 | V49 | anonymous failed-world selection, finite local language growth, preregistered sealed transfer, negative-result acceptance, and evidence-gap registration | no event predictor beat baseline; finite language and archived observational catalog do not establish impossibility or causation |
+| V50 | data-derived threshold sets, non-trivial relational AST synthesis, counterfactual anti-tautology gates, frozen adjacent-count transfer, and bounded success registration | rediscovered known Gutenberg-Richter relation; arithmetic/count substrate supplied; independent catalog and causation remain external |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
