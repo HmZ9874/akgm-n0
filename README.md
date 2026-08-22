@@ -344,6 +344,7 @@ Detailed reports are in <code>reports/data/*_latest.json</code> for V22 through 
 | V43 <code>AUTOSEM-ca24f07411b0f22d: AUTONOMOUS_UPDATE</code> | second-order recurrent update with two anonymously selected exogenous inputs | **Verified bounded research-language growth on the reused archive**: the learner started with one visible input and zero state slots, autonomously grew another input and two state slots, froze the resulting program, and beat V42 transfer RMSE. This is not a fresh external replication or a fully autonomous scientist. |
 | V44 <code>AUTOSEM-24d817b8706b9172: AUTONOMOUS_UPDATE</code> | guarded second-order recurrent update over one autonomously retained anonymous observation channel | **Verified bounded official-world selection**: the system ranked three anonymous NASA/NOAA/USGS worlds, committed before transfer and domain reveal, and passed two unseen source groups at normalized RMSE 0.2530. The first blind choice failed and is retained in the mandatory mistake replay room. This is observational archive research, not causal or fully autonomous science. |
 | V45 <code>CAUSEM-9b917b561d8392bf: INTERVENTION_UPDATE</code> | three-control structural coupling plus an autonomously admitted guarded branch | **Verified bounded autonomous computational intervention**: the system selected and executed 14 safe experiments, grew two causal features, stopped after three sterile rounds, committed its program, and achieved RMSE 1.77e-14 on 25 sealed actions in a new process. The apparatus is computational, not an unknown natural system. |
+| V46 <code>OPX-c9c8b1a02aa5734c: learned composite opcode</code> | registered compression of the verified V45 coupling-and-guard program | **Verified unified bounded science OS**: gap-selected official network collection, sandboxed semantic creation, causal ablation, an eight-interlock instrument blueprint, resumable budgets, and Crossref metadata audit share one replayable evidence chain. Physical fabrication and a new natural-system intervention were not executed. |
 
 The frozen V41 recurrence is:
 
@@ -545,7 +546,35 @@ y = Q0 * Q1 * Q2 + I[Q0 > Q1] * Q0
 `Q0`, `Q1`, and `Q2` are executable loop bounds; `y` is the executed operation count. Matched intervention pairs independently confirmed nonzero effects for all three controls. After 14 development experiments, the program was committed before a fresh apparatus process executed 25 sealed actions. Transfer RMSE was `1.7710197512e-14`, with maximum absolute error `3.0198066270e-14`.
 
 This verifies autonomous experiment design, safe action execution, mechanism revision, causal effects from assigned interventions, autonomous saturation stopping, and counterfactual transfer **inside a bounded computational apparatus**. It does not establish a natural physical law, external-laboratory replication, unrestricted language invention, human novelty, or a fully autonomous scientist.
-Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), and [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json).
+### V46 unified autonomous science operating system
+
+V46 integrates seven previously separate requirements into one claim-controlled research cycle:
+
+1. **Network reality collection.** The system reads the unresolved V44 agenda, ranks anonymous allowlisted sources, commits to one source, and only then asks an isolated network broker to collect records. Arbitrary URLs are disabled. In the verified run it selected `NETSRC-4b60e57e`, downloaded 1,680 measurements from a new official source group, and recorded HTTP status, timestamps, byte count, URL, and SHA-256 `0edd30a321a15ae56ce8b2a8b8cca8af8a2aabc7b2695d483d5c058cca1a145f`. Domain metadata was revealed afterward as NOAA coastal water-level data. The allowlist also contains [NASA POWER](https://power.larc.nasa.gov/docs/services/api/temporal/daily/) and the [USGS Earthquake Catalog](https://earthquake.usgs.gov/fdsnws/event/1/).
+2. **Sandboxed open language creation.** The verified V45 program was compressed and registered as new opcode `OPX-c9c8b1a02aa5734c`. Its expansion is `ONE + COUPLE(0,1,2) + GUARD(0,1,0)`. Primitive token cost fell from six to one per reuse, and all sealed V45 cases replayed with zero expansion error. The opcode may expand only inside the verifier sandbox; unrestricted native code is not allowed.
+3. **Causal and mechanism reasoning.** V46 builds an intervention graph, records three assigned control effects, represents the three-way interaction and conditional hyperedge, audits confounding, and performs mechanism ablation. Removing `COUPLE(0,1,2)` raises sealed RMSE to `59.8279`; removing `GUARD(0,1,0)` raises it to `3.33543`. Both structures are therefore necessary on the registered domain. A unique universal causal graph is still not claimed.
+4. **Instrument architecture.** The system generated `INST-7b4a0b9dc6569344`: three bounded actuator channels, a timestamped calibrated response sensor, JSON-lines isolation, and eight mandatory interlocks covering hard ranges, rates, energy, timeout, watchdog, manual stop, power isolation, and calibration expiry. The design and control protocol pass digital checks. No hardware was fabricated or modified because fabrication authority, equipment, energy, and budget are absent.
+5. **Long-horizon research management.** Campaign `CAMPAIGN-AKGM-N0-AUTONOMOUS-SCIENCE` persists cycle, tasks, checkpoint digest, compute/network balances, risk, cost, and information gain. Resume behavior is tested. The first verified cycle retained 90 compute units and 18 network requests and autonomously selected `full_text_literature_review` as the next available task.
+6. **Literature and human-knowledge audit.** A separate post-hoc query retrieved 12 records from the [Crossref REST API](https://www.crossref.org/documentation/retrieve-metadata/rest-api/). Related prior-art metadata was detected, so the human-unknown claim is blocked. Crossref metadata is not an exhaustive full-text review; independent domain experts remain required.
+7. **Physical and causal execution boundary.** V46 consumes the verified V45 computational intervention loop and the V40 real scanner safety adapter. It does not claim that a new unknown natural system was manipulated in V46.
+
+The verified capability matrix is deliberately mixed rather than inflated:
+
+```text
+network collection                    executed
+sandboxed composite language creation executed
+computational causal intervention     executed through V45
+real physical adapter                 available through V40
+causal ablation and counterfactuals   executed
+instrument blueprint                  verified design only
+physical fabrication                  not executed
+literature metadata search            executed
+full-text/expert novelty review        pending
+independent laboratory replication    pending
+```
+
+Current claim label: `V46_UNIFIED_BOUNDED_AUTONOMOUS_SCIENCE_PHYSICAL_FABRICATION_AND_INDEPENDENT_LAB_REQUIRED`. V46 is a substantially more autonomous research operating system, but it is not a fully autonomous scientist.
+Reports: [V37](reports/data/empirical_science_v37_latest.json), [V38](reports/data/interventional_science_v38_latest.json), [V39](reports/data/live_randomized_science_v39_latest.json), [V40](reports/data/external_physical_science_v40_latest.json), [V41 registered experiment](reports/data/official_dynamic_science_v41_latest.json), [V41 blind challenge](reports/data/nasa_v41_blind_challenge_latest.json), [V42 counterexample transfer](reports/data/counterexample_transfer_v42_latest.json), [V43 autonomous scientist kernel](reports/data/autonomous_scientist_v43_latest.json), [V44 autonomous official-world research](reports/data/autonomous_world_research_v44_latest.json), [V45 autonomous intervention](reports/data/autonomous_intervention_v45_latest.json), and [V46 autonomous science OS](reports/data/autonomous_science_os_v46_latest.json).
 
 ## Why generated formula counts are not discovery counts
 
@@ -574,6 +603,7 @@ They remain useful search artifacts, but the canonical tables above intentionall
 | V43 | autonomous generic research-language mutation and saturation-controlled search | bounded genome, supplied regression substrate, reused archive, and no fresh external world |
 | V44 | autonomous anonymous-world ranking, cross-source risk selection, preregistration, official archive transfer, and mandatory failure replay | finite host-curated registry; observational data only; no causal apparatus, unrestricted language, independent lab, or literature novelty verdict |
 | V45 | autonomous multi-control experiment design, committed safe execution, causal feature growth, saturation stopping, and sealed counterfactual transfer | local computational apparatus; finite action space and supplied feature constructors; no unknown natural system or independent laboratory |
+| V46 | allowlisted network collection, sandboxed opcode registration, causal ablation, instrument architecture, persistent budgets, and Crossref audit | physical fabrication, new natural-system intervention, full-text novelty review, and independent laboratory remain external |
 
 Dashboard labels such as “high school,” “mechanics,” or “science” denote experiment suites, not full human-equivalent mastery of those subjects.
 
@@ -609,7 +639,7 @@ npm install
 npm run dev
 ~~~
 
-Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>. The V44 autonomous-world report is available at <http://localhost:5173/science-v44>. The V45 autonomous-intervention report is available at <http://localhost:5173/science-v45>.
+Open <http://localhost:5173/>. The dashboard reports evidence; it is not the training location. The V42 report is available at <http://localhost:5173/science-v42>. The V43 report is available at <http://localhost:5173/science-v43>. The V44 autonomous-world report is available at <http://localhost:5173/science-v44>. The V45 autonomous-intervention report is available at <http://localhost:5173/science-v45>. The V46 unified science-OS report is available at <http://localhost:5173/science-v46>.
 
 ## NASA V41 reproduction
 
@@ -639,6 +669,8 @@ Expand-Archive -Path $archive -DestinationPath "data\nasa_v41\official"
 .\.venv\Scripts\python.exe scripts/build_official_worlds_v44.py
 .\.venv\Scripts\python.exe scripts/run_autonomous_world_research_v44.py
 .\.venv\Scripts\python.exe scripts/run_autonomous_intervention_v45.py
+.\.venv\Scripts\python.exe scripts/collect_network_science_v46.py
+.\.venv\Scripts\python.exe scripts/run_autonomous_science_os_v46.py
 ~~~
 
 Manually confirm that the archive hash matches before running the builders. Do not commit the raw archive or extracted source files.
@@ -652,7 +684,7 @@ Priority collaboration areas:
 3. Improve behavioral equivalence and nontriviality checks for generated operators.
 4. Scale synthesis with e-graphs, constraint solving, inductive synthesis, or stronger MDL methods.
 5. Connect the V45 intervention protocol to a low-cost blinded physical apparatus and organize cross-laboratory replication.
-6. Independently replicate V44 in a laboratory, add blinded intervention-capable worlds, and extend the bounded genome beyond two state slots and fixed least-squares fitting.
+6. Fabricate and independently audit the V46 instrument blueprint, add blinded natural-system interventions, and extend sandboxed language creation beyond composite macro registration.
 7. Add adversarial worlds, negative results, and benchmarks that defeat current candidates.
 8. Improve dashboard review of ASTs, proof obligations, and failure boundaries.
 9. Audit halting, memory, numeric range, and sandbox limits for generated programs.

@@ -1,0 +1,840 @@
+{
+  "report_version": "autonomous-science-os-v46.0",
+  "run_id": "RUN-autonomous-science-os-v46-20260822T082043772269Z",
+  "created_at": "2026-08-22T08:20:43.772269+00:00",
+  "verdict": "unified_bounded_autonomous_science_operating_system_verified",
+  "acceptance": {
+    "benchmark_version": "autonomous-science-os-v46.0",
+    "passed": true,
+    "final_status": "verified",
+    "classification": "verified_unified_bounded_autonomous_science_operating_system",
+    "dependency_chain": {
+      "v15": {
+        "run_id": "RUN-self-extending-v15-20260820T221537832222Z",
+        "capability": "self-extending sandboxed semantics",
+        "passed": true
+      },
+      "v17": {
+        "run_id": "RUN-autonomous-research-v17-20260821T000809576188Z",
+        "capability": "gap-driven saturation research loop",
+        "passed": true
+      },
+      "v40": {
+        "run_id": "RUN-external-physical-science-v40-20260821T172756202904Z",
+        "capability": "real external scanner safety adapter",
+        "passed": true
+      },
+      "v45": {
+        "run_id": "RUN-autonomous-intervention-v45-20260822T080009740906Z",
+        "capability": "autonomous computational causal intervention",
+        "passed": true
+      }
+    },
+    "network_reality": {
+      "policy": {
+        "allowlisted_broker": true,
+        "arbitrary_urls_allowed": false,
+        "source_catalog_size": 3
+      },
+      "agenda": {
+        "ranking": [
+          {
+            "source_id": "NETSRC-4b60e57e",
+            "related_world_id": "WORLD-692abdb0cf477f47",
+            "priority": 0.8022620189862426,
+            "expected_information_gain": 1.2994540661855636,
+            "unresolved_gap": 0.6090480759449703,
+            "acquisition_cost": 1.0,
+            "host_selected": false,
+            "domain_name_received": false
+          },
+          {
+            "source_id": "NETSRC-96608f33",
+            "related_world_id": "WORLD-a83610976b378d8f",
+            "priority": 0.22503117697699832,
+            "expected_information_gain": 0.00042060033073942904,
+            "unresolved_gap": 0.49919938718036655,
+            "acquisition_cost": 1.0,
+            "host_selected": false,
+            "domain_name_received": false
+          }
+        ],
+        "selected": {
+          "source_id": "NETSRC-4b60e57e",
+          "related_world_id": "WORLD-692abdb0cf477f47",
+          "priority": 0.8022620189862426,
+          "expected_information_gain": 1.2994540661855636,
+          "unresolved_gap": 0.6090480759449703,
+          "acquisition_cost": 1.0,
+          "host_selected": false,
+          "domain_name_received": false
+        },
+        "host_selected": false
+      },
+      "preregistration": {
+        "source_commitment": "aee376b61e6913a17880858c20b84c21ef5df35f2ab148ec32cc4c7d4f23a62e",
+        "commit_event_index": 0,
+        "collection_event_index": 1,
+        "metadata_reveal_event_index": 2
+      },
+      "collection": {
+        "source_id": "NETSRC-4b60e57e",
+        "record_count": 1680,
+        "records": [
+          {
+            "q0": 0.0,
+            "q1": 0.131
+          },
+          {
+            "q0": 1.0,
+            "q1": 0.146
+          },
+          {
+            "q0": 2.0,
+            "q1": 0.141
+          },
+          {
+            "q0": 3.0,
+            "q1": 0.13
+          },
+          {
+            "q0": 4.0,
+            "q1": 0.137
+          },
+          {
+            "q0": 5.0,
+            "q1": 0.137
+          },
+          {
+            "q0": 6.0,
+            "q1": 0.138
+          },
+          {
+            "q0": 7.0,
+            "q1": 0.14
+          },
+          {
+            "q0": 8.0,
+            "q1": 0.149
+          },
+          {
+            "q0": 9.0,
+            "q1": 0.153
+          },
+          {
+            "q0": 10.0,
+            "q1": 0.153
+          },
+          {
+            "q0": 11.0,
+            "q1": 0.157
+          },
+          {
+            "q0": 12.0,
+            "q1": 0.166
+          },
+          {
+            "q0": 13.0,
+            "q1": 0.166
+          },
+          {
+            "q0": 14.0,
+            "q1": 0.175
+          },
+          {
+            "q0": 15.0,
+            "q1": 0.184
+          },
+          {
+            "q0": 16.0,
+            "q1": 0.185
+          },
+          {
+            "q0": 17.0,
+            "q1": 0.186
+          },
+          {
+            "q0": 18.0,
+            "q1": 0.201
+          },
+          {
+            "q0": 19.0,
+            "q1": 0.21
+          }
+        ],
+        "receipt": {
+          "url": "https://api.tidesandcurrents.noaa.gov/api/prod/datagetter?product=water_level&application=AKGM_N0_V46&begin_date=20240201&end_date=20240207&datum=MLLW&station=1612340&time_zone=gmt&units=metric&format=json",
+          "status": 200,
+          "content_type": "application/json;charset=UTF-8",
+          "bytes": 125660,
+          "sha256": "0edd30a321a15ae56ce8b2a8b8cca8af8a2aabc7b2695d483d5c058cca1a145f",
+          "started_at_unix_ns": 1787386701457087000,
+          "ended_at_unix_ns": 1787386702037624200
+        },
+        "domain_name_exposed_during_collection": false,
+        "records_truncated_in_report": true
+      },
+      "posthoc_source_metadata": {
+        "institution": "NOAA Center for Operational Oceanographic Products and Services",
+        "domain": "coastal water level",
+        "location": "Honolulu, Hawaii station 1612340",
+        "documentation": "https://api.tidesandcurrents.noaa.gov/api/prod/"
+      },
+      "snapshot_content_digest": "a24d66dec47e54e8ee060504733b1db61daccc3d6147b5423caa790d37e375b7"
+    },
+    "open_language_creation": {
+      "invented_semantic": {
+        "semantic_id": "OPX-c9c8b1a02aa5734c",
+        "kind": "learned_composite_opcode",
+        "arity": 3,
+        "expansion_features": [
+          "ONE",
+          "COUPLE(0,1,2)",
+          "GUARD(0,1,0)"
+        ],
+        "expansion_coefficients": [
+          -3.2932860830723665e-14,
+          1.0000000000000002,
+          1.000000000000003
+        ],
+        "primitive_token_cost": 6,
+        "macro_token_cost": 1,
+        "token_savings_per_use": 5,
+        "memory_slots_created": 0,
+        "control_paths_created": 1,
+        "supplied_target_name": false,
+        "sandbox_required": true
+      },
+      "independent_expansion_verification": {
+        "passed": true,
+        "case_count": 25,
+        "maximum_expansion_error": 0.0,
+        "token_compression_verified": true,
+        "unrestricted_native_code_allowed": false
+      },
+      "boundary": "open composite registration inside a finite sandbox; not unrestricted native code or unlimited resources"
+    },
+    "causal_and_mechanism_reasoning": {
+      "graph": {
+        "nodes": [
+          "Q0",
+          "Q1",
+          "Q2",
+          "Y"
+        ],
+        "directed_influences": [
+          {
+            "from": "Q0",
+            "to": "Y",
+            "verified_by_intervention": true
+          },
+          {
+            "from": "Q1",
+            "to": "Y",
+            "verified_by_intervention": true
+          },
+          {
+            "from": "Q2",
+            "to": "Y",
+            "verified_by_intervention": true
+          }
+        ],
+        "interaction_hyperedges": [
+          {
+            "inputs": [
+              "Q0",
+              "Q1",
+              "Q2"
+            ],
+            "to": "Y",
+            "internal_feature": "COUPLE(0,1,2)"
+          },
+          {
+            "condition": "Q0>Q1",
+            "payload": "Q0",
+            "to": "Y",
+            "internal_feature": "GUARD(0,1,0)"
+          }
+        ]
+      },
+      "mechanism_ablation": [
+        {
+          "removed_feature": "COUPLE(0,1,2)",
+          "sealed_rmse": 59.82794546399083,
+          "rmse_ratio_to_full": 3378163649687078.5,
+          "mechanistically_essential": true
+        },
+        {
+          "removed_feature": "GUARD(0,1,0)",
+          "sealed_rmse": 3.335428291463619,
+          "rmse_ratio_to_full": 188333771500510.88,
+          "mechanistically_essential": true
+        }
+      ],
+      "all_selected_mechanisms_essential": true,
+      "counterfactual_transfer_rmse": 1.7710197512051476e-14,
+      "assigned_interventions": true,
+      "randomized_execution_order": true,
+      "confounding_assessment": "control-to-response total effects are identified inside this apparatus because controls were assigned; unique internal mediation is not proved",
+      "unique_universal_causal_graph_claim_allowed": false
+    },
+    "instrument_architecture": {
+      "blueprint": {
+        "blueprint_version": "instrument-blueprint-v46.0",
+        "research_gap": "replace local computational controls with three isolated physical actuator channels and one measured response",
+        "actuator_channels": [
+          {
+            "slot": "Q0",
+            "safe_envelope": [
+              2,
+              8
+            ],
+            "command_mode": "bounded_setpoint"
+          },
+          {
+            "slot": "Q1",
+            "safe_envelope": [
+              2,
+              8
+            ],
+            "command_mode": "bounded_setpoint"
+          },
+          {
+            "slot": "Q2",
+            "safe_envelope": [
+              1,
+              4
+            ],
+            "command_mode": "bounded_setpoint"
+          }
+        ],
+        "sensor_channels": [
+          {
+            "slot": "Y",
+            "requirements": [
+              "timestamp",
+              "value",
+              "unit",
+              "uncertainty",
+              "calibration_digest"
+            ]
+          }
+        ],
+        "controller_protocol": {
+          "transport": "JSON-lines isolated broker",
+          "required_operations": [
+            "metadata",
+            "commit_batch",
+            "run_batch",
+            "commit_program",
+            "emergency_stop"
+          ],
+          "model_has_direct_hardware_access": false
+        },
+        "mandatory_interlocks": [
+          "hard_range_limit",
+          "rate_limit",
+          "energy_budget",
+          "command_timeout",
+          "watchdog",
+          "manual_emergency_stop",
+          "power_isolation",
+          "calibration_expiry"
+        ],
+        "calibration_plan": [
+          "zero_reference",
+          "three_point_span",
+          "repeatability_batch",
+          "randomized_order_drift_check",
+          "sealed_reference_standard"
+        ],
+        "digital_acceptance_tests": [
+          "reject_out_of_range",
+          "reject_uncommitted_batch",
+          "stop_on_timeout",
+          "record_receipt_digest",
+          "holdout_prediction_before_measurement"
+        ],
+        "causal_channels_required": 3,
+        "manufacturing_authority_required": true,
+        "fabrication_executed": false,
+        "current_status": "verified_design_waiting_for_human_approved_fabrication_and_device",
+        "blueprint_id": "INST-7b4a0b9dc6569344"
+      },
+      "verification": {
+        "passed": true,
+        "required_interlock_count": 8,
+        "present_interlock_count": 8,
+        "fabrication_claim_blocked": true
+      },
+      "physical_manufacture_status": "not_executed_no_device_fabricator_budget_or_authority"
+    },
+    "long_horizon_research": {
+      "campaign": {
+        "campaign_id": "CAMPAIGN-AKGM-N0-AUTONOMOUS-SCIENCE",
+        "cycle_index": 1,
+        "resumed_from_prior_state": false,
+        "budgets": {
+          "compute_units_remaining": 90.0,
+          "network_requests_remaining": 18.0,
+          "physical_energy_authorized": 0.0,
+          "fabrication_spend_authorized": 0.0
+        },
+        "tasks": [
+          {
+            "task_id": "network_gap_acquisition",
+            "status": "completed",
+            "information_gain": 0.8,
+            "cost": 1.0,
+            "risk": 0.1
+          },
+          {
+            "task_id": "semantic_language_forge",
+            "status": "completed",
+            "information_gain": 0.7,
+            "cost": 2.0,
+            "risk": 0.2
+          },
+          {
+            "task_id": "causal_mechanism_audit",
+            "status": "completed",
+            "information_gain": 0.9,
+            "cost": 2.0,
+            "risk": 0.2
+          },
+          {
+            "task_id": "physical_instrument_fabrication",
+            "status": "approval_required",
+            "information_gain": 1.0,
+            "cost": 20.0,
+            "risk": 0.9
+          },
+          {
+            "task_id": "independent_laboratory_replication",
+            "status": "external_coordination_required",
+            "information_gain": 1.0,
+            "cost": 30.0,
+            "risk": 0.4
+          },
+          {
+            "task_id": "full_text_literature_review",
+            "status": "queued",
+            "information_gain": 0.6,
+            "cost": 5.0,
+            "risk": 0.1
+          }
+        ],
+        "next_selected_task": "full_text_literature_review",
+        "next_selection_host_selected": false,
+        "pause_reason": null,
+        "checkpoint_digest": "497d49a6a9c9f501a437f0be74d2f0b2452ff0337b2a4fa9da84200113c1a2c1"
+      },
+      "resume_probe": {
+        "campaign_id": "CAMPAIGN-AKGM-N0-AUTONOMOUS-SCIENCE",
+        "cycle_index": 2,
+        "resumed_from_prior_state": true,
+        "budgets": {
+          "compute_units_remaining": 90.0,
+          "network_requests_remaining": 18.0,
+          "physical_energy_authorized": 0.0,
+          "fabrication_spend_authorized": 0.0
+        },
+        "tasks": [
+          {
+            "task_id": "network_gap_acquisition",
+            "status": "completed",
+            "information_gain": 0.8,
+            "cost": 1.0,
+            "risk": 0.1
+          },
+          {
+            "task_id": "semantic_language_forge",
+            "status": "completed",
+            "information_gain": 0.7,
+            "cost": 2.0,
+            "risk": 0.2
+          },
+          {
+            "task_id": "causal_mechanism_audit",
+            "status": "completed",
+            "information_gain": 0.9,
+            "cost": 2.0,
+            "risk": 0.2
+          },
+          {
+            "task_id": "physical_instrument_fabrication",
+            "status": "approval_required",
+            "information_gain": 1.0,
+            "cost": 20.0,
+            "risk": 0.9
+          },
+          {
+            "task_id": "independent_laboratory_replication",
+            "status": "external_coordination_required",
+            "information_gain": 1.0,
+            "cost": 30.0,
+            "risk": 0.4
+          },
+          {
+            "task_id": "full_text_literature_review",
+            "status": "queued",
+            "information_gain": 0.6,
+            "cost": 5.0,
+            "risk": 0.1
+          }
+        ],
+        "next_selected_task": "full_text_literature_review",
+        "next_selection_host_selected": false,
+        "pause_reason": null,
+        "checkpoint_digest": "497d49a6a9c9f501a437f0be74d2f0b2452ff0337b2a4fa9da84200113c1a2c1"
+      },
+      "persistent_state_supported": true
+    },
+    "literature_and_human_knowledge_audit": {
+      "provider": "Crossref REST API",
+      "query": "three-control interaction plus a guarded asymmetric branch computational complexity operation count nested loop conditional branch",
+      "record_count": 12,
+      "related_title_count": 12,
+      "top_records": [
+        {
+          "doi": "10.23940/ijpe.19.11.p5.28712881",
+          "title": "Coarse-Grained Automatic Parallelization Approach for Branch Nested Loop",
+          "type": "journal-article",
+          "container_title": "International Journal of Performability Engineering",
+          "is_referenced_by_count": 1,
+          "query_token_overlap": 0.21428571428571427
+        },
+        {
+          "doi": "10.1109/isca.1994.288156",
+          "title": "Guarded execution and branch prediction in dynamic ILP processors",
+          "type": "proceedings-article",
+          "container_title": "Proceedings of 21 International Symposium on Computer Architecture",
+          "is_referenced_by_count": 39,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.1109/intera.2004.1299513",
+          "title": "Link-time optimization techniques for eliminating conditional branch redundancies",
+          "type": "proceedings-article",
+          "container_title": "Eighth Workshop on Interaction between Compilers and Computer Architectures, 2004. INTERACT-8 2004.",
+          "is_referenced_by_count": 2,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.5840/logos-episteme20112153",
+          "title": "Three Problematic Theories of Conditional Acceptance",
+          "type": "journal-article",
+          "container_title": "Logos &amp; Episteme",
+          "is_referenced_by_count": 2,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.1007/springerreference_10873",
+          "title": "conditional branch instruction",
+          "type": "reference-entry",
+          "container_title": "SpringerReference",
+          "is_referenced_by_count": 0,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.1021/jacs.3c02061.s002",
+          "title": "Oriented Self-Assembly of Hierarchical Branch Organic Crystals for Asymmetric Photonics",
+          "type": "component",
+          "container_title": null,
+          "is_referenced_by_count": 0,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.2172/4042938",
+          "title": "NOVA BRANCH-DRIVER OPERATION.",
+          "type": "report",
+          "container_title": null,
+          "is_referenced_by_count": 0,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.2172/4376992",
+          "title": "Nova Branch-Driver operation",
+          "type": "report",
+          "container_title": null,
+          "is_referenced_by_count": 0,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.62891/f69bee1b",
+          "title": "The Complexity Horizon of Quantum Branch-Access: Information-Theoretic Limits on Cross-Branch Retrieval in Everettian Quantum Mechanics",
+          "type": "posted-content",
+          "container_title": null,
+          "is_referenced_by_count": 0,
+          "query_token_overlap": 0.14285714285714285
+        },
+        {
+          "doi": "10.1007/s00037-011-0033-1",
+          "title": "Satisfiability, Branch-Width and Tseitin tautologies",
+          "type": "journal-article",
+          "container_title": "computational complexity",
+          "is_referenced_by_count": 18,
+          "query_token_overlap": 0.07142857142857142
+        }
+      ],
+      "metadata_receipt": {
+        "url": "https://api.crossref.org/v1/works?query.bibliographic=three-control+interaction+plus+a+guarded+asymmetric+branch+computational+complexity+operation+count+nested+loop+conditional+branch&rows=12&select=DOI%2Ctitle%2Cauthor%2Cpublished%2Ccontainer-title%2Ctype%2Cis-referenced-by-count",
+        "status": 200,
+        "content_type": "application/json",
+        "bytes": 5239,
+        "sha256": "404c01de8793f8370322b6a5b7acef6e5fceb150dd37a91330df09d1957d94ba",
+        "started_at_unix_ns": 1787386702041659700,
+        "ended_at_unix_ns": 1787386702361129500
+      },
+      "full_text_reviewed": false,
+      "audit_status": "prior_art_or_related_human_knowledge_detected",
+      "human_unknown_claim_allowed": false,
+      "reason": "metadata search cannot prove absence from literature; full-text and independent expert review remain required"
+    },
+    "discovery_gates": {
+      "v15_self_extending_language_dependency_verified": true,
+      "v17_long_research_loop_dependency_verified": true,
+      "v40_real_physical_adapter_dependency_verified": true,
+      "v45_autonomous_intervention_dependency_verified": true,
+      "network_snapshot_digest_valid": true,
+      "network_source_selected_by_gap_priority": true,
+      "network_source_not_host_selected": true,
+      "network_commitment_replays": true,
+      "commit_precedes_collection_and_metadata": true,
+      "allowlisted_network_only": true,
+      "official_network_collection_succeeded": true,
+      "domain_hidden_during_collection": true,
+      "new_composite_opcode_created": true,
+      "new_opcode_expansion_verified": true,
+      "unrestricted_native_code_stays_sandboxed": true,
+      "causal_graph_uses_assigned_interventions": true,
+      "mechanism_ablation_supports_selected_structures": true,
+      "sealed_counterfactuals_remain_accurate": true,
+      "instrument_blueprint_safety_verified": true,
+      "fabrication_claim_requires_external_authority": true,
+      "long_horizon_budget_and_checkpoint_recorded": true,
+      "long_horizon_resume_path_verified": true,
+      "next_research_task_selected_without_host": true,
+      "crossref_literature_metadata_collected": true,
+      "literature_audit_blocks_unknown_claim": true,
+      "natural_physical_causal_run_claim_blocked": true,
+      "fully_autonomous_scientist_claim_blocked": true
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "v15_self_extending_language_dependency_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "v17_long_research_loop_dependency_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "v40_real_physical_adapter_dependency_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "v45_autonomous_intervention_dependency_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "network_snapshot_digest_valid",
+        "passed": true
+      },
+      {
+        "obligation_id": "network_source_selected_by_gap_priority",
+        "passed": true
+      },
+      {
+        "obligation_id": "network_source_not_host_selected",
+        "passed": true
+      },
+      {
+        "obligation_id": "network_commitment_replays",
+        "passed": true
+      },
+      {
+        "obligation_id": "commit_precedes_collection_and_metadata",
+        "passed": true
+      },
+      {
+        "obligation_id": "allowlisted_network_only",
+        "passed": true
+      },
+      {
+        "obligation_id": "official_network_collection_succeeded",
+        "passed": true
+      },
+      {
+        "obligation_id": "domain_hidden_during_collection",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_composite_opcode_created",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_opcode_expansion_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "unrestricted_native_code_stays_sandboxed",
+        "passed": true
+      },
+      {
+        "obligation_id": "causal_graph_uses_assigned_interventions",
+        "passed": true
+      },
+      {
+        "obligation_id": "mechanism_ablation_supports_selected_structures",
+        "passed": true
+      },
+      {
+        "obligation_id": "sealed_counterfactuals_remain_accurate",
+        "passed": true
+      },
+      {
+        "obligation_id": "instrument_blueprint_safety_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "fabrication_claim_requires_external_authority",
+        "passed": true
+      },
+      {
+        "obligation_id": "long_horizon_budget_and_checkpoint_recorded",
+        "passed": true
+      },
+      {
+        "obligation_id": "long_horizon_resume_path_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "next_research_task_selected_without_host",
+        "passed": true
+      },
+      {
+        "obligation_id": "crossref_literature_metadata_collected",
+        "passed": true
+      },
+      {
+        "obligation_id": "literature_audit_blocks_unknown_claim",
+        "passed": true
+      },
+      {
+        "obligation_id": "natural_physical_causal_run_claim_blocked",
+        "passed": true
+      },
+      {
+        "obligation_id": "fully_autonomous_scientist_claim_blocked",
+        "passed": true
+      }
+    ],
+    "claim_state": {
+      "autonomous_network_collection_allowed": true,
+      "sandboxed_open_language_creation_allowed": true,
+      "autonomous_computational_causal_experiment_allowed": true,
+      "causal_mechanism_reasoning_allowed": true,
+      "instrument_blueprint_creation_allowed": true,
+      "long_horizon_research_management_allowed": true,
+      "literature_metadata_audit_allowed": true,
+      "real_physical_adapter_available": true,
+      "v46_new_natural_physical_causal_experiment_allowed": false,
+      "physical_instrument_manufactured_allowed": false,
+      "human_unknown_law_allowed": false,
+      "fully_autonomous_scientist_allowed": false,
+      "current_label": "V46_UNIFIED_BOUNDED_AUTONOMOUS_SCIENCE_PHYSICAL_FABRICATION_AND_INDEPENDENT_LAB_REQUIRED"
+    },
+    "capability_status": {
+      "network_reality_collection": "implemented_and_executed",
+      "open_computation_language_creation": "implemented_in_sandbox_with_verified_composite_opcode",
+      "causal_experiment": "executed_in_computational_apparatus; real scanner adapter exists; no new natural-system intervention",
+      "instrument_manufacture_or_modification": "blueprint_and_control_protocol_verified; physical fabrication not executed",
+      "long_term_research_management": "persistent_budgeted_checkpoint_and_resume_path_verified",
+      "stronger_causal_mechanism_reasoning": "intervention_graph_ablation_confounding_and_counterfactual_audits_verified",
+      "literature_human_knowledge_audit": "Crossref_metadata_search_executed; full_text_and_expert_review_pending"
+    },
+    "limitations": [
+      "Network access is deliberately restricted to an external allowlist broker; unrestricted web actions are not granted.",
+      "The new opcode is an arbitrary learned composite inside a finite sandbox, not unrestricted machine-code invention.",
+      "V45 causal interventions are computational and V40 is an engineered scanner calibration; no new unknown natural system was manipulated in V46.",
+      "The instrument was designed and safety-checked digitally but no physical part was fabricated or modified.",
+      "Crossref metadata search cannot establish absence from all literature and did not review full text.",
+      "Safety, fabrication authority, spending, independent verification, and final novelty judgments remain external.",
+      "A fully autonomous scientist is still not claimed."
+    ]
+  },
+  "independent_verification": {
+    "verifier_version": "autonomous-science-os-v46-independent-replay-v0.1",
+    "passed": true,
+    "obligations": [
+      {
+        "obligation_id": "network_snapshot_digest_replay",
+        "passed": true,
+        "actual": "a24d66dec47e54e8ee060504733b1db61daccc3d6147b5423caa790d37e375b7"
+      },
+      {
+        "obligation_id": "invented_semantic_replay",
+        "passed": true,
+        "actual": "OPX-c9c8b1a02aa5734c"
+      },
+      {
+        "obligation_id": "semantic_expansion_replay",
+        "passed": true,
+        "actual": {
+          "passed": true,
+          "case_count": 25,
+          "maximum_expansion_error": 0.0,
+          "token_compression_verified": true,
+          "unrestricted_native_code_allowed": false
+        }
+      },
+      {
+        "obligation_id": "causal_ablation_replay",
+        "passed": true,
+        "actual": 2
+      },
+      {
+        "obligation_id": "instrument_safety_replay",
+        "passed": true,
+        "actual": "INST-7b4a0b9dc6569344"
+      },
+      {
+        "obligation_id": "proof_gate_replay",
+        "passed": true,
+        "actual": 27
+      },
+      {
+        "obligation_id": "overclaim_blocks_replay",
+        "passed": true,
+        "actual": {
+          "autonomous_network_collection_allowed": true,
+          "sandboxed_open_language_creation_allowed": true,
+          "autonomous_computational_causal_experiment_allowed": true,
+          "causal_mechanism_reasoning_allowed": true,
+          "instrument_blueprint_creation_allowed": true,
+          "long_horizon_research_management_allowed": true,
+          "literature_metadata_audit_allowed": true,
+          "real_physical_adapter_available": true,
+          "v46_new_natural_physical_causal_experiment_allowed": false,
+          "physical_instrument_manufactured_allowed": false,
+          "human_unknown_law_allowed": false,
+          "fully_autonomous_scientist_allowed": false,
+          "current_label": "V46_UNIFIED_BOUNDED_AUTONOMOUS_SCIENCE_PHYSICAL_FABRICATION_AND_INDEPENDENT_LAB_REQUIRED"
+        }
+      }
+    ]
+  },
+  "claim": {
+    "achieved": "allowlisted autonomous network collection, sandboxed language creation, causal mechanism audits, verified instrument blueprint, persistent research management, and Crossref metadata audit",
+    "not_achieved": "physical fabrication, a new intervention on an unknown natural system, independent-laboratory replication, exhaustive literature review, a human-unknown law, or a fully autonomous scientist"
+  },
+  "storage": {
+    "campaign_state": "artifacts/science/v46/state/campaign_latest.json",
+    "semantic_room": "artifacts/science/v46/semantics/invented_opcode_latest.json",
+    "causal_audit": "artifacts/science/v46/causal/mechanism_audit_latest.json",
+    "instrument_blueprint": "artifacts/science/v46/instruments/blueprint_latest.json",
+    "literature_audit": "artifacts/science/v46/literature/audit_latest.json"
+  },
+  "content_digest": "bce9abcef60e48cfb55a00a7a728c252e6544be8ebe42c6aea41ce20f9e2150f"
+}
