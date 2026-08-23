@@ -1,0 +1,37 @@
+{
+  "protocol_version": "v52.2-calce-relative-diagnostic-v1.0",
+  "status": "frozen_after_v52.1_preprocessing_failure_before_sealed_access",
+  "parent": {
+    "version": "v52.1",
+    "failure": "A terminal 3.42e-6 Ah bookkeeping discharge exceeded the fixed 1e-6 Ah threshold.",
+    "program_search_started": false,
+    "sealed_archive_accessed": false
+  },
+  "development_data": "All seven non-sealed CALCE protocol groups already accessed in V52/V52.1.",
+  "sealed_group": "G20_80_2C",
+  "diagnostic_rule": {
+    "capacity": "Trapezoidal integral of negative current over time within each cycle, accepting time steps from 0 through 120 seconds.",
+    "initial_reference": "First operation with integrated discharge capacity above 1e-6 Ah.",
+    "later_cycle_eligibility": "Integrated discharge capacity at least 0.10 times the same cell's initial reference capacity.",
+    "selection": "Latest eligible cycle in each operation block.",
+    "countercheck": "Retain disagreement above 2% versus within-cycle Discharge_Ah range."
+  },
+  "learner": {
+    "visible": "Anonymous controls, two time coordinates, normalized response, and anonymous cell/group tokens.",
+    "host_formula_supplied": false,
+    "target_answer_supplied": false,
+    "selection": "Leave-one-protocol-group-out program search using the previously committed V52 atom grammar."
+  },
+  "sealed_success": {
+    "program_commitment_before_download": true,
+    "maximum_rmse_ratio_to_best_registered_baseline": 0.80,
+    "parameter_refit": false,
+    "parser_crosscheck_must_preserve_conclusion": true
+  },
+  "blocked_claims": [
+    "electrochemical mediation",
+    "rate effect separated from heating",
+    "cross-chemistry universality",
+    "human-unknown law or breakthrough"
+  ]
+}

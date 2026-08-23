@@ -1,0 +1,3271 @@
+{
+  "archives": [
+    {
+      "archive": "SOC_0-60_HalfC.zip",
+      "group_id": "G00_60_HALF",
+      "mat_members": [
+        "SOC_0%-60%_HalfC/PL03.mat",
+        "SOC_0%-60%_HalfC/PL10.mat"
+      ],
+      "sha256": "1cd57257bad82416cd63dd64aa57b56a1ab9e139150634bb52e13aabafac446b"
+    },
+    {
+      "archive": "SOC_40-60_HalfC.zip",
+      "group_id": "G40_60_HALF",
+      "mat_members": [
+        "SOC_40%-60%_HalfC/PL04.mat",
+        "SOC_40%-60%_HalfC/PL05.mat"
+      ],
+      "sha256": "13e3d6b4ddc15e3463229bf5805a624c4140e6e03341a284e66f1bab4c0bc57c"
+    },
+    {
+      "archive": "SOC_40-60_2C.zip",
+      "group_id": "G40_60_2C",
+      "mat_members": [
+        "SOC_40%-60%_2C/PL09.mat",
+        "SOC_40%-60%_2C/PL25.mat"
+      ],
+      "sha256": "149d18bfed19fd1e86d1e2616df608f13824f7290807d746549ae2730010ff16"
+    },
+    {
+      "archive": "SOC_0-100_HalfC.zip",
+      "group_id": "G00_100_HALF",
+      "mat_members": [
+        "SOC_0%-100%_HalfC/PL11.mat",
+        "SOC_0%-100%_HalfC/PL13.mat"
+      ],
+      "sha256": "bd0f27accfb18dd1dcc5ef1025234d81772cc58e2b178ca4b8342cbbd9370906"
+    },
+    {
+      "archive": "SOC_0-100_2C.zip",
+      "group_id": "G00_100_2C",
+      "mat_members": [
+        "SOC_0%-100%_2C/PL12.mat",
+        "SOC_0%-100%_2C/PL14.mat"
+      ],
+      "sha256": "57ed6e023b87cff64eaa92b37176992da6fa3bdfb7a1a880ac5a55578c235348"
+    },
+    {
+      "archive": "SOC_40-100_HalfC.zip",
+      "group_id": "G40_100_HALF",
+      "mat_members": [
+        "SOC_40%-100%_HalfC/PL19.mat",
+        "SOC_40%-100%_HalfC/PL24.mat"
+      ],
+      "sha256": "e6a55919266414ff8368fcf3e0b77070fbbdfc54274000654d92755f35539f1e"
+    },
+    {
+      "archive": "SOC_20-80_HalfC.zip",
+      "group_id": "G20_80_HALF",
+      "mat_members": [
+        "SOC_20%-80%_HalfC/PL21.mat",
+        "SOC_20%-80%_HalfC/PL23.mat"
+      ],
+      "sha256": "5950b2fa9a037f5b272258e7b51b2848716edf342e5b67f55981e6f325b8363a"
+    }
+  ],
+  "capacity_crosschecks": [
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.382809648545602,
+      "logger_capacity": 1.383820753191244,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.0007306615710960436,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.3975555333314655,
+      "logger_capacity": 1.397560338131882,
+      "logger_normalized_response": 1.0099287316720413,
+      "operation_row": 2,
+      "relative_difference": 3.437991394952793e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3992052294562756,
+      "logger_capacity": 1.3992077156078082,
+      "logger_normalized_response": 1.0111191874967045,
+      "operation_row": 3,
+      "relative_difference": 1.7768280612743488e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.4069549076210452,
+      "logger_capacity": 1.406947223980609,
+      "logger_normalized_response": 1.016712042174561,
+      "operation_row": 4,
+      "relative_difference": 5.461184572960536e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3987619909991589,
+      "logger_capacity": 1.3987678908450931,
+      "logger_normalized_response": 1.0108013538743217,
+      "operation_row": 5,
+      "relative_difference": 4.2178877373846976e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.393104915401446,
+      "logger_capacity": 1.3931122487561254,
+      "logger_normalized_response": 1.0067143779593233,
+      "operation_row": 6,
+      "relative_difference": 5.26400847155853e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3948128837821827,
+      "logger_capacity": 1.3948185883548945,
+      "logger_normalized_response": 1.0079474419922436,
+      "operation_row": 7,
+      "relative_difference": 4.089831293752955e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.3931314662667111,
+      "logger_capacity": 1.3931225099732814,
+      "logger_normalized_response": 1.0067217930939296,
+      "operation_row": 8,
+      "relative_difference": 6.42889321406672e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3933182868956322,
+      "logger_capacity": 1.3933194042389587,
+      "logger_normalized_response": 1.0068640761643513,
+      "operation_row": 9,
+      "relative_difference": 8.019290645988656e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3850245797437128,
+      "logger_capacity": 1.3850245367818275,
+      "logger_normalized_response": 1.0008698984950235,
+      "operation_row": 10,
+      "relative_difference": 3.101886133349548e-08,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.391142674440223,
+      "logger_capacity": 1.3911523974996598,
+      "logger_normalized_response": 1.0052981170368402,
+      "operation_row": 11,
+      "relative_difference": 6.989212292032299e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.391301808755346,
+      "logger_capacity": 1.391302394018311,
+      "logger_normalized_response": 1.005406510062675,
+      "operation_row": 12,
+      "relative_difference": 4.206583468099837e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3893213840020382,
+      "logger_capacity": 1.3893309600827592,
+      "logger_normalized_response": 1.003981879068375,
+      "operation_row": 13,
+      "relative_difference": 6.892584269828457e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.388813719437983,
+      "logger_capacity": 1.388808857586966,
+      "logger_normalized_response": 1.003604588516409,
+      "operation_row": 14,
+      "relative_difference": 3.5007221984243136e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3628002680444524,
+      "logger_capacity": 1.363825525568285,
+      "logger_normalized_response": 0.9855507098178373,
+      "operation_row": 17,
+      "relative_difference": 0.0007517512354854376,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.374187165357675,
+      "logger_capacity": 1.3741907411267391,
+      "logger_normalized_response": 0.993040997511927,
+      "operation_row": 18,
+      "relative_difference": 2.60209078489878e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.370832419239927,
+      "logger_capacity": 1.3708381755317944,
+      "logger_normalized_response": 0.9906183097561513,
+      "operation_row": 19,
+      "relative_difference": 4.199103854949152e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3677878499155645,
+      "logger_capacity": 1.3677940065884613,
+      "logger_normalized_response": 0.988418480814207,
+      "operation_row": 20,
+      "relative_difference": 4.5011696696819625e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3610870516061293,
+      "logger_capacity": 1.3610855182830974,
+      "logger_normalized_response": 0.9835706793269889,
+      "operation_row": 21,
+      "relative_difference": 1.1265429570192872e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3370434612404645,
+      "logger_capacity": 1.3370410693087678,
+      "logger_normalized_response": 0.9661952722022724,
+      "operation_row": 22,
+      "relative_difference": 1.78897078969378e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3593787044273937,
+      "logger_capacity": 1.3593929135016793,
+      "logger_normalized_response": 0.9823475405805041,
+      "operation_row": 23,
+      "relative_difference": 1.0452514607435392e-05,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "1854a11b69fbf7af",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3496647686803072,
+      "logger_capacity": 1.3496600277785404,
+      "logger_normalized_response": 0.9753141977861474,
+      "operation_row": 24,
+      "relative_difference": 3.5126513462713785e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.442298864432935,
+      "logger_capacity": 1.443316043850624,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.0007047516876312411,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.4527722724381258,
+      "logger_capacity": 1.4527700026587098,
+      "logger_normalized_response": 1.006550165397499,
+      "operation_row": 2,
+      "relative_difference": 1.5623779852062556e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.4529107185929682,
+      "logger_capacity": 1.452910632065894,
+      "logger_normalized_response": 1.0066476003340699,
+      "operation_row": 3,
+      "relative_difference": 5.9554295432642026e-08,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.4553398554014036,
+      "logger_capacity": 1.455337724744858,
+      "logger_normalized_response": 1.008329208938994,
+      "operation_row": 4,
+      "relative_difference": 1.4640267960315002e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.4444335271641924,
+      "logger_capacity": 1.4444327438513724,
+      "logger_normalized_response": 1.0007737044187281,
+      "operation_row": 5,
+      "relative_difference": 5.422975894769416e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.435865958178269,
+      "logger_capacity": 1.4358562604649237,
+      "logger_normalized_response": 0.9948314969424171,
+      "operation_row": 6,
+      "relative_difference": 6.753912710313679e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.445188209146063,
+      "logger_capacity": 1.4451975654867937,
+      "logger_normalized_response": 1.0013036102828525,
+      "operation_row": 7,
+      "relative_difference": 6.474091123641461e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.4388615294436404,
+      "logger_capacity": 1.438862533329143,
+      "logger_normalized_response": 0.9969143899283489,
+      "operation_row": 8,
+      "relative_difference": 6.976938235936644e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.4351504983653587,
+      "logger_capacity": 1.4351505610172879,
+      "logger_normalized_response": 0.9943425538237963,
+      "operation_row": 9,
+      "relative_difference": 4.365530063673313e-08,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.422278228181937,
+      "logger_capacity": 1.422278475956972,
+      "logger_normalized_response": 0.9854241432544976,
+      "operation_row": 10,
+      "relative_difference": 1.7420993084155387e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.4296893144712166,
+      "logger_capacity": 1.4296833435844647,
+      "logger_normalized_response": 0.9905545979868771,
+      "operation_row": 11,
+      "relative_difference": 4.17635264632604e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.428332627577185,
+      "logger_capacity": 1.4283239385489281,
+      "logger_normalized_response": 0.9896127356405611,
+      "operation_row": 12,
+      "relative_difference": 6.083336674624443e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.4270603756648887,
+      "logger_capacity": 1.4270500158298631,
+      "logger_normalized_response": 0.9887300996271303,
+      "operation_row": 13,
+      "relative_difference": 7.259563226813542e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.4252273057401905,
+      "logger_capacity": 1.4252336504867742,
+      "logger_normalized_response": 0.9874716328132764,
+      "operation_row": 14,
+      "relative_difference": 4.4517238149044875e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3940678224817982,
+      "logger_capacity": 1.395068056453462,
+      "logger_normalized_response": 0.9665714327761222,
+      "operation_row": 17,
+      "relative_difference": 0.0007169786212485754,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.4064982242833792,
+      "logger_capacity": 1.4065119528777785,
+      "logger_normalized_response": 0.9745003243540092,
+      "operation_row": 18,
+      "relative_difference": 9.760737810445866e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.4095399568848936,
+      "logger_capacity": 1.4095330076009276,
+      "logger_normalized_response": 0.9765934589353232,
+      "operation_row": 19,
+      "relative_difference": 4.930178766559582e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.4074020160109926,
+      "logger_capacity": 1.4074074879826384,
+      "logger_normalized_response": 0.9751207949076869,
+      "operation_row": 20,
+      "relative_difference": 3.887979631003634e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.4019515175213015,
+      "logger_capacity": 1.4019566360497606,
+      "logger_normalized_response": 0.9713441778901587,
+      "operation_row": 21,
+      "relative_difference": 3.650989144359509e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.4017080763401446,
+      "logger_capacity": 1.4017196015790958,
+      "logger_normalized_response": 0.971179948806948,
+      "operation_row": 22,
+      "relative_difference": 8.222214298937335e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3979093578671264,
+      "logger_capacity": 1.3979005042952437,
+      "logger_normalized_response": 0.9685338912784367,
+      "operation_row": 23,
+      "relative_difference": 6.333437738944063e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "abf2ff2f94ba68d0",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3915224479188693,
+      "logger_capacity": 1.3915237410440824,
+      "logger_normalized_response": 0.964115757579771,
+      "operation_row": 24,
+      "relative_difference": 9.292872086829874e-07,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.380674278987974,
+      "logger_capacity": 1.381705508570863,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.0007463454234582563,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.377301296693228,
+      "logger_capacity": 1.3773090754891886,
+      "logger_normalized_response": 0.996818111345433,
+      "operation_row": 2,
+      "relative_difference": 5.6478216102040754e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.368581175122877,
+      "logger_capacity": 1.36857980313955,
+      "logger_normalized_response": 0.990500359628088,
+      "operation_row": 3,
+      "relative_difference": 1.0024858969907097e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.3667818607157463,
+      "logger_capacity": 1.3667983144813967,
+      "logger_normalized_response": 0.9892110192823323,
+      "operation_row": 4,
+      "relative_difference": 1.2038181109878553e-05,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3581441084386223,
+      "logger_capacity": 1.3581553095427772,
+      "logger_normalized_response": 0.9829557030192024,
+      "operation_row": 5,
+      "relative_difference": 8.247292541703854e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3561441854085878,
+      "logger_capacity": 1.3561461634108234,
+      "logger_normalized_response": 0.9815015971192904,
+      "operation_row": 6,
+      "relative_difference": 1.4585464966282232e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.352621512030182,
+      "logger_capacity": 1.352616668167915,
+      "logger_normalized_response": 0.9789471488515412,
+      "operation_row": 7,
+      "relative_difference": 3.581092141435344e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.3493066105860756,
+      "logger_capacity": 1.349301966766351,
+      "logger_normalized_response": 0.9765481561711166,
+      "operation_row": 8,
+      "relative_difference": 3.441634160911589e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.347633482437184,
+      "logger_capacity": 1.3476352466072576,
+      "logger_normalized_response": 0.9753418787489346,
+      "operation_row": 9,
+      "relative_difference": 1.3090857322283086e-06,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3483678392925935,
+      "logger_capacity": 1.3483702541560199,
+      "logger_normalized_response": 0.9758738354822637,
+      "operation_row": 10,
+      "relative_difference": 1.7909497920866642e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.3392323598497873,
+      "logger_capacity": 1.340255851243867,
+      "logger_normalized_response": 0.9700010913542144,
+      "operation_row": 13,
+      "relative_difference": 0.0007636537405374963,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3386893875619932,
+      "logger_capacity": 1.3386885743292254,
+      "logger_normalized_response": 0.9688667853064209,
+      "operation_row": 14,
+      "relative_difference": 6.074842867578773e-07,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3338712991348387,
+      "logger_capacity": 1.3338791499428098,
+      "logger_normalized_response": 0.9653859969932946,
+      "operation_row": 15,
+      "relative_difference": 5.885696595071201e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.336430392489148,
+      "logger_capacity": 1.336433447267762,
+      "logger_normalized_response": 0.9672346523754348,
+      "operation_row": 16,
+      "relative_difference": 2.2857693513191155e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3379590486465776,
+      "logger_capacity": 1.3379600065789816,
+      "logger_normalized_response": 0.9683394893336362,
+      "operation_row": 17,
+      "relative_difference": 7.159649013095887e-07,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.3373152291831376,
+      "logger_capacity": 1.337325132680899,
+      "logger_normalized_response": 0.967880003651525,
+      "operation_row": 18,
+      "relative_difference": 7.405452510690272e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.3348643507254478,
+      "logger_capacity": 1.3348584659855547,
+      "logger_normalized_response": 0.966094770343817,
+      "operation_row": 19,
+      "relative_difference": 4.408492810494314e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3335755552858906,
+      "logger_capacity": 1.333568269531419,
+      "logger_normalized_response": 0.9651609994019394,
+      "operation_row": 20,
+      "relative_difference": 5.46332335099446e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3313235637820324,
+      "logger_capacity": 1.3313115433867253,
+      "logger_normalized_response": 0.9635277091453001,
+      "operation_row": 21,
+      "relative_difference": 9.028905995605028e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3293447381914179,
+      "logger_capacity": 1.329349947059093,
+      "logger_normalized_response": 0.9621080170940892,
+      "operation_row": 22,
+      "relative_difference": 3.91835700352023e-06,
+      "selected_cycle": 201.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3361490799659097,
+      "logger_capacity": 1.336148349480471,
+      "logger_normalized_response": 0.96702831478358,
+      "operation_row": 23,
+      "relative_difference": 5.467095324596895e-07,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9026c5000fb52650",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3362456280197264,
+      "logger_capacity": 1.3362417456695894,
+      "logger_normalized_response": 0.967095909642643,
+      "operation_row": 24,
+      "relative_difference": 2.9054165308541194e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4107857555310173,
+      "logger_capacity": 1.411797572264333,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.0007166868347088333,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.4049810249446963,
+      "logger_capacity": 1.4049748177751642,
+      "logger_normalized_response": 0.9951673280764848,
+      "operation_row": 2,
+      "relative_difference": 4.417973924160808e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.391799099368431,
+      "logger_capacity": 1.39179675552894,
+      "logger_normalized_response": 0.9858330846232337,
+      "operation_row": 3,
+      "relative_difference": 1.6840357864871135e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.3900141571984705,
+      "logger_capacity": 1.3900155671022887,
+      "logger_normalized_response": 0.9845714388592488,
+      "operation_row": 4,
+      "relative_difference": 1.0143079340315481e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3749222737439952,
+      "logger_capacity": 1.3749311728657396,
+      "logger_normalized_response": 0.9738869083480115,
+      "operation_row": 5,
+      "relative_difference": 6.472412525094436e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3717200885975436,
+      "logger_capacity": 1.371715783049659,
+      "logger_normalized_response": 0.9716093935829707,
+      "operation_row": 6,
+      "relative_difference": 3.138794802565245e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3678681921709124,
+      "logger_capacity": 1.3678698264534326,
+      "logger_normalized_response": 0.9688852377466224,
+      "operation_row": 7,
+      "relative_difference": 1.1947646542064229e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.3651960433748498,
+      "logger_capacity": 1.36519123073818,
+      "logger_normalized_response": 0.9669879432846716,
+      "operation_row": 8,
+      "relative_difference": 3.525234850484565e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3615597095473746,
+      "logger_capacity": 1.3615508129480034,
+      "logger_normalized_response": 0.9644093740466343,
+      "operation_row": 9,
+      "relative_difference": 6.5341235561070685e-06,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3561935304544899,
+      "logger_capacity": 1.356200188832176,
+      "logger_normalized_response": 0.9606194368623355,
+      "operation_row": 10,
+      "relative_difference": 4.909583217084542e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.3501137777959173,
+      "logger_capacity": 1.351147898122263,
+      "logger_normalized_response": 0.9570408142544147,
+      "operation_row": 13,
+      "relative_difference": 0.0007653642712118401,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3429690906340603,
+      "logger_capacity": 1.3429759424803507,
+      "logger_normalized_response": 0.9512524804291866,
+      "operation_row": 14,
+      "relative_difference": 5.1019873652321745e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3409239146653302,
+      "logger_capacity": 1.3409252367332662,
+      "logger_normalized_response": 0.9497999310075331,
+      "operation_row": 15,
+      "relative_difference": 9.859370976093815e-07,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.3420773403703699,
+      "logger_capacity": 1.3420801532933737,
+      "logger_normalized_response": 0.9506179778598557,
+      "operation_row": 16,
+      "relative_difference": 2.0959426282819186e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.340130215603462,
+      "logger_capacity": 1.340128368413641,
+      "logger_normalized_response": 0.9492354957547177,
+      "operation_row": 17,
+      "relative_difference": 1.3783659226508483e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.3386923623531448,
+      "logger_capacity": 1.3387029913880042,
+      "logger_normalized_response": 0.9482258771991688,
+      "operation_row": 18,
+      "relative_difference": 7.93980063371406e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.3357474436138748,
+      "logger_capacity": 1.3357414480330583,
+      "logger_normalized_response": 0.9461281661582043,
+      "operation_row": 19,
+      "relative_difference": 4.488558705578197e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3327666120184904,
+      "logger_capacity": 1.332771226027198,
+      "logger_normalized_response": 0.9440243078826185,
+      "operation_row": 20,
+      "relative_difference": 3.461966027959865e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3299721440998513,
+      "logger_capacity": 1.3299611492819636,
+      "logger_normalized_response": 0.9420338831925353,
+      "operation_row": 21,
+      "relative_difference": 8.266953512120286e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3244521564340164,
+      "logger_capacity": 1.324452005234896,
+      "logger_normalized_response": 0.9381316636709139,
+      "operation_row": 22,
+      "relative_difference": 1.1415974491839199e-07,
+      "selected_cycle": 201.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3342183989240006,
+      "logger_capacity": 1.3342214524211577,
+      "logger_normalized_response": 0.9450515276642999,
+      "operation_row": 23,
+      "relative_difference": 2.2885984568624853e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "bd4eca5de6572a22",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3336845296535291,
+      "logger_capacity": 1.3336752942569419,
+      "logger_normalized_response": 0.944664674637389,
+      "operation_row": 24,
+      "relative_difference": 6.924723487389161e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.412785930512438,
+      "logger_capacity": 1.413795621019466,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.000714170062501655,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.3945538264557533,
+      "logger_capacity": 1.3945597668933303,
+      "logger_normalized_response": 0.98639417618774,
+      "operation_row": 2,
+      "relative_difference": 4.259722471551202e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3876702659606326,
+      "logger_capacity": 1.387670819615387,
+      "logger_normalized_response": 0.9815215148387284,
+      "operation_row": 3,
+      "relative_difference": 3.9898133380116173e-07,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.3896954518952362,
+      "logger_capacity": 1.3896956705068888,
+      "logger_normalized_response": 0.9829537238945477,
+      "operation_row": 4,
+      "relative_difference": 1.5730901174821333e-07,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3713658459439908,
+      "logger_capacity": 1.3713752960742909,
+      "logger_normalized_response": 0.9699954333465919,
+      "operation_row": 5,
+      "relative_difference": 6.890987701997026e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.367694064071491,
+      "logger_capacity": 1.3676780445184633,
+      "logger_normalized_response": 0.9673803088541553,
+      "operation_row": 6,
+      "relative_difference": 1.1712819005713028e-05,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3662218828376071,
+      "logger_capacity": 1.3662262868047002,
+      "logger_normalized_response": 0.9663534576656388,
+      "operation_row": 7,
+      "relative_difference": 3.223453636880936e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.364056304844568,
+      "logger_capacity": 1.364063851887579,
+      "logger_normalized_response": 0.9648239332527949,
+      "operation_row": 8,
+      "relative_difference": 5.532763734290572e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.363034995040281,
+      "logger_capacity": 1.3630200476395018,
+      "logger_normalized_response": 0.9640856340017868,
+      "operation_row": 9,
+      "relative_difference": 1.0966263400066086e-05,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3605384245571206,
+      "logger_capacity": 1.3605431420763061,
+      "logger_normalized_response": 0.9623336795280493,
+      "operation_row": 10,
+      "relative_difference": 3.4673793425734285e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.3577290683390784,
+      "logger_capacity": 1.3577315998115296,
+      "logger_normalized_response": 0.9603450312234596,
+      "operation_row": 11,
+      "relative_difference": 1.864486656691572e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3512097226327646,
+      "logger_capacity": 1.352234966332266,
+      "logger_normalized_response": 0.9564571754418014,
+      "operation_row": 14,
+      "relative_difference": 0.0007581845796238494,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3487282467061716,
+      "logger_capacity": 1.348726367652759,
+      "logger_normalized_response": 0.9539754881120748,
+      "operation_row": 15,
+      "relative_difference": 1.3932038698192746e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.3426819245718211,
+      "logger_capacity": 1.342674588224913,
+      "logger_normalized_response": 0.9496949688221068,
+      "operation_row": 16,
+      "relative_difference": 5.463950004788245e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3440877052963691,
+      "logger_capacity": 1.344095647011219,
+      "logger_normalized_response": 0.9507001061737712,
+      "operation_row": 17,
+      "relative_difference": 5.908593534714437e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.3398608744846916,
+      "logger_capacity": 1.3398558165367689,
+      "logger_normalized_response": 0.947701207032046,
+      "operation_row": 18,
+      "relative_difference": 3.7749799393616738e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.3418453815326568,
+      "logger_capacity": 1.3418495006674043,
+      "logger_normalized_response": 0.9491113713450445,
+      "operation_row": 19,
+      "relative_difference": 3.0697442190549784e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3385129533226499,
+      "logger_capacity": 1.3385216183437763,
+      "logger_normalized_response": 0.9467575075516143,
+      "operation_row": 20,
+      "relative_difference": 6.4735757776694794e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3375649798674927,
+      "logger_capacity": 1.337558220310786,
+      "logger_normalized_response": 0.9460760808880521,
+      "operation_row": 21,
+      "relative_difference": 5.053628652315796e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3356497008469697,
+      "logger_capacity": 1.3356442796787533,
+      "logger_normalized_response": 0.9447223204126499,
+      "operation_row": 22,
+      "relative_difference": 4.058824864706294e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3325469912398797,
+      "logger_capacity": 1.332548419585514,
+      "logger_normalized_response": 0.9425325696118892,
+      "operation_row": 23,
+      "relative_difference": 1.0718902316943505e-06,
+      "selected_cycle": 201.0
+    },
+    {
+      "cell_token": "9940abc98bda4abe",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.33755419992929,
+      "logger_capacity": 1.3375622904014755,
+      "logger_normalized_response": 0.9460789597275596,
+      "operation_row": 24,
+      "relative_difference": 6.048669466526796e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.431182866569963,
+      "logger_capacity": 1.432211351288155,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.000718109598326252,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.4211503146516848,
+      "logger_capacity": 1.4211521677320391,
+      "logger_normalized_response": 0.9922782461218668,
+      "operation_row": 2,
+      "relative_difference": 1.3039281762713365e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.416358643168084,
+      "logger_capacity": 1.4163628463579059,
+      "logger_normalized_response": 0.9889342415028378,
+      "operation_row": 3,
+      "relative_difference": 2.9675939557297286e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.4209446509570716,
+      "logger_capacity": 1.4209365109664738,
+      "logger_normalized_response": 0.9921276700456673,
+      "operation_row": 4,
+      "relative_difference": 5.728576825498392e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3995502710765853,
+      "logger_capacity": 1.3995415239642774,
+      "logger_normalized_response": 0.9771892414520429,
+      "operation_row": 5,
+      "relative_difference": 6.24994506347867e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3936778427745922,
+      "logger_capacity": 1.3936825159772255,
+      "logger_normalized_response": 0.9730983592077552,
+      "operation_row": 6,
+      "relative_difference": 3.3531328546751895e-06,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3920274330651676,
+      "logger_capacity": 1.3920277899774653,
+      "logger_normalized_response": 0.9719429948138955,
+      "operation_row": 7,
+      "relative_difference": 2.5639739399332174e-07,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.38543807627342,
+      "logger_capacity": 1.385438439163405,
+      "logger_normalized_response": 0.9673421718919616,
+      "operation_row": 8,
+      "relative_difference": 2.6193151185391466e-07,
+      "selected_cycle": 76.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3845442869091222,
+      "logger_capacity": 1.3845465828696923,
+      "logger_normalized_response": 0.9667194591248058,
+      "operation_row": 9,
+      "relative_difference": 1.6582761450685201e-06,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3818747589176572,
+      "logger_capacity": 1.3818789503266409,
+      "logger_normalized_response": 0.9648568621410212,
+      "operation_row": 10,
+      "relative_difference": 3.0331231130456446e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.3803054641640609,
+      "logger_capacity": 1.3803119210526376,
+      "logger_normalized_response": 0.96376272944015,
+      "operation_row": 11,
+      "relative_difference": 4.677847433046987e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3704099505973828,
+      "logger_capacity": 1.371424661130621,
+      "logger_normalized_response": 0.9575574581901886,
+      "operation_row": 14,
+      "relative_difference": 0.0007398952067855872,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3676066390653256,
+      "logger_capacity": 1.3676026405099968,
+      "logger_normalized_response": 0.9548888432422715,
+      "operation_row": 15,
+      "relative_difference": 2.923761273619063e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.3643871589145482,
+      "logger_capacity": 1.3643807826148517,
+      "logger_normalized_response": 0.9526392744951399,
+      "operation_row": 16,
+      "relative_difference": 4.6733800261922724e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3654264685201583,
+      "logger_capacity": 1.365420626125534,
+      "logger_normalized_response": 0.9533653150405851,
+      "operation_row": 17,
+      "relative_difference": 4.278805749710791e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.364382639630442,
+      "logger_capacity": 1.364390380970363,
+      "logger_normalized_response": 0.9526459762682424,
+      "operation_row": 18,
+      "relative_difference": 5.673845278498031e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.3633228446460248,
+      "logger_capacity": 1.3633470820347817,
+      "logger_normalized_response": 0.9519175230726697,
+      "operation_row": 19,
+      "relative_difference": 1.777785648004176e-05,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3605422872061,
+      "logger_capacity": 1.3605379351031708,
+      "logger_normalized_response": 0.9499561177751316,
+      "operation_row": 20,
+      "relative_difference": 3.19880019171442e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3598254809103345,
+      "logger_capacity": 1.3598274491344107,
+      "logger_normalized_response": 0.9494600415723273,
+      "operation_row": 21,
+      "relative_difference": 1.4474072261287493e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3574224779119404,
+      "logger_capacity": 1.3574247882747699,
+      "logger_normalized_response": 0.947782453374552,
+      "operation_row": 22,
+      "relative_difference": 1.7020190359352534e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.355070868972052,
+      "logger_capacity": 1.3550607735037374,
+      "logger_normalized_response": 0.9461318486862802,
+      "operation_row": 23,
+      "relative_difference": 7.450140465576486e-06,
+      "selected_cycle": 201.0
+    },
+    {
+      "cell_token": "b8df248530380d27",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3589040127693737,
+      "logger_capacity": 1.3588990705890929,
+      "logger_normalized_response": 0.9488118282032022,
+      "operation_row": 24,
+      "relative_difference": 3.636886957693333e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4530471391097415,
+      "logger_capacity": 1.454089000895675,
+      "logger_normalized_response": 1.0,
+      "operation_row": 2,
+      "relative_difference": 0.0007165048255586954,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.403795091580462,
+      "logger_capacity": 1.4048120617531765,
+      "logger_normalized_response": 0.9661114697159903,
+      "operation_row": 4,
+      "relative_difference": 0.0007239190212001436,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3799774769829547,
+      "logger_capacity": 1.3810089867704107,
+      "logger_normalized_response": 0.9497417186429102,
+      "operation_row": 5,
+      "relative_difference": 0.0007469247465711942,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.371865162404436,
+      "logger_capacity": 1.3728896356809344,
+      "logger_normalized_response": 0.9441579125041697,
+      "operation_row": 6,
+      "relative_difference": 0.0007462167750943981,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.365184595904615,
+      "logger_capacity": 1.3662001139037443,
+      "logger_normalized_response": 0.9395574225939445,
+      "operation_row": 7,
+      "relative_difference": 0.0007433157037497543,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3388321797271745,
+      "logger_capacity": 1.3398636007917446,
+      "logger_normalized_response": 0.921445386057132,
+      "operation_row": 8,
+      "relative_difference": 0.0007697955702062675,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.2676371185111324,
+      "logger_capacity": 1.2686633244380516,
+      "logger_normalized_response": 0.8724798300905882,
+      "operation_row": 9,
+      "relative_difference": 0.0008088875173985335,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.2276269882621607,
+      "logger_capacity": 1.2286286831206183,
+      "logger_normalized_response": 0.8449473741729839,
+      "operation_row": 10,
+      "relative_difference": 0.0008152950295067722,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.1702880325646454,
+      "logger_capacity": 1.1713328558364537,
+      "logger_normalized_response": 0.8055441277081031,
+      "operation_row": 11,
+      "relative_difference": 0.000891995188730716,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.1267378070365879,
+      "logger_capacity": 1.127756945169125,
+      "logger_normalized_response": 0.775576284859084,
+      "operation_row": 12,
+      "relative_difference": 0.0009036859732078454,
+      "selected_cycle": 98.0
+    },
+    {
+      "cell_token": "080d0b0f2cd1ce57",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.1221832664965652,
+      "logger_capacity": 1.1231990515524077,
+      "logger_normalized_response": 0.7724417493430945,
+      "operation_row": 13,
+      "relative_difference": 0.0009043678005591231,
+      "selected_cycle": 3.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4302483742468526,
+      "logger_capacity": 1.431263482297826,
+      "logger_normalized_response": 1.0,
+      "operation_row": 2,
+      "relative_difference": 0.0007092391188125486,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.3883103872069176,
+      "logger_capacity": 1.3893424483331103,
+      "logger_normalized_response": 0.970710470515594,
+      "operation_row": 4,
+      "relative_difference": 0.0007428414264826723,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3696972883504905,
+      "logger_capacity": 1.370729886791878,
+      "logger_normalized_response": 0.9577061832048113,
+      "operation_row": 5,
+      "relative_difference": 0.0007533201481469268,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.356206685664442,
+      "logger_capacity": 1.357218331472751,
+      "logger_normalized_response": 0.948265884136023,
+      "operation_row": 6,
+      "relative_difference": 0.000745381774508885,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3486879558341882,
+      "logger_capacity": 1.3497239162632582,
+      "logger_normalized_response": 0.9430296608255107,
+      "operation_row": 7,
+      "relative_difference": 0.0007675350614946715,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3257279673407154,
+      "logger_capacity": 1.3267814961425302,
+      "logger_normalized_response": 0.9270001733101196,
+      "operation_row": 8,
+      "relative_difference": 0.0007940484585274738,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.2680473434847337,
+      "logger_capacity": 1.2690603341127655,
+      "logger_normalized_response": 0.886671357027393,
+      "operation_row": 9,
+      "relative_difference": 0.0007982210150316055,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.2283356286196714,
+      "logger_capacity": 1.2293553265703139,
+      "logger_normalized_response": 0.8589301283622788,
+      "operation_row": 10,
+      "relative_difference": 0.0008294574632765239,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.1862795192700104,
+      "logger_capacity": 1.187303176339725,
+      "logger_normalized_response": 0.8295489901227451,
+      "operation_row": 11,
+      "relative_difference": 0.0008621699074960896,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.129408287655875,
+      "logger_capacity": 1.130427019381841,
+      "logger_normalized_response": 0.7898105648353396,
+      "operation_row": 12,
+      "relative_difference": 0.0009011919464938871,
+      "selected_cycle": 98.0
+    },
+    {
+      "cell_token": "d81ebc48e26fff6f",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.1248701342128251,
+      "logger_capacity": 1.125899547888987,
+      "logger_normalized_response": 0.7866472957735275,
+      "operation_row": 13,
+      "relative_difference": 0.0009143033036046999,
+      "selected_cycle": 3.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4365893452719092,
+      "logger_capacity": 1.437629141871733,
+      "logger_normalized_response": 1.0,
+      "operation_row": 2,
+      "relative_difference": 0.0007232717879314291,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 1,
+      "integrated_capacity": 0.9625184201031012,
+      "logger_capacity": 0.9665774558078795,
+      "logger_normalized_response": 0.6723413067082349,
+      "operation_row": 4,
+      "relative_difference": 0.004199390002724282,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.0570863030872417,
+      "logger_capacity": 1.0612270533292616,
+      "logger_normalized_response": 0.7381785903056948,
+      "operation_row": 5,
+      "relative_difference": 0.003901851379522969,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.0564689424992586,
+      "logger_capacity": 1.0605646134880402,
+      "logger_normalized_response": 0.7377178039861026,
+      "operation_row": 6,
+      "relative_difference": 0.0038617835600902725,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.0719134004216078,
+      "logger_capacity": 1.0760029265536275,
+      "logger_normalized_response": 0.748456535287478,
+      "operation_row": 7,
+      "relative_difference": 0.0038006645066647206,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.083528038393667,
+      "logger_capacity": 1.087616428104944,
+      "logger_normalized_response": 0.7565347671576224,
+      "operation_row": 8,
+      "relative_difference": 0.0037590363713066585,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.2602939617948636,
+      "logger_capacity": 1.2643563464365215,
+      "logger_normalized_response": 0.8794732310381399,
+      "operation_row": 9,
+      "relative_difference": 0.0032130060904960425,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 7,
+      "integrated_capacity": 0.7440099779019793,
+      "logger_capacity": 0.7481025473658818,
+      "logger_normalized_response": 0.5203724142596912,
+      "operation_row": 10,
+      "relative_difference": 0.0054705995565884225,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.0192328471308083,
+      "logger_capacity": 1.0233161935627422,
+      "logger_normalized_response": 0.7118081873538173,
+      "operation_row": 11,
+      "relative_difference": 0.003990307646473792,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 9,
+      "integrated_capacity": 0.8523105595351835,
+      "logger_capacity": 0.8564134725360901,
+      "logger_normalized_response": 0.5957123764346315,
+      "operation_row": 12,
+      "relative_difference": 0.004790808566750675,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 10,
+      "integrated_capacity": 0.9791934440279714,
+      "logger_capacity": 0.9832812148513739,
+      "logger_normalized_response": 0.6839602691770583,
+      "operation_row": 13,
+      "relative_difference": 0.004157275417918345,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 11,
+      "integrated_capacity": 0.9486067930968458,
+      "logger_capacity": 0.9527029028570553,
+      "logger_normalized_response": 0.6626903108103915,
+      "operation_row": 14,
+      "relative_difference": 0.004299461823749739,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 12,
+      "integrated_capacity": 0.9455452102001702,
+      "logger_capacity": 0.9496325252720936,
+      "logger_normalized_response": 0.6605545878373833,
+      "operation_row": 15,
+      "relative_difference": 0.004304101811121384,
+      "selected_cycle": 96.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 13,
+      "integrated_capacity": 0.9468790294803668,
+      "logger_capacity": 0.9509670210863281,
+      "logger_normalized_response": 0.6614828493586383,
+      "operation_row": 16,
+      "relative_difference": 0.004298773264809347,
+      "selected_cycle": 3.0
+    },
+    {
+      "cell_token": "db07b189f200643e",
+      "diagnostic_index": 14,
+      "integrated_capacity": 0.9362800359967726,
+      "logger_capacity": 0.9403638948633097,
+      "logger_normalized_response": 0.6541074241434722,
+      "operation_row": 17,
+      "relative_difference": 0.00434284949565274,
+      "selected_cycle": 4.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4435081772152887,
+      "logger_capacity": 1.444528162545842,
+      "logger_normalized_response": 1.0,
+      "operation_row": 2,
+      "relative_difference": 0.0007061027655948407,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 1,
+      "integrated_capacity": 0.9850333060976335,
+      "logger_capacity": 0.9891027397929832,
+      "logger_normalized_response": 0.6847237495527846,
+      "operation_row": 4,
+      "relative_difference": 0.00411426794369355,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.1079352006013723,
+      "logger_capacity": 1.1120257553132689,
+      "logger_normalized_response": 0.7698193667290159,
+      "operation_row": 5,
+      "relative_difference": 0.0036784711975885983,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.0600219762554148,
+      "logger_capacity": 1.0641048417306394,
+      "logger_normalized_response": 0.7366452723602542,
+      "operation_row": 6,
+      "relative_difference": 0.003836901511118232,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 4,
+      "integrated_capacity": 0.9773452162862653,
+      "logger_capacity": 0.9814391406626299,
+      "logger_normalized_response": 0.679418488410041,
+      "operation_row": 7,
+      "relative_difference": 0.004171348183241019,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 5,
+      "integrated_capacity": 3.4188560325656543e-06,
+      "logger_capacity": 6.949679942636067e-08,
+      "logger_normalized_response": 4.8110380419222315e-08,
+      "operation_row": 8,
+      "relative_difference": 0.9796724989983836,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.071163927099267,
+      "logger_capacity": 1.075281042205816,
+      "logger_normalized_response": 0.7443821934982124,
+      "operation_row": 9,
+      "relative_difference": 0.0038288735176650345,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 7,
+      "integrated_capacity": 0.9841545508040622,
+      "logger_capacity": 0.9883124702455461,
+      "logger_normalized_response": 0.684176671574018,
+      "operation_row": 10,
+      "relative_difference": 0.00420708993022306,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.0240594423562759,
+      "logger_capacity": 1.0281489728530886,
+      "logger_normalized_response": 0.7117541904071119,
+      "operation_row": 11,
+      "relative_difference": 0.003977566096734369,
+      "selected_cycle": 50.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 9,
+      "integrated_capacity": 0.9262750853605938,
+      "logger_capacity": 0.9303645368725313,
+      "logger_normalized_response": 0.644061196586748,
+      "operation_row": 12,
+      "relative_difference": 0.00439553674915901,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 10,
+      "integrated_capacity": 0.9814851265971879,
+      "logger_capacity": 0.9855839819054637,
+      "logger_normalized_response": 0.6822878275827221,
+      "operation_row": 13,
+      "relative_difference": 0.004158808770766898,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 11,
+      "integrated_capacity": 0.9998391062953205,
+      "logger_capacity": 1.0039360484742872,
+      "logger_normalized_response": 0.6949923680995921,
+      "operation_row": 14,
+      "relative_difference": 0.004080879638890319,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.0199636286149683,
+      "logger_capacity": 1.024047128569478,
+      "logger_normalized_response": 0.7089146166348834,
+      "operation_row": 15,
+      "relative_difference": 0.0039876093986164615,
+      "selected_cycle": 100.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 13,
+      "integrated_capacity": 0.9722380200951315,
+      "logger_capacity": 0.9763350320258635,
+      "logger_normalized_response": 0.6758850795301677,
+      "operation_row": 16,
+      "relative_difference": 0.004196317653614056,
+      "selected_cycle": 7.0
+    },
+    {
+      "cell_token": "24fde17a63385b48",
+      "diagnostic_index": 14,
+      "integrated_capacity": 0.9656060223662237,
+      "logger_capacity": 0.9696892431481108,
+      "logger_normalized_response": 0.6712844154170915,
+      "operation_row": 17,
+      "relative_difference": 0.004210854983428315,
+      "selected_cycle": 3.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4557820911045423,
+      "logger_capacity": 1.456802531648768,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.0007004659327924705,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.3935840842393186,
+      "logger_capacity": 1.3935835561035148,
+      "logger_normalized_response": 0.9566042931887936,
+      "operation_row": 2,
+      "relative_difference": 3.789766327914465e-07,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3815931062815874,
+      "logger_capacity": 1.3815913915005495,
+      "logger_normalized_response": 0.9483724537030447,
+      "operation_row": 3,
+      "relative_difference": 1.2411621265588587e-06,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.3729021629794402,
+      "logger_capacity": 1.3729032177220475,
+      "logger_normalized_response": 0.9424085886013901,
+      "operation_row": 4,
+      "relative_difference": 7.682570727773902e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.358536182245241,
+      "logger_capacity": 1.3585281073716047,
+      "logger_normalized_response": 0.9325410121535558,
+      "operation_row": 5,
+      "relative_difference": 5.943804619958479e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3506738366126831,
+      "logger_capacity": 1.350672256033846,
+      "logger_normalized_response": 0.9271484821660717,
+      "operation_row": 6,
+      "relative_difference": 1.1702150395611397e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3459270385708804,
+      "logger_capacity": 1.345925804953275,
+      "logger_normalized_response": 0.9238903528194683,
+      "operation_row": 7,
+      "relative_difference": 9.165560762569321e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.3408663670766015,
+      "logger_capacity": 1.3408619556363846,
+      "logger_normalized_response": 0.920414350268073,
+      "operation_row": 8,
+      "relative_difference": 3.2899924446001207e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3323087926946537,
+      "logger_capacity": 1.3323104387673368,
+      "logger_normalized_response": 0.9145442912290009,
+      "operation_row": 9,
+      "relative_difference": 1.2355023537690054e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3318679969941671,
+      "logger_capacity": 1.3318618204269796,
+      "logger_normalized_response": 0.9142363439742351,
+      "operation_row": 10,
+      "relative_difference": 4.637522037790279e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.328189106007824,
+      "logger_capacity": 1.3281880222084652,
+      "logger_normalized_response": 0.9117145209140043,
+      "operation_row": 11,
+      "relative_difference": 8.159977775761025e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3244902945428445,
+      "logger_capacity": 1.3244859628929078,
+      "logger_normalized_response": 0.9091732984523935,
+      "operation_row": 12,
+      "relative_difference": 3.27042784276099e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3146593936835267,
+      "logger_capacity": 1.315679212597994,
+      "logger_normalized_response": 0.9031280382997037,
+      "operation_row": 15,
+      "relative_difference": 0.0007751273294448833,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.3075163814264574,
+      "logger_capacity": 1.307515471890916,
+      "logger_normalized_response": 0.8975241623249425,
+      "operation_row": 16,
+      "relative_difference": 6.956207618099711e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.2996213361280344,
+      "logger_capacity": 1.2996239148461939,
+      "logger_normalized_response": 0.8921071226965237,
+      "operation_row": 17,
+      "relative_difference": 1.984203376064249e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.2984820809287996,
+      "logger_capacity": 1.298475912572357,
+      "logger_normalized_response": 0.8913190939493897,
+      "operation_row": 18,
+      "relative_difference": 4.750436323390023e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.2904397820892204,
+      "logger_capacity": 1.2904346932523012,
+      "logger_normalized_response": 0.8857993209222554,
+      "operation_row": 20,
+      "relative_difference": 3.943490420721705e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.288608309549926,
+      "logger_capacity": 1.2886116282580602,
+      "logger_normalized_response": 0.8845479056105469,
+      "operation_row": 21,
+      "relative_difference": 2.575413772099485e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.2847349543404984,
+      "logger_capacity": 1.2847355119276855,
+      "logger_normalized_response": 0.8818872043513393,
+      "operation_row": 22,
+      "relative_difference": 4.3400932091636273e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.279447367211864,
+      "logger_capacity": 1.2794453711620122,
+      "logger_normalized_response": 0.8782558674674816,
+      "operation_row": 23,
+      "relative_difference": 1.5600875057476698e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.2835305605407867,
+      "logger_capacity": 1.2835333100052182,
+      "logger_normalized_response": 0.8810619710775429,
+      "operation_row": 24,
+      "relative_difference": 2.1421060209576233e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "d4ca9686e73980f7",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.2798493444702899,
+      "logger_capacity": 1.2798386634580723,
+      "logger_normalized_response": 0.8785258369983658,
+      "operation_row": 25,
+      "relative_difference": 8.345523059976548e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.407122233948226,
+      "logger_capacity": 1.408143692971857,
+      "logger_normalized_response": 1.0,
+      "operation_row": 1,
+      "relative_difference": 0.0007253940267097703,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.373994017860909,
+      "logger_capacity": 1.3739894190438875,
+      "logger_normalized_response": 0.9757451784939024,
+      "operation_row": 2,
+      "relative_difference": 3.347042972266298e-06,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.363652719647926,
+      "logger_capacity": 1.3636494186240924,
+      "logger_normalized_response": 0.968402177583269,
+      "operation_row": 3,
+      "relative_difference": 2.4207217761902993e-06,
+      "selected_cycle": 61.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.3530694641338468,
+      "logger_capacity": 1.3530613432980019,
+      "logger_normalized_response": 0.9608830050876378,
+      "operation_row": 4,
+      "relative_difference": 6.0017878314119785e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.341435663507729,
+      "logger_capacity": 1.3414324184179591,
+      "logger_normalized_response": 0.9526246682871511,
+      "operation_row": 5,
+      "relative_difference": 2.419116964060849e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3341269377211675,
+      "logger_capacity": 1.3341358937983756,
+      "logger_normalized_response": 0.9474430063189861,
+      "operation_row": 6,
+      "relative_difference": 6.713017204401204e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3278838556415107,
+      "logger_capacity": 1.327893701340912,
+      "logger_normalized_response": 0.9430100833945583,
+      "operation_row": 7,
+      "relative_difference": 7.414523761488391e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.3226389966627832,
+      "logger_capacity": 1.3226422400069922,
+      "logger_normalized_response": 0.9392807329311572,
+      "operation_row": 8,
+      "relative_difference": 2.4521704440375447e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3185458420356677,
+      "logger_capacity": 1.3185414106552003,
+      "logger_normalized_response": 0.9363685092907295,
+      "operation_row": 9,
+      "relative_difference": 3.360808798745128e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3157427357995792,
+      "logger_capacity": 1.3157401819062002,
+      "logger_normalized_response": 0.934379203254008,
+      "operation_row": 10,
+      "relative_difference": 1.941027914888038e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.311435991801887,
+      "logger_capacity": 1.311435627880826,
+      "logger_normalized_response": 0.9313223035591413,
+      "operation_row": 11,
+      "relative_difference": 2.774981496153359e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3082598879147034,
+      "logger_capacity": 1.3082605265891942,
+      "logger_normalized_response": 0.9290674901423863,
+      "operation_row": 12,
+      "relative_difference": 4.881860133122101e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.2995199604829946,
+      "logger_capacity": 1.300552030754281,
+      "logger_normalized_response": 0.9235932648389696,
+      "operation_row": 15,
+      "relative_difference": 0.0007935632307520366,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.293032065020853,
+      "logger_capacity": 1.293021658728918,
+      "logger_normalized_response": 0.9182455350135637,
+      "operation_row": 16,
+      "relative_difference": 8.0479767026367e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.2851895393775965,
+      "logger_capacity": 1.2851945124341952,
+      "logger_normalized_response": 0.9126870495168146,
+      "operation_row": 17,
+      "relative_difference": 3.86949722445189e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.2848115406303875,
+      "logger_capacity": 1.2848099072825079,
+      "logger_normalized_response": 0.9124139203229638,
+      "operation_row": 18,
+      "relative_difference": 1.2712742904017601e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.276696899612978,
+      "logger_capacity": 1.2767018991495291,
+      "logger_normalized_response": 0.9066559794441698,
+      "operation_row": 20,
+      "relative_difference": 3.9159780012298225e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.2743019656876253,
+      "logger_capacity": 1.2743084870767234,
+      "logger_normalized_response": 0.9049562863767993,
+      "operation_row": 21,
+      "relative_difference": 5.117590571046722e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.2708276509714191,
+      "logger_capacity": 1.2708126669839217,
+      "logger_normalized_response": 0.9024737129645476,
+      "operation_row": 22,
+      "relative_difference": 1.1790731407195443e-05,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.2715384249669999,
+      "logger_capacity": 1.2715528668591816,
+      "logger_normalized_response": 0.9029993694575279,
+      "operation_row": 23,
+      "relative_difference": 1.1357681271535313e-05,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.268211457659715,
+      "logger_capacity": 1.2682089769128666,
+      "logger_normalized_response": 0.9006246899677822,
+      "operation_row": 24,
+      "relative_difference": 1.9560987510439835e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "72ed208afb2320b8",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.2641030799875266,
+      "logger_capacity": 1.264108121362085,
+      "logger_normalized_response": 0.8977124477220163,
+      "operation_row": 25,
+      "relative_difference": 3.988088102026143e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4433368405960043,
+      "logger_capacity": 1.444353912280349,
+      "logger_normalized_response": 1.0,
+      "operation_row": 2,
+      "relative_difference": 0.0007041706853820703,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.4027892514322078,
+      "logger_capacity": 1.4027901925473998,
+      "logger_normalized_response": 0.9712233134970858,
+      "operation_row": 4,
+      "relative_difference": 6.708880608083744e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3897537478330368,
+      "logger_capacity": 1.3897577748663323,
+      "logger_normalized_response": 0.9622003049600079,
+      "operation_row": 5,
+      "relative_difference": 2.897651208234725e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.380703379010028,
+      "logger_capacity": 1.380703605135075,
+      "logger_normalized_response": 0.9559316407120864,
+      "operation_row": 6,
+      "relative_difference": 1.6377522740458788e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.370437010451093,
+      "logger_capacity": 1.3704433393597313,
+      "logger_normalized_response": 0.9488279345580007,
+      "operation_row": 7,
+      "relative_difference": 4.618146884666152e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3642618047608086,
+      "logger_capacity": 1.3642562376191094,
+      "logger_normalized_response": 0.9445442879475563,
+      "operation_row": 8,
+      "relative_difference": 4.080698938990015e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.3588456093613783,
+      "logger_capacity": 1.3588397354770763,
+      "logger_normalized_response": 0.940794166806207,
+      "operation_row": 9,
+      "relative_difference": 4.322701756254827e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.373758904011044,
+      "logger_capacity": 1.373754753263043,
+      "logger_normalized_response": 0.9511205955707601,
+      "operation_row": 10,
+      "relative_difference": 3.0214530285968496e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3643506646854366,
+      "logger_capacity": 1.3643522216508188,
+      "logger_normalized_response": 0.9446107425961665,
+      "operation_row": 11,
+      "relative_difference": 1.1411755391821636e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3655214593773357,
+      "logger_capacity": 1.3655168842214493,
+      "logger_normalized_response": 0.9454170979919793,
+      "operation_row": 12,
+      "relative_difference": 3.350482597653397e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.3584013214628057,
+      "logger_capacity": 1.3583926742012977,
+      "logger_normalized_response": 0.9404846434463313,
+      "operation_row": 13,
+      "relative_difference": 6.3657634686653725e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3573194790548118,
+      "logger_capacity": 1.3573338999941456,
+      "logger_normalized_response": 0.9397515999739869,
+      "operation_row": 14,
+      "relative_difference": 1.0624459710211765e-05,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.343606153691735,
+      "logger_capacity": 1.343601426648739,
+      "logger_normalized_response": 0.9302439071373153,
+      "operation_row": 15,
+      "relative_difference": 3.5181760539977657e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.3410013109395522,
+      "logger_capacity": 1.3410056071878813,
+      "logger_normalized_response": 0.9284466887140554,
+      "operation_row": 16,
+      "relative_difference": 3.203751204369371e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3367337615538544,
+      "logger_capacity": 1.3367345203932857,
+      "logger_normalized_response": 0.9254895971326351,
+      "operation_row": 17,
+      "relative_difference": 5.676814802901819e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.3352407528829824,
+      "logger_capacity": 1.3352355676163654,
+      "logger_normalized_response": 0.9244517955493974,
+      "operation_row": 18,
+      "relative_difference": 3.883394515763264e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.332502577774247,
+      "logger_capacity": 1.332495617020868,
+      "logger_normalized_response": 0.9225547877785168,
+      "operation_row": 19,
+      "relative_difference": 5.22381982228737e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3312326482835695,
+      "logger_capacity": 1.3312314029755683,
+      "logger_normalized_response": 0.9216795078110858,
+      "operation_row": 20,
+      "relative_difference": 9.35454822843193e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3294708006458829,
+      "logger_capacity": 1.3294633343951858,
+      "logger_normalized_response": 0.9204553836090119,
+      "operation_row": 21,
+      "relative_difference": 5.615956885553988e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3210003680972027,
+      "logger_capacity": 1.3209974574318721,
+      "logger_normalized_response": 0.9145940244979699,
+      "operation_row": 22,
+      "relative_difference": 2.2033796513835246e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3205794066628271,
+      "logger_capacity": 1.3205819588375718,
+      "logger_normalized_response": 0.9143063535948984,
+      "operation_row": 23,
+      "relative_difference": 1.9326136689756964e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3202810252673536,
+      "logger_capacity": 1.3202774863136852,
+      "logger_normalized_response": 0.9140955517122727,
+      "operation_row": 24,
+      "relative_difference": 2.680454843028204e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 22,
+      "integrated_capacity": 1.317415268865188,
+      "logger_capacity": 1.3174226682702184,
+      "logger_normalized_response": 0.9121190153390235,
+      "operation_row": 25,
+      "relative_difference": 5.616576371946067e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 23,
+      "integrated_capacity": 1.3150536814995997,
+      "logger_capacity": 1.3150453205693609,
+      "logger_normalized_response": 0.9104730560761002,
+      "operation_row": 26,
+      "relative_difference": 6.357862311203302e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 24,
+      "integrated_capacity": 1.300548880479362,
+      "logger_capacity": 1.301567841880493,
+      "logger_normalized_response": 0.901141909066854,
+      "operation_row": 29,
+      "relative_difference": 0.000782872293202118,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 25,
+      "integrated_capacity": 1.2975499637178871,
+      "logger_capacity": 1.297558277339462,
+      "logger_normalized_response": 0.8983658827017502,
+      "operation_row": 30,
+      "relative_difference": 6.40712769524819e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 26,
+      "integrated_capacity": 1.2926657342038603,
+      "logger_capacity": 1.2926636021732563,
+      "logger_normalized_response": 0.8949770490339145,
+      "operation_row": 31,
+      "relative_difference": 1.6493286297063937e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 27,
+      "integrated_capacity": 1.2912082096560769,
+      "logger_capacity": 1.2912021397480231,
+      "logger_normalized_response": 0.8939652039363887,
+      "operation_row": 32,
+      "relative_difference": 4.700952184433147e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 28,
+      "integrated_capacity": 1.2907835762203692,
+      "logger_capacity": 1.2907871192484635,
+      "logger_normalized_response": 0.8936778640427303,
+      "operation_row": 33,
+      "relative_difference": 2.7448585761428697e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 29,
+      "integrated_capacity": 1.2872498969304913,
+      "logger_capacity": 1.287250754398194,
+      "logger_normalized_response": 0.8912294579975067,
+      "operation_row": 34,
+      "relative_difference": 6.661232861506512e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 30,
+      "integrated_capacity": 1.2840366197402373,
+      "logger_capacity": 1.2840417346833988,
+      "logger_normalized_response": 0.8890076897123856,
+      "operation_row": 35,
+      "relative_difference": 3.983471115701136e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 31,
+      "integrated_capacity": 1.2815342374230871,
+      "logger_capacity": 1.2815381167504896,
+      "logger_normalized_response": 0.8872743071171486,
+      "operation_row": 36,
+      "relative_difference": 3.0270870227874822e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 32,
+      "integrated_capacity": 1.2779236827523874,
+      "logger_capacity": 1.2779258168112548,
+      "logger_normalized_response": 0.8847733273306005,
+      "operation_row": 37,
+      "relative_difference": 1.6699395530821477e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "b6715eba9f2d1e8d",
+      "diagnostic_index": 33,
+      "integrated_capacity": 1.2718005445790679,
+      "logger_capacity": 1.2718132605209576,
+      "logger_normalized_response": 0.8805412923436584,
+      "operation_row": 38,
+      "relative_difference": 9.998277486480338e-06,
+      "selected_cycle": 101.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 0,
+      "integrated_capacity": 1.4409178620928647,
+      "logger_capacity": 1.44193211517409,
+      "logger_normalized_response": 1.0,
+      "operation_row": 2,
+      "relative_difference": 0.0007033986347567587,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 1,
+      "integrated_capacity": 1.407611162138017,
+      "logger_capacity": 1.407593503399248,
+      "logger_normalized_response": 0.976185694587504,
+      "operation_row": 4,
+      "relative_difference": 1.2545182394120899e-05,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 2,
+      "integrated_capacity": 1.3953681856083757,
+      "logger_capacity": 1.395364443641597,
+      "logger_normalized_response": 0.9677046713625137,
+      "operation_row": 5,
+      "relative_difference": 2.6817056725621088e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 3,
+      "integrated_capacity": 1.3874265123775185,
+      "logger_capacity": 1.3874190868951786,
+      "logger_normalized_response": 0.9621944558240664,
+      "operation_row": 6,
+      "relative_difference": 5.3519824463864095e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 4,
+      "integrated_capacity": 1.3776338238591623,
+      "logger_capacity": 1.377635810290748,
+      "logger_normalized_response": 0.9554096172720452,
+      "operation_row": 7,
+      "relative_difference": 1.4419134366478453e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 5,
+      "integrated_capacity": 1.3705883862052863,
+      "logger_capacity": 1.3705743096664094,
+      "logger_normalized_response": 0.9505123682614799,
+      "operation_row": 8,
+      "relative_difference": 1.0270434959649656e-05,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 6,
+      "integrated_capacity": 1.364999830283773,
+      "logger_capacity": 1.3650036487585382,
+      "logger_normalized_response": 0.9466490373534235,
+      "operation_row": 9,
+      "relative_difference": 2.7974099327458177e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 7,
+      "integrated_capacity": 1.364086887837942,
+      "logger_capacity": 1.3640882617501617,
+      "logger_normalized_response": 0.9460142037168443,
+      "operation_row": 10,
+      "relative_difference": 1.0072018492470089e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 8,
+      "integrated_capacity": 1.3737715978016378,
+      "logger_capacity": 1.373763162935525,
+      "logger_normalized_response": 0.9527238824066729,
+      "operation_row": 11,
+      "relative_difference": 6.139933396791012e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 9,
+      "integrated_capacity": 1.3632678553558384,
+      "logger_capacity": 1.3632719233760326,
+      "logger_normalized_response": 0.9454480616873143,
+      "operation_row": 12,
+      "relative_difference": 2.9840123048854182e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 10,
+      "integrated_capacity": 1.355569392265133,
+      "logger_capacity": 1.3555574657692873,
+      "logger_normalized_response": 0.9400979779173763,
+      "operation_row": 13,
+      "relative_difference": 8.798144834087267e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 11,
+      "integrated_capacity": 1.3546876125810263,
+      "logger_capacity": 1.35469265555475,
+      "logger_normalized_response": 0.939498219991579,
+      "operation_row": 14,
+      "relative_difference": 3.7225961940853e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 12,
+      "integrated_capacity": 1.3404372217750213,
+      "logger_capacity": 1.3404331527800508,
+      "logger_normalized_response": 0.9296090562614421,
+      "operation_row": 15,
+      "relative_difference": 3.0355729491981695e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 13,
+      "integrated_capacity": 1.3425492833218868,
+      "logger_capacity": 1.3425472336757949,
+      "logger_normalized_response": 0.9310752008000764,
+      "operation_row": 16,
+      "relative_difference": 1.5266821988763131e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 14,
+      "integrated_capacity": 1.3386154046966128,
+      "logger_capacity": 1.3386206979148696,
+      "logger_normalized_response": 0.9283520935749827,
+      "operation_row": 17,
+      "relative_difference": 3.9542330886291565e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 15,
+      "integrated_capacity": 1.3386337108894124,
+      "logger_capacity": 1.33862876001389,
+      "logger_normalized_response": 0.9283576847529137,
+      "operation_row": 18,
+      "relative_difference": 3.698454238946696e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 16,
+      "integrated_capacity": 1.3350615135579973,
+      "logger_capacity": 1.3350614582281395,
+      "logger_normalized_response": 0.925883711291743,
+      "operation_row": 19,
+      "relative_difference": 4.144367674796076e-08,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 17,
+      "integrated_capacity": 1.3340063029478968,
+      "logger_capacity": 1.3340185093274854,
+      "logger_normalized_response": 0.9251604117066387,
+      "operation_row": 20,
+      "relative_difference": 9.150082628768366e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 18,
+      "integrated_capacity": 1.3320528725491356,
+      "logger_capacity": 1.332051734686317,
+      "logger_normalized_response": 0.9237964261067125,
+      "operation_row": 21,
+      "relative_difference": 8.542174579427503e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 19,
+      "integrated_capacity": 1.3263438889230308,
+      "logger_capacity": 1.3263437634249655,
+      "logger_normalized_response": 0.919837868556545,
+      "operation_row": 22,
+      "relative_difference": 9.461955253179457e-08,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 20,
+      "integrated_capacity": 1.3253497364085451,
+      "logger_capacity": 1.3253512227336586,
+      "logger_normalized_response": 0.91914952776653,
+      "operation_row": 23,
+      "relative_difference": 1.1214575336230361e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 21,
+      "integrated_capacity": 1.3306104623837662,
+      "logger_capacity": 1.3306013767102698,
+      "logger_normalized_response": 0.9227905826548715,
+      "operation_row": 24,
+      "relative_difference": 6.828199351572989e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 22,
+      "integrated_capacity": 1.3234673404967685,
+      "logger_capacity": 1.3234769408510303,
+      "logger_normalized_response": 0.9178496871825632,
+      "operation_row": 25,
+      "relative_difference": 7.253888575959466e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 23,
+      "integrated_capacity": 1.3197716860957536,
+      "logger_capacity": 1.319760939869731,
+      "logger_normalized_response": 0.9152725887587233,
+      "operation_row": 26,
+      "relative_difference": 8.142488686346753e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 24,
+      "integrated_capacity": 1.3013404083402191,
+      "logger_capacity": 1.302372517053424,
+      "logger_normalized_response": 0.9032134754112079,
+      "operation_row": 29,
+      "relative_difference": 0.0007924834866293996,
+      "selected_cycle": 1.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 25,
+      "integrated_capacity": 1.2990561909383325,
+      "logger_capacity": 1.2990555180682861,
+      "logger_normalized_response": 0.9009130904275935,
+      "operation_row": 30,
+      "relative_difference": 5.179683920074416e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 26,
+      "integrated_capacity": 1.2927219348269894,
+      "logger_capacity": 1.292736237495781,
+      "logger_normalized_response": 0.8965305813579885,
+      "operation_row": 31,
+      "relative_difference": 1.1063872410082739e-05,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 27,
+      "integrated_capacity": 1.2923178555271027,
+      "logger_capacity": 1.2923211206674523,
+      "logger_normalized_response": 0.8962426920572647,
+      "operation_row": 32,
+      "relative_difference": 2.526570445559613e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 28,
+      "integrated_capacity": 1.2912008675475262,
+      "logger_capacity": 1.291203071585194,
+      "logger_normalized_response": 0.8954673094504884,
+      "operation_row": 33,
+      "relative_difference": 1.7069643934660962e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 29,
+      "integrated_capacity": 1.2864908661336414,
+      "logger_capacity": 1.2864975826882912,
+      "logger_normalized_response": 0.8922039873790919,
+      "operation_row": 34,
+      "relative_difference": 5.220806272914417e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 30,
+      "integrated_capacity": 1.284440817983171,
+      "logger_capacity": 1.2844499482001481,
+      "logger_normalized_response": 0.8907839243493592,
+      "operation_row": 35,
+      "relative_difference": 7.10826995627243e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 31,
+      "integrated_capacity": 1.2817762722274701,
+      "logger_capacity": 1.2817774230874832,
+      "logger_normalized_response": 0.8889304909702558,
+      "operation_row": 36,
+      "relative_difference": 8.978626026146909e-07,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 32,
+      "integrated_capacity": 1.2769776789639682,
+      "logger_capacity": 1.2769686840707024,
+      "logger_normalized_response": 0.8855955635030218,
+      "operation_row": 37,
+      "relative_difference": 7.043892320088763e-06,
+      "selected_cycle": 51.0
+    },
+    {
+      "cell_token": "51f590ad050ec77d",
+      "diagnostic_index": 33,
+      "integrated_capacity": 1.2711198323521538,
+      "logger_capacity": 1.2711150012953993,
+      "logger_normalized_response": 0.8815359529889746,
+      "operation_row": 38,
+      "relative_difference": 3.8006304609989056e-06,
+      "selected_cycle": 101.0
+    }
+  ],
+  "cell_observation_counts": {
+    "080d0b0f2cd1ce57": 11,
+    "1854a11b69fbf7af": 22,
+    "24fde17a63385b48": 15,
+    "51f590ad050ec77d": 34,
+    "72ed208afb2320b8": 22,
+    "9026c5000fb52650": 22,
+    "9940abc98bda4abe": 22,
+    "abf2ff2f94ba68d0": 22,
+    "b6715eba9f2d1e8d": 34,
+    "b8df248530380d27": 22,
+    "bd4eca5de6572a22": 22,
+    "d4ca9686e73980f7": 22,
+    "d81ebc48e26fff6f": 11,
+    "db07b189f200643e": 15
+  },
+  "counterexamples": [
+    {
+      "cell": "PL03",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 15
+    },
+    {
+      "cell": "PL03",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 16
+    },
+    {
+      "cell": "PL10",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 15
+    },
+    {
+      "cell": "PL10",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 16
+    },
+    {
+      "cell": "PL04",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 11
+    },
+    {
+      "cell": "PL04",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL05",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 11
+    },
+    {
+      "cell": "PL05",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL09",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL09",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL25",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL25",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL11",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 1
+    },
+    {
+      "cell": "PL11",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 3
+    },
+    {
+      "cell": "PL13",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 1
+    },
+    {
+      "cell": "PL13",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 3
+    },
+    {
+      "cell": "PL12",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 1
+    },
+    {
+      "cell": "PL12",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 3
+    },
+    {
+      "cell": "PL14",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 1
+    },
+    {
+      "cell": "PL14",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 3
+    },
+    {
+      "cell": "PL14",
+      "details": {
+        "cell_token": "24fde17a63385b48",
+        "diagnostic_index": 5,
+        "integrated_capacity": 3.4188560325656543e-06,
+        "logger_capacity": 6.949679942636067e-08,
+        "logger_normalized_response": 4.8110380419222315e-08,
+        "operation_row": 8,
+        "relative_difference": 0.9796724989983836,
+        "selected_cycle": 51.0
+      },
+      "operation": "51 Full Cycles",
+      "reason": "capacity crosscheck relative difference above 0.02",
+      "row": 8
+    },
+    {
+      "cell": "PL19",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL19",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 14
+    },
+    {
+      "cell": "PL19",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 19
+    },
+    {
+      "cell": "PL24",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL24",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 14
+    },
+    {
+      "cell": "PL24",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 19
+    },
+    {
+      "cell": "PL21",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 1
+    },
+    {
+      "cell": "PL21",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 3
+    },
+    {
+      "cell": "PL21",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 27
+    },
+    {
+      "cell": "PL21",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 28
+    },
+    {
+      "cell": "PL23",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 1
+    },
+    {
+      "cell": "PL23",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle by current-time integration",
+      "row": 3
+    },
+    {
+      "cell": "PL23",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 27
+    },
+    {
+      "cell": "PL23",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 28
+    }
+  ],
+  "ineligible_cells": {},
+  "observation_count": 296,
+  "schema": "v52.1-calce-current-integral-snapshot-v1",
+  "snapshot_sha256": "4777dcd71bed002451e44277e341c2f7e7b1017082c53bba3f7effebcf2c961c"
+}
