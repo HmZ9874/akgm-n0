@@ -1,0 +1,41 @@
+{
+  "protocol_version": "self-bootstrap-efficiency-v54.0",
+  "objective": "Increase local autonomous semantic-learning efficiency without reducing correctness or hiding work behind macro calls.",
+  "development_seed": 541,
+  "sealed_evaluation_seeds": [54001, 54778],
+  "rounds_per_seed": 20,
+  "baseline": {
+    "workloads_per_family": 48,
+    "instructions_per_workload": 36,
+    "semantic_cache": false,
+    "curriculum": "fixed"
+  },
+  "candidate_system": {
+    "initial_workloads_per_family": 48,
+    "productive_workloads_per_family": 36,
+    "instructions_per_workload": 36,
+    "productive_trigger": "previous round filled the entire operator promotion budget",
+    "semantic_cache": true,
+    "dynamic_operator_promotion": true,
+    "knowledge_gap_recomputed_each_round": true
+  },
+  "hard_acceptance_gates": {
+    "all_promoted_semantics_independently_verified": true,
+    "all_mutated_certificates_rejected": true,
+    "candidate_operator_count_at_least_fraction_of_baseline": 0.9,
+    "candidate_world_count_not_above_baseline": true,
+    "behavior_execution_reduction_at_least": 0.75,
+    "window_normalization_reduction_at_least": 0.75,
+    "verified_operator_per_window_execution_gain_at_least": 4.0,
+    "dynamic_generation_depth_at_least": 2,
+    "named_math_target_count": 0,
+    "dashboard_modification_allowed": false
+  },
+  "timing_policy": "Wall-clock time is reported but is not an acceptance gate because machine load is nondeterministic.",
+  "claim_boundary": [
+    "This benchmark measures computational reuse and autonomous curriculum efficiency inside the V16/V17 finite charter.",
+    "It does not establish unrestricted mathematical intelligence.",
+    "Fewer verifier executions are allowed only through exact memoization keyed by immutable executable program bodies.",
+    "Macro calls continue to charge expanded primitive work."
+  ]
+}
