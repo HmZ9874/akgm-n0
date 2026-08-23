@@ -1,0 +1,3760 @@
+{
+  "report_version": "continuous-math-research-v55.0",
+  "run_id": "RUN-continuous-math-v55-20260823T062558424941Z",
+  "created_at": "2026-08-23T06:25:58.424941Z",
+  "verdict": "persistent_verified_frontier_advanced",
+  "transition": {
+    "before_state": {
+      "schema_version": "continuous-math-research-state-v55.0",
+      "campaign_seed": 55001,
+      "run_count": 1,
+      "next_round_index": 1,
+      "curriculum_level": 0,
+      "sterile_rounds_at_level": 0,
+      "operators": [
+        {
+          "operator_id": "nu_1d5dda91dadc",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 944,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 1884,
+          "behavior_signature": "49832145fc153497b023357cb8265f97272f0d3af1a5134acae1c7b189b21dab",
+          "certificate_digest": "e35127672143be798b23ac9f5f53ddad7d98d16435057343acb2b4dc6d4e797f"
+        },
+        {
+          "operator_id": "nu_f3dc081dd84f",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 248,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 492,
+          "behavior_signature": "bf028b57ef21d12c3143980ff6017d0ca6f13090fd3a88ebe23db87655651761",
+          "certificate_digest": "f35fc0637270beda2605ad8d65ce3db6d393f8eac7c5026c9e92a98045b300ea"
+        },
+        {
+          "operator_id": "nu_6b222833c01f",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 218,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 432,
+          "behavior_signature": "1c3f73f57863b88489d292b2086b74a89af82128877aa5262ffa6789e0aba1cd",
+          "certificate_digest": "1022f7d7b134a36d46be236fce194bd3bfd5d833aaad2ab552acd2885c1fccc9"
+        },
+        {
+          "operator_id": "nu_ba8bf52c3257",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 216,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 428,
+          "behavior_signature": "bd75063a9b522de472c95b64336801912498e49af9776ae301873aee17d79e01",
+          "certificate_digest": "5d28b23b367dc3be3854b3768677d11e98b68af9a48be75065a87575e86bb6f8"
+        },
+        {
+          "operator_id": "nu_c4d62410242a",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 166,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 328,
+          "behavior_signature": "a293f46acaea2eddb9f1974501d7b59ce8e6a07b2dfe9b3539605249750c0731",
+          "certificate_digest": "eb5958558ac544bb19c3aa5308ed19d13cc03b45b326ce8953f981fb0c680638"
+        },
+        {
+          "operator_id": "nu_f01969147f22",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 101,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 198,
+          "behavior_signature": "0b540cc909a3e743f3e24a15e47c2e44bdac9564dbfdc0b7574d499f8fa41d91",
+          "certificate_digest": "8648e41e54852196c17a04eecc4a399e0f121b6386aee7a55816812a0f49361c"
+        },
+        {
+          "operator_id": "nu_9740add9eaca",
+          "generation": 2,
+          "arity": 1,
+          "body": [
+            {
+              "op": "nu_1d5dda91dadc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_1d5dda91dadc"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 100,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 196,
+          "behavior_signature": "bdc46d6780c86d90b671c79f69941c1ac330a3a3eb8f217c7d676045dcb4008f",
+          "certificate_digest": "79786eb55aeaff788174f74fbe1800abc16c7787e3df01acf1caae875d404a99"
+        },
+        {
+          "operator_id": "nu_fa5ba91880dc",
+          "generation": 2,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "nu_1d5dda91dadc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_1d5dda91dadc"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 81,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 158,
+          "behavior_signature": "23d33aee5366921a535da14108c41d51ed31ba50cae1857ae4f9d1b2c7d83ca0",
+          "certificate_digest": "ad2527aa31781f5aa237b23ef63b63764c869fa137cff22d115e15719f79c821"
+        }
+      ],
+      "exact_signatures": [
+        "027ae4dd4d34eb109cc69930e5e634eeb9c4ae468c381a9fc554f6283745a12f",
+        "121ad764d87749c68194183c34cf5cc46b4f778e2b654e8b99eee813c8259bc5",
+        "18b3d0e458fa1b5a9ec431693fb8cb5e70f87080103f9998691373b51e35c1ec",
+        "24e599a801efb7f3e9e786b40bdb19faac424d69f6350d050453e6a7f0058e57",
+        "6ce50d390a21ce66739910cd40f860ee64bfd5a80fd3183bc6ef9d5d4dc4f0fb",
+        "7133196422351e1a785eb2235c6ac6aae195786309625fbbe1f90f5b3a8bfc51",
+        "73c50e1b7abd39c36cab520d7b8d1095045c1f4212b1eeefb2d8d87a0859bd11",
+        "7e64dd0af3e7f40d510542e7eb4ed84a948d922e48759451f4d601fb130d958c",
+        "a44b7ba88c456f02b607f134ea5323608595e584d9d9efdbf25fea678824200e",
+        "a80cac65fa2c3456ba6e904b3a513b1bbebd5c8eb01f75756e11a439ba8a8f46",
+        "b181da7a211864e902e38cfd0d2ca05183251222530f5f6bd724ed5d48dc2c15",
+        "c5183c6b20cf3ff7daf9aaad63d4f7503f517edbbeedcf1f5cf09a9950cd3d5b"
+      ],
+      "previous_state_digest": "9142f854bb844bded3eb3ff993caf47e8a27174fae423bcd825c7289c3d91890",
+      "state_digest": "d4cdcbb2368d2bea0f4c18e3b2eaf5182635841d07cc3eb90dca05398e491303"
+    },
+    "after_state": {
+      "schema_version": "continuous-math-research-state-v55.0",
+      "campaign_seed": 55001,
+      "run_count": 2,
+      "next_round_index": 2,
+      "curriculum_level": 0,
+      "sterile_rounds_at_level": 0,
+      "operators": [
+        {
+          "operator_id": "nu_1d5dda91dadc",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 944,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 1884,
+          "behavior_signature": "49832145fc153497b023357cb8265f97272f0d3af1a5134acae1c7b189b21dab",
+          "certificate_digest": "e35127672143be798b23ac9f5f53ddad7d98d16435057343acb2b4dc6d4e797f"
+        },
+        {
+          "operator_id": "nu_f3dc081dd84f",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 248,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 492,
+          "behavior_signature": "bf028b57ef21d12c3143980ff6017d0ca6f13090fd3a88ebe23db87655651761",
+          "certificate_digest": "f35fc0637270beda2605ad8d65ce3db6d393f8eac7c5026c9e92a98045b300ea"
+        },
+        {
+          "operator_id": "nu_6b222833c01f",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 218,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 432,
+          "behavior_signature": "1c3f73f57863b88489d292b2086b74a89af82128877aa5262ffa6789e0aba1cd",
+          "certificate_digest": "1022f7d7b134a36d46be236fce194bd3bfd5d833aaad2ab552acd2885c1fccc9"
+        },
+        {
+          "operator_id": "nu_ba8bf52c3257",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 216,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 428,
+          "behavior_signature": "bd75063a9b522de472c95b64336801912498e49af9776ae301873aee17d79e01",
+          "certificate_digest": "5d28b23b367dc3be3854b3768677d11e98b68af9a48be75065a87575e86bb6f8"
+        },
+        {
+          "operator_id": "nu_c4d62410242a",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 166,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 328,
+          "behavior_signature": "a293f46acaea2eddb9f1974501d7b59ce8e6a07b2dfe9b3539605249750c0731",
+          "certificate_digest": "eb5958558ac544bb19c3aa5308ed19d13cc03b45b326ce8953f981fb0c680638"
+        },
+        {
+          "operator_id": "nu_f01969147f22",
+          "generation": 1,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 101,
+          "primitive_span": 2,
+          "token_gain_per_use": 2,
+          "net_training_reward": 198,
+          "behavior_signature": "0b540cc909a3e743f3e24a15e47c2e44bdac9564dbfdc0b7574d499f8fa41d91",
+          "certificate_digest": "8648e41e54852196c17a04eecc4a399e0f121b6386aee7a55816812a0f49361c"
+        },
+        {
+          "operator_id": "nu_9740add9eaca",
+          "generation": 2,
+          "arity": 1,
+          "body": [
+            {
+              "op": "nu_1d5dda91dadc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_1d5dda91dadc"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 100,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 196,
+          "behavior_signature": "bdc46d6780c86d90b671c79f69941c1ac330a3a3eb8f217c7d676045dcb4008f",
+          "certificate_digest": "79786eb55aeaff788174f74fbe1800abc16c7787e3df01acf1caae875d404a99"
+        },
+        {
+          "operator_id": "nu_fa5ba91880dc",
+          "generation": 2,
+          "arity": 1,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "nu_1d5dda91dadc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_1d5dda91dadc"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 81,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 158,
+          "behavior_signature": "23d33aee5366921a535da14108c41d51ed31ba50cae1857ae4f9d1b2c7d83ca0",
+          "certificate_digest": "ad2527aa31781f5aa237b23ef63b63764c869fa137cff22d115e15719f79c821"
+        },
+        {
+          "operator_id": "nu_a1992d794050",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 321,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 317,
+          "behavior_signature": "3e4161e955634846fdebc8e305f657093100c0a46b11832f61905316f8716604",
+          "certificate_digest": "e5ad6931d5c6201c9d1adf17ff7eae4005c87eea21d9900f5fd1c2f3e778cde4"
+        },
+        {
+          "operator_id": "nu_2782896b5870",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 162,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 158,
+          "behavior_signature": "607336aa55bfa9e13117c1c6efd36b529f676f3ecfd2532e821b331cde0e596d",
+          "certificate_digest": "cd23072120376f1b6041b44b8095fa17e6cc1009e9656fdd77168fcac6d83c39"
+        },
+        {
+          "operator_id": "nu_0665088bb1ea",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 135,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 131,
+          "behavior_signature": "db8e5b89f034591666e3d92e75379846e913e212d07ca20a4aaee6ea9538eb16",
+          "certificate_digest": "de4fcac8061d070f8f66533874d7dbb51a84ef9cfa2c54740ece794cc990f68f"
+        },
+        {
+          "operator_id": "nu_6c1c401adbce",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 41,
+          "primitive_span": 3,
+          "token_gain_per_use": 3,
+          "net_training_reward": 117,
+          "behavior_signature": "8bfac18e78bd95925e2a4d5afa2d89505e8b67a253a739f87f065c7ac25f1345",
+          "certificate_digest": "2e07c2bed9684780eecbeed1aea82d6da638f69c311e7fb6b582b44f594c9c29"
+        },
+        {
+          "operator_id": "nu_fc7e1d8f6c27",
+          "generation": 2,
+          "arity": 1,
+          "body": [
+            {
+              "op": "nu_ba8bf52c3257",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_ba8bf52c3257"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 55,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 106,
+          "behavior_signature": "065a0f4a947206ac6969afe320450d88f7ab6c176baab4113c63fd0c2a008ee0",
+          "certificate_digest": "78a4120bbf09501a62492be78e014d8b3020ef2051ca3017cbcb29569883c5e7"
+        },
+        {
+          "operator_id": "nu_3765729cf271",
+          "generation": 2,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "nu_a1992d794050",
+              "operands": [
+                0,
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_a1992d794050"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 46,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 87,
+          "behavior_signature": "7e7af3e0781f4fdb3d85c8791bdf0b7c5cf366c719a5db402ba06de6192eff04",
+          "certificate_digest": "1b36cef34face377cf2e247f1f89655ed3ee9d6e597b1b3f3267b9761363d39b"
+        },
+        {
+          "operator_id": "nu_13b4d588e3d2",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 83,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 79,
+          "behavior_signature": "d5ff67d42da4bdd706f330b45140e6a43aa7cfadebc9279835a7501556fe5e03",
+          "certificate_digest": "4d0740cd252e598c59007f13c7e529cdd8ddfb1c1c07ee1a721fa10b25a21f0a"
+        },
+        {
+          "operator_id": "nu_26b516b14d13",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 68,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 64,
+          "behavior_signature": "ac47dd03e89dd85c06e77ffc0a92bcad775e1458bcdd50e5f74a73df99b6136b",
+          "certificate_digest": "0271f9fdfa047de6fd4adaa19611c59ebe6e1a2f38f31fb437c9b785fbde10c9"
+        }
+      ],
+      "exact_signatures": [
+        "027ae4dd4d34eb109cc69930e5e634eeb9c4ae468c381a9fc554f6283745a12f",
+        "04b085fdac92d568fb6d5723f47f5f8ce59b9fb3f2444ca83077aa2a589897b9",
+        "0755be32ce806c81348d1df6bac1b41949f3638534316e1f9481d3538f8c2cb8",
+        "121ad764d87749c68194183c34cf5cc46b4f778e2b654e8b99eee813c8259bc5",
+        "18b3d0e458fa1b5a9ec431693fb8cb5e70f87080103f9998691373b51e35c1ec",
+        "1945f536c550e9e72f7b8e8f5bd28c86588a06392c44972b4695140cdd931a81",
+        "2424945844213397ddcb6d445640a7900ed3d852427ebd8615746dd7a554650c",
+        "24e599a801efb7f3e9e786b40bdb19faac424d69f6350d050453e6a7f0058e57",
+        "5687f6a2ff1d44c4c59a30c6edfff7a0e96e16d4a54f5d40f06d74a4fd39d087",
+        "6ce50d390a21ce66739910cd40f860ee64bfd5a80fd3183bc6ef9d5d4dc4f0fb",
+        "7133196422351e1a785eb2235c6ac6aae195786309625fbbe1f90f5b3a8bfc51",
+        "73c50e1b7abd39c36cab520d7b8d1095045c1f4212b1eeefb2d8d87a0859bd11",
+        "7e64dd0af3e7f40d510542e7eb4ed84a948d922e48759451f4d601fb130d958c",
+        "7eff3bead09fbd01769164e565f888c01f6d8c6e315e04635cd4645f389aa2af",
+        "84725cffb2278faeb7016167927e68dc609ea63aba894b45ec23113e03ed6d38",
+        "a44b7ba88c456f02b607f134ea5323608595e584d9d9efdbf25fea678824200e",
+        "a80cac65fa2c3456ba6e904b3a513b1bbebd5c8eb01f75756e11a439ba8a8f46",
+        "b181da7a211864e902e38cfd0d2ca05183251222530f5f6bd724ed5d48dc2c15",
+        "c5183c6b20cf3ff7daf9aaad63d4f7503f517edbbeedcf1f5cf09a9950cd3d5b",
+        "d5b2f4f676e3a4764870d73d983ac425718596b81521dfd1d9cde19ff25f45f4"
+      ],
+      "previous_state_digest": "d4cdcbb2368d2bea0f4c18e3b2eaf5182635841d07cc3eb90dca05398e491303",
+      "state_digest": "5bc7ee2bc00dcdddbbf08c957c6317dfbd08f7e11ad2063f5f89a33e097b06a9"
+    },
+    "rounds": [
+      {
+        "round_index": 1,
+        "curriculum_level": 0,
+        "gap": {
+          "gap_id": "GAP-2af2f633ef4a6b3b",
+          "focus_transition": [
+            "u_inc",
+            "u_dec"
+          ],
+          "target_arity": 2,
+          "current_operator_count": 8,
+          "current_generation_depth": 2,
+          "transition_evidence": 0,
+          "arity_evidence": 0
+        },
+        "experiment": {
+          "experiment_id": "EXP-c7f1a9abd8549475",
+          "round_index": 1,
+          "gap_id": "GAP-2af2f633ef4a6b3b",
+          "focus_transition": [
+            "u_inc",
+            "u_dec"
+          ],
+          "target_arity": 2,
+          "family_count": 4,
+          "workloads_per_family": 48,
+          "instruction_count": 36,
+          "recurrence_probability": 0.49,
+          "seed_commitment": "dadf279f6265c289632fc68d49f529fa69e0f2a406f0e3b58746e4657fb66e54"
+        },
+        "world_digest": "df900d72f859cdb89d6c07efcab6446af595edb5f22fe9af8c7dd16ba50409a1",
+        "operator_count_before": 8,
+        "proposal_count": 8,
+        "new_verified_exact_semantic_count": 8,
+        "discoveries": [
+          {
+            "operator": {
+              "operator_id": "nu_a1992d794050",
+              "generation": 1,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [],
+              "train_family_support": 4,
+              "train_occurrences": 321,
+              "primitive_span": 2,
+              "token_gain_per_use": 1,
+              "net_training_reward": 317,
+              "behavior_signature": "3e4161e955634846fdebc8e305f657093100c0a46b11832f61905316f8716604",
+              "certificate_digest": "e5ad6931d5c6201c9d1adf17ff7eae4005c87eea21d9900f5fd1c2f3e778cde4"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": -1
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "d5b2f4f676e3a4764870d73d983ac425718596b81521dfd1d9cde19ff25f45f4",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=1 => n0-1; n1>=0 => n1+1 | roles[0,0]: n0>=1 => n0",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_2782896b5870",
+              "generation": 1,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_zero",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_zero",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [],
+              "train_family_support": 4,
+              "train_occurrences": 162,
+              "primitive_span": 2,
+              "token_gain_per_use": 1,
+              "net_training_reward": 158,
+              "behavior_signature": "607336aa55bfa9e13117c1c6efd36b529f676f3ecfd2532e821b331cde0e596d",
+              "certificate_digest": "cd23072120376f1b6041b44b8095fa17e6cc1009e9656fdd77168fcac6d83c39"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "constant",
+                        "value": 0
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "constant",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "04b085fdac92d568fb6d5723f47f5f8ce59b9fb3f2444ca83077aa2a589897b9",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=0 => 0; n1>=0 => n1+1 | roles[0,0]: n0>=0 => 1",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_0665088bb1ea",
+              "generation": 1,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_unit",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_unit",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [],
+              "train_family_support": 4,
+              "train_occurrences": 135,
+              "primitive_span": 2,
+              "token_gain_per_use": 1,
+              "net_training_reward": 131,
+              "behavior_signature": "db8e5b89f034591666e3d92e75379846e913e212d07ca20a4aaee6ea9538eb16",
+              "certificate_digest": "de4fcac8061d070f8f66533874d7dbb51a84ef9cfa2c54740ece794cc990f68f"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "constant",
+                        "value": 1
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "constant",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "2424945844213397ddcb6d445640a7900ed3d852427ebd8615746dd7a554650c",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=0 => 1; n1>=0 => n1+1 | roles[0,0]: n0>=0 => 2",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_6c1c401adbce",
+              "generation": 1,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_zero",
+                  "operands": [
+                    1
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_zero",
+                  "operands": [
+                    1
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [],
+              "train_family_support": 4,
+              "train_occurrences": 41,
+              "primitive_span": 3,
+              "token_gain_per_use": 3,
+              "net_training_reward": 117,
+              "behavior_signature": "8bfac18e78bd95925e2a4d5afa2d89505e8b67a253a739f87f065c7ac25f1345",
+              "certificate_digest": "2e07c2bed9684780eecbeed1aea82d6da638f69c311e7fb6b582b44f594c9c29"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": -1
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "constant",
+                        "value": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "constant",
+                        "value": 1
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "0755be32ce806c81348d1df6bac1b41949f3638534316e1f9481d3538f8c2cb8",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=1 => n0-1; n1>=0 => 1 | roles[0,0]: n0>=1 => 1",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_fc7e1d8f6c27",
+              "generation": 2,
+              "arity": 1,
+              "body": [
+                {
+                  "op": "nu_ba8bf52c3257",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    0
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_unit",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    0
+                  ]
+                }
+              ],
+              "parent_operators": [
+                "nu_ba8bf52c3257"
+              ],
+              "train_family_support": 4,
+              "train_occurrences": 55,
+              "primitive_span": 3,
+              "token_gain_per_use": 2,
+              "net_training_reward": 106,
+              "behavior_signature": "065a0f4a947206ac6969afe320450d88f7ab6c176baab4113c63fd0c2a008ee0",
+              "certificate_digest": "78a4120bbf09501a62492be78e014d8b3020ef2051ca3017cbcb29569883c5e7"
+            },
+            "exact_semantic": {
+              "arity": 1,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "constant",
+                        "value": 2
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "84725cffb2278faeb7016167927e68dc609ea63aba894b45ec23113e03ed6d38",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0]: n0>=1 => 2",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_3765729cf271",
+              "generation": 2,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "nu_a1992d794050",
+                  "operands": [
+                    0,
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [
+                "nu_a1992d794050"
+              ],
+              "train_family_support": 4,
+              "train_occurrences": 46,
+              "primitive_span": 3,
+              "token_gain_per_use": 2,
+              "net_training_reward": 87,
+              "behavior_signature": "7e7af3e0781f4fdb3d85c8791bdf0b7c5cf366c719a5db402ba06de6192eff04",
+              "certificate_digest": "1b36cef34face377cf2e247f1f89655ed3ee9d6e597b1b3f3267b9761363d39b"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 0
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "7eff3bead09fbd01769164e565f888c01f6d8c6e315e04635cd4645f389aa2af",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=0 => n0; n1>=0 => n1+1 | roles[0,0]: n0>=0 => n0+1",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_13b4d588e3d2",
+              "generation": 1,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_inc",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [],
+              "train_family_support": 4,
+              "train_occurrences": 83,
+              "primitive_span": 2,
+              "token_gain_per_use": 1,
+              "net_training_reward": 79,
+              "behavior_signature": "d5ff67d42da4bdd706f330b45140e6a43aa7cfadebc9279835a7501556fe5e03",
+              "certificate_digest": "4d0740cd252e598c59007f13c7e529cdd8ddfb1c1c07ee1a721fa10b25a21f0a"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 1
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": 2
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "5687f6a2ff1d44c4c59a30c6edfff7a0e96e16d4a54f5d40f06d74a4fd39d087",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=0 => n0+1; n1>=0 => n1+1 | roles[0,0]: n0>=0 => n0+2",
+            "posthoc_translation_only": true
+          },
+          {
+            "operator": {
+              "operator_id": "nu_26b516b14d13",
+              "generation": 1,
+              "arity": 2,
+              "body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_zero",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "primitive_body": [
+                {
+                  "op": "u_dec",
+                  "operands": [
+                    0
+                  ]
+                },
+                {
+                  "op": "u_zero",
+                  "operands": [
+                    1
+                  ]
+                }
+              ],
+              "parent_operators": [],
+              "train_family_support": 4,
+              "train_occurrences": 68,
+              "primitive_span": 2,
+              "token_gain_per_use": 1,
+              "net_training_reward": 64,
+              "behavior_signature": "ac47dd03e89dd85c06e77ffc0a92bcad775e1458bcdd50e5f74a73df99b6136b",
+              "certificate_digest": "0271f9fdfa047de6fd4adaa19611c59ebe6e1a2f38f31fb437c9b785fbde10c9"
+            },
+            "exact_semantic": {
+              "arity": 2,
+              "all_natural_inputs": true,
+              "all_role_alias_partitions": true,
+              "alias_partitions": [
+                {
+                  "role_to_physical_group": [
+                    0,
+                    1
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "input_offset",
+                        "offset": -1
+                      }
+                    },
+                    {
+                      "minimum_input": 0,
+                      "output": {
+                        "kind": "constant",
+                        "value": 0
+                      }
+                    }
+                  ]
+                },
+                {
+                  "role_to_physical_group": [
+                    0,
+                    0
+                  ],
+                  "always_error": false,
+                  "physical_groups": [
+                    {
+                      "minimum_input": 1,
+                      "output": {
+                        "kind": "constant",
+                        "value": 0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "exact_signature": "1945f536c550e9e72f7b8e8f5bd28c86588a06392c44972b4695140cdd931a81",
+              "finite_sample_hash": false,
+              "human_math_name": null
+            },
+            "posthoc_formula": "roles[0,1]: n0>=1 => n0-1; n1>=0 => 0 | roles[0,0]: n0>=1 => 0",
+            "posthoc_translation_only": true
+          }
+        ],
+        "rejected": [],
+        "cache_stats": {
+          "behavior_hits": 60,
+          "behavior_misses": 32,
+          "identity_hits": 7,
+          "identity_misses": 9,
+          "window_hits": 92940,
+          "window_misses": 13713
+        }
+      }
+    ],
+    "discoveries": [
+      {
+        "operator": {
+          "operator_id": "nu_a1992d794050",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 321,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 317,
+          "behavior_signature": "3e4161e955634846fdebc8e305f657093100c0a46b11832f61905316f8716604",
+          "certificate_digest": "e5ad6931d5c6201c9d1adf17ff7eae4005c87eea21d9900f5fd1c2f3e778cde4"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": -1
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 0
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "d5b2f4f676e3a4764870d73d983ac425718596b81521dfd1d9cde19ff25f45f4",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=1 => n0-1; n1>=0 => n1+1 | roles[0,0]: n0>=1 => n0",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_2782896b5870",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_zero",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 162,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 158,
+          "behavior_signature": "607336aa55bfa9e13117c1c6efd36b529f676f3ecfd2532e821b331cde0e596d",
+          "certificate_digest": "cd23072120376f1b6041b44b8095fa17e6cc1009e9656fdd77168fcac6d83c39"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "constant",
+                    "value": 0
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "constant",
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "04b085fdac92d568fb6d5723f47f5f8ce59b9fb3f2444ca83077aa2a589897b9",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=0 => 0; n1>=0 => n1+1 | roles[0,0]: n0>=0 => 1",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_0665088bb1ea",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 135,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 131,
+          "behavior_signature": "db8e5b89f034591666e3d92e75379846e913e212d07ca20a4aaee6ea9538eb16",
+          "certificate_digest": "de4fcac8061d070f8f66533874d7dbb51a84ef9cfa2c54740ece794cc990f68f"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "constant",
+                    "value": 1
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "constant",
+                    "value": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "2424945844213397ddcb6d445640a7900ed3d852427ebd8615746dd7a554650c",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=0 => 1; n1>=0 => n1+1 | roles[0,0]: n0>=0 => 2",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_6c1c401adbce",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 41,
+          "primitive_span": 3,
+          "token_gain_per_use": 3,
+          "net_training_reward": 117,
+          "behavior_signature": "8bfac18e78bd95925e2a4d5afa2d89505e8b67a253a739f87f065c7ac25f1345",
+          "certificate_digest": "2e07c2bed9684780eecbeed1aea82d6da638f69c311e7fb6b582b44f594c9c29"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": -1
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "constant",
+                    "value": 1
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "constant",
+                    "value": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "0755be32ce806c81348d1df6bac1b41949f3638534316e1f9481d3538f8c2cb8",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=1 => n0-1; n1>=0 => 1 | roles[0,0]: n0>=1 => 1",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_fc7e1d8f6c27",
+          "generation": 2,
+          "arity": 1,
+          "body": [
+            {
+              "op": "nu_ba8bf52c3257",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_unit",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_ba8bf52c3257"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 55,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 106,
+          "behavior_signature": "065a0f4a947206ac6969afe320450d88f7ab6c176baab4113c63fd0c2a008ee0",
+          "certificate_digest": "78a4120bbf09501a62492be78e014d8b3020ef2051ca3017cbcb29569883c5e7"
+        },
+        "exact_semantic": {
+          "arity": 1,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "constant",
+                    "value": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "84725cffb2278faeb7016167927e68dc609ea63aba894b45ec23113e03ed6d38",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0]: n0>=1 => 2",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_3765729cf271",
+          "generation": 2,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "nu_a1992d794050",
+              "operands": [
+                0,
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [
+            "nu_a1992d794050"
+          ],
+          "train_family_support": 4,
+          "train_occurrences": 46,
+          "primitive_span": 3,
+          "token_gain_per_use": 2,
+          "net_training_reward": 87,
+          "behavior_signature": "7e7af3e0781f4fdb3d85c8791bdf0b7c5cf366c719a5db402ba06de6192eff04",
+          "certificate_digest": "1b36cef34face377cf2e247f1f89655ed3ee9d6e597b1b3f3267b9761363d39b"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 0
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "7eff3bead09fbd01769164e565f888c01f6d8c6e315e04635cd4645f389aa2af",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=0 => n0; n1>=0 => n1+1 | roles[0,0]: n0>=0 => n0+1",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_13b4d588e3d2",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_inc",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_inc",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 83,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 79,
+          "behavior_signature": "d5ff67d42da4bdd706f330b45140e6a43aa7cfadebc9279835a7501556fe5e03",
+          "certificate_digest": "4d0740cd252e598c59007f13c7e529cdd8ddfb1c1c07ee1a721fa10b25a21f0a"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 1
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": 2
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "5687f6a2ff1d44c4c59a30c6edfff7a0e96e16d4a54f5d40f06d74a4fd39d087",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=0 => n0+1; n1>=0 => n1+1 | roles[0,0]: n0>=0 => n0+2",
+        "posthoc_translation_only": true
+      },
+      {
+        "operator": {
+          "operator_id": "nu_26b516b14d13",
+          "generation": 1,
+          "arity": 2,
+          "body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "primitive_body": [
+            {
+              "op": "u_dec",
+              "operands": [
+                0
+              ]
+            },
+            {
+              "op": "u_zero",
+              "operands": [
+                1
+              ]
+            }
+          ],
+          "parent_operators": [],
+          "train_family_support": 4,
+          "train_occurrences": 68,
+          "primitive_span": 2,
+          "token_gain_per_use": 1,
+          "net_training_reward": 64,
+          "behavior_signature": "ac47dd03e89dd85c06e77ffc0a92bcad775e1458bcdd50e5f74a73df99b6136b",
+          "certificate_digest": "0271f9fdfa047de6fd4adaa19611c59ebe6e1a2f38f31fb437c9b785fbde10c9"
+        },
+        "exact_semantic": {
+          "arity": 2,
+          "all_natural_inputs": true,
+          "all_role_alias_partitions": true,
+          "alias_partitions": [
+            {
+              "role_to_physical_group": [
+                0,
+                1
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "input_offset",
+                    "offset": -1
+                  }
+                },
+                {
+                  "minimum_input": 0,
+                  "output": {
+                    "kind": "constant",
+                    "value": 0
+                  }
+                }
+              ]
+            },
+            {
+              "role_to_physical_group": [
+                0,
+                0
+              ],
+              "always_error": false,
+              "physical_groups": [
+                {
+                  "minimum_input": 1,
+                  "output": {
+                    "kind": "constant",
+                    "value": 0
+                  }
+                }
+              ]
+            }
+          ],
+          "exact_signature": "1945f536c550e9e72f7b8e8f5bd28c86588a06392c44972b4695140cdd931a81",
+          "finite_sample_hash": false,
+          "human_math_name": null
+        },
+        "posthoc_formula": "roles[0,1]: n0>=1 => n0-1; n1>=0 => 0 | roles[0,0]: n0>=1 => 0",
+        "posthoc_translation_only": true
+      }
+    ],
+    "new_verified_exact_semantic_count": 8,
+    "stop_reason": "target_new_verified_semantics_reached",
+    "target_new": 5,
+    "maximum_rounds": 12,
+    "cloud_model_calls": 0,
+    "api_tokens": 0
+  },
+  "acceptance": {
+    "benchmark_version": "continuous-math-research-transition-v55.0",
+    "passed": true,
+    "new_verified_exact_semantic_count": 8,
+    "registry_verification": {
+      "passed": true,
+      "operator_count": 16,
+      "dispatch_certificates": [
+        {
+          "operator_id": "nu_1d5dda91dadc",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_f3dc081dd84f",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_6b222833c01f",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_ba8bf52c3257",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_c4d62410242a",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_f01969147f22",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_9740add9eaca",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_fa5ba91880dc",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_a1992d794050",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_2782896b5870",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_0665088bb1ea",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_6c1c401adbce",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_fc7e1d8f6c27",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 32,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_3765729cf271",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_13b4d588e3d2",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        },
+        {
+          "operator_id": "nu_26b516b14d13",
+          "passed": true,
+          "certificate_digest_matches": true,
+          "exhaustive_cases": 64,
+          "counterexample": null
+        }
+      ],
+      "exact_semantic_proofs": [
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 72,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        },
+        {
+          "proof_version": "exact-natural-counter-normal-form-v55.0",
+          "passed": true,
+          "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+          "finite_probe_is_proof": false,
+          "obligations": [
+            {
+              "obligation_id": "only_declared_counter_primitives",
+              "passed": true
+            },
+            {
+              "obligation_id": "symbolic_normal_form_recomputed",
+              "passed": true
+            },
+            {
+              "obligation_id": "exact_signature_matches_normal_form",
+              "passed": true
+            },
+            {
+              "obligation_id": "all_alias_partitions_present",
+              "passed": true
+            },
+            {
+              "obligation_id": "structural_induction_is_unbounded",
+              "passed": true,
+              "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+            },
+            {
+              "obligation_id": "hidden_numeric_replay_agrees",
+              "passed": true
+            }
+          ],
+          "hidden_case_count": 144,
+          "failed_hidden_cases": []
+        }
+      ]
+    },
+    "round_audits": [
+      {
+        "round_index": 1,
+        "passed": true,
+        "gap_recomputed": true,
+        "world_replayed": true,
+        "exact_proofs": [
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 72,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          },
+          {
+            "proof_version": "exact-natural-counter-normal-form-v55.0",
+            "passed": true,
+            "universal_scope": "all natural inputs and all arity-one/two role alias partitions",
+            "finite_probe_is_proof": false,
+            "obligations": [
+              {
+                "obligation_id": "only_declared_counter_primitives",
+                "passed": true
+              },
+              {
+                "obligation_id": "symbolic_normal_form_recomputed",
+                "passed": true
+              },
+              {
+                "obligation_id": "exact_signature_matches_normal_form",
+                "passed": true
+              },
+              {
+                "obligation_id": "all_alias_partitions_present",
+                "passed": true
+              },
+              {
+                "obligation_id": "structural_induction_is_unbounded",
+                "passed": true,
+                "evidence": "zero/unit create constants; increment preserves the constant-or-input-offset form; decrement either raises the exact input lower bound, decrements a positive constant, or makes the success domain empty"
+              },
+              {
+                "obligation_id": "hidden_numeric_replay_agrees",
+                "passed": true
+              }
+            ],
+            "hidden_case_count": 144,
+            "failed_hidden_cases": []
+          }
+        ]
+      }
+    ],
+    "mutation_audit": {
+      "candidate_id": "nu_a1992d794050",
+      "rejected": true,
+      "counterexample": {
+        "binding": [
+          0,
+          0
+        ],
+        "state": [
+          0,
+          0
+        ],
+        "runtime": [
+          "error",
+          "cannot decrement an empty counter"
+        ],
+        "certificate": [
+          "ok",
+          [
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    "proof_obligations": [
+      {
+        "obligation_id": "state_hash_chain_extends_parent",
+        "passed": true
+      },
+      {
+        "obligation_id": "run_and_round_indices_are_monotonic",
+        "passed": true
+      },
+      {
+        "obligation_id": "operator_registry_is_append_only",
+        "passed": true
+      },
+      {
+        "obligation_id": "all_registry_entries_independently_verified",
+        "passed": true
+      },
+      {
+        "obligation_id": "exact_success_library_matches_registry",
+        "passed": true
+      },
+      {
+        "obligation_id": "no_exact_behavior_signature_is_repeated",
+        "passed": true
+      },
+      {
+        "obligation_id": "knowledge_gap_and_world_recomputed_each_round",
+        "passed": true
+      },
+      {
+        "obligation_id": "new_programs_are_available_to_later_rounds",
+        "passed": true
+      },
+      {
+        "obligation_id": "mutated_certificate_is_rejected",
+        "passed": true
+      },
+      {
+        "obligation_id": "opaque_operator_surface_has_no_named_target",
+        "passed": true
+      },
+      {
+        "obligation_id": "local_runtime_uses_no_cloud_tokens",
+        "passed": true
+      }
+    ],
+    "claim": {
+      "allowed": "new exact executable natural-counter state transformations within the V55 charter",
+      "blocked": "new-to-human mathematical theorem or unrestricted autonomous mathematician"
+    }
+  },
+  "campaign": {
+    "state_path": "artifacts/research/v55/state/continuous_math_state.json",
+    "resumed_from_run_count": 1,
+    "completed_run_count": 2,
+    "operator_count_before": 8,
+    "operator_count_after": 16,
+    "next_round_index": 2,
+    "curriculum_level": 0,
+    "state_digest": "5bc7ee2bc00dcdddbbf08c957c6317dfbd08f7e11ad2063f5f89a33e097b06a9"
+  },
+  "rooms": {
+    "success": "artifacts/research/v55/success/discoveries.jsonl",
+    "success_total": 16,
+    "success_events_added": 8,
+    "mistakes": "artifacts/research/v55/mistakes/rejections.jsonl",
+    "mistakes_added": 1
+  },
+  "token_accounting": {
+    "cloud_model_calls": 0,
+    "api_tokens": 0
+  },
+  "dashboard_modified": false,
+  "claim_boundary": {
+    "discovered": "new exact executable natural-counter semantics not previously present in this V55 campaign",
+    "not_claimed": "new-to-human mathematical formulas"
+  },
+  "content_digest": "10208b3b045fd7c7a84863acc2a667f5072d1d2e0e5ff2f8120ffe5dddef4f12"
+}
