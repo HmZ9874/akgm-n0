@@ -175,7 +175,16 @@ def parse_archive(path: Path, group: Group) -> tuple[list[dict[str, Any]], list[
     return observations, counterexamples, crosschecks, members
 
 
-def build(groups: list[Group], raw_directory: Path, output_stem: str, minimum: int) -> None:
+def build(
+    groups: list[Group],
+    raw_directory: Path,
+    output_stem: str,
+    minimum: int,
+    *,
+    archive_parser: Any = parse_archive,
+    output_directory: Path = OUTPUT_DIRECTORY,
+    schema: str = "v52.1-calce-current-integral-snapshot-v1",
+) -> None:
     all_rows: list[dict[str, Any]] = []
     all_counterexamples: list[dict[str, Any]] = []
     all_crosschecks: list[dict[str, Any]] = []
@@ -186,7 +195,7 @@ def build(groups: list[Group], raw_directory: Path, output_stem: str, minimum: i
         expected_hash = ARCHIVE_SHA256.get(group.archive_name)
         if expected_hash is not None and actual_hash != expected_hash:
             raise ValueError(f"SHA-256 mismatch for {group.archive_name}")
-        rows, errors, checks, members = parse_archive(archive_path, group)
+        rows, errors, checks, members = archive_parser(archive_path, group)
         all_rows.extend(rows)
         all_counterexamples.extend(errors)
         all_crosschecks.extend(checks)
@@ -206,12 +215,12 @@ def build(groups: list[Group], raw_directory: Path, output_stem: str, minimum: i
     insufficient = {cell: count for cell, count in per_cell.items() if count < minimum}
     eligible = set(per_cell) - set(insufficient)
     output_rows = [row for row in all_rows if row["cell_token"] in eligible]
-    OUTPUT_DIRECTORY.mkdir(parents=True, exist_ok=True)
-    snapshot_path = OUTPUT_DIRECTORY / f"{output_stem}_anonymous.jsonl"
-    manifest_path = OUTPUT_DIRECTORY / f"{output_stem}_manifest.json"
+    output_directory.mkdir(parents=True, exist_ok=True)
+    snapshot_path = output_directory / f"{output_stem}_anonymous.jsonl"
+    manifest_path = output_directory / f"{output_stem}_manifest.json"
     write_jsonl(snapshot_path, output_rows)
     manifest = {
-        "schema": "v52.1-calce-current-integral-snapshot-v1",
+        "schema": schema,
         "observation_count": len(output_rows),
         "cell_observation_counts": per_cell,
         "ineligible_cells": insufficient,
