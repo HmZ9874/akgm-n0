@@ -1,0 +1,82 @@
+{
+  "protocol_version": "v52-calce-rate-effect-preregistration-v1.0",
+  "status": "frozen_before_outcome_download",
+  "research_question": "Does an assigned high discharge rate retain a reproducible total effect on normalized capacity loss after accounting for cycle count, equivalent charge throughput, mean state of charge, and state-of-charge window, and can an autonomously forged representation transfer to an unseen protocol group?",
+  "scientific_scope": {
+    "allowed": [
+      "assigned-protocol total effects inside the CALCE pouch-cell experiment",
+      "predictive representation transfer to held-out cells and one sealed protocol group",
+      "counterexample-based rejection of unstable representations"
+    ],
+    "blocked": [
+      "direct electrochemical mediation claims",
+      "separation of current-density effects from internal heating without cell-temperature measurements",
+      "cross-chemistry universality",
+      "human-unknown law or breakthrough claims without independent-source replication and prior-art review"
+    ]
+  },
+  "official_source": {
+    "provider": "University of Maryland CALCE Battery Research Group",
+    "catalog_url": "https://calce.umd.edu/data",
+    "catalog_visible_before_freeze": true,
+    "outcome_files_visible_before_freeze": false,
+    "experiment_summary": "Graphite/LiCoO2 pouch cells assigned to SOC windows and C/2 or 2C discharge protocols; paired cells are available for each listed group."
+  },
+  "registered_files": [
+    {"group_id": "G00_60_HALF", "partition": "development", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_0-60_HalfC.zip", "assigned_mean_soc": 0.30, "assigned_soc_window": 0.60, "assigned_discharge_c_rate": 0.5},
+    {"group_id": "G40_60_HALF", "partition": "development", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_40-60_HalfC.zip", "assigned_mean_soc": 0.50, "assigned_soc_window": 0.20, "assigned_discharge_c_rate": 0.5},
+    {"group_id": "G40_60_2C", "partition": "development", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_40-60_2C.zip", "assigned_mean_soc": 0.50, "assigned_soc_window": 0.20, "assigned_discharge_c_rate": 2.0},
+    {"group_id": "G00_100_HALF", "partition": "development", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_0-100_HalfC.zip", "assigned_mean_soc": 0.50, "assigned_soc_window": 1.00, "assigned_discharge_c_rate": 0.5},
+    {"group_id": "G00_100_2C", "partition": "validation", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_0-100_2C.zip", "assigned_mean_soc": 0.50, "assigned_soc_window": 1.00, "assigned_discharge_c_rate": 2.0},
+    {"group_id": "G40_100_HALF", "partition": "validation", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_40-100_HalfC.zip", "assigned_mean_soc": 0.70, "assigned_soc_window": 0.60, "assigned_discharge_c_rate": 0.5},
+    {"group_id": "G20_80_HALF", "partition": "validation", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_20-80_HalfC.zip", "assigned_mean_soc": 0.50, "assigned_soc_window": 0.60, "assigned_discharge_c_rate": 0.5},
+    {"group_id": "G20_80_2C", "partition": "sealed", "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_20-80_2C.zip", "assigned_mean_soc": 0.50, "assigned_soc_window": 0.60, "assigned_discharge_c_rate": 2.0}
+  ],
+  "preprocessing": {
+    "unit_of_analysis": "one diagnostic full-discharge capacity observation per cell and diagnostic cycle",
+    "primary_response": "capacity divided by the first valid diagnostic capacity for the same cell",
+    "time_coordinates": ["diagnostic observation index", "registered equivalent-full-cycle throughput computed from assigned SOC window"],
+    "minimum_cell_observations": 8,
+    "nonfinite_rows": "reject",
+    "outlier_policy": "no outcome-value removal; parser failures and physical impossibilities are retained as counterexamples",
+    "learner_visibility": "anonymous numeric controls, time coordinates, and normalized response; no chemistry, CALCE, SOC, or C-rate names"
+  },
+  "registered_baselines": [
+    "last observed normalized capacity",
+    "linear loss by diagnostic index",
+    "linear loss by equivalent-full-cycle throughput",
+    "quadratic throughput loss",
+    "protocol-group fixed effects without interaction"
+  ],
+  "mechanism_competition": [
+    "cycle-only progression",
+    "throughput-only progression",
+    "mean-level and window effects",
+    "assigned-rate total effect",
+    "rate-by-window interaction",
+    "autonomously forged bounded executable representation"
+  ],
+  "primary_metrics": {
+    "prediction": "RMSE of normalized capacity divided by the best registered baseline RMSE",
+    "mechanism": "held-out matched-group rate-effect direction and magnitude with cell bootstrap interval",
+    "representation": "sealed error ratio without refit and description-token reduction"
+  },
+  "success_conditions": [
+    "validation prediction ratio below 0.80",
+    "sealed G20_80_2C prediction ratio below 0.80 without parameter refit",
+    "the selected representation is counterfactually sensitive to all controls it claims to use",
+    "rate-effect sign agrees in both registered matched SOC-window comparisons",
+    "all commitments precede sealed archive parsing"
+  ],
+  "failure_conditions": [
+    "any sealed access before the program commitment",
+    "selected program fails to beat the best registered baseline",
+    "rate-effect sign reverses across matched groups",
+    "cell bootstrap interval includes effects of both signs",
+    "representation is an identity, constant, target proxy, or behaviorally duplicate",
+    "a parser ambiguity changes the scientific conclusion"
+  ],
+  "novelty_policy": "Literature is unavailable to the learner until after sealed evaluation. A successful result remains a bounded experimental relation until independent-source replication, broad prior-art audit, and external review.",
+  "host_formula_supplied": false,
+  "target_answer_supplied": false
+}
