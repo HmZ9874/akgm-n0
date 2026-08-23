@@ -708,6 +708,7 @@ Run core audits and experiments:
 
 ~~~powershell
 .\.venv\Scripts\python.exe scripts/audit_contracts.py
+.\.venv\Scripts\python.exe scripts/audit_learner_isolation.py
 .\.venv\Scripts\python.exe scripts/run_search_smoke.py
 .\.venv\Scripts\python.exe scripts/run_verification_smoke.py
 .\.venv\Scripts\python.exe scripts/run_cold_start_semantics_v16.py
