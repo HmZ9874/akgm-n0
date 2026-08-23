@@ -1,0 +1,305 @@
+{
+  "archives": [
+    {
+      "archive": "SOC_0-60_HalfC.zip",
+      "group_id": "G00_60_HALF",
+      "mat_members": [
+        "SOC_0%-60%_HalfC/PL03.mat",
+        "SOC_0%-60%_HalfC/PL10.mat"
+      ],
+      "partition": "development",
+      "sha256": "1cd57257bad82416cd63dd64aa57b56a1ab9e139150634bb52e13aabafac446b"
+    },
+    {
+      "archive": "SOC_40-60_HalfC.zip",
+      "group_id": "G40_60_HALF",
+      "mat_members": [
+        "SOC_40%-60%_HalfC/PL04.mat",
+        "SOC_40%-60%_HalfC/PL05.mat"
+      ],
+      "partition": "development",
+      "sha256": "13e3d6b4ddc15e3463229bf5805a624c4140e6e03341a284e66f1bab4c0bc57c"
+    },
+    {
+      "archive": "SOC_40-60_2C.zip",
+      "group_id": "G40_60_2C",
+      "mat_members": [
+        "SOC_40%-60%_2C/PL09.mat",
+        "SOC_40%-60%_2C/PL25.mat"
+      ],
+      "partition": "development",
+      "sha256": "149d18bfed19fd1e86d1e2616df608f13824f7290807d746549ae2730010ff16"
+    },
+    {
+      "archive": "SOC_0-100_HalfC.zip",
+      "group_id": "G00_100_HALF",
+      "mat_members": [
+        "SOC_0%-100%_HalfC/PL11.mat",
+        "SOC_0%-100%_HalfC/PL13.mat"
+      ],
+      "partition": "development",
+      "sha256": "bd0f27accfb18dd1dcc5ef1025234d81772cc58e2b178ca4b8342cbbd9370906"
+    },
+    {
+      "archive": "SOC_0-100_2C.zip",
+      "group_id": "G00_100_2C",
+      "mat_members": [
+        "SOC_0%-100%_2C/PL12.mat",
+        "SOC_0%-100%_2C/PL14.mat"
+      ],
+      "partition": "validation",
+      "sha256": "57ed6e023b87cff64eaa92b37176992da6fa3bdfb7a1a880ac5a55578c235348"
+    },
+    {
+      "archive": "SOC_40-100_HalfC.zip",
+      "group_id": "G40_100_HALF",
+      "mat_members": [
+        "SOC_40%-100%_HalfC/PL19.mat",
+        "SOC_40%-100%_HalfC/PL24.mat"
+      ],
+      "partition": "validation",
+      "sha256": "e6a55919266414ff8368fcf3e0b77070fbbdfc54274000654d92755f35539f1e"
+    },
+    {
+      "archive": "SOC_20-80_HalfC.zip",
+      "group_id": "G20_80_HALF",
+      "mat_members": [
+        "SOC_20%-80%_HalfC/PL21.mat",
+        "SOC_20%-80%_HalfC/PL23.mat"
+      ],
+      "partition": "validation",
+      "sha256": "5950b2fa9a037f5b272258e7b51b2848716edf342e5b67f55981e6f325b8363a"
+    }
+  ],
+  "candidate_observation_count": 296,
+  "cell_observation_counts": {
+    "080d0b0f2cd1ce57": 11,
+    "1854a11b69fbf7af": 22,
+    "24fde17a63385b48": 15,
+    "51f590ad050ec77d": 34,
+    "72ed208afb2320b8": 22,
+    "9026c5000fb52650": 22,
+    "9940abc98bda4abe": 22,
+    "abf2ff2f94ba68d0": 22,
+    "b6715eba9f2d1e8d": 34,
+    "b8df248530380d27": 22,
+    "bd4eca5de6572a22": 22,
+    "d4ca9686e73980f7": 22,
+    "d81ebc48e26fff6f": 11,
+    "db07b189f200643e": 15
+  },
+  "counterexamples": [
+    {
+      "cell": "PL03",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 15
+    },
+    {
+      "cell": "PL03",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 16
+    },
+    {
+      "cell": "PL10",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 15
+    },
+    {
+      "cell": "PL10",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 16
+    },
+    {
+      "cell": "PL04",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 11
+    },
+    {
+      "cell": "PL04",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL05",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 11
+    },
+    {
+      "cell": "PL05",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL09",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL09",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL25",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 12
+    },
+    {
+      "cell": "PL25",
+      "operation": "100 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL11",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle; maximum range 0.0",
+      "row": 1
+    },
+    {
+      "cell": "PL11",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle; maximum range 0.0",
+      "row": 3
+    },
+    {
+      "cell": "PL13",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle; maximum range 3.863611e-09",
+      "row": 1
+    },
+    {
+      "cell": "PL13",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle; maximum range 3.867598e-09",
+      "row": 3
+    },
+    {
+      "cell": "PL12",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle; maximum range 1.3243772e-08",
+      "row": 1
+    },
+    {
+      "cell": "PL12",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle; maximum range 2.2632048e-08",
+      "row": 3
+    },
+    {
+      "cell": "PL14",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle; maximum range 1.3250573e-08",
+      "row": 1
+    },
+    {
+      "cell": "PL14",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle; maximum range 0.0",
+      "row": 3
+    },
+    {
+      "cell": "PL19",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL19",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 14
+    },
+    {
+      "cell": "PL19",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 19
+    },
+    {
+      "cell": "PL24",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 13
+    },
+    {
+      "cell": "PL24",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 14
+    },
+    {
+      "cell": "PL24",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 19
+    },
+    {
+      "cell": "PL21",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle; maximum range 0.0",
+      "row": 1
+    },
+    {
+      "cell": "PL21",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle; maximum range 3.865387e-09",
+      "row": 3
+    },
+    {
+      "cell": "PL21",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 27
+    },
+    {
+      "cell": "PL21",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 28
+    },
+    {
+      "cell": "PL23",
+      "operation": "1st Charge",
+      "reason": "No measurable discharge cycle; maximum range 1.085293e-09",
+      "row": 1
+    },
+    {
+      "cell": "PL23",
+      "operation": "2nd Charge",
+      "reason": "No measurable discharge cycle; maximum range 1.002491e-09",
+      "row": 3
+    },
+    {
+      "cell": "PL23",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 27
+    },
+    {
+      "cell": "PL23",
+      "operation": "50 Partial Cycles (Data Missing)",
+      "reason": "Expected one table object, found shape (0, 0)",
+      "row": 28
+    }
+  ],
+  "ineligible_cells_below_registered_minimum": {},
+  "observation_count": 296,
+  "partitions": [
+    "development",
+    "validation"
+  ],
+  "schema": "v52-calce-anonymous-snapshot-v1",
+  "snapshot_sha256": "c82904c10e763ccbc71fa3e4dad7ac8a3d7fe5088e27d2f617432bc7705f76dd"
+}

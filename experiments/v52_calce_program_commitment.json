@@ -1,0 +1,134 @@
+{
+  "claims_blocked": [
+    "electrochemical mediation",
+    "rate effect separated from internal heating",
+    "cross-chemistry universality",
+    "human-unknown scientific law"
+  ],
+  "development_group_count": 4,
+  "development_observation_count": 154,
+  "discovery_script_sha256": "30c8e8b9f2f566bfa68a0a5313cb95b1c17f81e05bf47f694d6d8518839864d9",
+  "domain_labels_visible_to_learner": false,
+  "learner_visible_labels": [
+    "diagnostic_index",
+    "throughput_coordinate",
+    "control_0",
+    "control_1",
+    "control_2",
+    "response"
+  ],
+  "manifest_sha256": "368c9fa29609e93b1167a93757a8533cce98a2659e969eb87288948ce67f2bfd",
+  "registered_baselines": {
+    "last_observed_normalized_capacity": {
+      "online": true
+    },
+    "linear_index": {
+      "coefficients": [
+        -0.06426310217745301
+      ],
+      "development_leave_group_out_rmse": 0.04341396328286887,
+      "terms": [
+        {
+          "modifier": "one",
+          "progression": "index"
+        }
+      ]
+    },
+    "linear_throughput": {
+      "coefficients": [
+        -0.12069077758181551
+      ],
+      "development_leave_group_out_rmse": 0.04483250562426955,
+      "terms": [
+        {
+          "modifier": "one",
+          "progression": "throughput"
+        }
+      ]
+    },
+    "protocol_controls_without_rate_interaction": {
+      "coefficients": [
+        -0.11904851090835211,
+        -0.7214645770862596,
+        -0.06661875923966089
+      ],
+      "development_leave_group_out_rmse": 0.06188012535174492,
+      "terms": [
+        {
+          "modifier": "one",
+          "progression": "throughput"
+        },
+        {
+          "modifier": "c0",
+          "progression": "throughput"
+        },
+        {
+          "modifier": "c1",
+          "progression": "throughput"
+        }
+      ]
+    },
+    "quadratic_throughput": {
+      "coefficients": [
+        -0.043360352593145794,
+        -0.1234030255436978
+      ],
+      "development_leave_group_out_rmse": 0.06252342561401203,
+      "terms": [
+        {
+          "modifier": "one",
+          "progression": "throughput"
+        },
+        {
+          "modifier": "one",
+          "progression": "square_throughput"
+        }
+      ]
+    }
+  },
+  "scales": {
+    "control_0_center": 0.4428571428571429,
+    "control_1_center": 0.42857142857142855,
+    "control_2_center": 0.9285714285714286,
+    "diagnostic_index": 21.0,
+    "throughput": 916.0
+  },
+  "schema": "v52-calce-program-commitment-v1",
+  "sealed_archive_accessed": false,
+  "selected_program": {
+    "atom_count": 35,
+    "candidate_count": 7175,
+    "coefficients": [
+      -0.07956254263815453,
+      -3.480673995977688,
+      0.24832801672148622
+    ],
+    "expression": "response_hat = 1 + (-0.0795625426382)*index*one + (-3.48067399598)*throughput*c0_times_c1 + (0.248328016721)*square_throughput*c1_times_c2",
+    "fold_rmse": [
+      0.01743179139982997,
+      0.009449395127811384,
+      0.009685098110111603,
+      0.010653538988023289
+    ],
+    "leave_group_out_rmse": 0.011804955906444061,
+    "objective_score": 0.013804955906444061,
+    "program_nodes": 20,
+    "semantic_name": "FORGED_V52_RESPONSE_OPERATOR",
+    "terms": [
+      {
+        "modifier": "one",
+        "progression": "index"
+      },
+      {
+        "modifier": "c0_times_c1",
+        "progression": "throughput"
+      },
+      {
+        "modifier": "c1_times_c2",
+        "progression": "square_throughput"
+      }
+    ]
+  },
+  "snapshot_sha256": "c82904c10e763ccbc71fa3e4dad7ac8a3d7fe5088e27d2f617432bc7705f76dd",
+  "status": "committed_before_validation_evaluation_and_sealed_access"
+}
