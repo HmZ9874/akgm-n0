@@ -1,0 +1,41 @@
+{
+  "commitment_sha256": "d3f3e3639df48f38a111d530139562ff1ae329874bb50144bc8ec987618ecb6f",
+  "integrated_best_baseline": "last_observed_normalized_capacity",
+  "integrated_capacity_metrics": {
+    "forged_program": 0.03074461951110027,
+    "last_observed_normalized_capacity": 0.010622620792458376,
+    "linear_index": 0.05378392918788845,
+    "linear_throughput": 0.03807219652916127,
+    "protocol_controls_without_rate_interaction": 0.054423400523531354,
+    "quadratic_throughput": 0.038381857040235855
+  },
+  "integrated_prediction_error_ratio": 2.894259346330774,
+  "logger_best_baseline": "last_observed_normalized_capacity",
+  "logger_capacity_metrics": {
+    "forged_program": 0.031224183870674483,
+    "last_observed_normalized_capacity": 0.010696431689722754,
+    "linear_index": 0.0543310956834362,
+    "linear_throughput": 0.03863063764431792,
+    "protocol_controls_without_rate_interaction": 0.0549752882891156,
+    "quadratic_throughput": 0.038941626306974876
+  },
+  "logger_prediction_error_ratio": 2.919121514203191,
+  "matched_assigned_rate_effect": {
+    "bootstrap_interval_available": true,
+    "direction": "lower_response_at_high_rate",
+    "high_minus_low_response": -0.08597377620562219,
+    "high_rate_cell_count": 2,
+    "high_rate_mean_response": 0.8264609301099887,
+    "low_rate_cell_count": 2,
+    "low_rate_mean_response": 0.9124347063156109,
+    "reference_throughput": 720.0,
+    "status": "bounded"
+  },
+  "parser_crosscheck_preserves_conclusion": true,
+  "registered_threshold": 0.8,
+  "schema": "v52.2-calce-sealed-report-v1",
+  "sealed_manifest_sha256": "f8955d0d90f745d15bb6b6d55f521de44eb2786bf59f64c28b849bb79f652084",
+  "sealed_observation_count": 56,
+  "sealed_snapshot_sha256": "27f350438271e356d88512ed8a7b63278892574dbc406f59b1155f09f360527a",
+  "status": "registered_sealed_failure"
+}

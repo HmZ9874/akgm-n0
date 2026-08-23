@@ -102,7 +102,7 @@ export default function Home() {
           </div>
         </div>
         <div className="run-meta">
-          <a className="nav-link" href="/metamachine">MetaMachine Gen 1</a><a className="nav-link" href="/operation">运算生长</a><span className="meta-dot" /><span>{generatedAt}</span>
+          <a className="nav-link" href="/science-v52">V52 真实实验</a><a className="nav-link" href="/metamachine">MetaMachine Gen 1</a><a className="nav-link" href="/operation">运算生长</a><span className="meta-dot" /><span>{generatedAt}</span>
         </div>
       </header>
 

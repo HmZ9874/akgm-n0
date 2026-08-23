@@ -1,0 +1,91 @@
+{
+  "capability_scores": {
+    "autonomous_representation_creation": 9,
+    "causal_mechanism_reasoning": 9,
+    "human_unknown_scientific_law": 3
+  },
+  "development_search": {
+    "anonymous_atoms": 35,
+    "candidate_programs": 6675,
+    "leave_group_out_rmse": 0.0436627360531,
+    "selected_expression": "response_hat = 1 - 0.141097440053*index - 0.671259934756*square_throughput*c1 - 0.1175932029*square_throughput*c2"
+  },
+  "experiment_timeline": [
+    {
+      "reason": "Program error ratio 1.1909; a doubled first-cycle layout exposed a parser defect.",
+      "status": "registered_validation_failure",
+      "version": "V52"
+    },
+    {
+      "reason": "A micro-discharge bookkeeping tail passed the absolute threshold.",
+      "status": "preprocessing_failure_before_search",
+      "version": "V52.1"
+    },
+    {
+      "reason": "Parser audit passed, but the frozen program did not beat the online last-observation baseline.",
+      "status": "registered_sealed_failure",
+      "version": "V52.2"
+    }
+  ],
+  "honest_boundary": [
+    "The assigned-rate effects are bounded to the CALCE graphite/LiCoO2 pouch-cell experiment.",
+    "Internal heating was not measured in the registered snapshot, so direct and temperature-mediated rate effects are not separated.",
+    "The matched groups contain two cells per condition; this is not broad independent replication.",
+    "No human-unknown law or breakthrough was established."
+  ],
+  "matched_rate_effects": [
+    {
+      "bootstrap_interval_available": true,
+      "direction": "lower_response_at_high_rate",
+      "high_minus_low_response": -0.005339798686562869,
+      "high_rate_cell_count": 2,
+      "high_rate_mean_response": 0.9485940756358764,
+      "low_rate_cell_count": 2,
+      "low_rate_mean_response": 0.9539338743224393,
+      "reference_throughput": 352.8,
+      "soc_window": 0.2,
+      "status": "bounded"
+    },
+    {
+      "bootstrap_interval_available": true,
+      "direction": "lower_response_at_high_rate",
+      "high_minus_low_response": -0.08597377620562219,
+      "high_rate_cell_count": 2,
+      "high_rate_mean_response": 0.8264609301099887,
+      "low_rate_cell_count": 2,
+      "low_rate_mean_response": 0.9124347063156109,
+      "reference_throughput": 720.0,
+      "soc_window": 0.6,
+      "status": "bounded"
+    },
+    {
+      "bootstrap_interval_available": true,
+      "direction": "lower_response_at_high_rate",
+      "high_minus_low_response": -0.213941021640342,
+      "high_rate_cell_count": 2,
+      "high_rate_mean_response": 0.6302676781170907,
+      "low_rate_cell_count": 2,
+      "low_rate_mean_response": 0.8442086997574327,
+      "reference_throughput": 730.4000000000001,
+      "soc_window": 1.0,
+      "status": "bounded"
+    }
+  ],
+  "prior_art_audit": {
+    "finding": "The 2016 CALCE study already reported significant capacity-loss effects from mean SOC, delta SOC, and discharge rate.",
+    "novelty": "not_novel",
+    "official_experiment_article": "https://web.calce.umd.edu/articles/abstracts/2016/16_cycle_life_testing_modeling_li-ion_battery_different_SOC_ranges.html"
+  },
+  "schema": "akgm-n0-calce-v52.2-dashboard-v1",
+  "sealed_prediction": {
+    "best_baseline": "last_observed_normalized_capacity",
+    "best_baseline_rmse": 0.010622620792458376,
+    "crosscheck_preserved_conclusion": true,
+    "error_ratio": 2.894259346330774,
+    "forged_rmse": 0.03074461951110027,
+    "logger_crosscheck_ratio": 2.919121514203191,
+    "threshold": 0.8
+  },
+  "sealed_status": "registered_sealed_failure",
+  "verdict": "REAL_DATA_EXPERIMENT_COMPLETED_NO_BREAKTHROUGH"
+}
