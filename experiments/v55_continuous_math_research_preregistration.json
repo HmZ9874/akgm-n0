@@ -1,0 +1,50 @@
+{
+  "protocol_version": "continuous-math-research-v55.0",
+  "objective": "Create a local persistent research process whose next invocation resumes from the prior verified frontier and promotes only previously unseen exact natural-counter semantics.",
+  "state_contract": {
+    "append_only_operator_registry": true,
+    "state_digest_required": true,
+    "global_round_index_monotonic": true,
+    "campaign_seed_persistent": true,
+    "atomic_state_replacement_after_verification": true
+  },
+  "discovery_contract": {
+    "success_library_loaded_before_search": true,
+    "known_exact_behavior_signatures_skipped": true,
+    "new_programs_become_next_round_primitives": true,
+    "knowledge_gap_recomputed_each_round": true,
+    "anonymous_world_seed_changes_each_round": true,
+    "named_target_formula_count": 0
+  },
+  "proof_contract": {
+    "runtime_dispatch_matches_frozen_primitive_certificate": true,
+    "exact_behavior_is_derived_for_all_natural_inputs_and_all_role_alias_partitions": true,
+    "behavior_signature_is_not_a_finite_sample_hash": true,
+    "mutated_certificate_requires_a_counterexample": true
+  },
+  "continuation_acceptance": {
+    "first_invocation_minimum_new_verified_semantics": 5,
+    "second_invocation_minimum_additional_verified_semantics": 1,
+    "second_invocation_loads_first_state": true,
+    "no_behavior_signature_repeated_across_invocations": true,
+    "operator_registry_is_strictly_append_only": true,
+    "default_target_new_per_invocation": 5,
+    "maximum_rounds_per_invocation": 12
+  },
+  "curriculum_expansion": {
+    "sterile_rounds_before_level_increase": 3,
+    "levels": [
+      {"level": 0, "workloads_per_family": 48, "instruction_count": 36, "maximum_primitive_span": 3, "maximum_generation": 3},
+      {"level": 1, "workloads_per_family": 56, "instruction_count": 42, "maximum_primitive_span": 4, "maximum_generation": 4},
+      {"level": 2, "workloads_per_family": 64, "instruction_count": 48, "maximum_primitive_span": 4, "maximum_generation": 5}
+    ],
+    "stop_only_after_final_level_sterility": true
+  },
+  "claim_boundary": [
+    "A discovery is a new exact executable natural-counter state transformation, not automatically a new-to-human mathematical theorem.",
+    "The generator remains bounded to unary counter instructions, arity at most two, and the declared curriculum levels.",
+    "Persistence makes research cumulative across invocations but does not imply an infinite supply of discoveries.",
+    "The local research runtime makes no cloud-model calls and consumes no API tokens.",
+    "No dashboard file is modified."
+  ]
+}
