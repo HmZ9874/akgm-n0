@@ -1,0 +1,54 @@
+{
+  "protocol_version": "v53-anonymous-field-construction-v1.0",
+  "status": "frozen_before_candidate_search",
+  "dependency": "V21 verified directed-rational commutative ring",
+  "learner_inputs": {
+    "allowed": [
+      "nonnegative counter triples",
+      "V21 anonymous combine, unary-router, and interaction programs",
+      "paired counter cancellation by decrementing both nonempty channels",
+      "constants represented by counter triples"
+    ],
+    "forbidden": [
+      "host signed-number values",
+      "host division or Fraction in learner code",
+      "the words reciprocal, field, or linear equation during candidate search",
+      "a target output formula"
+    ]
+  },
+  "searches": [
+    {
+      "search_id": "anonymous_nonzero_unary_structure",
+      "candidate_space": "source routing and direction policies over cancelled magnitude, source denominator, one, and zero",
+      "selection_objective": "representation-invariant nonzero unary behavior whose interaction with its input yields the anonymous interaction identity and whose double application restores the input class"
+    },
+    {
+      "search_id": "anonymous_three_input_equation_program",
+      "candidate_space": "all variable permutations, three unary choices per leaf, two binary choices per join, and both binary tree bracketings",
+      "selection_objective": "the resulting value makes the registered three-input relation replay exactly on all development probes",
+      "target_formula_supplied": false
+    }
+  ],
+  "success_conditions": [
+    "exactly one behavior class satisfies the nonzero unary objective",
+    "the unary behavior is proved for every nonzero directed rational equivalence class",
+    "the promoted operations satisfy all commutative-field obligations",
+    "the three-input program is discovered without a target expression and is proved sound and unique whenever the first input is nonzero",
+    "all single-route mutations receive concrete counterexamples",
+    "hidden values outside the search grid replay exactly",
+    "learner execution uses natural counters only"
+  ],
+  "failure_conditions": [
+    "multiple inequivalent behaviors pass without a discriminating experiment",
+    "any zero input is silently assigned a nonzero-unary result",
+    "representation scaling or common offsets change the result class",
+    "a finite probe is presented as the universal proof",
+    "an evaluator Fraction or human arithmetic name enters learner search"
+  ],
+  "claims_blocked": [
+    "real or complex field construction",
+    "polynomial equations above degree one",
+    "analysis, limits, or calculus",
+    "new-to-human mathematics"
+  ]
+}
