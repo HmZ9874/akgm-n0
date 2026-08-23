@@ -1,0 +1,59 @@
+{
+  "protocol_version": "v52.1-calce-parser-recovery-v1.0",
+  "status": "frozen_after_v52_failure_before_sealed_access",
+  "parent_experiment": {
+    "version": "v52",
+    "program_commitment_git_commit": "a714db2",
+    "validation_status": "registered_prediction_failure",
+    "validation_report": "artifacts/v52_calce_validation_report.json",
+    "reason_for_new_version": "V52 selected an early doubled-capacity cycle when ordinary terminal cycles fell below a relative-to-maximum threshold."
+  },
+  "development_scope": "All seven already-accessed non-sealed CALCE protocol groups; former validation groups are development data and cannot be reused as blind evidence.",
+  "sealed_group": {
+    "group_id": "G20_80_2C",
+    "url": "https://web.calce.umd.edu/batteries/data/pl/SOC_20-80_2C.zip",
+    "accessed_at_freeze": false
+  },
+  "preprocessing": {
+    "capacity_primary": "Trapezoidal integral of negative current over time within each cycle, with nonnegative time steps no greater than 120 seconds.",
+    "diagnostic_cycle": "Latest cycle in each operation block with integrated discharge capacity above 1e-6 Ah.",
+    "crosscheck": "Compare integrated capacity with within-cycle Discharge_Ah range; retain relative disagreements above 0.02 as parser counterexamples.",
+    "normalization": "Divide by the first valid diagnostic capacity for the same cell.",
+    "minimum_cell_observations": 8,
+    "learner_visibility": "Anonymous coordinates, controls, cell/group tokens, and normalized response only."
+  },
+  "program_selection": {
+    "data": "all non-sealed observations",
+    "validation": "leave-one-protocol-group-out",
+    "formula_supplied": false,
+    "search_language": "same anonymous executable atom grammar frozen in the V52 Git commitment",
+    "maximum_terms": 3,
+    "complexity_penalty_per_node": 0.0001
+  },
+  "registered_baselines": [
+    "last observed normalized capacity",
+    "linear loss by diagnostic index",
+    "linear loss by equivalent-full-cycle throughput",
+    "quadratic throughput loss",
+    "protocol controls without rate interaction"
+  ],
+  "sealed_success_conditions": [
+    "program and parameters committed to Git before sealed archive download",
+    "sealed prediction RMSE ratio below 0.80 versus the best registered baseline without refit",
+    "selected program is finite and counterfactually sensitive to every control it claims",
+    "capacity-column and current-integral crosscheck does not change the conclusion"
+  ],
+  "failure_conditions": [
+    "any sealed access before the V52.1 program commitment",
+    "sealed prediction ratio at or above 0.80",
+    "nonfinite or nonphysical normalized response",
+    "parser ambiguity changes the pass/fail result",
+    "representation is a behavioral duplicate, identity, constant, or target proxy"
+  ],
+  "claims_blocked": [
+    "electrochemical mediation",
+    "assigned-rate effect separated from internal heating",
+    "cross-chemistry universality",
+    "human-unknown law or scientific breakthrough"
+  ]
+}
