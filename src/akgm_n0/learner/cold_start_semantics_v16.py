@@ -403,9 +403,68 @@ def behavior_signature(
 class ColdStartSemanticResearcherV16:
     """MDL-driven semantic abstraction with no successful program seed."""
 
-    def __init__(self) -> None:
+    def __init__(self, *, enable_semantic_cache: bool = True) -> None:
         self.vm = SelfExtendingCounterVM()
+        self.enable_semantic_cache = enable_semantic_cache
         self.rejections: list[RejectedSemanticV16] = []
+        self._behavior_signature_cache: dict[tuple[str, int], str] = {}
+        self._identity_cache: dict[tuple[str, int], bool] = {}
+        self._body_payload_cache: dict[tuple[RuntimeInstruction, ...], str] = {}
+        self._normalized_window_cache: dict[
+            tuple[RuntimeInstruction, ...],
+            tuple[tuple[RuntimeInstruction, ...], int, str],
+        ] = {}
+        self._semantic_cache_stats: Counter[str] = Counter()
+
+    @property
+    def semantic_cache_stats(self) -> dict[str, int]:
+        return {
+            "behavior_hits": self._semantic_cache_stats["behavior_hits"],
+            "behavior_misses": self._semantic_cache_stats["behavior_misses"],
+            "identity_hits": self._semantic_cache_stats["identity_hits"],
+            "identity_misses": self._semantic_cache_stats["identity_misses"],
+            "window_hits": self._semantic_cache_stats["window_hits"],
+            "window_misses": self._semantic_cache_stats["window_misses"],
+        }
+
+    def _cached_body_payload(
+        self, body: tuple[RuntimeInstruction, ...]
+    ) -> str:
+        cached = self._body_payload_cache.get(body) if self.enable_semantic_cache else None
+        if cached is not None:
+            return cached
+        payload = _body_payload(body)
+        if self.enable_semantic_cache:
+            self._body_payload_cache[body] = payload
+        return payload
+
+    def _cached_normalized_window(
+        self, window: tuple[RuntimeInstruction, ...]
+    ) -> tuple[tuple[RuntimeInstruction, ...], int, str]:
+        cached = self._normalized_window_cache.get(window) if self.enable_semantic_cache else None
+        if cached is not None:
+            self._semantic_cache_stats["window_hits"] += 1
+            return cached
+        self._semantic_cache_stats["window_misses"] += 1
+        body, arity = _normalize_window(window)
+        result = body, arity, self._cached_body_payload(body)
+        if self.enable_semantic_cache:
+            self._normalized_window_cache[window] = result
+        return result
+
+    def _cached_behavior_signature(
+        self, body: Sequence[RuntimeInstruction], arity: int
+    ) -> str:
+        key = (self._cached_body_payload(tuple(body)), arity)
+        cached = self._behavior_signature_cache.get(key) if self.enable_semantic_cache else None
+        if cached is not None:
+            self._semantic_cache_stats["behavior_hits"] += 1
+            return cached
+        self._semantic_cache_stats["behavior_misses"] += 1
+        signature = behavior_signature(self.vm, body, arity)
+        if self.enable_semantic_cache:
+            self._behavior_signature_cache[key] = signature
+        return signature
 
     def discover(
         self,
@@ -436,7 +495,7 @@ class ColdStartSemanticResearcherV16:
             selected: tuple[SemanticCandidateV16, str] | None = None
             for candidate in candidates:
                 digest = hashlib.sha256(_body_payload(candidate.body).encode()).hexdigest()[:16]
-                signature = behavior_signature(self.vm, candidate.body, candidate.arity)
+                signature = self._cached_behavior_signature(candidate.body, candidate.arity)
                 if signature in known_signatures[candidate.arity]:
                     self.rejections.append(RejectedSemanticV16(digest, "behavior_already_available", candidate.family_support, candidate.occurrences))
                     continue
@@ -519,7 +578,7 @@ class ColdStartSemanticResearcherV16:
             selected: tuple[SemanticCandidateV16, str] | None = None
             for candidate in candidates:
                 digest = hashlib.sha256(_body_payload(candidate.body).encode()).hexdigest()[:16]
-                signature = behavior_signature(self.vm, candidate.body, candidate.arity)
+                signature = self._cached_behavior_signature(candidate.body, candidate.arity)
                 if signature in known_signatures[candidate.arity]:
                     self.rejections.append(RejectedSemanticV16(
                         digest, "behavior_already_available", candidate.family_support, candidate.occurrences,
@@ -573,19 +632,29 @@ class ColdStartSemanticResearcherV16:
     def _initial_signatures(self) -> dict[int, set[str]]:
         signatures: dict[int, set[str]] = defaultdict(set)
         for op in sorted(DATA_OPS):
-            signatures[1].add(behavior_signature(self.vm, (RuntimeInstruction(op, (0,)),), 1))
+            signatures[1].add(self._cached_behavior_signature((RuntimeInstruction(op, (0,)),), 1))
         return signatures
 
     def _is_identity(self, body: Sequence[RuntimeInstruction], arity: int) -> bool:
+        key = (self._cached_body_payload(tuple(body)), arity)
+        if self.enable_semantic_cache and key in self._identity_cache:
+            self._semantic_cache_stats["identity_hits"] += 1
+            return self._identity_cache[key]
+        self._semantic_cache_stats["identity_misses"] += 1
         register_count = max(2, arity)
+        result = True
         for state in itertools.product(range(4), repeat=register_count):
             try:
                 final, _, _ = self.vm.apply_sequence(body, state)
             except SemanticRuntimeError:
-                return False
+                result = False
+                break
             if final != state:
-                return False
-        return True
+                result = False
+                break
+        if self.enable_semantic_cache:
+            self._identity_cache[key] = result
+        return result
 
     def _mine(
         self,
@@ -598,10 +667,11 @@ class ColdStartSemanticResearcherV16:
         for workload_id, stream in streams.items():
             for width in range(2, min(5, len(stream) + 1)):
                 for index in range(len(stream) - width + 1):
-                    body, arity = _normalize_window(stream[index:index + width])
+                    body, arity, key = self._cached_normalized_window(
+                        tuple(stream[index:index + width])
+                    )
                     if arity < 1 or arity > 4:
                         continue
-                    key = _body_payload(body)
                     bodies[key] = body, arity
                     occurrences[key] += 1
                     family_occurrences[key][families[workload_id]] += 1
@@ -627,7 +697,7 @@ class ColdStartSemanticResearcherV16:
                 -item.family_support,
                 -item.primitive_span,
                 item.arity,
-                _body_payload(item.body),
+                self._cached_body_payload(item.body),
             ),
         ))
 
