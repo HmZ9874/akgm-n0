@@ -1,0 +1,20 @@
+{
+  "best_registered_baseline": "last_observed_normalized_capacity",
+  "commitment_sha256": "22d551237080023d9a62e444397c3d0beac7b5141ebb0fed8f02b99ea3abca65",
+  "matched_rate_effects": [],
+  "prediction_error_ratio": 1.1908792850863077,
+  "registered_threshold": 0.8,
+  "rmse": {
+    "forged_program": 0.223456491830567,
+    "last_observed_normalized_capacity": 0.18763991836029983,
+    "linear_index": 0.22679093291731955,
+    "linear_throughput": 0.24494960691490186,
+    "protocol_controls_without_rate_interaction": 0.2670017085487333,
+    "quadratic_throughput": 0.2554932307450125
+  },
+  "schema": "v52-calce-validation-report-v1",
+  "scored_observation_count": 136,
+  "sealed_archive_accessed": false,
+  "status": "registered_prediction_failure",
+  "validation_observation_count": 142
+}
